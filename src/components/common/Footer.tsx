@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 function Footer() {
   return (
-    <footer className="bg-black py-50 px-160 text-white flex flex-wrap justify-between font-[family-name:var(--font-inter)] text-sm">
-      <div className="">
+    <footer className="bg-black py-50 px-20 md:px-160 text-white flex flex-wrap justify-between font-[family-name:var(--font-inter)] text-sm">
+      <div className="mb-30">
         <Image src="/abm_logo.png" alt="Logo" width={120} height={120} />
-        <ul className="mt-20">
+        <ul className="mt-20 md:mt-0">
           <li>
             <Link
               href="https://maps.app.goo.gl/NSSq15XbzbLBmfQcA"
@@ -85,7 +85,7 @@ function Footer() {
       </div>
       <div>
         <ul>
-          <li className="font-bold">Short Courses</li>
+          <li className="font-bold mt-20 md:mt-0">Short Courses</li>
           <li>
             <Link href="/short-courses" target="_blank">
               Barista Course
@@ -135,7 +135,7 @@ function Footer() {
       </div>
       <div>
         <ul>
-          <li className="font-bold">Agent</li>
+          <li className="font-bold mt-20 md:mt-0">Agent</li>
           <li>
             <Link href="/agent" target="_blank">
               Agent Portal

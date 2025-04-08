@@ -46,7 +46,12 @@ function Nav() {
         <div className="flex items-center gap-10 md:gap-25 text-white font-semibold justify-end">
           <div className="hidden lg:flex gap-20">
             <Link href="/">Current Students</Link>
-            <Link href="/">Agent Portal</Link>
+            <Link
+              href="https://www.jotform.com/app/abm-further-education/abm-agents"
+              target="_blank"
+            >
+              Agent Portal
+            </Link>
           </div>
           <div className="hidden lg:block w-1 h-20 bg-white mx-15" />
           <div className="flex items-center gap-20">
@@ -58,24 +63,30 @@ function Nav() {
                 alt="instagram"
               />
             </Link>
-            <Image
-              src="/icons/Instagram.svg"
-              width={20}
-              height={20}
-              alt="instagram"
-            />
-            <Image
-              src="/icons/youtube.svg"
-              width={20}
-              height={20}
-              alt="instagram"
-            />
-            <Image
-              src="/icons/tiktok.svg"
-              width={15}
-              height={15}
-              alt="instagram"
-            />
+            <Link href="https://www.instagram.com/abmsydney/" target="_blank">
+              <Image
+                src="/icons/Instagram.svg"
+                width={20}
+                height={20}
+                alt="instagram"
+              />
+            </Link>
+            <Link href="https://www.youtube.com/@ABMsydney" target="_blank">
+              <Image
+                src="/icons/youtube.svg"
+                width={20}
+                height={20}
+                alt="youtube"
+              />
+            </Link>
+            <Link href="https://www.tiktok.com/@abmsydney" target="_blank">
+              <Image
+                src="/icons/tiktok.svg"
+                width={15}
+                height={15}
+                alt="tiktok"
+              />
+            </Link>
             <LanguageSwitcher />
           </div>
         </div>
@@ -91,7 +102,7 @@ function Nav() {
             <div
               onMouseLeave={() => setSubMenu('')}
               className={cn(
-                'absolute z-[999] w-full top-76 text-white flex items-center md:gap-40 md:px-80 md:py-20 bg-[#171717]'
+                'absolute z-[999] w-full top-76 text-white flex flex-col md:flex-row items-center justify-between md:gap-40 md:px-80 md:py-20 bg-[#171717]'
               )}
             >
               <div className="text-white font-[family-name:var(--font-montserrat)]">
@@ -102,23 +113,36 @@ function Nav() {
                   placeholder="Search Here..."
                 />
               </div>
-              <div className="grid grid-cols-3 gap-x-40">
+              <div
+                className={cn(
+                  subMenu === 'Courses' ? 'grid-cols-3' : 'grid-cols-2',
+                  'grid gap-x-40'
+                )}
+              >
                 {menuList
                   .find((item) => item.title === subMenu)
                   ?.subMenu?.map((menu) => {
                     return (
                       <div key={menu.title}>
-                        <h3 className="flex items-center font-bold font-[family-name:var(--font-montserrat)] uppercase">
-                          {menu.title}
-                          <ChevronRight />
-                        </h3>
+                        <Link
+                          href={`/${params.locale}/${menu.href}`}
+                          onClick={() => setSubMenu('')}
+                        >
+                          <h3 className="flex items-center font-bold font-[family-name:var(--font-montserrat)] uppercase">
+                            {menu.title}
+                            <ChevronRight />
+                          </h3>
+                        </Link>
                         <ul>
                           {menu.items.map((li) => (
                             <li
+                              onClick={() => setSubMenu('')}
                               className="text-[15px] my-5"
                               key={`${li.title}_${menu.title}_${li.href}`}
                             >
-                              {li.title}
+                              <Link href={`/${params.locale}/${li.href}`}>
+                                {li.title}
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -140,9 +164,13 @@ function Nav() {
           <div className="flex items-center">
             {menuList.map((item) => (
               <Link
-                onMouseEnter={() => setSubMenu(item.title)}
+                onMouseEnter={() => {
+                  if (item.title === 'Contact') setSubMenu('');
+                  else setSubMenu(item.title);
+                }}
+                onClick={() => setSubMenu('')}
                 key={item.title}
-                href={item.href}
+                href={`/${params.locale}/${item.href}`}
                 className={cn(
                   subMenu === item.title ? 'bg-[#171717] text-primary' : '',
                   'cursor-pointer hover:bg-[#171717] transition-all py-26 px-28'
@@ -171,94 +199,121 @@ const menuList = [
     subMenu: [
       {
         title: 'Cookery',
+        href: '/courses/cookery-hospitality',
         items: [
           {
             title: 'Certificate IV in  Kitchen Management',
-            href: '/courses/business',
+            href: '/courses/cookery-hospitality/sit40521-certificate-iv-in-kitchen-management',
           },
           {
             title: 'Industry Placement',
-            href: '/courses/hospitality',
+            href: '/courses/cookery-hospitality/industry-placement-work-placement',
           },
           {
             title: 'NSW Food Safety Supervisor ',
-            href: '/courses/hr-management',
+            href: '/courses/cookery-hospitality/fss',
           },
         ],
       },
       {
         title: 'Hospitality',
+        href: '/courses/cookery-hospitality',
         items: [
           {
             title: 'Diploma of hospitality management',
-            href: '/courses/business',
+            href: '/courses/cookery-hospitality/sit50422-diploma-of-hospitality-management',
           },
           {
             title: 'Advanced Diploma of Hospitality Management',
-            href: '/courses/hospitality',
+            href: '/courses/cookery-hospitality/advanced-diploma-of-hospitality-management',
           },
           {
-            title: 'Advanced Diploma of Hospitality Management',
-            href: '/courses/hr-management',
+            title: 'Industry Placement',
+            href: '/courses/cookery-hospitality/industry-placement-hospitality-management',
           },
           {
             title: 'NSW Food Safety Supervisor',
-            href: '/courses/hr-management',
+            href: '/courses/cookery-hospitality/fss',
           },
         ],
       },
       {
         title: 'Fitness & Sport',
+        href: '/courses/fitness-sports',
         items: [
           {
             title: 'Certificate IV in Fitness',
-            href: '/courses/business',
+            href: '/courses/fitness-sports/sis30321-certificate-iv-in-fitness',
           },
           {
             title: 'Certificate III in Fitness',
-            href: '/courses/hospitality',
+            href: '/courses/fitness-sports/sis40221-certificate-iii-in-fitness',
           },
           {
             title: 'Certificate IV in Sport',
-            href: '/courses/hr-management',
+            href: '/courses/fitness-sports/certificate-iv-in-sport-fast-track',
+          },
+          {
+            title: 'Certificate III in Sport',
+            href: '/courses/fitness-sports/certificate-iii-in-sport-fast-track',
           },
         ],
       },
       {
         title: 'Business',
+        href: '/courses/business',
         items: [
           {
             title: 'Certificate IV in Business',
-            href: '/courses/business',
+            href: '/courses/business/',
           },
           {
             title: 'Diploma of Business',
-            href: '/courses/hospitality',
+            href: '/courses/business/',
           },
           {
             title: 'Advanced Diploma of Business',
-            href: '/courses/hr-management',
+            href: '/courses/business/',
           },
           {
             title: 'Graduate Diploma of Management',
-            href: '/courses/hr-management',
+            href: '/courses/business/',
           },
         ],
       },
       {
         title: 'Project & Program',
+        href: '/courses/project/',
         items: [
           {
             title: 'Certificate IV in Business',
-            href: '/courses/business',
+            href: '/courses/project/',
           },
           {
             title: 'Diploma of Business',
-            href: '/courses/hospitality',
+            href: '/courses/project/',
           },
           {
             title: 'Advanced Diploma of Business',
-            href: '/courses/hr-management',
+            href: '/courses/project/',
+          },
+        ],
+      },
+      {
+        title: 'Human Resource',
+        href: '/courses/hr/',
+        items: [
+          {
+            title: 'Certificate IV in Human Resource Management',
+            href: '/courses/hr/',
+          },
+          {
+            title: 'Diploma of Human Resource Management',
+            href: '/courses/hr/',
+          },
+          {
+            title: 'Advanced Diploma of Human Resource Management',
+            href: '/courses/hr/',
           },
         ],
       },
@@ -270,46 +325,47 @@ const menuList = [
     subMenu: [
       {
         title: 'Short Courses',
+        href: '/short-courses',
         items: [
           {
             title: 'Barista Course',
-            href: '/courses/business',
+            href: '/short-courses/barista',
           },
           {
             title: 'Classic French Cake Course',
-            href: '/courses/hospitality',
+            href: '/short-courses/cake',
           },
           {
             title: 'Wine Course',
-            href: '/courses/hr-management',
+            href: '/short-courses/wine',
           },
           {
             title: 'Sourdough and Focaccia Course',
-            href: '/courses/hr-management',
+            href: '/short-courses/focaccia',
           },
           {
             title: 'Fine Dining Dessert Plating Course',
-            href: '/courses/hr-management',
+            href: '/short-courses/dessert',
           },
           {
             title: 'Classic French Pastries Course',
-            href: '/courses/hr-management',
+            href: '/short-courses/pastries',
           },
           {
             title: 'Cocktail-Making and Mixology Course',
-            href: '/courses/hr-management',
+            href: '/short-courses/mixology',
           },
           {
             title: 'French petit four Course (Macaroon)',
-            href: '/courses/hr-management',
+            href: '/short-courses/petit',
           },
           {
             title: 'Vegan and Vegetarian Course',
-            href: '/courses/hr-management',
+            href: '/short-courses/vegan',
           },
           {
             title: 'Chocolate Class – Xmas',
-            href: '/courses/hr-management',
+            href: '/short-courses/chocolate',
           },
         ],
       },
@@ -318,6 +374,46 @@ const menuList = [
   {
     title: 'Study With Us',
     href: '/study-with-us',
+    subMenu: [
+      {
+        title: 'Study With Us',
+        href: '/study-with-us',
+        items: [
+          {
+            title: 'Why ABM Further Education',
+            href: '/',
+          },
+          {
+            title: 'ABM Student Insights',
+            href: '/',
+          },
+          {
+            title: 'Academic Calendar',
+            href: '/',
+          },
+          {
+            title: 'Fees and Payment',
+            href: '/',
+          },
+          {
+            title: 'Entry Requirements',
+            href: '/',
+          },
+          {
+            title: 'Get a USI',
+            href: '/',
+          },
+          {
+            title: 'Enrol Now',
+            href: '/',
+          },
+          {
+            title: 'Higher Education Pathway',
+            href: '/',
+          },
+        ],
+      },
+    ],
   },
   {
     title: 'Contact',

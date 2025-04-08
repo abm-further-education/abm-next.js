@@ -7,6 +7,7 @@ import { isMobile } from 'react-device-detect';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import Link from 'next/link';
 
 const NewsCard = () => {
   return (
@@ -45,7 +46,7 @@ function NewsLetter() {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
         pagination={{ clickable: true }}
-        className="flex items-center justify-between max-w-[1400px] w-full mx-auto h-560 mt-60"
+        className="flex items-center justify-center md:justify-between max-w-[1400px] w-full mx-auto h-500 mt-60"
         slidesPerView={isMobile ? 1 : 3}
         spaceBetween={30}
       >
@@ -62,6 +63,9 @@ function NewsLetter() {
           <NewsCard />
         </SwiperSlide>
       </Swiper>
+      <Link href="/" className="bg-black text-white px-20 py-10">
+        FIND OUT MORE
+      </Link>
     </section>
   );
 }

@@ -54,7 +54,7 @@ function MobileNav() {
           alt="Logo"
           width={120}
           height={120}
-          className="mx-20"
+          className=""
         />
       </Link>
       <AlignJustify onClick={toggleMenu} />
@@ -124,7 +124,7 @@ function MobileNav() {
             <div className="mb-20 text-xl">
               <LanguageSwitcher />
             </div>
-            <Image src="/logo.png" alt="Logo" width={120} height={120} />
+            <Image src="/abm_logo.png" alt="Logo" width={120} height={120} />
           </div>
         </nav>
       </div>

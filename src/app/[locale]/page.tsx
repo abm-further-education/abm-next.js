@@ -19,13 +19,24 @@ export default function Home() {
           ]}
         />
 
-        <div className="flex flex-wrap md:gap-40 items-center justify-center py-50">
-          <Card imgPath="/home/home.png" title="Full Courses" link="/" />
-          <Card imgPath="/home/FastTrack.png" title="Fast Track" link="/" />
+        <div className="flex flex-wrap md:gap-40 items-center justify-center py-50 px-20 md:px-0 gap-20">
+          <Card
+            imgPath="/home/home.png"
+            title="Full Courses"
+            link="/"
+            className="w-full md:w-440"
+          />
+          <Card
+            imgPath="/home/FastTrack.png"
+            title="Fast Track"
+            link="/"
+            className="w-full md:w-440"
+          />
           <Card
             imgPath="/home/ShortCourse.png"
             title="Short Courses"
             link="/"
+            className="w-full md:w-440"
           />
         </div>
 
@@ -37,25 +48,43 @@ export default function Home() {
             experience opportunities across Australia.
           </p>
           <FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-40 mt-40">
-              <Card imgPath="/home/Cookery.png" title="Cookery" link="/" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-40 mt-40">
+              <Card
+                imgPath="/home/Cookery.png"
+                title="Cookery"
+                link="/"
+                className="w-300 md:w-440"
+              />
               <Card
                 imgPath="/home/Hospitality.png"
                 title="Hospitality"
                 link="/"
+                className="w-300 md:w-440"
               />
               <Card
                 imgPath="/home/Fitness.png"
                 title="Fitness & Sports"
                 link="/"
+                className="w-300 md:w-440"
               />
-              <Card imgPath="/home/Business.png" title="Business" link="/" />
+              <Card
+                imgPath="/home/Business.png"
+                title="Business"
+                link="/"
+                className="w-300 md:w-440"
+              />
               <Card
                 imgPath="/home/Project.png"
                 title="Project & Program"
                 link="/"
+                className="w-300 md:w-440"
               />
-              <Card imgPath="/home/HR.png" title="HR Management" link="/" />
+              <Card
+                imgPath="/home/HR.png"
+                title="HR Management"
+                link="/"
+                className="w-300 md:w-440"
+              />
             </div>
           </FadeIn>
         </section>

@@ -3,20 +3,26 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 function Card({
   imgPath,
   title,
   link,
+  className,
 }: {
   imgPath: string;
   title: string;
   link?: string;
+  className?: string;
 }) {
   const router = useRouter();
   return (
     <div
-      className="w-300 md:w-440 h-320 relative group cursor-pointer overflow-hidden"
+      className={cn(
+        'h-320 relative group cursor-pointer overflow-hidden',
+        className
+      )}
       onClick={() => link && router.push(link)}
     >
       <Image

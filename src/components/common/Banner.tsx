@@ -58,7 +58,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
                 src={slide.imgPath}
                 alt="banner_image"
                 fill
-                className="md:object-center object-cover"
+                className="md:object-top object-cover"
               />
             )}
 

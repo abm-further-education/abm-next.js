@@ -7,6 +7,8 @@ import { isMobile } from 'react-device-detect';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 function Testimonial() {
   return (
@@ -15,7 +17,7 @@ function Testimonial() {
       <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
         Where do you see yourself happily working in nearest future?
       </p>
-      <Swiper
+      {/* <Swiper
         navigation
         modules={[Navigation, Autoplay, Pagination, Scrollbar]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -35,7 +37,28 @@ function Testimonial() {
             />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
+      <div className="w-full max-w-screen overflow-hidden">
+        <motion.div
+          animate={{ x: ['0', '-100%'] }}
+          transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+          className="whitespace-nowrap  h-560 flex gap-20 mt-20"
+        >
+          {Array.from({ length: 18 }).map((_, index) => (
+            <Image
+              key={index}
+              src={`/testimonials/${index + 1}.png`}
+              alt="banner_image"
+              width={550}
+              height={500}
+              className="md:object-center object-cover"
+            />
+          ))}
+        </motion.div>
+      </div>
+      <Link href="/" className="bg-black text-white px-20 py-10 mt-30">
+        FIND OUT MORE
+      </Link>
     </section>
   );
 }
