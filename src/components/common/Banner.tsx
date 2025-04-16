@@ -19,7 +19,7 @@ type Props = {
 
 function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
   const isVideo = (path: string) => {
-    return path.match(/\.(mp4|webm|ogg)$/i);
+    return path?.match(/\.(mp4|webm|ogg)$/i);
   };
 
   return (

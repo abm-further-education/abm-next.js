@@ -35,7 +35,7 @@ export default function Home() {
           <Card
             imgPath="/home/ShortCourse.png"
             title="Short Courses"
-            link="/"
+            link={`short-courses`}
             className="w-full md:w-440"
           />
         </div>

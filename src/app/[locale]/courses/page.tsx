@@ -35,37 +35,37 @@ function page() {
             <Card
               imgPath="/home/Cookery.png"
               title="Cookery"
-              link="/"
+              link="/courses/cookery-hospitality"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Hospitality.png"
               title="Hospitality"
-              link="/"
+              link="/courses/cookery-hospitality"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Fitness.png"
               title="Fitness & Sports"
-              link="/"
+              link="/courses/fitness-sports"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Business.png"
               title="Business"
-              link="/"
+              link="/courses/business"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Project.png"
               title="Project & Program"
-              link="/"
+              link="/courses/project-program"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/HR.png"
               title="HR Management"
-              link="/"
+              link="/courses/human-resource"
               className="w-300 md:w-440"
             />
           </div>

@@ -7,7 +7,6 @@ import { useParams } from 'next/navigation';
 import MobileNav from './MobileNav';
 
 import LanguageSwitcher from './LanguageSwitcher';
-import Button from './Button';
 import { ChevronRight } from 'lucide-react';
 
 function Nav() {
@@ -116,7 +115,7 @@ function Nav() {
               <div
                 className={cn(
                   subMenu === 'Courses' ? 'grid-cols-3' : 'grid-cols-2',
-                  'grid gap-x-40'
+                  'grid gap-x-40 gap-y-18'
                 )}
               >
                 {menuList
@@ -179,9 +178,13 @@ function Nav() {
                 {item.title}
               </Link>
             ))}
-            <Button className="border cursor-pointer hover:bg-white font-semibold hover:text-black transition-all">
+            <Link
+              target="_blank"
+              href="https://form.jotform.com/ABMonlineforms/new-abm-enroment-application-form"
+              className="border cursor-pointer hover:bg-white font-semibold hover:text-black font-[family-name:var(--font-montserrat)] px-20 py-10 transition-all"
+            >
               Enrol Now
-            </Button>
+            </Link>
           </div>
         </header>
         <MobileNav />
@@ -265,55 +268,55 @@ const menuList = [
         items: [
           {
             title: 'Certificate IV in Business',
-            href: '/courses/business/',
+            href: '/courses/business/bsb40120-certificate-iv-in-business',
           },
           {
             title: 'Diploma of Business',
-            href: '/courses/business/',
+            href: '/courses/business/bsb50120-diploma-of-business',
           },
           {
             title: 'Advanced Diploma of Business',
-            href: '/courses/business/',
+            href: '/courses/business/bsb60120-advanced-diploma-of-business',
           },
           {
             title: 'Graduate Diploma of Management',
-            href: '/courses/business/',
+            href: '/courses/business/bsb80120-graduate-diploma-of-management',
           },
         ],
       },
       {
         title: 'Project & Program',
-        href: '/courses/project/',
+        href: '/courses/project-program',
         items: [
           {
-            title: 'Certificate IV in Business',
-            href: '/courses/project/',
+            title: 'Certificate IV in Project Management Practice',
+            href: '/courses/project-program/bsb40920-certificate-iv-in-project-management-practice',
           },
           {
-            title: 'Diploma of Business',
-            href: '/courses/project/',
+            title: 'Diploma of Project Management Practice',
+            href: '/courses/project-program/bsb50820-diploma-of-project-management-practice',
           },
           {
-            title: 'Advanced Diploma of Business',
-            href: '/courses/project/',
+            title: 'Advanced Diploma of Project Management Practice',
+            href: '/courses/project-program/bsb60820-advanced-diploma-of-project-management-practice',
           },
         ],
       },
       {
         title: 'Human Resource',
-        href: '/courses/hr/',
+        href: '/courses/human-resource',
         items: [
           {
             title: 'Certificate IV in Human Resource Management',
-            href: '/courses/hr/',
+            href: '/courses/human-resource/bsb40420-certificate-iv-in-human-resource-management',
           },
           {
             title: 'Diploma of Human Resource Management',
-            href: '/courses/hr/',
+            href: '/courses/human-resource/bsb50320-diploma-of-human-resource-management',
           },
           {
             title: 'Advanced Diploma of Human Resource Management',
-            href: '/courses/hr/',
+            href: '/courses/human-resource/bsb60320-advanced-diploma-of-human-resource-management',
           },
         ],
       },

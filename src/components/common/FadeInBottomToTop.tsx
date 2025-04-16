@@ -8,7 +8,6 @@ function FadeInBottomToTop({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setIsVisible(true);
   }, []);
-  console.log(isVisible);
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

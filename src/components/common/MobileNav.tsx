@@ -1,10 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { AlignJustify, X } from 'lucide-react';
+import { AlignJustify, ChevronDown, ChevronUp, X } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react';
+import { AnimatePresence, easeOut, motion } from 'framer-motion';
+import {
+  businessMenu,
+  cookeryMenu,
+  fitnessMenu,
+  hospitalityMenu,
+  hrMenu,
+  projectMenu,
+  shortCourseMenu,
+} from '@/lib/constants';
 
 function MobileNav() {
   const params = useParams();
@@ -42,6 +57,53 @@ function MobileNav() {
     setIsMenuOpen(false);
   };
 
+  const DisclosureContainer = ({
+    title,
+    list,
+  }: {
+    title: string;
+    list: { title: string; href: string }[];
+  }) => {
+    return (
+      <Disclosure>
+        {({ open }) => (
+          <div>
+            <DisclosureButton className="flex w-full text-lg items-center justify-between p-3 hover:underline">
+              <span>{title}</span>
+              {open ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </DisclosureButton>
+            <AnimatePresence>
+              {open && (
+                <DisclosurePanel static as={Fragment}>
+                  <motion.div
+                    initial={{ opacity: 0, y: -24 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -24 }}
+                    transition={{
+                      duration: 0.2,
+                      ease: easeOut,
+                    }}
+                    className="origin-top ml-10 flex flex-col gap-y-16 mt-10"
+                  >
+                    {list.map((item) => (
+                      <Link
+                        key={item.href}
+                        className="ml-10 text-base block hover:underline"
+                        href={item.href}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </motion.div>
+                </DisclosurePanel>
+              )}
+            </AnimatePresence>
+          </div>
+        )}
+      </Disclosure>
+    );
+  };
+
   return (
     <div
       className={cn(
@@ -72,7 +134,7 @@ function MobileNav() {
             <X />
           </button>
         </div>
-        <nav className="mt-4">
+        <nav className="mt-4 overflow-auto h-full">
           <ul className="space-y-20 text-2xl">
             <li>
               <Link
@@ -84,31 +146,137 @@ function MobileNav() {
               </Link>
             </li>
             <li>
-              <Link
-                onClick={toggleMenu}
-                href={`/${params.locale}/catering`}
-                className="block p-3 hover:underline"
-              >
-                Catering
-              </Link>
+              <Disclosure>
+                {({ open }) => (
+                  <div>
+                    <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
+                      <span>Courses</span>
+                      {open ? (
+                        <ChevronUp size={20} />
+                      ) : (
+                        <ChevronDown size={20} />
+                      )}
+                    </DisclosureButton>
+                    <AnimatePresence>
+                      {open && (
+                        <DisclosurePanel static as={Fragment}>
+                          <motion.div
+                            initial={{ opacity: 0, y: -24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -24 }}
+                            transition={{ duration: 0.2, ease: easeOut }}
+                            className="origin-top px-10 flex flex-col gap-y-16 mt-10"
+                          >
+                            <DisclosureContainer
+                              title="Cookery"
+                              list={cookeryMenu}
+                            />
+                            <DisclosureContainer
+                              title="Hospitality"
+                              list={hospitalityMenu}
+                            />
+                            <DisclosureContainer
+                              title="Fitness & Sport"
+                              list={fitnessMenu}
+                            />
+                            <DisclosureContainer
+                              title="Business"
+                              list={businessMenu}
+                            />
+                            <DisclosureContainer
+                              title="Project & Program"
+                              list={projectMenu}
+                            />
+                            <DisclosureContainer
+                              title="Human Resource"
+                              list={hrMenu}
+                            />
+                          </motion.div>
+                        </DisclosurePanel>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )}
+              </Disclosure>
+            </li>
+
+            <li>
+              <Disclosure>
+                {({ open }) => (
+                  <div>
+                    <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
+                      <span>Short Courses</span>
+                      {open ? (
+                        <ChevronUp size={20} />
+                      ) : (
+                        <ChevronDown size={20} />
+                      )}
+                    </DisclosureButton>
+                    <AnimatePresence>
+                      {open && (
+                        <DisclosurePanel static as={Fragment}>
+                          <motion.div
+                            initial={{ opacity: 0, y: -24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -24 }}
+                            transition={{ duration: 0.2, ease: easeOut }}
+                            className="origin-top flex flex-col gap-y-16 mt-10"
+                          >
+                            {shortCourseMenu.map((item) => (
+                              <Link
+                                key={item.href}
+                                className="ml-10 text-base block hover:underline"
+                                href={item.href}
+                              >
+                                {item.title}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        </DisclosurePanel>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )}
+              </Disclosure>
             </li>
             <li>
-              <Link
-                onClick={toggleMenu}
-                href={`/${params.locale}/function`}
-                className="block p-3 hover:underline"
-              >
-                Function
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={toggleMenu}
-                href={`/${params.locale}/about`}
-                className="block p-3 hover:underline"
-              >
-                About
-              </Link>
+              <Disclosure>
+                {({ open }) => (
+                  <div>
+                    <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
+                      <span>Study With Us</span>
+                      {open ? (
+                        <ChevronUp size={20} />
+                      ) : (
+                        <ChevronDown size={20} />
+                      )}
+                    </DisclosureButton>
+                    <AnimatePresence>
+                      {open && (
+                        <DisclosurePanel static as={Fragment}>
+                          <motion.div
+                            initial={{ opacity: 0, y: -24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -24 }}
+                            transition={{ duration: 0.2, ease: easeOut }}
+                            className="origin-top flex flex-col gap-y-16 mt-10"
+                          >
+                            {shortCourseMenu.map((item) => (
+                              <Link
+                                key={item.href}
+                                className="ml-10 text-base block hover:underline"
+                                href={item.href}
+                              >
+                                {item.title}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        </DisclosurePanel>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )}
+              </Disclosure>
             </li>
             <li>
               <Link
@@ -117,6 +285,15 @@ function MobileNav() {
                 className="block p-3 hover:underline"
               >
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={toggleMenu}
+                href="https://form.jotform.com/ABMonlineforms/new-abm-enroment-application-form"
+                className="block p-3 hover:underline"
+              >
+                Enrol Now
               </Link>
             </li>
           </ul>

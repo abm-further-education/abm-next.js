@@ -50,16 +50,19 @@ function page() {
             This stream is for students seeking to further their skills and
             studies in cookery to a more advanced level.
           </p>
-          <div className="flex gap-250 ml-90 mt-40 font-[family-name:var(--font-montserrat)]">
+          <div className="flex gap-90 sm:gap-180 lg:gap-250 ml-90 mt-40 font-[family-name:var(--font-montserrat)]">
             <span>72weeks</span>
             <span>26weeks</span>
             <span>26weeks</span>
           </div>
           <div className="flex">
             <div className="relative">
-              <span className="absolute text-white top-20 left-30">
-                SIT40521
-              </span>
+              <div className="absolute top-20 left-40 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
+                <span className="text-white">SIT40521</span>
+                <p className="text-white font-semibold text-[15px]">
+                  Certificate IV in Kitchen Management
+                </p>
+              </div>
               <Image
                 src={`/courses/cookery/SIT40521.png`}
                 alt="banner_image"
@@ -69,9 +72,12 @@ function page() {
               />
             </div>
             <div className="relative">
-              <span className="absolute text-white top-20 left-30">
-                SIT50422
-              </span>
+              <div className="absolute top-20 left-60 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
+                <span className="text-white">SIT50422</span>
+                <p className="text-white font-semibold text-[15px]">
+                  Diploma of Hospitality Management
+                </p>
+              </div>
               <Image
                 src={`/courses/cookery/SIT50422.png`}
                 alt="banner_image"
@@ -81,9 +87,12 @@ function page() {
               />
             </div>
             <div className="relative">
-              <span className="absolute text-white top-20 left-30">
-                SIT60322
-              </span>
+              <div className="absolute top-20 left-60 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
+                <span className="text-white">SIT60322</span>
+                <p className="text-white font-semibold text-[15px]">
+                  Advanced Diploma of Hospitality Management
+                </p>
+              </div>
               <Image
                 src={`/courses/cookery/SIT60322.png`}
                 alt="banner_image"
