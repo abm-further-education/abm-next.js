@@ -6,7 +6,7 @@ import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
 
-function page() {
+function Page() {
   return (
     <div>
       {' '}
@@ -24,13 +24,14 @@ function page() {
           Lead Projects That Make an Impact
         </h2>
         <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
-          ABM’s Project and Program Management courses equip you with the skills
-          to lead successful projects across industries like construction, tech,
-          and corporate sectors. From foundational roles with the Certificate IV
-          to senior leadership with the Advanced Diploma, our flexible courses
-          cover project planning, risk management, and stakeholder engagement.
-          Whether you're starting out or aiming for advanced roles, ABM helps
-          you build the expertise to turn ideas into real results.
+          ABM&apos;s Project and Program Management courses equip you with the
+          skills to lead successful projects across industries like
+          construction, tech, and corporate sectors. From foundational roles
+          with the Certificate IV to senior leadership with the Advanced
+          Diploma, our flexible courses cover project planning, risk management,
+          and stakeholder engagement. Whether you&apos;re starting out or aiming
+          for advanced roles, ABM helps you build the expertise to turn ideas
+          into real results.
         </p>
       </div>
       <FadeIn>
@@ -71,4 +72,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

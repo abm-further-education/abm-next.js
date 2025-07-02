@@ -26,6 +26,7 @@ function Contact() {
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
+    console.log(value);
   };
 
   return (

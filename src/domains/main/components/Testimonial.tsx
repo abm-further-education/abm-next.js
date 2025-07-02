@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { isMobile } from 'react-device-detect';
+// import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { isMobile } from 'react-device-detect';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -75,11 +75,11 @@ function Testimonial() {
 
 export default Testimonial;
 
-const slides = [
-  { imgPath: '/home/home.png' },
-  { imgPath: '/home/home.png' },
-  { imgPath: '/home/home.png' },
-  { imgPath: '/home/home.png' },
-  { imgPath: '/home/home.png' },
-  { imgPath: '/home/home.png' },
-];
+// const slides = [
+//   { imgPath: '/home/home.png' },
+//   { imgPath: '/home/home.png' },
+//   { imgPath: '/home/home.png' },
+//   { imgPath: '/home/home.png' },
+//   { imgPath: '/home/home.png' },
+//   { imgPath: '/home/home.png' },
+// ];

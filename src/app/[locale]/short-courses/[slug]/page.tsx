@@ -1,14 +1,15 @@
 import Banner from '@/components/common/Banner';
-import React from 'react';
+import React, { use } from 'react';
 
-function page({ params }: { params: { slug: string } }) {
+function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
   return (
     <div>
       <Banner
         slides={[
           {
-            imgPath: imgMatch[params.slug],
-            title: titleMatch[params.slug],
+            imgPath: imgMatch[slug],
+            title: titleMatch[slug],
             content: '',
           },
         ]}
@@ -20,7 +21,7 @@ function page({ params }: { params: { slug: string } }) {
   );
 }
 
-export default page;
+export default Page;
 
 const titleMatch: { [key: string]: string } = {
   barista: 'Barista Course',

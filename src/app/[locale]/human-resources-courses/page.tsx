@@ -4,7 +4,7 @@ import FadeIn from '@/components/common/FadeIn';
 import Testimonial from '@/domains/main/components/Testimonial';
 import React from 'react';
 
-function page() {
+function Page() {
   return (
     <div>
       <Banner
@@ -25,13 +25,13 @@ function page() {
             Build a Rewarding Career in Human Resources
           </h2>
           <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
-            ABM’s Human Resource Management courses prepare you for HR roles at
-            every level—from entry-level officers to strategic HR leaders. Gain
-            skills in recruitment, conflict resolution, payroll, and workforce
-            planning through flexible courses tailored to your goals. Whether
-            you're starting with the Certificate IV or advancing to the Advanced
-            Diploma, ABM equips you with the knowledge and experience to thrive
-            in today’s evolving workplace.
+            ABM&apos;s Human Resource Management courses prepare you for HR
+            roles at every level—from entry-level officers to strategic HR
+            leaders. Gain skills in recruitment, conflict resolution, payroll,
+            and workforce planning through flexible courses tailored to your
+            goals. Whether you&apos;re starting with the Certificate IV or
+            advancing to the Advanced Diploma, ABM equips you with the knowledge
+            and experience to thrive in today’s evolving workplace.
           </p>
         </div>
       </FadeIn>
@@ -67,4 +67,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

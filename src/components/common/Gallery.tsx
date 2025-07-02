@@ -65,10 +65,12 @@ const Gallery = () => {
             <X />
           </button>
           <div className="relative">
-            <img
+            <Image
               src={selectedImage}
               alt="Selected"
-              className="max-w-full max-h-screen"
+              width={800}
+              height={600}
+              className="max-w-full max-h-screen object-contain"
             />
           </div>
           <button

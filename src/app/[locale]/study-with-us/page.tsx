@@ -26,10 +26,10 @@ function page() {
 
         <p className="max-w-2xl text-center mx-auto">
           Our mission is to provide high-quality, practical education that
-          prepares students for successful careers. At ABM, you'll learn from
-          experienced industry leaders who are dedicated to your growth. With a
-          supportive environment and real-world training, we ensure you gain the
-          skills and confidence to thrive in your future career.
+          prepares students for successful careers. At ABM, you&apos;ll learn
+          from experienced industry leaders who are dedicated to your growth.
+          With a supportive environment and real-world training, we ensure you
+          gain the skills and confidence to thrive in your future career.
         </p>
         <FadeIn>
           <ImageTextSection

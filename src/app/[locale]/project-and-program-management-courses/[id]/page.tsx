@@ -28,7 +28,7 @@ const mappingCourseImage: { [key: string]: string } = {
 
 const menuItems = ['Course Detail', 'Units', 'Course Information'];
 
-function page({ params }: { params: Promise<{ id: string }> }) {
+function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
 
   // 섹션 ID를 생성하는 함수
@@ -65,7 +65,7 @@ function page({ params }: { params: Promise<{ id: string }> }) {
         id={getSectionId('Units')}
         className="max-w-1000 mx-auto px-20 py-40 bg-gray-50"
       >
-        <Units params={params} />
+        <Units params={{ id }} />
       </section>
 
       {/* Course Information Section */}
@@ -79,4 +79,4 @@ function page({ params }: { params: Promise<{ id: string }> }) {
   );
 }
 
-export default page;
+export default Page;

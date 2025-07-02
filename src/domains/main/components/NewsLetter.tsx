@@ -26,7 +26,7 @@ const NewsCard = () => {
       </div>
       <div className="px-20 mt-20">
         <h3 className="font-semibold">
-          A Special Day: ABM's Graduation Ceremony Highlights
+          A Special Day: ABM&apos;s Graduation Ceremony Highlights
         </h3>
         <p className="font-[family-name:var(--font-inter)] text-sm mt-10 text-neutral-400">
           There are many variations of passages of Lorem Ipsum available, but

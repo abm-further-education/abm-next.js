@@ -6,10 +6,10 @@ import {
   HM_UNITS,
   KM_UNITS,
 } from '@/lib/constants';
-import React, { use } from 'react';
+import React from 'react';
 
-function Units({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+function Units({ params }: { params: { id: string } }) {
+  const { id } = params;
   const mappingCourseUnits: {
     [key: string]: { [key: string]: string | number }[];
   } = {
