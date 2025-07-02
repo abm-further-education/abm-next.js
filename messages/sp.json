@@ -1,8 +1,101 @@
 {
   "HomePage": {
-    "bannerContent": "Donde la pasión se transforma en perfección culinaria. Una experiencia inolvidable."
+    "bannerContent": "Donde la Pasión se Encuentra con la Perfección Culinaria. Una Experiencia Inolvidable",
+    "coursesTitle": "Cursos ABM",
+    "coursesDescription": "Proporcionamos educación de alta calidad en un ambiente innovador y de apoyo, asegurando el éxito de los estudiantes con enseñanza experta y oportunidades de experiencia laboral en toda Australia.",
+    "testimonialTitle": "Testimonios",
+    "testimonialDescription": "¿Dónde te ves trabajando felizmente en el futuro cercano?"
   },
   "contact": {
-    "title": "Contacto"
+    "title": "Contáctanos"
+  },
+  "courses": {
+    "title": "Encuentra el Curso Adecuado para tu Futuro",
+    "description": "Elegir el curso correcto es clave para alcanzar tus objetivos profesionales. Piensa más allá del interés: considera si el camino lleva a un futuro que disfrutarás. Ya sea en negocios, cocina comercial o avanzando en hospitalidad, ABM te ayuda a adquirir las habilidades para estar listo para el trabajo y confiado en tu campo elegido."
+  },
+  "studyWithUs": {
+    "studentInsights": "Perspectivas de Estudiantes ABM",
+    "academicCalendar": "Calendario Académico",
+    "feesAndPayment": "Tarifas y Pago",
+    "entryRequirements": "Requisitos de Ingreso",
+    "getUSI": "Obtener un USI",
+    "enrolNow": "Inscríbete Ahora",
+    "higherEducationPathway": "Vía de Educación Superior"
+  },
+  "timetable": {
+    "title": "Horario",
+    "subtitle": "Planifica tu Horario de Estudio",
+    "pageTitle": "Horario de Clases",
+    "importantInfo": "Información Importante",
+    "selfPacedLearning": "Todos los estudiantes deben completar 5-6 horas de aprendizaje autodirigido incluidas según el curso.",
+    "schedule": "Mañana: 2.5 días a la semana, Tarde: 3 días a la semana.",
+    "subjectToChange": "Este horario está sujeto a cambios.",
+    "studyHours": "*15-24 horas de estudio presencial más 5-6 horas de aprendizaje autodirigido incluidas según el curso.",
+    "qualification": "Cualificación",
+    "intake": "Ingreso / Curso",
+    "monday": "LUN",
+    "tuesday": "MAR",
+    "wednesday": "MIÉ",
+    "thursday": "JUE",
+    "friday": "VIE",
+    "tutorial": "Tutorial",
+    "note": "Nota",
+    "noteDescription": "Póngase en contacto con nosotros para obtener la información más actualizada del horario, ya que los horarios pueden cambiar según los requisitos de inscripción y operacionales."
+  },
+  "nav": {
+    "internationalStudent": "¿Eres un Estudiante Internacional?",
+    "downloadGuide": "Descargar Guía del Curso",
+    "currentStudents": "Estudiantes Actuales",
+    "agentPortal": "Portal de Agentes",
+    "findCourse": "Encontrar un curso",
+    "searchPlaceholder": "Buscar aquí...",
+    "noResults": "No se encontraron resultados.",
+    "enrolNow": "Inscríbete Ahora",
+    "menu": {
+      "courses": "Cursos",
+      "shortCourses": "Cursos Cortos",
+      "studyWithUs": "Estudia con Nosotros",
+      "contact": "Contacto"
+    },
+    "subMenu": {
+      "cookery": "Cocina",
+      "hospitality": "Hospitalidad",
+      "fitnessAndSport": "Fitness y Deporte",
+      "business": "Negocios",
+      "projectAndProgram": "Proyecto y Programa",
+      "humanResource": "Recursos Humanos"
+    },
+    "studyWithUs": {
+      "studentInsights": "Perspectivas de Estudiantes ABM",
+      "academicCalendar": "Calendario Académico",
+      "feesAndPayment": "Tarifas y Pago",
+      "entryRequirements": "Requisitos de Ingreso",
+      "getUSI": "Obtener un USI",
+      "enrolNow": "Inscríbete Ahora",
+      "higherEducationPathway": "Vía de Educación Superior"
+    }
+  },
+  "cookeryAndHospitality": {
+    "title": "Comienza tu Carrera en Cocina y Hospitalidad",
+    "description": "Entra en una de las carreras más gratificantes y dinámicas de Australia con los cursos de Gestión de Cocina y Hospitalidad de ABM.",
+    "streams": "Especialidades",
+    "kitchenManagementStream": "Especialidad en Gestión de Cocina",
+    "foodAndBeverageStream": "Especialidad en Alimentos y Bebidas",
+    "streamDescription": "Esta especialidad es para estudiantes que buscan desarrollar sus habilidades y estudios en cocina a un nivel más avanzado.",
+    "specialisedShortCourses": "Cursos cortos especializados",
+    "shortCourse": "Clase de Un Día",
+    "foodSafetySupervisor": "Certificado de Supervisor de Seguridad Alimentaria de NSW (FSS)"
+  },
+  "common": {
+    "findOutMore": "MÁS INFORMACIÓN"
+  },
+  "currentStudents": {
+    "title": "Información del Estudiante",
+    "welcome": "¡Bienvenido a la página de Estudiantes Actuales!",
+    "description": "Aquí encontrarás información importante, recursos y actualizaciones para apoyar tus estudios en ABM",
+    "moodleTitle": "¿Necesitas iniciar sesión en Moodle?",
+    "moodleLogin": "ACCESO A MOODLE",
+    "studentPortalTitle": "¿Necesitas descargar formularios?",
+    "studentPortal": "PORTAL DEL ESTUDIANTE"
   }
 }

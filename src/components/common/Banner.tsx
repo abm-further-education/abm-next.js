@@ -19,11 +19,11 @@ type Props = {
 
 function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
   const isVideo = (path: string) => {
-    return path?.match(/\.(mp4|webm|ogg)$/i);
+    return path?.match(/\.(mp4|webm|ogg)$/i) || path.includes('youtube');
   };
 
   return (
-    <div className="w-full h-screen md:h-700 relative">
+    <div className="w-full h-[calc(100vh-160px)] md:h-700 relative">
       <Swiper
         navigation
         modules={[Navigation, Autoplay, Pagination, Scrollbar]}
@@ -37,23 +37,15 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
           <SwiperSlide key={index} className="relative">
             {dimmed && dimmed}
             {isVideo(slide.imgPath) ? (
-              <video
-                src={slide.imgPath}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <iframe
+                className="w-full h-full"
+                src={`${slide.imgPath}&autoplay=1&mute=1&loop=1&playlist=MuePUlkXUZA`}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             ) : (
-              // <iframe
-              //   className="w-full h-full"
-              //   src="https://www.youtube.com/embed/MuePUlkXUZA?si=djdrv_RZgSlrTG2g"
-              //   title="YouTube video player"
-              //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              //   referrerPolicy="strict-origin-when-cross-origin"
-              //   allowFullScreen
-              // ></iframe>
               <Image
                 src={slide.imgPath}
                 alt="banner_image"

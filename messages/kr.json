@@ -1,8 +1,101 @@
 {
   "HomePage": {
-    "bannerContent": "열정이 담긴 완벽한 요리. 지금 경험해보세요."
+    "bannerContent": "열정이 담긴 완벽한 요리. 지금 경험해보세요.",
+    "coursesTitle": "ABM 코스",
+    "coursesDescription": "최고의 환경과 전문성 있는 내용으로 고품질 교육을 제공하여, 실무 경험 기회를 통해 학생들의 성공을 보장합니다.",
+    "testimonialTitle": "졸업생 후기",
+    "testimonialDescription": "가까운 미래에 어디에서 행복하게 일하는 자신을 보고 계신가요?"
   },
   "contact": {
     "title": "문의하기"
+  },
+  "courses": {
+    "title": "당신의 미래를 위한 과정을 찾아보세요",
+    "description": "올바른 과정을 선택하는 것은 커리어 목표를 이루는 데 있어 매우 중요합니다. 단순한 관심을 넘어, 그 길이 여러분이 즐기고 지속할 수 있는 미래로 이어지는지 고민해보세요. 비즈니스, 요리, 호스피탈리티, 피트니스 등 다양한 분야에서 ABM은 여러분이 현장에서 필요한 실무 역량을 갖추고 자신감을 키울 수 있도록 지원합니다."
+  },
+  "studyWithUs": {
+    "studentInsights": "ABM 학생 후기",
+    "academicCalendar": "학사 일정",
+    "feesAndPayment": "수업료 및 결제",
+    "entryRequirements": "입학 요건",
+    "getUSI": "USI 발급",
+    "enrolNow": "지금 등록하기",
+    "higherEducationPathway": "고등교육 진학 과정"
+  },
+  "timetable": {
+    "title": "시간표",
+    "subtitle": "수업 일정을 계획하세요",
+    "pageTitle": "수업 시간표",
+    "importantInfo": "중요 정보",
+    "selfPacedLearning": "모든 학생은 과정에 따라 5-6시간의 자기주도 학습을 완료해야 합니다.",
+    "schedule": "오전: 주 2.5일, 오후: 주 3일.",
+    "subjectToChange": "이 시간표는 변경될 수 있습니다.",
+    "studyHours": "*과정에 따라 15-24시간의 대면 수업과 5-6시간의 자기주도 학습이 포함됩니다.",
+    "qualification": "자격증",
+    "intake": "입학 / 과정",
+    "monday": "월",
+    "tuesday": "화",
+    "wednesday": "수",
+    "thursday": "목",
+    "friday": "금",
+    "tutorial": "튜토리얼",
+    "note": "참고사항",
+    "noteDescription": "등록 및 운영 요구사항에 따라 일정이 변경될 수 있으므로 최신 시간표 정보는 문의해 주시기 바랍니다."
+  },
+  "nav": {
+    "internationalStudent": "국제 학생이신가요?",
+    "downloadGuide": "과정 가이드 다운로드",
+    "currentStudents": "재학생",
+    "agentPortal": "에이전트 포털",
+    "findCourse": "과정 찾기",
+    "searchPlaceholder": "여기서 검색하세요...",
+    "noResults": "검색 결과가 없습니다.",
+    "enrolNow": "지금 등록하기",
+    "menu": {
+      "courses": "과정",
+      "shortCourses": "단기 과정",
+      "studyWithUs": "함께 공부하기",
+      "contact": "문의하기"
+    },
+    "subMenu": {
+      "cookery": "요리",
+      "hospitality": "호스피탈리티",
+      "fitnessAndSport": "피트니스 & 스포츠",
+      "business": "비즈니스",
+      "projectAndProgram": "프로젝트 & 프로그램",
+      "humanResource": "HR"
+    },
+    "studyWithUs": {
+      "studentInsights": "ABM 학생 후기",
+      "academicCalendar": "학사 일정",
+      "feesAndPayment": "수업료 및 결제",
+      "entryRequirements": "입학 요건",
+      "getUSI": "USI 발급",
+      "enrolNow": "지금 등록하기",
+      "higherEducationPathway": "고등교육 진학 과정"
+    }
+  },
+  "cookeryAndHospitality": {
+    "title": "요리 & 호스피탈리티 커리어 시작하기",
+    "description": "ABM의 키친 매니지먼트 및 호스피탈리티 과정으로 호주에서 가장 보람 있고 역동적인 커리어 중 하나를 시작해보세요.",
+    "streams": "프로그램",
+    "kitchenManagementStream": "키친 매니지먼트 프로그램",
+    "foodAndBeverageStream": "식음료 프로그램",
+    "streamDescription": "이 프로그램은 요리 수업과 학습을 보다 높은 수준으로 발전시키고자 하는 학생들을 위한 과정입니다.",
+    "specialisedShortCourses": "전문 단기 과정",
+    "shortCourse": "원데이 클래스",
+    "foodSafetySupervisor": "NSW 식품 안전 관리자 자격증 (FSS)"
+  },
+  "common": {
+    "findOutMore": "더 알아보기"
+  },
+  "currentStudents": {
+    "title": "학생 정보",
+    "welcome": "재학생 페이지에 오신 것을 환영합니다!",
+    "description": "여기에서 ABM에서의 학업을 지원하는 중요한 정보, 자료 및 업데이트를 찾으실 수 있습니다",
+    "moodleTitle": "Moodle에 로그인이 필요하신가요?",
+    "moodleLogin": "무들 로그인",
+    "studentPortalTitle": "양식을 다운로드해야 하나요?",
+    "studentPortal": "학생 포털"
   }
 }

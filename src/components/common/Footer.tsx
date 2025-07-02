@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 function Footer() {
   return (
-    <footer className="bg-black py-50 px-20 md:px-160 text-white flex flex-wrap justify-between font-[family-name:var(--font-inter)] text-sm">
+    <footer className="bg-black py-50 px-20 md:px-160 flex flex-wrap justify-between font-[family-name:var(--font-inter)] text-sm text-neutral-200">
       <div className="mb-30">
         <Image src="/abm_logo.png" alt="Logo" width={120} height={120} />
-        <ul className="mt-20 md:mt-0">
+        <ul className="mt-20 md:mt-20 text-neutral-200">
           <li>
             <Link
               href="https://maps.app.goo.gl/NSSq15XbzbLBmfQcA"
@@ -16,14 +16,14 @@ function Footer() {
               242 Castlereagh Street Sydney NSW 2000
             </Link>
           </li>
-          <li className="underline">
+          <li className="underline mt-10">
             <Link href="mailto:info@abm.edu.au" target="_blank">
               info@abm.edu.au
             </Link>
           </li>
-          <li>+61 (02) 9160 4507</li>
+          <li className="mt-10">+61 (02) 9160 4507</li>
           <li>(WhatsApp) + 61 482 796 0</li>
-          <li>RTO 45578 | CRICOS 03826M</li>
+          <li className="mt-10">RTO 45578 | CRICOS 03826M</li>
           <li>ABN 37 623 414 817</li>
         </ul>
       </div>

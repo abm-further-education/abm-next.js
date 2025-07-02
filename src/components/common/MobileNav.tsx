@@ -87,6 +87,7 @@ function MobileNav() {
                   >
                     {list.map((item) => (
                       <Link
+                        onClick={toggleMenu}
                         key={item.href}
                         className="ml-10 text-base block hover:underline"
                         href={item.href}
@@ -110,7 +111,7 @@ function MobileNav() {
         `fixed top-56 z-[999] lg:hidden flex items-center justify-between text-white p-16 w-full`
       )}
     >
-      <Link href="/" className="">
+      <Link href="/" className="" onClick={toggleMenu}>
         <Image
           src="/abm_logo.png"
           alt="Logo"
@@ -224,6 +225,7 @@ function MobileNav() {
                           >
                             {shortCourseMenu.map((item) => (
                               <Link
+                                onClick={toggleMenu}
                                 key={item.href}
                                 className="ml-10 text-base block hover:underline"
                                 href={item.href}
@@ -263,6 +265,7 @@ function MobileNav() {
                           >
                             {shortCourseMenu.map((item) => (
                               <Link
+                                onClick={toggleMenu}
                                 key={item.href}
                                 className="ml-10 text-base block hover:underline"
                                 href={item.href}

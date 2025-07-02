@@ -5,28 +5,35 @@ import Link from 'next/link';
 function CertificateIII() {
   return (
     <div className={paragraphStyle}>
-      Individuals well suited for our Advanced Diploma of Hospitality Management
-      are those looking to pursue a career that will utilize a broad range of
-      hospitality skills, combined with specialized managerial skills and
-      substantial knowledge of industry to coordinate and monitor hospitality
-      operations. Students in this field will operate with a high level of
-      autonomy and will be responsible for the creation and implementation of
-      strategic business management decisions.
+      The SIS40221 Certificate IV in Fitness is perfect for anyone looking to
+      become a personal trainer. You’ll learn how to design, instruct, and
+      assess exercise programmes for healthy clients aiming to achieve their
+      fitness goals. If a client has more serious health concerns, you’ll refer
+      them to medical professionals. Personal trainers work independently, using
+      their fitness knowledge in both routine and unpredictable situations, and
+      communicate well with clients and health experts to achieve the best
+      results.
       <br />
       <br />
-      Our Advanced Diploma of Hospitality Management qualification provides
-      students with a clear pathway to work in any hospitality industry sector
-      and for a diverse range of employers including restaurants, hotels,
-      motels, catering operations, clubs, pubs, cafes and coffee shops. Students
-      completing this course will achieve the skills and framework required for
-      multiskilling and for specialization in accommodation services, cookery,
-      food and beverage gaming.
+      This course offers a pathway to work as a personal trainer in gyms,
+      fitness centres, leisure facilities, client workplaces, homes, and even
+      outdoors. You can train individuals or groups and may also provide online
+      services. You could also step into leadership roles in some settings.
       <br />
       <br />
-      Due to the nature of this course and the flexible electives available for
-      students, we can ensure that you are working towards your goals in their
-      chosen industry by allowing for specialized learning activities, catered
-      towards your own preferences and career goals.
+      The target group for this qualification includes international students
+      who: <br />– Want to start or advance their career in the fitness
+      industry. <br />– Want to switch to a new field. <br />– Have completed a
+      Certificate III in Fitness and wish to develop further skills. <br />– Are
+      looking for a pathway to higher qualifications in fitness.
+      <br />
+      <br />
+      Our students come from a range of countries. Some may be new to Australia,
+      while others may have lived here before, either recently or in the past.
+      This qualification is your stepping stone into the fitness industry, with
+      no special licensing or certification required. You’ll follow Australian
+      standards and industry practices to ensure you’re well-prepared for your
+      career.
       <div className="my-10">
         <h3 className={titleStyle}>Delivery mode</h3>
         <span>Face to Face</span>
@@ -34,11 +41,9 @@ function CertificateIII() {
       <div className="my-10">
         <h3 className={titleStyle}>Delivery site:</h3>
         <p className={titleStyle}>• Classroom</p>
-        <span>
-          Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000
-        </span>
-        <p className={titleStyle}>• Kitchen</p>
         <span>242 Castlereagh Street Sydney NSW 2000 Australia</span>
+        <p className={titleStyle}>• Practical</p>
+        <span>Private Gymnasium for practical training and assessment</span>
       </div>
       <div>
         <p>

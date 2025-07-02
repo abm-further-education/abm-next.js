@@ -9,13 +9,20 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 function Testimonial() {
+  const params = useParams();
+  const t = useTranslations('HomePage');
+  const tCommon = useTranslations('common');
   return (
     <section className="flex flex-col items-center justify-center py-50">
-      <h2 className="text-3xl md:text-5xl font-bold py-50">Testomonial</h2>
+      <h2 className="text-3xl md:text-5xl font-bold py-50">
+        {t('testimonialTitle')}
+      </h2>
       <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
-        Where do you see yourself happily working in nearest future?
+        {t('testimonialDescription')}
       </p>
       {/* <Swiper
         navigation
@@ -56,8 +63,11 @@ function Testimonial() {
           ))}
         </motion.div>
       </div>
-      <Link href="/" className="bg-black text-white px-20 py-10 mt-30">
-        FIND OUT MORE
+      <Link
+        href={`/${params.locale}/testimonial`}
+        className="bg-black text-white px-20 py-10 mt-30"
+      >
+        {tCommon('findOutMore')}
       </Link>
     </section>
   );

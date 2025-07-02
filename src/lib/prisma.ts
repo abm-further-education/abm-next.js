@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import connectDB from './mongodb';
+import User from '../models/User';
 
-const prisma = new PrismaClient();
-export default prisma;
+export { connectDB, User };

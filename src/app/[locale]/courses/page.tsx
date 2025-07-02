@@ -1,9 +1,13 @@
+'use client';
+
 import Banner from '@/components/common/Banner';
 import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
+import { useTranslations } from 'next-intl';
 import React from 'react';
 
 function page() {
+  const t = useTranslations('courses');
   return (
     <div>
       <Banner
@@ -18,14 +22,10 @@ function page() {
       <FadeIn>
         <div className="flex flex-col items-center justify-center py-50">
           <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-            Find the Right Course for Your Future
+            {t('title')}
           </h2>
           <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
-            Choosing the right course is key to reaching your career goals.
-            Think beyond interest—consider if the path leads to a future you’ll
-            enjoy. Whether it’s business, commercial cookery, or advancing in
-            hospitality, ABM helps you gain the skills to become job-ready and
-            confident in your chosen field.
+            {t('description')}
           </p>
         </div>
       </FadeIn>
@@ -35,37 +35,37 @@ function page() {
             <Card
               imgPath="/home/Cookery.png"
               title="Cookery"
-              link="/courses/cookery-hospitality"
+              link="/cookery-and-hospitality-courses"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Hospitality.png"
               title="Hospitality"
-              link="/courses/cookery-hospitality"
+              link="/cookery-and-hospitality-courses"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Fitness.png"
               title="Fitness & Sports"
-              link="/courses/fitness-sports"
+              link="/fitness-instructor-personal-trainer-courses"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Business.png"
               title="Business"
-              link="/courses/business"
+              link="/business-and-management-courses"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/Project.png"
               title="Project & Program"
-              link="/courses/project-program"
+              link="/project-and-program-management-courses"
               className="w-300 md:w-440"
             />
             <Card
               imgPath="/home/HR.png"
               title="HR Management"
-              link="/courses/human-resource"
+              link="/human-resources-courses"
               className="w-300 md:w-440"
             />
           </div>

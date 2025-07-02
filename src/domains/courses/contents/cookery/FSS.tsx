@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from '@/components/common/Button';
 import {
@@ -9,6 +10,7 @@ import {
 import { ChevronUpIcon } from 'lucide-react';
 
 function FSS() {
+  const [type, setType] = useState('');
   return (
     <div>
       <h2 className="text-2xl font-bold mb-20">
@@ -34,7 +36,7 @@ function FSS() {
           <div className="flex flex-col mb-10">
             <p className="font-semibold">Special Offer:</p>
             <p>
-              Use code ABMFSS15 at checkout for a{' '}
+              Use code <strong>ABMFSS15</strong> at checkout for a{' '}
               <span className="bg-orange-100 text-orange-700 font-semibold">
                 15% discount until 30 June!
               </span>
@@ -52,10 +54,12 @@ function FSS() {
               id="course-date"
               name="course-date"
               className="w-full px-8 py-12 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+              value={type}
+              onChange={(e) => setType(e.target.value)}
             >
-              <option value="">Select a date</option>
-              <option value="2024-04-16">Certificate</option>
-              <option value="2024-05-02">Recertificate</option>
+              <option value="">Select a type</option>
+              <option value="certificate">Certificate</option>
+              <option value="recertificate">Recertificate</option>
             </select>
           </div>
 
@@ -72,13 +76,13 @@ function FSS() {
               className="w-full px-8 py-12 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
             >
               <option value="">Select a date</option>
-              <option value="2024-04-16">16th April</option>
               <option value="2024-05-02">2nd May</option>
-              <option value="2024-05-16">16th May</option>
               <option value="2024-05-30">30th May</option>
               <option value="2024-06-05">5th June</option>
             </select>
-            <div className="font-bold text-2xl mt-20 text-primary">$180</div>
+            <div className="font-bold text-2xl mt-20 text-primary">
+              ${type === 'recertificate' ? 110 : 180}
+            </div>
             <Button className="bg-black text-white w-full mt-20">
               Enrol Now
             </Button>

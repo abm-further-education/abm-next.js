@@ -26,7 +26,7 @@ const titleMatch: { [key: string]: string } = {
   barista: 'Barista Course',
   cake: 'Classic French Cake Course',
   wine: 'Wine Course',
-  sourdough: 'Sourdough and Focaccia Course',
+  focaccia: 'Sourdough and Focaccia Course',
   dessert: 'Fine Dining Dessert Plating Course',
   pastries: 'Classic French Pastries Course',
   mixology: 'Cocktail-Making and Mixology Course',

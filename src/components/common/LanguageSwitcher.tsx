@@ -23,7 +23,7 @@ const LanguageSwitcher = () => {
   return (
     <div>
       <Popover className="relative">
-        <PopoverButton>
+        <PopoverButton className="text-white hover:text-primary transition-colors duration-300 font-semibold cursor-pointer">
           {Array.isArray(params.locale)
             ? params.locale[0].toUpperCase()
             : params.locale?.toUpperCase()}
@@ -36,7 +36,7 @@ const LanguageSwitcher = () => {
             <Linki18n
               href="/"
               locale={lang}
-              className="hover:text-primary"
+              className="hover:text-primary transition-colors duration-300"
               key={lang}
             >
               {languageFlags[lang]}

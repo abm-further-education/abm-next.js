@@ -1,12 +1,12 @@
 'use server';
-import prisma from '@/lib/prisma';
+import { connectDB, User } from '@/lib/prisma';
 
 export async function getUsers() {
-  return prisma.user.findMany();
+  await connectDB();
+  return User.find({}).lean();
 }
 
 export async function createUser(name: string, email: string) {
-  return prisma.user.create({
-    data: { name, email },
-  });
+  await connectDB();
+  return User.create({ name, email });
 }

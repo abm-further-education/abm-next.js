@@ -1,6 +1,6 @@
 import React from 'react';
-import { paragraphStyle, titleStyle } from '../../components/CourseDetail';
-import Link from 'next/link';
+import { paragraphStyle } from '../../components/CourseDetail';
+import CourseDeliveryInfo from '../../components/CourseDeliveryInfo';
 
 function AdvancedDiplomaBusiness() {
   return (
@@ -24,31 +24,19 @@ function AdvancedDiplomaBusiness() {
       Our Advanced Diploma of Business is suited towards individuals with a
       passion for leadership, strong problem-solving capabilities and the
       ability to motivate and guide a team.
-      <div className="my-10">
-        <h3 className={titleStyle}>Delivery mode</h3>
-        <span>Face to Face</span>
-      </div>
-      <div className="my-10">
-        <h3 className={titleStyle}>Delivery site:</h3>
-        <p className={titleStyle}>• Classroom</p>
-        <span>
-          Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000
-        </span>
-        <p className={titleStyle}>• Kitchen</p>
-        <span>242 Castlereagh Street Sydney NSW 2000 Australia</span>
-      </div>
-      <div>
-        <p>
-          * More information is available via the{' '}
-          <Link
-            href="https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25"
-            target="_blank"
-            className="underline"
-          >
-            My Skills Website.
-          </Link>
-        </p>
-      </div>
+      <CourseDeliveryInfo
+        deliveryMode="Face to Face"
+        deliverySites={[
+          {
+            type: 'Classroom',
+            address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+          },
+        ]}
+        moreInfoLink={{
+          url: 'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+          text: 'My Skills Website.',
+        }}
+      />
     </div>
   );
 }

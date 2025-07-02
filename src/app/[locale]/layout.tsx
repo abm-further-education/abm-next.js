@@ -40,7 +40,10 @@ export default async function RootLayout({
   const messages = await getMessages();
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${montserrat.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         <ToastContainer
           position="bottom-right"
           autoClose={3000}
@@ -56,7 +59,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Nav />
           <TopButton />
-          {children}
+          <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
         <script

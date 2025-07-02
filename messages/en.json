@@ -1,8 +1,102 @@
 {
   "HomePage": {
-    "bannerContent": "Where Passion Meets Culinary Perfection. An Unforgettable Experience"
+    "bannerContent": "Where Passion Meets Culinary Perfection. An Unforgettable Experience",
+    "coursesTitle": "ABM Courses",
+    "coursesDescription": "We provide high-quality education in an innovative and supportive environment, ensuring student success with expert teaching and work experience opportunities across Australia.",
+    "testimonialTitle": "Testimonial",
+    "testimonialDescription": "Where do you see yourself happily working in nearest future?"
   },
   "contact": {
     "title": "Contact Us"
+  },
+  "courses": {
+    "title": "Find the Right Course for Your Future",
+    "description": "Choosing the right course is key to reaching your career goals. Think beyond interest—consider if the path leads to a future you'll enjoy. Whether it's business, commercial cookery, or advancing in hospitality, ABM helps you gain the skills to become job-ready and confident in your chosen field."
+  },
+  "studyWithUs": {
+    "studentInsights": "ABM Student Insights",
+    "academicCalendar": "Academic Calendar",
+    "feesAndPayment": "Fees and Payment",
+    "entryRequirements": "Entry Requirements",
+    "getUSI": "Get a USI",
+    "enrolNow": "Enrol Now",
+    "higherEducationPathway": "Higher Education Pathway"
+  },
+  "timetable": {
+    "title": "Timetable",
+    "subtitle": "Plan Your Study Schedule",
+    "pageTitle": "Class Timetable",
+    "importantInfo": "Important Information",
+    "selfPacedLearning": "All students must complete 5 – 6 hours of self-paced learning included depending on the course.",
+    "schedule": "Morning: 2.5 days a week, Evening: 3 days a week.",
+    "subjectToChange": "This timetable is subject to change.",
+    "studyHours": "*15-24 hours of face-to-face study plus 5-6 hours of self-paced learning included depending on the course.",
+    "qualification": "Qualification",
+    "intake": "Intake / Course",
+    "monday": "MON",
+    "tuesday": "TUE",
+    "wednesday": "WED",
+    "thursday": "THU",
+    "friday": "FRI",
+    "tutorial": "Tutorial",
+    "note": "Note",
+    "noteDescription": "Please contact us for the most up-to-date timetable information as schedules may change based on enrollment and operational requirements."
+  },
+  "nav": {
+    "internationalStudent": "Are you an International Student?",
+    "downloadGuide": "Download Course Guide",
+    "currentStudents": "Current Students",
+    "agentPortal": "Agent Portal",
+    "findCourse": "Find a course",
+    "searchPlaceholder": "Search Here...",
+    "noResults": "No results found.",
+    "enrolNow": "Enrol Now",
+    "menu": {
+      "courses": "Courses",
+      "shortCourses": "Short Courses",
+      "studyWithUs": "Study With Us",
+      "contact": "Contact"
+    },
+    "subMenu": {
+      "cookery": "Cookery",
+      "hospitality": "Hospitality",
+      "fitnessAndSport": "Fitness & Sport",
+      "business": "Business",
+      "projectAndProgram": "Project & Program",
+      "humanResource": "Human Resource"
+    },
+    "studyWithUs": {
+      "studentInsights": "ABM Student Insights",
+      "academicCalendar": "Academic Calendar",
+      "feesAndPayment": "Fees and Payment",
+      "entryRequirements": "Entry Requirements",
+      "getUSI": "Get a USI",
+      "enrolNow": "Enrol Now",
+      "higherEducationPathway": "Higher Education Pathway"
+    }
+  },
+  "cookeryAndHospitality": {
+    "title": "Start Your Career in Cookery & Hospitality",
+    "description": "Step into one of the most rewarding and dynamic career paths in Australia with ABM's Kitchen Management and Hospitality courses.",
+    "streams": "Streams",
+    "kitchenManagementStream": "Kitchen Management Stream",
+    "foodAndBeverageStream": "Food and Beverage Stream",
+    "streamDescription": "This stream is for students seeking to further their skills and studies in cookery to a more advanced level.",
+    "specialisedShortCourses": "Specialised short courses",
+    "shortCourse": "One Day Class",
+    "eliteCookingClass": "Elite Cooking Class Series",
+    "foodSafetySupervisor": "NSW Food Safety Supervisor Certificate (FSS)"
+  },
+  "common": {
+    "findOutMore": "FIND OUT MORE"
+  },
+  "currentStudents": {
+    "title": "Student Info",
+    "welcome": "Welcome to the Current Students page!",
+    "description": "Here you will find important information, resources, and updates to support your studies at ABM",
+    "moodleTitle": "Do you need to login to Moodle?",
+    "moodleLogin": "MOODLE LOGIN",
+    "studentPortalTitle": "Do you need to download forms?",
+    "studentPortal": "STUDENT PORTAL"
   }
 }
