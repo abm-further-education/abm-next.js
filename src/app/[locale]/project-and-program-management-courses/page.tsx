@@ -5,6 +5,13 @@ import Gallery from '@/components/common/Gallery';
 import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Project & Program Management Courses | ABM Further Education',
+  description:
+    'Lead projects that make an impact with ABM Further Education. From Certificate IV to Advanced Diploma, develop project management skills for construction, tech, and corporate sectors.',
+};
 
 function Page() {
   return (

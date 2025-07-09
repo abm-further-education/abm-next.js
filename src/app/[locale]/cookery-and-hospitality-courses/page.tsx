@@ -8,6 +8,13 @@ import Testimonial from '@/domains/main/components/Testimonial';
 import Gallery from '@/components/common/Gallery';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cookery & Hospitality Courses | ABM Further Education',
+  description:
+    'Explore our comprehensive cookery and hospitality courses at ABM Further Education. From kitchen management to hospitality management, develop your culinary and hospitality skills.',
+};
 
 async function page() {
   const t = await getTranslations('cookeryAndHospitality');

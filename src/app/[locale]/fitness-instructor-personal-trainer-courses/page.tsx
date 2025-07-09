@@ -5,6 +5,13 @@ import Gallery from '@/components/common/Gallery';
 import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Fitness & Sports Courses | ABM Further Education',
+  description:
+    'Turn your passion for fitness into a career with ABM Further Education. Explore our fitness and sports courses designed for both international students and domestic fast-track options.',
+};
 
 function page() {
   return (

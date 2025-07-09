@@ -12,7 +12,7 @@ import { ChevronUpIcon } from 'lucide-react';
 function FSS() {
   const [type, setType] = useState('');
   return (
-    <div>
+    <div className="container max-w-1000 mx-auto py-40">
       <h2 className="text-2xl font-bold mb-20">
         NSW Food Safety Supervisor Certificate (FSS)
       </h2>

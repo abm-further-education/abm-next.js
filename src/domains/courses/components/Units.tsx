@@ -1,11 +1,20 @@
 import {
-  AHM_UNITS,
+  ADVANCED_BUSINESS_UNITS,
+  ADVANCED_HR_UNITS,
+  ADVANCED_PROJECT_UNITS,
   CERTIII_FITNESS_UNITS,
+  CERTIV_BUSINESS_UNITS,
   CERTIV_FITNESS_FAST_UNITS,
   CERTIV_FITNESS_UNITS,
-  HM_UNITS,
+  CERTIV_HR_UNITS,
+  CERTIV_PROJECT_UNITS,
+  DIPLOMA_BUSINESS_UNITS,
+  DIPLOMA_HR_UNITS,
+  DIPLOMA_PROJECT_UNITS,
+  DIPLOMA_SPORT_UNITS,
+  GRADUATE_MANAGEMENT_UNITS,
   KM_UNITS,
-} from '@/lib/constants';
+} from '@/lib/units';
 import React from 'react';
 
 function Units({ params }: { params: { id: string } }) {
@@ -14,26 +23,28 @@ function Units({ params }: { params: { id: string } }) {
     [key: string]: { [key: string]: string | number }[];
   } = {
     'sit40521-certificate-iv-in-kitchen-management': KM_UNITS,
-    'industry-placement-work-placement': HM_UNITS,
-    fss: KM_UNITS,
-    'sit50422-diploma-of-hospitality-management': HM_UNITS,
-    'advanced-diploma-of-hospitality-management': AHM_UNITS,
-    'industry-placement-hospitality-management': KM_UNITS,
     'sis30321-certificate-iv-in-fitness': CERTIV_FITNESS_UNITS,
     'sis40221-certificate-iii-in-fitness': CERTIII_FITNESS_UNITS,
     'certificate-iv-in-sport-fast-track': CERTIV_FITNESS_UNITS,
+    'sis50321-diploma-of-sport': DIPLOMA_SPORT_UNITS,
     'certificate-iii-in-sport-fast-track': CERTIV_FITNESS_FAST_UNITS,
-    'bsb40120-certificate-iv-in-business': KM_UNITS,
-    'bsb50120-diploma-of-business': KM_UNITS,
-    'bsb60120-advanced-diploma-of-business': KM_UNITS,
-    'bsb80120-graduate-diploma-of-management': KM_UNITS,
-    'bsb40920-certificate-iv-in-project-management-practice': KM_UNITS,
-    'bsb50820-diploma-of-project-management-practice': KM_UNITS,
-    'bsb60820-advanced-diploma-of-project-management-practice': KM_UNITS,
-    'bsb40420-certificate-iv-in-human-resource-management': KM_UNITS,
-    'bsb50320-diploma-of-human-resource-management': KM_UNITS,
-    'bsb60320-advanced-diploma-of-human-resource-management': KM_UNITS,
+    'bsb40120-certificate-iv-in-business': CERTIV_BUSINESS_UNITS,
+    'bsb50120-diploma-of-business': DIPLOMA_BUSINESS_UNITS,
+    'bsb60120-advanced-diploma-of-business': ADVANCED_BUSINESS_UNITS,
+    'bsb80120-graduate-diploma-of-management': GRADUATE_MANAGEMENT_UNITS,
+    'bsb40920-certificate-iv-in-project-management-practice':
+      CERTIV_PROJECT_UNITS,
+    'bsb50820-diploma-of-project-management-practice': DIPLOMA_PROJECT_UNITS,
+    'bsb60820-advanced-diploma-of-project-management-practice':
+      ADVANCED_PROJECT_UNITS,
+    'bsb40420-certificate-iv-in-human-resource-management': CERTIV_HR_UNITS,
+    'bsb50320-diploma-of-human-resource-management': DIPLOMA_HR_UNITS,
+    'bsb60320-advanced-diploma-of-human-resource-management': ADVANCED_HR_UNITS,
   };
+
+  if (!mappingCourseUnits[id]) {
+    return;
+  }
   return (
     <div>
       <table className="min-w-full border-b border-gray-300 text-sm text-left text-gray-700">

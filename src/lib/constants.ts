@@ -1,699 +1,8 @@
-import { CourseDetailInfo } from '@/domains/courses/components/CourseDetail';
+import {
+  CourseDetailInfo,
+  DescriptionItem,
+} from '@/domains/courses/components/CourseDetail';
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
-
-export const KM_UNITS = [
-  {
-    no: 1,
-    code: 'SITHCCC023*',
-    title: 'Use food preparation equipment',
-    type: 'Core',
-  },
-  {
-    no: 2,
-    code: 'SITHCCC027*',
-    title: 'Prepare dishes using basic methods of cookery',
-    type: 'Core',
-  },
-  {
-    no: 3,
-    code: 'SITHCCC028*',
-    title: 'Prepare appetisers and salads',
-    type: 'Core',
-  },
-  {
-    no: 4,
-    code: 'SITHCCC029*',
-    title: 'Prepare stocks, sauces and soups',
-    type: 'Core',
-  },
-  {
-    no: 5,
-    code: 'SITHCCC030*',
-    title: 'Prepare vegetable, fruit, eggs and farinaceous dishes',
-    type: 'Core',
-  },
-  {
-    no: 6,
-    code: 'SITHCCC031*',
-    title: 'Prepare vegetarian and vegan dishes',
-    type: 'Core',
-  },
-  {
-    no: 7,
-    code: 'SITHCCC035*',
-    title: 'Prepare poultry dishes',
-    type: 'Core',
-  },
-  {
-    no: 8,
-    code: 'SITHCCC036*',
-    title: 'Prepare meat dishes',
-    type: 'Core',
-  },
-  {
-    no: 9,
-    code: 'SITHCCC037*',
-    title: 'Prepare seafood dishes',
-    type: 'Core',
-  },
-  {
-    no: 10,
-    code: 'SITHCCC041*',
-    title: 'Produce cakes, pastries and breads',
-    type: 'Core',
-  },
-  {
-    no: 11,
-    code: 'SITHCCC042*',
-    title: 'Prepare food to meet special dietary requirements',
-    type: 'Core',
-  },
-  {
-    no: 12,
-    code: 'SITHCCC043*',
-    title: 'Work effectively as a cook',
-    type: 'Core',
-  },
-  {
-    no: 13,
-    code: 'SITHKOP010',
-    title: 'Plan and cost recipes',
-    type: 'Core',
-  },
-  {
-    no: 14,
-    code: 'SITHKOP012*',
-    title: 'Develop recipes for special dietary requirements',
-    type: 'Core',
-  },
-  {
-    no: 15,
-    code: 'SITHKOP013*',
-    title: 'Plan cooking operations',
-    type: 'Core',
-  },
-  {
-    no: 16,
-    code: 'SITHKOP015*',
-    title: 'Design and cost menus',
-    type: 'Core',
-  },
-  {
-    no: 17,
-    code: 'SITHPAT016*',
-    title: 'Produce desserts',
-    type: 'Core',
-  },
-  {
-    no: 18,
-    code: 'SITXCOM010',
-    title: 'Manage conflict',
-    type: 'Core',
-  },
-  {
-    no: 19,
-    code: 'SITXFIN009',
-    title: 'Manage finances within a budget',
-    type: 'Core',
-  },
-  {
-    no: 20,
-    code: 'SITXFSA005',
-    title: 'Use hygienic practices for food safety',
-    type: 'Core',
-  },
-  {
-    no: 21,
-    code: 'SITXFSA006',
-    title: 'Participate in safe food handling practices',
-    type: 'Core',
-  },
-  {
-    no: 22,
-    code: 'SITXFSA008*',
-    title: 'Develop and implement a food safety program',
-    type: 'Core',
-  },
-  { no: 23, code: 'SITXHRM008', title: 'Roster staff', type: 'Core' },
-  {
-    no: 24,
-    code: 'SITXHRM009',
-    title: 'Lead and manage people',
-    type: 'Core',
-  },
-  {
-    no: 25,
-    code: 'SITXINV006*',
-    title: 'Receive, store and maintain stock',
-    type: 'Core',
-  },
-  {
-    no: 26,
-    code: 'SITXMGT004',
-    title: 'Monitor work operations',
-    type: 'Core',
-  },
-  {
-    no: 27,
-    code: 'SITXWHS007',
-    title: 'Implement and monitor work health and safety practices',
-    type: 'Core',
-  },
-  {
-    no: 28,
-    code: 'SITHCCC026*-',
-    title: 'Package prepared foodstuffs',
-    type: 'Elective (Group A)',
-  },
-  {
-    no: 29,
-    code: 'SITHCCC038*',
-    title: 'Produce and serve food for buffets',
-    type: 'Elective (Group A)',
-  },
-  {
-    no: 30,
-    code: 'SITHCCC040*',
-    title: 'Prepare and serve cheese',
-    type: 'Elective (Group A)',
-  },
-  {
-    no: 31,
-    code: 'SITXHRM010',
-    title: 'Recruit, select and induct staff',
-    type: 'Elective',
-  },
-  {
-    no: 32,
-    code: 'SITHIND006',
-    title: 'Source and use information on the hospitality industry',
-    type: 'Elective',
-  },
-  {
-    no: 33,
-    code: 'BSBTWK501',
-    title: 'Lead diversity and inclusion',
-    type: 'Elective',
-  },
-];
-
-export const HM_UNITS = [
-  {
-    no: 1,
-    code: 'SITXCCS015',
-    title: 'Enhance customer service experiences',
-    type: 'Core',
-  },
-  {
-    no: 2,
-    code: 'SITXCCS016',
-    title: 'Develop and manage quality customer service practices',
-    type: 'Core',
-  },
-  { no: 3, code: 'SITXCOM010', title: 'Manage conflict', type: 'Core' },
-  {
-    no: 4,
-    code: 'SITXFIN009',
-    title: 'Manage finances within a budget',
-    type: 'Core',
-  },
-  {
-    no: 5,
-    code: 'SITXFIN010',
-    title: 'Prepare and monitor budgets',
-    type: 'Core',
-  },
-  {
-    no: 6,
-    code: 'SITXGLC002',
-    title: 'Identify and manage legal risks and comply with law',
-    type: 'Core',
-  },
-  { no: 7, code: 'SITXHRM008', title: 'Roster staff', type: 'Core' },
-  { no: 8, code: 'SITXHRM009', title: 'Lead and manage people', type: 'Core' },
-  { no: 9, code: 'SITXMGT004', title: 'Monitor work operations', type: 'Core' },
-  {
-    no: 10,
-    code: 'SITXMGT005',
-    title: 'Establish and conduct business relationships',
-    type: 'Core',
-  },
-  {
-    no: 11,
-    code: 'SITXWHS007',
-    title: 'Implement and monitor work health and safety practices',
-    type: 'Core',
-  },
-  {
-    no: 12,
-    code: 'SITXFSA005',
-    title: 'Use hygienic practices for food safety',
-    type: 'Elective',
-  },
-  {
-    no: 13,
-    code: 'SITHIND008',
-    title: 'Work effectively in the Hospitality service',
-    type: 'Elective',
-  },
-  {
-    no: 14,
-    code: 'SITXHRM010',
-    title: 'Recruit, select and induct staff',
-    type: 'Elective',
-  },
-  {
-    no: 15,
-    code: 'SITHFAB030*',
-    title: 'Prepare and serve cocktails',
-    type: 'Elective',
-  },
-  { no: 16, code: 'SITXINV008', title: 'Control stock', type: 'Elective' },
-  {
-    no: 17,
-    code: 'SITHKOP014',
-    title: 'Plan catering for events or functions',
-    type: 'Elective',
-  },
-  { no: 18, code: 'BSBCMM411', title: 'Make presentations', type: 'Elective' },
-  {
-    no: 19,
-    code: 'BSBSUS511',
-    title: 'Develop workplace policies and procedures for sustainability',
-    type: 'Elective',
-  },
-  {
-    no: 20,
-    code: 'BSBTWK501',
-    title: 'Lead diversity and inclusion',
-    type: 'Elective',
-  },
-  {
-    no: 21,
-    code: 'SITHFAB021',
-    title: 'Provide responsible service of alcohol',
-    type: 'Elective',
-  },
-  { no: 22, code: 'SITHFAB023', title: 'Operate a bar', type: 'Elective' },
-  {
-    no: 23,
-    code: 'SITXFSA006',
-    title: 'Participate in safe food handling practices',
-    type: 'Elective',
-  },
-  {
-    no: 24,
-    code: 'SITXFSA008*',
-    title: 'Develop and implement a food safety program',
-    type: 'Elective',
-  },
-  {
-    no: 25,
-    code: 'SITHFAB025',
-    title: 'Prepare and serve espresso coffee',
-    type: 'Elective',
-  },
-  {
-    no: 26,
-    code: 'SITHIND006',
-    title: 'Source and use information on the hospitality industry',
-    type: 'Elective',
-  },
-  {
-    no: 27,
-    code: 'SITXCCS010',
-    title: 'Provide visitor information',
-    type: 'Elective',
-  },
-  {
-    no: 28,
-    code: 'SITXCCS012',
-    title: 'Provide lost and found services',
-    type: 'Elective',
-  },
-];
-
-export const AHM_UNITS = [
-  {
-    no: 1,
-    code: 'BSBFIN601',
-    title: 'Manage organisational finances',
-    type: 'Core',
-  },
-  {
-    no: 2,
-    code: 'BSBOPS601',
-    title: 'Develop and implement business plans',
-    type: 'Core',
-  },
-  { no: 3, code: 'SITXFIN011', title: 'Manage physical assets', type: 'Core' },
-  {
-    no: 4,
-    code: 'SITXHRM012',
-    title: 'Monitor staff performance',
-    type: 'Core',
-  },
-  {
-    no: 5,
-    code: 'SITXMPR014',
-    title: 'Develop and implement marketing strategies',
-    type: 'Core',
-  },
-  {
-    no: 6,
-    code: 'SITXWHS008',
-    title: 'Establish and maintain a work health and safety system',
-    type: 'Core',
-  },
-  {
-    no: 7,
-    code: 'SITHFAB027*',
-    title: 'Serve food and beverage',
-    type: 'Elective',
-  },
-  {
-    no: 8,
-    code: 'SITHFAB024*',
-    title: 'Prepare and serve non-alcoholic beverages',
-    type: 'Elective',
-  },
-];
-
-export const CERTIV_FITNESS_UNITS = [
-  {
-    code: 'CHCCOM006',
-    title: 'Establish and manage client relationships',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT041',
-    title: 'Develop personalised exercise programs',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT042',
-    title: 'Instruct personalised exercise sessions',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT043',
-    title:
-      'Develop and instruct personalised exercise programs for body composition goals',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT044',
-    title:
-      'Develop and instruct personalised exercise programs for older clients',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT045',
-    title:
-      'Develop and instruct personalised exercise programs for adolescent clients',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT049',
-    title: 'Use exercise science principles in fitness instruction',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT050',
-    title: 'Support exercise behaviour change',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT051',
-    title:
-      'Establish and maintain professional practice for fitness instruction',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT053',
-    title: 'Support healthy eating for individual fitness clients',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT034',
-    title: 'Assess client movement and provide exercise advice',
-    type: 'Elective',
-  },
-  {
-    code: 'SISXCAI010',
-    title: 'Develop strength and conditioning programs',
-    type: 'Elective',
-  },
-  {
-    code: 'BSBESB401',
-    title: 'Research and develop business plans',
-    type: 'Elective',
-  },
-  {
-    code: 'BSBESB301',
-    title: 'Investigate business opportunities',
-    type: 'Elective',
-  },
-  {
-    code: 'SISFFIT046',
-    title: 'Plan and instruct online exercise sessions',
-    type: 'Elective',
-  },
-  { code: 'BSBLDR414', title: 'Lead team effectiveness', type: 'Elective' },
-  {
-    code: 'BSBCRT411',
-    title: 'Apply critical thinking to work practices',
-    type: 'Elective',
-  },
-];
-
-export const CERTIII_FITNESS_UNITS = [
-  {
-    code: 'BSBOPS304',
-    title: 'Deliver and monitor a service to customers',
-    type: 'Core',
-  },
-  {
-    code: 'BSBPEF301',
-    title: 'Organise personal work priorities',
-    type: 'Core',
-  },
-  { code: 'HLTAID011', title: 'Provide First Aid', type: 'Core' },
-  {
-    code: 'HLTWHS001',
-    title: 'Participate in workplace health and safety',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT032',
-    title: 'Complete pre-exercise screening and service orientation',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT033',
-    title: 'Complete client fitness assessments',
-    type: 'Core',
-  },
-  { code: 'SISFFIT035', title: 'Plan group exercise sessions', type: 'Core' },
-  {
-    code: 'SISFFIT036',
-    title: 'Instruct group exercise sessions',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT040',
-    title:
-      'Develop and instruct gym-based exercise programs for individual clients',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT047',
-    title:
-      'Use anatomy and physiology knowledge to support safe and effective exercise',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT052',
-    title: 'Provide healthy eating information',
-    type: 'Core',
-  },
-  {
-    code: 'SISXIND011',
-    title: 'Maintain sport, fitness and recreation industry knowledge',
-    type: 'Elective',
-  },
-  { code: 'SISXFAC007', title: 'Maintain clean facilities', type: 'Elective' },
-  {
-    code: 'BSBOPS403',
-    title: 'Apply business risk management processes',
-    type: 'Elective',
-  },
-  {
-    code: 'SISFFIT037',
-    title: 'Develop and instruct group movement programs for children',
-    type: 'Elective',
-  },
-];
-
-export const CERTIII_FITNESS_FAST_UNITS = [
-  {
-    code: 'SISXIND011',
-    title: 'Maintain sport, fitness and recreation industry knowledge',
-    type: 'Core',
-  },
-  { code: 'SISXFAC007', title: 'Maintain clean facilities', type: 'Core' },
-  {
-    code: 'HLTWHS001',
-    title: 'Participate in workplace health and safety',
-    type: 'Core',
-  },
-  {
-    code: 'BSBPEF301',
-    title: 'Organise personal work priorities',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT047',
-    title:
-      'Use anatomy and physiology knowledge to support safe and effective exercise',
-    type: 'Core',
-  },
-  {
-    code: 'BSBOPS403',
-    title: 'Apply business risk management processes',
-    type: 'Core',
-  },
-  {
-    code: 'SISXIND009',
-    title: 'Respond to interpersonal conflict',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT032',
-    title: 'Complete pre-exercise screening and service orientation',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT033',
-    title: 'Complete client fitness assessments',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT040',
-    title:
-      'Develop and instruct gym-based exercise programs for individual clients',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT052',
-    title: 'Provide healthy eating information',
-    type: 'Elective',
-  },
-  {
-    code: 'SISFFIT035',
-    title: 'Plan group exercise sessions',
-    type: 'Elective',
-  },
-  {
-    code: 'SISFFIT036',
-    title: 'Instruct group exercise sessions',
-    type: 'Elective',
-  },
-  { code: 'HLTAID001', title: 'Provide First Aid', type: 'Elective' },
-  {
-    code: 'BSBOPS304',
-    title: 'Deliver and monitor a service to customers',
-    type: 'Elective',
-  },
-];
-
-export const CERTIV_FITNESS_FAST_UNITS = [
-  {
-    code: 'SISFFIT041',
-    title: 'Develop personalised exercise programs',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT049',
-    title: 'Use exercise science principles in fitness instruction',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT050',
-    title: 'Support exercise behaviour change',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT042',
-    title: 'Instruct personalised exercise sessions',
-    type: 'Core',
-  },
-  {
-    code: 'ISFFIT044',
-    title:
-      'Develop and instruct personalised exercise programs for older clients',
-    type: 'Core',
-  }, // Double-check the "ISFFIT044" code—may be a typo.
-  {
-    code: 'CHCCOM006',
-    title: 'Establish and manage client relationships',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT053',
-    title: 'Support healthy eating for individual fitness clients',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT043',
-    title:
-      'Develop and instruct personalised exercise programs for body composition goals',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT051',
-    title:
-      'Establish and maintain professional practice for fitness instruction',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT034',
-    title: 'Assess client movement and provide exercise advice',
-    type: 'Core',
-  },
-  {
-    code: 'SISFFIT045',
-    title:
-      'Develop and instruct personalised exercise programs for adolescent clients',
-    type: 'Core',
-  },
-  {
-    code: 'SISXCAI010',
-    title: 'Develop strength and conditioning programs',
-    type: 'Elective',
-  },
-  {
-    code: 'SISFFIT046',
-    title: 'Plan and instruct online exercise sessions',
-    type: 'Elective',
-  },
-  {
-    code: 'BSBESB401',
-    title: 'Research and develop business plans',
-    type: 'Elective',
-  },
-  {
-    code: 'BSBESB301',
-    title: 'Investigate business opportunities',
-    type: 'Elective',
-  },
-  { code: 'BSBLDR414', title: 'Lead team effectiveness', type: 'Elective' },
-  {
-    code: 'BSBCRT411',
-    title: 'Apply critical thinking to work practices',
-    type: 'Elective',
-  },
-];
 
 export const cookeryMenu = [
   {
@@ -731,20 +40,20 @@ export const hospitalityMenu = [
 
 export const fitnessMenu = [
   {
-    title: 'Certificate IV in Fitness',
-    href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iv-in-fitness',
-  },
-  {
     title: 'Certificate III in Fitness',
     href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iii-in-fitness',
   },
   {
-    title: 'Certificate IV in Sport',
-    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-sport-fast-track',
+    title: 'Certificate IV in Fitness',
+    href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iv-in-fitness',
   },
   {
     title: 'Certificate III in Sport',
     href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-sport-fast-track',
+  },
+  {
+    title: 'Certificate IV in Sport',
+    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-sport-fast-track',
   },
 ];
 
@@ -840,50 +149,1146 @@ export const shortCourseMenu = [
   },
 ];
 
-// 샘플 코스 정보 데이터
-export const sampleCourseDetail: CourseDetailInfo = {
-  courseDuration: {
-    title: 'Course Duration',
+// 뉴스 데이터
+export interface NewsItem {
+  id: number;
+  image: string;
+  category: string;
+  date: string;
+  title: string;
+  description: string;
+  content?: string;
+  link?: string;
+}
+
+export const newsData: NewsItem[] = [
+  {
+    id: 1,
+    image: '/home/home.png',
+    category: 'Event',
+    date: '20/08/2024',
+    title: "ABM's Graduation Ceremony Highlights",
     description:
-      'This qualification will be delivered over 78 weeks, including 60 weeks of training and assessment spread over 6 terms of 10 weeks each.',
+      'A special day celebrating our graduates and their achievements in hospitality and cookery programs.',
+    link: '/',
   },
-  workPlacement: {
-    title: 'Work Placement',
-    hours: '360 hours',
-  },
-  studentSupport: {
-    title: 'Student Support',
-    description: [
-      'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-      'The aim of both documents is to provide any support that may be required. This could include:',
-    ],
-    supportTypes: [
-      'Language, Literacy and Numeracy (LLN) supports.',
-      'Assistive Technologys.',
-      'Additional Tutorials, and / ors.',
-      'Other mechanisms, such as assistance in using technology for online delivery components.',
-    ],
-    additionalInfo: [
-      "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-      'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-      'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
-    ],
-  },
-  jobRoles: {
-    title: 'Job roles',
-    roles: ['Chef', 'Chef de partie'],
-  },
-  pathways: {
-    title: 'Pathways to Further Study / Career Opportunities',
+  {
+    id: 2,
+    image: '/home/home.png',
+    category: 'Course Launch',
+    date: '15/07/2024',
+    title: 'New Advanced Diploma Program Launched',
     description:
-      'After achieving this qualification, graduates may undertake the next qualification up the SIT50422 DIPLOMA OF HOSPITALITY MANAGEMENT',
-    possibleJobTitles: 'Possible job titles include:',
-    roles: ['Chef', 'Chef de partie'],
+      'Introducing our latest Advanced Diploma of Hospitality Management with enhanced industry partnerships.',
+    link: '/',
   },
-  additionalInfo: {
-    title: 'Additional Information',
+  {
+    id: 3,
+    image: '/home/home.png',
+    category: 'Achievement',
+    date: '10/06/2024',
+    title: 'Student Success Stories',
     description:
-      'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+      'Meet our outstanding graduates who are now working in top hotels and restaurants across Sydney.',
+    link: '/',
+  },
+  {
+    id: 4,
+    image: '/home/home.png',
+    category: 'Partnership',
+    date: '25/05/2024',
+    title: 'Industry Partnership Expansion',
+    description:
+      'ABM Further Education announces new partnerships with leading hospitality venues for work placements.',
+    link: '/',
+  },
+  {
+    id: 5,
+    image: '/home/home.png',
+    category: 'Workshop',
+    date: '12/04/2024',
+    title: 'Professional Development Workshop',
+    description:
+      'Join our upcoming workshop on modern cooking techniques and hospitality management trends.',
+    link: '/',
+  },
+  {
+    id: 6,
+    image: '/home/home.png',
+    category: 'Enrollment',
+    date: '01/03/2024',
+    title: 'Term 2 Enrollments Now Open',
+    description:
+      'Secure your place in our premium cookery and hospitality programs starting this term.',
+    link: '/',
+  },
+];
+
+// 코스별 상세 정보 데이터
+export const courseDetails: { [key: string]: CourseDetailInfo } = {
+  'sit40521-certificate-iv-in-kitchen-management': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'This qualification will be delivered over 78 weeks, including 60 weeks of training and assessment spread over 6 terms of 10 weeks each.',
+    },
+    workPlacement: {
+      title: 'Work Placement',
+      description: '360 hours',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) supports.',
+        'Assistive Technologys.',
+        'Additional Tutorials, and / ors.',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: ['Chef', 'Chef de partie'],
+    },
+    pathways: {
+      title: 'Pathways to Further Study / Career Opportunities',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the SIT50422 DIPLOMA OF HOSPITALITY MANAGEMENT',
+        'Possible job titles include:',
+        'Chef',
+        'Chef de partie',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'sit50422-diploma-of-hospitality-management': {
+    courseDuration1: {
+      title: 'Course Duration – Packaged with Kitchen Management Course',
+      description: [
+        'This course has a duration of 26 weeks.\n\nStudents completed a SIT40521 Certificate IV in Kitchen Management with ABM Further Education will receive 20 credit transfer units. This will reduce the course SIT50422 Diploma of Hospitality Management to 2 terms of study (20 weeks excluding holiday break).\nEach term consists of 10 weeks of training and assessments, followed by a 3-week holiday.',
+        {
+          type: 'table' as const,
+          headers: ['Requirement', 'Details'],
+          rows: [
+            [
+              'Eligibility',
+              'It is applicable ONLY for those who completed SIT40521 Cert IV Kitchen Management with ABM Further education',
+            ],
+            ['Work placement', 'N/A'],
+            ['Course duration', '26 weeks (2 terms)'],
+          ],
+        },
+      ] as DescriptionItem[],
+    },
+    courseDuration2: {
+      title: 'Course Duration – Food & Beverage Stream',
+      description:
+        'The qualification is delivered over 78 weeks comprising of:\nSix(6) terms of 10 weeks each (60 weeks total) of teaching period.\nHoliday breaks amounting to 18 weeks (as specified in the timetable)',
+    },
+    courseStructure1: {
+      title:
+        'Course Structure – Packaged with Certificate IV in Kitchen Management',
+      description: [
+        'It is applicable ONLY for those who completed SIT40521 Cert Iv Kitchen Management with ABM Further education\nWork placement: N/A\nCourse duration: 26 weeks (2 terms)\n\n',
+        'Term1',
+        {
+          type: 'table' as const,
+          headers: ['No of weeks', 'Unit code and title'],
+          rows: [
+            ['3 weeks', 'SITXFIN010 Prepare and monitor budgets'],
+            [
+              '2 weeks',
+              'SITXWHS006 Identify hazards, assess and control safety risks',
+            ],
+            ['3 weeks', 'SITXINV008 Control stock'],
+            [
+              '2 weeks',
+              'SITXMGT005 Establish and conduct business relationships',
+            ],
+          ],
+        },
+        'Term2',
+        {
+          type: 'table' as const,
+          headers: ['No of weeks', 'Unit code and title'],
+          rows: [
+            [
+              '3 weeks',
+              'SITXGLC002 Identify and manage legal risks and comply with law',
+            ],
+            ['2 weeks', 'SITXCCS015 Enhance customer service experiences'],
+            ['3 weeks', 'SITXCCS010 Provide visitor information'],
+            [
+              '2 weeks',
+              'SITXCCS016 Develop and manage quality customer service practices',
+            ],
+          ],
+        },
+      ],
+    },
+    courseStructure2: {
+      title: 'Course Structure – Standalone Food & Beverage Stream',
+      description: [
+        'It is applicable ONLY for those who completed SIT40521 Cert Iv Kitchen Management with ABM Further education\nWork placement: N/A\nCourse duration: 26 weeks (2 terms)\n\n',
+        {
+          type: 'table' as const,
+          headers: ['Number of units', 'Code', 'Title', 'Core/Elective'],
+          rows: [
+            ['1', 'SITXCCS015', 'Enhance customer service experiences', 'Core'],
+            [
+              '2',
+              'SITXCCS016',
+              'Develop and manage quality customer service practices',
+              'Core',
+            ],
+            ['3', 'SITXCOM010', 'Manage conflict', 'Core'],
+            ['4', 'SITXFIN009', 'Manage finances within a budget', 'Core'],
+            ['5', 'SITXFIN010', 'Prepare and monitor budgets', 'Core'],
+            [
+              '6',
+              'SITXGLC002',
+              'Identify and manage legal risks and comply with law',
+              'Core',
+            ],
+            ['7', 'SITXHRM008', 'Roster staff', 'Core'],
+            ['8', 'SITXHRM009', 'Lead and manage people', 'Core'],
+            ['9', 'SITXMGT004', 'Monitor work operations', 'Core'],
+            [
+              '10',
+              'SITXMGT005',
+              'Establish and conduct business relationships',
+              'Core',
+            ],
+            [
+              '11',
+              'SITXWHS007',
+              'Implement and monitor work health and safety practices',
+              'Core',
+            ],
+            [
+              '12',
+              'SITXFSA005',
+              'Use hygienic practices for food safety',
+              'Elective Group A',
+            ],
+            [
+              '13',
+              'SITHIND008',
+              'Work effectively in the Hospitality service',
+              'Elective Group B',
+            ],
+            ['14', 'SITXHRM010', 'Recruit, select and induct staff', 'Group D'],
+            ['15', 'SITHFAB030*', 'Prepare and serve cocktails', 'Group C'],
+            ['16', 'SITXINV008', 'Control stock', 'Group C'],
+            [
+              '17',
+              'SITHKOP014',
+              'Plan catering for events or functions',
+              'Group C',
+            ],
+            ['18', 'BSBCMM411', 'Make presentations', 'Group D'],
+            [
+              '19',
+              'BSBSUS511',
+              'Develop workplace policies and procedures for sustainability',
+              'Group D',
+            ],
+            ['20', 'BSBTWK501', 'Lead diversity and inclusion', 'Group D'],
+            [
+              '21',
+              'SITHFAB021',
+              'Provide responsible service of alcohol',
+              'Group C',
+            ],
+            ['22', 'SITHFAB023', 'Operate a bar', 'Group C'],
+            [
+              '23',
+              'SITXFSA006',
+              'Participate in safe food handling practices',
+              'Group C',
+            ],
+            [
+              '24',
+              'SITXFSA008*',
+              'Develop and implement a food safety program',
+              'Group C',
+            ],
+            [
+              '25',
+              'SITHFAB025',
+              'Prepare and serve espresso coffee',
+              'Group C',
+            ],
+            [
+              '26',
+              'SITHIND006',
+              'Source and use information on the hospitality industry',
+              'Group C',
+            ],
+            ['27', 'SITXCCS010', 'Provide visitor information', 'Group C'],
+            ['28', 'SITXCCS012', 'Provide lost and found services', 'Group C'],
+          ],
+        },
+      ],
+    },
+    workPlacement: {
+      title: 'Work Placement - Food and Beverage Stream only',
+      description: [
+        '285 hours (* not applicable when it is packaged with Certificate IV in Kitchen Management course)',
+        'Workplace Component',
+        'It is important to note a workplace unit forms part of this qualification and learners are required to complete tasks outlined in the training package elements and performance criteria.',
+        'Workplace logbook will be provided by ABM and students are required to maintain on a daily basis a record of activities / tasks performed during work placement This will be monitored by ABM Workplace assessor during scheduled site visits. Daily activities / logbook entries are to be signed by the workplace supervisor each day.',
+        {
+          type: 'table' as const,
+          headers: ['Term', 'Week number', 'Hours'],
+          rows: [
+            [
+              'Term 5',
+              'Week 1-10 SITHIND008 Work effectively in the hospitality service – 30shifts at 5hours from a total 57 shifts',
+              '150',
+            ],
+            [
+              'Term 6',
+              'Week 1-9 SITHIND008 Work effectively in the hospitality service – 27shifts at 5hours from a total 57 shifts',
+              '135',
+            ],
+            ['TOTAL Minimum hours', '', '285'],
+          ],
+        },
+        '*Please note Hospitality shifts may vary in time due to business needs. ABM has allocated approximately 5 hours per shift based on industry standards. ABM understands some shifts may be slightly shorter or longer based on individual business needs.&nbsp;Students may need to do additional service periods to reach the 285 workplace hours.\n\n',
+        'Work placement arrangements',
+        "- Students can choose their work placement locations. However, it will be verified by the Trainer/Assessors to ensure it has all the facilities and equipment's that meets the requirements of SITHIND008 Work effectively in the hospitality service.",
+        '- Students would be supervised/assessed while on placement by the ABM Trainer/Assessors.',
+        '- ABM would organise work-placement locations if students are unable to manage by themselves.',
+        '- Work-placement agreement needs to be filled by the relevant parties. ABM would provide the agreement to the students.',
+        '- Trainers and Assessors would instruct the students on how to complete the logbook.',
+        '- ABM may engage a third party to manage work-placement for the students which includes, visiting the work placement venues, organising work placement locations for the students and instruct students to fill the logbook as per requirement.',
+      ],
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.\n\n',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.\n\n',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.\n\n',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Hotel or Motel Manager',
+        'Restaurant Manager',
+        'Front Office Manager',
+        'Café Manager',
+        'Event Coordinator',
+        'Housekeeping Supervisor',
+        'Food and Beverage Supervisor',
+        'Banquet Supervisor',
+        'Duty Manager',
+        'Bar Manager',
+        'Resort Manager',
+        'Catering Manager',
+        'Operations Supervisor',
+        'Guest Services Manager',
+        'Conference and Events Coordinator',
+      ],
+    },
+    pathways: {
+      title: 'Pathways to Further Study / Career Opportunities',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the ',
+        {
+          type: 'link',
+          text: 'SIT60322 – Advanced Diploma of Hospitality Management',
+          url: '/cookery-and-hospitality-courses/advanced-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'advanced-diploma-of-hospitality-management': {
+    courseDuration: {
+      title: 'Course Duration',
+      description: 'advanced-diploma-of-hospitality-management',
+    },
+    courseStructure1: {
+      title:
+        'Course Structure – Packaged with Certificate IV in Kitchen Management & Diploma of Hospitality Management',
+      description: [
+        'Students who have completed both qualifications by ABM Further Education are eligible for 25 Credit Transfer',
+        'SIT40521 Cetificate IV in Kitchen Manangement',
+        'SIT50422 Diploma of Hospitality Management',
+        'Advance Diploma of Hospitality Management course can be completed within two term (26 weeks)',
+        'The allocation of units are as below:',
+        'Term1',
+        {
+          type: 'table' as const,
+          headers: ['No of weeks', 'Unit code and title'],
+          rows: [
+            ['3 weeks', 'BSBOPS601 Develop and implement business plans'],
+            ['2 weeks', 'BSBFIN601 Manage organisational finances'],
+            ['3 weeks', 'SITHFAB027* Serve food and beverage'],
+            [
+              '2 weeks',
+              'SITHFAB024* Prepare and serve non-alcoholic beverages',
+            ],
+          ],
+        },
+        'Term2',
+        {
+          type: 'table' as const,
+          headers: ['No of weeks', 'Unit code and title'],
+          rows: [
+            ['3 weeks', 'SITXFIN011 Manage physical assets'],
+            ['2 weeks', 'SITXHRM012 Monitor staff performance'],
+            [
+              '3 weeks',
+              'SITXMPR014 Develop and implement marketing strategies',
+            ],
+            [
+              '2 weeks',
+              'SITXWHS008 Establish and maintain a work health and safety system',
+            ],
+          ],
+        },
+        'Course duration: 26 weeks (2 terms)',
+      ],
+    },
+    courseStructure2: {
+      title:
+        'Course Structure – Packaged with Diploma of Hospitality Management',
+      description: [
+        {
+          type: 'table' as const,
+          headers: ['No of Units', 'Units', 'Core/Electives'],
+          rows: [
+            ['1', 'BSBFIN601 Manage organisational finances', 'Core'],
+            ['2', 'BSBOPS601 Develop and implement business plans', 'Core'],
+            ['3', 'SITXFIN011 Manage physical assets', 'Core'],
+            ['4', 'SITXHRM012 Monitor staff performance', 'Core'],
+            [
+              '5',
+              'SITXMPR014 Develop and implement marketing strategies',
+              'Core',
+            ],
+            [
+              '6',
+              'SITXWHS008 Establish and maintain a work health and safety system',
+              'Core',
+            ],
+            ['7', 'SITHFAB027*, Serve food and beverage', 'Electives- Group C'],
+            [
+              '8',
+              'SITHFAB024*, Prepare and serve non-alcoholic beverages',
+              'Electives- Group C',
+            ],
+          ],
+        },
+        'Students who have completed SIT50422 in ABM further education are eligible for 25 credit Transfers, and can complete the course in two terms (26 weeks).',
+        'Term1',
+        {
+          type: 'table' as const,
+          headers: ['No of weeks', 'Unit code and title'],
+          rows: [
+            ['3 weeks', 'BSBOPS601 Develop and implement business plans'],
+            ['2 weeks', 'BSBFIN601 Manage organisational finances'],
+            ['3 weeks', 'SITHFAB027* Serve food and beverage'],
+            [
+              '2 weeks',
+              'SITHFAB024* Prepare and serve non-alcoholic beverages',
+            ],
+          ],
+        },
+        'Term2',
+        {
+          type: 'table' as const,
+          headers: ['No of weeks', 'Unit code and title'],
+          rows: [
+            ['3 weeks', 'SITXFIN011 Manage physical assets'],
+            ['2 weeks', 'SITXHRM012 Monitor staff performance'],
+            [
+              '3 weeks',
+              'SITXMPR014 Develop and implement marketing strategies',
+            ],
+            [
+              '2 weeks',
+              'SITXWHS008 Establish and maintain a work health and safety system',
+            ],
+          ],
+        },
+      ],
+    },
+    workPlacement: {
+      title: 'Work Placement',
+      description: [
+        'Stand alone -Advance Diploma of Hospitality Management = 285 hours',
+        'Packaged with – Cetificate IV in Kitchen Manangement & Diploma of Hospitality Management = no additional Work component hours',
+        'Packaged with – Diploma of Hospitality Management = no additional Work component hours',
+      ],
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.\n\n',
+        'The aim of both documents is to provide any support that may be required. This could include:\n\n',
+        '- Language, Literacy and Numeracy (LLN) support',
+        '- Assistive Technology',
+        '- Additional Tutorials, and / or',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.\n\n',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.\n\n",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.\n\n',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Hotel or Resort Manager',
+        'Restaurant Manager',
+        'Event Manager',
+        'Front Office Manager',
+        'Housekeeping Manager',
+        'Catering Manager',
+        'Operations Manager',
+        'General Manager',
+      ],
+    },
+    pathways: {
+      title: 'Pathways to Further Study / Career Opportunities',
+      description: [
+        'Potential employment options are in any hospitality industry sector as a departmental or small business manager. See also possible job title roles indicated in the qualification description.',
+        'Students who complete this course may wish to continue their education into a range of Higher Education qualifications.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description: [
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+      ],
+    },
+  },
+  'sis40221-certificate-iii-in-fitness': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'This course has a duration of 52 weeks consisting of 4 x 10-week terms of training and assessment, each followed by a 3-week holiday break.\n\nEach week of term includes: 2 x 7.5 hour days of face to face instruction + 5 hours of tutorial',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Gym Instructor',
+        'Group Fitness Instructor',
+        'Fitness Instructor',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the SIS40221 Certificate IV in Fitness',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'sis30321-certificate-iv-in-fitness': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'This course has a duration of 52 weeks consisting of 4 x 10-week terms of training and assessment, each followed by a 3-week holiday break.\n\nEach week of term includes:\n\n2 x 7.5 hour days of face to face instruction\n5 hours of tutorial',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Personal Trainer',
+        'Fitness Instructor (Advanced)',
+        'Outdoor Trainer',
+        'Corporate or Workplace Trainer',
+        'Online Personal Trainer',
+        'Fitness Studio Owner/Manager',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study',
+      description: [
+        'Students who complete this course may wish to continue their education in the fitness industry with qualifications such as the SIS50122 Diploma of Sport, Aquatics and Recreation Management, SIS50321 Diploma of Sport, SIS50421 Diploma of Outdoor Leadership or continue their education into a range of Higher Education qualifications.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'certificate-iii-in-sport-fast-track': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'Full Time Delivery Schedule – 12 Weeks + Work experience + 1 year gym membership included\nPart Time Delivery Schedule – 24 Weeks + Work experience',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Gym Instructor',
+        'Group Fitness Instructor',
+        'Fitness Instructor',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study',
+      description: [
+        'Students who complete this course may wish to continue their education in the fitness industry with qualifications such as the SIS50122 Diploma of Sport, Aquatics and Recreation Management, SIS50321 Diploma of Sport, SIS50421 Diploma of Outdoor Leadership.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'certificate-iv-in-sport-fast-track': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'Full Time Delivery Schedule – 12 Weeks + Work experience + 1 year gym membership included\nPart Time Delivery Schedule – 24 Weeks + Work experience',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Personal Trainer',
+        'Fitness Instructor (Advanced)',
+        'Outdoor Trainer',
+        'Corporate or Workplace Trainer',
+        'Online Personal Trainer',
+        'Fitness Studio Owner/Manager',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study',
+      description: [
+        'Students who complete this course may wish to continue their education in the fitness industry with qualifications such as the SIS50122 Diploma of Sport, Aquatics and Recreation Management, SIS50321 Diploma of Sport, SIS50421 Diploma of Outdoor Leadership.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb40120-certificate-iv-in-business': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'The Certificate IV in Business is offered over 12 months, equating to 52 weeks, including 12 weeks of holidays. This will be split into four 10-week terms. You will receive an orientation from your trainer within one week of your enrolment.',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: ['Administrative Officer', 'Assistant Business Analyst'],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the BSB50120 Diploma of Business.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb50120-diploma-of-business': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'The Diploma of Business is offered over 12 months, equating to 52 weeks, including 12 weeks of holidays. This will be split into four 10-week terms. You will receive an orientation from your trainer within one week of your enrolment.',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: ['Business Manager', 'Chief Data Officer'],
+    },
+    pathways: {
+      title: 'Pathways to further study / career opportunities',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the BSB60120 Advanced Diploma of Business.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'sis50321-diploma-of-sport': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'This course has a duration of 52 weeks consisting of 4 x 10-week terms of training and assessment, each followed by a 3-week holiday break.\n\nEach week of term includes:\n\n2 x 7.5 hour days of face to face instruction\n5 hours of tutorial',
+    },
+
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Sports Trainer',
+        'Sports Manager',
+        'Personal Trainer',
+        'Fitness Trainer',
+        'Strength Coach',
+        'Coaching staff',
+        'General Managers of gymnasiums',
+        'Sports Club coaching roles e.g. tennis coach, swimming coach and football coach',
+        'Reception/Sales',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study',
+      description: [
+        'Students who complete this course may wish to continue their education into a range of Higher Education qualifications.',
+      ],
+    },
+  },
+  'bsb60120-advanced-diploma-of-business': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'The Advanced Diploma of Business is offered over 18 months, equating to 78 weeks, including 18 weeks holidays. This will be split into six 10-week terms. You will receive an orientation from your trainer within one week of your enrolment.',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Senior Administrator',
+        'Senior Executive',
+        'Executive Manager / Director',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: [
+        'Potential employment options are as a manager in a range of industry areas.',
+        'Students who complete this course may wish to continue their education into BSB80120 Graduate Diploma of Management (Learning), as well as higher education qualifications in business or management.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about the RTO. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb80120-graduate-diploma-of-management': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'The Graduate Diploma of Management (Learning) is offered over 12 months, equating to 52 weeks, including 12 weeks of holidays. This will be split into four 10-week terms. You will receive an orientation from your trainer within one week of your enrolment.',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: ['Business Manager', 'Business Director'],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: [
+        'Potential employment options are as a Leader or Manager in organisations where learning is used to build organisational capability in a range of industry areas.',
+        'Students who complete this course may wish to continue their education into a range of higher education qualifications in organisational learning and development.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb40920-certificate-iv-in-project-management-practice': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'Duration: 52 Weeks (40 weeks of training and assessment + 12 weeks of holidays)',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Contract Officer',
+        'Project Administrator',
+        'Quality Officer',
+        'Small Business Owner',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the BSB50820 – Diploma of Project Management',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb50820-diploma-of-project-management-practice': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'Duration: 52 Weeks (40 weeks of training and assessment + 12 weeks of holidays)',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Project Officer',
+        'Project Coordinator',
+        'Project Manager',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the BSB60720 Advanced Diploma of Program Management',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb60820-advanced-diploma-of-project-management-practice': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'Duration: 78 weeks (60 weeks of training and assessment + 18 weeks of holidays)',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Program Manager',
+        'Senior Project Manager',
+        'Program Leader',
+        'Program Coordinator',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: [
+        'Students who complete this course may wish to continue their education into a range of Higher Education qualifications.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb40420-certificate-iv-in-human-resource-management': {
+    entryRequirement: {
+      title: 'Entry Requirement',
+      description: [
+        'ABM Further Education has the following entry requirements:',
+        'Students must be over 18 years of age.',
+        'Students must have completed an overseas equivalent of Year 10 or higher qualification.',
+        'Students must have either an IELTS score of 5.5 total or above with no band lower than 5.0 or equivalent.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'HR Assistant',
+        'Recruitment Consultant',
+        'Workplace Health and Safety Officer',
+      ],
+    },
+    packagingRules: {
+      title: 'Packaging rules',
+      description: [
+        'Six (6) core units and six (6) elective units are required for the award of the BSB40420 – Certificate IV in Human Resource Management. Units have been selected in accordance with the packaging rules and are relevant to the work outcome, local industry requirements and qualification level.',
+        'The latest release of the qualification and packaging rules can be found at the following link:',
+        {
+          type: 'link',
+          text: 'https://training.gov.au/Training/Details/BSB40420',
+          url: 'https://training.gov.au/Training/Details/BSB40420',
+        },
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: [
+        'After achieving this qualification, graduates may undertake the next qualification up the BSB50320 – Diploma of Human Resource Management',
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb50320-diploma-of-human-resource-management': {
+    courseDuration: {
+      title: 'Course Duration',
+      description: '52 weeks',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Human Resources Manager',
+        'Human Resources Officer',
+        'Recruitment Consultant',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: ['BSB60320 – Advanced Diploma of Human Resource Management'],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'bsb60320-advanced-diploma-of-human-resource-management': {
+    courseDuration: {
+      title: 'Course Duration',
+      description: '78 weeks',
+    },
+    packagingRules: {
+      title: 'Packaging rules',
+      description: [
+        'Six (6) core and eight (4) elective units are required for the award of the BSB60320 – Advanced Diploma of Human Resource Management. Units have been selected in accordance with the packaging rules and are relevant to the work outcome, local industry requirements and qualification level.',
+        'The latest release of the qualification and packaging rules can be found at the following link:',
+        {
+          type: 'link',
+          text: 'training.gov.au – BSB60320 – Advanced Diploma of Human Resource Management',
+          url: 'https://training.gov.au/Training/Details/BSB60320',
+        },
+      ],
+    },
+    whyChooseABM: {
+      title: 'Why Choose ABM?',
+      description: [
+        'Engage in face-to-face learning for a personalized educational journey.',
+        'Industry-focused curriculum designed to meet local requirements.',
+        'Experienced trainers guide you through real-world scenarios.',
+        'Gain internationally recognized qualifications with hands-on training.',
+      ],
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        'Language, Literacy and Numeracy (LLN) support',
+        'Assistive Technology',
+        'Additional Tutorials, and / or',
+        'Other mechanisms, such as assistance in using technology for online delivery components.',
+        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Human Resources Practitioner.',
+        'Personnel Officer.',
+        'Industrial Relations Manager.',
+        'Human Resources Development Practitioner.',
+        'HR Manager.',
+      ],
+    },
+    pathways: {
+      title: 'Pathway to further study / career opportunities',
+      description: ['BSB80120 – Graduate Diploma of Management (Learning)'],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
   },
 };
 
@@ -969,7 +1374,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'bsb60120-advanced-diploma-of-business': {
     courseCode: 'BSB60120',
     description:
-      'This qualification reflects the role of individuals who apply an advanced broad range of competencies in varied work contexts, displaying leadership and management skills.\n\nIndividuals at this level apply initiative and judgement to plan and implement a range of leadership and management functions, with accountability for personal and team outcomes within broad parameters.\n\nThey use cognitive and communication skills to identify, analyse and synthesise information from a variety of sources and transfer their knowledge to others, and creative or conceptual skills to express ideas and perspectives or respond to complex problems.',
+      'Individuals who seek to improve upon their leadership capabilities, learn key problem-solving procedures and engage in a team environment should look no further than ABM’s Advanced Diploma of Business. Graduates in this course will leave with all the necessary tools required to tackle highly complex tasks in their specialised field of expertise. ABM’s Advanced Diploma of Business will provide students with the key building blocks required for you to specialise and enter the business environment in your chosen field.\n\nThroughout this course, students will engage in exercises aimed to assist in complex problem solving, develop and implement business plans, develop organisational strategies and contribute to strategic workforce planning – All Necessary skills to excel in your specialised field of work.\n\nOur Advanced Diploma of Business is suited towards individuals with a passion for leadership, strong problem-solving capabilities and the ability to motivate and guide a team.',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -979,8 +1384,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       locations: [
         {
           type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          address: ' 242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
     },
@@ -1004,10 +1408,74 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       ],
     },
   },
+  'industry-placement-work-placement': {
+    courseCode: 'SIT40521 + SIT50422',
+    description:
+      "Are you ready to take your cookery skills to the next level?\n\nAt ABM Further Education, we offer a certificate IV in Kitchen Management that combines academic learning with practical experience. You will have the opportunity to work in real commercial kitchens, such as restaurants, hotels, and aged care facilities, and learn from the best in the industry.\n\nAs part of your course, you will need to complete a mandatory work placement at the end of term 5 and throughout term 6. This is not just a requirement, but a chance for you to apply what you have learned in the classroom and gain valuable insights into the culinary world. You will be able to work the required hours in addition to your student visa requirements, so you don't have to worry about that.\n\nDuring the work placement period, you will need to complete 60 shifts and a total of 30 hours per week. You will also need to complete two units of competency that will help you work effectively as a cook and coordinate cooking operations.",
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face + Industry Placement',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Kitchen',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Industry Placement',
+          address:
+            'Various commercial kitchens, restaurants, hotels, and aged care facilities',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'We encourage you to find your own work placement that suits your interests and goals, but we are also here to support you if you need any assistance. We have strong connections with various industry partners who are always looking for talented and motivated students like you.\n\nWe believe that this work placement is a key component of your course that will prepare you for the challenges and opportunities of the cookery industry. You will not only improve your culinary skills, but also develop your confidence, communication, and teamwork abilities. This is your chance to shine and show the world what you can do!',
+    },
+  },
+  'industry-placement-hospitality-management': {
+    courseCode: 'SIT50422',
+    description:
+      "Take Your Hospitality Career to New Heights with Practical Experience!\n\nAt ABM Education, we're committed to providing our Hospitality Management students with comprehensive industry experience. Our Work Placement program, consisting of 285 hours, is an essential part of our curriculum, enabling students to gain hands-on experience in real-world hospitality settings.\n\nWorkplace Component:\nIt's important to note that a workplace unit is an integral part of this qualification. Learners are required to complete tasks outlined in the training package elements and performance criteria. ABM Education provides a workplace logbook for students to maintain a daily record of activities and tasks performed during their work placement. This logbook will be closely monitored by ABM's Workplace Assessor during scheduled site visits. Each day, students are required to have their daily activities and logbook entries signed by their workplace supervisor.\n\nThis comprehensive workplace component ensures that students receive practical training aligned with industry standards, preparing them for successful careers in hospitality management.",
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face + Industry Placement',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Kitchen',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Industry Placement',
+          address:
+            'Various hospitality venues including hotels, restaurants, clubs, pubs, cafes, and function centres',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        "We encourage you to find your own work placement that suits your interests and goals, but we are also here to support you if you need any assistance. We have strong connections with various industry partners who are always looking for talented and motivated students like you.\n\nWe believe that this work placement is a key component of your course that will prepare you for the challenges and opportunities of the hospitality industry. You will not only improve your hospitality management skills, but also develop your confidence, communication, and teamwork abilities. This is your chance to shine and show the world what you can do!\n\nAt ABM Further Education, we are proud of our strong connections with various industry partners who are always on the lookout for talented and motivated students like you. You can work with some of the best names in the hospitality industry, such as:\n\n• Accor (Accor A&R): Leading multinational hospitality group\n• AMA Hospitality: Catering and event management company\n• Bills: Popular restaurant chain serving fresh and delicious food\n• Catering HQ: Food and beverage company operating in various venues\n• Grand Royale: Luxury hotel offering elegant accommodation and fine dining\n• Hurricane's Grill: Steakhouse and bar serving mouth-watering steaks and ribs\n• ICC Sydney: Australia's top venue for conventions, exhibitions, and events\n• Industry Placement Solutions: Recruitment and placement agency\n• Liverpool Catholic Club: Community club offering entertainment and dining\n• Primi Italian: Family-owned restaurant serving authentic Italian cuisine\n• Kuon Omakase: Japanese restaurant offering unique dining experiences",
+    },
+  },
   'sit50422-diploma-of-hospitality-management': {
     courseCode: 'SIT50422',
     description:
-      'This qualification reflects the role of highly skilled senior operators who use a broad range of hospitality skills combined with managerial skills and sound knowledge of industry to coordinate hospitality operations.\n\nThey operate independently, have responsibility for others and make a range of operational business decisions.\n\nThis qualification provides a pathway to work in any hospitality industry sector as a departmental or small business manager. The diversity of employers includes restaurants, hotels, motels, catering operations, clubs, pubs, cafés and coffee shops.',
+      'This qualification reflects the role of highly skilled senior operators who use a broad range of hospitality skills combined with managerial skills and sound knowledge of industry to coordinate hospitality operations.\n\nThey operate independently, have responsibility for others and make a range of operational business decisions.\n\nThis qualification provides a pathway to work in any hospitality industry sector as a departmental or small business manager. The diversity of employers includes restaurants, hotels, motels, catering operations, clubs, pubs, cafés and coffee shops.\nThis qualification allows for multiskilling and for specialisation in accommodation services, cookery, food and beverage and gaming.\n\nThe skills in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian standards and industry codes of practice.\nNo occupational licensing, certification or specific legislative requirements apply to this qualification at the time of publication',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -1050,8 +1518,37 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       ],
     },
   },
+  'advanced-diploma-of-hospitality-management': {
+    courseCode: 'SIT60322',
+    description:
+      'Individuals well suited for our Advanced Diploma of Hospitality Management are those looking to pursue a career that will utilize a broad range of hospitality skills, combined with specialized managerial skills and substantial knowledge of industry to coordinate and monitor hospitality operations. Students in this field will operate with a high level of autonomy and will be responsible for the creation and implementation of strategic business management decisions.\n\nOur Advanced Diploma of Hospitality Management qualification provides students with a clear pathway to work in any hospitality industry sector and for a diverse range of employers including restaurants, hotels, motels, catering operations, clubs, pubs, cafes and coffee shops. Students completing this course will achieve the skills and framework required for multiskilling and for specialization in accommodation services, cookery, food and beverage gaming.\n\nDue to the nature of this course and the flexible electives available for students, we can ensure that you are working towards your goals in their chosen industry by allowing for specialized learning activities, catered towards your own preferences and career goals.',
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT60322?distanceFilter=25',
+    },
+  },
   'bsb40920-certificate-iv-in-project-management-practice': {
-    courseCode: 'BSB40920',
+    courseCode: 'bsb40920',
     description:
       'This qualification reflects the role of individuals who possess well-developed skills in a range of project management processes.\n\nThey apply project management knowledge and skills to a defined range of contexts and are responsible for project outcomes where there are limited, non-routine or contingency measures and solutions.\n\nThis qualification is suitable for individuals working in team environments who support or are responsible for project activities and outcomes. It can apply to any industry or community context.',
     deliveryMode: {
@@ -1088,6 +1585,28 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       ],
     },
   },
+  'BSB60720-diploma-of-project-management-practice': {
+    courseCode: 'BSB60720',
+    description:
+      'This qualification reflects the role of individuals who apply project management skills and knowledge in a variety of contexts, across a number of industry sectors. The job roles that relate to this qualification may include Project Manager and Project Team Leader. Individuals in these roles have project leadership and management roles and are responsible for achieving project objectives. They possess a sound theoretical knowledge base and use a range of specialised, technical, and managerial competencies to initiate, plan, execute and evaluate their own work and/or the work of others.',
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face (20 hours per week)',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        "A face-to-face training mode is employed for this qualification. All classroom-based training will take place at the ABM Further Education's classrooms.",
+    },
+  },
   'bsb60720-advanced-diploma-of-program-management': {
     courseCode: 'BSB60720',
     description:
@@ -1105,6 +1624,28 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
+    },
+  },
+  'bsb60820-advanced-diploma-of-project-management-practice': {
+    courseCode: 'BSB60820',
+    description:
+      'This qualification reflects the role of individuals who apply project management skills and knowledge in a variety of contexts, across a number of industry sectors. The job roles that relate to this qualification may include Project Manager and Project Team Leader.\n\nIndividuals in these roles have project leadership and management roles and are responsible for achieving project objectives. They possess a sound theoretical knowledge base and use a range of specialised, technical, and managerial competencies to initiate, plan, execute and evaluate their own work and/or the work of others.',
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face (20 hours per week)',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        "A face-to-face training mode is employed for this qualification. All classroom-based training will take place at the ABM Further Education's classrooms.",
     },
   },
   'bsb40420-certificate-iv-in-human-resource-management': {
@@ -1183,14 +1724,147 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       ],
     },
   },
-  // 다른 코스들도 추가할 수 있습니다...
-  'industry-placement-work-placement': {
-    // IndustryPlacement 데이터
+  'sis30321-certificate-iv-in-fitness': {
+    courseCode: 'SIS30321',
+    description:
+      "Studying Certificate III in Fitness is a great way to start your journey as a fitness instructor. You'll learn how to plan and deliver group exercise classes and design gym-based programs for individuals who don't need ongoing monitoring. You'll be working in predictable environments, under general supervision, and using your judgement to handle routine matters, all while following clear policies and procedures.\n\nThis qualification opens the door to a career as a fitness instructor in settings such as gyms, fitness centres, leisure centres, or community hubs. The skills you'll develop will be in line with Australian standards and regulations, ensuring you're prepared to meet both Commonwealth and State requirements.",
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Practical',
+          address: 'Private Gymnasium for practical training and assessment',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIS30321?distanceFilter=25',
+    },
+  },
+  'sis40221-certificate-iii-in-fitness': {
+    courseCode: 'SIS40221',
+    description:
+      "Studying Certificate III in Fitness is a great way to start your journey as a fitness instructor. You'll learn how to plan and deliver group exercise classes and design gym-based programs for individuals who don't need ongoing monitoring. You'll be working in predictable environments, under general supervision, and using your judgement to handle routine matters, all while following clear policies and procedures.\n\nThis qualification opens the door to a career as a fitness instructor in settings such as gyms, fitness centres, leisure centres, or community hubs. The skills you'll develop will be in line with Australian standards and regulations, ensuring you're prepared to meet both Commonwealth and State requirements.",
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Practical',
+          address: 'Private Gymnasium for practical training and assessment',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIS40221?distanceFilter=25',
+    },
+  },
+  'sis50321-diploma-of-sport': {
+    courseCode: 'SIS50321',
+    description:
+      "Build Your Future in the Australian Sport and Fitness Industry\n\nThe Diploma of Sport (Coaching) equips students with the practical skills and knowledge needed to take on a range of roles in the Australian sport sector. Whether you're aiming to coach, lead a team, or support a community sports organisation, this qualification provides a strong foundation for success.\n\nStudents will learn to work independently, manage and supervise others, and apply their skills in accordance with Australian legislation, standards and industry best practice. The course also includes key leadership and communication elements essential for working within dynamic sporting environments.\n\nWho Is This Course For?\n\nThis course is ideal for international students who are:\nLooking to begin or progress a career in the sport or fitness industry\nChanging career paths or entering a new sector\nAlready holding a Certificate III or IV in Fitness and wishing to advance their skills\nInterested in pathways to higher-level sport qualifications\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Practical',
+          address: 'Private Gymnasium for practical training and assessment',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIS50321?distanceFilter=25',
+    },
+  },
+  'certificate-iii-in-sport-fast-track': {
+    courseCode: 'SIS30321 & SIS40221',
+    description:
+      'Start Your Career as a Fitness Instructor\n\nThe SIS30321 Certificate III & SIS40221 Certificate IV in Fitness is designed for those looking to become Group Exercise Instructors or Gym Instructors. This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Practical',
+          address: 'Private Gymnasium for practical training and assessment',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'Starting Date (Every 3 weeks):\n\n2025:\n• 28th July\n• 18th August\n• 8th September, 29th September\n• 20th October\n• 10th November\n• 1st December, 22nd December\n\n2026:\n• 12th January\n• 2nd February, 23rd February\n• 16th March\n• 6th April, 27th April\n• 18th May\n• 8th June\n\nRegulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment option here.',
+    },
+  },
+  'certificate-iv-in-sport-fast-track': {
+    courseCode: 'SIS30321 & SIS40221',
+    description:
+      'Start Your Career as a Fitness Instructor\n\nThe SIS30321 Certificate III & SIS40221 Certificate IV in Fitness is designed for those looking to become Group Exercise Instructors or Gym Instructors. This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Practical',
+          address: 'Private Gymnasium for practical training and assessment',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'Starting Date (Every 3 weeks):\n\n2025:\n• 28th July\n• 18th August\n• 8th September, 29th September\n• 20th October\n• 10th November\n• 1st December, 22nd December\n\n2026:\n• 12th January\n• 2nd February, 23rd February\n• 16th March\n• 6th April, 27th April\n• 18th May\n• 8th June\n\nRegulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment options here!',
+    },
   },
   fss: {
     // FSS 데이터
   },
-  // ... 다른 코스들
 };
 
 // 메뉴 구조 데이터
@@ -1260,20 +1934,24 @@ export const MENU_STRUCTURE: MenuSection[] = [
         href: '/fitness-instructor-personal-trainer-courses',
         items: [
           {
-            title: 'Certificate IV in Fitness',
-            href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iv-in-fitness',
-          },
-          {
             title: 'Certificate III in Fitness',
             href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iii-in-fitness',
           },
           {
-            title: 'Certificate IV in Fitness (Fast Track)',
-            href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-sport-fast-track',
+            title: 'Certificate IV in Fitness',
+            href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iv-in-fitness',
           },
           {
-            title: 'Certificate III in Fitness (Fast Track)',
+            title: 'Diploma of Sport',
+            href: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
+          },
+          {
+            title: 'Certificate III in Sport',
             href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-sport-fast-track',
+          },
+          {
+            title: 'Certificate IV in Sport',
+            href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-sport-fast-track',
           },
         ],
       },
@@ -1411,7 +2089,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
           },
           {
             title: 'feesAndPayment',
-            href: '/',
+            href: '/abm-further-education-fee-schedule-2025',
           },
           {
             title: 'entryRequirements',
@@ -1419,15 +2097,15 @@ export const MENU_STRUCTURE: MenuSection[] = [
           },
           {
             title: 'getUSI',
-            href: '/',
+            href: '/get-a-usi',
           },
           {
             title: 'enrolNow',
-            href: '/',
+            href: 'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
           },
           {
             title: 'higherEducationPathway',
-            href: '/',
+            href: '/higher-education-pathway',
           },
         ],
       },

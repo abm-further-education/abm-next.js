@@ -3,6 +3,13 @@ import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
 import Testimonial from '@/domains/main/components/Testimonial';
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Human Resource Management Courses | ABM Further Education',
+  description:
+    "Build a rewarding career in human resources with ABM Further Education. From Certificate IV to Advanced Diploma, develop essential HR skills for today's evolving workplace.",
+};
 
 function Page() {
   return (

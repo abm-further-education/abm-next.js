@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import FadeInBottomToTop from './FadeInBottomToTop';
+import MiniTestimonial from './MiniTestimonial';
 
 type Props = {
   slides: { imgPath: string; title: string; content?: string }[];
@@ -77,6 +78,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
           </SwiperSlide>
         ))}
       </Swiper>
+      <MiniTestimonial />
     </div>
   );
 }

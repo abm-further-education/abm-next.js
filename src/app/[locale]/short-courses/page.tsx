@@ -2,6 +2,13 @@ import Banner from '@/components/common/Banner';
 import FadeIn from '@/components/common/FadeIn';
 import ShortCourseCard from '@/domains/short-course/components/ShortCourseCard';
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Short Courses | ABM Further Education',
+  description:
+    "Discover your passion with ABM's short courses! From barista training to French pastries, explore our one-day courses designed for food and hospitality enthusiasts.",
+};
 
 function page() {
   return (

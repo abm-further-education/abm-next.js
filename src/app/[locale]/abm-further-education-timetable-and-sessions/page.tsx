@@ -1,7 +1,22 @@
 import React from 'react';
 import Banner from '@/components/common/Banner';
 import { getTranslations } from 'next-intl/server';
-import { allTimetableData } from '@/lib/timetableData';
+import { allTimetableData, TimetableEntry } from '@/lib/timetableData';
+
+// 데이터를 그룹화하는 함수
+function groupTimetableData(data: TimetableEntry[]) {
+  const grouped: { [key: string]: TimetableEntry[] } = {};
+
+  data.forEach((entry) => {
+    const key = `${entry.code}-${entry.qualification}`;
+    if (!grouped[key]) {
+      grouped[key] = [];
+    }
+    grouped[key].push(entry);
+  });
+
+  return Object.values(grouped);
+}
 
 async function TimetablePage() {
   const t = await getTranslations('timetable');
@@ -27,16 +42,16 @@ async function TimetablePage() {
             {t('pageTitle')}
           </h2>
 
-          <div className="bg-blue-50 border border-blue-200 p-6 mb-8">
-            <h3 className="text-lg font-semibold text-blue-800 mb-4">
+          <div className="p-6 mb-8">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
               {t('importantInfo')}
             </h3>
-            <ul className="list-disc list-inside text-blue-700 space-y-2">
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>{t('selfPacedLearning')}</li>
               <li>{t('schedule')}</li>
               <li>{t('subjectToChange')}</li>
             </ul>
-            <p className="text-sm text-blue-600 mt-4 italic">
+            <p className="text-sm text-gray-600 mt-4 italic">
               {t('studyHours')}
             </p>
           </div>
@@ -44,7 +59,7 @@ async function TimetablePage() {
 
         <div className="overflow-x-auto shadow-lg">
           <table className="w-full bg-white border border-gray-200">
-            <thead className="bg-primary text-white">
+            <thead className="bg-primary-bk text-white">
               <tr>
                 <th className="px-4 py-3 text-left font-semibold">
                   {t('qualification')}
@@ -73,89 +88,80 @@ async function TimetablePage() {
               </tr>
             </thead>
             <tbody>
-              {allTimetableData.map((entry, index) => (
-                <tr
-                  key={index}
-                  className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
-                >
-                  <td className="px-4 py-3 border-b border-gray-200">
-                    <div>
-                      <div className="font-semibold text-gray-800">
+              {groupTimetableData(allTimetableData).map((group, groupIndex) =>
+                group.map((entry, entryIndex) => (
+                  <tr
+                    key={`${groupIndex}-${entryIndex}`}
+                    className={groupIndex % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                  >
+                    {entryIndex === 0 ? (
+                      <td
+                        className="px-4 py-3 border-b border-gray-200 font-semibold text-gray-800"
+                        rowSpan={group.length}
+                      >
                         [{entry.code}] {entry.qualification}
-                      </div>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 border-b border-gray-200 text-gray-600">
-                    {entry.intake}
-                  </td>
-                  <td className="px-4 py-3 border-b border-gray-200 text-center">
-                    <span
-                      className={`px-2 py-1 text-sm ${
-                        entry.mon
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-gray-100 text-gray-400'
-                      }`}
-                    >
-                      {entry.mon || '-'}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 border-b border-gray-200 text-center">
-                    <span
-                      className={`px-2 py-1 text-sm ${
-                        entry.tue
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-gray-100 text-gray-400'
-                      }`}
-                    >
-                      {entry.tue || '-'}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 border-b border-gray-200 text-center">
-                    <span
-                      className={`px-2 py-1 text-sm ${
-                        entry.wed
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-gray-100 text-gray-400'
-                      }`}
-                    >
-                      {entry.wed || '-'}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 border-b border-gray-200 text-center">
-                    <span
-                      className={`px-2 py-1 text-sm ${
-                        entry.thu
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-gray-100 text-gray-400'
-                      }`}
-                    >
-                      {entry.thu || '-'}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 border-b border-gray-200 text-center">
-                    <span
-                      className={`px-2 py-1 text-sm ${
-                        entry.fri
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-gray-100 text-gray-400'
-                      }`}
-                    >
-                      {entry.fri || '-'}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 border-b border-gray-200 text-center">
-                    <span
-                      className={`px-2 py-1 text-sm ${
-                        entry.tutorial
-                          ? 'bg-blue-100 text-gray-800'
-                          : 'bg-gray-100 text-gray-400'
-                      }`}
-                    >
-                      {entry.tutorial || '-'}
-                    </span>
-                  </td>
-                </tr>
-              ))}
+                      </td>
+                    ) : null}
+                    <td className="px-4 py-3 border-b border-gray-200 text-gray-600">
+                      {entry.intake}
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-200 text-center">
+                      <span
+                        className={`px-2 py-1 text-sm ${
+                          entry.mon ? 'text-gray-800' : 'text-gray-400'
+                        }`}
+                      >
+                        {entry.mon || '-'}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-200 text-center">
+                      <span
+                        className={`px-2 py-1 text-sm ${
+                          entry.tue ? 'text-gray-800' : 'text-gray-400'
+                        }`}
+                      >
+                        {entry.tue || '-'}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-200 text-center">
+                      <span
+                        className={`px-2 py-1 text-sm ${
+                          entry.wed ? 'text-gray-800' : 'text-gray-400'
+                        }`}
+                      >
+                        {entry.wed || '-'}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-200 text-center">
+                      <span
+                        className={`px-2 py-1 text-sm ${
+                          entry.thu ? 'text-gray-800' : 'text-gray-400'
+                        }`}
+                      >
+                        {entry.thu || '-'}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-200 text-center">
+                      <span
+                        className={`px-2 py-1 text-sm ${
+                          entry.fri ? 'text-gray-800' : 'text-gray-400'
+                        }`}
+                      >
+                        {entry.fri || '-'}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 border-b border-gray-200 text-center">
+                      <span
+                        className={`px-2 py-1 text-sm ${
+                          entry.tutorial ? 'text-gray-800' : 'text-gray-400'
+                        }`}
+                      >
+                        {entry.tutorial || '-'}
+                      </span>
+                    </td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </div>

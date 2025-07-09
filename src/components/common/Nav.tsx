@@ -159,7 +159,10 @@ function Nav() {
             {t('downloadGuide')}
           </Link>
         </div>
-        <div className="flex items-center gap-10 md:gap-25 text-white font-semibold justify-end">
+        <div
+          className="flex items-center gap-10 md:gap-25 text-white font-semibold justify-end"
+          onMouseEnter={() => setSubMenu('')}
+        >
           <div className="hidden lg:flex gap-20">
             <Link href={`/${params.locale}/current-students`}>
               {t('currentStudents')}
@@ -302,7 +305,19 @@ function Nav() {
                     return (
                       <div key={menu.title}>
                         <Link
-                          href={`/${params.locale}/${menu.href}`}
+                          href={
+                            menu.href.startsWith('http')
+                              ? menu.href
+                              : `/${params.locale}/${menu.href}`
+                          }
+                          target={
+                            menu.href.startsWith('http') ? '_blank' : undefined
+                          }
+                          rel={
+                            menu.href.startsWith('http')
+                              ? 'noopener noreferrer'
+                              : undefined
+                          }
                           onClick={() => setSubMenu('')}
                         >
                           <h3 className="flex items-center font-bold font-[family-name:var(--font-montserrat)] uppercase">
@@ -317,9 +332,19 @@ function Nav() {
                               className="text-[15px] my-5"
                               key={`${li.title}_${menu.title}_${li.href}`}
                             >
-                              <Link href={`/${params.locale}/${li.href}`}>
-                                {li.title}
-                              </Link>
+                              {li.href.startsWith('http') ? (
+                                <Link
+                                  href={li.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {li.title}
+                                </Link>
+                              ) : (
+                                <Link href={`/${params.locale}/${li.href}`}>
+                                  {li.title}
+                                </Link>
+                              )}
                             </li>
                           ))}
                         </ul>
@@ -347,7 +372,17 @@ function Nav() {
                 }}
                 onClick={() => setSubMenu('')}
                 key={item.title}
-                href={`/${params.locale}/${item.href}`}
+                href={
+                  item.href.startsWith('http')
+                    ? item.href
+                    : `/${params.locale}/${item.href}`
+                }
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={
+                  item.href.startsWith('http')
+                    ? 'noopener noreferrer'
+                    : undefined
+                }
                 className={cn(
                   subMenu === item.title ? 'bg-[#171717] text-primary' : '',
                   'cursor-pointer hover:bg-[#171717] transition-all py-26 px-28'

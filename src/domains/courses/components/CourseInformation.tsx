@@ -29,9 +29,13 @@ export interface CourseInformationInfo {
 
 interface CourseInformationProps {
   courseInfo: CourseInformationInfo;
+  hideButtons?: boolean;
 }
 
-function CourseInformationContent({ courseInfo }: CourseInformationProps) {
+function CourseInformationContent({
+  courseInfo,
+  hideButtons = false,
+}: CourseInformationProps) {
   // 텍스트의 줄바꿈을 처리하는 함수
   const renderTextWithLineBreaks = (text: string) => {
     return text.split('\n').map((line, index) => (
@@ -92,10 +96,15 @@ function CourseInformationContent({ courseInfo }: CourseInformationProps) {
               </p>
             </div>
           )}
-          <p>More information is available via the My Skills Website.</p>
-          <Button className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-10">
-            Enrol Now
-          </Button>
+
+          {!hideButtons && (
+            <>
+              <p>More information is available via the My Skills Website.</p>
+              <Button className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-10">
+                Enrol Now
+              </Button>
+            </>
+          )}
         </div>
       </div>
       {courseInfo.courseCode && (
@@ -108,7 +117,21 @@ function CourseInformationContent({ courseInfo }: CourseInformationProps) {
 function CourseInformation({ id }: { id: string }) {
   const courseInfo = courseInformationData[id] || {};
 
-  return <CourseInformationContent courseInfo={courseInfo} />;
+  // 특정 코스들에 대해 "More information"과 "Enrol Now" 버튼을 숨김
+  const hideButtonsForCourses = [
+    'industry-placement-work-placement',
+    'industry-placement-hospitality-management',
+    'fss',
+  ];
+
+  const shouldHideButtons = hideButtonsForCourses.includes(id);
+
+  return (
+    <CourseInformationContent
+      courseInfo={courseInfo}
+      hideButtons={shouldHideButtons}
+    />
+  );
 }
 
 export default CourseInformation;

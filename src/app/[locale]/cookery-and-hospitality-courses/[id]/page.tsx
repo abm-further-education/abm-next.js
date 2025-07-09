@@ -5,8 +5,8 @@ import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import Units from '@/domains/courses/components/Units';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
-import { sampleCourseDetail } from '@/lib/constants';
-import React, { use } from 'react';
+import { courseDetails } from '@/lib/constants';
+import React, { use, useEffect } from 'react';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
@@ -29,10 +29,31 @@ const mappingCourseImage: { [key: string]: string } = {
   'industry-placement-hospitality-management': '/courses/cookery/industry.png',
 };
 
-const menuItems = ['Course Information', 'Course Detail', 'Units'];
+const menuItems = {
+  'sit40521-certificate-iv-in-kitchen-management': [
+    'Course Information',
+    'Course Detail',
+    'Units',
+  ],
+  'sit50422-diploma-of-hospitality-management': [
+    'Course Information',
+    'Course Detail',
+  ],
+  'advanced-diploma-of-hospitality-management': [
+    'Course Information',
+    'Course Detail',
+  ],
+};
 
 function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
+
+  // 동적으로 페이지 타이틀 설정
+  useEffect(() => {
+    const courseTitle =
+      mappingCourseTitle[id] || 'Cookery & Hospitality Course';
+    document.title = `${courseTitle} | ABM Further Education`;
+  }, [id]);
 
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
@@ -53,7 +74,9 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
           <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <CourseDetailMenu menuItems={menuItems} />
+      <CourseDetailMenu
+        menuItems={menuItems[id as keyof typeof menuItems] ?? []}
+      />
 
       {/* Course Information Section */}
       <section
@@ -64,11 +87,12 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
       </section>
 
       {/* Course Detail Section */}
+
       <section
         id={getSectionId('Course Detail')}
-        className="max-w-1000 mx-auto px-20 py-40 bg-gray-50"
+        className="max-w-1000 mx-auto px-20 py-10 bg-gray-50"
       >
-        <CourseDetail courseInfo={sampleCourseDetail} />
+        <CourseDetail courseInfo={courseDetails[id] || {}} />
       </section>
 
       {/* Units Section */}
