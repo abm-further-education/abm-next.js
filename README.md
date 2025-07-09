@@ -2,23 +2,6 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Database Setup
-
-This project uses MongoDB with Mongoose. You need to:
-
-1. Create a `.env.local` file in the root directory
-2. Add your MongoDB connection string:
-
-```env
-MONGODB_URI=mongodb://localhost:27017/abm-nextjs
-```
-
-For MongoDB Atlas (cloud database):
-
-```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/abm-nextjs?retryWrites=true&w=majority
-```
-
 ## Getting Started
 
 First, make sure you have MongoDB running locally or have access to MongoDB Atlas.
