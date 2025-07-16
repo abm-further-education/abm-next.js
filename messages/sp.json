@@ -7,7 +7,35 @@
     "testimonialDescription": "¿Dónde te ves trabajando felizmente en el futuro cercano?"
   },
   "contact": {
-    "title": "Contáctanos"
+    "title": "Contáctanos",
+    "getInTouch": "Ponte en contacto con nosotros",
+    "address": "242 Castlereagh Street Sydney NSW 2000 Australia",
+    "phone": "+61 (02) 9160 4507",
+    "whatsapp": "(WhatsApp) + 61 482 796 010",
+    "email": "info@abm.edu.au",
+    "emailPlaceholder": "Correo electrónico",
+    "enquiryType": "¿Cuál es tu tipo de consulta?",
+    "selectEnquiryType": "Seleccionar tipo de consulta",
+    "bookCampusTour": "Reservar un tour del campus",
+    "becomeStudent": "Convertirse en estudiante",
+    "becomeAgent": "Convertirse en agente",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "phonePlaceholder": "Teléfono",
+    "nationality": "Nacionalidad",
+    "message": "Mensaje",
+    "sendMessage": "Enviar mensaje",
+    "successMessage": "Tu consulta ha sido enviada. ¡Gracias!",
+    "errorMessage": "No se pudo enviar. Por favor, inténtalo de nuevo más tarde.",
+    "sending": "Enviando...",
+    "validation": {
+      "firstNameRequired": "El nombre es obligatorio",
+      "firstNameMinLength": "El nombre debe tener al menos 2 caracteres",
+      "lastNameRequired": "El apellido es obligatorio",
+      "lastNameMinLength": "El apellido debe tener al menos 2 caracteres",
+      "emailRequired": "El email es obligatorio",
+      "emailInvalid": "Dirección de email inválida"
+    }
   },
   "courses": {
     "title": "Encuentra el Curso Adecuado para tu Futuro",
@@ -63,7 +91,9 @@
       "fitnessAndSport": "Fitness y Deporte",
       "business": "Negocios",
       "projectAndProgram": "Proyecto y Programa",
-      "humanResource": "Recursos Humanos"
+      "humanResource": "Recursos Humanos",
+      "cookingAndBaking": "Cocina y Repostería",
+      "onlineCourses": "Cursos en Línea"
     },
     "studyWithUs": {
       "studentInsights": "Perspectivas de Estudiantes ABM",
@@ -195,6 +225,146 @@
     "usiHelpDescription": "Para soporte técnico o preguntas sobre tu cuenta USI, visita la página oficial de ayuda USI.",
     "usiHelpButton": "Ayuda USI"
   },
+  "courseEntryRequirements": {
+    "metaTitle": "Requisitos de Ingreso a Cursos - ABM Educación Superior",
+    "metaDescription": "Conoce los requisitos de ingreso para los cursos de ABM incluyendo requisitos académicos, requisitos de inglés y proceso de aplicación.",
+    "bannerTitle": "Requisitos de Ingreso a Cursos",
+    "bannerSubtitle": "Todo lo que necesitas saber para inscribirte en los cursos de ABM",
+    "introTitle": "Requisitos de Ingreso para Cursos ABM",
+    "introDescription": "Para asegurar la mejor experiencia de aprendizaje y resultados, ABM tiene requisitos específicos de ingreso para todos nuestros cursos. Estos requisitos nos ayudan a mantener altos estándares educativos y asegurar que los estudiantes estén bien preparados para sus estudios.",
+    "generalRequirementsTitle": "Requisitos Generales",
+    "ageRequirementTitle": "Requisito de Edad",
+    "ageRequirementDescription": "Los estudiantes deben tener al menos 18 años al momento del inicio del curso. Para estudiantes menores de 18 años, se puede requerir consentimiento parental y documentación adicional.",
+    "englishRequirementTitle": "Competencia en Inglés",
+    "englishRequirementDescription": "Todos los estudiantes deben demostrar competencia en inglés para asegurar que puedan completar exitosamente sus estudios. Esto aplica tanto a estudiantes nacionales como internacionales.",
+    "academicRequirementsTitle": "Requisitos Académicos",
+    "certificateIIITitle": "Cursos de Certificado III",
+    "certificateIIIRequirement1": "Finalización del Año 10 o equivalente",
+    "certificateIIIRequirement2": "Habilidades básicas de alfabetización y numeración",
+    "certificateIIIRequirement3": "Capacidad para trabajar independientemente y en equipos",
+    "certificateIVTitle": "Cursos de Certificado IV",
+    "certificateIVRequirement1": "Finalización del Año 12 o equivalente",
+    "certificateIVRequirement2": "Certificado III en campo relacionado (recomendado)",
+    "certificateIVRequirement3": "Fuertes habilidades de comunicación y resolución de problemas",
+    "diplomaTitle": "Cursos de Diploma",
+    "diplomaRequirement1": "Finalización del Año 12 o equivalente",
+    "diplomaRequirement2": "Certificado IV en campo relacionado (recomendado)",
+    "diplomaRequirement3": "Potencial de liderazgo demostrado",
+    "advancedDiplomaTitle": "Cursos de Diploma Avanzado",
+    "advancedDiplomaRequirement1": "Diploma en campo relacionado",
+    "advancedDiplomaRequirement2": "Mínimo 2 años de experiencia laboral relevante",
+    "advancedDiplomaRequirement3": "Fuerte antecedente académico",
+    "englishLanguageTitle": "Requisitos de Inglés",
+    "acceptedTestsTitle": "Pruebas de Inglés Aceptadas",
+    "acceptedTest1": "IELTS Academic: General 5.5 (ninguna banda menos de 5.0)",
+    "acceptedTest2": "TOEFL iBT: General 46 (ninguna banda menos de 10)",
+    "acceptedTest3": "PTE Academic: General 42 (ninguna banda menos de 36)",
+    "acceptedTest4": "Cambridge English: B2 First (FCE) - Grado C",
+    "acceptedTest5": "OET: Grado C en todas las bandas",
+    "exemptionsTitle": "Exenciones de Inglés",
+    "exemption1": "Hablantes nativos de inglés de Australia, Nueva Zelanda, Reino Unido, Estados Unidos, Canadá o Irlanda",
+    "exemption2": "Estudiantes que han completado al menos 2 años de estudio a tiempo completo en inglés a nivel secundario o terciario",
+    "exemption3": "Estudiantes con calificaciones previas de instituciones de habla inglesa",
+    "additionalRequirementsTitle": "Requisitos Adicionales",
+    "healthRequirementsTitle": "Requisitos de Salud y Seguridad",
+    "healthRequirementsDescription": "Algunos cursos pueden tener requisitos específicos de salud y seguridad, particularmente para componentes prácticos.",
+    "healthRequirement1": "Autorización médica para actividades prácticas",
+    "healthRequirement2": "Registros de vacunación (si se requiere)",
+    "healthRequirement3": "Evaluación de aptitud física para cursos físicamente exigentes",
+    "workingWithChildrenTitle": "Verificación de Trabajo con Niños",
+    "workingWithChildrenDescription": "Los estudiantes en cursos que involucran trabajo con niños o personas vulnerables pueden necesitar una Verificación de Trabajo con Niños.",
+    "wwcRequirement1": "Autorización válida de Verificación de Trabajo con Niños",
+    "wwcRequirement2": "Autorización de verificación de antecedentes",
+    "applicationProcessTitle": "Proceso de Aplicación",
+    "step1Title": "Paso 1: Selección de Curso",
+    "step1Description": "Elige tu curso preferido y revisa los requisitos de ingreso. Contacta a nuestro equipo de admisiones si tienes preguntas sobre la idoneidad del curso.",
+    "step2Title": "Paso 2: Preparación de Documentos",
+    "step2Description": "Reúne todos los documentos requeridos incluyendo transcripciones académicas, resultados de pruebas de inglés, documentos de identificación y cualquier requisito adicional específico de tu curso.",
+    "step3Title": "Paso 3: Envío de Aplicación",
+    "step3Description": "Envía tu aplicación en línea o en persona con todos los documentos requeridos. Asegúrate de que toda la información sea precisa y completa.",
+    "step4Title": "Paso 4: Evaluación y Oferta",
+    "step4Description": "Tu aplicación será evaluada por nuestro equipo de admisiones. Si es exitosa, recibirás una carta de oferta con instrucciones de inscripción.",
+    "courseRequirementsTableTitle": "Requisitos Específicos de Ingreso por Curso",
+    "courseRequirementsTableDescription": "A continuación se muestran los requisitos específicos de ingreso para cada curso ofrecido en ABM:",
+    "needHelpTitle": "¿Necesitas Ayuda con tu Aplicación?",
+    "needHelpDescription": "Nuestro amigable equipo de admisiones está aquí para ayudarte durante el proceso de aplicación. Contáctanos para asistencia personalizada.",
+    "contactUsButton": "Contáctanos",
+    "callUsButton": "Llámanos",
+    "courses": {
+      "kitchenManagement": {
+        "code": "SIT40521 Certificado IV en Gestión de Cocina",
+        "requirement": "El estudiante debe haber completado el equivalente al Año 10"
+      },
+      "hospitalityDiploma": {
+        "code": "SIT50422 Diploma en Gestión de Hospitalidad",
+        "requirement": "El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "hospitalityAdvancedDiploma": {
+        "code": "SIT60322 Diploma Avanzado en Gestión de Hospitalidad",
+        "requirement": "El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "fitnessCertIII": {
+        "code": "SIS30321 Certificado III en Fitness",
+        "requirement": "El estudiante debe haber completado el equivalente al Año 10"
+      },
+      "fitnessCertIIIFast": {
+        "code": "SIS30321 Certificado III en Fitness (Vía Rápida)",
+        "requirement": "Debes ser capaz de participar en actividades de fitness."
+      },
+      "fitnessCertIV": {
+        "code": "SIS40221 Certificado IV en Fitness",
+        "requirement": "Haber completado las siguientes unidades: HLTAID011 Proporcionar Primeros Auxilios (o una unidad que reemplace esta unidad), HLTWHS001 Participar en salud y seguridad en el lugar de trabajo, SISFFIT032 Completar evaluación previa al ejercicio y orientación de servicio, SISFFIT033 Completar evaluaciones de fitness del cliente, SISFFIT035 Planificar sesiones de ejercicio grupal, SISFFIT036 Instruir sesiones de ejercicio grupal, SISFFIT040 Desarrollar e instruir programas de ejercicio basados en gimnasio para clientes individuales, SISFFIT047 Usar conocimiento de anatomía y fisiología para apoyar ejercicio seguro y efectivo, SISFFIT052 Proporcionar información sobre alimentación saludable. El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "fitnessCertIVFast": {
+        "code": "SIS40221 Certificado IV en Fitness (Vía Rápida)",
+        "requirement": "Haber completado las siguientes unidades: HLTAID011 Proporcionar Primeros Auxilios (o una unidad que reemplace esta unidad), HLTWHS001 Participar en salud y seguridad en el lugar de trabajo, SISFFIT032 Completar evaluación previa al ejercicio y orientación de servicio, SISFFIT033 Completar evaluaciones de fitness del cliente, SISFFIT035 Planificar sesiones de ejercicio grupal, SISFFIT036 Instruir sesiones de ejercicio grupal, SISFFIT040 Desarrollar e instruir programas de ejercicio basados en gimnasio para clientes individuales, SISFFIT047 Usar conocimiento de anatomía y fisiología para apoyar ejercicio seguro y efectivo, SISFFIT052 Proporcionar información sobre alimentación saludable"
+      },
+      "sportDiploma": {
+        "code": "SIS50321 Diploma en Deporte (Entrenamiento)",
+        "requirement": "Participar en una entrevista de ingreso al curso para determinar la idoneidad para el curso y las necesidades del estudiante. El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "businessCertIV": {
+        "code": "BSB40120 Certificado IV en Negocios",
+        "requirement": "Ver requisitos académicos de ingreso arriba. El estudiante debe haber completado el equivalente al Año 10"
+      },
+      "businessDiploma": {
+        "code": "BSB50120 Diploma en Negocios",
+        "requirement": "Ver requisitos académicos de ingreso arriba. El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "businessAdvancedDiploma": {
+        "code": "BSB60120 Diploma Avanzado en Negocios",
+        "requirement": "Los estudiantes deben haber completado un curso de nivel Diploma (Nivel AQF 5) o un curso de nivel Diploma Avanzado (Nivel AQF 6) del paquete de entrenamiento BSB. El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "hrCertIV": {
+        "code": "BSB40420 Certificado IV en Gestión de Recursos Humanos",
+        "requirement": "El estudiante debe haber completado el equivalente al Año 10"
+      },
+      "hrDiploma": {
+        "code": "BSB50320 Diploma en Gestión de Recursos Humanos",
+        "requirement": "Haber completado las siguientes unidades: BSBHRM411 Administrar procesos de desarrollo de rendimiento, BSBHRM412 Apoyar relaciones laborales e industriales, BSBHRM415 Coordinar reclutamiento y incorporación, BSBHRM417 Apoyar funciones y procesos de recursos humanos. Las competencias equivalentes son predecesoras de estas unidades, que han sido mapeadas como equivalentes. El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "hrAdvancedDiploma": {
+        "code": "BSB60320 Diploma Avanzado en Gestión de Recursos Humanos",
+        "requirement": "Haber completado una de las siguientes calificaciones: BSB50320 Diploma en Gestión de Recursos Humanos, BSB50618 Diploma en Gestión de Recursos Humanos (o una versión equivalente reemplazada). El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "projectCertIV": {
+        "code": "BSB40920 Certificado IV en Práctica de Gestión de Proyectos",
+        "requirement": "El estudiante debe haber completado el equivalente al Año 10"
+      },
+      "projectDiploma": {
+        "code": "BSB50820 Diploma en Gestión de Proyectos",
+        "requirement": "El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "projectAdvancedDiploma": {
+        "code": "BSB60720 Diploma Avanzado en Gestión de Programas",
+        "requirement": "Haber completado una de las siguientes calificaciones: BSB50820 Diploma en Gestión de Proyectos, BSB51415 Diploma en Gestión de Proyectos (o una versión equivalente reemplazada). El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "graduateDiploma": {
+        "code": "BSB80120 Diploma de Posgrado en Gestión (Aprendizaje)",
+        "requirement": "Los estudiantes deben haber completado un curso de nivel Diploma Avanzado (Nivel AQF 6) o superior. El estudiante debe haber completado el equivalente al Año 12"
+      }
+    }
+  },
   "higherEducationPathway": {
     "title": "Vía de Educación Superior",
     "bannerTitle": "¿Buscas Progresar Después de tu Curso ABM?",
@@ -232,5 +402,58 @@
     "readyToStartDescription": "Contáctanos para obtener información detallada sobre nuestras vías de educación superior y cómo comenzar.",
     "contactUs": "Contáctanos",
     "enrolNow": "Inscríbete Ahora"
+  },
+  "news": {
+    "bannerTitle": "Últimas Noticias",
+    "intro": "Descubre las últimas noticias de ABM.",
+    "searchPlaceholder": "Buscar noticias...",
+    "sortBy": "Ordenar por:",
+    "newest": "Más recientes",
+    "oldest": "Más antiguas",
+    "readMore": "Leer más",
+    "noResults": "No se encontraron noticias."
+  },
+  "checkout": {
+    "title": "Registro del curso",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "preferredDate": "Fecha preferida (si desea inscribirse en grupo)",
+    "otherInquiries": "Otras consultas",
+    "howDidYouHear": "¿Cómo se enteró de este curso?",
+    "agent": "Agente",
+    "socialMedia": "Redes sociales",
+    "friend": "Amigo",
+    "searchPortal": "Portal de búsqueda",
+    "abmWebsite": "Sitio web de ABM",
+    "referrerName": "Si fue referido por un agente o estudiante, indique su nombre.",
+    "promotionCode": "Código de promoción",
+    "submit": "Proceder al pago",
+    "back": "Atrás",
+    "required": "Campo obligatorio",
+    "enterFirstName": "Por favor, ingrese su nombre.",
+    "enterEmail": "Por favor, ingrese su correo electrónico.",
+    "invalidEmail": "Correo electrónico no válido.",
+    "success": "Redirigiendo al pago..."
+  },
+  "paymentSuccess": {
+    "title": "¡Pago Completado!",
+    "subtitle": "Su registro al curso se ha completado exitosamente.",
+    "registrationInfo": "Información de Registro",
+    "course": "Curso",
+    "date": "Fecha",
+    "type": "Tipo",
+    "email": "Correo electrónico",
+    "amountPaid": "Monto Pagado",
+    "emailNotification": "Se enviará un correo de confirmación en breve. Se proporcionarán instrucciones adicionales antes del inicio del curso.",
+    "viewOtherCourses": "Ver Otros Cursos",
+    "contactUs": "Contáctanos",
+    "errorOccurred": "Ocurrió un Error",
+    "sessionNotFound": "ID de sesión de pago no encontrado.",
+    "fetchError": "Error al obtener la información del pago.",
+    "verificationError": "Ocurrió un error al verificar la información del pago.",
+    "backToCourses": "Volver a los Cursos",
+    "verifyingPayment": "Verificando información de pago..."
   }
 }

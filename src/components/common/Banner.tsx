@@ -59,7 +59,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
               <FadeInBottomToTop>
                 <h1
                   className={cn(
-                    `text-white text-4xl md:text-6xl font-bold drop-shadow-lg`,
+                    `text-white text-4xl md:text-6xl font-bold drop-shadow-lg max-w-1000`,
                     isNeedContactBtn ? 'pb-50' : 'pb-0'
                   )}
                 >

@@ -41,11 +41,11 @@ export const hospitalityMenu = [
 export const fitnessMenu = [
   {
     title: 'Certificate III in Fitness',
-    href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iii-in-fitness',
+    href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iii-in-fitness',
   },
   {
     title: 'Certificate IV in Fitness',
-    href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iv-in-fitness',
+    href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
   },
   {
     title: 'Certificate III in Sport',
@@ -108,44 +108,74 @@ export const hrMenu = [
 
 export const shortCourseMenu = [
   {
-    title: 'Barista Course',
-    href: '/short-courses/barista',
+    title: 'Hospitality',
+    href: '/short-courses/hospitality',
+    items: [
+      {
+        title: 'Barista Course',
+        href: '/short-courses/barista',
+      },
+      {
+        title: 'Wine Course',
+        href: '/short-courses/wine',
+      },
+      {
+        title: 'Fine Dining Dessert Plating Course',
+        href: '/short-courses/dessert',
+      },
+      {
+        title: 'Cocktail-Making and Mixology Course',
+        href: '/short-courses/mixology',
+      },
+      {
+        title: 'NSW Food Safety Supervisor Certificate',
+        href: '/cookery-and-hospitality-courses/fss',
+      },
+    ],
   },
   {
-    title: 'Classic French Cake Course',
-    href: '/short-courses/cake',
+    title: 'Cooking & Baking',
+    href: '/short-courses/cooking-baking',
+    items: [
+      {
+        title: 'Classic French Cakes Course',
+        href: '/short-courses/cake',
+      },
+      {
+        title: 'Sourdough and Focaccia Course',
+        href: '/short-courses/focaccia',
+      },
+      {
+        title: 'Classic French Pastries Course',
+        href: '/short-courses/pastries',
+      },
+      {
+        title: 'French Petit Four Course (Macaroon)',
+        href: '/short-courses/petit',
+      },
+      {
+        title: 'Vegan and Vegetarian Course',
+        href: '/short-courses/vegan',
+      },
+      {
+        title: 'Chocolate Class – Xmas',
+        href: '/short-courses/chocolate',
+      },
+    ],
   },
   {
-    title: 'Wine Course',
-    href: '/short-courses/wine',
-  },
-  {
-    title: 'Sourdough and Focaccia Course',
-    href: '/short-courses/focaccia',
-  },
-  {
-    title: 'Fine Dining Dessert Plating Course',
-    href: '/short-courses/dessert',
-  },
-  {
-    title: 'Classic French Pastries Course',
-    href: '/short-courses/pastries',
-  },
-  {
-    title: 'Cocktail-Making and Mixology Course',
-    href: '/short-courses/mixology',
-  },
-  {
-    title: 'French petit four Course (Macaroon)',
-    href: '/short-courses/petit',
-  },
-  {
-    title: 'Vegan and Vegetarian Course',
-    href: '/short-courses/vegan',
-  },
-  {
-    title: 'Chocolate Class – Xmas',
-    href: '/short-courses/chocolate',
+    title: 'Online Courses',
+    href: '/short-courses/online',
+    items: [
+      {
+        title: 'Introduction to HTML, CSS, and Basic Web Design',
+        href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
+      },
+      {
+        title: 'Advanced Course: Building a Portfolio Website',
+        href: 'https://www.openlearning.com/abm-further-education/courses/advanced-course-building-a-portfolio-website/?cl=1',
+      },
+    ],
   },
 ];
 
@@ -241,13 +271,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) supports.',
-        'Assistive Technologys.',
-        'Additional Tutorials, and / ors.',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -274,18 +304,6 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       title: 'Course Duration – Packaged with Kitchen Management Course',
       description: [
         'This course has a duration of 26 weeks.\n\nStudents completed a SIT40521 Certificate IV in Kitchen Management with ABM Further Education will receive 20 credit transfer units. This will reduce the course SIT50422 Diploma of Hospitality Management to 2 terms of study (20 weeks excluding holiday break).\nEach term consists of 10 weeks of training and assessments, followed by a 3-week holiday.',
-        {
-          type: 'table' as const,
-          headers: ['Requirement', 'Details'],
-          rows: [
-            [
-              'Eligibility',
-              'It is applicable ONLY for those who completed SIT40521 Cert IV Kitchen Management with ABM Further education',
-            ],
-            ['Work placement', 'N/A'],
-            ['Course duration', '26 weeks (2 terms)'],
-          ],
-        },
       ] as DescriptionItem[],
     },
     courseDuration2: {
@@ -298,7 +316,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
         'Course Structure – Packaged with Certificate IV in Kitchen Management',
       description: [
         'It is applicable ONLY for those who completed SIT40521 Cert Iv Kitchen Management with ABM Further education\nWork placement: N/A\nCourse duration: 26 weeks (2 terms)\n\n',
-        'Term1',
+        '**Term1**',
         {
           type: 'table' as const,
           headers: ['No of weeks', 'Unit code and title'],
@@ -315,7 +333,8 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
             ],
           ],
         },
-        'Term2',
+        '**3 weeks break**',
+        '\n**Term2**',
         {
           type: 'table' as const,
           headers: ['No of weeks', 'Unit code and title'],
@@ -337,7 +356,6 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
     courseStructure2: {
       title: 'Course Structure – Standalone Food & Beverage Stream',
       description: [
-        'It is applicable ONLY for those who completed SIT40521 Cert Iv Kitchen Management with ABM Further education\nWork placement: N/A\nCourse duration: 26 weeks (2 terms)\n\n',
         {
           type: 'table' as const,
           headers: ['Number of units', 'Code', 'Title', 'Core/Elective'],
@@ -443,9 +461,9 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       title: 'Work Placement - Food and Beverage Stream only',
       description: [
         '285 hours (* not applicable when it is packaged with Certificate IV in Kitchen Management course)',
-        'Workplace Component',
+        '\n**Workplace Component**',
         'It is important to note a workplace unit forms part of this qualification and learners are required to complete tasks outlined in the training package elements and performance criteria.',
-        'Workplace logbook will be provided by ABM and students are required to maintain on a daily basis a record of activities / tasks performed during work placement This will be monitored by ABM Workplace assessor during scheduled site visits. Daily activities / logbook entries are to be signed by the workplace supervisor each day.',
+        '\nWorkplace logbook will be provided by ABM and students are required to maintain on a daily basis a record of activities / tasks performed during work placement This will be monitored by ABM Workplace assessor during scheduled site visits. Daily activities / logbook entries are to be signed by the workplace supervisor each day.',
         {
           type: 'table' as const,
           headers: ['Term', 'Week number', 'Hours'],
@@ -464,7 +482,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
           ],
         },
         '*Please note Hospitality shifts may vary in time due to business needs. ABM has allocated approximately 5 hours per shift based on industry standards. ABM understands some shifts may be slightly shorter or longer based on individual business needs.&nbsp;Students may need to do additional service periods to reach the 285 workplace hours.\n\n',
-        'Work placement arrangements',
+        '**Work placement arrangements**',
         "- Students can choose their work placement locations. However, it will be verified by the Trainer/Assessors to ensure it has all the facilities and equipment's that meets the requirements of SITHIND008 Work effectively in the hospitality service.",
         '- Students would be supervised/assessed while on placement by the ABM Trainer/Assessors.',
         '- ABM would organise work-placement locations if students are unable to manage by themselves.',
@@ -527,18 +545,19 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
   'advanced-diploma-of-hospitality-management': {
     courseDuration: {
       title: 'Course Duration',
-      description: 'advanced-diploma-of-hospitality-management',
+      description:
+        'The Advanced Diploma of Hospitality Management is offered over  104 weeks, including 80 weeks of training and assessment spread over 8 terms of 10 weeks each and 24 weeks of holidays.',
     },
     courseStructure1: {
       title:
         'Course Structure – Packaged with Certificate IV in Kitchen Management & Diploma of Hospitality Management',
       description: [
         'Students who have completed both qualifications by ABM Further Education are eligible for 25 Credit Transfer',
-        'SIT40521 Cetificate IV in Kitchen Manangement',
-        'SIT50422 Diploma of Hospitality Management',
+        '- SIT40521 Cetificate IV in Kitchen Manangement',
+        '- SIT50422 Diploma of Hospitality Management',
         'Advance Diploma of Hospitality Management course can be completed within two term (26 weeks)',
         'The allocation of units are as below:',
-        'Term1',
+        '**Term1**',
         {
           type: 'table' as const,
           headers: ['No of weeks', 'Unit code and title'],
@@ -552,7 +571,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
             ],
           ],
         },
-        'Term2',
+        '\n**Term2**',
         {
           type: 'table' as const,
           headers: ['No of weeks', 'Unit code and title'],
@@ -569,7 +588,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
             ],
           ],
         },
-        'Course duration: 26 weeks (2 terms)',
+        '**Course duration: 26 weeks (2 terms)**',
       ],
     },
     courseStructure2: {
@@ -602,8 +621,8 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
             ],
           ],
         },
-        'Students who have completed SIT50422 in ABM further education are eligible for 25 credit Transfers, and can complete the course in two terms (26 weeks).',
-        'Term1',
+        '**Students who have completed SIT50422 in ABM further education are eligible for 25 credit Transfers, and can complete the course in two terms (26 weeks).**',
+        '\n**Term1**',
         {
           type: 'table' as const,
           headers: ['No of weeks', 'Unit code and title'],
@@ -617,7 +636,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
             ],
           ],
         },
-        'Term2',
+        '\n**Term2**',
         {
           type: 'table' as const,
           headers: ['No of weeks', 'Unit code and title'],
@@ -647,15 +666,15 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.\n\n',
-        'The aim of both documents is to provide any support that may be required. This could include:\n\n',
-        '- Language, Literacy and Numeracy (LLN) support',
-        '- Assistive Technology',
-        '- Additional Tutorials, and / or',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.\n\n',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.\n\n",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.\n\n',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
+        'The aim of both documents is to provide any support that may be required. This could include:',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -675,7 +694,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       title: 'Pathways to Further Study / Career Opportunities',
       description: [
         'Potential employment options are in any hospitality industry sector as a departmental or small business manager. See also possible job title roles indicated in the qualification description.',
-        'Students who complete this course may wish to continue their education into a range of Higher Education qualifications.',
+        '\nStudents who complete this course may wish to continue their education into a range of Higher Education qualifications.',
       ],
     },
     additionalInfo: {
@@ -685,7 +704,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       ],
     },
   },
-  'sis40221-certificate-iii-in-fitness': {
+  'sis30321-certificate-iii-in-fitness': {
     courseDuration: {
       title: 'Course Duration',
       description:
@@ -696,13 +715,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) support',
+        '- Assistive Technology',
+        '- Additional Tutorials, and / or',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -725,7 +744,7 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
         'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
     },
   },
-  'sis30321-certificate-iv-in-fitness': {
+  'sis40221-certificate-iv-in-fitness': {
     courseDuration: {
       title: 'Course Duration',
       description:
@@ -736,13 +755,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -779,13 +798,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -819,13 +838,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -862,13 +881,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -898,13 +917,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -962,13 +981,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -1003,13 +1022,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -1040,13 +1059,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -1081,13 +1100,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -1121,13 +1140,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -1203,13 +1222,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -1261,13 +1280,13 @@ export const courseDetails: { [key: string]: CourseDetailInfo } = {
       description: [
         'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
         'The aim of both documents is to provide any support that may be required. This could include:',
-        'Language, Literacy and Numeracy (LLN) support',
-        'Assistive Technology',
-        'Additional Tutorials, and / or',
-        'Other mechanisms, such as assistance in using technology for online delivery components.',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '- Language, Literacy and Numeracy (LLN) supports.',
+        '- Assistive Technologys.',
+        '- Additional Tutorials, and / ors.',
+        '- Other mechanisms, such as assistance in using technology for online delivery components.',
+        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
+        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
+        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
       ],
     },
     jobRoles: {
@@ -1306,13 +1325,13 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
-          type: 'Kitchen',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
     },
@@ -1335,13 +1354,13 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
-          type: 'Kitchen',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
     },
@@ -1364,17 +1383,27 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
           address:
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
     },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+    },
   },
   'bsb60120-advanced-diploma-of-business': {
     courseCode: 'BSB60120',
     description:
-      'Individuals who seek to improve upon their leadership capabilities, learn key problem-solving procedures and engage in a team environment should look no further than ABM’s Advanced Diploma of Business. Graduates in this course will leave with all the necessary tools required to tackle highly complex tasks in their specialised field of expertise. ABM’s Advanced Diploma of Business will provide students with the key building blocks required for you to specialise and enter the business environment in your chosen field.\n\nThroughout this course, students will engage in exercises aimed to assist in complex problem solving, develop and implement business plans, develop organisational strategies and contribute to strategic workforce planning – All Necessary skills to excel in your specialised field of work.\n\nOur Advanced Diploma of Business is suited towards individuals with a passion for leadership, strong problem-solving capabilities and the ability to motivate and guide a team.',
+      'Individuals who seek to improve upon their leadership capabilities, learn key problem-solving procedures and engage in a team environment should look no further than ABM’s Advanced Diploma of Business. Graduates in this course will leave with all the necessary tools required to tackle highly complex tasks in their specialised field of expertise. ABM’s Advanced Diploma of Business will provide students with the key building blocks required for you to specialise and enter the business environment in your chosen field.\n\nThroughout this course, students will engage in exercises aimed to assist in complex problem solving, develop and implement business plans, develop organisational strategies and contribute to strategic workforce planning \n– All Necessary skills to excel in your specialised field of work.\n\nOur Advanced Diploma of Business is suited towards individuals with a passion for leadership, strong problem-solving capabilities and the ability to motivate and guide a team.',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -1383,10 +1412,21 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address: ' 242 Castlereagh Street Sydney NSW 2000 Australia',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'bsb80120-graduate-diploma-of-management': {
@@ -1401,11 +1441,21 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
           address:
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'industry-placement-work-placement': {
@@ -1420,13 +1470,13 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
-          type: 'Kitchen',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
         {
           type: 'Industry Placement',
@@ -1452,12 +1502,11 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
-          type: 'Kitchen',
+          type: 'ABM Kitchen',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
@@ -1484,15 +1533,21 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
           address:
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
-        {
-          type: 'Kitchen',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'sit60322-advanced-diploma-of-hospitality-management': {
@@ -1507,15 +1562,21 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
           address:
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
-        {
-          type: 'Kitchen',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'advanced-diploma-of-hospitality-management': {
@@ -1530,11 +1591,11 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
-          type: 'Kitchen',
+          type: 'ABM Kitchen',
           address:
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
@@ -1559,11 +1620,21 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
           address:
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'bsb50820-diploma-of-project-management': {
@@ -1578,11 +1649,43 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
           address:
             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+    },
+  },
+  'bsb50820-diploma-of-project-management-practice': {
+    courseCode: 'BSB50820',
+    description:
+      'This qualification reflects the role of individuals who apply project management skills and knowledge in a variety of contexts, across a number of industry sectors. The job roles that relate to this qualification may include Project Manager and Project Team Leader. Individuals in these roles have project leadership and management roles and are responsible for achieving project objectives. They possess a sound theoretical knowledge base and use a range of specialised, technical, and managerial competencies to initiate, plan, execute and evaluate their own work and/or the work of others.',
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face (20 hours per week)',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        "A face-to-face training mode is employed for this qualification. All classroom-based training will take place at the ABM Further Education's classrooms.",
     },
   },
   'BSB60720-diploma-of-project-management-practice': {
@@ -1597,7 +1700,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
@@ -1619,9 +1722,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
     },
@@ -1638,7 +1740,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
@@ -1660,11 +1762,16 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'bsb50320-diploma-of-human-resource-management': {
@@ -1679,11 +1786,16 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'bsb60320-advanced-diploma-of-human-resource-management': {
@@ -1698,11 +1810,16 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'sis30321-certificate-iii-in-fitness': {
@@ -1717,11 +1834,20 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Practical',
+          address: 'Private Gymnasium for practical training and assessment',
         },
       ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
   'sis30321-certificate-iv-in-fitness': {
@@ -1736,7 +1862,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
@@ -1752,10 +1878,10 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIS30321?distanceFilter=25',
     },
   },
-  'sis40221-certificate-iii-in-fitness': {
+  'sis40221-certificate-iv-in-fitness': {
     courseCode: 'SIS40221',
     description:
-      "Studying Certificate III in Fitness is a great way to start your journey as a fitness instructor. You'll learn how to plan and deliver group exercise classes and design gym-based programs for individuals who don't need ongoing monitoring. You'll be working in predictable environments, under general supervision, and using your judgement to handle routine matters, all while following clear policies and procedures.\n\nThis qualification opens the door to a career as a fitness instructor in settings such as gyms, fitness centres, leisure centres, or community hubs. The skills you'll develop will be in line with Australian standards and regulations, ensuring you're prepared to meet both Commonwealth and State requirements.",
+      'The SIS40221 Certificate IV in Fitness is perfect for anyone looking to become a personal trainer. You’ll learn how to design, instruct, and assess exercise programmes for healthy clients aiming to achieve their fitness goals. If a client has more serious health concerns, you’ll refer them to medical professionals. Personal trainers work independently, using their fitness knowledge in both routine and unpredictable situations, and communicate well with clients and health experts to achieve the best results.\nThis course offers a pathway to work as a personal trainer in gyms, fitness centres, leisure facilities, client workplaces, homes, and even outdoors. You can train individuals or groups and may also provide online services. You could also step into leadership roles in some settings.\n\nThe target group for this qualification includes international students who:\n– Want to start or advance their career in the fitness industry.\n– Want to switch to a new field.\n– Have completed a Certificate III in Fitness and wish to develop further skills.\n– Are looking for a pathway to higher qualifications in fitness.\n\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You’ll follow Australian standards and industry practices to ensure you’re well-prepared for your career.',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -1764,7 +1890,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
@@ -1783,7 +1909,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'sis50321-diploma-of-sport': {
     courseCode: 'SIS50321',
     description:
-      "Build Your Future in the Australian Sport and Fitness Industry\n\nThe Diploma of Sport (Coaching) equips students with the practical skills and knowledge needed to take on a range of roles in the Australian sport sector. Whether you're aiming to coach, lead a team, or support a community sports organisation, this qualification provides a strong foundation for success.\n\nStudents will learn to work independently, manage and supervise others, and apply their skills in accordance with Australian legislation, standards and industry best practice. The course also includes key leadership and communication elements essential for working within dynamic sporting environments.\n\nWho Is This Course For?\n\nThis course is ideal for international students who are:\nLooking to begin or progress a career in the sport or fitness industry\nChanging career paths or entering a new sector\nAlready holding a Certificate III or IV in Fitness and wishing to advance their skills\nInterested in pathways to higher-level sport qualifications\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
+      "Build Your Future in the Australian Sport and Fitness Industry\n\nThe Diploma of Sport (Coaching) equips students with the practical skills and knowledge needed to take on a range of roles in the Australian sport sector. Whether you're aiming to coach, lead a team, or support a community sports organisation, this qualification provides a strong foundation for success.\n\nStudents will learn to work independently, manage and supervise others, and apply their skills in accordance with Australian legislation, standards and industry best practice. The course also includes key leadership and communication elements essential for working within dynamic sporting environments.\n\nWho Is This Course For?\n\nThis course is ideal for international students who are:\n- Looking to begin or progress a career in the sport or fitness industry\n- Changing career paths or entering a new sector\n- Already holding a Certificate III or IV in Fitness and wishing to advance their skills\n- Interested in pathways to higher-level sport qualifications\n\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -1792,7 +1918,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
@@ -1820,9 +1946,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
           type: 'Practical',
@@ -1832,7 +1957,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     },
     additionalInfo: {
       description:
-        'Starting Date (Every 3 weeks):\n\n2025:\n• 28th July\n• 18th August\n• 8th September, 29th September\n• 20th October\n• 10th November\n• 1st December, 22nd December\n\n2026:\n• 12th January\n• 2nd February, 23rd February\n• 16th March\n• 6th April, 27th April\n• 18th May\n• 8th June\n\nRegulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment option here.',
+        'Starting Date (Every 3 weeks):\n\n2025:\n• 28th July\n• 18th August\n• 8th September, 29th September\n• 20th October\n• 10th November\n• 1st December, 22nd December\n\n2026:\n• 12th January\n• 2nd February, 23rd February\n• 16th March\n• 6th April, 27th April\n• 18th May\n• 8th June\n\nRegulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n',
     },
   },
   'certificate-iv-in-sport-fast-track': {
@@ -1847,9 +1972,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
         {
           type: 'Practical',
@@ -1935,11 +2059,11 @@ export const MENU_STRUCTURE: MenuSection[] = [
         items: [
           {
             title: 'Certificate III in Fitness',
-            href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iii-in-fitness',
+            href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iii-in-fitness',
           },
           {
             title: 'Certificate IV in Fitness',
-            href: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iv-in-fitness',
+            href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
           },
           {
             title: 'Diploma of Sport',
@@ -2020,7 +2144,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
     href: '/short-courses',
     subMenu: [
       {
-        titleKey: 'menu.shortCourses',
+        titleKey: 'subMenu.hospitality',
         href: '/short-courses',
         items: [
           {
@@ -2028,31 +2152,41 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/short-courses/barista',
           },
           {
-            title: 'Classic French Cake Course',
-            href: '/short-courses/cake',
-          },
-          {
             title: 'Wine Course',
             href: '/short-courses/wine',
-          },
-          {
-            title: 'Sourdough and Focaccia Course',
-            href: '/short-courses/focaccia',
           },
           {
             title: 'Fine Dining Dessert Plating Course',
             href: '/short-courses/dessert',
           },
           {
-            title: 'Classic French Pastries Course',
-            href: '/short-courses/pastries',
-          },
-          {
             title: 'Cocktail-Making and Mixology Course',
             href: '/short-courses/mixology',
           },
           {
-            title: 'French petit four Course (Macaroon)',
+            title: 'NSW Food Safety Supervisor Certificate',
+            href: '/cookery-and-hospitality-courses/fss',
+          },
+        ],
+      },
+      {
+        titleKey: 'subMenu.cookingAndBaking',
+        href: '/short-courses',
+        items: [
+          {
+            title: 'Classic French Cakes Course',
+            href: '/short-courses/cake',
+          },
+          {
+            title: 'Sourdough and Focaccia Course',
+            href: '/short-courses/focaccia',
+          },
+          {
+            title: 'Classic French Pastries Course',
+            href: '/short-courses/pastries',
+          },
+          {
+            title: 'French Petit Four Course (Macaroon)',
             href: '/short-courses/petit',
           },
           {
@@ -2062,6 +2196,20 @@ export const MENU_STRUCTURE: MenuSection[] = [
           {
             title: 'Chocolate Class – Xmas',
             href: '/short-courses/chocolate',
+          },
+        ],
+      },
+      {
+        titleKey: 'subMenu.onlineCourses',
+        href: '/short-courses',
+        items: [
+          {
+            title: 'Introduction to HTML, CSS, and Basic Web Design',
+            href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
+          },
+          {
+            title: 'Advanced Course: Building a Portfolio Website',
+            href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
           },
         ],
       },
@@ -2077,7 +2225,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
         items: [
           {
             title: 'studentInsights', // 이것들은 tStudy 함수를 사용하므로 key만 저장
-            href: '/testimonial',
+            href: '/abm-student-insights',
           },
           {
             title: 'academicCalendar',
@@ -2093,7 +2241,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
           },
           {
             title: 'entryRequirements',
-            href: '/',
+            href: '/course-entry-requirement',
           },
           {
             title: 'getUSI',

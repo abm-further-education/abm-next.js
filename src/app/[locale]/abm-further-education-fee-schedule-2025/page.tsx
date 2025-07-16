@@ -11,7 +11,7 @@ export default async function Page() {
       <Banner
         slides={[
           {
-            imgPath: '/home/home.png',
+            imgPath: '/fees.png',
             title: t('bannerTitle'),
             content: t('bannerSubtitle'),
           },
@@ -24,8 +24,8 @@ export default async function Page() {
         <h1 className="text-3xl font-bold mb-20 text-center">{t('title')}</h1>
 
         {/* Promotional Message */}
-        <div className="mb-40 p-20 bg-orange-50 border-l-4 border-orange-500">
-          <h2 className="text-xl font-bold mb-10 text-orange-800">
+        <div className="mb-40 p-20 bg-orange-50 text-center">
+          <h2 className="text-xl font-bold mb-10 text-primary">
             {t('promotionTitle')}
           </h2>
           <p className="text-gray-700 mb-15">{t('promotionDescription')}</p>
@@ -33,7 +33,7 @@ export default async function Page() {
         </div>
 
         {/* Payment Information */}
-        <div className="mb-40 p-20 bg-gray-50 border-l-4 border-gray-500">
+        <div className="mb-40 p-20 bg-gray-50">
           <h2 className="text-xl font-bold mb-10 text-gray-800">
             {t('paymentTitle')}
           </h2>
@@ -42,7 +42,7 @@ export default async function Page() {
             {t('contactText')}{' '}
             <a
               href="mailto:accounts@abm.edu.au"
-              className="text-orange-600 hover:underline font-semibold"
+              className="text-primary hover:underline font-semibold"
             >
               accounts@abm.edu.au
             </a>

@@ -393,7 +393,7 @@ function Nav() {
             ))}
             <Link
               target="_blank"
-              href="https://form.jotform.com/ABMonlineforms/new-abm-enroment-application-form"
+              href="https://form.jotform.com/ABMonlineforms/abm-further-education-application-f"
               className="border cursor-pointer hover:bg-white font-semibold hover:text-black font-[family-name:var(--font-montserrat)] px-20 py-10 transition-all"
             >
               {t('enrolNow')}

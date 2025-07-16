@@ -69,8 +69,9 @@ function CourseInformationContent({
               <h3 className={titleStyle}>{courseInfo.deliverySite.title}</h3>
               {courseInfo.deliverySite.locations.map((location, index) => (
                 <div key={index}>
-                  <p className={titleStyle}>• {location.type}</p>
-                  <span>{location.address}</span>
+                  <span>
+                    • <strong>{location.type}</strong>: {location.address}
+                  </span>
                 </div>
               ))}
             </div>
@@ -99,8 +100,15 @@ function CourseInformationContent({
 
           {!hideButtons && (
             <>
-              <p>More information is available via the My Skills Website.</p>
-              <Button className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-10">
+              <Button
+                className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-10"
+                onClick={() => {
+                  window.open(
+                    'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
+                    '_blank'
+                  );
+                }}
+              >
                 Enrol Now
               </Button>
             </>

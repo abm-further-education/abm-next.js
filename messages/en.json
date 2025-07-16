@@ -7,7 +7,35 @@
     "testimonialDescription": "Where do you see yourself happily working in nearest future?"
   },
   "contact": {
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "getInTouch": "Get in touch with us",
+    "address": "242 Castlereagh Street Sydney NSW 2000 Australia",
+    "phone": "+61 (02) 9160 4507",
+    "whatsapp": "(WhatsApp) + 61 482 796 010",
+    "email": "info@abm.edu.au",
+    "emailPlaceholder": "Email",
+    "enquiryType": "What is your Enquiry Type?",
+    "selectEnquiryType": "Select Enquiry Type",
+    "bookCampusTour": "Book a Campus Tour",
+    "becomeStudent": "Become a Student",
+    "becomeAgent": "Become an Agent",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phonePlaceholder": "Phone",
+    "nationality": "Nationality",
+    "message": "Message",
+    "sendMessage": "Send a Message",
+    "successMessage": "Your enquiry has been sent. Thank you!",
+    "errorMessage": "Failed to send. Please try again later.",
+    "sending": "Sending...",
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "firstNameMinLength": "First name must be at least 2 characters",
+      "lastNameRequired": "Last name is required",
+      "lastNameMinLength": "Last name must be at least 2 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address"
+    }
   },
   "courses": {
     "title": "Find the Right Course for Your Future",
@@ -63,7 +91,9 @@
       "fitnessAndSport": "Fitness & Sport",
       "business": "Business",
       "projectAndProgram": "Project & Program",
-      "humanResource": "Human Resource"
+      "humanResource": "Human Resource",
+      "cookingAndBaking": "Cooking & Baking",
+      "onlineCourses": "Online Courses"
     },
     "studyWithUs": {
       "studentInsights": "ABM Student Testimonials",
@@ -196,6 +226,228 @@
     "usiHelpDescription": "For technical support or questions about your USI account, visit the official USI help page.",
     "usiHelpButton": "USI Help"
   },
+  "courseEntryRequirements": {
+    "metaTitle": "Course Entry Requirements - ABM Further Education",
+    "metaDescription": "Learn about the entry requirements for ABM courses including academic requirements, English language requirements, and application process.",
+    "bannerTitle": "Course Entry Requirements",
+    "bannerSubtitle": "Everything you need to know about enrolling in ABM courses",
+    "introTitle": "Entry Requirements for ABM Courses",
+    "introDescription": "To ensure the best learning experience and outcomes, ABM has specific entry requirements for all our courses. These requirements help us maintain high educational standards and ensure students are well-prepared for their studies.",
+    "generalRequirementsTitle": "General Requirements",
+    "ageRequirementTitle": "Age Requirement",
+    "ageRequirementDescription": "Students must be at least 18 years of age at the time of course commencement. For students under 18, parental consent and additional documentation may be required.",
+    "englishRequirementTitle": "English Language Proficiency",
+    "englishRequirementDescription": "All students must demonstrate English language proficiency to ensure they can successfully complete their studies. This applies to both domestic and international students.",
+    "academicRequirementsTitle": "Academic Requirements",
+    "certificateIIITitle": "Certificate III Courses",
+    "certificateIIIRequirement1": "Year 10 completion or equivalent",
+    "certificateIIIRequirement2": "Basic literacy and numeracy skills",
+    "certificateIIIRequirement3": "Ability to work independently and in teams",
+    "certificateIVTitle": "Certificate IV Courses",
+    "certificateIVRequirement1": "Year 12 completion or equivalent",
+    "certificateIVRequirement2": "Certificate III in related field (recommended)",
+    "certificateIVRequirement3": "Strong communication and problem-solving skills",
+    "diplomaTitle": "Diploma Courses",
+    "diplomaRequirement1": "Year 12 completion or equivalent",
+    "diplomaRequirement2": "Certificate IV in related field (recommended)",
+    "diplomaRequirement3": "Demonstrated leadership potential",
+    "advancedDiplomaTitle": "Advanced Diploma Courses",
+    "advancedDiplomaRequirement1": "Diploma in related field",
+    "advancedDiplomaRequirement2": "Minimum 2 years relevant work experience",
+    "advancedDiplomaRequirement3": "Strong academic background",
+    "englishLanguageTitle": "English Entry Requirements",
+    "acceptedTestsTitle": "Accepted English Tests",
+    "acceptedTest1": "IELTS Academic: Overall 5.5 (no band less than 5.0)",
+    "acceptedTest2": "TOEFL iBT: Overall 46 (no band less than 10)",
+    "acceptedTest3": "PTE Academic: Overall 42 (no band less than 36)",
+    "acceptedTest4": "Cambridge English: B2 First (FCE) - Grade C",
+    "acceptedTest5": "OET: Grade C in all bands",
+    "exemptionsTitle": "English Language Exemptions",
+    "exemption1": "Native English speakers from Australia, New Zealand, UK, USA, Canada, or Ireland",
+    "exemption2": "Students who have completed at least 2 years of full-time study in English at secondary or tertiary level",
+    "exemption3": "Students with previous qualifications from English-speaking institutions",
+    "englishEntryRequirementsTitle": "English Entry Requirements",
+    "englishEntryRequirementsDescription": "Have an IELTS* score of 5.5 with no band less than 5.0 (test results must be no more than 2 years old). English language competence can also be demonstrated through documented evidence of any of the following:",
+    "englishEvidence1": "Educated for 5 years in an English-speaking country; or",
+    "englishEvidence2": "Completed at least 6 months of a Certificate IV level course in an Australian RTO; or",
+    "englishEvidence3": "Successful completion of an English Placement Test",
+    "englishEvidence4": "Successful completion of an English course with exit level equivalent to IELTS overall 5.5 from one of our English Pathway Partners",
+    "pteRequirementsTitle": "For PTE",
+    "pteRequirementsDescription": "Have a PTE score of 45.4 (IELTS 5.5) or higher with no band less than (Listening – 42.7, Reading – 47.9, Speaking – 51, Writing – 42.2)",
+    "pteTableTitle": "PTE equivalent to 5.5 IELTS per band",
+    "pteListening": "PTE -A Listening",
+    "pteReading": "PTE – A Reading",
+    "pteSpeaking": "PTE – A Speaking",
+    "pteWriting": "PTE – A Writing",
+    "pteListeningScore": "42.7",
+    "pteReadingScore": "47.9",
+    "pteSpeakingScore": "51",
+    "pteWritingScore": "42.2",
+    "competencyInEnglishTitle": "Competency in English",
+    "competencyDescription": "If one of the following applies, you do not need to provide evidence of an English test score with your visa application:",
+    "competency1": "You are enrolled in full-time school studies as a principal course including in a secondary exchange programme, a postgraduate research course, a standalone English Language Intensive Course for Overseas Students (ELICOS), and Foreign Affairs or Defence sponsored students.",
+    "competency2": "You have completed at least five years study in one or more of the following countries: Australia, UK, USA, Canada, New Zealand, South Africa, or the Republic of Ireland.",
+    "competency3": "You are a citizen and hold a passport from UK, USA, Canada, NZ or Republic of Ireland.",
+    "competency4": "In the two years before applying for the student visa, you completed, in Australia and in English language, either the Senior Secondary Certificate of Education or a substantial component of a course leading to a qualification from the Australian Qualifications Framework at the Certificate IV or higher level, while you held a student visa.",
+    "englishNote": "*Note that other English language tests such as PTE and TOEFL can be accepted. Students are required to provide their results so that it can be confirmed they are equivalent to IELTS 5.5.",
+    "elicosPathwayPartnersTitle": "ELICOS Pathway Partners",
+    "elicosPartners": {
+      "ctic": {
+        "name": "CTIC English",
+        "url": "http://ctic.com.au/",
+        "courses": "• EAP with exit level Credit\n• IELTS Preparation with exit level Grade C\n• Real English, General English, Cambridge with exit level B2"
+      },
+      "elc": {
+        "name": "ELC",
+        "url": "http://www.elc.edu.au/english",
+        "courses": "• English for Academic Purposes: Min. 10 weeks of Academic English with a successful exit results of EAP 1\n• Cambridge English: Min. complete course (10-12weeks) of Cambridge B2 First (Min grade C)\n• IELTS Preparation: Min. 10 weeks of IELTS Preparation with a successful predicted results of 5.5"
+      },
+      "elsis": {
+        "name": "ELSIS",
+        "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
+        "courses": "• Completion of General English Upper Intermediate level\n• Completion of EAP 1"
+      },
+      "englishUnlimited": {
+        "name": "English Unlimited",
+        "url": "https://eu.edu.au/",
+        "courses": "• General English (Everyday English teaching method – Upper intermediate level)\n• EAP (B+ from level B)"
+      },
+      "greenwich": {
+        "name": "Greenwich College",
+        "url": "https://www.greenwichcollege.edu.au/your-campus/sydney",
+        "courses": "• General English (Upper intermediate level) with minimum 8 weeks\n• IELTS Preparation with exit score 5.5-7.0+\n• Cambridge Preparation PET, FCE, CAE with exit score 5.5 +\n• English for Business (Cambridge Linguaskill Business) with exit score 5.5\n• English for Vocational Studies (EVS) (Pass)\n• EAP with exit level Pass"
+      },
+      "ilsc": {
+        "name": "ILSC Language Schools",
+        "url": "http://ilsc.com",
+        "courses": "• General English with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher.\n• English for Academic Purposes with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher.\n• IELTS Preparation with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher.\n• Cambridge FCE Preparation and Cambridge CAE Preparation with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher."
+      },
+      "inus": {
+        "name": "INUS",
+        "url": "https://www.inus.edu.au/",
+        "courses": "• Completion of General English or EAP [Upper Intermediate level] with exit level equivalency of IELTS 5.5 or higher.\n• Completion of EAP Advanced [Advanced level]."
+      },
+      "lalingua": {
+        "name": "LA LINGUA",
+        "url": "https://www.lalingua.com/",
+        "courses": "• IELTS Preparation with exit level equivalent to IELTS 5.5"
+      },
+      "navitas": {
+        "name": "NAVITAS English",
+        "url": "https://www.navitasenglish.edu.au/",
+        "courses": "• Academic English 2: 60% pass with no sub skill below 55%\n• IELTS Preparation: Successful completion of 10 weeks\n• Cambridge Preparation – B2 First : Successful completion of 10 or 12 weeks\n• General English: Successful completion of 10 weeks of Upper Intermediate"
+      },
+      "scic": {
+        "name": "Sunshine Coast International College",
+        "url": "https://scic.nsw.edu.au/",
+        "courses": "• English for Academic Purposes (EAP3): EAP 3 certificate (Upper Intermediate: CEFR = B2)\n• General English: Successful completion of Upper Intermediate or higher (CEFR=B2)"
+      },
+      "uec": {
+        "name": "Universal English College (UEC)",
+        "url": "https://uec.edu.au/",
+        "courses": "• General English with Upper Intermediate exit level\n• IELTS Preparation with exit level equivalent to IELTS 5.5\n• Academic English Program with exit level equivalent to IELTS 5.5"
+      }
+    },
+    "additionalRequirementsTitle": "Additional Requirements",
+    "healthRequirementsTitle": "Health and Safety Requirements",
+    "healthRequirementsDescription": "Some courses may have specific health and safety requirements, particularly for practical components.",
+    "healthRequirement1": "Medical clearance for practical activities",
+    "healthRequirement2": "Vaccination records (if required)",
+    "healthRequirement3": "Fitness assessment for physically demanding courses",
+    "workingWithChildrenTitle": "Working with Children Check",
+    "workingWithChildrenDescription": "Students in courses involving work with children or vulnerable people may need a Working with Children Check.",
+    "wwcRequirement1": "Valid Working with Children Check clearance",
+    "wwcRequirement2": "Background check clearance",
+    "applicationProcessTitle": "Application Process",
+    "step1Title": "Step 1: Course Selection",
+    "step1Description": "Choose your course and check entry requirements.",
+    "step2Title": "Step 2: Document Preparation",
+    "step2Description": "Gather required documents and transcripts.",
+    "step3Title": "Step 3: Application Submission",
+    "step3Description": "Submit your application with all documents.",
+    "step4Title": "Step 4: Assessment and Offer",
+    "step4Description": "Receive assessment results and enrollment offer.",
+    "courseRequirementsTableTitle": "Specific Course Entry Requirements",
+    "courseRequirementsTableDescription": "Below are the specific entry requirements for each course offered at ABM:",
+    "needHelpTitle": "Need Help with Your Application?",
+    "needHelpDescription": "Our friendly admissions team is here to help you through the application process.\nContact us for personalized assistance.",
+    "contactUsButton": "Contact Us",
+    "callUsButton": "Call Us",
+    "courses": {
+      "kitchenManagement": {
+        "code": "SIT40521 Certificate IV in Kitchen Management",
+        "requirement": "Student must have completed an equivalent of Year 10"
+      },
+      "hospitalityDiploma": {
+        "code": "SIT50422 Diploma of Hospitality Management",
+        "requirement": "Student must have completed an equivalent of Year 12"
+      },
+      "hospitalityAdvancedDiploma": {
+        "code": "SIT60322 Advanced Diploma of Hospitality Management",
+        "requirement": "Student must have completed an equivalent of Year 12"
+      },
+      "fitnessCertIII": {
+        "code": "SIS30321 Certificate III in Fitness",
+        "requirement": "Student must have completed an equivalent of Year 10"
+      },
+      "fitnessCertIIIFast": {
+        "code": "SIS30321 Certificate III in Fitness (Fast Track)",
+        "requirement": "You are able to participate in fitness activities."
+      },
+      "fitnessCertIV": {
+        "code": "SIS40221 Certificate IV in Fitness",
+        "requirement": "Have complete the following units:\n• HLTAID011 Provide First Aid (or a unit that supersedes this unit)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information\n\nStudent must have completed an equivalent of Year 12"
+      },
+      "fitnessCertIVFast": {
+        "code": "SIS40221 Certificate IV in Fitness (Fast Track)",
+        "requirement": "Have complete the following units:\n• HLTAID011 Provide First Aid (or a unit that supersedes this unit)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information"
+      },
+      "sportDiploma": {
+        "code": "SIS50321 Diploma of Sport (Coaching)",
+        "requirement": "Participate in a course entry interview to determine suitability for the course and student needs. Student must have completed an equivalent of Year 12"
+      },
+      "businessCertIV": {
+        "code": "BSB40120 Certificate IV in Business",
+        "requirement": "See above academic entry requirements. Student must have completed an equivalent of Year 10"
+      },
+      "businessDiploma": {
+        "code": "BSB50120 Diploma of Business",
+        "requirement": "See above academic entry requirements. Student must have completed an equivalent of Year 12"
+      },
+      "businessAdvancedDiploma": {
+        "code": "BSB60120 Advanced Diploma of Business",
+        "requirement": "Students must have completed a Diploma level course (AQF Level 5) or Advanced Diploma level course (AQF Level 6) from the BSB training package. Student must have completed an equivalent of Year 12"
+      },
+      "hrCertIV": {
+        "code": "BSB40420 Certificate IV in Human Resource Management",
+        "requirement": "Student must have completed an equivalent of Year 10"
+      },
+      "hrDiploma": {
+        "code": "BSB50320 Diploma of Human Resource Management",
+        "requirement": "Have complete the following units:\n• BSBHRM411 Administer performance development processes\n• BSBHRM412 Support employee and industrial relations\n• BSBHRM415 Coordinate recruitment and onboarding\n• BSBHRM417 Support human resource functions and processes\n\nEquivalent competencies are predecessors to these units, which have been mapped as equivalent. Student must have completed an equivalent of Year 12"
+      },
+      "hrAdvancedDiploma": {
+        "code": "BSB60320 Advance Diploma of Human Resource Management",
+        "requirement": "Have completed one of the following qualifications: BSB50320 Diploma of Human Resource Management, BSB50618 Diploma of Human Resources Management (or a superseded equivalent version). Student must have completed an equivalent of Year 12"
+      },
+      "projectCertIV": {
+        "code": "BSB40920 Certificate IV in Project Management Practice",
+        "requirement": "Student must have completed an equivalent of Year 10"
+      },
+      "projectDiploma": {
+        "code": "BSB50820 Diploma of Project Management",
+        "requirement": "Student must have completed an equivalent of Year 12"
+      },
+      "projectAdvancedDiploma": {
+        "code": "BSB60720 Advance Diploma of Program Management",
+        "requirement": "Have completed one of the following qualifications: BSB50820 Diploma of Project Management, BSB51415 Diploma of Project Management (or a superseded equivalent version). Student must have completed an equivalent of Year 12"
+      },
+      "graduateDiploma": {
+        "code": "BSB80120 Graduate Diploma of Management (Learning)",
+        "requirement": "Students must have completed Advanced Diploma level course (AQF Level 6) or higher. Student must have completed an equivalent of Year 12"
+      }
+    }
+  },
   "higherEducationPathway": {
     "title": "Higher Education Pathway",
     "bannerTitle": "Looking to Progress After Your ABM Course?",
@@ -233,5 +485,58 @@
     "readyToStartDescription": "Contact us for detailed information about our higher education pathways and how to get started.",
     "contactUs": "Contact Us",
     "enrolNow": "Enrol Now"
+  },
+  "news": {
+    "bannerTitle": "Latest News",
+    "intro": "Discover the latest news from ABM.",
+    "searchPlaceholder": "Search news...",
+    "sortBy": "Sort by:",
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "readMore": "Read More",
+    "noResults": "No news found."
+  },
+  "checkout": {
+    "title": "Course Registration",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "preferredDate": "Preferred date (if you want to enrol as a group)",
+    "otherInquiries": "Other inquiries",
+    "howDidYouHear": "How did you hear about this course?",
+    "agent": "Agent",
+    "socialMedia": "Social Media",
+    "friend": "Friend",
+    "searchPortal": "Search Portal",
+    "abmWebsite": "ABM Website",
+    "referrerName": "If you were referred by an agent or one of our students, please provide their name.",
+    "promotionCode": "Promotion code",
+    "submit": "Proceed to Payment",
+    "back": "Back",
+    "required": "Required field",
+    "enterFirstName": "Please enter your first name.",
+    "enterEmail": "Please enter your email.",
+    "invalidEmail": "Invalid email address.",
+    "success": "Proceeding to payment..."
+  },
+  "paymentSuccess": {
+    "title": "Payment Completed!",
+    "subtitle": "Your course registration has been completed successfully.",
+    "registrationInfo": "Registration Information",
+    "course": "Course",
+    "date": "Date",
+    "type": "Type",
+    "email": "Email",
+    "amountPaid": "Amount Paid",
+    "emailNotification": "A confirmation email will be sent shortly. Additional instructions will be provided before the course starts.",
+    "viewOtherCourses": "View Other Courses",
+    "contactUs": "Contact Us",
+    "errorOccurred": "An Error Occurred",
+    "sessionNotFound": "Payment session ID not found.",
+    "fetchError": "Failed to retrieve payment information.",
+    "verificationError": "An error occurred while verifying payment information.",
+    "backToCourses": "Back to Courses",
+    "verifyingPayment": "Verifying payment information..."
   }
 }

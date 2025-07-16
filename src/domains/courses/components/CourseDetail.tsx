@@ -1,4 +1,10 @@
 import React from 'react';
+import { parseBoldText } from '@/lib/utils';
+
+// Helper component to render text with bold parsing
+const BoldText: React.FC<{ children: string }> = ({ children }) => {
+  return <>{parseBoldText(children)}</>;
+};
 
 export interface TableData {
   type: 'table';
@@ -93,7 +99,7 @@ function renderDescription(
                               key={cellIndex}
                               className="px-4 py-2 border border-gray-300"
                             >
-                              {cell}
+                              <BoldText>{cell}</BoldText>
                             </td>
                           ))}
                         </tr>
@@ -115,7 +121,7 @@ function renderDescription(
             } else if (typeof item === 'string') {
               return (
                 <p key={`text-${index}`} className={paragraphStyle}>
-                  {item}
+                  <BoldText>{item}</BoldText>
                 </p>
               );
             }
@@ -130,7 +136,7 @@ function renderDescription(
       <ul>
         {(description as string[]).map((item, index) => (
           <li key={index} className={paragraphStyle}>
-            • {item}
+            • <BoldText>{item}</BoldText>
           </li>
         ))}
       </ul>
@@ -138,7 +144,11 @@ function renderDescription(
   }
 
   // 단일 문자열인 경우
-  return <p className={paragraphStyle}>{description}</p>;
+  return (
+    <p className={paragraphStyle}>
+      <BoldText>{description as string}</BoldText>
+    </p>
+  );
 }
 
 function CourseDetail({ courseInfo }: CourseDetailProps) {

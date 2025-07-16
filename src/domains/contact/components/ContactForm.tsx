@@ -6,6 +6,7 @@ import { Mail, MapPin, Phone, Smartphone } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useTranslations } from 'next-intl';
 
 type ContactFormData = {
   first_name: string;
@@ -18,23 +19,44 @@ type ContactFormData = {
 };
 
 function Contact() {
-  const { watch, register, handleSubmit } = useForm<ContactFormData>();
+  const t = useTranslations('contact');
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>();
+  const [loading, setLoading] = React.useState(false);
 
   const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
-    console.log(data);
+    setLoading(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        alert(t('successMessage') || 'Your enquiry has been sent. Thank you!');
+        reset();
+      } else {
+        alert(t('errorMessage') || 'Failed to send. Please try again later.');
+      }
+    } catch {
+      alert(t('errorMessage') || 'Failed to send. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value;
-    console.log(value);
-  };
+  const options = [t('bookCampusTour'), t('becomeStudent'), t('becomeAgent')];
 
   return (
     <section className={cn('px-16 md:px-0 my-60 md:my-120')}>
       <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] mx-auto">
         <div className="">
           <h2 className="text-3xl md:text-4xl font-bold pb-50 font-[family-name:var(--font-montserrat)]">
-            Get in touch with us
+            {t('getInTouch')}
           </h2>
           <Link
             href="https://maps.app.goo.gl/X4hmXLeTjz6RQQn88"
@@ -42,15 +64,16 @@ function Contact() {
             target="_blank"
           >
             <MapPin className="text-primary" />
-            242 Castlereagh Street Sydney NSW 2000 Australia
+            {t('address')}
           </Link>
           <div className="flex items-center gap-10 my-20">
             <Phone className="text-primary" />
-            +61 (02) 9160 4507
+            {t('phone')}
           </div>
+
           <div className="flex items-center gap-10 my-20">
             <Smartphone className="text-primary" />
-            (WhatsApp) + 61 482 796 010
+            {t('whatsapp')}
           </div>
           <Link
             className="flex items-center gap-10"
@@ -58,63 +81,126 @@ function Contact() {
             target="_blank"
           >
             <Mail className="text-primary" />
-            info@abm.edu.au
+            {t('email')}
           </Link>
         </div>
 
         <form
-          className="flex flex-col w-full max-w-500 gap-15 mt-60 text-white font-[family-name:var(--font-montserrat)] md:mt-0"
+          className="flex flex-col w-full max-w-500 gap-15 mt-60 text-primary-bk font-[family-name:var(--font-montserrat)] md:mt-0"
           onSubmit={handleSubmit(onSubmit)}
         >
           <label htmlFor="enquiry_type" className="text-black">
-            What is your Enquiry Type?
+            {t('enquiryType')}
           </label>
           <select
-            onChange={handleChange}
+            {...register('enquiry_type')}
             id="select-packages"
-            value={watch('enquiry_type')}
-            className="w-full h-40 bg-darkBg border border-secondary text-primary text-sm focus:ring-secondary focus:border-secondary p-2.5"
+            className="w-full h-40 bg-white border border-neutral-600 text-black text-sm focus:ring-secondary focus:border-secondary p-2.5"
           >
-            <option value="">Select Enquiry Type</option>
+            <option value="">{t('selectEnquiryType')}</option>
             {options.map((option, index) => (
-              <option key={index} value={option} className="bg-darkBg">
+              <option
+                key={index}
+                value={option}
+                className="bg-white text-black"
+              >
                 {option}
               </option>
             ))}
           </select>
-          <div className="flex items-center gap-10 justify-between">
-            <input
-              type="text"
-              placeholder="First Name"
-              {...register('first_name')}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6 w-full"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              {...register('last_name')}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6 w-full"
-            />
+          <div className="flex flex-col gap-10">
+            <div className="flex items-start gap-10 justify-between">
+              <div className="w-full">
+                <input
+                  type="text"
+                  placeholder={`${t('firstName')} *`}
+                  {...register('first_name', {
+                    required: t('validation.firstNameRequired'),
+                    minLength: {
+                      value: 2,
+                      message: t('validation.firstNameMinLength'),
+                    },
+                  })}
+                  className={cn(
+                    'border placeholder:text-black placeholder:text-sm p-6 w-full',
+                    errors.first_name ? 'border-red-500' : 'border-neutral-600'
+                  )}
+                />
+                {errors.first_name && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.first_name.message}
+                  </p>
+                )}
+              </div>
+              <div className="w-full">
+                <input
+                  type="text"
+                  placeholder={`${t('lastName')} *`}
+                  {...register('last_name', {
+                    required: t('validation.lastNameRequired'),
+                    minLength: {
+                      value: 2,
+                      message: t('validation.lastNameMinLength'),
+                    },
+                  })}
+                  className={cn(
+                    'border placeholder:text-black placeholder:text-sm p-6 w-full',
+                    errors.last_name ? 'border-red-500' : 'border-neutral-600'
+                  )}
+                />
+                {errors.last_name && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.last_name.message}
+                  </p>
+                )}
+              </div>
+            </div>
           </div>
           <input
             type="text"
-            placeholder="Phone"
+            placeholder={t('phonePlaceholder')}
             {...register('phone')}
             className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
           />
+          <div className="w-full">
+            <input
+              type="email"
+              placeholder={`${t('emailPlaceholder')} *`}
+              {...register('email', {
+                required: t('validation.emailRequired'),
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: t('validation.emailInvalid'),
+                },
+              })}
+              className={cn(
+                'border placeholder:text-black placeholder:text-sm p-6 w-full',
+                errors.email ? 'border-red-500' : 'border-neutral-600'
+              )}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">
+                {errors.email.message}
+              </p>
+            )}
+          </div>
           <input
             type="text"
-            placeholder="Nationality"
+            placeholder={t('nationality')}
             {...register('nationality')}
             className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
           />
           <textarea
-            placeholder="Message"
+            placeholder={t('message')}
             {...register('message')}
             className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
           />
-          <Button className="mt-16 bg-black" type="submit">
-            Send a Message
+          <Button
+            className="mt-16 bg-black text-white"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? t('sending') || 'Sending...' : t('sendMessage')}
           </Button>
         </form>
       </div>
@@ -123,5 +209,3 @@ function Contact() {
 }
 
 export default Contact;
-
-const options = ['Book a Campus Tour', 'Become a Student', 'Become an Agent'];

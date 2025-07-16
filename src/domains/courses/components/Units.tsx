@@ -23,8 +23,8 @@ function Units({ params }: { params: { id: string } }) {
     [key: string]: { [key: string]: string | number }[];
   } = {
     'sit40521-certificate-iv-in-kitchen-management': KM_UNITS,
-    'sis30321-certificate-iv-in-fitness': CERTIV_FITNESS_UNITS,
-    'sis40221-certificate-iii-in-fitness': CERTIII_FITNESS_UNITS,
+    'sis40221-certificate-iv-in-fitness': CERTIV_FITNESS_UNITS,
+    'sis30321-certificate-iii-in-fitness': CERTIII_FITNESS_UNITS,
     'certificate-iv-in-sport-fast-track': CERTIV_FITNESS_UNITS,
     'sis50321-diploma-of-sport': DIPLOMA_SPORT_UNITS,
     'certificate-iii-in-sport-fast-track': CERTIV_FITNESS_FAST_UNITS,

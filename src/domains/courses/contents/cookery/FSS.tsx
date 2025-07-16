@@ -8,9 +8,12 @@ import {
   DisclosurePanel,
 } from '@headlessui/react';
 import { ChevronUpIcon } from 'lucide-react';
+import { shortCourseData } from '@/lib/shortCourseData';
 
 function FSS() {
   const [type, setType] = useState('');
+  const fssData = shortCourseData.fss;
+
   return (
     <div className="container max-w-1000 mx-auto py-40">
       <h2 className="text-2xl font-bold mb-20">
@@ -38,7 +41,7 @@ function FSS() {
             <p>
               Use code <strong>ABMFSS15</strong> at checkout for a{' '}
               <span className="bg-orange-100 text-orange-700 font-semibold">
-                15% discount until 30 June!
+                15% discount
               </span>
               (New customers only)
             </p>
@@ -46,14 +49,14 @@ function FSS() {
           <div className="w-full max-w-sm mt-20">
             <label
               htmlFor="course-date"
-              className="block mb-2 text-sm font-medium text-gray-700"
+              className="block mb-2 text-sm text-gray-700 font-bold"
             >
               Choose the course
             </label>
             <select
               id="course-date"
               name="course-date"
-              className="w-full px-8 py-12 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+              className="w-full px-8 py-12 border border-gray-300  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
               value={type}
               onChange={(e) => setType(e.target.value)}
             >
@@ -66,19 +69,21 @@ function FSS() {
           <div className="w-full max-w-sm mt-20">
             <label
               htmlFor="course-date"
-              className="block mb-2 text-sm font-medium text-gray-700"
+              className="block mb-2 text-sm text-gray-700 font-bold"
             >
-              Course Date (Face to Face)
+              Select Course Date
             </label>
             <select
               id="course-date"
               name="course-date"
-              className="w-full px-8 py-12 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+              className="w-full px-8 py-12 border border-gray-300  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
             >
               <option value="">Select a date</option>
-              <option value="2024-05-02">2nd May</option>
-              <option value="2024-05-30">30th May</option>
-              <option value="2024-06-05">5th June</option>
+              {fssData.dates.map((dateOption, index) => (
+                <option key={index} value={dateOption.date}>
+                  {dateOption.displayDate} - {dateOption.time}
+                </option>
+              ))}
             </select>
             <div className="font-bold text-2xl mt-20 text-primary">
               ${type === 'recertificate' ? 110 : 180}
@@ -99,7 +104,7 @@ function FSS() {
       </p>
       <h3 className="mt-20 font-bold text-xl">Key Units</h3>
       <div className="overflow-x-auto mt-10">
-        <table className="min-w-full table-auto shadow-sm rounded-lg text-sm">
+        <table className="min-w-full table-auto shadow-sm  text-sm">
           <thead className="bg-gray-100">
             <tr>
               <th className="px-4 py-8 border-b border-gray-300 text-left font-semibold">
@@ -135,7 +140,7 @@ function FSS() {
 
       <h3 className="mt-20 font-bold text-xl">Activities</h3>
       <div className="overflow-x-auto">
-        <table className="min-w-full table-auto shadow-sm rounded-lg text-sm">
+        <table className="min-w-full table-auto shadow-sm  text-sm">
           <thead className="bg-gray-100">
             <tr>
               <th className="px-4 py-8 border-b border-gray-300 text-left font-semibold">
@@ -185,7 +190,7 @@ function FSS() {
         </table>
       </div>
 
-      <div className="w-full mt-20 mx-auto rounded-lg bg-white">
+      <div className="w-full mt-20 mx-auto  bg-white">
         {/* Section 1 */}
         <Disclosure>
           {({ open }) => (

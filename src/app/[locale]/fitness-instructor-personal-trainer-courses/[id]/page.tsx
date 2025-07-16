@@ -11,8 +11,8 @@ import React, { use, useEffect } from 'react';
 const menuItems = ['Course Information', 'Course Detail', 'Units'];
 
 const mappingCourseTitle: { [key: string]: string } = {
-  'sis30321-certificate-iv-in-fitness': 'Certificate IV in Fitness',
-  'sis40221-certificate-iii-in-fitness': 'Certificate III in Fitness',
+  'sis30321-certificate-iii-in-fitness': 'Certificate III in Fitness',
+  'sis40221-certificate-iv-in-fitness': 'Certificate IV in Fitness',
   'sis50321-diploma-of-sport': 'SIS50321 – Diploma of Sport (Coaching)',
   'certificate-iv-in-sport-fast-track':
     'Certificate IV in Fitness (Fast Track)',
@@ -21,9 +21,8 @@ const mappingCourseTitle: { [key: string]: string } = {
 };
 
 const mappingCourseImage: { [key: string]: string } = {
-  'sis30321-certificate-iv-in-fitness': '/courses/fitness/fitness_1.png',
-  'sis40221-certificate-iii-in-fitness':
-    '/courses/fitness/fitness_5-banner.png',
+  'sis30321-certificate-iii-in-fitness': '/courses/fitness/fitness_1.png',
+  'sis40221-certificate-iv-in-fitness': '/courses/fitness/fitness_5-banner.png',
   'sis50321-diploma-of-sport': '/courses/fitness/diploma-of-sport.png',
   'certificate-iv-in-sport-fast-track': '/courses/fitness/fitness_3-banner.png',
   'certificate-iii-in-sport-fast-track':

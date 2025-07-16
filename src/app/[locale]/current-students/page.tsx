@@ -12,7 +12,7 @@ async function page() {
       <Banner
         slides={[
           {
-            imgPath: '/current_student.png',
+            imgPath: '/current_student.jpg',
             title: 'Current Students',
             content: '',
           },

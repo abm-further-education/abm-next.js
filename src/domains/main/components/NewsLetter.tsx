@@ -22,14 +22,14 @@ const NewsCard = ({ news }: NewsCardProps) => {
         src={news.image}
         alt={news.title}
         width={400}
-        height={200}
+        height={250}
         className="object-cover"
       />
-      <div className="flex items-center justify-between px-24 mt-14 font-[family-name:var(--font-inter)]">
-        <span>{news.category}</span>
-        <span>{news.date}</span>
+      <div className="flex items-center justify-between px-12 mt-14 font-[family-name:var(--font-inter)]">
+        <span className="text-sm">{news.category}</span>
+        <span className="text-xs text-neutral-500">{news.date}</span>
       </div>
-      <div className="px-20 mt-20">
+      <div className="px-12 mt-20">
         <h3 className="font-semibold">{news.title}</h3>
         <p className="font-[family-name:var(--font-inter)] text-sm mt-10 text-neutral-400">
           {news.description}

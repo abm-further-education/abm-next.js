@@ -5,6 +5,8 @@ import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import Units from '@/domains/courses/components/Units';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
+import IndustryPlacement from '@/domains/courses/contents/cookery/IndustryPlacement';
+import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/IndustryPlacementHospitality';
 import { courseDetails } from '@/lib/constants';
 import React, { use, useEffect } from 'react';
 
@@ -17,16 +19,18 @@ const mappingCourseTitle: { [key: string]: string } = {
     'Diploma of Hospitality Management',
   'advanced-diploma-of-hospitality-management':
     'Advanced Diploma of Hospitality Management',
-  'industry-placement-hospitality-management': 'Industry Placement',
+  'industry-placement-hospitality-management':
+    'Industry Placement for Hospitality Management (F&B)',
 };
 
 const mappingCourseImage: { [key: string]: string } = {
-  'sit40521-certificate-iv-in-kitchen-management': '/courses/cookery/KM.png',
+  'sit40521-certificate-iv-in-kitchen-management': '/courses/cookery/KM.jpg',
   'industry-placement-work-placement': '/courses/cookery/industry.png',
   fss: '/short-course/fss_1.png',
-  'sit50422-diploma-of-hospitality-management': '/courses/cookery/DHM.png',
-  'advanced-diploma-of-hospitality-management': '/courses/cookery/ADHM.png',
-  'industry-placement-hospitality-management': '/courses/cookery/industry.png',
+  'sit50422-diploma-of-hospitality-management': '/courses/cookery/DHM.jpg',
+  'advanced-diploma-of-hospitality-management': '/courses/cookery/ADHM.jpg',
+  'industry-placement-hospitality-management':
+    '/courses/cookery/industry-hospitality.jpg',
 };
 
 const menuItems = {
@@ -54,6 +58,59 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
       mappingCourseTitle[id] || 'Cookery & Hospitality Course';
     document.title = `${courseTitle} | ABM Further Education`;
   }, [id]);
+
+  // Industry Placement 페이지인지 확인
+  const isIndustryPlacement = id === 'industry-placement-work-placement';
+  const isIndustryPlacementHospitality =
+    id === 'industry-placement-hospitality-management';
+
+  // Industry Placement Hospitality 페이지인 경우 IndustryPlacementHospitality 컴포넌트 렌더링
+  if (isIndustryPlacementHospitality) {
+    return (
+      <div className="pb-40">
+        <Banner
+          slides={[
+            {
+              imgPath:
+                mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
+              title: mappingCourseTitle[id],
+              content: '',
+            },
+          ]}
+          dimmed={
+            <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
+          }
+        />
+        <div className="max-w-1000 mx-auto px-20 py-40">
+          <IndustryPlacementHospitality />
+        </div>
+      </div>
+    );
+  }
+
+  // Industry Placement 페이지인 경우 IndustryPlacement 컴포넌트 렌더링
+  if (isIndustryPlacement) {
+    return (
+      <div className="pb-40">
+        <Banner
+          slides={[
+            {
+              imgPath:
+                mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
+              title: mappingCourseTitle[id],
+              content: '',
+            },
+          ]}
+          dimmed={
+            <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
+          }
+        />
+        <div className="max-w-1000 mx-auto px-20 py-40">
+          <IndustryPlacement />
+        </div>
+      </div>
+    );
+  }
 
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {

@@ -12,7 +12,7 @@ export default async function Page() {
       <Banner
         slides={[
           {
-            imgPath: '/home/home.png',
+            imgPath: '/get_a_usi.png',
             title: t('bannerTitle'),
             content: t('bannerSubtitle'),
           },

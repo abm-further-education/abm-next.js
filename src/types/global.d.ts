@@ -1,10 +1,4 @@
-import mongoose from 'mongoose';
-/* eslint-disable no-var */
+// Global type declarations for Supabase and other external modules
 declare global {
-  var mongoose:
-    | {
-        conn: mongoose.Mongoose | null;
-        promise: Promise<mongoose.Mongoose> | null;
-      }
-    | undefined;
+  // Add global types here if needed for Supabase or other services
 }

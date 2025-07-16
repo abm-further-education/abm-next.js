@@ -12,7 +12,7 @@ function MiniTestimonial() {
   const router = useRouter();
 
   const handleImageClick = () => {
-    router.push('/testimonial');
+    router.push('/abm-student-insights');
   };
 
   return (

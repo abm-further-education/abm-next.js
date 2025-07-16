@@ -332,7 +332,7 @@ function IndustryPlacement() {
       <Image
         src="/courses/cookery/partners.png"
         alt="partners"
-        width={600}
+        width={900}
         height={400}
       />
     </div>

@@ -27,8 +27,8 @@ export const timetableDataByCategory = {
       qualification: 'Certificate IV in Kitchen Management',
       code: 'SIT40521',
       intake: 'January – February 2025',
-      thu: '8:00 am',
-      fri: '8:00 am',
+      thu: '1:00 pm',
+      fri: '1:00 pm',
       tutorial: 'MON / THU 1:00 pm',
     },
     {
@@ -80,7 +80,7 @@ export const timetableDataByCategory = {
       intake: '[SIT60322] Advanced Diploma of Hospitality Management',
       mon: '8:00 am',
       tue: '8:00 am',
-      wed: 'MON / THU 1:00 pm',
+      tutorial: 'MON / THU 1:00 pm',
     },
   ],
 
@@ -194,14 +194,15 @@ export const timetableDataByCategory = {
       mon: '8:00 am',
       tue: '8:00 am',
     },
+
     {
       qualification: 'Certificate III & IV in Fitness (Fast Track - Domestic)',
       code: 'SIS30321',
       intake:
         '[SIS30321] Certificate III & IV in Fitness (Fast Track - Domestic)',
-      mon: '1:00 pm',
-      tue: '9:00 am',
+      tue: '1:00 pm',
       wed: '9:00 am',
+      thu: '9:00 am',
     },
   ],
 };
@@ -236,6 +237,7 @@ export const courseCodeToCategory: Record<
 
   // Fitness
   SIS30321: 'fitness',
+  SIS40221: 'fitness',
 };
 
 // 특정 코스 코드에 해당하는 타임테이블 가져오기

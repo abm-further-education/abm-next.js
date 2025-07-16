@@ -9,11 +9,14 @@ function page() {
       <Banner
         slides={[
           {
-            imgPath: '/home/home.png',
+            imgPath: '/contact.png',
             title: 'Contact Us',
             content: '',
           },
         ]}
+        dimmed={
+          <div className="bg-neutral-900/50 w-full h-screen md:h-700 absolute z-10" />
+        }
       />
       <ContactForm />
     </div>

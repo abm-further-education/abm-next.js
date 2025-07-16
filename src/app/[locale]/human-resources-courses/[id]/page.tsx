@@ -25,7 +25,7 @@ const mappingCourseImage: { [key: string]: string } = {
     '/courses/hr/hr_3.png',
 };
 
-const menuItems = ['Course Detail', 'Units', 'Course Information'];
+const menuItems = ['Course Information', 'Course Detail', 'Units'];
 
 function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);

@@ -33,7 +33,7 @@ export default async function HigherEducationPathwayPage({
       <Banner
         slides={[
           {
-            imgPath: '/home/home.png',
+            imgPath: '/higher_education.png',
             title: t('title'),
             content: t('bannerSubtitle'),
           },
@@ -50,7 +50,7 @@ export default async function HigherEducationPathwayPage({
               <p className="text-xl md:text-2xl font-bold mb-8 leading-relaxed">
                 {t('bannerTitle')}
               </p>
-              <p className="text-lg md:text-xl opacity-90 leading-relaxed text-gray-600">
+              <p className="opacity-90 leading-relaxed text-gray-600">
                 {t('bannerSubtitle')}
               </p>
             </div>

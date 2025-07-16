@@ -8,15 +8,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import Image from 'next/image';
 
-const images = [
-  '/short-course/barista_1.jpg',
-  '/short-course/barista_2.jpg',
-  '/short-course/barista_1.jpg',
-  '/short-course/barista_1.jpg',
-  '/short-course/barista_1.jpg',
-];
+interface ImageSliderProps {
+  images: string[];
+}
 
-export default function ImageSlider() {
+export default function ImageSlider({ images }: ImageSliderProps) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 

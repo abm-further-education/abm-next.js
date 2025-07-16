@@ -166,11 +166,11 @@ async function TimetablePage() {
           </table>
         </div>
 
-        <div className="mt-12 bg-yellow-50 border border-yellow-200 p-6">
-          <h3 className="text-lg font-semibold text-yellow-800 mb-4">
+        <div className="mt-12 bg-orange-50 border border-orange-200 p-6">
+          <h3 className="text-lg font-semibold text-orange-800 mb-4">
             {t('note')}
           </h3>
-          <p className="text-yellow-700">{t('noteDescription')}</p>
+          <p className="text-orange-700">{t('noteDescription')}</p>
         </div>
       </section>
     </div>

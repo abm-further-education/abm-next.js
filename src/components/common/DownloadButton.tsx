@@ -6,7 +6,7 @@ import Button from '@/components/common/Button';
 const DownloadButton = ({ children }: { children: React.ReactNode }) => {
   return (
     <Button
-      className="bg-orange-600 text-white hover:bg-orange-700"
+      className="bg-primary-bk text-white hover:bg-primary"
       onClick={() => {
         window.open(
           'https://www.jotform.com/app/abm-further-education/abm-agents',

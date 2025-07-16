@@ -1,12 +1,13 @@
 export interface ShortCourseData {
   title: string;
   description: string;
+  images: string[];
   dates: {
     date: string;
     displayDate: string;
     time: string;
   }[];
-  maxParticipants: string;
+  maxParticipants?: string;
   location: string;
   price: number;
   duration: string;
@@ -35,8 +36,17 @@ export interface ShortCourseData {
 
 export const shortCourseData: { [key: string]: ShortCourseData } = {
   barista: {
-    title: 'One-Day Barista Class ☕✨',
+    title: 'One-Day Barista Class ☕️',
     description: `Calling all coffee lovers! Want to learn how to make the perfect espresso, froth silky milk, and create stunning latte art in just one day? Join our Coffee Lovers One-Day Barista Class and discover the secrets behind crafting café-quality coffee. Whether you're a beginner or simply want to improve your skills, this hands-on class is perfect for you! Only 6 spots per class!`,
+    images: [
+      '/short-course/barista_1.jpg',
+      '/short-course/barista/barista_course_1.jpg',
+      '/short-course/barista/barista_course_2.jpg',
+      '/short-course/barista_2.jpg',
+      '/short-course/barista/barista_course_3.jpg',
+      '/short-course/barista/barista_course_4.jpg',
+      '/short-course/barista/barista_course_5.jpg',
+    ],
     dates: [
       {
         date: '2025-02-21',
@@ -74,7 +84,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '1:00 PM – 5:00 PM',
       },
     ],
-    maxParticipants: '6-8',
     location:
       'ABM Hospitality Lab (242 Castlereagh Street Sydney NSW 2000 Australia)',
     price: 150,
@@ -98,8 +107,19 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       "Limited spots available! Don't miss out—book your place now!",
   },
   cake: {
-    title: 'Classic French Cakes Masterclass 🍰✨',
+    title: 'Classic French Cakes Masterclass 🍰',
     description: `Love baking but never tried making French cakes? This class is for you! Whether you're a beginner or a home baker keen to explore classic French patisserie, this hands-on masterclass will teach you all the essential techniques to create stunning desserts.`,
+    images: [
+      '/short-course/classic_french_cakes_2.png',
+      '/short-course/cake/cake_1.jpg',
+      '/short-course/french_cakes.jpg',
+      '/short-course/cake/cake_7.jpg',
+      '/short-course/cake/cake_2.jpg',
+      '/short-course/cake/cake_3.jpg',
+      '/short-course/cake/cake_4.jpg',
+      '/short-course/cake/cake_5.jpg',
+      '/short-course/cake/cake_6.jpg',
+    ],
     dates: [
       {
         date: '2025-03-27',
@@ -107,7 +127,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '12:30 PM – 6:00 PM',
       },
     ],
-    maxParticipants: '8',
     location:
       'Kitchen Haymarket (Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, NSW 2000)',
     price: 180,
@@ -137,6 +156,13 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
   focaccia: {
     title: 'Sourdough & Focaccia Masterclass 🥖✨',
     description: `Discover the art of artisan breadmaking in our comprehensive Sourdough & Focaccia Masterclass. Learn from a medal-winning sourdough expert and master the complete process of creating authentic sourdough bread and delicious focaccia.`,
+    images: [
+      '/short-course/sourdough_1.jpg',
+      '/short-course/sourdough_1.jpg',
+      '/short-course/sourdough_1.jpg',
+      '/short-course/sourdough_1.jpg',
+      '/short-course/sourdough_1.jpg',
+    ],
     dates: [
       {
         date: '2025-06-17',
@@ -149,7 +175,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '10:00am – 3:30pm',
       },
     ],
-    maxParticipants: '10',
     location:
       'Kitchen Haymarket (Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000)',
     price: 160,
@@ -182,8 +207,15 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       "Limited spots available! Don't miss this chance to learn from a medal-winning sourdough expert and take home your own handmade artisan bread.",
   },
   wine: {
-    title: 'Wine Appreciation One-Day Class 🍷✨',
+    title: 'Wine One-Day Class 🍷✨',
     description: `Love wine and want to learn how to taste, pair, and appreciate it like a pro? Join our Wine Appreciation One-Day Class and explore the basics of wine, from tasting techniques to understanding different varietals. While you're learning, enjoy a delicious antipasto and cheese platter to pair with a selection of wines! Whether you're a beginner or just looking to enhance your knowledge, this is the perfect class for you.`,
+    images: [
+      '/short-course/wine_1.jpg',
+      '/short-course/wine_2.jpg',
+      '/short-course/wine_1.jpg',
+      '/short-course/wine_2.jpg',
+      '/short-course/wine_1.jpg',
+    ],
     dates: [
       {
         date: '2025-04-16',
@@ -201,7 +233,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '5:00 PM – 8:30 PM',
       },
     ],
-    maxParticipants: '12',
     location:
       'ABM Hospitality Management Lab (242 Castlereagh Street Sydney NSW 2000 Australia)',
     price: 150,
@@ -229,6 +260,13 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
   dessert: {
     title: 'Fine Dining Dessert Plating Course 🍰✨',
     description: `Get ready to create a show-stopping dessert with lemongrass cream on pistachio sponge and raspberry sorbet! This course is your ticket to mastering the art of fine dining plating.`,
+    images: [
+      '/short-course/fine_dining_dessert_1.jpg',
+      '/short-course/fine_dining_dessert_1.jpg',
+      '/short-course/fine_dining_dessert_1.jpg',
+      '/short-course/fine_dining_dessert_1.jpg',
+      '/short-course/fine_dining_dessert_1.jpg',
+    ],
     dates: [
       {
         date: '2025-10-03',
@@ -236,7 +274,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '12:30pm – 4:00pm',
       },
     ],
-    maxParticipants: '8',
     location:
       'ABM Kitchen (Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000)',
     price: 150,
@@ -259,8 +296,15 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       "🔥 Limited spots available! Don't miss out—book your place now!",
   },
   mixology: {
-    title: 'Shake, Stir & Sip – Cocktail Making & Mixology Class! 🍹✨',
+    title: 'Cocktail Making & Mixology Class! 🍹',
     description: `Join us for a fun and interactive cocktail-making experience! Whether you're a beginner or a cocktail enthusiast, this class will teach you how to shake, stir, and mix like a pro. Learn the secrets behind crafting delicious, beautifully presented drinks, impress your friends, and, of course, enjoy your own creations. Make it a memorable afternoon with your besties!`,
+    images: [
+      '/short-course/cocktail_1.png',
+      '/short-course/cocktail_2.png',
+      '/short-course/cocktail_1.png',
+      '/short-course/cocktail_2.png',
+      '/short-course/cocktail_1.png',
+    ],
     dates: [
       {
         date: '2025-08-29',
@@ -273,7 +317,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '2:00pm – 6:00pm',
       },
     ],
-    maxParticipants: '12',
     location:
       'ABM Hospitality Management Lab (242 Castlereagh Street Sydney NSW 2000 Australia)',
     price: 150,
@@ -298,8 +341,15 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       '📅 Book now – limited spots available! 🔞 Must be over 18 to attend.',
   },
   petit: {
-    title: 'French Petit Four Masterclass – Macaron Edition! 🥐✨',
+    title: 'French Petit Four – Macaron Edition!',
     description: `Ever wanted to bake perfect macarons with crisp shells and soft, chewy centres? Join our French Petit Four Course (Macaron) and learn from a former pastry chef from one of Sydney's top hatted restaurants! Whether you're a home cook or a chef looking to refine your skills, this hands-on class will take your baking to the next level.`,
+    images: [
+      '/short-course/macaroon_1.png',
+      '/short-course/macaroon_2.png',
+      '/short-course/macaroon_1.png',
+      '/short-course/macaroon_2.png',
+      '/short-course/macaroon_1.png',
+    ],
     dates: [
       {
         date: '2025-04-02',
@@ -312,7 +362,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '1:00 PM – 4:30 PM',
       },
     ],
-    maxParticipants: '8',
     location:
       'Kitchen Haymarket (Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, NSW 2000)',
     price: 120,
@@ -337,8 +386,15 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       "🔥 Limited spots available! Don't miss out—book your place now!",
   },
   vegan: {
-    title: '1-Day Vegan & Vegetarian Cooking Class 🌱✨',
+    title: 'Vegan & Vegetarian Cooking Class',
     description: `Vegan and vegetarian meals aren't just for vegetarians—they're packed with health benefits and full of flavour! Forget the idea that plant-based dishes are just salads—you'll be amazed at how delicious and satisfying they can be. Learn from a professional chef and master a variety of flavourful, creative dishes. Impress your family and friends with your new skills—they'll be surprised at how good plant-based cooking can be!`,
+    images: [
+      '/short-course/vegan_1.png',
+      '/short-course/vegan_2.png',
+      '/short-course/vegan_1.png',
+      '/short-course/vegan_2.png',
+      '/short-course/vegan_1.png',
+    ],
     dates: [
       {
         date: '2025-07-11',
@@ -346,7 +402,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '1:00pm – 5:30pm',
       },
     ],
-    maxParticipants: '10',
     location:
       'ABM Kitchen (Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000)',
     price: 150,
@@ -369,8 +424,15 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     callToAction: '📅 Limited spots available – book now!',
   },
   chocolate: {
-    title: 'Chocolate Class – Xmas 🍫✨',
-    description: `Get into the festive spirit with our Christmas Chocolate Class! Learn the art of tempering chocolate, create beautiful chocolate decorations, and decorate your own gingerbread house. Perfect for home cooks and chefs looking to add professional chocolate skills to their repertoire.`,
+    title: 'Chocolate Class – Xmas 🍫',
+    description: `Get into the festive spirit with our Christmas Chocolate Class! Learn to create beautiful chocolate treats perfect for the holiday season.`,
+    images: [
+      '/short-course/xmas_1.png',
+      '/short-course/xmas_2.avif',
+      '/short-course/xmas_1.png',
+      '/short-course/xmas_2.avif',
+      '/short-course/xmas_1.png',
+    ],
     dates: [
       {
         date: '2025-12-16',
@@ -378,7 +440,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '1:00pm – 4:30pm',
       },
     ],
-    maxParticipants: '8',
     location:
       'Kitchen Haymarket (Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000)',
     price: 130,
@@ -402,8 +463,15 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       '🎄 Limited spots available – book your Christmas chocolate adventure now!',
   },
   pastries: {
-    title: 'Classic French Pastries Masterclass 🥐✨',
+    title: 'Classic French Pastries Masterclass 🥐',
     description: `Learn to create two iconic French pastries—Mille Feuille and Croque en Bouche (croquembouche) and take your delicious creations home to share! Whether it's a high tea, birthday, or any special event, these pastries will elevate your hosting game. Mille Feuille, with its layers of puff pastry and creamy vanilla custard, is perfect for afternoon teas and celebratory gatherings, while the stunning Croque en Bouche, a tower of profiteroles with caramel threads, is a show-stopper at weddings and christenings. Imagine your home filled with the irresistible aroma of buttery pastries, setting the perfect atmosphere for any occasion.`,
+    images: [
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/classic_french_pastries_1.png',
+    ],
     dates: [
       {
         date: '2025-06-26',
@@ -411,7 +479,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '10:00am – 3:30pm',
       },
     ],
-    maxParticipants: '8',
     location:
       'ABM Kitchen Haymarket (Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000)',
     price: 160,
@@ -439,22 +506,32 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       'Book now and bring these show-stopping pastries into your kitchen!',
   },
   fss: {
-    title: 'NSW Food Safety Supervisor Certificate (FSS)',
-    description:
-      'Food Safety Supervisor certification course for NSW hospitality industry.',
-    dates: [
-      { date: '2024-05-02', displayDate: '2nd May', time: '9:00am - 5:00pm' },
-      { date: '2024-05-30', displayDate: '30th May', time: '9:00am - 5:00pm' },
-      { date: '2024-06-05', displayDate: '5th June', time: '9:00am - 5:00pm' },
+    title: 'NSW Food Safety Supervisor Certificate (FSS) 🍽️✨',
+    description: `Get your NSW Food Safety Supervisor Certificate and ensure food safety compliance in your business.`,
+    images: [
+      '/short-course/fss_1.png',
+      '/short-course/fss_1.png',
+      '/short-course/fss_1.png',
+      '/short-course/fss_1.png',
+      '/short-course/fss_1.png',
     ],
-    maxParticipants: '12',
+    dates: [
+      { date: '2025-07-18', displayDate: '18 July', time: '9:00am - 5:00pm' },
+      { date: '2025-08-08', displayDate: '8 August', time: '9:00am - 5:00pm' },
+      { date: '2025-08-29', displayDate: '29 August', time: '9:00am - 5:00pm' },
+      {
+        date: '2025-09-15',
+        displayDate: '15 September',
+        time: '9:00am - 5:00pm',
+      },
+    ],
     location: 'ABM Campus',
     price: 180,
     duration: '8 hours (One Day Only!)',
     specialOffer: {
       code: 'ABMFSS15',
-      discount: '15% discount until 30 June!',
-      validUntil: '30 June',
+      discount: '15% discount',
+      validUntil: '',
       note: '(New customers only)',
     },
     courseType: {

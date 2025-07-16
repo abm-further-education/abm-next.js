@@ -43,19 +43,19 @@ function page() {
         </h2>
         <div className="grid grid-cols-2 md:gap-40 py-50 justify-items-center max-w-1000 mx-auto">
           <Card
-            imgPath="/courses/business/business_1.png"
+            imgPath="/courses/business/business_1.jpg"
             title="Certificate IV in Business"
             link="/"
             className="w-300 md:w-480"
           />
           <Card
-            imgPath="/courses/business/business_2.png"
+            imgPath="/courses/business/business_2.jpg"
             title="Diploma of Business"
             link="/"
             className="w-300 md:w-480"
           />
           <Card
-            imgPath="/courses/business/business_3.png"
+            imgPath="/courses/business/business_3.jpg"
             title="Advanced Diploma of Business"
             link="/"
             className="w-300 md:w-480"

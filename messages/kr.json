@@ -7,7 +7,35 @@
     "testimonialDescription": "가까운 미래에 어디에서 행복하게 일하는 자신을 보고 계신가요?"
   },
   "contact": {
-    "title": "문의하기"
+    "title": "문의하기",
+    "getInTouch": "연락처",
+    "address": "242 Castlereagh Street Sydney NSW 2000 Australia",
+    "phone": "+61 (02) 9160 4507",
+    "whatsapp": "(WhatsApp) + 61 482 796 010",
+    "email": "info@abm.edu.au",
+    "emailPlaceholder": "이메일",
+    "enquiryType": "문의 유형을 선택해주세요",
+    "selectEnquiryType": "문의 유형 선택",
+    "bookCampusTour": "캠퍼스 투어 예약",
+    "becomeStudent": "학생 등록",
+    "becomeAgent": "에이전트 등록",
+    "firstName": "이름",
+    "lastName": "성",
+    "phonePlaceholder": "전화번호",
+    "nationality": "국적",
+    "message": "메시지",
+    "sendMessage": "메시지 보내기",
+    "successMessage": "문의가 성공적으로 전송되었습니다. 감사합니다!",
+    "errorMessage": "전송에 실패했습니다. 잠시 후 다시 시도해주세요.",
+    "sending": "전송 중...",
+    "validation": {
+      "firstNameRequired": "이름을 입력해주세요",
+      "firstNameMinLength": "이름은 최소 2글자 이상이어야 합니다",
+      "lastNameRequired": "성을 입력해주세요",
+      "lastNameMinLength": "성은 최소 2글자 이상이어야 합니다",
+      "emailRequired": "이메일을 입력해주세요",
+      "emailInvalid": "유효하지 않은 이메일 주소입니다"
+    }
   },
   "courses": {
     "title": "당신의 미래를 위한 과정을 찾아보세요",
@@ -63,7 +91,9 @@
       "fitnessAndSport": "피트니스 & 스포츠",
       "business": "비즈니스",
       "projectAndProgram": "프로젝트 & 프로그램",
-      "humanResource": "HR"
+      "humanResource": "HR",
+      "cookingAndBaking": "요리 & 베이킹",
+      "onlineCourses": "온라인 과정"
     },
     "studyWithUs": {
       "studentInsights": "ABM 학생 후기",
@@ -195,6 +225,146 @@
     "usiHelpDescription": "기술 지원이나 USI 계정에 대한 질문이 있으시면 공식 USI 도움말 페이지를 방문하세요.",
     "usiHelpButton": "USI 도움말"
   },
+  "courseEntryRequirements": {
+    "metaTitle": "과정 입학 요건 - ABM 고등교육",
+    "metaDescription": "ABM 과정의 입학 요건에 대해 알아보세요. 학업 요건, 영어 요건, 지원 절차를 포함합니다.",
+    "bannerTitle": "과정 입학 요건",
+    "bannerSubtitle": "ABM 과정 등록에 필요한 모든 정보",
+    "introTitle": "ABM 과정 입학 요건",
+    "introDescription": "최고의 학습 경험과 성과를 보장하기 위해 ABM은 모든 과정에 특정한 입학 요건을 가지고 있습니다. 이러한 요건은 높은 교육 기준을 유지하고 학생들이 학업에 잘 준비되도록 도와줍니다.",
+    "generalRequirementsTitle": "일반 요건",
+    "ageRequirementTitle": "연령 요건",
+    "ageRequirementDescription": "학생은 과정 시작 시 최소 18세 이상이어야 합니다. 18세 미만 학생의 경우 부모 동의와 추가 서류가 필요할 수 있습니다.",
+    "englishRequirementTitle": "영어 능력",
+    "englishRequirementDescription": "모든 학생은 학업을 성공적으로 완료할 수 있도록 영어 능력을 입증해야 합니다. 이는 국내 및 국제 학생 모두에게 적용됩니다.",
+    "academicRequirementsTitle": "학업 요건",
+    "certificateIIITitle": "수료증 III 과정",
+    "certificateIIIRequirement1": "10학년 완료 또는 이에 상응하는 학력",
+    "certificateIIIRequirement2": "기본 읽기, 쓰기, 수학 능력",
+    "certificateIIIRequirement3": "독립적 및 팀워크 능력",
+    "certificateIVTitle": "수료증 IV 과정",
+    "certificateIVRequirement1": "12학년 완료 또는 이에 상응하는 학력",
+    "certificateIVRequirement2": "관련 분야 수료증 III (권장)",
+    "certificateIVRequirement3": "강한 의사소통 및 문제 해결 능력",
+    "diplomaTitle": "디플로마 과정",
+    "diplomaRequirement1": "12학년 완료 또는 이에 상응하는 학력",
+    "diplomaRequirement2": "관련 분야 수료증 IV (권장)",
+    "diplomaRequirement3": "리더십 잠재력 입증",
+    "advancedDiplomaTitle": "고급 디플로마 과정",
+    "advancedDiplomaRequirement1": "관련 분야 디플로마",
+    "advancedDiplomaRequirement2": "최소 2년 관련 업무 경험",
+    "advancedDiplomaRequirement3": "강한 학업 배경",
+    "englishLanguageTitle": "영어 요건",
+    "acceptedTestsTitle": "인정되는 영어 시험",
+    "acceptedTest1": "IELTS Academic: 전체 5.5 (각 영역 5.0 이상)",
+    "acceptedTest2": "TOEFL iBT: 전체 46 (각 영역 10 이상)",
+    "acceptedTest3": "PTE Academic: 전체 42 (각 영역 36 이상)",
+    "acceptedTest4": "Cambridge English: B2 First (FCE) - Grade C",
+    "acceptedTest5": "OET: 모든 영역 Grade C",
+    "exemptionsTitle": "영어 면제",
+    "exemption1": "호주, 뉴질랜드, 영국, 미국, 캐나다, 아일랜드 출신 영어 원어민",
+    "exemption2": "중등 또는 고등교육에서 영어로 최소 2년간 전일제 학습을 완료한 학생",
+    "exemption3": "영어권 기관에서 이전 자격을 취득한 학생",
+    "additionalRequirementsTitle": "추가 요건",
+    "healthRequirementsTitle": "건강 및 안전 요건",
+    "healthRequirementsDescription": "일부 과정, 특히 실습 구성 요소에 특정 건강 및 안전 요건이 있을 수 있습니다.",
+    "healthRequirement1": "실습 활동을 위한 의료 승인",
+    "healthRequirement2": "예방접종 기록 (필요한 경우)",
+    "healthRequirement3": "육체적으로 요구되는 과정을 위한 체력 평가",
+    "workingWithChildrenTitle": "아동 취업 허가증",
+    "workingWithChildrenDescription": "아동이나 취약한 사람들과 함께 일하는 과정의 학생들은 아동 취업 허가증이 필요할 수 있습니다.",
+    "wwcRequirement1": "유효한 아동 취업 허가증 승인",
+    "wwcRequirement2": "배경 조사 승인",
+    "applicationProcessTitle": "지원 절차",
+    "step1Title": "1단계: 과정 선택",
+    "step1Description": "선호하는 과정을 선택하고 입학 요건을 검토하세요. 질문이 있다면 언제든 입학팀에 문의하세요.",
+    "step2Title": "2단계: 서류 준비",
+    "step2Description": "학업 성적표, 영어 시험 결과, 신분증, 과정별 추가 요건을 포함한 모든 필수 서류를 준비하세요.",
+    "step3Title": "3단계: 지원서 제출",
+    "step3Description": "모든 필수 서류와 함께 지원서를 제출하세요.",
+    "step4Title": "4단계: 평가 및 제안",
+    "step4Description": "지원서는 입학팀에서 평가됩니다. 성공하면 등록 지침과 함께 제안서를 받게 됩니다.",
+    "courseRequirementsTableTitle": "구체적인 과정 입학 요건",
+    "courseRequirementsTableDescription": "아래는 ABM에서 제공하는 각 과정의 구체적인 입학 요건입니다:",
+    "needHelpTitle": "지원에 도움이 필요하신가요?",
+    "needHelpDescription": "친절한 입학팀이 지원 절차를 도와드립니다. 궁금하신 점이 있다면 언제든 문의하세요.",
+    "contactUsButton": "문의하기",
+    "callUsButton": "전화하기",
+    "courses": {
+      "kitchenManagement": {
+        "code": "SIT40521 키친 매니지먼트 수료증 IV",
+        "requirement": "학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "hospitalityDiploma": {
+        "code": "SIT50422 호스피탈리티 매니지먼트 디플로마",
+        "requirement": "학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "hospitalityAdvancedDiploma": {
+        "code": "SIT60322 호스피탈리티 매니지먼트 고급 디플로마",
+        "requirement": "학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "fitnessCertIII": {
+        "code": "SIS30321 피트니스 수료증 III",
+        "requirement": "학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "fitnessCertIIIFast": {
+        "code": "SIS30321 피트니스 수료증 III (패스트 트랙)",
+        "requirement": "피트니스 활동에 참여할 수 있어야 합니다."
+      },
+      "fitnessCertIV": {
+        "code": "SIS40221 피트니스 수료증 IV",
+        "requirement": "다음 단위들을 완료해야 합니다: HLTAID011 응급처치 제공 (또는 이 단위를 대체하는 단위), HLTWHS001 직장 건강 및 안전 참여, SISFFIT032 운동 전 검사 및 서비스 오리엔테이션 완료, SISFFIT033 고객 피트니스 평가 완료, SISFFIT035 그룹 운동 세션 계획, SISFFIT036 그룹 운동 세션 지도, SISFFIT040 개별 고객을 위한 체육관 기반 운동 프로그램 개발 및 지도, SISFFIT047 안전하고 효과적인 운동을 지원하기 위한 해부학 및 생리학 지식 활용, SISFFIT052 건강한 식습관 정보 제공. 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "fitnessCertIVFast": {
+        "code": "SIS40221 피트니스 수료증 IV (패스트 트랙)",
+        "requirement": "다음 단위들을 완료해야 합니다: HLTAID011 응급처치 제공 (또는 이 단위를 대체하는 단위), HLTWHS001 직장 건강 및 안전 참여, SISFFIT032 운동 전 검사 및 서비스 오리엔테이션 완료, SISFFIT033 고객 피트니스 평가 완료, SISFFIT035 그룹 운동 세션 계획, SISFFIT036 그룹 운동 세션 지도, SISFFIT040 개별 고객을 위한 체육관 기반 운동 프로그램 개발 및 지도, SISFFIT047 안전하고 효과적인 운동을 지원하기 위한 해부학 및 생리학 지식 활용, SISFFIT052 건강한 식습관 정보 제공"
+      },
+      "sportDiploma": {
+        "code": "SIS50321 스포츠 디플로마 (코칭)",
+        "requirement": "과정 적합성과 학생 요구사항을 결정하기 위한 입학 면접에 참여해야 합니다. 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "businessCertIV": {
+        "code": "BSB40120 비즈니스 수료증 IV",
+        "requirement": "위의 학업 입학 요건을 참조하세요. 학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "businessDiploma": {
+        "code": "BSB50120 비즈니스 디플로마",
+        "requirement": "위의 학업 입학 요건을 참조하세요. 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "businessAdvancedDiploma": {
+        "code": "BSB60120 비즈니스 고급 디플로마",
+        "requirement": "학생들은 BSB 훈련 패키지에서 디플로마 수준 과정(AQF 레벨 5) 또는 고급 디플로마 수준 과정(AQF 레벨 6)을 완료해야 합니다. 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "hrCertIV": {
+        "code": "BSB40420 인적자원관리 수료증 IV",
+        "requirement": "학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "hrDiploma": {
+        "code": "BSB50320 인적자원관리 디플로마",
+        "requirement": "다음 단위들을 완료해야 합니다: BSBHRM411 성과 개발 과정 관리, BSBHRM412 직원 및 산업 관계 지원, BSBHRM415 채용 및 온보딩 조정, BSBHRM417 인적자원 기능 및 과정 지원. 동등한 역량은 이 단위들의 전임자로, 동등한 것으로 매핑되었습니다. 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "hrAdvancedDiploma": {
+        "code": "BSB60320 인적자원관리 고급 디플로마",
+        "requirement": "다음 자격 중 하나를 완료해야 합니다: BSB50320 인적자원관리 디플로마, BSB50618 인적자원관리 디플로마 (또는 대체된 동등한 버전). 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "projectCertIV": {
+        "code": "BSB40920 프로젝트 매니지먼트 실습 수료증 IV",
+        "requirement": "학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "projectDiploma": {
+        "code": "BSB50820 프로젝트 매니지먼트 디플로마",
+        "requirement": "학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "projectAdvancedDiploma": {
+        "code": "BSB60720 프로그램 매니지먼트 고급 디플로마",
+        "requirement": "다음 자격 중 하나를 완료해야 합니다: BSB50820 프로젝트 매니지먼트 디플로마, BSB51415 프로젝트 매니지먼트 디플로마 (또는 대체된 동등한 버전). 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "graduateDiploma": {
+        "code": "BSB80120 매니지먼트 대학원 디플로마 (학습)",
+        "requirement": "학생들은 고급 디플로마 수준 과정(AQF 레벨 6) 이상을 완료해야 합니다. 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      }
+    }
+  },
   "higherEducationPathway": {
     "title": "고등교육 진학 과정",
     "bannerTitle": "ABM 과정 완료 후 진학을 고려하고 계신가요?",
@@ -232,5 +402,58 @@
     "readyToStartDescription": "고등교육 진학 과정과 시작 방법에 대한 자세한 정보를 위해 문의해주세요.",
     "contactUs": "문의하기",
     "enrolNow": "지금 등록하기"
+  },
+  "news": {
+    "bannerTitle": "최신 소식",
+    "intro": "ABM의 최신 소식을 만나보세요.",
+    "searchPlaceholder": "뉴스 검색...",
+    "sortBy": "정렬:",
+    "newest": "최신순",
+    "oldest": "오래된순",
+    "readMore": "자세히 보기",
+    "noResults": "검색 결과가 없습니다."
+  },
+  "checkout": {
+    "title": "수강 등록",
+    "firstName": "이름",
+    "lastName": "성",
+    "email": "이메일",
+    "phone": "전화번호",
+    "preferredDate": "희망 날짜(그룹 등록 시)",
+    "otherInquiries": "기타 문의사항",
+    "howDidYouHear": "이 과정을 어떻게 알게 되셨나요?",
+    "agent": "에이전트",
+    "socialMedia": "소셜 미디어",
+    "friend": "지인",
+    "searchPortal": "검색 포털",
+    "abmWebsite": "ABM 웹사이트",
+    "referrerName": "에이전트 또는 추천인의 이름을 입력해 주세요.",
+    "promotionCode": "프로모션 코드",
+    "submit": "결제 진행",
+    "back": "뒤로가기",
+    "required": "필수 입력",
+    "enterFirstName": "이름을 입력해 주세요.",
+    "enterEmail": "이메일을 입력해 주세요.",
+    "invalidEmail": "유효하지 않은 이메일입니다.",
+    "success": "결제 페이지로 이동합니다..."
+  },
+  "paymentSuccess": {
+    "title": "결제가 완료되었습니다!",
+    "subtitle": "코스 등록이 성공적으로 완료되었습니다.",
+    "registrationInfo": "등록 정보",
+    "course": "코스",
+    "date": "날짜",
+    "type": "타입",
+    "email": "이메일",
+    "amountPaid": "결제금액",
+    "emailNotification": "등록 확인 이메일이 곧 발송됩니다. 코스 시작 전에 추가 안내사항을 보내드릴 예정입니다.",
+    "viewOtherCourses": "다른 코스 보기",
+    "contactUs": "문의하기",
+    "errorOccurred": "오류가 발생했습니다",
+    "sessionNotFound": "결제 세션 ID를 찾을 수 없습니다.",
+    "fetchError": "결제 정보를 가져오는데 실패했습니다.",
+    "verificationError": "결제 정보를 확인하는 중 오류가 발생했습니다.",
+    "backToCourses": "코스 목록으로 돌아가기",
+    "verifyingPayment": "결제 정보를 확인하고 있습니다..."
   }
 }

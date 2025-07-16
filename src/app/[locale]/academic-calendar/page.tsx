@@ -70,11 +70,14 @@ export default function AcademicCalendar() {
       <Banner
         slides={[
           {
-            imgPath: '/short-course/short-course.png',
+            imgPath: '/academic_calendar.png',
             title: 'Academic Calendar',
             content: '',
           },
         ]}
+        dimmed={
+          <div className="bg-neutral-900/70 w-full h-screen md:h-700 absolute z-10" />
+        }
       />
       <h2 className="text-3xl font-bold mb-10 text-center mt-100">
         Academic Calendar
