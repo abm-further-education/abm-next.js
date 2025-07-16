@@ -42,7 +42,7 @@ export default function CourseCard({ course }: CourseCardProps) {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+    <div className="bg-white border border-gray-200  overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
       {/* Image */}
       <div className="relative h-200 overflow-hidden">
         <Image
@@ -135,7 +135,7 @@ export default function CourseCard({ course }: CourseCardProps) {
         {/* CTA Button */}
         <Link
           href={course.link}
-          className="block w-full text-center bg-primary text-white py-12 px-20 rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
+          className="block w-full text-center bg-primary text-white py-12 px-20  hover:bg-primary/90 transition-colors duration-200 font-medium"
         >
           {course.type === 'short-course' ? 'Book Now' : 'Learn More'}
         </Link>

@@ -48,7 +48,7 @@ export default function CourseFilter({
     selectedLevel !== 'all';
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-30 shadow-sm">
+    <div className="bg-white border border-gray-200  p-30 shadow-sm">
       {/* Header */}
       <div className="flex items-center justify-between mb-30">
         <div className="flex items-center gap-10">
@@ -67,7 +67,7 @@ export default function CourseFilter({
       </div>
 
       {/* Results Count */}
-      <div className="mb-30 p-15 bg-gray-50 rounded-lg">
+      <div className="mb-30 p-15 bg-gray-50 ">
         <p className="text-sm text-gray-600">
           Showing {filteredCourses} of {totalCourses} courses
         </p>
@@ -88,7 +88,7 @@ export default function CourseFilter({
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search by title, description, or tags..."
-            className="w-full pl-40 pr-15 py-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full pl-40 pr-15 py-12 border border-gray-300  focus:ring-2 focus:ring-primary focus:border-transparent"
           />
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function CourseFilter({
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="w-full px-15 py-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+          className="w-full px-15 py-12 border border-gray-300  focus:ring-2 focus:ring-primary focus:border-transparent"
         >
           {courseCategories.map((category) => (
             <option key={category.value} value={category.value}>
@@ -119,7 +119,7 @@ export default function CourseFilter({
         <select
           value={selectedType}
           onChange={(e) => setSelectedType(e.target.value)}
-          className="w-full px-15 py-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+          className="w-full px-15 py-12 border border-gray-300  focus:ring-2 focus:ring-primary focus:border-transparent"
         >
           {courseTypes.map((type) => (
             <option key={type.value} value={type.value}>
@@ -137,7 +137,7 @@ export default function CourseFilter({
         <select
           value={selectedLevel}
           onChange={(e) => setSelectedLevel(e.target.value)}
-          className="w-full px-15 py-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+          className="w-full px-15 py-12 border border-gray-300  focus:ring-2 focus:ring-primary focus:border-transparent"
         >
           {courseLevels.map((level) => (
             <option key={level.value} value={level.value}>
@@ -155,7 +155,7 @@ export default function CourseFilter({
           </h4>
           <div className="flex flex-wrap gap-10">
             {searchTerm && (
-              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs rounded-full">
+              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs ">
                 Search: &quot;{searchTerm}&quot;
                 <button
                   onClick={() => setSearchTerm('')}
@@ -166,7 +166,7 @@ export default function CourseFilter({
               </span>
             )}
             {selectedCategory !== 'all' && (
-              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs rounded-full">
+              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs ">
                 {
                   courseCategories.find((c) => c.value === selectedCategory)
                     ?.label
@@ -180,7 +180,7 @@ export default function CourseFilter({
               </span>
             )}
             {selectedType !== 'all' && (
-              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs rounded-full">
+              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs ">
                 {courseTypes.find((t) => t.value === selectedType)?.label}
                 <button
                   onClick={() => setSelectedType('all')}
@@ -191,7 +191,7 @@ export default function CourseFilter({
               </span>
             )}
             {selectedLevel !== 'all' && (
-              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs rounded-full">
+              <span className="inline-flex items-center gap-5 px-10 py-5 bg-primary/10 text-primary text-xs ">
                 {courseLevels.find((l) => l.value === selectedLevel)?.label}
                 <button
                   onClick={() => setSelectedLevel('all')}

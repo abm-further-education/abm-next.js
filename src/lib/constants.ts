@@ -48,11 +48,11 @@ export const fitnessMenu = [
     href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
   },
   {
-    title: 'Certificate III in Sport',
+    title: 'Certificate III in Fitness',
     href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-sport-fast-track',
   },
   {
-    title: 'Certificate IV in Sport',
+    title: 'Certificate IV in Fitness',
     href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-sport-fast-track',
   },
 ];

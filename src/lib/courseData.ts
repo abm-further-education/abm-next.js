@@ -51,25 +51,25 @@ export const courseData: CourseData[] = [
     duration: '6 months',
     image: '/home/Cookery.png',
     link: '/cookery-and-hospitality-courses/industry-placement-work-placement',
-    tags: ['placement', 'experience', 'industry'],
+    tags: ['industry', 'placement', 'practical', 'experience'],
   },
   {
-    id: 'fss',
+    id: 'food-safety',
     title: 'NSW Food Safety Supervisor',
-    description: 'Become a certified Food Safety Supervisor in NSW.',
+    description: 'Learn food safety and hygiene management.',
     category: 'cookery',
     type: 'full-course',
     duration: '1 day',
     image: '/home/Cookery.png',
     link: '/cookery-and-hospitality-courses/fss',
-    tags: ['food-safety', 'supervisor', 'certification'],
+    tags: ['food-safety', 'hygiene', 'supervisor', 'nsw'],
   },
 
   // Hospitality Courses
   {
     id: 'hospitality-diploma',
     title: 'Diploma of Hospitality Management',
-    description: 'Develop comprehensive hospitality management skills.',
+    description: 'Comprehensive hospitality management skills.',
     category: 'hospitality',
     type: 'full-course',
     level: 'diploma',
@@ -90,13 +90,24 @@ export const courseData: CourseData[] = [
     link: '/cookery-and-hospitality-courses/advanced-diploma-of-hospitality-management',
     tags: ['hospitality', 'management', 'advanced-diploma', 'leadership'],
   },
+  {
+    id: 'hospitality-industry-placement',
+    title: 'Industry Placement - Hospitality',
+    description:
+      'Gain real-world experience through hospitality industry placement.',
+    category: 'hospitality',
+    type: 'full-course',
+    duration: '6 months',
+    image: '/home/Hospitality.png',
+    link: '/cookery-and-hospitality-courses/industry-placement-hospitality-management',
+    tags: ['industry', 'placement', 'hospitality', 'experience'],
+  },
 
   // Fitness Courses
   {
     id: 'fitness-cert-iii',
     title: 'Certificate III in Fitness',
-    description:
-      'Begin your fitness career with foundational knowledge and skills.',
+    description: 'Foundation fitness and personal training skills.',
     category: 'fitness',
     type: 'full-course',
     level: 'certificate-iii',
@@ -114,12 +125,12 @@ export const courseData: CourseData[] = [
     level: 'certificate-iv',
     duration: '18 months',
     image: '/home/Fitness.png',
-    link: '/fitness-instructor-personal-trainer-courses/sis30321-certificate-iv-in-fitness',
+    link: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
     tags: ['fitness', 'personal-training', 'certificate-iv', 'advanced'],
   },
   {
     id: 'sport-cert-iii',
-    title: 'Certificate III in Sport (Fast Track)',
+    title: 'Certificate III in Fitness (Fast Track)',
     description: 'Accelerated sports coaching and training program.',
     category: 'fitness',
     type: 'full-course',
@@ -131,7 +142,7 @@ export const courseData: CourseData[] = [
   },
   {
     id: 'sport-cert-iv',
-    title: 'Certificate IV in Sport (Fast Track)',
+    title: 'Certificate IV in Fitness (Fast Track)',
     description: 'Advanced sports coaching and development program.',
     category: 'fitness',
     type: 'full-course',
@@ -140,6 +151,18 @@ export const courseData: CourseData[] = [
     image: '/home/Fitness.png',
     link: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-sport-fast-track',
     tags: ['sport', 'coaching', 'fast-track', 'certificate-iv', 'advanced'],
+  },
+  {
+    id: 'sport-diploma',
+    title: 'Diploma of Sport',
+    description: 'Comprehensive sports coaching and development program.',
+    category: 'fitness',
+    type: 'full-course',
+    level: 'diploma',
+    duration: '18 months',
+    image: '/home/Fitness.png',
+    link: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
+    tags: ['sport', 'coaching', 'diploma', 'development'],
   },
 
   // Business Courses
@@ -152,7 +175,7 @@ export const courseData: CourseData[] = [
     level: 'certificate-iv',
     duration: '12 months',
     image: '/home/Business.png',
-    link: '/business-and-management-courses/business1/',
+    link: '/business-and-management-courses/bsb40120-certificate-iv-in-business',
     tags: ['business', 'management', 'certificate-iv'],
   },
   {
@@ -164,7 +187,7 @@ export const courseData: CourseData[] = [
     level: 'diploma',
     duration: '18 months',
     image: '/home/Business.png',
-    link: '/business-and-management-courses/business2/',
+    link: '/business-and-management-courses/bsb50120-diploma-of-business',
     tags: ['business', 'management', 'diploma', 'leadership'],
   },
   {
@@ -176,7 +199,7 @@ export const courseData: CourseData[] = [
     level: 'advanced-diploma',
     duration: '24 months',
     image: '/home/Business.png',
-    link: '/business-and-management-courses/business3/',
+    link: '/business-and-management-courses/bsb60120-advanced-diploma-of-business',
     tags: ['business', 'management', 'advanced-diploma', 'strategy'],
   },
   {
@@ -188,7 +211,7 @@ export const courseData: CourseData[] = [
     level: 'graduate-diploma',
     duration: '12 months',
     image: '/home/Business.png',
-    link: '/business-and-management-courses/business4/',
+    link: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
     tags: ['business', 'management', 'graduate-diploma', 'leadership'],
   },
 
@@ -202,7 +225,7 @@ export const courseData: CourseData[] = [
     level: 'certificate-iv',
     duration: '12 months',
     image: '/home/Project.png',
-    link: '/project-and-program-management-courses/project1/',
+    link: '/project-and-program-management-courses/bsb40920-certificate-iv-in-project-management-practice',
     tags: ['project-management', 'certificate-iv', 'methodologies'],
   },
   {
@@ -214,7 +237,7 @@ export const courseData: CourseData[] = [
     level: 'diploma',
     duration: '18 months',
     image: '/home/Project.png',
-    link: '/project-and-program-management-courses/project2/',
+    link: '/project-and-program-management-courses/bsb50820-diploma-of-project-management-practice',
     tags: ['project-management', 'diploma', 'leadership'],
   },
   {
@@ -226,7 +249,7 @@ export const courseData: CourseData[] = [
     level: 'advanced-diploma',
     duration: '24 months',
     image: '/home/Project.png',
-    link: '/project-and-program-management-courses/project3/',
+    link: '/project-and-program-management-courses/bsb60820-advanced-diploma-of-project-management-practice',
     tags: ['project-management', 'advanced-diploma', 'strategic-planning'],
   },
 
@@ -240,7 +263,7 @@ export const courseData: CourseData[] = [
     level: 'certificate-iv',
     duration: '12 months',
     image: '/home/HR.png',
-    link: '/human-resources-courses/hr1/',
+    link: '/human-resources-courses/bsb40420-certificate-iv-in-human-resource-management',
     tags: ['hr', 'human-resources', 'certificate-iv', 'management'],
   },
   {
@@ -252,7 +275,7 @@ export const courseData: CourseData[] = [
     level: 'diploma',
     duration: '18 months',
     image: '/home/HR.png',
-    link: '/human-resources-courses/hr2/',
+    link: '/human-resources-courses/bsb50320-diploma-of-human-resource-management',
     tags: ['hr', 'human-resources', 'diploma', 'organizational'],
   },
   {
@@ -264,7 +287,7 @@ export const courseData: CourseData[] = [
     level: 'advanced-diploma',
     duration: '24 months',
     image: '/home/HR.png',
-    link: '/human-resources-courses/hr3/',
+    link: '/human-resources-courses/bsb60320-advanced-diploma-of-human-resource-management',
     tags: ['hr', 'human-resources', 'advanced-diploma', 'strategy'],
   },
 
