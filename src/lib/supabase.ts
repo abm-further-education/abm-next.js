@@ -17,8 +17,8 @@ if (!supabaseAnonKey) {
 
 // Primary Supabase client using anon key (safe for both client and server)
 export const supabase = createClient(
-  supabaseUrl || 'placeholder',
-  supabaseAnonKey || 'placeholder'
+  supabaseUrl || 'https://placeholder.supabase.co',
+  supabaseAnonKey || 'placeholder-key'
 );
 
 // Optional: Only include service role client if you really need admin operations
@@ -26,12 +26,16 @@ export const supabase = createClient(
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 export const supabaseAdmin = supabaseServiceKey
-  ? createClient(supabaseUrl || 'placeholder', supabaseServiceKey, {
-      auth: {
-        autoRefreshToken: false,
-        persistSession: false,
-      },
-    })
+  ? createClient(
+      supabaseUrl || 'https://placeholder.supabase.co',
+      supabaseServiceKey,
+      {
+        auth: {
+          autoRefreshToken: false,
+          persistSession: false,
+        },
+      }
+    )
   : null;
 
 // Database types for better TypeScript support
