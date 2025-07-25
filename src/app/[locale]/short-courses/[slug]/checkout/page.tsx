@@ -166,7 +166,7 @@ export default function CheckoutPage() {
   }, [selectedDate]);
 
   return (
-    <section className="px-16 md:px-0 my-60 md:my-180">
+    <section className="px-16 md:px-0 my-180">
       <div className="w-full max-w-[1000px] mx-auto flex flex-col md:flex-row gap-40">
         {/* 좌측: 코스 정보 */}
         <div className="flex-1">

@@ -19,6 +19,7 @@ import {
   hrMenu,
   projectMenu,
   shortCourseMenu,
+  studyWithUsMenu,
 } from '@/lib';
 
 function MobileNav() {
@@ -263,7 +264,7 @@ function MobileNav() {
                             transition={{ duration: 0.2, ease: easeOut }}
                             className="origin-top flex flex-col gap-y-16 mt-10"
                           >
-                            {shortCourseMenu.map((item) => (
+                            {studyWithUsMenu.map((item) => (
                               <Link
                                 onClick={toggleMenu}
                                 key={item.href}
@@ -293,7 +294,7 @@ function MobileNav() {
             <li>
               <Link
                 onClick={toggleMenu}
-                href="https://form.jotform.com/ABMonlineforms/new-abm-enroment-application-form"
+                href="https://form.jotform.com/ABMonlineforms/abm-further-education-application-f"
                 className="block p-3 hover:underline"
               >
                 Enrol Now

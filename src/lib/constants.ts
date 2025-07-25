@@ -173,6 +173,41 @@ export const shortCourseMenu = [
   },
 ];
 
+export const studyWithUsMenu = [
+  {
+    title: 'Student Insights',
+    href: '/abm-student-insights',
+  },
+  {
+    title: 'Academic Calendar',
+    href: '/academic-calendar',
+  },
+  {
+    title: 'Timetable',
+    href: '/abm-further-education-timetable-and-sessions',
+  },
+  {
+    title: 'Fees & Payment',
+    href: '/abm-further-education-fee-schedule-2025',
+  },
+  {
+    title: 'Entry Requirements',
+    href: '/course-entry-requirement',
+  },
+  {
+    title: 'Get USI',
+    href: '/get-a-usi',
+  },
+  {
+    title: 'Enrol Now',
+    href: 'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
+  },
+  {
+    title: 'Higher Education Pathway',
+    href: '/higher-education-pathway',
+  },
+];
+
 // 메뉴 구조 데이터
 export interface MenuItem {
   title: string;

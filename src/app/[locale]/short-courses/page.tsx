@@ -23,11 +23,11 @@ function page() {
         ]}
       />
       <FadeIn>
-        <div className="flex flex-col items-center justify-center py-50">
+        <div className="flex flex-col items-center justify-center md:py-50">
           <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
             Discover Your Passion with ABM’s New Short Courses!
           </h2>
-          <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
+          <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center px-20 md:px-0">
             ABM is thrilled to announce our latest project – ABM Short Courses –
             designed for anyone who loves food, drink, and the art of
             hospitality! Whether you’re a home cook, aspiring chef, or curious
@@ -37,7 +37,7 @@ function page() {
         </div>
       </FadeIn>
       <section className="flex flex-col items-center justify-center pb-40">
-        <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold md:py-50 text-center px-20 md:px-0">
           ABM Short Courses for 2025
         </h2>
         <FadeIn>
@@ -45,67 +45,67 @@ function page() {
             <ShortCourseCard
               imgPath="/short-course/barista_1.jpg"
               title="Barista Course"
-              link="/"
+              link="/short-courses/barista"
               price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/classic_french_cakes_2.png"
               title="Classic French Cake Course"
-              link="/"
+              link="/short-courses/classic-french-cake"
               price={180}
             />
             <ShortCourseCard
               imgPath="/short-course/wine_1.jpg"
               title="Wine Course"
-              link="/"
+              link="/short-courses/wine"
               price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/sourdough_1.jpg"
               title="Sourdough and Focaccia Course"
-              link="/"
+              link="/short-courses/sourdough"
               price={160}
             />
             <ShortCourseCard
               imgPath="/short-course/fine_dining_dessert_1.jpg"
               title="Fine Dining Dessert Plating Course"
-              link="/"
+              link="/short-courses/dessert"
               price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/classic_french_pastries_1.png"
               title="Classic French Pastries Course"
-              link="/"
+              link="/short-courses/classic-french-pastries"
               price={160}
             />
             <ShortCourseCard
               imgPath="/short-course/cocktail_1.png"
               title="Cocktail-Making and Mixology Course"
-              link="/"
+              link="/short-courses/mixology"
               price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/macaroon_1.png"
               title="French petit four Course (Macaroon)"
-              link="/"
+              link="/short-courses/macaroon"
               price={120}
             />
             <ShortCourseCard
               imgPath="/short-course/vegan_1.png"
               title="Vegan and Vegetarian Course"
-              link="/"
+              link="/short-courses/vegan"
               price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/xmas_1.png"
               title="Chocolate Class – Xmas"
-              link="/"
+              link="/short-courses/xmas"
               price={130}
             />
             <ShortCourseCard
               imgPath="/short-course/fss_1.png"
               title="NSW Food Safety Supervisor Certificate (FSS)"
-              link="/"
+              link="/short-courses/fss"
               price={180}
             />
           </div>
