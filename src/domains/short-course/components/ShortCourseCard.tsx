@@ -20,7 +20,7 @@ function ShortCourseCard({
   return (
     <div
       className={cn(
-        'h-520 relative group cursor-pointer overflow-hidden md:w-400'
+        'h-500 relative group cursor-pointer overflow-hidden md:w-330'
       )}
       onClick={() => link && router.push(link)}
     >

@@ -4,7 +4,7 @@
     "coursesTitle": "ABM 코스",
     "coursesDescription": "최고의 환경과 전문성 있는 내용으로 고품질 교육을 제공하여, 실무 경험 기회를 통해 학생들의 성공을 보장합니다.",
     "testimonialTitle": "졸업생 후기",
-    "testimonialDescription": "가까운 미래에 어디에서 행복하게 일하는 자신을 보고 계신가요?"
+    "testimonialDescription": "졸업생들의 진솔한 이야기, 지금 확인해보세요."
   },
   "contact": {
     "title": "문의하기",
@@ -39,7 +39,7 @@
   },
   "courses": {
     "title": "당신의 미래를 위한 과정을 찾아보세요",
-    "description": "올바른 과정을 선택하는 것은 커리어 목표를 이루는 데 있어 매우 중요합니다. 단순한 관심을 넘어, 그 길이 여러분이 즐기고 지속할 수 있는 미래로 이어지는지 고민해보세요. 비즈니스, 요리, 호스피탈리티, 피트니스 등 다양한 분야에서 ABM은 여러분이 현장에서 필요한 실무 역량을 갖추고 자신감을 키울 수 있도록 지원합니다."
+    "description": "올바른 과정을 선택하는 것은 커리어 목표를 이루는 데 있어 매우 중요합니다. 흥미를 넘어, 그 길이 여러분이 즐기고 지속할 수 있는 미래로 이어지는지 고민해보세요. 비즈니스, 요리, 호스피탈리티, 피트니스 등 다양한 분야에서 ABM은 여러분이 현장에서 필요한 실무 역량을 갖추고 자신감을 키울 수 있도록 지원합니다."
   },
   "studyWithUs": {
     "studentInsights": "ABM 학생 후기",
@@ -48,7 +48,8 @@
     "entryRequirements": "입학 요건",
     "getUSI": "USI 발급",
     "enrolNow": "지금 등록하기",
-    "higherEducationPathway": "고등교육 진학 과정"
+    "higherEducationPathway": "고등교육 진학 과정",
+    "policiesAndProcedures": "정책 및 절차"
   },
   "timetable": {
     "title": "시간표",
@@ -198,6 +199,8 @@
     "phoneMethodDescription": "온라인에서 USI를 생성할 수 없는 경우 USI 사무소에 전화할 수 있습니다:",
     "phoneNumber": "1300 857 536",
     "phoneHours": "월요일~금요일, 오전 8시~오후 6시 (AEST)",
+    "requiorangeDocumentsTitle": "필요한 서류",
+    "requiorangeDocumentsDescription": "USI를 생성하려면 다음 신분증 중 하나를 제공해야 합니다:",
     "requiredDocumentsTitle": "필요 서류",
     "requiredDocumentsDescription": "USI를 생성하려면 다음 신분증 중 하나를 제공해야 합니다:",
     "primaryDocumentsTitle": "주요 서류",
@@ -217,15 +220,27 @@
     "importantInfo4": "USI를 잊어버린 경우 온라인이나 전화로 찾을 수 있습니다",
     "importantInfo5": "호주의 모든 국가 인증 훈련에 USI가 필요합니다",
     "needHelpTitle": "도움이 필요하신가요?",
-    "needHelpDescription": "USI 생성에 도움이 필요하거나 질문이 있으시면 언제든지 도와드리겠습니다:",
+    "needHelpDescription": "USI 생성에 도움이 필요하거나 질문이 있으시면 언제든지 문의주세요.",
     "contactABMTitle": "ABM 문의",
-    "contactABMDescription": "우리 학생 서비스 팀이 USI 생성 과정을 도와드리고 질문에 답변해드릴 수 있습니다.",
-    "contactABMButton": "ABM 문의",
+    "contactABMDescription": "USI 생성 과정을 도와드리고 질문에 답변해드릴 수 있습니다.",
+    "contactABMButton": "문의 하기",
     "usiHelpTitle": "USI 도움말",
     "usiHelpDescription": "기술 지원이나 USI 계정에 대한 질문이 있으시면 공식 USI 도움말 페이지를 방문하세요.",
     "usiHelpButton": "USI 도움말"
   },
+  "news": {
+    "bannerTitle": "최신 소식",
+    "intro": "ABM의 최신 소식을 만나보세요.",
+    "searchPlaceholder": "뉴스 검색...",
+    "sortBy": "정렬:",
+    "newest": "최신순",
+    "oldest": "오래된순",
+    "readMore": "자세히 보기",
+    "noResults": "검색 결과가 없습니다."
+  },
   "courseEntryRequirements": {
+    "englishEntryRequirementsTitle": "영어 입학 요건",
+    "englishEntryRequirementsDescription": "IELTS* 점수 5.5 이상 (각 영역 5.0 이상, 시험 결과는 2년 이내여야 함). 영어 능력은 다음 중 하나의 문서화된 증거를 통해 입증할 수도 있습니다:",
     "metaTitle": "과정 입학 요건 - ABM 고등교육",
     "metaDescription": "ABM 과정의 입학 요건에 대해 알아보세요. 학업 요건, 영어 요건, 지원 절차를 포함합니다.",
     "bannerTitle": "과정 입학 요건",
@@ -265,6 +280,86 @@
     "exemption1": "호주, 뉴질랜드, 영국, 미국, 캐나다, 아일랜드 출신 영어 원어민",
     "exemption2": "중등 또는 고등교육에서 영어로 최소 2년간 전일제 학습을 완료한 학생",
     "exemption3": "영어권 기관에서 이전 자격을 취득한 학생",
+    "englishEvidence1": "영어권 국가에서 5년간 교육을 받은 경우; 또는",
+    "englishEvidence2": "호주 RTO에서 수료증 IV 수준 과정을 최소 6개월 완료한 경우; 또는",
+    "englishEvidence3": "영어 배치 시험 성공적 완료",
+    "englishEvidence4": "우리 영어 진학 파트너 중 하나에서 IELTS 전체 5.5에 상응하는 종료 수준의 영어 과정 성공적 완료",
+    "pteRequirementsTitle": "PTE의 경우",
+    "pteRequirementsDescription": "PTE 점수 45.4 (IELTS 5.5) 이상 (각 영역 최소 점수: 듣기 – 42.7, 읽기 – 47.9, 말하기 – 51, 쓰기 – 42.2)",
+    "pteTableTitle": "각 영역별 5.5 IELTS에 상응하는 PTE",
+    "pteListening": "PTE -A 듣기",
+    "pteReading": "PTE – A 읽기",
+    "pteSpeaking": "PTE – A 말하기",
+    "pteWriting": "PTE – A 쓰기",
+    "pteListeningScore": "42.7",
+    "pteReadingScore": "47.9",
+    "pteSpeakingScore": "51",
+    "pteWritingScore": "42.2",
+    "competencyInEnglishTitle": "영어 능력",
+    "competencyDescription": "다음 중 하나에 해당하는 경우, 비자 신청 시 영어 시험 점수 증거를 제공할 필요가 없습니다:",
+    "competency1": "중등 교환 프로그램, 대학원 연구 과정, 독립형 해외 학생 영어 집중 과정(ELICOS), 외교부 또는 국방부 지원 학생을 포함한 주 과정으로 전일제 학교 학습에 등록되어 있습니다.",
+    "competency2": "다음 국가 중 하나 이상에서 최소 5년간 학습을 완료했습니다: 호주, 영국, 미국, 캐나다, 뉴질랜드, 남아프리카, 또는 아일랜드 공화국.",
+    "competency3": "영국, 미국, 캐나다, 뉴질랜드 또는 아일랜드 공화국의 시민권자이며 여권을 소지하고 있습니다.",
+    "competency4": "학생 비자 신청 전 2년 내에, 학생 비자를 소지한 상태에서 호주에서 영어로 고등학교 졸업장 또는 수료증 IV 이상 수준의 호주 자격 체계 자격을 위한 과정의 상당 부분을 완료했습니다.",
+    "englishNote": "*PTE 및 TOEFL과 같은 다른 영어 시험도 인정될 수 있습니다. 학생들은 IELTS 5.5에 상응함을 확인할 수 있도록 결과를 제공해야 합니다.",
+    "elicosPathwayPartnersTitle": "ELICOS 진학 파트너",
+    "elicosPartners": {
+      "ctic": {
+        "name": "CTIC English",
+        "url": "http://ctic.com.au/",
+        "courses": "• 종료 수준 Credit의 EAP\n• 종료 수준 Grade C의 IELTS 준비\n• 종료 수준 B2의 Real English, General English, Cambridge"
+      },
+      "elc": {
+        "name": "ELC",
+        "url": "http://www.elc.edu.au/english",
+        "courses": "• 학술 목적 영어: 최소 10주간의 학술 영어와 EAP 1의 성공적인 종료 결과\n• Cambridge English: 최소 완전한 과정(10-12주)의 Cambridge B2 First (최소 Grade C)\n• IELTS 준비: 최소 10주간의 IELTS 준비와 5.5의 성공적인 예측 결과"
+      },
+      "elsis": {
+        "name": "ELSIS",
+        "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
+        "courses": "• General English Upper Intermediate 수준 완료\n• EAP 1 완료"
+      },
+      "englishUnlimited": {
+        "name": "English Unlimited",
+        "url": "https://eu.edu.au/",
+        "courses": "• General English (일상 영어 교수법 – Upper intermediate 수준)\n• EAP (B 수준에서 B+)"
+      },
+      "greenwich": {
+        "name": "Greenwich College",
+        "url": "https://www.greenwichcollege.edu.au/your-campus/sydney",
+        "courses": "• 최소 8주간의 General English (Upper intermediate 수준)\n• 종료 점수 5.5-7.0+의 IELTS 준비\n• 종료 점수 5.5+의 Cambridge 준비 PET, FCE, CAE\n• 종료 점수 5.5의 English for Business (Cambridge Linguaskill Business)\n• English for Vocational Studies (EVS) (합격)\n• 종료 수준 Pass의 EAP"
+      },
+      "ilsc": {
+        "name": "ILSC Language Schools",
+        "url": "http://ilsc.com",
+        "courses": "• IELTS Band 5.5에 상응하는 종료 수준의 General English (개별 점수 Band 5 미만 없음) 또는 그 이상.\n• IELTS Band 5.5에 상응하는 종료 수준의 English for Academic Purposes (개별 점수 Band 5 미만 없음) 또는 그 이상.\n• IELTS Band 5.5에 상응하는 종료 수준의 IELTS 준비 (개별 점수 Band 5 미만 없음) 또는 그 이상.\n• IELTS Band 5.5에 상응하는 종료 수준의 Cambridge FCE 준비 및 Cambridge CAE 준비 (개별 점수 Band 5 미만 없음) 또는 그 이상."
+      },
+      "inus": {
+        "name": "INUS",
+        "url": "https://www.inus.edu.au/",
+        "courses": "• IELTS 5.5 이상에 상응하는 종료 수준의 General English 또는 EAP [Upper Intermediate 수준] 완료.\n• EAP Advanced [Advanced 수준] 완료."
+      },
+      "lalingua": {
+        "name": "LA LINGUA",
+        "url": "https://www.lalingua.com/",
+        "courses": "• IELTS 5.5에 상응하는 종료 수준의 IELTS 준비"
+      },
+      "navitas": {
+        "name": "NAVITAS English",
+        "url": "https://www.navitasenglish.edu.au/",
+        "courses": "• Academic English 2: 55% 미만의 하위 기술 없이 60% 합격\n• IELTS 준비: 10주 성공적 완료\n• Cambridge 준비 – B2 First: 10주 또는 12주 성공적 완료\n• General English: Upper Intermediate 10주 성공적 완료"
+      },
+      "scic": {
+        "name": "Sunshine Coast International College",
+        "url": "https://scic.nsw.edu.au/",
+        "courses": "• 학술 목적 영어 (EAP3): EAP 3 인증서 (Upper Intermediate: CEFR = B2)\n• General English: Upper Intermediate 이상 성공적 완료 (CEFR=B2)"
+      },
+      "uec": {
+        "name": "Universal English College (UEC)",
+        "url": "https://uec.edu.au/",
+        "courses": "• Upper Intermediate 종료 수준의 General English\n• IELTS 5.5에 상응하는 종료 수준의 IELTS 준비\n• IELTS 5.5에 상응하는 종료 수준의 Academic English Program"
+      }
+    },
     "additionalRequirementsTitle": "추가 요건",
     "healthRequirementsTitle": "건강 및 안전 요건",
     "healthRequirementsDescription": "일부 과정, 특히 실습 구성 요소에 특정 건강 및 안전 요건이 있을 수 있습니다.",
@@ -403,16 +498,6 @@
     "contactUs": "문의하기",
     "enrolNow": "지금 등록하기"
   },
-  "news": {
-    "bannerTitle": "최신 소식",
-    "intro": "ABM의 최신 소식을 만나보세요.",
-    "searchPlaceholder": "뉴스 검색...",
-    "sortBy": "정렬:",
-    "newest": "최신순",
-    "oldest": "오래된순",
-    "readMore": "자세히 보기",
-    "noResults": "검색 결과가 없습니다."
-  },
   "checkout": {
     "title": "수강 등록",
     "firstName": "이름",
@@ -455,5 +540,22 @@
     "verificationError": "결제 정보를 확인하는 중 오류가 발생했습니다.",
     "backToCourses": "코스 목록으로 돌아가기",
     "verifyingPayment": "결제 정보를 확인하고 있습니다..."
+  },
+  "newsletter": {
+    "title": "뉴스레터 구독",
+    "desc": "지금 구독하고 최신 소식을 받아보세요!",
+    "placeholder": "이메일을 입력하세요",
+    "button": "구독하기"
+  },
+  "studentInsights": {
+    "bannerTitle": "학생 경험 한눈에 보기",
+    "testimonialTitle": "학생 후기",
+    "testimonialDescription": "ABM에서의 경험에 대해 학생들이 직접 전하는 이야기를 확인해보세요.",
+    "testimonialImageAlt": "학생 후기 {number}",
+    "clickToView": "클릭하여 크게 보기"
+  },
+  "shortCourses": {
+    "exploreOtherShortCourses": "다른 단기 과정도 둘러보세요",
+    "exploreOtherShortCoursesDesc": "더 다양한 단기 요리 클래스를 통해 새로운 경험과 실력을 쌓아보세요."
   }
 }

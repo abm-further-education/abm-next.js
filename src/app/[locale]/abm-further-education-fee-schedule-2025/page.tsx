@@ -20,7 +20,7 @@ export default async function Page() {
           <div className="bg-neutral-900/50 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <div className="max-w-1000 mx-auto px-20 py-40">
+      <div className="max-w-[1600px] mx-auto px-20 py-40">
         <h1 className="text-3xl font-bold mb-20 text-center">{t('title')}</h1>
 
         {/* Promotional Message */}

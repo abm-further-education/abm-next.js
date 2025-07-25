@@ -1,14 +1,17 @@
 import React from 'react';
 import { paragraphStyle, titleStyle } from './CourseDetail';
 import Link from 'next/link';
-import { courseInformationData } from '@/lib/constants';
+import getCourseInformationData from '@/lib/courseInformation';
 import { cn } from '@/lib/utils';
 import Button from '@/components/common/Button';
-import CourseTimetable from './CourseTimetable';
+
+import { useParams } from 'next/navigation';
+import { Book, Calendar, MapPin } from 'lucide-react';
 
 export interface CourseInformationInfo {
   description?: string;
   courseCode?: string;
+  duration?: string;
   deliveryMode?: {
     title: string;
     mode: string;
@@ -25,6 +28,14 @@ export interface CourseInformationInfo {
     linkUrl?: string;
     description?: string;
   };
+  tables?: {
+    headers: string[];
+    rows: string[][];
+  }[];
+  partners?: {
+    name: string;
+    desc: string;
+  }[];
 }
 
 interface CourseInformationProps {
@@ -47,8 +58,14 @@ function CourseInformationContent({
   };
 
   return (
-    <>
-      <div className={cn(paragraphStyle, 'grid grid-cols-2 gap-20')}>
+    <section className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
+      <h1 className="text-3xl font-bold mb-10">Course Information</h1>
+      <div
+        className={cn(
+          paragraphStyle,
+          'grid grid-cols-1 md:grid-cols-2 gap-60 text-base'
+        )}
+      >
         <div>
           {courseInfo.description && (
             <div className="mb-20 col-span-2">
@@ -58,22 +75,36 @@ function CourseInformationContent({
         </div>
 
         <div>
+          <h2 className="text-xl font-bold mb-10">Overview</h2>
+          {courseInfo.duration && (
+            <div className="mb-8 flex items-center gap-10">
+              <Calendar className="w-24 h-24 text-primary" />
+              <h3 className={titleStyle}>Duration</h3>
+              <span>{courseInfo.duration}</span>
+            </div>
+          )}
           {courseInfo.deliveryMode && (
-            <div className="my-10">
+            <div className="flex items-center gap-10">
+              <Book className="w-24 h-24 text-primary" />
               <h3 className={titleStyle}>{courseInfo.deliveryMode.title}</h3>
               <span>{courseInfo.deliveryMode.mode}</span>
             </div>
           )}
           {courseInfo.deliverySite && (
             <div className="my-10">
-              <h3 className={titleStyle}>{courseInfo.deliverySite.title}</h3>
-              {courseInfo.deliverySite.locations.map((location, index) => (
-                <div key={index}>
-                  <span>
-                    • <strong>{location.type}</strong>: {location.address}
-                  </span>
-                </div>
-              ))}
+              <div className="flex items-center gap-10">
+                <MapPin className="w-24 h-24 text-primary" />
+                <h3 className={titleStyle}>{courseInfo.deliverySite.title}</h3>
+              </div>
+              <div>
+                {courseInfo.deliverySite.locations.map((location, index) => (
+                  <div key={index}>
+                    <span>
+                      • <strong>{location.type}</strong>: {location.address}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
           {courseInfo.additionalInfo && (
@@ -115,14 +146,21 @@ function CourseInformationContent({
           )}
         </div>
       </div>
-      {courseInfo.courseCode && (
-        <CourseTimetable courseCode={courseInfo.courseCode} />
-      )}
-    </>
+    </section>
   );
 }
 
 function CourseInformation({ id }: { id: string }) {
+  const params = useParams();
+  let locale = 'en';
+  if (params?.locale) {
+    if (Array.isArray(params.locale)) {
+      locale = params.locale[0];
+    } else {
+      locale = params.locale;
+    }
+  }
+  const courseInformationData = getCourseInformationData(locale);
   const courseInfo = courseInformationData[id] || {};
 
   // 특정 코스들에 대해 "More information"과 "Enrol Now" 버튼을 숨김

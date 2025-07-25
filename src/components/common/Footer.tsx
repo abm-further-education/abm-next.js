@@ -152,8 +152,8 @@ function Footer() {
             </Link>
           </li>
           <li>
-            <Link href="/agent" target="_blank">
-              ABM Policies and Procedure
+            <Link href="/abm-policies-procedures-and-forms" target="_blank">
+              ABM Policies and Procedures
             </Link>
           </li>
         </ul>

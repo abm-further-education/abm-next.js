@@ -1,6 +1,5 @@
 'use client';
 
-import Banner from '@/components/common/Banner';
 import FadeIn from '@/components/common/FadeIn';
 import { useTranslations } from 'next-intl';
 import React, { useState, useMemo } from 'react';
@@ -52,23 +51,11 @@ function Page() {
   }, [searchTerm, selectedCategory, selectedType, selectedLevel]);
 
   return (
-    <div>
-      <Banner
-        slides={[
-          {
-            imgPath: '/courses/courses.png',
-            title: 'Courses At ABM',
-            content: '',
-          },
-        ]}
-      />
-
+    <div className="px-20 xl:px-0 max-w-[1600px] mx-auto">
       <FadeIn>
-        <div className="flex flex-col items-center justify-center py-50">
-          <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-            {t('title')}
-          </h2>
-          <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
+        <div className="pt-140">
+          <h2 className="text-2xl md:text-4xl font-bold py-20">{t('title')}</h2>
+          <p className="text-sm md:text-base text-neutral-700">
             {t('description')}
           </p>
         </div>
@@ -76,25 +63,27 @@ function Page() {
 
       {/* Main Content */}
       <section className="px-16 md:px-0 py-50">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-40">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="flex flex-col lg:flex-row gap-40 relative min-h-screen">
             {/* Filters Sidebar */}
             <div className="lg:w-300 flex-shrink-0">
-              <CourseFilter
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                selectedCategory={selectedCategory}
-                setSelectedCategory={setSelectedCategory}
-                selectedType={selectedType}
-                setSelectedType={setSelectedType}
-                selectedLevel={selectedLevel}
-                setSelectedLevel={setSelectedLevel}
-                courseCategories={courseCategories}
-                courseTypes={courseTypes}
-                courseLevels={courseLevels}
-                totalCourses={courseData.length}
-                filteredCourses={filteredCourses.length}
-              />
+              <div className="sticky top-140 z-10">
+                <CourseFilter
+                  searchTerm={searchTerm}
+                  setSearchTerm={setSearchTerm}
+                  selectedCategory={selectedCategory}
+                  setSelectedCategory={setSelectedCategory}
+                  selectedType={selectedType}
+                  setSelectedType={setSelectedType}
+                  selectedLevel={selectedLevel}
+                  setSelectedLevel={setSelectedLevel}
+                  courseCategories={courseCategories}
+                  courseTypes={courseTypes}
+                  courseLevels={courseLevels}
+                  totalCourses={courseData.length}
+                  filteredCourses={filteredCourses.length}
+                />
+              </div>
             </div>
 
             {/* Courses Grid */}
@@ -125,7 +114,7 @@ function Page() {
                   </p>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-30">
+                <div className="sm:grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
                   {filteredCourses.map((course) => (
                     <CourseCard key={course.id} course={course} />
                   ))}
@@ -135,52 +124,6 @@ function Page() {
           </div>
         </div>
       </section>
-
-      {/* Commented out original grid section */}
-      {/*
-      <section className="flex flex-col items-center justify-center py-50">
-        <FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-40 mt-40">
-            <Card
-              imgPath="/home/Cookery.png"
-              title="Cookery"
-              link="/cookery-and-hospitality-courses"
-              className="w-300 md:w-440"
-            />
-            <Card
-              imgPath="/home/Hospitality.png"
-              title="Hospitality"
-              link="/cookery-and-hospitality-courses"
-              className="w-300 md:w-440"
-            />
-            <Card
-              imgPath="/home/Fitness.png"
-              title="Fitness & Sports"
-              link="/fitness-instructor-personal-trainer-courses"
-              className="w-300 md:w-440"
-            />
-            <Card
-              imgPath="/home/Business.png"
-              title="Business"
-              link="/business-and-management-courses"
-              className="w-300 md:w-440"
-            />
-            <Card
-              imgPath="/home/Project.png"
-              title="Project & Program"
-              link="/project-and-program-management-courses"
-              className="w-300 md:w-440"
-            />
-            <Card
-              imgPath="/home/HR.png"
-              title="HR Management"
-              link="/human-resources-courses"
-              className="w-300 md:w-440"
-            />
-          </div>
-        </FadeIn>
-      </section>
-      */}
     </div>
   );
 }

@@ -25,9 +25,9 @@ function Units({ params }: { params: { id: string } }) {
     'sit40521-certificate-iv-in-kitchen-management': KM_UNITS,
     'sis40221-certificate-iv-in-fitness': CERTIV_FITNESS_UNITS,
     'sis30321-certificate-iii-in-fitness': CERTIII_FITNESS_UNITS,
-    'certificate-iv-in-sport-fast-track': CERTIV_FITNESS_UNITS,
+    'certificate-iv-in-fitness-fast-track': CERTIV_FITNESS_UNITS,
     'sis50321-diploma-of-sport': DIPLOMA_SPORT_UNITS,
-    'certificate-iii-in-sport-fast-track': CERTIV_FITNESS_FAST_UNITS,
+    'certificate-iii-in-fitness-fast-track': CERTIV_FITNESS_FAST_UNITS,
     'bsb40120-certificate-iv-in-business': CERTIV_BUSINESS_UNITS,
     'bsb50120-diploma-of-business': DIPLOMA_BUSINESS_UNITS,
     'bsb60120-advanced-diploma-of-business': ADVANCED_BUSINESS_UNITS,
@@ -35,7 +35,7 @@ function Units({ params }: { params: { id: string } }) {
     'bsb40920-certificate-iv-in-project-management-practice':
       CERTIV_PROJECT_UNITS,
     'bsb50820-diploma-of-project-management-practice': DIPLOMA_PROJECT_UNITS,
-    'bsb60820-advanced-diploma-of-project-management-practice':
+    'bsb60720-advanced-diploma-of-project-management-practice':
       ADVANCED_PROJECT_UNITS,
     'bsb40420-certificate-iv-in-human-resource-management': CERTIV_HR_UNITS,
     'bsb50320-diploma-of-human-resource-management': DIPLOMA_HR_UNITS,
@@ -47,6 +47,7 @@ function Units({ params }: { params: { id: string } }) {
   }
   return (
     <div>
+      <h1 className="text-3xl font-bold mb-10">Course Structure</h1>
       <table className="min-w-full border-b border-gray-300 text-sm text-left text-gray-700">
         <thead className="bg-gray-100">
           <tr>

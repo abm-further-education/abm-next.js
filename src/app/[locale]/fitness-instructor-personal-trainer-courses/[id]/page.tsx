@@ -5,8 +5,8 @@ import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
-import { courseDetails } from '@/lib/constants';
-import React, { use, useEffect } from 'react';
+import getCourseDetailsData from '@/lib/courseDetails';
+import React, { useEffect, use } from 'react';
 
 const menuItems = ['Course Information', 'Course Detail', 'Units'];
 
@@ -14,9 +14,9 @@ const mappingCourseTitle: { [key: string]: string } = {
   'sis30321-certificate-iii-in-fitness': 'Certificate III in Fitness',
   'sis40221-certificate-iv-in-fitness': 'Certificate IV in Fitness',
   'sis50321-diploma-of-sport': 'SIS50321 – Diploma of Sport (Coaching)',
-  'certificate-iv-in-sport-fast-track':
+  'certificate-iv-in-fitness-fast-track':
     'Certificate IV in Fitness (Fast Track)',
-  'certificate-iii-in-sport-fast-track':
+  'certificate-iii-in-fitness-fast-track':
     'Certificate III in Fitness (Fast Track)',
 };
 
@@ -24,13 +24,19 @@ const mappingCourseImage: { [key: string]: string } = {
   'sis30321-certificate-iii-in-fitness': '/courses/fitness/fitness_1.png',
   'sis40221-certificate-iv-in-fitness': '/courses/fitness/fitness_5-banner.png',
   'sis50321-diploma-of-sport': '/courses/fitness/diploma-of-sport.png',
-  'certificate-iv-in-sport-fast-track': '/courses/fitness/fitness_3-banner.png',
-  'certificate-iii-in-sport-fast-track':
+  'certificate-iv-in-fitness-fast-track':
+    '/courses/fitness/fitness_3-banner.png',
+  'certificate-iii-in-fitness-fast-track':
     '/courses/fitness/fitness_2-banner.png',
 };
 
-function Page({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function Page({
+  params,
+}: {
+  params: Promise<{ id: string; locale: string }>;
+}) {
+  const { id, locale } = use(params);
+  const courseDetails = getCourseDetailsData(locale);
 
   // 동적으로 페이지 타이틀 설정
   useEffect(() => {
@@ -59,30 +65,20 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
       />
       <CourseDetailMenu menuItems={menuItems} />
 
-      <section
-        id={getSectionId('Course Information')}
-        className="max-w-1000 mx-auto px-20 py-40"
-      >
+      <section id={getSectionId('Course Information')}>
         <CourseInformation id={id} />
       </section>
-
-      {/* Course Detail Section */}
-      <section
-        id={getSectionId('Course Detail')}
-        className="max-w-1000 mx-auto px-20 py-10 bg-gray-50"
-      >
+      <section id={getSectionId('Course Detail')}>
+        {/* Course Detail Section */}
         <CourseDetail courseInfo={courseDetails[id] || {}} />
       </section>
-
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-1000 mx-auto px-20 py-40"
+        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
       >
         <Units params={{ id }} />
       </section>
     </div>
   );
 }
-
-export default Page;

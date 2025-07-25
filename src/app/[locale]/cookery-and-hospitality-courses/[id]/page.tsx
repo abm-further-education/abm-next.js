@@ -7,8 +7,8 @@ import Units from '@/domains/courses/components/Units';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import IndustryPlacement from '@/domains/courses/contents/cookery/IndustryPlacement';
 import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/IndustryPlacementHospitality';
-import { courseDetails } from '@/lib/constants';
-import React, { use, useEffect } from 'react';
+import getCourseDetailsData from '@/lib/courseDetails';
+import React, { useEffect, use } from 'react';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
@@ -49,8 +49,13 @@ const menuItems = {
   ],
 };
 
-function Page({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function Page({
+  params,
+}: {
+  params: Promise<{ id: string; locale: string }>;
+}) {
+  const { id, locale } = use(params);
+  const courseDetails = getCourseDetailsData(locale);
 
   // 동적으로 페이지 타이틀 설정
   useEffect(() => {
@@ -81,7 +86,7 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
             <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
           }
         />
-        <div className="max-w-1000 mx-auto px-20 py-40">
+        <div className="max-w-[1600px] mx-auto px-20 py-40">
           <IndustryPlacementHospitality />
         </div>
       </div>
@@ -105,7 +110,7 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
             <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
           }
         />
-        <div className="max-w-1000 mx-auto px-20 py-40">
+        <div className="max-w-[1600px] mx-auto px-20 py-40">
           <IndustryPlacement />
         </div>
       </div>
@@ -136,31 +141,22 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
       />
 
       {/* Course Information Section */}
-      <section
-        id={getSectionId('Course Information')}
-        className="max-w-1000 mx-auto px-20 py-40"
-      >
+      <section id={getSectionId('Course Information')}>
         <CourseInformation id={id} />
       </section>
 
       {/* Course Detail Section */}
-
-      <section
-        id={getSectionId('Course Detail')}
-        className="max-w-1000 mx-auto px-20 py-10 bg-gray-50"
-      >
+      <section id={getSectionId('Course Detail')}>
         <CourseDetail courseInfo={courseDetails[id] || {}} />
       </section>
 
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-1000 mx-auto px-20 py-40"
+        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
       >
         <Units params={{ id }} />
       </section>
     </div>
   );
 }
-
-export default Page;

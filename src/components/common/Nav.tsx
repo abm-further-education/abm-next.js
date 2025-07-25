@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import MobileNav from './MobileNav';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -17,7 +17,7 @@ import {
   hrMenu,
   shortCourseMenu,
   MENU_STRUCTURE,
-} from '@/lib/constants';
+} from '@/lib';
 
 const allMenus = [
   ...cookeryMenu,
@@ -31,6 +31,7 @@ const allMenus = [
 
 function Nav() {
   const params = useParams();
+  const pathname = usePathname();
   const t = useTranslations('nav');
   const tStudy = useTranslations('studyWithUs');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,6 +40,13 @@ function Nav() {
   const [results, setResults] = useState<{ title: string; href: string }[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const router = useRouter();
+
+  // 특정 페이지에서 배경색을 항상 black으로 설정할 페이지들
+  const isSpecialPage =
+    pathname.includes('/courses') ||
+    pathname.includes('/abm-policies-procedures-and-forms') ||
+    pathname.includes('checkout') ||
+    pathname.includes('success');
 
   // menuList를 동적으로 생성하는 함수
   const createMenuList = () => {
@@ -247,7 +255,9 @@ function Nav() {
       <div className="relative">
         <div
           className={cn(
-            isScrolled || subMenu ? 'bg-black shadow-md ' : 'bg-transparent',
+            isScrolled || subMenu || isSpecialPage
+              ? 'bg-black shadow-md '
+              : 'bg-transparent',
             'fixed top-56 md:top-55 w-full h-76 z-[800] transition-all duration-500'
           )}
         >
@@ -269,12 +279,12 @@ function Nav() {
                   onKeyDown={handleKeyDown}
                 />
                 {search && results.length > 0 && (
-                  <ul className="bg-primaryBk text-white mt-4 shadow-lg absolute z-50 w-300 max-h-60 overflow-y-auto">
+                  <ul className="bg-primaryBk text-white mt-4 shadow-xl absolute z-80 w-300 max-h-100 overflow-y-auto">
                     {results.map((menu, idx) => (
                       <li
                         key={idx}
-                        className={`px-4 py-2 hover:bg-gray-800 cursor-pointer ${
-                          highlightedIndex === idx ? 'bg-gray-800' : ''
+                        className={`px-8 py-4 hover:bg-primary cursor-pointer ${
+                          highlightedIndex === idx ? 'bg-primary' : 'bg-black'
                         }`}
                         onMouseEnter={() => setHighlightedIndex(idx)}
                         onClick={() => {
@@ -295,7 +305,9 @@ function Nav() {
               </div>
               <div
                 className={cn(
-                  subMenu === 'Courses' ? 'grid-cols-3' : 'grid-cols-2',
+                  ['Courses', '과정', 'Cursos'].includes(subMenu)
+                    ? 'grid-cols-3'
+                    : 'grid-cols-2',
                   'grid gap-x-40 gap-y-18'
                 )}
               >
@@ -367,8 +379,16 @@ function Nav() {
             {menuList.map((item) => (
               <Link
                 onMouseEnter={() => {
-                  if (item.title === 'Contact') setSubMenu('');
-                  else setSubMenu(item.title);
+                  // Contact 메뉴이거나 subMenu가 없는 경우 서브메뉴를 열지 않음
+                  if (
+                    item.title === 'Contact' ||
+                    !item.subMenu ||
+                    item.subMenu.length === 0
+                  ) {
+                    setSubMenu('');
+                  } else {
+                    setSubMenu(item.title);
+                  }
                 }}
                 onClick={() => setSubMenu('')}
                 key={item.title}

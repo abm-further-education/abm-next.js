@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Autoplay, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { isMobile, isTablet } from 'react-device-detect';
 
@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { newsData, NewsItem } from '@/lib/constants';
+import { newsData, NewsItem } from '@/lib/news';
 
 interface NewsCardProps {
   news: NewsItem;
@@ -17,21 +17,23 @@ interface NewsCardProps {
 
 const NewsCard = ({ news }: NewsCardProps) => {
   return (
-    <div className="shadow-xl h-400 w-300 md:w-400 relative">
-      <Image
-        src={news.image}
-        alt={news.title}
-        width={400}
-        height={250}
-        className="object-cover"
-      />
-      <div className="flex items-center justify-between px-12 mt-14 font-[family-name:var(--font-inter)]">
-        <span className="text-sm">{news.category}</span>
-        <span className="text-xs text-neutral-500">{news.date}</span>
+    <div className="shadow-xl w-320 h-[390px] flex flex-col bg-white overflow-hidden">
+      <div className="w-full h-[180px] overflow-hidden">
+        <Image
+          src={news.image}
+          alt={news.title}
+          width={288}
+          height={180}
+          className="object-cover w-full h-full"
+        />
       </div>
-      <div className="px-12 mt-20">
-        <h3 className="font-semibold">{news.title}</h3>
-        <p className="font-[family-name:var(--font-inter)] text-sm mt-10 text-neutral-400">
+      <div className="flex flex-col flex-1 px-12 py-8">
+        <div className="flex justify-between items-center text-xs text-neutral-500 mb-2">
+          <span>{news.category}</span>
+          <span>{news.date}</span>
+        </div>
+        <h3 className="font-semibold mb-2">{news.title}</h3>
+        <p className="font-[family-name:var(--font-inter)] text-sm text-neutral-400 line-clamp-4">
           {news.description}
         </p>
       </div>
@@ -39,21 +41,21 @@ const NewsCard = ({ news }: NewsCardProps) => {
   );
 };
 function NewsLetter() {
-  const tCommon = useTranslations('common');
+  const tNews = useTranslations('news');
   return (
-    <section className="flex flex-col items-center justify-center md:py-50">
-      <h2 className="text-3xl md:text-5xl font-bold py-50">Latest News</h2>
+    <section className="flex flex-col items-center justify-center py-20 md:py-40">
+      <h2 className="text-3xl md:text-5xl font-bold md:py-50">
+        {tNews('bannerTitle')}
+      </h2>
 
       <Swiper
         navigation
-        modules={[Navigation, Autoplay, Pagination, Scrollbar]}
+        modules={[Autoplay, Scrollbar]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
-        pagination={{ clickable: true }}
-        className="flex items-center justify-center md:justify-between w-full md:max-w-[1400px] md:w-full mx-auto h-500 mt-60"
-        slidesPerView={isMobile ? 1 : isTablet ? 3 : 5}
+        className="flex items-center justify-center md:justify-between w-full md:max-w-[1400px] md:w-full mx-auto h-420 md:h-500 mt-60"
+        slidesPerView={isMobile ? 1 : isTablet ? 3 : 4}
         spaceBetween={30}
-        centeredSlides
       >
         {newsData.map((news) => (
           <SwiperSlide key={news.id} className="">
@@ -62,7 +64,7 @@ function NewsLetter() {
         ))}
       </Swiper>
       <Link href="/news" className="bg-black text-white px-20 py-10">
-        {tCommon('findOutMore')}
+        {tNews('readMore')}
       </Link>
     </section>
   );

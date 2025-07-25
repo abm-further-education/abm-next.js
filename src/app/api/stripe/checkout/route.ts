@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerStripe } from '@/lib/stripe';
-import { shortCourseData } from '@/lib/shortCourseData';
+import getShortCourseData from '@/lib/shortCourseData';
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,10 +21,12 @@ export async function POST(request: NextRequest) {
       selectedDate,
       selectedType,
       courseLocation,
+      finalPrice,
+      appliedPromo,
     } = body;
 
     // 코스 데이터 가져오기
-    const courseData = shortCourseData[courseSlug];
+    const courseData = getShortCourseData('en')[courseSlug];
 
     if (!courseData) {
       return NextResponse.json({ error: 'Course not found' }, { status: 404 });
@@ -43,7 +45,8 @@ export async function POST(request: NextRequest) {
               name: courseName || courseData.title,
               description: courseData.description || '',
             },
-            unit_amount: courseData.price * 100, // Stripe는 센트 단위
+            unit_amount:
+              (finalPrice !== undefined ? finalPrice : courseData.price) * 100, // Stripe는 센트 단위
           },
           quantity: 1,
         },
@@ -70,6 +73,7 @@ export async function POST(request: NextRequest) {
         selectedDate: selectedDate || '',
         selectedType: selectedType || '',
         courseLocation: courseLocation || courseData.location || '',
+        ...(appliedPromo && { appliedPromo }),
       },
       customer_creation: 'always',
       billing_address_collection: 'required',

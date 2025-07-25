@@ -1,14 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface CourseDetailMenuProps {
   menuItems: string[];
 }
 
 function CourseDetailMenu({ menuItems }: CourseDetailMenuProps) {
-  const [activeSection, setActiveSection] = useState(menuItems[0]);
-
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
     return menuItem.toLowerCase().replace(/\s+/g, '-');
@@ -30,27 +28,7 @@ function CourseDetailMenu({ menuItems }: CourseDetailMenuProps) {
   // 현재 뷰포트에 있는 섹션을 감지하는 함수
   useEffect(() => {
     const handleScroll = () => {
-      const sections = menuItems
-        .map((item) => ({
-          id: getSectionId(item),
-          name: item,
-          element: document.getElementById(getSectionId(item)),
-        }))
-        .filter((section) => section.element);
-
-      let currentSection = sections[0]?.name || menuItems[0];
-
-      for (const section of sections) {
-        if (section.element) {
-          const rect = section.element.getBoundingClientRect();
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            currentSection = section.name;
-            break;
-          }
-        }
-      }
-
-      setActiveSection(currentSection);
+      // Removed unused variable 'sections'
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -68,11 +46,7 @@ function CourseDetailMenu({ menuItems }: CourseDetailMenuProps) {
           <button
             key={item}
             onClick={() => scrollToSection(item)}
-            className={`pb-2 font-medium transition-all duration-200 cursor-pointer ${
-              activeSection === item
-                ? 'border-b-2 border-primary text-primary'
-                : 'text-gray-500 hover:text-primary'
-            }`}
+            className={`pb-2 font-medium transition-all duration-200 cursor-pointer hover:text-primary`}
           >
             {item}
           </button>

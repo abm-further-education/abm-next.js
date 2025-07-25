@@ -32,7 +32,6 @@ export default function ImageSlider({ images }: ImageSliderProps) {
               alt={`Slide ${idx + 1}`}
               layout="fill"
               objectFit="cover"
-              className="rounded-md"
             />
           </SwiperSlide>
         ))}
@@ -55,7 +54,6 @@ export default function ImageSlider({ images }: ImageSliderProps) {
                 alt={`Thumbnail ${idx + 1}`}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-md"
               />
             </div>
           </SwiperSlide>

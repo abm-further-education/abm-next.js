@@ -30,3 +30,8 @@ a:hover {
   display: flex !important;
   justify-content: center !important;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ef7511 !important;
+}

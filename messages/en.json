@@ -48,7 +48,8 @@
     "entryRequirements": "Entry Requirements",
     "getUSI": "Get a USI",
     "enrolNow": "Enrol Now",
-    "higherEducationPathway": "Higher Education Pathway"
+    "higherEducationPathway": "Higher Education Pathway",
+    "policiesAndProcedures": "Policies & Procedures"
   },
   "timetable": {
     "title": "Timetable",
@@ -199,6 +200,8 @@
     "phoneMethodDescription": "If you cannot create your USI online, you can call the USI Office:",
     "phoneNumber": "1300 857 536",
     "phoneHours": "Monday to Friday, 8:00am to 6:00pm (AEST)",
+    "requiorangeDocumentsTitle": "Required Documents",
+    "requiorangeDocumentsDescription": "To create your USI, you will need to provide one of the following forms of identification:",
     "requiredDocumentsTitle": "Required Documents",
     "requiredDocumentsDescription": "To create your USI, you will need to provide one of the following forms of identification:",
     "primaryDocumentsTitle": "Primary Documents",
@@ -538,5 +541,22 @@
     "verificationError": "An error occurred while verifying payment information.",
     "backToCourses": "Back to Courses",
     "verifyingPayment": "Verifying payment information..."
+  },
+  "newsletter": {
+    "title": "Subscribe Newsletter",
+    "desc": "Subscribe now and never miss an update!",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
+  "studentInsights": {
+    "bannerTitle": "A Glimpse into Student Experiences",
+    "testimonialTitle": "Student Testimonials",
+    "testimonialDescription": "Discover what our students have to say about their experience at ABM",
+    "testimonialImageAlt": "Student testimonial {number}",
+    "clickToView": "Click to view"
+  },
+  "shortCourses": {
+    "exploreOtherShortCourses": "Explore Our Other Short Courses",
+    "exploreOtherShortCoursesDesc": "Discover more exciting culinary experiences and enhance your skills with our diverse range of short courses."
   }
 }

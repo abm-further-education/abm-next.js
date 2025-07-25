@@ -36,12 +36,12 @@ function page() {
           </p>
         </div>
       </FadeIn>
-      <section className="flex flex-col items-center justify-center py-50">
+      <section className="flex flex-col items-center justify-center pb-40">
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
           ABM Short Courses for 2025
         </h2>
         <FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-40 mt-40">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-20 mt-40">
             <ShortCourseCard
               imgPath="/short-course/barista_1.jpg"
               title="Barista Course"

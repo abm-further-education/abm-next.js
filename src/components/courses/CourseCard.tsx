@@ -84,14 +84,14 @@ export default function CourseCard({ course }: CourseCardProps) {
       </div>
 
       {/* Content */}
-      <div className="p-20">
+      <div className="p-10">
         {/* Title */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-10 line-clamp-2">
+        <h3 className="font-semibold text-gray-900 mb-4 line-clamp-2 h-48">
           {course.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-600 mb-20 line-clamp-3">
+        <p className="text-sm text-gray-600 mb-20 line-clamp-3 h-40">
           {course.description}
         </p>
 
@@ -116,17 +116,17 @@ export default function CourseCard({ course }: CourseCardProps) {
         </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-5 mb-20">
-          {course.tags.slice(0, 3).map((tag, index) => (
+        <div className="flex gap-5 mb-20">
+          {course.tags.slice(0, 2).map((tag, index) => (
             <span
               key={index}
-              className="inline-block px-8 py-3 text-xs bg-gray-100 text-gray-600 rounded-full"
+              className="px-8 text-xs bg-gray-100 text-gray-600 rounded-full h-22 overflow-hidden text-ellipsis whitespace-nowrap max-w-100 flex items-center justify-center"
             >
               {tag}
             </span>
           ))}
           {course.tags.length > 3 && (
-            <span className="inline-block px-8 py-3 text-xs bg-gray-100 text-gray-600 rounded-full">
+            <span className="px-8 text-xs bg-gray-100 text-gray-600 rounded-full h-22 overflow-hidden text-ellipsis whitespace-nowrap max-w-100 flex items-center justify-center">
               +{course.tags.length - 3} more
             </span>
           )}

@@ -5,8 +5,8 @@ import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
-import { courseDetails } from '@/lib/constants';
-import React, { use, useEffect } from 'react';
+import getCourseDetailsData from '@/lib/courseDetails';
+import React, { useEffect, use } from 'react';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'bsb40120-certificate-iv-in-business': 'Certificate IV in Business',
@@ -18,16 +18,21 @@ const mappingCourseTitle: { [key: string]: string } = {
 };
 
 const mappingCourseImage: { [key: string]: string } = {
-  'bsb40120-certificate-iv-in-business': '/courses/business/business_1.png',
-  'bsb50120-diploma-of-business': '/courses/business/business_2.png',
-  'bsb60120-advanced-diploma-of-business': '/courses/business/business_3.png',
+  'bsb40120-certificate-iv-in-business': '/courses/business/business_1.jpg',
+  'bsb50120-diploma-of-business': '/courses/business/business_2.jpg',
+  'bsb60120-advanced-diploma-of-business': '/courses/business/business_3.jpg',
   'bsb80120-graduate-diploma-of-management': '/courses/business/business_4.png',
 };
 
 const menuItems = ['Course Information', 'Course Detail', 'Units'];
 
-function Page({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function Page({
+  params,
+}: {
+  params: Promise<{ id: string; locale: string }>;
+}) {
+  const { id, locale } = use(params);
+  const courseDetails = getCourseDetailsData(locale);
 
   // 동적으로 페이지 타이틀 설정
   useEffect(() => {
@@ -57,25 +62,19 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
 
       <CourseDetailMenu menuItems={menuItems} />
 
-      <section
-        id={getSectionId('Course Information')}
-        className="max-w-1000 mx-auto px-20 py-40"
-      >
+      <section id={getSectionId('Course Information')}>
         <CourseInformation id={id} />
       </section>
 
       {/* Course Detail Section */}
-      <section
-        id={getSectionId('Course Detail')}
-        className="max-w-1000 mx-auto px-20 py-40 bg-gray-50"
-      >
+      <section id={getSectionId('Course Detail')}>
         <CourseDetail courseInfo={courseDetails[id] || {}} />
       </section>
 
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-1000 mx-auto px-20 py-40"
+        className="max-w-[1600px] mx-auto px-20 py-40"
       >
         <Units params={{ id }} />
       </section>
@@ -84,5 +83,3 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
     </div>
   );
 }
-
-export default Page;

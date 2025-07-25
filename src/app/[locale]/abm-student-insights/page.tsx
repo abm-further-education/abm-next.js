@@ -4,8 +4,10 @@ import Banner from '@/components/common/Banner';
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 function StudentInsightsPage() {
+  const t = useTranslations('studentInsights');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   // Testimonial images array
@@ -51,7 +53,7 @@ function StudentInsightsPage() {
         slides={[
           {
             imgPath: '/home/testimonial.png',
-            title: 'A Glimpse into Student Experiences',
+            title: t('bannerTitle'),
             content: '',
           },
         ]}
@@ -65,11 +67,10 @@ function StudentInsightsPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-80">
             <h2 className="text-3xl md:text-4xl font-bold mb-30 font-[family-name:var(--font-montserrat)]">
-              Student Testimonials
+              {t('testimonialTitle')}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Discover what our students have to say about their experience at
-              ABM
+              {t('testimonialDescription')}
             </p>
           </div>
 
@@ -83,7 +84,7 @@ function StudentInsightsPage() {
               >
                 <Image
                   src={`/testimonials/${imageNumber}.png`}
-                  alt={`Student testimonial ${imageNumber}`}
+                  alt={t('testimonialImageAlt', { number: imageNumber })}
                   width={300}
                   height={250}
                   className="w-full h-200 md:h-250 object-cover"
@@ -91,7 +92,7 @@ function StudentInsightsPage() {
                 />
                 <div className="absolute inset-0 bg-black/20 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                    <p className="text-sm font-semibold">Click to view</p>
+                    <p className="text-sm font-semibold">{t('clickToView')}</p>
                   </div>
                 </div>
               </div>
@@ -144,7 +145,7 @@ function StudentInsightsPage() {
           >
             <Image
               src={`/testimonials/${selectedImage}.png`}
-              alt={`Student testimonial ${selectedImage}`}
+              alt={t('testimonialImageAlt', { number: selectedImage })}
               width={800}
               height={600}
               className="max-w-600 max-h-full object-contain"

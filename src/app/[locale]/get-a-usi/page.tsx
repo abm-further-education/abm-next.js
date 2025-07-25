@@ -1,8 +1,8 @@
 import React from 'react';
 import Banner from '@/components/common/Banner';
-import Button from '@/components/common/Button';
 import USIButton from '@/components/common/USIButton';
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 
 export default async function Page() {
   const t = await getTranslations('usi');
@@ -22,7 +22,7 @@ export default async function Page() {
         }
       />
 
-      <div className="max-w-1000 mx-auto px-20 py-40">
+      <div className="max-w-[1600px] mx-auto px-20 py-40">
         <h1 className="text-3xl font-bold mb-20 text-center">{t('title')}</h1>
 
         {/* What is a USI */}
@@ -102,14 +102,14 @@ export default async function Page() {
           </div>
         </div>
 
-        {/* Required Documents */}
+        {/* Requiorange Documents */}
         <div className="mb-40">
           <h2 className="text-2xl font-bold mb-15 text-orange-800">
-            {t('requiredDocumentsTitle')}
+            {t('requiorangeDocumentsTitle')}
           </h2>
           <div className="bg-orange-50 p-20">
             <p className="text-gray-700 mb-15">
-              {t('requiredDocumentsDescription')}
+              {t('requiorangeDocumentsDescription')}
             </p>
             <div className="grid md:grid-cols-2 gap-20">
               <div>
@@ -140,10 +140,10 @@ export default async function Page() {
 
         {/* Important Information */}
         <div className="mb-40">
-          <h2 className="text-2xl font-bold mb-15 text-red-800">
+          <h2 className="text-2xl font-bold mb-15 text-orange-800">
             {t('importantInfoTitle')}
           </h2>
-          <div className="bg-red-50 p-20">
+          <div className="bg-orange-50 p-20">
             <ul className="list-disc list-inside space-y-5 text-gray-700">
               <li>{t('importantInfo1')}</li>
               <li>{t('importantInfo2')}</li>
@@ -156,35 +156,39 @@ export default async function Page() {
 
         {/* Need Help */}
         <div className="mb-40">
-          <h2 className="text-2xl font-bold mb-15 text-gray-800">
+          <h2 className="text-2xl font-bold mb-15 text-gray-800 text-center">
             {t('needHelpTitle')}
           </h2>
-          <div className="bg-gray-50 p-20 ">
-            <p className="text-gray-700 mb-15">{t('needHelpDescription')}</p>
-            <div className="grid md:grid-cols-2 gap-20">
-              <div>
-                <h3 className="text-lg font-bold mb-10 text-gray-800">
-                  {t('contactABMTitle')}
-                </h3>
-                <p className="text-gray-700 mb-10">
-                  {t('contactABMDescription')}
-                </p>
-                <Button className="bg-primary-bk text-white hover:bg-gray-700">
-                  {t('contactABMButton')}
-                </Button>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold mb-10 text-gray-800">
-                  {t('usiHelpTitle')}
-                </h3>
-                <p className="text-gray-700 mb-10">{t('usiHelpDescription')}</p>
-                <USIButton
-                  className="bg-primary-bk text-white hover:bg-gray-700"
-                  url="https://www.usi.gov.au/help"
-                >
-                  {t('usiHelpButton')}
-                </USIButton>
-              </div>
+          <div className="bg-gray-50 p-20 text-center">
+            <p className="text-gray-700 mb-15"></p>
+
+            <div>
+              <h3 className="text-lg font-bold mb-5 text-gray-800">
+                {t('contactABMTitle')}
+              </h3>
+              <p className="text-gray-700 mb-14">
+                {t('contactABMDescription')}
+                <br />
+                {t('needHelpDescription')}
+              </p>
+              <Link
+                className="bg-primary-bk text-white px-20 py-10"
+                href="/contact"
+              >
+                {t('contactABMButton')}
+              </Link>
+            </div>
+            <div className="mt-60">
+              <h3 className="text-lg font-bold mb-5 text-gray-800">
+                {t('usiHelpTitle')}
+              </h3>
+              <p className="text-gray-700 mb-10">{t('usiHelpDescription')}</p>
+              <USIButton
+                className="bg-primary-bk text-white hover:bg-primary"
+                url="https://www.usi.gov.au/help"
+              >
+                {t('usiHelpButton')}
+              </USIButton>
             </div>
           </div>
         </div>

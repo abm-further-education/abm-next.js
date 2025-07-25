@@ -126,7 +126,7 @@ export async function POST(req: NextRequest) {
                 
                 <p style="color: #333333; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">Dear ${first_name},</p>
                 <p style="color: #333333; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-                  Thank you for your enquiry! We have received your message and will get back to you within 24 hours.
+                  Thank you for your enquiry! We have received your message and will get back to you as soon as possible.
                 </p>
                 
                 <!-- Your Enquiry Summary -->
@@ -145,10 +145,10 @@ export async function POST(req: NextRequest) {
                 <div style="background-color: #ffffff; border: 2px solid #000000; padding: 25px; border-radius: 8px; text-align: center; margin-bottom: 20px;">
                   <h3 style="color: #000000; margin-top: 0; margin-bottom: 15px;">Need Immediate Assistance?</h3>
                   <p style="color: #333333; margin-bottom: 15px;">Feel free to contact us directly:</p>
-                  <p style="margin: 8px 0; color: #000000; font-size: 16px;"><strong>📧 Email:</strong> info@abm.edu.au</p>
-                  <p style="margin: 8px 0; color: #000000; font-size: 16px;"><strong>📞 Phone:</strong> +61 (02) 9160 4507</p>
-                  <p style="margin: 8px 0; color: #000000; font-size: 16px;"><strong>💬 WhatsApp:</strong> +61 482 796 010</p>
-                  <p style="margin: 15px 0 8px 0; color: #000000; font-size: 16px;"><strong>📍 Address:</strong></p>
+                  <p style="margin: 8px 0; color: #000000; font-size: 16px;"><strong>Email:</strong> info@abm.edu.au</p>
+                  <p style="margin: 8px 0; color: #000000; font-size: 16px;"><strong>Phone:</strong> +61 (02) 9160 4507</p>
+                  <p style="margin: 8px 0; color: #000000; font-size: 16px;"><strong>WhatsApp:</strong> +61 482 796 010</p>
+                  <p style="margin: 15px 0 8px 0; color: #000000; font-size: 16px;"><strong>Address:</strong></p>
                   <p style="margin: 0; color: #333333; font-size: 14px;">242 Castlereagh Street<br/>Sydney NSW 2000 Australia</p>
                 </div>
 
@@ -175,7 +175,6 @@ export async function POST(req: NextRequest) {
               <div style="background-color: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e9ecef;">
                 <p style="margin: 0; color: #666666; font-size: 14px;">ABM Further Education</p>
                 <p style="margin: 5px 0 0 0; color: #666666; font-size: 14px;">242 Castlereagh Street Sydney NSW 2000 Australia</p>
-                <p style="margin: 5px 0 0 0; color: #666666; font-size: 12px;">This is an automated response. Please do not reply to this email.</p>
               </div>
             </div>
           </body>

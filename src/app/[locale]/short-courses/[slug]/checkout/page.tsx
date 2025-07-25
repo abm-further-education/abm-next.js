@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/common/Button';
-import { shortCourseData } from '@/lib/shortCourseData';
+import getShortCourseData from '@/lib/shortCourseData';
 import { useSearchParams } from 'next/navigation';
 import { getStripe } from '@/lib/stripe';
+import Image from 'next/image';
 
 const howDidYouHearOptions = [
   'agent',
@@ -22,13 +23,11 @@ export default function CheckoutPage() {
   const params = useParams();
   const searchParams = useSearchParams();
   const slug = params.slug as string;
-  const courseData = shortCourseData[slug];
+  const courseData = getShortCourseData('en')[slug];
 
   // 쿼리스트링에서 선택값 가져오기
   const selectedDate = searchParams.get('date') || '';
   const selectedType = searchParams.get('type') || '';
-
-  console.log(selectedDate);
 
   const [form, setForm] = useState({
     firstName: '',
@@ -43,6 +42,46 @@ export default function CheckoutPage() {
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [loading, setLoading] = useState(false);
+  const [discount, setDiscount] = useState(0);
+  const [appliedPromo, setAppliedPromo] = useState('');
+
+  // 프로모션 코드 목록
+  const promoCodes: { [code: string]: { discount: number; label: string } } = {
+    ASC10: { discount: 0.1, label: '10% OFF' },
+    ASC20: { discount: 0.2, label: '20% OFF' },
+  };
+
+  // 프로모션 코드 적용 함수
+  const applyPromotion = () => {
+    const code = form.promotionCode.trim().toUpperCase();
+    if (promoCodes[code]) {
+      setDiscount(promoCodes[code].discount);
+      setAppliedPromo(code);
+      setErrors((prev) => ({ ...prev, promotionCode: '' }));
+    } else if (code === '') {
+      setDiscount(0);
+      setAppliedPromo('');
+      setErrors((prev) => ({ ...prev, promotionCode: '' }));
+    } else {
+      setDiscount(0);
+      setAppliedPromo('');
+      setErrors((prev) => ({
+        ...prev,
+        promotionCode: 'Invalid promotion code.',
+      }));
+    }
+  };
+
+  // 프로모션 코드 입력 시 자동 적용
+  React.useEffect(() => {
+    applyPromotion();
+    // eslint-disable-next-line
+  }, [form.promotionCode]);
+
+  // 할인 적용된 가격 계산
+  const discountedPrice = courseData?.price
+    ? Math.round(courseData.price * (1 - discount))
+    : undefined;
 
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
@@ -68,7 +107,7 @@ export default function CheckoutPage() {
     if (Object.keys(newErrors).length > 0) return;
     setLoading(true);
     try {
-      // Stripe 결제 세션 생성 (이름, 이메일, 프로모션 코드, 코스명, 슬러그만 전달)
+      // Stripe 결제 세션 생성 (이름, 이메일, 프로모션 코드, 코스명, 슬러그, 할인 적용 금액 전달)
       const res = await fetch('/api/stripe/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -79,6 +118,11 @@ export default function CheckoutPage() {
           courseName: courseData?.title,
           courseSlug: slug,
           selectedDate,
+          finalPrice:
+            discount > 0 && discountedPrice !== undefined
+              ? discountedPrice
+              : courseData?.price,
+          appliedPromo: discount > 0 ? appliedPromo : undefined,
         }),
       });
       const { sessionId, error } = await res.json();
@@ -122,10 +166,20 @@ export default function CheckoutPage() {
   }, [selectedDate]);
 
   return (
-    <section className="px-16 md:px-0 my-60 md:my-120">
+    <section className="px-16 md:px-0 my-60 md:my-180">
       <div className="w-full max-w-[1000px] mx-auto flex flex-col md:flex-row gap-40">
         {/* 좌측: 코스 정보 */}
-        <div className="flex-1 border border-neutral-200 p-24 bg-neutral-50">
+        <div className="flex-1">
+          {courseData?.images?.[0] && (
+            <Image
+              src={courseData.images[0]}
+              alt={courseData?.title || slug}
+              className="mb-10 w-full h-auto object-cover rounded"
+              style={{ maxHeight: 220 }}
+              width={600}
+              height={220}
+            />
+          )}
           <h3 className="text-xl font-bold mb-10">
             {courseData?.title || slug}
           </h3>
@@ -143,8 +197,27 @@ export default function CheckoutPage() {
           )}
           <div className="mb-6">
             <span className="font-semibold">Price: </span>
-            <span>${courseData?.price}</span>
+            {discount > 0 && discountedPrice !== undefined ? (
+              <>
+                <span className="line-through text-gray-400 mr-4">
+                  ${courseData.price}
+                </span>
+                <span className="text-green-600 font-bold">
+                  ${discountedPrice}
+                </span>
+                <span className="ml-2 text-xs text-green-700">
+                  ({promoCodes[appliedPromo]?.label})
+                </span>
+              </>
+            ) : (
+              <span>${courseData?.price}</span>
+            )}
           </div>
+          {errors.promotionCode && (
+            <div className="text-red-500 text-xs mb-4">
+              {errors.promotionCode}
+            </div>
+          )}
           {courseData?.location && (
             <div className="mb-6">
               <span className="font-semibold">Location: </span>

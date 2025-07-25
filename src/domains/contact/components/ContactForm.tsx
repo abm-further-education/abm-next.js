@@ -53,7 +53,7 @@ function Contact() {
 
   return (
     <section className={cn('px-16 md:px-0 my-60 md:my-120')}>
-      <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-[1000px] mx-auto">
+      <div className="flex flex-col md:flex-row justify-between w-full max-w-[1000px] mx-auto">
         <div className="">
           <h2 className="text-3xl md:text-4xl font-bold pb-50 font-[family-name:var(--font-montserrat)]">
             {t('getInTouch')}

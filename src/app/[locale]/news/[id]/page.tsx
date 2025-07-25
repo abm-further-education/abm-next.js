@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { newsData } from '@/lib/constants';
+import { newsData } from '@/lib';
 import Banner from '@/components/common/Banner';
 import { ChevronLeftIcon } from 'lucide-react';
 
@@ -31,6 +31,9 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
             title: news.title,
           },
         ]}
+        dimmed={
+          <div className="bg-neutral-900/50 w-full h-screen md:h-700 absolute z-10" />
+        }
       />
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">
@@ -63,7 +66,7 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
         </div>
 
         <div className="prose prose-lg max-w-none">
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-lg text-gray-700 leading-relaxed mb-6 whitespace-pre-line">
             {news.description}
           </p>
 
@@ -88,20 +91,6 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae vitae
               dicta sunt explicabo.
-            </p>
-
-            <h2 className="text-2xl font-semibold mt-8 mb-4">Key Highlights</h2>
-
-            <ul className="list-disc list-inside space-y-2">
-              <li>Enhanced learning opportunities for students</li>
-              <li>Stronger industry partnerships and connections</li>
-              <li>Modern facilities and equipment</li>
-              <li>Expert guidance from experienced professionals</li>
-            </ul>
-
-            <p className="mt-6">
-              For more information about our programs and upcoming events,
-              please contact ABM Further Education or visit our campus.
             </p>
           </div>
         </div>

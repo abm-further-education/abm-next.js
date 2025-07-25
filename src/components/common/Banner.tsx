@@ -40,7 +40,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
             {isVideo(slide.imgPath) ? (
               <iframe
                 className="w-full h-full"
-                src={`${slide.imgPath}&autoplay=1&mute=1&loop=1&playlist=MuePUlkXUZA`}
+                src={`${slide.imgPath}&autoplay=1&mute=1&loop=1&playlist=MuePUlkXUZA&controls=0`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -55,7 +55,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
               />
             )}
 
-            <div className="absolute px-40 inset-0 flex flex-col justify-end z-20 pb-50">
+            <div className="absolute px-40 md:px-80 inset-0 flex flex-col justify-end z-20 pb-50">
               <FadeInBottomToTop>
                 <h1
                   className={cn(
@@ -70,7 +70,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
               <Link
                 target="_blank"
                 href="/files/ABM_Brochure_2025_Web_F.pdf"
-                className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-black md:w-max h-max mt-20 hover:bg-primary transition-all`}
+                className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
               >
                 DOWNLOAD 2025 International Student Guidebook
               </Link>

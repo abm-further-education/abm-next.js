@@ -153,20 +153,23 @@ function renderDescription(
 
 function CourseDetail({ courseInfo }: CourseDetailProps) {
   return (
-    <div>
-      {Object.entries(courseInfo).map(([sectionKey, sectionData]) => (
-        <div key={sectionKey}>
-          <h3 className={titleStyle}>{sectionData.title}</h3>
-          {renderDescription(sectionData.description)}
-        </div>
-      ))}
-    </div>
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-[1600px] mx-auto px-20 py-5 md:px-80">
+        <h1 className="text-3xl font-bold mb-10">Course Detail</h1>
+
+        {Object.entries(courseInfo).map(([sectionKey, sectionData]) => (
+          <div key={sectionKey} className="mb-14">
+            <h3 className={titleStyle}>{sectionData.title}</h3>
+            {renderDescription(sectionData.description)}
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
 export default CourseDetail;
 
-export const titleStyle =
-  'text-lg font-semibold font-[family-name:var(--font-montserrat)] mt-20';
+export const titleStyle = 'text-base font-bold';
 
 export const paragraphStyle = 'text-neutral-700 text-sm whitespace-pre-wrap';

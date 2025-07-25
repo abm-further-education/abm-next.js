@@ -19,7 +19,7 @@ import {
   hrMenu,
   projectMenu,
   shortCourseMenu,
-} from '@/lib/constants';
+} from '@/lib';
 
 function MobileNav() {
   const params = useParams();

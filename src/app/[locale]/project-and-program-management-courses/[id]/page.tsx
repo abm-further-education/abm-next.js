@@ -5,15 +5,15 @@ import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
-import { courseDetails } from '@/lib/constants';
-import React, { use, useEffect } from 'react';
+import getCourseDetailsData from '@/lib/courseDetails';
+import React, { useEffect, use } from 'react';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'bsb40920-certificate-iv-in-project-management-practice':
     'Certificate IV in Project Management Practice',
   'bsb50820-diploma-of-project-management-practice':
     'Diploma of Project Management Practice',
-  'bsb60820-advanced-diploma-of-project-management-practice':
+  'bsb60720-advanced-diploma-of-project-management-practice':
     'Advanced Diploma of Project Management Practice',
 };
 
@@ -22,14 +22,19 @@ const mappingCourseImage: { [key: string]: string } = {
     '/courses/project/project_1.png',
   'bsb50820-diploma-of-project-management-practice':
     '/courses/project/project_2.png',
-  'bsb60820-advanced-diploma-of-project-management-practice':
+  'bsb60720-advanced-diploma-of-project-management-practice':
     '/courses/project/project_3.png',
 };
 
 const menuItems = ['Course Information', 'Course Detail', 'Units'];
 
-function Page({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function Page({
+  params,
+}: {
+  params: Promise<{ id: string; locale: string }>;
+}) {
+  const { id, locale } = use(params);
+  const courseDetails = getCourseDetailsData(locale);
 
   // 동적으로 페이지 타이틀 설정
   useEffect(() => {
@@ -58,30 +63,22 @@ function Page({ params }: { params: Promise<{ id: string }> }) {
       />
       <CourseDetailMenu menuItems={menuItems} />
       {/* Course Information Section */}
-      <section
-        id={getSectionId('Course Information')}
-        className="max-w-1000 mx-auto px-20 py-40"
-      >
+      <section id={getSectionId('Course Information')}>
         <CourseInformation id={id} />
       </section>
 
       {/* Course Detail Section */}
-      <section
-        id={getSectionId('Course Detail')}
-        className="max-w-1000 mx-auto px-20 py-40 bg-gray-50"
-      >
+      <section id={getSectionId('Course Detail')}>
         <CourseDetail courseInfo={courseDetails[id] || {}} />
       </section>
 
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-1000 mx-auto px-20 py-40"
+        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
       >
         <Units params={{ id }} />
       </section>
     </div>
   );
 }
-
-export default Page;

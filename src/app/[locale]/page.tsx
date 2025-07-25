@@ -27,27 +27,27 @@ export default async function Home() {
             imgPath="/home/home.png"
             title="Full Courses"
             link="/"
-            className="w-full md:w-300 xl:w-400"
+            className="w-full md:w-300 h-200 md:h-320 xl:w-400"
           />
           <Card
             imgPath="/home/FastTrack.png"
             title="Fast Track"
             link="/"
-            className="w-full md:w-300 xl:w-400"
+            className="w-full md:w-300 h-200 md:h- xl:w-400"
           />
           <Card
             imgPath="/home/ShortCourse.png"
             title="Short Courses"
             link={`short-courses`}
-            className="w-full md:w-300 xl:w-400"
+            className="w-full md:w-300 h-200 md:h- xl:w-400"
           />
         </div>
 
-        <section className="flex flex-col items-center justify-center py-50">
+        <section className="flex flex-col items-center justify-center md:py-50">
           <h2 className="text-3xl md:text-5xl font-bold py-50">
             {t('coursesTitle')}
           </h2>
-          <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
+          <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center px-20 md:px-0">
             {t('coursesDescription')}
           </p>
           <FadeIn>

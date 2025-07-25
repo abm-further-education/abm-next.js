@@ -34,7 +34,7 @@ async function page() {
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
           {t('title')}
         </h2>
-        <p className="text-sm md:text-base text-neutral-300 max-w-800 text-center">
+        <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
           {t('description')}
         </p>
       </div>
@@ -117,7 +117,7 @@ async function page() {
           <Card
             imgPath="/short-course/french_cakes.jpg"
             title={t('shortCourse')}
-            link="/"
+            link="/short-courses"
             className="w-300 md:w-530"
           />
           <Card

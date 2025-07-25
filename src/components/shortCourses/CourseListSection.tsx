@@ -2,9 +2,11 @@
 
 import React, { useState } from 'react';
 import { Grid3X3, List } from 'lucide-react';
-import { shortCourseData } from '@/lib/shortCourseData';
+import getShortCourseData from '@/lib/shortCourseData';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 interface CourseListSectionProps {
   currentSlug?: string; // 현재 페이지의 코스 slug (현재 코스는 제외)
@@ -14,6 +16,17 @@ export default function CourseListSection({
   currentSlug,
 }: CourseListSectionProps) {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const t = useTranslations('shortCourses');
+  const params = useParams();
+  let locale = 'en';
+  if (params?.locale) {
+    if (Array.isArray(params.locale)) {
+      locale = params.locale[0];
+    } else {
+      locale = params.locale;
+    }
+  }
+  const shortCourseData = getShortCourseData(locale);
 
   // 현재 코스를 제외한 모든 코스 데이터
   const courses = Object.entries(shortCourseData).filter(
@@ -24,11 +37,10 @@ export default function CourseListSection({
     <section className="max-w-1200 mx-auto px-20 py-40 bg-gray-50">
       <div className="text-center mb-40">
         <h2 className="text-3xl font-bold text-gray-800 mb-10">
-          Explore Our Other Short Courses
+          {t('exploreOtherShortCourses')}
         </h2>
         <p className="text-gray-600 max-w-600 mx-auto">
-          Discover more exciting culinary experiences and enhance your skills
-          with our diverse range of short courses.
+          {t('exploreOtherShortCoursesDesc')}
         </p>
       </div>
 
@@ -139,7 +151,6 @@ export default function CourseListSection({
                   </p>
                   <div className="flex flex-wrap gap-20 text-sm text-gray-500 mb-20">
                     <span>⏱️ {course.duration}</span>
-                    <span>👥 {course.maxParticipants}</span>
                     <span>📍 {course.location.split('(')[0].trim()}</span>
                   </div>
                   <div className="flex items-center justify-between">

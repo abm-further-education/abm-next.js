@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { newsData } from '@/lib/constants';
+import { newsData } from '@/lib';
 import Banner from '@/components/common/Banner';
 import { useTranslations } from 'next-intl';
 
@@ -112,7 +112,7 @@ export default function NewsClient({ locale }: { locale: string }) {
                       {news.title}
                     </h3>
 
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 whitespace-pre-line">
                       {news.description}
                     </p>
                   </div>

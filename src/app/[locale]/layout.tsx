@@ -9,6 +9,7 @@ import Nav from '@/components/common/Nav';
 import TopButton from '@/components/common/TopButton';
 import Footer from '@/components/common/Footer';
 import { Slide, ToastContainer } from 'react-toastify';
+import Script from 'next/script';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -67,6 +68,11 @@ export default async function RootLayout({
           src="https://static.elfsight.com/platform/platform.js"
           async
         ></script>
+        <Script
+          src="//code.tidio.co/i1fukzcsngiw3hs2o3f9iarvwmdrseuf.js"
+          async
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

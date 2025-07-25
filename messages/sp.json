@@ -48,7 +48,8 @@
     "entryRequirements": "Requisitos de Ingreso",
     "getUSI": "Obtener un USI",
     "enrolNow": "Inscríbete Ahora",
-    "higherEducationPathway": "Vía de Educación Superior"
+    "higherEducationPathway": "Vía de Educación Superior",
+    "policiesAndProcedures": "Políticas y Procedimientos"
   },
   "timetable": {
     "title": "Horario",
@@ -198,6 +199,8 @@
     "phoneMethodDescription": "Si no puedes crear tu USI en línea, puedes llamar a la Oficina USI:",
     "phoneNumber": "1300 857 536",
     "phoneHours": "Lunes a Viernes, 8:00am a 6:00pm (AEST)",
+    "requiorangeDocumentsTitle": "Documentos Requeridos",
+    "requiorangeDocumentsDescription": "Para crear tu USI, necesitarás proporcionar uno de los siguientes documentos de identificación:",
     "requiredDocumentsTitle": "Documentos Requeridos",
     "requiredDocumentsDescription": "Para crear tu USI, necesitarás proporcionar uno de los siguientes documentos de identificación:",
     "primaryDocumentsTitle": "Documentos Primarios",
@@ -226,6 +229,8 @@
     "usiHelpButton": "Ayuda USI"
   },
   "courseEntryRequirements": {
+    "englishEntryRequirementsTitle": "Requisitos de Inglés para la Admisión",
+    "englishEntryRequirementsDescription": "Tener una puntuación IELTS* de 5.5 con ninguna banda menos de 5.0 (los resultados de la prueba no deben tener más de 2 años de antigüedad). La competencia en inglés también puede demostrarse a través de evidencia documentada de cualquiera de los siguientes:",
     "metaTitle": "Requisitos de Ingreso a Cursos - ABM Educación Superior",
     "metaDescription": "Conoce los requisitos de ingreso para los cursos de ABM incluyendo requisitos académicos, requisitos de inglés y proceso de aplicación.",
     "bannerTitle": "Requisitos de Ingreso a Cursos",
@@ -265,6 +270,86 @@
     "exemption1": "Hablantes nativos de inglés de Australia, Nueva Zelanda, Reino Unido, Estados Unidos, Canadá o Irlanda",
     "exemption2": "Estudiantes que han completado al menos 2 años de estudio a tiempo completo en inglés a nivel secundario o terciario",
     "exemption3": "Estudiantes con calificaciones previas de instituciones de habla inglesa",
+    "englishEvidence1": "Educado durante 5 años en un país de habla inglesa; o",
+    "englishEvidence2": "Completado al menos 6 meses de un curso de nivel Certificado IV en un RTO australiano; o",
+    "englishEvidence3": "Finalización exitosa de una Prueba de Colocación de Inglés",
+    "englishEvidence4": "Finalización exitosa de un curso de inglés con nivel de salida equivalente a IELTS general 5.5 de uno de nuestros Socios de Vía de Inglés",
+    "pteRequirementsTitle": "Para PTE",
+    "pteRequirementsDescription": "Tener una puntuación PTE de 45.4 (IELTS 5.5) o superior con ninguna banda menos de (Escucha – 42.7, Lectura – 47.9, Habla – 51, Escritura – 42.2)",
+    "pteTableTitle": "PTE equivalente a 5.5 IELTS por banda",
+    "pteListening": "PTE -A Escucha",
+    "pteReading": "PTE – A Lectura",
+    "pteSpeaking": "PTE – A Habla",
+    "pteWriting": "PTE – A Escritura",
+    "pteListeningScore": "42.7",
+    "pteReadingScore": "47.9",
+    "pteSpeakingScore": "51",
+    "pteWritingScore": "42.2",
+    "competencyInEnglishTitle": "Competencia en Inglés",
+    "competencyDescription": "Si se aplica uno de los siguientes, no necesitas proporcionar evidencia de una puntuación de prueba de inglés con tu aplicación de visa:",
+    "competency1": "Estás inscrito en estudios escolares a tiempo completo como curso principal incluyendo en un programa de intercambio secundario, un curso de investigación de posgrado, un curso independiente de Inglés Intensivo para Estudiantes Extranjeros (ELICOS), y estudiantes patrocinados por Asuntos Exteriores o Defensa.",
+    "competency2": "Has completado al menos cinco años de estudio en uno o más de los siguientes países: Australia, Reino Unido, Estados Unidos, Canadá, Nueva Zelanda, Sudáfrica, o la República de Irlanda.",
+    "competency3": "Eres ciudadano y tienes un pasaporte del Reino Unido, Estados Unidos, Canadá, Nueva Zelanda o República de Irlanda.",
+    "competency4": "En los dos años antes de aplicar para la visa de estudiante, completaste, en Australia y en idioma inglés, ya sea el Certificado de Educación Secundaria Superior o un componente sustancial de un curso que lleva a una calificación del Marco de Calificaciones de Australia a nivel Certificado IV o superior, mientras tenías una visa de estudiante.",
+    "englishNote": "*Nota que otras pruebas de idioma inglés como PTE y TOEFL pueden ser aceptadas. Los estudiantes deben proporcionar sus resultados para que se pueda confirmar que son equivalentes a IELTS 5.5.",
+    "elicosPathwayPartnersTitle": "Socios de Vía ELICOS",
+    "elicosPartners": {
+      "ctic": {
+        "name": "CTIC English",
+        "url": "http://ctic.com.au/",
+        "courses": "• EAP con nivel de salida Crédito\n• Preparación IELTS con nivel de salida Grado C\n• Inglés Real, Inglés General, Cambridge con nivel de salida B2"
+      },
+      "elc": {
+        "name": "ELC",
+        "url": "http://www.elc.edu.au/english",
+        "courses": "• Inglés para Propósitos Académicos: Mín. 10 semanas de Inglés Académico con resultados de salida exitosos de EAP 1\n• Cambridge English: Mín. curso completo (10-12 semanas) de Cambridge B2 First (Mín. grado C)\n• Preparación IELTS: Mín. 10 semanas de Preparación IELTS con resultados predichos exitosos de 5.5"
+      },
+      "elsis": {
+        "name": "ELSIS",
+        "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
+        "courses": "• Finalización de Inglés General nivel Intermedio Superior\n• Finalización de EAP 1"
+      },
+      "englishUnlimited": {
+        "name": "English Unlimited",
+        "url": "https://eu.edu.au/",
+        "courses": "• Inglés General (método de enseñanza de inglés cotidiano – nivel Intermedio Superior)\n• EAP (B+ del nivel B)"
+      },
+      "greenwich": {
+        "name": "Greenwich College",
+        "url": "https://www.greenwichcollege.edu.au/your-campus/sydney",
+        "courses": "• Inglés General (nivel Intermedio Superior) con mínimo 8 semanas\n• Preparación IELTS con puntuación de salida 5.5-7.0+\n• Preparación Cambridge PET, FCE, CAE con puntuación de salida 5.5 +\n• Inglés para Negocios (Cambridge Linguaskill Business) con puntuación de salida 5.5\n• Inglés para Estudios Vocacionales (EVS) (Aprobado)\n• EAP con nivel de salida Aprobado"
+      },
+      "ilsc": {
+        "name": "ILSC Language Schools",
+        "url": "http://ilsc.com",
+        "courses": "• Inglés General con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior.\n• Inglés para Propósitos Académicos con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior.\n• Preparación IELTS con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior.\n• Preparación Cambridge FCE y Preparación Cambridge CAE con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior."
+      },
+      "inus": {
+        "name": "INUS",
+        "url": "https://www.inus.edu.au/",
+        "courses": "• Finalización de Inglés General o EAP [nivel Intermedio Superior] con equivalencia de nivel de salida de IELTS 5.5 o superior.\n• Finalización de EAP Avanzado [nivel Avanzado]."
+      },
+      "lalingua": {
+        "name": "LA LINGUA",
+        "url": "https://www.lalingua.com/",
+        "courses": "• Preparación IELTS con nivel de salida equivalente a IELTS 5.5"
+      },
+      "navitas": {
+        "name": "NAVITAS English",
+        "url": "https://www.navitasenglish.edu.au/",
+        "courses": "• Inglés Académico 2: 60% aprobado sin habilidad secundaria por debajo de 55%\n• Preparación IELTS: Finalización exitosa de 10 semanas\n• Preparación Cambridge – B2 First: Finalización exitosa de 10 o 12 semanas\n• Inglés General: Finalización exitosa de 10 semanas de Intermedio Superior"
+      },
+      "scic": {
+        "name": "Sunshine Coast International College",
+        "url": "https://scic.nsw.edu.au/",
+        "courses": "• Inglés para Propósitos Académicos (EAP3): Certificado EAP 3 (Intermedio Superior: CEFR = B2)\n• Inglés General: Finalización exitosa de Intermedio Superior o superior (CEFR=B2)"
+      },
+      "uec": {
+        "name": "Universal English College (UEC)",
+        "url": "https://uec.edu.au/",
+        "courses": "• Inglés General con nivel de salida Intermedio Superior\n• Preparación IELTS con nivel de salida equivalente a IELTS 5.5\n• Programa de Inglés Académico con nivel de salida equivalente a IELTS 5.5"
+      }
+    },
     "additionalRequirementsTitle": "Requisitos Adicionales",
     "healthRequirementsTitle": "Requisitos de Salud y Seguridad",
     "healthRequirementsDescription": "Algunos cursos pueden tener requisitos específicos de salud y seguridad, particularmente para componentes prácticos.",
@@ -455,5 +540,22 @@
     "verificationError": "Ocurrió un error al verificar la información del pago.",
     "backToCourses": "Volver a los Cursos",
     "verifyingPayment": "Verificando información de pago..."
+  },
+  "newsletter": {
+    "title": "Suscríbete al boletín",
+    "desc": "¡Suscríbete ahora y nunca te pierdas una actualización!",
+    "placeholder": "Introduce tu correo electrónico",
+    "button": "Suscribirse"
+  },
+  "studentInsights": {
+    "bannerTitle": "Una Mirada a las Experiencias Estudiantiles",
+    "testimonialTitle": "Testimonios de Estudiantes",
+    "testimonialDescription": "Descubre lo que nuestros estudiantes dicen sobre su experiencia en ABM",
+    "testimonialImageAlt": "Testimonio de estudiante {number}",
+    "clickToView": "Haz clic para ver"
+  },
+  "shortCourses": {
+    "exploreOtherShortCourses": "Explora Nuestros Otros Cursos Cortos",
+    "exploreOtherShortCoursesDesc": "Descubre más experiencias culinarias emocionantes y mejora tus habilidades con nuestra diversa gama de cursos cortos."
   }
 }
