@@ -26,13 +26,13 @@ export default async function Home() {
           <Card
             imgPath="/home/home.png"
             title="Full Courses"
-            link="/"
+            link="/courses"
             className="w-full md:w-300 h-200 md:h-320 xl:w-400"
           />
           <Card
             imgPath="/home/FastTrack.png"
             title="Fast Track"
-            link="/"
+            link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track"
             className="w-full md:w-300 h-200 md:h- xl:w-400"
           />
           <Card

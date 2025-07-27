@@ -107,10 +107,12 @@ export default function CourseCard({ course }: CourseCardProps) {
               <span>${course.price}</span>
             </div>
           )}
-          {course.type === 'full-course' && (
+          {(course.type === 'full-course' || course.type === 'fast-track') && (
             <div className="flex items-center gap-10 text-sm text-gray-600">
               <Award size={16} className="text-gray-400" />
-              <span>Full Course</span>
+              <span>
+                {course.type === 'full-course' ? 'Full Course' : 'Fast Track'}
+              </span>
             </div>
           )}
         </div>
