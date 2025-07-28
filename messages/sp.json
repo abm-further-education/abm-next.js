@@ -590,5 +590,32 @@
     "exploreOtherShortCoursesDesc": "Descubre más experiencias culinarias emocionantes y mejora tus habilidades con nuestra diversa gama de cursos cortos."
   },
   "fullCourses": "Cursos Completos",
-  "fastTrack": "Estudios Acelerados"
+  "fastTrack": "Estudios Acelerados",
+  "footer": {
+    "home": "Inicio",
+    "courses": "Cursos",
+    "shortCourses": "Cursos Cortos",
+    "studyWithUs": "Estudia con Nosotros",
+    "currentStudents": "Estudiantes Actuales",
+    "contact": "Contacto",
+    "cookeryAndHospitality": "Cocina y Hospitalidad",
+    "fitnessAndSports": "Fitness y Deportes",
+    "business": "Negocios",
+    "projectAndProgram": "Proyectos y Programas",
+    "humanResources": "Recursos Humanos",
+    "baristaCourse": "Curso de Barista",
+    "classicFrenchPastriesCourse": "Curso de Pastelería Francesa Clásica",
+    "wineCourse": "Curso de Vinos",
+    "sourdoughAndFocacciaCourse": "Curso de Pan de Masa Madre y Focaccia",
+    "fineDiningDessertPlating": "Emplatado de Postres de Cocina Fina",
+    "classicFrenchCakesCourse": "Curso de Pasteles Franceses Clásicos",
+    "frenchPetitFourCourse": "Curso de Petit Fours Franceses (Macarons)",
+    "veganAndVegetarianCourse": "Curso Vegano y Vegetariano",
+    "chocolateClassXmas": "Clase de Chocolatería – Navidad",
+    "agent": "Agentes",
+    "agentPortal": "Portal de Agentes",
+    "agentApplication": "Solicitud para Agentes",
+    "agentList": "Lista de Agentes",
+    "abmPoliciesAndProcedures": "Políticas y Procedimientos de ABM"
+  }
 }

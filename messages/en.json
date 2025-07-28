@@ -42,6 +42,14 @@
     "description": "Choosing the right course is key to reaching your career goals. Think beyond interest—consider if the path leads to a future you'll enjoy. Whether it's business, commercial cookery, or advancing in hospitality, ABM helps you gain the skills to become job-ready and confident in your chosen field."
   },
   "studyWithUs": {
+    "studentInsights": "ABM Student Testimonials",
+    "academicCalendar": "Academic Calendar",
+    "feesAndPayment": "Fees and Payment",
+    "entryRequirements": "Entry Requirements",
+    "getUSI": "Get a USI",
+    "enrolNow": "Enrol Now",
+    "higherEducationPathway": "Higher Education Pathway",
+    "policiesAndProcedures": "Policies & Procedures",
     "title": "Study With Us",
     "welcome": "Welcome To ABM Further Education!",
     "mission": "Our mission is to provide high-quality, practical education that prepares students for successful careers. At ABM, you'll learn from experienced industry leaders who are dedicated to your growth. With a supportive environment and real-world training, we ensure you gain the skills and confidence to thrive in your future career.",
@@ -586,5 +594,32 @@
   "fastTrack": "Fast Track",
   "fitnessAndSports": "Fitness & Sports",
   "projectAndProgram": "Project & Program",
-  "hrManagement": "HR Management"
+  "hrManagement": "HR Management",
+  "footer": {
+    "home": "Home",
+    "courses": "Courses",
+    "shortCourses": "Short Courses",
+    "studyWithUs": "Study With Us",
+    "currentStudents": "Current Students",
+    "contact": "Contact",
+    "cookeryAndHospitality": "Cookery & Hospitality",
+    "fitnessAndSports": "Fitness & Sports",
+    "business": "Business",
+    "projectAndProgram": "Project & Program",
+    "humanResources": "Human Resources",
+    "baristaCourse": "Barista Course",
+    "classicFrenchPastriesCourse": "Classic French Pastries Course",
+    "wineCourse": "Wine Course",
+    "sourdoughAndFocacciaCourse": "Sourdough and Focaccia Course",
+    "fineDiningDessertPlating": "Fine Dining Dessert Plating",
+    "classicFrenchCakesCourse": "Classic French Cakes Course",
+    "frenchPetitFourCourse": "French Petit Four Course (Macaroon)",
+    "veganAndVegetarianCourse": "Vegan and Vegetarian Course",
+    "chocolateClassXmas": "Chocolate Class - Xmas",
+    "agent": "Agent",
+    "agentPortal": "Agent Portal",
+    "agentApplication": "Agent Application",
+    "agentList": "Agent List",
+    "abmPoliciesAndProcedures": "ABM Policies and Procedures"
+  }
 }
