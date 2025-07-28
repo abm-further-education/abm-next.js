@@ -5,7 +5,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-function page() {
+function StudyWithUsPage() {
   const t = useTranslations('studyWithUs');
   return (
     <div className="font-[family-name:var(--font-montserrat)]">
@@ -65,7 +65,7 @@ function page() {
   );
 }
 
-export default page;
+export default StudyWithUsPage;
 
 const highlights = [
   {
