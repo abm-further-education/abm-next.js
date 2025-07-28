@@ -74,7 +74,7 @@ export default function Page({
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-[1600px] mx-auto px-20 py-40"
+        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
       >
         <Units params={{ id }} />
       </section>

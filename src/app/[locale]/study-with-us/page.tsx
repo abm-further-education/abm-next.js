@@ -3,8 +3,10 @@ import FadeIn from '@/components/common/FadeIn';
 import ImageTextSection from '@/components/common/ImageTextSection';
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 function page() {
+  const t = useTranslations('studyWithUs');
   return (
     <div className="font-[family-name:var(--font-montserrat)]">
       <Banner
@@ -21,22 +23,16 @@ function page() {
       />
       <section className="px-120 py-50">
         <h1 className="text-3xl md:text-4xl font-bold py-50 text-center">
-          Welcome To ABM Further Education!
+          {t('title')}
         </h1>
 
-        <p className="max-w-2xl text-center mx-auto">
-          Our mission is to provide high-quality, practical education that
-          prepares students for successful careers. At ABM, you&apos;ll learn
-          from experienced industry leaders who are dedicated to your growth.
-          With a supportive environment and real-world training, we ensure you
-          gain the skills and confidence to thrive in your future career.
-        </p>
+        <p className="max-w-2xl text-center mx-auto">{t('mission')}</p>
         <FadeIn>
           <ImageTextSection
             order="left"
             imgPath="/study-with-us/why.jpg"
-            title="Why study at ABM Further Education?"
-            content="ABM Further Education is a newly established vocational education provider in Australia, offering nationally recognised courses led by experienced industry professionals. We focus on equipping students with practical skills for their future careers and are actively building industry partnerships to ensure our graduates are job-ready and aligned with current workforce needs."
+            title={t('why')}
+            content={t('whyContent')}
           />
         </FadeIn>
         <FadeIn>
@@ -53,8 +49,12 @@ function page() {
                       className="w-full h-auto object-cover"
                     />
                   </div>
-                  <h4 className="text-lg font-semibold">{item.title}</h4>
-                  <p className="text-base text-gray-700">{item.description}</p>
+                  <h4 className="text-lg font-semibold">
+                    {t(`highlights.${item.key}.title`)}
+                  </h4>
+                  <p className="text-base text-gray-700">
+                    {t(`highlights.${item.key}.desc`)}
+                  </p>
                 </div>
               ))}
             </div>
@@ -69,6 +69,7 @@ export default page;
 
 const highlights = [
   {
+    key: 'primeLocation',
     title: 'Prime location',
     description:
       'ABM is in the centre of Sydney! You can get there by train, light rail or bus, and there are plenty of jobs in the area.',
@@ -80,6 +81,7 @@ const highlights = [
     },
   },
   {
+    key: 'modernKitchen',
     title: 'Industry-leading modern kitchen and state of the art campus',
     description:
       'We want you to succeed, so we have just refreshed our campus with the most modern kitchen, and latest technologies. Students also have free access to a break room, wifi, computers, photocopier, scanner, phone charging station, and a kitchenette!',
@@ -91,6 +93,7 @@ const highlights = [
     },
   },
   {
+    key: 'trainers',
     title: 'Industry-leading trainers',
     description:
       'Learn from professionals with years of experience in their industry!',
@@ -102,6 +105,7 @@ const highlights = [
     },
   },
   {
+    key: 'workPlacement',
     title: 'Work placement support',
     description:
       'ABM is in the centre of Sydney! You can get there by train, light rail or bus, and there are plenty of jobs in the area.',
@@ -113,6 +117,7 @@ const highlights = [
     },
   },
   {
+    key: 'serviceTeam',
     title: 'Multilingual student service team',
     description:
       'We want you to succeed, so we have just refreshed our campus with the most modern kitchen, and latest technologies. Students also have free access to a break room, wifi, computers, photocopier, scanner, phone charging station, and a kitchenette!',
@@ -124,6 +129,7 @@ const highlights = [
     },
   },
   {
+    key: 'partnerships',
     title: 'Industry Partnerships',
     description:
       'Learn from professionals with years of experience in their industry!',

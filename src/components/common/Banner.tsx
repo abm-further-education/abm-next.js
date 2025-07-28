@@ -69,7 +69,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
 
               <Link
                 target="_blank"
-                href="/files/ABM_Brochure_2025_Web_F.pdf"
+                href="/files/ABM_Brochure_2025_outlined_v2_web.pdf"
                 className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
               >
                 DOWNLOAD 2025 International Student Guidebook

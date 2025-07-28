@@ -42,14 +42,37 @@
     "description": "Choosing the right course is key to reaching your career goals. Think beyond interest—consider if the path leads to a future you'll enjoy. Whether it's business, commercial cookery, or advancing in hospitality, ABM helps you gain the skills to become job-ready and confident in your chosen field."
   },
   "studyWithUs": {
-    "studentInsights": "ABM Student Testimonials",
-    "academicCalendar": "Academic Calendar",
-    "feesAndPayment": "Fees and Payment",
-    "entryRequirements": "Entry Requirements",
-    "getUSI": "Get a USI",
-    "enrolNow": "Enrol Now",
-    "higherEducationPathway": "Higher Education Pathway",
-    "policiesAndProcedures": "Policies & Procedures"
+    "title": "Study With Us",
+    "welcome": "Welcome To ABM Further Education!",
+    "mission": "Our mission is to provide high-quality, practical education that prepares students for successful careers. At ABM, you'll learn from experienced industry leaders who are dedicated to your growth. With a supportive environment and real-world training, we ensure you gain the skills and confidence to thrive in your future career.",
+    "why": "Why study at ABM Further Education?",
+    "whyContent": "ABM Further Education is a newly established vocational education provider in Australia, offering nationally recognised courses led by experienced industry professionals. We focus on equipping students with practical skills for their future careers and are actively building industry partnerships to ensure our graduates are job-ready and aligned with current workforce needs.",
+    "highlights": {
+      "primeLocation": {
+        "title": "Prime location",
+        "desc": "ABM is in the centre of Sydney! You can get there by train, light rail or bus, and there are plenty of jobs in the area."
+      },
+      "modernKitchen": {
+        "title": "Industry-leading modern kitchen and state of the art campus",
+        "desc": "We want you to succeed, so we have just refreshed our campus with the most modern kitchen, and latest technologies. Students also have free access to a break room, wifi, computers, photocopier, scanner, phone charging station, and a kitchenette!"
+      },
+      "trainers": {
+        "title": "Industry-leading trainers",
+        "desc": "Learn from professionals with years of experience in their industry!"
+      },
+      "workPlacement": {
+        "title": "Work placement support",
+        "desc": "ABM is in the centre of Sydney! You can get there by train, light rail or bus, and there are plenty of jobs in the area."
+      },
+      "serviceTeam": {
+        "title": "Multilingual student service team",
+        "desc": "We want you to succeed, so we have just refreshed our campus with the most modern kitchen, and latest technologies. Students also have free access to a break room, wifi, computers, photocopier, scanner, phone charging station, and a kitchenette!"
+      },
+      "partnerships": {
+        "title": "Industry Partnerships",
+        "desc": "Learn from professionals with years of experience in their industry!"
+      }
+    }
   },
   "timetable": {
     "title": "Timetable",
