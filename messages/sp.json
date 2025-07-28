@@ -1,8 +1,8 @@
 {
   "HomePage": {
     "bannerContent": "Donde la Pasión se Encuentra con la Perfección Culinaria. Una Experiencia Inolvidable",
-    "coursesTitle": "Cursos ABM",
-    "coursesDescription": "Proporcionamos educación de alta calidad en un ambiente innovador y de apoyo, asegurando el éxito de los estudiantes con enseñanza experta y oportunidades de experiencia laboral en toda Australia.",
+    "coursesTitle": "Cursos de ABM",
+    "coursesDescription": "Proporcionamos educación de alta calidad en un ambiente innovador y de apoyo, asegurando el éxito de nuestros estudiantes con enseñanza experta y oportunidades de experiencia laboral en toda Australia.",
     "testimonialTitle": "Testimonios",
     "testimonialDescription": "¿Dónde te ves trabajando felizmente en el futuro cercano?"
   },
@@ -103,8 +103,8 @@
     "noteDescription": "Póngase en contacto con nosotros para obtener la información más actualizada del horario, ya que los horarios pueden cambiar según los requisitos de inscripción y operacionales."
   },
   "nav": {
-    "internationalStudent": "¿Eres un Estudiante Internacional?",
-    "downloadGuide": "Descargar Guía del Curso",
+    "internationalStudent": "¿Eres un estudiante internacional?",
+    "downloadGuide": "Descarga la Guía de Cursos",
     "currentStudents": "Estudiantes Actuales",
     "agentPortal": "Portal de Agentes",
     "findCourse": "Encontrar un curso",
@@ -122,7 +122,7 @@
       "hospitality": "Hospitalidad",
       "fitnessAndSport": "Fitness y Deporte",
       "business": "Negocios",
-      "projectAndProgram": "Proyecto y Programa",
+      "projectAndProgram": "Proyectos y Programas",
       "humanResource": "Recursos Humanos",
       "cookingAndBaking": "Cocina y Repostería",
       "onlineCourses": "Cursos en Línea"
@@ -590,5 +590,5 @@
     "exploreOtherShortCoursesDesc": "Descubre más experiencias culinarias emocionantes y mejora tus habilidades con nuestra diversa gama de cursos cortos."
   },
   "fullCourses": "Cursos Completos",
-  "fastTrack": "Vía Rápida"
+  "fastTrack": "Estudios Acelerados"
 }

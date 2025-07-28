@@ -45,25 +45,25 @@ function page() {
           <Card
             imgPath="/courses/business/business_1.jpg"
             title="Certificate IV in Business"
-            link="/"
+            link="/business-and-management-courses/bsb40120-certificate-iv-in-business"
             className="w-300 md:w-480"
           />
           <Card
             imgPath="/courses/business/business_2.jpg"
             title="Diploma of Business"
-            link="/"
+            link="/business-and-management-courses/bsb50120-diploma-of-business"
             className="w-300 md:w-480"
           />
           <Card
             imgPath="/courses/business/business_3.jpg"
             title="Advanced Diploma of Business"
-            link="/"
+            link="/business-and-management-courses/bsb60120-advanced-diploma-of-business"
             className="w-300 md:w-480"
           />
           <Card
             imgPath="/courses/business/business_4.png"
             title="Graduate Diploma of Management (Learning)"
-            link="/"
+            link="/business-and-management-courses/bsb80120-graduate-diploma-of-management"
             className="w-300 md:w-480"
           />
         </div>

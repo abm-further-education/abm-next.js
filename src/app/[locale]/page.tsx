@@ -9,13 +9,13 @@ import { getTranslations } from 'next-intl/server';
 export default async function Home() {
   const t = await getTranslations();
   return (
-    <div className="font-[family-name:var(--font-montserrat)]">
+    <div className="font-[family-name:var(--font-montserrat)] pt-60">
       <main className="">
         <Banner
           slides={[
             {
               imgPath:
-                'https://www.youtube.com/embed/MuePUlkXUZA?si=djdrv_RZgSlrTG2g',
+                'https://www.youtube.com/embed/FOWrWhWZPb8?si=YYieNS7QfEQ0kgrx',
               title: 'Your Career Starts Here',
               content: '',
             },
@@ -37,7 +37,7 @@ export default async function Home() {
           />
           <Card
             imgPath="/home/ShortCourse.png"
-            title={t('shortCourses')}
+            title={t('nav.menu.shortCourses')}
             link={`short-courses`}
             className="w-full md:w-300 h-200 md:h- xl:w-400"
           />

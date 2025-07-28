@@ -40,7 +40,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
             {isVideo(slide.imgPath) ? (
               <iframe
                 className="w-full h-full"
-                src={`${slide.imgPath}&autoplay=1&mute=1&loop=1&playlist=MuePUlkXUZA&controls=0`}
+                src={`${slide.imgPath}&autoplay=1&mute=1&loop=1&playlist=FOWrWhWZPb8&controls=0`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
