@@ -47,7 +47,7 @@ function Units({ params }: { params: { id: string } }) {
   }
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-10">Course Structure</h1>
+      <h1 className="text-3xl font-bold mb-10">Units</h1>
       <table className="min-w-full border-b border-gray-300 text-sm text-left text-gray-700">
         <thead className="bg-gray-100">
           <tr>

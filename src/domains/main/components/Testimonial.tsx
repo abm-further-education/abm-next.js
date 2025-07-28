@@ -28,11 +28,12 @@ function Testimonial() {
         modules={[Navigation, Autoplay, Scrollbar]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
-        className="w-full h-300 mt-60"
+        className="w-full mx-40 h-300 mt-60"
         slidesPerView={1}
         breakpoints={{
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 5 },
+          1600: { slidesPerView: 6 },
         }}
         spaceBetween={25}
       >
@@ -41,7 +42,8 @@ function Testimonial() {
             <Image
               src={`/testimonials/${index + 1}.png`}
               alt="banner_image"
-              fill
+              width={300}
+              height={300}
               className="md:object-center object-cover"
             />
           </SwiperSlide>

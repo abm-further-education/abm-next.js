@@ -557,5 +557,7 @@
   "shortCourses": {
     "exploreOtherShortCourses": "Explora Nuestros Otros Cursos Cortos",
     "exploreOtherShortCoursesDesc": "Descubre más experiencias culinarias emocionantes y mejora tus habilidades con nuestra diversa gama de cursos cortos."
-  }
+  },
+  "fullCourses": "Cursos Completos",
+  "fastTrack": "Vía Rápida"
 }

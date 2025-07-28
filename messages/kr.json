@@ -557,5 +557,10 @@
   "shortCourses": {
     "exploreOtherShortCourses": "다른 단기 과정도 둘러보세요",
     "exploreOtherShortCoursesDesc": "더 다양한 단기 요리 클래스를 통해 새로운 경험과 실력을 쌓아보세요."
-  }
+  },
+  "fullCourses": "정규과정",
+  "fastTrack": "패스트트랙",
+  "fitnessAndSports": "피트니스 & 스포츠",
+  "projectAndProgram": "프로젝트 & 프로그램",
+  "hrManagement": "인사관리"
 }

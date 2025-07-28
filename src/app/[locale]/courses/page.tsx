@@ -6,14 +6,25 @@ import React, { useState, useMemo } from 'react';
 import CourseFilter from '@/components/courses/CourseFilter';
 import CourseCard from '@/components/courses/CourseCard';
 import {
-  courseData,
+  getCourseDataByLocale,
   courseCategories,
   courseTypes,
   courseLevels,
   CourseData,
 } from '@/lib/courseData';
+import { useParams } from 'next/navigation';
 
 function Page() {
+  const params = useParams();
+  let locale = 'en';
+  if (params?.locale) {
+    if (Array.isArray(params.locale)) {
+      locale = params.locale[0];
+    } else {
+      locale = params.locale;
+    }
+  }
+  const courseData = getCourseDataByLocale(locale);
   const t = useTranslations('courses');
 
   // Filter states
@@ -24,7 +35,7 @@ function Page() {
 
   // Filter courses based on search and filters
   const filteredCourses = useMemo(() => {
-    return courseData.filter((course: CourseData) => {
+    return getCourseDataByLocale(locale).filter((course: CourseData) => {
       // Search filter
       const matchesSearch =
         searchTerm === '' ||

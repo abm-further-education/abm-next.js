@@ -7,7 +7,7 @@ import SubscriptionContainer from '@/domains/subscription/components/Subscriptio
 import { getTranslations } from 'next-intl/server';
 
 export default async function Home() {
-  const t = await getTranslations('HomePage');
+  const t = await getTranslations();
   return (
     <div className="font-[family-name:var(--font-montserrat)]">
       <main className="">
@@ -25,19 +25,19 @@ export default async function Home() {
         <div className="flex flex-wrap xl:gap-40 items-center justify-center py-50 px-20 md:px-0 gap-20">
           <Card
             imgPath="/home/home.png"
-            title="Full Courses"
+            title={t('fullCourses')}
             link="/courses"
             className="w-full md:w-300 h-200 md:h-320 xl:w-400"
           />
           <Card
             imgPath="/home/FastTrack.png"
-            title="Fast Track"
+            title={t('fastTrack')}
             link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track"
             className="w-full md:w-300 h-200 md:h- xl:w-400"
           />
           <Card
             imgPath="/home/ShortCourse.png"
-            title="Short Courses"
+            title={t('shortCourses')}
             link={`short-courses`}
             className="w-full md:w-300 h-200 md:h- xl:w-400"
           />
@@ -45,46 +45,46 @@ export default async function Home() {
 
         <section className="flex flex-col items-center justify-center md:py-50">
           <h2 className="text-3xl md:text-5xl font-bold py-50">
-            {t('coursesTitle')}
+            {t('HomePage.coursesTitle')}
           </h2>
           <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center px-20 md:px-0">
-            {t('coursesDescription')}
+            {t('HomePage.coursesDescription')}
           </p>
           <FadeIn>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-10 mt-40">
               <Card
                 imgPath="/home/Cookery.png"
-                title="Cookery"
+                title={t('nav.subMenu.cookery')}
                 link="/cookery-and-hospitality-courses"
                 className="w-300 md:w-250"
               />
               <Card
                 imgPath="/home/Hospitality.png"
-                title="Hospitality"
+                title={t('nav.subMenu.hospitality')}
                 link="/cookery-and-hospitality-courses"
                 className="w-300 md:w-250"
               />
               <Card
                 imgPath="/home/Fitness.png"
-                title="Fitness & Sports"
+                title={t('nav.subMenu.fitnessAndSport')}
                 link="/fitness-instructor-personal-trainer-courses"
                 className="w-300 md:w-250"
               />
               <Card
                 imgPath="/home/Business.png"
-                title="Business"
+                title={t('nav.subMenu.business')}
                 link="/business-and-management-courses"
                 className="w-300 md:w-250"
               />
               <Card
                 imgPath="/home/Project.png"
-                title="Project & Program"
+                title={t('nav.subMenu.projectAndProgram')}
                 link="/project-and-program-management-courses"
                 className="w-300 md:w-250"
               />
               <Card
                 imgPath="/home/HR.png"
-                title="HR Management"
+                title={t('nav.subMenu.humanResource')}
                 link="/human-resource-management-courses"
                 className="w-300 md:w-250"
               />

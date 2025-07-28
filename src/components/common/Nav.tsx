@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { useParams, useRouter, usePathname } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import MobileNav from './MobileNav';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -31,10 +31,10 @@ const allMenus = [
 
 function Nav() {
   const params = useParams();
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const t = useTranslations('nav');
   const tStudy = useTranslations('studyWithUs');
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const [subMenu, setSubMenu] = useState('');
   const [search, setSearch] = useState('');
   const [results, setResults] = useState<{ title: string; href: string }[]>([]);
@@ -42,11 +42,11 @@ function Nav() {
   const router = useRouter();
 
   // 특정 페이지에서 배경색을 항상 black으로 설정할 페이지들
-  const isSpecialPage =
-    pathname.includes('/courses') ||
-    pathname.includes('/abm-policies-procedures-and-forms') ||
-    pathname.includes('checkout') ||
-    pathname.includes('success');
+  // const isSpecialPage =
+  //   pathname.includes('/courses') ||
+  //   pathname.includes('/abm-policies-procedures-and-forms') ||
+  //   pathname.includes('checkout') ||
+  //   pathname.includes('success');
 
   // menuList를 동적으로 생성하는 함수
   const createMenuList = () => {
@@ -99,18 +99,18 @@ function Nav() {
 
   const menuList = createMenuList();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 10) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -255,9 +255,7 @@ function Nav() {
       <div className="relative">
         <div
           className={cn(
-            isScrolled || subMenu || isSpecialPage
-              ? 'bg-black shadow-md '
-              : 'bg-transparent',
+            'bg-black shadow-md ',
             'fixed top-56 md:top-55 w-full h-76 z-[800] transition-all duration-500'
           )}
         >

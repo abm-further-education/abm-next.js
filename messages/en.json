@@ -558,5 +558,10 @@
   "shortCourses": {
     "exploreOtherShortCourses": "Explore Our Other Short Courses",
     "exploreOtherShortCoursesDesc": "Discover more exciting culinary experiences and enhance your skills with our diverse range of short courses."
-  }
+  },
+  "fullCourses": "Full Courses",
+  "fastTrack": "Fast Track",
+  "fitnessAndSports": "Fitness & Sports",
+  "projectAndProgram": "Project & Program",
+  "hrManagement": "HR Management"
 }
