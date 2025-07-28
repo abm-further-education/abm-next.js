@@ -59,7 +59,7 @@ function Page() {
 
       return matchesSearch && matchesCategory && matchesType && matchesLevel;
     });
-  }, [searchTerm, selectedCategory, selectedType, selectedLevel]);
+  }, [searchTerm, selectedCategory, selectedType, selectedLevel, locale]);
 
   return (
     <div className="px-20 xl:px-0 max-w-[1600px] mx-auto">
