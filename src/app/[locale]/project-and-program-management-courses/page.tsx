@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 function Page() {
   return (
-    <div>
+    <div className="pt-60">
       {' '}
       <Banner
         slides={[
@@ -49,19 +49,19 @@ function Page() {
           <Card
             imgPath="/courses/project/project_1.png"
             title="Certificate IV in Project Management Practice"
-            link="/"
+            link="/project-and-program-management-courses/bsb40920-certificate-iv-in-project-management-practice"
             className="w-300 md:w-380"
           />
           <Card
             imgPath="/courses/project/project_2.png"
             title="Diploma of Project Management"
-            link="/"
+            link="project-and-program-management-courses/bsb50820-diploma-of-project-management-practice"
             className="w-300 md:w-380"
           />
           <Card
             imgPath="/courses/project/project_3.png"
             title="Advanced Diploma of Program Management"
-            link="/"
+            link="/project-and-program-management-courses/bsb60720-advanced-diploma-of-project-management-practice"
             className="w-300 md:w-380"
           />
         </div>

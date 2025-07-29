@@ -7,6 +7,7 @@ import Button from '@/components/common/Button';
 
 import { useParams } from 'next/navigation';
 import { Book, Calendar, MapPin } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export interface CourseInformationInfo {
   description?: string;
@@ -47,6 +48,8 @@ function CourseInformationContent({
   courseInfo,
   hideButtons = false,
 }: CourseInformationProps) {
+  // 다국어 지원
+  const t = useTranslations('courseInformation');
   // 텍스트의 줄바꿈을 처리하는 함수
   const renderTextWithLineBreaks = (text: string) => {
     return text.split('\n').map((line, index) => (
@@ -59,7 +62,6 @@ function CourseInformationContent({
 
   return (
     <section className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
-      <h1 className="text-3xl font-bold mb-10">Course Information</h1>
       <div
         className={cn(
           paragraphStyle,
@@ -67,6 +69,7 @@ function CourseInformationContent({
         )}
       >
         <div>
+          <h1 className="text-3xl font-bold mb-10">{t('title')}</h1>
           {courseInfo.description && (
             <div className="mb-20 col-span-2">
               {renderTextWithLineBreaks(courseInfo.description)}
@@ -74,8 +77,8 @@ function CourseInformationContent({
           )}
         </div>
 
-        <div>
-          <h2 className="text-xl font-bold mb-10">Overview</h2>
+        <div className="border p-20 border-neutral-200 h-max shadow-sm">
+          <h2 className="text-xl font-bold mb-10">{t('overview')}</h2>
           {courseInfo.duration && (
             <div className="mb-8 flex items-center gap-10">
               <Calendar className="w-24 h-24 text-primary" />
@@ -132,7 +135,7 @@ function CourseInformationContent({
           {!hideButtons && (
             <>
               <Button
-                className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-10"
+                className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-20"
                 onClick={() => {
                   window.open(
                     'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',

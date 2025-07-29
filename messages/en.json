@@ -595,6 +595,27 @@
   "fitnessAndSports": "Fitness & Sports",
   "projectAndProgram": "Project & Program",
   "hrManagement": "HR Management",
+  "fitnessPage": {
+    "metadata": {
+      "title": "Fitness & Sports Courses | ABM Further Education",
+      "description": "Turn your passion for fitness into a career with ABM Further Education. Explore our fitness and sports courses designed for both international students and domestic fast-track options."
+    },
+    "bannerTitle": "Fitness & Sports",
+    "heading": "Turn Your Passion for\nFitness into a Career",
+    "description": "ABM’s fitness courses prepare you for a career in Australia’s growing fitness industry. Gain the skills to lead group classes, design personalized training programs, and work in gyms, outdoor settings, or online. Whether starting out or advancing your expertise, our flexible programs set you up for success.",
+    "forInternational": "For International Students",
+    "forDomestic": "For Domestic (Fast Track)",
+    "cert3": "Certificate III in Fitness",
+    "cert4": "Certificate IV in Fitness",
+    "diploma": "Diploma in Sport (Coaching)",
+    "cert3Fast": "Certificate III in Fitness (Fast Track)",
+    "cert4Fast": "Certificate IV in Fitness (Fast Track)"
+  },
+  "shortCoursesPage": {
+    "heading": "Discover Your Passion with ABM’s New Short Courses!",
+    "description": "ABM is thrilled to announce our latest project – ABM Short Courses – designed for anyone who loves food, drink, and the art of hospitality! Whether you’re a home cook, aspiring chef, or curious enthusiast, these one-day courses are your gateway to new skills and unforgettable experiences.",
+    "heading2": "ABM Short Courses for 2025"
+  },
   "footer": {
     "home": "Home",
     "courses": "Courses",
@@ -621,5 +642,36 @@
     "agentApplication": "Agent Application",
     "agentList": "Agent List",
     "abmPoliciesAndProcedures": "ABM Policies and Procedures"
+  },
+  "shortCoursesMenu": {
+    "hospitality": "Hospitality",
+    "cookingAndBaking": "Cooking & Baking",
+    "onlineCourses": "Online Courses",
+    "barista": "Barista Course",
+    "wine": "Wine Course",
+    "fineDessert": "Fine Dining Dessert Plating Course",
+    "cocktail": "Cocktail-Making and Mixology Course",
+    "foodSafety": "NSW Food Safety Supervisor Certificate",
+    "frenchCakes": "Classic French Cakes Course",
+    "sourdough": "Sourdough and Focaccia Course",
+    "frenchPastries": "Classic French Pastries Course",
+    "petitFour": "French Petit Four Course (Macaroon)",
+    "vegan": "Vegan and Vegetarian Course",
+    "chocolate": "Chocolate Class – Xmas",
+    "htmlIntro": "Introduction to HTML, CSS, and Basic Web Design",
+    "portfolioWebsite": "Advanced Course: Building a Portfolio Website"
+  },
+  "gallery": {
+    "title": "Campus Gallery"
+  },
+  "courseInformation": {
+    "title": "Course Information",
+    "overview": "Overview"
+  },
+  "courseDetail": {
+    "title": "Course Detail"
+  },
+  "units": {
+    "title": "Units"
   }
 }

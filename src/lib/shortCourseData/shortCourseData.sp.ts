@@ -706,6 +706,17 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       '/short-course/fss_1.png',
       '/short-course/fss_1.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    specialOfferLabel: 'Oferta Especial:',
+    selectDateOptionLabel: 'Selecciona una fecha',
+    courseType: {
+      label: 'Elige el curso',
+      options: ['Certificado', 'Recertificado'],
+      selectLabel: 'Selecciona un tipo',
+    },
     dates: [
       {
         date: '2025-07-18',
@@ -786,8 +797,7 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex cocinero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en cocina de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has cocinado comida vegana antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran cocinero y llevarte a casa tus propias habilidades de cocina vegana.',
+    callToAction: 'Inscríbete ahora',
     faq1: {
       question:
         '¿Quién necesita el Certificado de Supervisor de Seguridad Alimentaria de NSW (FSS)?',

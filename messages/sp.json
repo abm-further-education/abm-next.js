@@ -143,7 +143,7 @@
     "streams": "Especialidades",
     "kitchenManagementStream": "Especialidad en Gestión de Cocina",
     "foodAndBeverageStream": "Especialidad en Alimentos y Bebidas",
-    "streamDescription": "Esta especialidad es para estudiantes que buscan desarrollar sus habilidades y estudios en cocina a un nivel más avanzado.",
+    "streamDescription": "Estas especialidades son para estudiantes que buscan ya sea desarrollar sus habilidades y estudios en cocina a un nivel más avanzado o en hsopitalidad.",
     "specialisedShortCourses": "Cursos cortos especializados",
     "shortCourse": "Clase de Un Día",
     "foodSafetySupervisor": "Certificado de Supervisor de Seguridad Alimentaria de NSW (FSS)"
@@ -258,6 +258,9 @@
     "usiHelpTitle": "Ayuda USI",
     "usiHelpDescription": "Para soporte técnico o preguntas sobre tu cuenta USI, visita la página oficial de ayuda USI.",
     "usiHelpButton": "Ayuda USI"
+  },
+  "courseInformation": {
+    "title": "Información del Curso"
   },
   "courseEntryRequirements": {
     "englishEntryRequirementsTitle": "Requisitos de Inglés para la Admisión",
@@ -617,5 +620,54 @@
     "agentApplication": "Solicitud para Agentes",
     "agentList": "Lista de Agentes",
     "abmPoliciesAndProcedures": "Políticas y Procedimientos de ABM"
+  },
+  "fitnessPage": {
+    "metadata": {
+      "title": "Cursos de Fitness y Deportes | ABM Further Education",
+      "description": "Convierte tu pasión por el fitness en una carrera con ABM Further Education. Descubre nuestros cursos de fitness y deportes diseñados tanto para estudiantes internacionales como para opciones aceleradas nacionales."
+    },
+    "bannerTitle": "Fitness y Deportes",
+    "heading": "Convierte tu Pasión por el Fitness en una Carrera",
+    "description": "Los cursos de fitness de ABM te preparan para una carrera en la creciente industria del fitness en Australia. Adquiere las habilidades necesarias para liderar clases grupales, diseñar programas de entrenamiento personalizados y trabajar en gimnasios, al aire libre o en línea. Ya sea que estés comenzando o buscando perfeccionar tu experiencia, nuestros programas flexibles te preparan para el éxito.",
+    "forInternational": "Para Estudiantes Internacionales",
+    "forDomestic": "Para Estudiantes Domesticos (Modo Acelerado)",
+    "cert3": "Certificado III en Fitness",
+    "cert4": "Certificado IV en Fitness",
+    "diploma": "Diploma en Deporte (Entrenamiento)",
+    "cert3Fast": "Certificado III en Fitness (Vía Rápida)",
+    "cert4Fast": "Certificado IV en Fitness (Vía Rápida)"
+  },
+  "shortCoursesPage": {
+    "heading": "¡Descubre tu pasión con los nuevos Cursos Cortos de ABM!",
+    "description": "¡En ABM estamos emocionados de anunciar nuestro nuevo proyecto – ABM Cursos Cortos – diseñado para todos los amantes de la comida, la bebida y el arte de la hospitalidad! Ya seas un cocinero aficionado, un chef en formación o simplemente un entusiasta curioso, estos cursos de un día son tu puerta de entrada a nuevas habilidades, trabajos y experiencias inolvidables.",
+    "heading2": "Cursos Cortos de ABM para 2025"
+  },
+  "shortCoursesMenu": {
+    "hospitality": "Hospitalidad",
+    "cookingAndBaking": "Cocina y Repostería",
+    "onlineCourses": "Cursos en Línea",
+    "barista": "Curso de Barista",
+    "wine": "Curso de Vinos",
+    "fineDessert": "Curso de Emplatado de Postres de Alta Cocina",
+    "cocktail": "Curso de Coctelería y Mixología",
+    "foodSafety": "Certificado de Supervisor de Seguridad Alimentaria de NSW",
+    "frenchCakes": "Curso de Pasteles Franceses Clásicos",
+    "sourdough": "Curso de Masa Madre y Focaccia",
+    "frenchPastries": "Curso de Pastelería Francesa Clásica",
+    "petitFour": "Curso de Petit Four Francés (Macaron)",
+    "vegan": "Curso Vegano y Vegetariano",
+    "chocolate": "Clase de Chocolate – Navidad",
+    "htmlIntro": "Introducción a HTML, CSS y Diseño Web Básico",
+    "portfolioWebsite": "Curso Avanzado: Creación de un Sitio Web de Portafolio"
+  },
+  "gallery": {
+    "title": "Galería del Campus",
+    "overview": "Resumen"
+  },
+  "courseDetail": {
+    "title": "Detalle del Curso"
+  },
+  "units": {
+    "title": "Unidades"
   }
 }

@@ -34,6 +34,7 @@ function Nav() {
   // const pathname = usePathname();
   const t = useTranslations('nav');
   const tStudy = useTranslations('studyWithUs');
+  const tShortCourse = useTranslations('shortCoursesMenu');
   // const [isScrolled, setIsScrolled] = useState(false);
   const [subMenu, setSubMenu] = useState('');
   const [search, setSearch] = useState('');
@@ -72,6 +73,13 @@ function Nav() {
             // 다른 항목들은 tStudy 번역 키 사용
             return {
               title: tStudy(item.title),
+              href: item.href,
+            };
+          }
+          // Short Courses 섹션의 items는 tShortCourse 번역 키를 사용
+          if (section.titleKey === 'menu.shortCourses') {
+            return {
+              title: tShortCourse(item?.titleKey || ''),
               href: item.href,
             };
           }

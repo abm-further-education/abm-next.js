@@ -16,8 +16,10 @@ import {
   KM_UNITS,
 } from '@/lib/units';
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 function Units({ params }: { params: { id: string } }) {
+  const t = useTranslations('units');
   const { id } = params;
   const mappingCourseUnits: {
     [key: string]: { [key: string]: string | number }[];
@@ -47,7 +49,7 @@ function Units({ params }: { params: { id: string } }) {
   }
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-10">Units</h1>
+      <h1 className="text-3xl font-bold mb-10">{t('title')}</h1>
       <table className="min-w-full border-b border-gray-300 text-sm text-left text-gray-700">
         <thead className="bg-gray-100">
           <tr>

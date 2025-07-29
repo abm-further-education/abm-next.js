@@ -210,6 +210,7 @@ export const studyWithUsMenu = [
 
 // 메뉴 구조 데이터
 export interface MenuItem {
+  titleKey?: string;
   title: string;
   href: string;
   items?: MenuItem[];
@@ -253,7 +254,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
         href: '/cookery-and-hospitality-courses',
         items: [
           {
-            title: 'Diploma of hospitality management',
+            title: 'Diploma of Hospitality Management',
             href: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
           },
           {
@@ -261,7 +262,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/cookery-and-hospitality-courses/advanced-diploma-of-hospitality-management',
           },
           {
-            title: 'Industry Placement',
+            title: 'Industry Placement (Hospitality Management)',
             href: '/cookery-and-hospitality-courses/industry-placement-hospitality-management',
           },
           {
@@ -365,22 +366,27 @@ export const MENU_STRUCTURE: MenuSection[] = [
         href: '/short-courses',
         items: [
           {
+            titleKey: 'barista',
             title: 'Barista Course',
             href: '/short-courses/barista',
           },
           {
+            titleKey: 'wine',
             title: 'Wine Course',
             href: '/short-courses/wine',
           },
           {
+            titleKey: 'fineDessert',
             title: 'Fine Dining Dessert Plating Course',
             href: '/short-courses/dessert',
           },
           {
+            titleKey: 'cocktail',
             title: 'Cocktail-Making and Mixology Course',
             href: '/short-courses/mixology',
           },
           {
+            titleKey: 'foodSafety',
             title: 'NSW Food Safety Supervisor Certificate',
             href: '/cookery-and-hospitality-courses/fss',
           },
@@ -391,26 +397,32 @@ export const MENU_STRUCTURE: MenuSection[] = [
         href: '/short-courses',
         items: [
           {
+            titleKey: 'frenchCakes',
             title: 'Classic French Cakes Course',
             href: '/short-courses/cake',
           },
           {
+            titleKey: 'sourdough',
             title: 'Sourdough and Focaccia Course',
             href: '/short-courses/focaccia',
           },
           {
+            titleKey: 'frenchPastries',
             title: 'Classic French Pastries Course',
             href: '/short-courses/pastries',
           },
           {
+            titleKey: 'petitFour',
             title: 'French Petit Four Course (Macaroon)',
             href: '/short-courses/petit',
           },
           {
+            titleKey: 'vegan',
             title: 'Vegan and Vegetarian Course',
             href: '/short-courses/vegan',
           },
           {
+            titleKey: 'chocolate',
             title: 'Chocolate Class – Xmas',
             href: '/short-courses/chocolate',
           },
@@ -421,10 +433,12 @@ export const MENU_STRUCTURE: MenuSection[] = [
         href: '/short-courses',
         items: [
           {
+            titleKey: 'htmlIntro',
             title: 'Introduction to HTML, CSS, and Basic Web Design',
             href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
           },
           {
+            titleKey: 'portfolioWebsite',
             title: 'Advanced Course: Building a Portfolio Website',
             href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
           },

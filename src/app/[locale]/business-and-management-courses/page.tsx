@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 function page() {
   return (
-    <div className="font-[family-name:var(--font-montserrat)]">
+    <div className="font-[family-name:var(--font-montserrat)] pt-60">
       <Banner
         slides={[
           {

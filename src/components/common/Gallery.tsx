@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const Gallery = () => {
+  const t = useTranslations('gallery');
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
   const [imageIndex, setImageIndex] = useState(0);
@@ -30,13 +32,12 @@ const Gallery = () => {
     default: 5,
     1100: 3,
     700: 2,
-    500: 1,
   };
 
   return (
     <div className="p-5 w-full">
       <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-        Campus Gallery
+        {t('title')}
       </h2>
       <Masonry
         breakpointCols={breakpointColumns}

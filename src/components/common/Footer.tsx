@@ -15,17 +15,18 @@ function Footer() {
               href="https://maps.app.goo.gl/NSSq15XbzbLBmfQcA"
               target="_blank"
             >
-              <strong> Main Campus</strong> 242 Castlereagh Street Sydney NSW
-              2000
+              <strong> Main Campus</strong> <br />
+              242 Castlereagh Street Sydney NSW 2000
             </Link>
           </li>
-          <li>
+          <li className="mt-10">
             <Link
               href="https://maps.app.goo.gl/NSSq15XbzbLBmfQcA"
               target="_blank"
             >
-              <strong> ABM Kitchen</strong> Shop 22, The Quay Haymarket, 61-79
-              Quay Street, Haymarket, 2000
+              <strong> ABM Kitchen</strong>
+              <br />
+              Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000
             </Link>
           </li>
           <li className="underline mt-10">
@@ -39,136 +40,138 @@ function Footer() {
           <li>ABN 37 623 414 817</li>
         </ul>
       </div>
-      <div>
-        <ul>
-          <li className="font-bold">{t('home')}</li>
-          <li>{t('courses')}</li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('shortCourses')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/study-with-us" target="_blank">
-              {t('studyWithUs')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/current-students" target="_blank">
-              {t('currentStudents')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" target="_blank">
-              {t('contact')}
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li className="font-bold">{t('courses')}</li>
-          <li>
-            <Link href="/courses" target="_blank">
-              {t('cookeryAndHospitality')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/courses" target="_blank">
-              {t('fitnessAndSports')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/courses" target="_blank">
-              {t('business')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/courses" target="_blank">
-              {t('projectAndProgram')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/courses" target="_blank">
-              {t('humanResources')}
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li className="font-bold mt-20 md:mt-0">{t('shortCourses')}</li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('baristaCourse')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('classicFrenchPastriesCourse')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('wineCourse')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('sourdoughAndFocacciaCourse')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('fineDiningDessertPlating')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('classicFrenchCakesCourse')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('frenchPetitFourCourse')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('veganAndVegetarianCourse')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/short-courses" target="_blank">
-              {t('chocolateClassXmas')}
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li className="font-bold mt-20 md:mt-0">{t('agent')}</li>
-          <li>
-            <Link href="/agent" target="_blank">
-              {t('agentPortal')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/agent" target="_blank">
-              {t('agentApplication')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/agent" target="_blank">
-              {t('agentList')}
-            </Link>
-          </li>
-          <li>
-            <Link href="/abm-policies-procedures-and-forms" target="_blank">
-              {t('abmPoliciesAndProcedures')}
-            </Link>
-          </li>
-        </ul>
+      <div className="flex flex-wrap gap-20">
+        <div>
+          <ul>
+            <li className="font-bold">{t('home')}</li>
+            <li>{t('courses')}</li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('shortCourses')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/study-with-us" target="_blank">
+                {t('studyWithUs')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/current-students" target="_blank">
+                {t('currentStudents')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" target="_blank">
+                {t('contact')}
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li className="font-bold">{t('courses')}</li>
+            <li>
+              <Link href="/courses" target="_blank">
+                {t('cookeryAndHospitality')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" target="_blank">
+                {t('fitnessAndSports')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" target="_blank">
+                {t('business')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" target="_blank">
+                {t('projectAndProgram')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" target="_blank">
+                {t('humanResources')}
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li className="font-bold mt-20 md:mt-0">{t('shortCourses')}</li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('baristaCourse')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('classicFrenchPastriesCourse')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('wineCourse')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('sourdoughAndFocacciaCourse')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('fineDiningDessertPlating')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('classicFrenchCakesCourse')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('frenchPetitFourCourse')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('veganAndVegetarianCourse')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/short-courses" target="_blank">
+                {t('chocolateClassXmas')}
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li className="font-bold mt-20 md:mt-0">{t('agent')}</li>
+            <li>
+              <Link href="/agent" target="_blank">
+                {t('agentPortal')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/agent" target="_blank">
+                {t('agentApplication')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/agent" target="_blank">
+                {t('agentList')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/abm-policies-procedures-and-forms" target="_blank">
+                {t('abmPoliciesAndProcedures')}
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   );

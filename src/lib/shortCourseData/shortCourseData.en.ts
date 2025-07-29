@@ -563,6 +563,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       validUntil: '',
       note: '(New customers only)',
     },
+    selectDateOptionLabel: 'Select a date',
     courseType: {
       label: 'Choose the course',
       options: ['Certificate', 'Recertificate'],

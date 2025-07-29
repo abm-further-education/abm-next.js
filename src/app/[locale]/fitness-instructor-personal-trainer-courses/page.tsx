@@ -5,6 +5,7 @@ import Gallery from '@/components/common/Gallery';
 import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -13,66 +14,74 @@ export const metadata: Metadata = {
     'Turn your passion for fitness into a career with ABM Further Education. Explore our fitness and sports courses designed for both international students and domestic fast-track options.',
 };
 
-function page() {
+function FitnessPage() {
+  const t = useTranslations('fitnessPage');
   return (
-    <div>
+    <div className="pt-60">
       <Banner
         slides={[
           {
             imgPath: '/courses/fitness/fitness_1.png',
-            title: 'Fitness & Sports',
+            title: t('bannerTitle'),
             content: '',
           },
         ]}
       />
       <div className="flex flex-col items-center justify-center py-50">
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-          Turn Your Passion for
-          <br />
-          Fitness into a Career
+          {t('heading')
+            .split('\n')
+            .map((line, i) => (
+              <React.Fragment key={i}>
+                {i > 0 && <br />}
+                {line}
+              </React.Fragment>
+            ))}
         </h2>
         <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
-          ABM’s fitness courses prepare you for a career in Australia’s growing
-          fitness industry. Gain the skills to lead group classes, design
-          personalized training programs, and work in gyms, outdoor settings, or
-          online. Whether starting out or advancing your expertise, our flexible
-          programs set you up for success.
+          {t('description')}
         </p>
       </div>
       <FadeIn>
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-          For International Students
+          {t('forInternational')}
         </h2>
         <div className="flex flex-wrap md:gap-20 py-50 justify-center items-center max-w-1200 mx-auto">
           <Card
             imgPath="/courses/fitness/fitness_4.png"
-            title="Certificate III in FItness"
-            link="/"
-            className="w-300 md:w-530"
+            title={t('cert3')}
+            link="/fitness-instructor-personal-trainer-courses/sis30321-certificate-iii-in-fitness"
+            className="w-300 md:w-330"
           />
           <Card
             imgPath="/courses/fitness/fitness_5.png"
-            title="Certificate IV in FItness"
-            link="/"
-            className="w-300 md:w-530"
+            title={t('cert4')}
+            link="/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness"
+            className="w-300 md:w-330"
+          />
+          <Card
+            imgPath="/courses/fitness/diploma-of-sport.png"
+            title={t('diploma')}
+            link="/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport"
+            className="w-300 md:w-330"
           />
         </div>
       </FadeIn>
       <FadeIn>
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-          For Domestic (Fast Track)
+          {t('forDomestic')}
         </h2>
         <div className="flex flex-wrap md:gap-20 py-50 justify-center items-center max-w-1200 mx-auto">
           <Card
             imgPath="/courses/fitness/fitness_2.png"
-            title="Certificate III in FItness (Fast Track)"
-            link="/"
+            title={t('cert3Fast')}
+            link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track"
             className="w-300 md:w-530"
           />
           <Card
             imgPath="/courses/fitness/fitness_3.png"
-            title="Certificate IV in FItness (Fast Track)"
-            link="/"
+            title={t('cert4Fast')}
+            link="/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track"
             className="w-300 md:w-530"
           />
         </div>
@@ -90,4 +99,4 @@ function page() {
   );
 }
 
-export default page;
+export default FitnessPage;

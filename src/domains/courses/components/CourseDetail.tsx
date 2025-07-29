@@ -1,5 +1,7 @@
 import React from 'react';
-import { parseBoldText } from '@/lib/utils';
+import { cn, parseBoldText } from '@/lib/utils';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 // Helper component to render text with bold parsing
 const BoldText: React.FC<{ children: string }> = ({ children }) => {
@@ -79,7 +81,10 @@ function renderDescription(
                         {item.headers.map((header, headerIndex) => (
                           <th
                             key={headerIndex}
-                            className="px-4 py-2 border border-gray-300 font-semibold text-left"
+                            className={cn(
+                              'px-4 py-2 border border-gray-300 font-semibold text-left',
+                              headerIndex === 0 ? 'w-120' : ''
+                            )}
                           >
                             {header}
                           </th>
@@ -110,13 +115,13 @@ function renderDescription(
               );
             } else if (isLinkData(item)) {
               return (
-                <a
+                <Link
                   key={`link-${index}`}
                   href={item.url}
-                  className="text-blue-600 hover:text-blue-800 underline"
+                  className="text-blue-600 hover:text-blue-800 underline text-sm"
                 >
                   {item.text}
-                </a>
+                </Link>
               );
             } else if (typeof item === 'string') {
               return (
@@ -152,10 +157,11 @@ function renderDescription(
 }
 
 function CourseDetail({ courseInfo }: CourseDetailProps) {
+  const t = useTranslations('courseDetail');
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-[1600px] mx-auto px-20 py-5 md:px-80">
-        <h1 className="text-3xl font-bold mb-10">Course Detail</h1>
+        <h1 className="text-3xl font-bold mb-10">{t('title')}</h1>
 
         {Object.entries(courseInfo).map(([sectionKey, sectionData]) => (
           <div key={sectionKey} className="mb-14">

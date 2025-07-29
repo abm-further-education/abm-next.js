@@ -64,7 +64,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title:
         'Course Structure – Packaged with Certificate IV in Kitchen Management',
       description: [
-        'It is applicable ONLY for those who completed SIT40521 Cert Iv Kitchen Management with ABM Further education\nWork placement: N/A\nCourse duration: 26 weeks (2 terms)\n\n',
+        'It is applicable ONLY for those who completed SIT40521 Cert IV Kitchen Management with ABM Further education\nWork placement: N/A\nCourse duration: 26 weeks (2 terms)\n\n',
         '**Term1**',
         {
           type: 'table' as const,
@@ -219,18 +219,18 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           rows: [
             [
               'Term 5',
-              'Week 1-10 SITHIND008 Work effectively in the hospitality service – 30shifts at 5hours from a total 57 shifts',
+              'Week 1-10 SITHIND008 Work effectively in the hospitality service – 30 shifts at 5 hours from a total 57 shifts',
               '150',
             ],
             [
               'Term 6',
-              'Week 1-9 SITHIND008 Work effectively in the hospitality service – 27shifts at 5hours from a total 57 shifts',
+              'Week 1-9 SITHIND008 Work effectively in the hospitality service – 27 shifts at 5 hours from a total 57 shifts',
               '135',
             ],
-            ['TOTAL Minimum hours', '', '285'],
+            ['', 'TOTAL Minimum hours', '285'],
           ],
         },
-        '*Please note Hospitality shifts may vary in time due to business needs. ABM has allocated approximately 5 hours per shift based on industry standards. ABM understands some shifts may be slightly shorter or longer based on individual business needs.&nbsp;Students may need to do additional service periods to reach the 285 workplace hours.\n\n',
+        '*Please note Hospitality shifts may vary in time due to business needs. ABM has allocated approximately 5 hours per shift based on industry standards. ABM understands some shifts may be slightly shorter or longer based on individual business needs. Students may need to do additional service periods to reach the 285 workplace hours.\n\n',
         '**Work placement arrangements**',
         "- Students can choose their work placement locations. However, it will be verified by the Trainer/Assessors to ensure it has all the facilities and equipment's that meets the requirements of SITHIND008 Work effectively in the hospitality service.",
         '- Students would be supervised/assessed while on placement by the ABM Trainer/Assessors.',
@@ -277,7 +277,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Pathways to Further Study / Career Opportunities',
       description: [
-        'After achieving this qualification, graduates may undertake the next qualification up the ',
+        'After achieving this qualification, graduates may undertake the next qualification up the:',
         {
           type: 'link',
           text: 'SIT60322 – Advanced Diploma of Hospitality Management',

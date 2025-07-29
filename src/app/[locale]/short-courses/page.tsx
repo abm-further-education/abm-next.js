@@ -3,6 +3,7 @@ import FadeIn from '@/components/common/FadeIn';
 import ShortCourseCard from '@/domains/short-course/components/ShortCourseCard';
 import React from 'react';
 import type { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'Short Courses | ABM Further Education',
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
     "Discover your passion with ABM's short courses! From barista training to French pastries, explore our one-day courses designed for food and hospitality enthusiasts.",
 };
 
-function page() {
+function ShortCoursesPage() {
+  const t = useTranslations('shortCoursesPage');
   return (
     <div>
       <Banner
@@ -25,20 +27,16 @@ function page() {
       <FadeIn>
         <div className="flex flex-col items-center justify-center md:py-50">
           <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-            Discover Your Passion with ABM’s New Short Courses!
+            {t('heading')}
           </h2>
           <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center px-20 md:px-0">
-            ABM is thrilled to announce our latest project – ABM Short Courses –
-            designed for anyone who loves food, drink, and the art of
-            hospitality! Whether you’re a home cook, aspiring chef, or curious
-            enthusiast, these one-day courses are your gateway to new skills and
-            unforgettable experiences.
+            {t('description')}
           </p>
         </div>
       </FadeIn>
       <section className="flex flex-col items-center justify-center pb-40">
         <h2 className="text-3xl md:text-4xl font-bold md:py-50 text-center px-20 md:px-0">
-          ABM Short Courses for 2025
+          {t('heading2')}
         </h2>
         <FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-20 mt-40">
@@ -115,4 +113,4 @@ function page() {
   );
 }
 
-export default page;
+export default ShortCoursesPage;

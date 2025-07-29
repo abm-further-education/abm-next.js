@@ -503,6 +503,7 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     timeLabel: '시간:',
     time: '오전 9:00 - 오후 5:00',
     specialOfferLabel: '특별 혜택:',
+    selectDateOptionLabel: '날짜를 선택하세요',
     specialOffer: {
       textBeforeCode: '아래 코드를 사용하세요',
       code: 'ABMFSS15',

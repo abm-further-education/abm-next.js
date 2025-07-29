@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 function Card({
@@ -17,14 +17,14 @@ function Card({
   className?: string;
 }) {
   const router = useRouter();
-  const params = useParams();
+
   return (
     <div
       className={cn(
         'h-320 xl:h-300 relative group cursor-pointer overflow-hidden',
         className
       )}
-      onClick={() => link && router.push(`${params.locale}/${link}`)}
+      onClick={() => link && router.push(`${link}`)}
     >
       <Image
         src={imgPath}
