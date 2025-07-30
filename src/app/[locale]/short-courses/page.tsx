@@ -53,19 +53,19 @@ function ShortCoursesPage() {
               price={180}
             />
             <ShortCourseCard
-              imgPath="/short-course/wine_1.jpg"
+              imgPath="/short-course/wine/wine_1.jpg"
               title="Wine Course"
               link="/short-courses/wine"
               price={150}
             />
             <ShortCourseCard
-              imgPath="/short-course/sourdough_1.jpg"
+              imgPath="/short-course/focaccia/sourdough_1.jpg"
               title="Sourdough and Focaccia Course"
               link="/short-courses/sourdough"
               price={160}
             />
             <ShortCourseCard
-              imgPath="/short-course/fine_dining_dessert_1.jpg"
+              imgPath="/short-course/dessert/fine_dining_dessert_1.jpg"
               title="Fine Dining Dessert Plating Course"
               link="/short-courses/dessert"
               price={150}
@@ -77,7 +77,7 @@ function ShortCoursesPage() {
               price={160}
             />
             <ShortCourseCard
-              imgPath="/short-course/cocktail_1.png"
+              imgPath="/short-course/mixology/cocktail_1.png"
               title="Cocktail-Making and Mixology Course"
               link="/short-courses/mixology"
               price={150}
@@ -89,13 +89,13 @@ function ShortCoursesPage() {
               price={120}
             />
             <ShortCourseCard
-              imgPath="/short-course/vegan_1.png"
+              imgPath="/short-course/vegan/vegan_1.png"
               title="Vegan and Vegetarian Course"
               link="/short-courses/vegan"
               price={150}
             />
             <ShortCourseCard
-              imgPath="/short-course/xmas_1.png"
+              imgPath="/short-course/chocolate/xmas_1.png"
               title="Chocolate Class – Xmas"
               link="/short-courses/xmas"
               price={130}

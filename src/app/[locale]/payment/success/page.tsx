@@ -21,14 +21,14 @@ interface PaymentDetails {
 const imgMatch: { [key: string]: string } = {
   barista: '/short-course/barista_1.jpg',
   cake: '/short-course/classic_french_cakes_2.png',
-  wine: '/short-course/wine_1.jpg',
-  focaccia: '/short-course/sourdough_1.jpg',
-  dessert: '/short-course/fine_dining_dessert_1.jpg',
+  wine: '/short-course/wine/wine_1.jpg',
+  focaccia: '/short-course/focaccia/sourdough_1.jpg',
+  dessert: '/short-course/dessert/fine_dining_dessert_1.jpg',
   pastries: '/short-course/classic_french_pastries_1.png',
-  mixology: '/short-course/cocktail_1.png',
+  mixology: '/short-course//mixology/cocktail_1.png',
   petit: '/short-course/macaroon_1.png',
-  vegan: '/short-course/vegan_1.png',
-  chocolate: '/short-course/xmas_1.png',
+  vegan: '/short-course/vegan/vegan_1.png',
+  chocolate: '/short-course/chocolate/xmas_1.png',
   fss: '/short-course/fss_1.png',
 };
 

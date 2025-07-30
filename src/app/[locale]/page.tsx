@@ -51,42 +51,42 @@ export default async function Home() {
             {t('HomePage.coursesDescription')}
           </p>
           <FadeIn>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-10 mt-40">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5 2xl:gap-10 mt-40">
               <Card
                 imgPath="/home/Cookery.png"
                 title={t('nav.subMenu.cookery')}
                 link="/cookery-and-hospitality-courses"
-                className="w-300 md:w-250"
+                className="w-300 xl:w-220 2xl:w-250"
               />
               <Card
                 imgPath="/home/Hospitality.png"
                 title={t('nav.subMenu.hospitality')}
                 link="/cookery-and-hospitality-courses"
-                className="w-300 md:w-250"
+                className="w-300 xl:w-220 2xl:w-250"
               />
               <Card
                 imgPath="/home/Fitness.png"
                 title={t('nav.subMenu.fitnessAndSport')}
                 link="/fitness-instructor-personal-trainer-courses"
-                className="w-300 md:w-250"
+                className="w-300 xl:w-220 2xl:w-250"
               />
               <Card
                 imgPath="/home/Business.png"
                 title={t('nav.subMenu.business')}
                 link="/business-and-management-courses"
-                className="w-300 md:w-250"
+                className="w-300 xl:w-220 2xl:w-250"
               />
               <Card
                 imgPath="/home/Project.png"
                 title={t('nav.subMenu.projectAndProgram')}
                 link="/project-and-program-management-courses"
-                className="w-300 md:w-250"
+                className="w-300 xl:w-220 2xl:w-250"
               />
               <Card
                 imgPath="/home/HR.png"
                 title={t('nav.subMenu.humanResource')}
                 link="/human-resource-management-courses"
-                className="w-300 md:w-250"
+                className="w-300 xl:w-220 2xl:w-250"
               />
             </div>
           </FadeIn>

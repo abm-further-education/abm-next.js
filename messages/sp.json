@@ -51,6 +51,7 @@
     "higherEducationPathway": "Vía de Educación Superior",
     "policiesAndProcedures": "Políticas y Procedimientos",
     "title": "Estudia con Nosotros",
+    "timetable": "Horario",
     "welcome": "¡Bienvenido a ABM Further Education!",
     "mission": "Nuestra misión es proporcionar una educación práctica y de alta calidad que prepare a los estudiantes para carreras exitosas. En ABM, aprenderás de líderes de la industria con experiencia, dedicados a tu crecimiento. Con un entorno de apoyo y formación práctica, te aseguramos que adquieras las habilidades y la confianza para prosperar en tu futura carrera.",
     "why": "¿Por qué estudiar en ABM Further Education?",
@@ -161,7 +162,7 @@
     "studentPortal": "PORTAL DEL ESTUDIANTE"
   },
   "feeSchedule": {
-    "title": "Calendario de Tarifas 2025",
+    "title": "Plan de Pagos y Montos",
     "bannerTitle": "Calendario de Tarifas 2025",
     "bannerSubtitle": "Información completa de tarifas para ABM Educación Superior",
     "promotionTitle": "Promoción por Tiempo Limitado!",
@@ -485,11 +486,11 @@
     }
   },
   "higherEducationPathway": {
-    "title": "Vía de Educación Superior",
-    "bannerTitle": "¿Buscas Progresar Después de tu Curso ABM?",
+    "title": "Ruta Universitaria y Socios",
+    "bannerTitle": "¿Buscas Progresar Tus Estudios Después de ABM?",
     "bannerSubtitle": "Después de completar tu Certificate IV, Diploma o Advanced Diploma en ABM Educación Superior, puedes dar el siguiente paso y continuar tus estudios a un nivel superior.",
     "pathwayTitle": "Vía hacia la Educación Superior",
-    "pathwayDescription": "ABM tiene acuerdos de vía con proveedores de educación superior de renombre en Australia, incluyendo Southern Cross University (SCU). Esto significa que puedes ser elegible para créditos hacia un título de Licenciatura, ayudándote a ahorrar tanto tiempo como dinero.",
+    "pathwayDescription": "ABM tiene acuerdos con proveedores de educación superior de renombre en Australia, incluyendo Southern Cross University (SCU), UBSS y el Hotel School of Sydney. Esto significa que puedes obtener créditos hacia un título de Licenciatura, ayudándote a ahorrar tanto tiempo como dinero.",
     "exploreOptions": "Si estás considerando estudios superiores y deseas mejorar tu calificación, explora tus opciones a través de las vías académicas de ABM.",
     "hotelSchoolTitle": "The Hotel School Sydney / Southern Cross University",
     "hotelSchoolProgram": "Licenciatura en Negocios en Gestión Hotelera",
@@ -501,14 +502,14 @@
     "advancedDiplomaHospitalityCredit": "Créditos otorgados: 12 unidades, de un total de 24 (144 CP, 1.5 años o 50% del curso) – 3 unidades electivas no especificadas; 9 unidades especificadas",
     "ubssTitle": "UBSS Universal Business School Sydney",
     "ubssProgram": "Licenciatura en Negocios y Maestría en Administración de Negocios",
-    "ubssBachelorTitle": "Hacia Licenciatura en Negocios UBSS (24 materias en total)",
+    "ubssBachelorTitle": "Hacia un Pregrado en Negocios en UBSS  (24 materias en total)",
     "diplomaBusiness": "Diploma en Negocios: 6 materias",
     "advancedDiplomaBusiness": "Advanced Diploma en Negocios: 9 materias",
     "diplomaHR": "Diploma en Gestión de Recursos Humanos: 5 materias",
     "advancedDiplomaHR": "Advanced Diploma en Gestión de Recursos Humanos: 7 materias",
     "diplomaHospitalityUBSS": "Diploma en Gestión de Hospitalidad: 4 materias",
     "advancedDiplomaHospitalityUBSS": "Advanced Diploma en Gestión de Hospitalidad: 5 materias",
-    "ubssMasterTitle": "Hacia Maestría en Administración de Negocios UBSS (16 materias en total)",
+    "ubssMasterTitle": "Hacia una Maestría  en Administración de Negocios (MBA) ",
     "graduateDiplomaManagement": "Graduate Diploma en Gestión (Aprendizaje): 8 materias",
     "benefitsTitle": "Beneficios de las Vías de Educación Superior",
     "saveTimeTitle": "Ahorra Tiempo",
@@ -669,5 +670,42 @@
   },
   "units": {
     "title": "Unidades"
+  },
+  "hrPage": {
+    "metadata": {
+      "title": "Cursos de Gestión de Recursos Humanos | ABM Further Education",
+      "description": "Construye una carrera gratificante en recursos humanos con ABM Further Education. Desde el Certificado IV hasta el Diploma Avanzado, desarrolla habilidades esenciales de RRHH para el entorno laboral actual."
+    },
+    "bannerTitle": "Gestión de Recursos Humanos",
+    "heading": "Construye una Carrera Gratificante en Recursos Humanos",
+    "description": "Los cursos de Gestión de Recursos Humanos de ABM te preparan para roles de RRHH en todos los niveles, desde puestos iniciales hasta líderes estratégicos. Adquiere habilidades en reclutamiento, resolución de conflictos, nómina y planificación de personal a través de cursos flexibles adaptados a tus objetivos. Ya sea que comiences con el Certificado IV o avances al Diploma Avanzado, ABM te brinda el conocimiento y la experiencia para prosperar en el entorno laboral actual.",
+    "projectHeading": "Cursos de Proyecto y Programa",
+    "cert4": "Certificado IV en Práctica de Gestión de Proyectos",
+    "diploma": "Diploma en Gestión de Proyectos",
+    "advDiploma": "Diploma Avanzado en Gestión de Programas"
+  },
+  "projectProgram": {
+    "bannerTitle": "Proyecto y Programa",
+    "bannerContent": "",
+    "leadProjectsTitle": "Lidera Proyectos que Generan Impacto",
+    "leadProjectsDescription": "Los cursos de Gestión de Proyectos y Programas de ABM te brindan las habilidades para dirigir proyectos exitosos en industrias como construcción, tecnología y sectores corporativos. Desde roles iniciales con el Certificado IV hasta liderazgo senior con el Diploma Avanzado, nuestros cursos flexibles abarcan planificación de proyectos, gestión de riesgos y compromiso con los interesados. Ya sea que estés comenzando o buscando roles avanzados, ABM te ayuda a desarrollar la experiencia para convertir ideas en resultados reales.",
+    "coursesTitle": "Cursos de Proyectos y Programas",
+    "certIVTitle": "Certificado IV en Práctica de Gestión de Proyectos",
+    "diplomaTitle": "Diploma de Gestión de Proyectos",
+    "advDiplomaTitle": "Diploma Avanzado en Gestión de Programas"
+  },
+  "academicCalendar": {
+    "term1Intake1": "Trimestre 1 Ingreso 1",
+    "term1Intake2": "Trimestre 1 Ingreso 2",
+    "holiday1": "Vacaciones 1",
+    "term2Intake1": "Trimestre 2 Ingreso 1",
+    "term2Intake2": "Trimestre 2 Ingreso 2",
+    "holiday2": "Vacaciones 2",
+    "term3Intake1": "Trimestre 3 Ingreso 1",
+    "term3Intake2": "Trimestre 3 Ingreso 2",
+    "holiday3": "Vacaciones 3",
+    "term4Intake1": "Trimestre 4 Ingreso 1",
+    "term4Intake2": "Trimestre 4 Ingreso 2",
+    "christmasHoliday": "Vacaciones de Navidad"
   }
 }

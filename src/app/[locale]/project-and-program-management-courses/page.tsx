@@ -6,6 +6,7 @@ import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
 import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
 export const metadata: Metadata = {
   title: 'Project & Program Management Courses | ABM Further Education',
@@ -13,54 +14,47 @@ export const metadata: Metadata = {
     'Lead projects that make an impact with ABM Further Education. From Certificate IV to Advanced Diploma, develop project management skills for construction, tech, and corporate sectors.',
 };
 
-function Page() {
+export default async function Page() {
+  const t = await getTranslations('projectProgram');
   return (
     <div className="pt-60">
-      {' '}
       <Banner
         slides={[
           {
             imgPath: '/courses/project/project_management.png',
-            title: 'Project & Program',
-            content: '',
+            title: t('bannerTitle'),
+            content: t('bannerContent'),
           },
         ]}
       />
       <div className="flex flex-col items-center justify-center py-50">
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-          Lead Projects That Make an Impact
+          {t('leadProjectsTitle')}
         </h2>
         <p className="text-sm md:text-base text-neutral-700 max-w-800 text-center">
-          ABM&apos;s Project and Program Management courses equip you with the
-          skills to lead successful projects across industries like
-          construction, tech, and corporate sectors. From foundational roles
-          with the Certificate IV to senior leadership with the Advanced
-          Diploma, our flexible courses cover project planning, risk management,
-          and stakeholder engagement. Whether you&apos;re starting out or aiming
-          for advanced roles, ABM helps you build the expertise to turn ideas
-          into real results.
+          {t('leadProjectsDescription')}
         </p>
       </div>
       <FadeIn>
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-          Project & Program Courses
+          {t('coursesTitle')}
         </h2>
         <div className="flex flex-wrap md:gap-20 py-50 justify-center items-center max-w-1200 mx-auto">
           <Card
             imgPath="/courses/project/project_1.png"
-            title="Certificate IV in Project Management Practice"
+            title={t('certIVTitle')}
             link="/project-and-program-management-courses/bsb40920-certificate-iv-in-project-management-practice"
             className="w-300 md:w-380"
           />
           <Card
             imgPath="/courses/project/project_2.png"
-            title="Diploma of Project Management"
-            link="project-and-program-management-courses/bsb50820-diploma-of-project-management-practice"
+            title={t('diplomaTitle')}
+            link="/project-and-program-management-courses/bsb50820-diploma-of-project-management-practice"
             className="w-300 md:w-380"
           />
           <Card
             imgPath="/courses/project/project_3.png"
-            title="Advanced Diploma of Program Management"
+            title={t('advDiplomaTitle')}
             link="/project-and-program-management-courses/bsb60720-advanced-diploma-of-project-management-practice"
             className="w-300 md:w-380"
           />
@@ -78,5 +72,3 @@ function Page() {
     </div>
   );
 }
-
-export default Page;

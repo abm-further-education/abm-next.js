@@ -13,6 +13,12 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       '/short-course/barista/barista_course_4.jpg',
       '/short-course/barista/barista_course_5.jpg',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-02-21',
@@ -69,8 +75,7 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       '¡Llévate las habilidades para impresionar a tus amigos y familiares con tu café de nivel barista en casa!',
     dressCode:
       'Por seguridad y comodidad, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! ¡No te lo pierdas, reserva tu lugar ahora!',
+    callToAction: 'Inscríbete ahora',
   },
   cake: {
     title: 'Masterclass de Pasteles Franceses Clásicos 🍰',
@@ -86,6 +91,12 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       '/short-course/cake/cake_5.jpg',
       '/short-course/cake/cake_6.jpg',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-03-27',
@@ -116,21 +127,27 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex pastelero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en pastelerías de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has horneado un pastel francés antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran pastelero y llevarte a casa tus propios pasteles franceses.',
+    callToAction: 'Inscríbete ahora',
   },
   focaccia: {
     title: 'Masterclass de Focaccia ��',
     description: `¿Te encanta el pan y quieres aprender a hornear focaccia? ¡Esta clase es para ti! Ya seas principiante o panadero casero con ganas de explorar la técnica de la focaccia, este masterclass práctico te enseñará todas las técnicas esenciales para crear focaccia de calidad.`,
     images: [
-      '/short-course/focaccia_1.jpg',
-      '/short-course/focaccia/focaccia_course_1.jpg',
-      '/short-course/focaccia/focaccia_course_2.jpg',
-      '/short-course/focaccia_2.jpg',
-      '/short-course/focaccia/focaccia_course_3.jpg',
-      '/short-course/focaccia/focaccia_course_4.jpg',
-      '/short-course/focaccia/focaccia_course_5.jpg',
+      '/short-course/focaccia/focaccia_1.jpg',
+      '/short-course/focaccia/focaccia_2.jpg',
+      '/short-course/focaccia/focaccia_3.jpg',
+      '/short-course/focaccia/focaccia_4.jpg',
+      '/short-course/focaccia/focaccia_5.jpg',
+      '/short-course/focaccia/focaccia_6.jpg',
+      '/short-course/focaccia/focaccia_7.jpg',
+      '/short-course/focaccia/focaccia_8.jpg',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-04-01',
@@ -191,21 +208,23 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex panadero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en panadería de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has horneado focaccia antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran panadero y llevarte a casa tus propias focaccia.',
+    callToAction: 'Inscríbete ahora',
   },
   wine: {
     title: 'Masterclass de Vinos y Vins 🍷',
     description: `¿Te encanta el vino y quieres aprender a degustar y valorar vinos? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar el mundo del vino, este masterclass práctico te enseñará todas las técnicas esenciales para crear una degustación de vinos de calidad.`,
     images: [
-      '/short-course/wine_1.jpg',
-      '/short-course/wine/wine_course_1.jpg',
-      '/short-course/wine/wine_course_2.jpg',
-      '/short-course/wine_2.jpg',
-      '/short-course/wine/wine_course_3.jpg',
-      '/short-course/wine/wine_course_4.jpg',
-      '/short-course/wine/wine_course_5.jpg',
+      '/short-course/wine/wine_1.jpg',
+      '/short-course/wine/wine_2.jpg',
+      '/short-course/wine/wine_3.png',
+      '/short-course/wine/wine_4.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-04-08',
@@ -266,21 +285,22 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex degustador de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en degustación de vinos de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has degustado un vino antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran degustador y llevarte a casa tus propias habilidades de degustación.',
+    callToAction: 'Inscríbete ahora',
   },
   dessert: {
     title: 'Masterclass de Postres 🍮',
     description: `¿Te encanta hornear pero nunca has intentado hacer postres? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar la pastelería, este masterclass práctico te enseñará todas las técnicas esenciales para crear postres impresionantes.`,
     images: [
-      '/short-course/dessert_1.jpg',
-      '/short-course/dessert/dessert_course_1.jpg',
-      '/short-course/dessert/dessert_course_2.jpg',
-      '/short-course/dessert_2.jpg',
-      '/short-course/dessert/dessert_course_3.jpg',
-      '/short-course/dessert/dessert_course_4.jpg',
-      '/short-course/dessert/dessert_course_5.jpg',
+      '/short-course/dessert/fine_dining_dessert_1.jpg',
+      '/short-course/dessert/fine_dining_dessert_2.png',
+      '/short-course/dessert/fine_dining_dessert_3.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-04-15',
@@ -341,21 +361,21 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex pastelero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en pastelería de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has horneado un pastel antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran pastelero y llevarte a casa tus propios postres.',
+    callToAction: 'Inscríbete ahora',
   },
   mixology: {
     title: 'Masterclass de Mixología 🍸',
     description: `¿Te encanta la mixología y quieres aprender a preparar bebidas de calidad? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar el arte de la mixología, este masterclass práctico te enseñará todas las técnicas esenciales para crear bebidas de calidad.`,
     images: [
-      '/short-course/mixology_1.jpg',
-      '/short-course/mixology/mixology_course_1.jpg',
-      '/short-course/mixology/mixology_course_2.jpg',
-      '/short-course/mixology_2.jpg',
-      '/short-course/mixology/mixology_course_3.jpg',
-      '/short-course/mixology/mixology_course_4.jpg',
-      '/short-course/mixology/mixology_course_5.jpg',
+      '/short-course/mixology/cocktail_1.png',
+      '/short-course/mixology/cocktail_2.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-04-22',
@@ -416,21 +436,23 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex mixólogo de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en mixología de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has preparado un cóctel antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran mixólogo y llevarte a casa tus propias habilidades de mixología.',
+    callToAction: 'Inscríbete ahora',
   },
   petit: {
     title: 'Masterclass de Petit Fours 🍰',
     description: `¿Te encanta hornear pero nunca has intentado hacer petit fours? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar la pastelería, este masterclass práctico te enseñará todas las técnicas esenciales para crear petit fours impresionantes.`,
     images: [
-      '/short-course/petit_fours_1.jpg',
-      '/short-course/petit-fours/petit-fours_course_1.jpg',
-      '/short-course/petit-fours/petit-fours_course_2.jpg',
-      '/short-course/petit_fours_2.jpg',
-      '/short-course/petit-fours/petit-fours_course_3.jpg',
-      '/short-course/petit-fours/petit-fours_course_4.jpg',
-      '/short-course/petit-fours/petit-fours_course_5.jpg',
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/petit/petit_2.png',
+      '/short-course/petit/petit_3.png',
+      '/short-course/petit/petit_4.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-04-29',
@@ -486,21 +508,24 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex pastelero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en pastelería de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has horneado un petit four antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran pastelero y llevarte a casa tus propios petit fours.',
+    callToAction: 'Inscríbete ahora',
   },
   vegan: {
     title: 'Masterclass de Cocina Vegana 🌱',
     description: `¿Te encanta la cocina pero nunca has intentado hacer comida vegana? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar la cocina vegana, este masterclass práctico te enseñará todas las técnicas esenciales para crear comidas veganas de calidad.`,
     images: [
-      '/short-course/vegan_1.jpg',
-      '/short-course/vegan/vegan_course_1.jpg',
-      '/short-course/vegan/vegan_course_2.jpg',
-      '/short-course/vegan_2.jpg',
-      '/short-course/vegan/vegan_course_3.jpg',
-      '/short-course/vegan/vegan_course_4.jpg',
-      '/short-course/vegan/vegan_course_5.jpg',
+      '/short-course/vegan/vegan_1.png',
+      '/short-course/vegan/vegan_2.png',
+      '/short-course/vegan/vegan_3.png',
+      '/short-course/vegan/vegan_4.png',
+      '/short-course/vegan/vegan_5.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-05-06',
@@ -556,21 +581,23 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex cocinero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en cocina de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has cocinado comida vegana antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran cocinero y llevarte a casa tus propias habilidades de cocina vegana.',
+    callToAction: 'Inscríbete ahora',
   },
   chocolate: {
     title: 'Masterclass de Chocolate 🍫',
     description: `¿Te encanta el chocolate y quieres aprender a preparar y decorar chocolates? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar el arte del chocolate, este masterclass práctico te enseñará todas las técnicas esenciales para crear chocolates de calidad.`,
     images: [
-      '/short-course/chocolate_1.jpg',
-      '/short-course/chocolate/chocolate_course_1.jpg',
-      '/short-course/chocolate/chocolate_course_2.jpg',
-      '/short-course/chocolate_2.jpg',
-      '/short-course/chocolate/chocolate_course_3.jpg',
-      '/short-course/chocolate/chocolate_course_4.jpg',
-      '/short-course/chocolate/chocolate_course_5.jpg',
+      '/short-course/chocolate/xmas_1.png',
+      '/short-course/chocolate/xmas_2.avif',
+      '/short-course/chocolate/xmas_3.png',
+      '/short-course/chocolate/xmas_4.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-05-13',
@@ -626,21 +653,23 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex chocolatero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en chocolate de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has preparado un chocolate antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran chocolatero y llevarte a casa tus propias habilidades de chocolate.',
+    callToAction: 'Inscríbete ahora',
   },
   pastries: {
     title: 'Masterclass de Pastelería 🥧',
     description: `¿Te encanta hornear pero nunca has intentado hacer pasteles? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar la pastelería, este masterclass práctico te enseñará todas las técnicas esenciales para crear pasteles impresionantes.`,
     images: [
-      '/short-course/pastries_1.jpg',
-      '/short-course/pastries/pastries_course_1.jpg',
-      '/short-course/pastries/pastries_course_2.jpg',
-      '/short-course/pastries_2.jpg',
-      '/short-course/pastries/pastries_course_3.jpg',
-      '/short-course/pastries/pastries_course_4.jpg',
-      '/short-course/pastries/pastries_course_5.jpg',
+      '/short-course/pastries/pastries_1.png',
+      '/short-course/pastries/pastries_2.png',
+      '/short-course/pastries/pastries_3.png',
+      '/short-course/pastries/pastries_4.png',
     ],
+    courseDeliveryLabel: 'Entrega del Curso:',
+    courseDelivery:
+      'Presencial. Los participantes realizarán actividades práctica',
+    timeLabel: 'Horario:',
+    locationLabel: 'Ubicación:',
+    selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
         date: '2025-05-20',
@@ -691,8 +720,7 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       'Esta clase está dirigida por un ex pastelero de uno de los restaurantes más reconocidos de Sídney. Con años de experiencia en pastelería de alto nivel, te guiará en cada paso, ¡haciendo que sea fácil para cualquiera, incluso si nunca has horneado un pastel antes!',
     dressCode:
       'Por seguridad y comodidad en la cocina, usa zapatos planos y cerrados con suela de goma. El cabello largo debe estar recogido y se deben quitar las joyas para cumplir con los estándares de seguridad alimentaria.',
-    callToAction:
-      '¡Plazas limitadas! No pierdas la oportunidad de aprender de un gran pastelero y llevarte a casa tus propios pasteles.',
+    callToAction: 'Inscríbete ahora',
   },
   fss: {
     title:

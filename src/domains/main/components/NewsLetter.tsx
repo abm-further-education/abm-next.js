@@ -10,14 +10,21 @@ import 'swiper/css/autoplay';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { newsData, NewsItem } from '@/lib/news';
+import { useRouter } from 'next/navigation';
 
 interface NewsCardProps {
   news: NewsItem;
 }
 
 const NewsCard = ({ news }: NewsCardProps) => {
+  const router = useRouter();
   return (
-    <div className="shadow-xl w-320 h-[390px] flex flex-col bg-white overflow-hidden">
+    <div
+      className="shadow-xl w-320 h-[390px] flex flex-col bg-white overflow-hidden cursor-pointer"
+      onClick={() => {
+        router.push(`/news/${news.id}`);
+      }}
+    >
       <div className="w-full h-[180px] overflow-hidden">
         <Image
           src={news.image}

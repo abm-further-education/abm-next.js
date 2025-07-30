@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 function Footer() {
   const t = useTranslations('footer');
   return (
-    <footer className="bg-black py-50 px-20 md:px-160 flex flex-wrap justify-between font-[family-name:var(--font-inter)] text-sm text-neutral-200">
+    <footer className="bg-black py-50 px-20 md:px-80 grid grid-cols-1 md:grid-cols-2 font-[family-name:var(--font-inter)] text-sm text-neutral-200">
       <div className="mb-30">
         <Image src="/abm_logo.png" alt="Logo" width={120} height={120} />
         <ul className="mt-20 md:mt-20 text-neutral-200">

@@ -154,7 +154,7 @@ export default async function HigherEducationPathwayPage({
                 <div className="p-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Bachelor Programs */}
-                    <div>
+                    <div className="border-r-2 pr-5 border-gray-200">
                       <h4 className="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">
                         {t('ubssBachelorTitle')}
                       </h4>

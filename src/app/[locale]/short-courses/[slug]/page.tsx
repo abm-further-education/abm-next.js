@@ -26,14 +26,14 @@ const titleMatch: { [key: string]: string } = {
 const imgMatch: { [key: string]: string } = {
   barista: '/short-course/barista_1.jpg',
   cake: '/short-course/classic_french_cakes_2.png',
-  wine: '/short-course/wine_1.jpg',
-  focaccia: '/short-course/sourdough_1.jpg',
-  dessert: '/short-course/fine_dining_dessert_1.jpg',
+  wine: '/short-course/wine/wine_1.jpg',
+  focaccia: '/short-course/focaccia/sourdough_1.jpg',
+  dessert: '/short-course/dessert/fine_dining_dessert_1.jpg',
   pastries: '/short-course/classic_french_pastries_1.png',
-  mixology: '/short-course/cocktail_1.png',
+  mixology: '/short-course/mixology/cocktail_1.png',
   petit: '/short-course/macaroon_1.png',
-  vegan: '/short-course/vegan_1.png',
-  chocolate: '/short-course/xmas_1.png',
+  vegan: '/short-course/vegan/vegan_1.png',
+  chocolate: '/short-course/chocolate/xmas_1.png',
   fss: '/short-course/fss_1.png',
 };
 
@@ -141,7 +141,9 @@ function Page({
               )}
 
               <div className="flex flex-col">
-                <p className="font-semibold">Location:</p>
+                <p className="font-semibold">
+                  {courseData.locationLabel || 'Location:'}
+                </p>
                 <p>{courseData.location}</p>
               </div>
             </div>
@@ -206,7 +208,7 @@ function Page({
                 htmlFor="course-date"
                 className="block mb-2 text-sm font-medium text-gray-700"
               >
-                Course Date (Face to Face)
+                {courseData.selectDateLabel || 'Course Date (Face to Face)'}
               </label>
               <select
                 id="course-date"
@@ -223,7 +225,7 @@ function Page({
                 ) : (
                   [
                     <option value="" key="select">
-                      Select a date
+                      {courseData.selectDateOptionLabel || 'Select a date'}
                     </option>,
                     ...availableDates.map(
                       (date: {
@@ -247,7 +249,7 @@ function Page({
                 onClick={handleEnrollNow}
                 disabled={availableDates.length === 0}
               >
-                Enrol Now
+                {courseData.callToAction || 'Enrol Now'}
               </Button>
             </div>
           </div>

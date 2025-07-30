@@ -1,4 +1,5 @@
 import Banner from '@/components/common/Banner';
+import { getTranslations } from 'next-intl/server';
 
 type Term = {
   label: string;
@@ -64,7 +65,23 @@ const calendars: YearCalendar[] = [
   },
 ];
 
-export default function AcademicCalendar() {
+export default async function AcademicCalendar() {
+  const t = await getTranslations('academicCalendar');
+  // Helper to map label to translation key
+  const labelToKey: Record<string, string> = {
+    'Term 1 Intake 1': 'term1Intake1',
+    'Term 1 Intake 2': 'term1Intake2',
+    'Holiday 1': 'holiday1',
+    'Term 2 Intake 1': 'term2Intake1',
+    'Term 2 Intake 2': 'term2Intake2',
+    'Holiday 2': 'holiday2',
+    'Term 3 Intake 1': 'term3Intake1',
+    'Term 3 Intake 2': 'term3Intake2',
+    'Holiday 3': 'holiday3',
+    'Term 4 Intake 1': 'term4Intake1',
+    'Term 4 Intake 2': 'term4Intake2',
+    'Christmas Holiday': 'christmasHoliday',
+  };
   return (
     <section className="">
       <Banner
@@ -93,7 +110,7 @@ export default function AcademicCalendar() {
                 {calendar.terms.map((term, i) => (
                   <tr key={i} className="border-b border-gray-100 py-6">
                     <td className="py-3 pr-4 font-medium text-gray-700">
-                      {term.label}
+                      {t(labelToKey[term.label])}
                     </td>
                     <td className="py-1 text-gray-500">{term.date}</td>
                   </tr>

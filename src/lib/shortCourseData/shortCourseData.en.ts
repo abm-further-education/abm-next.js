@@ -56,6 +56,7 @@ export interface ShortCourseData {
   };
   courseDeliveryLabel?: string;
   courseDelivery?: string;
+  locationLabel?: string;
   timeLabel?: string;
   time?: string;
   specialOfferLabel?: string;
@@ -76,6 +77,12 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       '/short-course/barista/barista_course_4.jpg',
       '/short-course/barista/barista_course_5.jpg',
     ],
+    courseDeliveryLabel: 'Course Delivery:',
+    courseDelivery:
+      'Face to Face. Participants will engage in hands-on activities',
+    timeLabel: 'Time:',
+    locationLabel: 'Location:',
+    selectDateOptionLabel: 'Select a date',
     dates: [
       {
         date: '2025-02-21',
@@ -186,11 +193,14 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     title: 'Sourdough & Focaccia Masterclass 🥖✨',
     description: `Discover the art of artisan breadmaking in our comprehensive Sourdough & Focaccia Masterclass. Learn from a medal-winning sourdough expert and master the complete process of creating authentic sourdough bread and delicious focaccia.`,
     images: [
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
+      '/short-course/focaccia/focaccia_1.jpg',
+      '/short-course/focaccia/focaccia_2.jpg',
+      '/short-course/focaccia/focaccia_3.jpg',
+      '/short-course/focaccia/focaccia_4.jpg',
+      '/short-course/focaccia/focaccia_5.jpg',
+      '/short-course/focaccia/focaccia_6.jpg',
+      '/short-course/focaccia/focaccia_7.jpg',
+      '/short-course/focaccia/focaccia_8.jpg',
     ],
     dates: [
       {
@@ -239,11 +249,10 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     title: 'Wine One-Day Class 🍷✨',
     description: `Love wine and want to learn how to taste, pair, and appreciate it like a pro? Join our Wine Appreciation One-Day Class and explore the basics of wine, from tasting techniques to understanding different varietals. While you're learning, enjoy a delicious antipasto and cheese platter to pair with a selection of wines! Whether you're a beginner or just looking to enhance your knowledge, this is the perfect class for you.`,
     images: [
-      '/short-course/wine_1.jpg',
-      '/short-course/wine_2.jpg',
-      '/short-course/wine_1.jpg',
-      '/short-course/wine_2.jpg',
-      '/short-course/wine_1.jpg',
+      '/short-course/wine/wine_1.jpg',
+      '/short-course/wine/wine_2.jpg',
+      '/short-course/wine/wine_3.png',
+      '/short-course/wine/wine_4.png',
     ],
     dates: [
       {
@@ -290,11 +299,9 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     title: 'Fine Dining Dessert Plating Course 🍰✨',
     description: `Get ready to create a show-stopping dessert with lemongrass cream on pistachio sponge and raspberry sorbet! This course is your ticket to mastering the art of fine dining plating.`,
     images: [
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
+      '/short-course/dessert/fine_dining_dessert_1.jpg',
+      '/short-course/dessert/fine_dining_dessert_2.png',
+      '/short-course/dessert/fine_dining_dessert_3.png',
     ],
     dates: [
       {
@@ -328,11 +335,8 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     title: 'Cocktail Making & Mixology Class! 🍹',
     description: `Join us for a fun and interactive cocktail-making experience! Whether you're a beginner or a cocktail enthusiast, this class will teach you how to shake, stir, and mix like a pro. Learn the secrets behind crafting delicious, beautifully presented drinks, impress your friends, and, of course, enjoy your own creations. Make it a memorable afternoon with your besties!`,
     images: [
-      '/short-course/cocktail_1.png',
-      '/short-course/cocktail_2.png',
-      '/short-course/cocktail_1.png',
-      '/short-course/cocktail_2.png',
-      '/short-course/cocktail_1.png',
+      '/short-course/mixology/cocktail_1.png',
+      '/short-course/mixology/cocktail_2.png',
     ],
     dates: [
       {
@@ -373,11 +377,10 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     title: 'French Petit Four – Macaron Edition!',
     description: `Ever wanted to bake perfect macarons with crisp shells and soft, chewy centres? Join our French Petit Four Course (Macaron) and learn from a former pastry chef from one of Sydney's top hatted restaurants! Whether you're a home cook or a chef looking to refine your skills, this hands-on class will take your baking to the next level.`,
     images: [
-      '/short-course/macaroon_1.png',
-      '/short-course/macaroon_2.png',
-      '/short-course/macaroon_1.png',
-      '/short-course/macaroon_2.png',
-      '/short-course/macaroon_1.png',
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/petit/petit_2.png',
+      '/short-course/petit/petit_3.png',
+      '/short-course/petit/petit_4.png',
     ],
     dates: [
       {
@@ -418,11 +421,11 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     title: 'Vegan & Vegetarian Cooking Class',
     description: `Vegan and vegetarian meals aren't just for vegetarians—they're packed with health benefits and full of flavour! Forget the idea that plant-based dishes are just salads—you'll be amazed at how delicious and satisfying they can be. Learn from a professional chef and master a variety of flavourful, creative dishes. Impress your family and friends with your new skills—they'll be surprised at how good plant-based cooking can be!`,
     images: [
-      '/short-course/vegan_1.png',
-      '/short-course/vegan_2.png',
-      '/short-course/vegan_1.png',
-      '/short-course/vegan_2.png',
-      '/short-course/vegan_1.png',
+      '/short-course/vegan/vegan_1.png',
+      '/short-course/vegan/vegan_2.png',
+      '/short-course/vegan/vegan_3.png',
+      '/short-course/vegan/vegan_4.png',
+      '/short-course/vegan/vegan_5.png',
     ],
     dates: [
       {
@@ -456,11 +459,10 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     title: 'Chocolate Class – Xmas 🍫',
     description: `Get into the festive spirit with our Christmas Chocolate Class! Learn to create beautiful chocolate treats perfect for the holiday season.`,
     images: [
-      '/short-course/xmas_1.png',
-      '/short-course/xmas_2.avif',
-      '/short-course/xmas_1.png',
-      '/short-course/xmas_2.avif',
-      '/short-course/xmas_1.png',
+      '/short-course/chocolate/xmas_1.png',
+      '/short-course/chocolate/xmas_2.avif',
+      '/short-course/chocolate/xmas_3.png',
+      '/short-course/chocolate/xmas_4.png',
     ],
     dates: [
       {

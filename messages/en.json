@@ -48,6 +48,7 @@
     "entryRequirements": "Entry Requirements",
     "getUSI": "Get a USI",
     "enrolNow": "Enrol Now",
+    "timetable": "Timetable",
     "higherEducationPathway": "Higher Education Pathway",
     "policiesAndProcedures": "Policies & Procedures",
     "title": "Study With Us",
@@ -673,5 +674,42 @@
   },
   "units": {
     "title": "Units"
+  },
+  "hrPage": {
+    "metadata": {
+      "title": "Human Resource Management Courses | ABM Further Education",
+      "description": "Build a rewarding career in human resources with ABM Further Education. From Certificate IV to Advanced Diploma, develop essential HR skills for today's evolving workplace."
+    },
+    "bannerTitle": "Human Resource Management",
+    "heading": "Build a Rewarding Career in Human Resources",
+    "description": "ABM's Human Resource Management courses prepare you for HR roles at every level—from entry-level officers to strategic HR leaders. Gain skills in recruitment, conflict resolution, payroll, and workforce planning through flexible courses tailored to your goals. Whether you're starting with the Certificate IV or advancing to the Advanced Diploma, ABM equips you with the knowledge and experience to thrive in today’s evolving workplace.",
+    "projectHeading": "Project & Program Courses",
+    "cert4": "Certificate IV in Project Management Practice",
+    "diploma": "Diploma of Project Management",
+    "advDiploma": "Advanced Diploma of Program Management"
+  },
+  "projectProgram": {
+    "bannerTitle": "Project & Program",
+    "bannerContent": "",
+    "leadProjectsTitle": "Lead Projects That Make an Impact",
+    "leadProjectsDescription": "ABM's Project and Program Management courses equip you with the skills to lead successful projects across industries like construction, tech, and corporate sectors. From foundational roles with the Certificate IV to senior leadership with the Advanced Diploma, our flexible courses cover project planning, risk management, and stakeholder engagement. Whether you're starting out or aiming for advanced roles, ABM helps you build the expertise to turn ideas into real results.",
+    "coursesTitle": "Project & Program Courses",
+    "certIVTitle": "Certificate IV in Project Management Practice",
+    "diplomaTitle": "Diploma of Project Management",
+    "advDiplomaTitle": "Advanced Diploma of Program Management"
+  },
+  "academicCalendar": {
+    "term1Intake1": "Term 1 Intake 1",
+    "term1Intake2": "Term 1 Intake 2",
+    "holiday1": "Holiday 1",
+    "term2Intake1": "Term 2 Intake 1",
+    "term2Intake2": "Term 2 Intake 2",
+    "holiday2": "Holiday 2",
+    "term3Intake1": "Term 3 Intake 1",
+    "term3Intake2": "Term 3 Intake 2",
+    "holiday3": "Holiday 3",
+    "term4Intake1": "Term 4 Intake 1",
+    "term4Intake2": "Term 4 Intake 2",
+    "christmasHoliday": "Christmas Holiday"
   }
 }

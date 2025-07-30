@@ -122,11 +122,14 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     title: '사워도우 & 포카치아 마스터클래스 🥖✨',
     description: `수상 경력의 사워도우 전문가에게 배우는 정통 사워도우와 포카치아 만들기! 천연 발효빵의 모든 과정을 직접 실습하며 건강하고 맛있는 빵을 완성해보세요.`,
     images: [
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
-      '/short-course/sourdough_1.jpg',
+      '/short-course/focaccia/focaccia_1.jpg',
+      '/short-course/focaccia/focaccia_2.jpg',
+      '/short-course/focaccia/focaccia_3.jpg',
+      '/short-course/focaccia/focaccia_4.jpg',
+      '/short-course/focaccia/focaccia_5.jpg',
+      '/short-course/focaccia/focaccia_6.jpg',
+      '/short-course/focaccia/focaccia_7.jpg',
+      '/short-course/focaccia/focaccia_8.jpg',
     ],
     dates: [
       {
@@ -175,11 +178,10 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     title: '와인 원데이 클래스 🍷✨',
     description: `와인을 사랑하고 제대로 맛보고, 페어링하고, 감상하는 법을 배우고 싶으신가요? 와인 애호가를 위한 원데이 클래스에서 테이스팅 기법부터 다양한 품종 이해까지, 와인의 기초를 배워보세요. 수업 중에는 다양한 와인과 어울리는 안티파스토 & 치즈 플래터도 함께 즐길 수 있습니다!`,
     images: [
-      '/short-course/wine_1.jpg',
-      '/short-course/wine_2.jpg',
-      '/short-course/wine_1.jpg',
-      '/short-course/wine_2.jpg',
-      '/short-course/wine_1.jpg',
+      '/short-course/wine/wine_1.jpg',
+      '/short-course/wine/wine_2.jpg',
+      '/short-course/wine/wine_3.png',
+      '/short-course/wine/wine_4.png',
     ],
     dates: [
       {
@@ -225,11 +227,9 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     title: '파인다이닝 디저트 플레이팅 코스 🍰✨',
     description: `레몬그라스 크림, 피스타치오 스펀지, 라즈베리 소르베로 완성하는 파인다이닝 스타일의 디저트 플레이팅을 직접 경험해보세요!`,
     images: [
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
-      '/short-course/fine_dining_dessert_1.jpg',
+      '/short-course/dessert/fine_dining_dessert_1.jpg',
+      '/short-course/dessert/fine_dining_dessert_2.png',
+      '/short-course/dessert/fine_dining_dessert_3.png',
     ],
     dates: [
       {
@@ -262,11 +262,8 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     title: '칵테일 & 믹솔로지 클래스! 🍹',
     description: `재미있고 실습 위주의 칵테일 클래스! 초보자부터 칵테일 애호가까지, 프로처럼 흔들고, 저으며, 섞는 법을 배우고, 직접 만든 칵테일을 즐겨보세요. 친구들과 잊지 못할 추억을 만들어보세요!`,
     images: [
-      '/short-course/cocktail_1.png',
-      '/short-course/cocktail_2.png',
-      '/short-course/cocktail_1.png',
-      '/short-course/cocktail_2.png',
-      '/short-course/cocktail_1.png',
+      '/short-course/mixology/cocktail_1.png',
+      '/short-course/mixology/cocktail_2.png',
     ],
     dates: [
       {
@@ -306,11 +303,10 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     title: '프렌치 프티 푸르 – 마카롱 에디션!',
     description: `겉은 바삭하고 속은 쫀득한 완벽한 마카롱을 직접 만들어보고 싶으신가요? 시드니 유명 레스토랑 출신 파티시에에게 배우는 프렌치 프티 푸르(마카롱) 클래스! 집에서 베이킹을 즐기는 분, 셰프 모두에게 추천하는 실습형 클래스입니다.`,
     images: [
-      '/short-course/macaroon_1.png',
-      '/short-course/macaroon_2.png',
-      '/short-course/macaroon_1.png',
-      '/short-course/macaroon_2.png',
-      '/short-course/macaroon_1.png',
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/petit/petit_2.png',
+      '/short-course/petit/petit_3.png',
+      '/short-course/petit/petit_4.png',
     ],
     dates: [
       {
@@ -350,11 +346,11 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     title: '비건 & 베지테리언 쿠킹 클래스',
     description: `비건과 베지테리언 요리는 채식주의자만을 위한 것이 아닙니다! 건강에 좋은 영양과 풍미를 가득 담은 다양한 요리를 배워보세요. 샐러드만 있는 식단이 아니라, 맛있고 든든한 플랜트 베이스 요리의 세계를 경험할 수 있습니다.`,
     images: [
-      '/short-course/vegan_1.png',
-      '/short-course/vegan_2.png',
-      '/short-course/vegan_1.png',
-      '/short-course/vegan_2.png',
-      '/short-course/vegan_1.png',
+      '/short-course/vegan/vegan_1.png',
+      '/short-course/vegan/vegan_2.png',
+      '/short-course/vegan/vegan_3.png',
+      '/short-course/vegan/vegan_4.png',
+      '/short-course/vegan/vegan_5.png',
     ],
     dates: [
       {
@@ -387,11 +383,10 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     title: '초콜릿 클래스 – 크리스마스 🍫',
     description: `크리스마스 분위기를 가득 담은 초콜릿 클래스! 연말에 어울리는 아름다운 초콜릿 디저트를 직접 만들어보세요.`,
     images: [
-      '/short-course/xmas_1.png',
-      '/short-course/xmas_2.avif',
-      '/short-course/xmas_1.png',
-      '/short-course/xmas_2.avif',
-      '/short-course/xmas_1.png',
+      '/short-course/chocolate/xmas_1.png',
+      '/short-course/chocolate/xmas_2.avif',
+      '/short-course/chocolate/xmas_3.png',
+      '/short-course/chocolate/xmas_4.png',
     ],
     dates: [
       {

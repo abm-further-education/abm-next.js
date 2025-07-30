@@ -463,7 +463,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/academic-calendar',
           },
           {
-            title: 'Timetable',
+            title: 'timetable',
             href: '/abm-further-education-timetable-and-sessions',
           },
           {
