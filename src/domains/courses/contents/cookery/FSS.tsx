@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import type { JSX } from 'react';
 import Image from 'next/image';
-import Button from '@/components/common/Button';
+// import Button from '@/components/common/Button';
 import {
   Disclosure,
   DisclosureButton,
@@ -14,7 +14,6 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 
 function FSS() {
-  const [type, setType] = useState('');
   const params = useParams();
   let locale = 'en';
   if (params?.locale) {
@@ -133,9 +132,7 @@ function FSS() {
                 <li>15th September 2025</li>
               </ul>
             </div>
-            <div className="font-bold text-2xl mt-20 text-primary">
-              ${type === 'recertificate' ? 110 : 180}
-            </div>
+            <div className="font-bold text-2xl mt-20 text-primary">$180</div>
           </div>
           <Link
             className="bg-black text-white w-full block mt-20 px-20 py-10 text-center"
