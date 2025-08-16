@@ -149,7 +149,10 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/agent" target="_blank">
+              <Link
+                href="https://abm.rtomanager.com.au/Publics/PublicsPages/AgentListByCountry.aspx"
+                target="_blank"
+              >
                 {t('agentList')}
               </Link>
             </li>
