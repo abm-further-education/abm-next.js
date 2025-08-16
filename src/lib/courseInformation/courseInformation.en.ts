@@ -5,7 +5,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'sit40521-certificate-iv-in-kitchen-management': {
     courseCode: 'SIT40521',
     description:
-      'Supersedes and is equivalent to SIT40516 – Certificate IV in Commercial Cookery 09/Jun/2022.\n\nThis qualification reflects the role of chefs and cooks who have a supervisory or team leading role in the kitchen. They operate independently or with limited guidance from others and use discretion to solve non-routine problems.\n\nThis qualification provides a pathway to work in organisations such as restaurants, hotels, clubs, pubs, cafes and coffee shops, or to run a small business in these sectors.\n\nThe skills in this qualification must be applied in accordance with Commonwealth and State or Territory legislation, Australian standards and industry codes of practice.\n\nNo occupational licensing, certification or specific legislative requirements apply to this qualification at the time of publication.',
+      'This qualification (updated from SIT40516 – Certificate IV in Commercial Cookery on 09 June 2022) is for chefs and cooks in supervisory or team leader roles. They work independently or with limited guidance and solve non-routine problems.\n\nIt prepares students for jobs in restaurants, hotels, clubs, pubs, cafes, coffee shops, or to run a small business in these areas.\n\nSkills must be used according to Australian laws, standards, and industry codes.\n\nThere are no licensing or certification requirements for this qualification at the time of publication.',
     duration: '78 weeks',
     deliveryMode: {
       title: 'Delivery mode:',
@@ -866,6 +866,30 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     additionalInfo: {
       description:
         'Starting Date (Every 3 weeks):\n\n2025:\n• 28th July\n• 18th August\n• 8th September, 29th September\n• 20th October\n• 10th November\n• 1st December, 22nd December\n\n2026:\n• 12th January\n• 2nd February, 23rd February\n• 16th March\n• 6th April, 27th April\n• 18th May\n• 8th June\n\nRegulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment options here!',
+    },
+  },
+  'hlt33115-certificate-iii-in-health-services-assistance': {
+    courseCode: 'HLT33115',
+    description:
+      "Nursing Support Career Pathway: English + Certificate III in Health Services Assistance + Work Placement\n\nIncludes: HLT33115 Certificate III in Health Services Assistance (Assisting in Nursing Work in Acute Care)\n\nTake your first step towards a rewarding career in healthcare with ABM's Nursing Support Career Pathway. This comprehensive programme is designed for international students or new entrants to the health sector who wish to become skilled support workers in hospitals and aged care facilities.\n\nWhy Choose This Programme?\n• Learn in a supportive, face-to-face classroom environment\n• Build specialised English for healthcare communication\n• Gain a nationally recognised qualification\n• Complete 80 hours of work placement in real healthcare settings\n• Suitable for those with or without prior healthcare experience",
+    duration: '16 weeks',
+    deliveryMode: {
+      title: 'Delivery mode:',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'Classroom',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: 'More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl: 'https://training.gov.au/Training/Details/HLT33115',
     },
   },
 };

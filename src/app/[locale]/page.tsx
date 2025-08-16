@@ -19,7 +19,16 @@ export default async function Home() {
               title: 'Your Career Starts Here',
               content: '',
             },
+            {
+              imgPath: '/home/banner.png',
+              title: 'Book Your Free Campus, Gym & Kitchen Tour Today!',
+              content: '',
+            },
           ]}
+          dimmed={
+            <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+          }
+          autoplayDelay={20000}
         />
 
         <div className="flex flex-wrap xl:gap-40 items-center justify-center py-50 px-20 md:px-0 gap-20">

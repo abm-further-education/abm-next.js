@@ -240,7 +240,7 @@ export default function CheckoutPage() {
               placeholder={t('firstName') + ' *'}
               value={form.firstName}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
             {errors.firstName && (
@@ -253,7 +253,7 @@ export default function CheckoutPage() {
               placeholder={t('lastName')}
               value={form.lastName}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
 
@@ -263,7 +263,7 @@ export default function CheckoutPage() {
               placeholder={t('email') + ' *'}
               value={form.email}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
             {errors.email && (
@@ -276,7 +276,7 @@ export default function CheckoutPage() {
               placeholder={t('phone')}
               value={form.phone}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
 
@@ -286,7 +286,7 @@ export default function CheckoutPage() {
               placeholder={t('preferredDate')}
               value={form.preferredDate}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
 
@@ -295,7 +295,7 @@ export default function CheckoutPage() {
               placeholder={t('otherInquiries')}
               value={form.otherInquiries}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
 
@@ -306,10 +306,12 @@ export default function CheckoutPage() {
               name="howDidYouHear"
               value={form.howDidYouHear}
               onChange={handleChange}
-              className="border border-neutral-600 text-primary text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             >
-              <option value="">-</option>
+              <option value="" className="text-neutral-600">
+                Choose Option
+              </option>
               {howDidYouHearOptions.map((opt) => (
                 <option key={opt} value={opt} className="bg-darkBg">
                   {t(opt)}
@@ -323,7 +325,7 @@ export default function CheckoutPage() {
               placeholder={t('referrerName')}
               value={form.referrerName}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
 
@@ -333,7 +335,7 @@ export default function CheckoutPage() {
               placeholder={t('promotionCode')}
               value={form.promotionCode}
               onChange={handleChange}
-              className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
+              className="border border-neutral-600 placeholder:text-neutral-600 placeholder:text-sm p-6"
               style={{ borderRadius: 0 }}
             />
 

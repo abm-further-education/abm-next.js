@@ -16,9 +16,15 @@ type Props = {
   slides: { imgPath: string; title: string; content?: string }[];
   dimmed?: React.ReactNode;
   isNeedContactBtn?: boolean;
+  autoplayDelay?: number;
 };
 
-function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
+function Banner({
+  slides,
+  dimmed,
+  isNeedContactBtn,
+  autoplayDelay = 4000,
+}: Props) {
   const isVideo = (path: string) => {
     return path?.match(/\.(mp4|webm|ogg)$/i) || path.includes('youtube');
   };
@@ -28,7 +34,7 @@ function Banner({ slides, dimmed, isNeedContactBtn }: Props) {
       <Swiper
         navigation
         modules={[Navigation, Autoplay, Pagination, Scrollbar]}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: autoplayDelay, disableOnInteraction: false }}
         loop
         pagination={{ clickable: true }}
         className="w-full h-full"

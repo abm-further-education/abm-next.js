@@ -1,166 +1,64 @@
-'use client';
+import StudentInsightsClient from './StudentInsightsClient';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-import Banner from '@/components/common/Banner';
-import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+// Generate metadata for the student insights page
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'studentInsights' });
 
-function StudentInsightsPage() {
-  const t = useTranslations('studentInsights');
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const title = t('testimonialTitle');
+  const description = t('testimonialDescription');
 
-  // Testimonial images array
-  const testimonialImages = Array.from({ length: 19 }, (_, i) => i + 1);
-
-  const openModal = (index: number) => {
-    setSelectedImage(index);
+  return {
+    title: `${title} | ABM Further Education`,
+    description: description,
+    openGraph: {
+      title: `${title} | ABM Further Education`,
+      description: description,
+      type: 'website',
+      locale: locale,
+      siteName: 'ABM Further Education',
+      images: [
+        {
+          url: '/home/testimonial.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | ABM Further Education`,
+      description: description,
+      images: ['/home/testimonial.png'],
+    },
+    alternates: {
+      canonical: `/${locale}/abm-student-insights`,
+      languages: {
+        en: '/en/abm-student-insights',
+        ko: '/kr/abm-student-insights',
+        es: '/sp/abm-student-insights',
+      },
+    },
+    keywords: [
+      'student testimonials',
+      'student insights',
+      'student reviews',
+      'graduate success',
+      'ABM education',
+      'student experiences',
+      'Australia',
+      'Sydney',
+    ],
   };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
-
-  const nextImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(
-        selectedImage === testimonialImages.length ? 1 : selectedImage + 1
-      );
-    }
-  };
-
-  const prevImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(
-        selectedImage === 1 ? testimonialImages.length : selectedImage - 1
-      );
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      closeModal();
-    } else if (e.key === 'ArrowRight') {
-      nextImage();
-    } else if (e.key === 'ArrowLeft') {
-      prevImage();
-    }
-  };
-
-  return (
-    <div>
-      <Banner
-        slides={[
-          {
-            imgPath: '/home/testimonial.png',
-            title: t('bannerTitle'),
-            content: '',
-          },
-        ]}
-        dimmed={
-          <div className="bg-neutral-900/40 w-full h-screen md:h-700 absolute z-10" />
-        }
-      />
-
-      {/* Testimonial Grid Section */}
-      <section className="px-16 md:px-0 my-60 md:my-80">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-80">
-            <h2 className="text-3xl md:text-4xl font-bold mb-30 font-[family-name:var(--font-montserrat)]">
-              {t('testimonialTitle')}
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              {t('testimonialDescription')}
-            </p>
-          </div>
-
-          {/* Image Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20">
-            {testimonialImages.map((imageNumber) => (
-              <div
-                key={imageNumber}
-                className="relative group cursor-pointer overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                onClick={() => openModal(imageNumber)}
-              >
-                <Image
-                  src={`/testimonials/${imageNumber}.png`}
-                  alt={t('testimonialImageAlt', { number: imageNumber })}
-                  width={300}
-                  height={250}
-                  className="w-full h-200 md:h-250 object-cover"
-                  priority={imageNumber <= 8}
-                />
-                <div className="absolute inset-0 bg-black/20 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                    <p className="text-sm font-semibold">{t('clickToView')}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
-          onClick={closeModal}
-          onKeyDown={handleKeyDown}
-          tabIndex={0}
-        >
-          {/* Close Button */}
-          <button
-            onClick={closeModal}
-            className="absolute top-20 right-20 text-white hover:text-gray-300 transition-colors z-10"
-          >
-            <X size={32} />
-          </button>
-
-          {/* Navigation Buttons */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              prevImage();
-            }}
-            className="absolute left-20 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10"
-          >
-            <ChevronLeft size={40} />
-          </button>
-
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              nextImage();
-            }}
-            className="absolute right-20 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10"
-          >
-            <ChevronRight size={40} />
-          </button>
-
-          {/* Image */}
-          <div
-            className="relative max-w-[90vw] max-h-[90vh] flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={`/testimonials/${selectedImage}.png`}
-              alt={t('testimonialImageAlt', { number: selectedImage })}
-              width={800}
-              height={600}
-              className="max-w-600 max-h-full object-contain"
-              priority
-            />
-
-            {/* Image Counter */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-20 py-10">
-              {selectedImage} / {testimonialImages.length}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
 }
 
-export default StudentInsightsPage;
+export default async function StudentInsightsPage() {
+  return <StudentInsightsClient />;
+}

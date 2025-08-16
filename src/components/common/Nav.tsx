@@ -15,6 +15,7 @@ import {
   businessMenu,
   projectMenu,
   hrMenu,
+  healthMenu,
   shortCourseMenu,
   MENU_STRUCTURE,
 } from '@/lib';
@@ -26,6 +27,7 @@ const allMenus = [
   ...businessMenu,
   ...projectMenu,
   ...hrMenu,
+  ...healthMenu,
   ...shortCourseMenu,
 ];
 

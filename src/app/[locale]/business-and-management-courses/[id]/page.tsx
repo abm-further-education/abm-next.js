@@ -19,8 +19,8 @@ const mappingCourseTitle: { [key: string]: string } = {
 
 const mappingCourseImage: { [key: string]: string } = {
   'bsb40120-certificate-iv-in-business': '/courses/business/business_1.jpg',
-  'bsb50120-diploma-of-business': '/courses/business/business_2.jpg',
-  'bsb60120-advanced-diploma-of-business': '/courses/business/business_3.jpg',
+  'bsb50120-diploma-of-business': '/courses/business/business_2.png',
+  'bsb60120-advanced-diploma-of-business': '/courses/business/business_3.png',
   'bsb80120-graduate-diploma-of-management': '/courses/business/business_4.png',
 };
 
@@ -68,7 +68,7 @@ export default function Page({
 
       {/* Course Detail Section */}
       <section id={getSectionId('Course Detail')}>
-        <CourseDetail courseInfo={courseDetails[id] || {}} />
+        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
       </section>
 
       {/* Units Section */}
@@ -76,7 +76,7 @@ export default function Page({
         id={getSectionId('Units')}
         className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
       >
-        <Units params={{ id }} />
+        <Units id={id} />
       </section>
 
       {/* Course Information Section */}

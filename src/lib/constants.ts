@@ -100,6 +100,13 @@ export const hrMenu = [
   },
 ];
 
+export const healthMenu = [
+  {
+    title: 'Certificate III in Health Services Assistance',
+    href: '/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance',
+  },
+];
+
 export const shortCourseMenu = [
   {
     title: 'Hospitality',
@@ -352,6 +359,16 @@ export const MENU_STRUCTURE: MenuSection[] = [
           {
             title: 'Advanced Diploma of Human Resource Management',
             href: '/human-resources-courses/bsb60320-advanced-diploma-of-human-resource-management',
+          },
+        ],
+      },
+      {
+        titleKey: 'subMenu.health',
+        href: '/health-and-wellness-courses',
+        items: [
+          {
+            title: 'Certificate III in Health Services Assistance',
+            href: '/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance',
           },
         ],
       },

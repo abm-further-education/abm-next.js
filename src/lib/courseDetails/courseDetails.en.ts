@@ -9,7 +9,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Course Duration',
       description:
-        'This qualification will be delivered over 78 weeks, including 60 weeks of training and assessment spread over 6 terms of 10 weeks each.',
+        'This qualification takes 78 weeks, with 60 weeks of training and assessment across 6 terms of 10 weeks each.',
     },
     workPlacement: {
       title: 'Work Placement',
@@ -18,15 +18,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -36,16 +32,13 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Pathways to Further Study / Career Opportunities',
       description: [
-        'After achieving this qualification, graduates may undertake the next qualification up the SIT50422 DIPLOMA OF HOSPITALITY MANAGEMENT',
-        'Possible job titles include:',
-        'Chef',
-        'Chef de partie',
+        'After achieving this qualification, graduates may undertake the next qualification up the SIT50422 Diploma of Hospitality Management',
       ],
     },
     additionalInfo: {
       title: 'Additional Information',
       description:
-        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+        'Please read the Student Handbook before enrolling, as it contains important information about ABM. For more details, email info@abm.edu.au or call +61 (02) 9160 4507.',
     },
   },
   'sit50422-diploma-of-hospitality-management': {
@@ -243,15 +236,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.\n\n',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.\n\n',
-        "Where this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        'Where ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.\n\n',
-        'Where ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -415,15 +404,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -462,15 +447,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) support',
-        '- Assistive Technology',
-        '- Additional Tutorials, and / or',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -502,15 +483,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -545,15 +522,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -585,15 +558,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -628,15 +597,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -664,15 +629,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -728,15 +689,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -769,15 +726,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -806,15 +759,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -847,15 +796,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -887,15 +832,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -969,15 +910,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -1027,15 +964,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     studentSupport: {
       title: 'Student Support',
       description: [
-        'To maximise the chance of students successfully completing their training, ABM will identify any support individual students need prior to their enrolment and provide access to that support throughout their training. This will be done using both the Enrolment Form, and a Pre-Enrolment Form, that students are required to fill in.',
-        'The aim of both documents is to provide any support that may be required. This could include:',
-        '- Language, Literacy and Numeracy (LLN) supports.',
-        '- Assistive Technologys.',
-        '- Additional Tutorials, and / ors.',
-        '- Other mechanisms, such as assistance in using technology for online delivery components.',
-        "\nWhere this support attracts an additional cost to the student, ABM will make this clear prior to accepting the student's enrolment. If there are limitations to the support ABM is able to provide, these limitations will be made clear in information provided to a potential student.",
-        '\nWhere ABM identifies required support, such as literacy or numeracy, English or other language barriers or physical capabilities, and it cannot provide such support directly, it will refer the student to a third party. The costs of such third-party support will the responsibility of the individual.',
-        '\nWhere ABM is not capable of offering an environment suitable for the needs of a student with specific identified needs, it will inform them accordingly and may direct the student to a provider that can, and thus will not process their enrolment.',
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
       ],
     },
     jobRoles: {
@@ -1056,6 +989,64 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Additional Information',
       description:
         'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    },
+  },
+  'hlt33115-certificate-iii-in-health-services-assistance': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'Duration: 16 weeks. Start Date: 12 January 2026. Delivery mode: Face to Face at our Sydney campus located at 242 Castlereagh Street Sydney NSW 2000 Australia.',
+    },
+    workPlacement: {
+      title: 'Work Placement',
+      description:
+        '80 hours of work placement in real healthcare settings. During your work placement, you will complete HLTINF006 (Infection prevention and control), HLTAIN001 (Assist with nursing care in an acute care setting), and CHCCCS031 (Provide individualised support). Support includes work placement agreement, supervision by qualified trainers/assessors, logbook instruction and support, and flexible shifts based on business needs.',
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job Roles',
+      description: [
+        'Assistant in Nursing (AIN)',
+        'Health Services Assistant',
+        'Personal Care Assistant',
+        'Hospital Orderly',
+        'Patient Support Assistant',
+        'Support Worker',
+        'Care Worker',
+      ],
+    },
+    pathways: {
+      title: 'Pathways to Further Study / Career Opportunities',
+      description: [
+        'Upon completion, you may be eligible to progress to:',
+        '• HLT54115 Diploma of Nursing',
+        '• CHC33015 Certificate III in Individual Support',
+        '• CHC43115 Certificate IV in Disability',
+        '• CHC52015 Diploma of Community Services',
+        '• HLT47321 Certificate IV in Health Administration',
+        'And more healthcare qualifications.',
+      ],
+    },
+    additionalInfo: {
+      title: 'Programme Highlights',
+      description: [
+        '• Learn in a supportive, face-to-face classroom environment',
+        '• Build specialised English for healthcare communication',
+        '• Gain a nationally recognised qualification',
+        '• Complete 80 hours of work placement in real healthcare settings',
+        '• Suitable for those with or without prior healthcare experience',
+        '• Comprehensive support throughout the programme',
+        'For more information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+      ].join('\n'),
     },
   },
 };

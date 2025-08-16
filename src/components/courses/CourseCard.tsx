@@ -11,6 +11,14 @@ interface CourseCardProps {
 }
 
 export default function CourseCard({ course }: CourseCardProps) {
+  const formatRomanNumerals = (text: string) => {
+    // 로마 숫자 패턴 (I, II, III, IV, V, VI, VII, VIII, IX, X 등)
+    return text.replace(
+      /\b([Ii]{1,3}|[Ii][Vv]|[Vv]|[Vv][Ii]{0,3}|[Ii][Xx]|[Xx])\b/g,
+      (match) => match.toUpperCase()
+    );
+  };
+
   const getCategoryColor = (category: string) => {
     const colors = {
       cookery: 'bg-orange-100 text-orange-800',
@@ -57,14 +65,16 @@ export default function CourseCard({ course }: CourseCardProps) {
               course.category
             )}`}
           >
-            {course.category.startsWith('short-course-')
-              ? course.category
-                  .replace('short-course-', '')
-                  .split('-')
-                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(' ')
-              : course.category.charAt(0).toUpperCase() +
-                course.category.slice(1)}
+            {formatRomanNumerals(
+              course.category.startsWith('short-course-')
+                ? course.category
+                    .replace('short-course-', '')
+                    .split('-')
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(' ')
+                : course.category.charAt(0).toUpperCase() +
+                    course.category.slice(1)
+            )}
           </span>
         </div>
         {course.level && (
@@ -74,10 +84,12 @@ export default function CourseCard({ course }: CourseCardProps) {
                 course.level
               )}`}
             >
-              {course.level
-                .split('-')
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(' ')}
+              {formatRomanNumerals(
+                course.level
+                  .split('-')
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ')
+              )}
             </span>
           </div>
         )}

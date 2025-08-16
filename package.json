@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@stripe/stripe-js": "^7.4.0",
     "@supabase/supabase-js": "^2.48.1",
     "@tailwindcss/oxide": "^4.0.15",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.0.15",
+    "@types/mailchimp__mailchimp_marketing": "^3.0.21",
     "@types/node": "^20.17.25",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",

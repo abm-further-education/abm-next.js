@@ -5,7 +5,20 @@ import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-const Gallery = () => {
+interface GalleryProps {
+  breakpointColumns?: {
+    default: number;
+    [key: number]: number;
+  };
+  showTitle?: boolean;
+  images?: string[];
+}
+
+const Gallery = ({
+  breakpointColumns,
+  showTitle = true,
+  images,
+}: GalleryProps) => {
   const t = useTranslations('gallery');
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
@@ -18,33 +31,51 @@ const Gallery = () => {
 
   const handlePrev = () => {
     setImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + imageList.length) % imageList.length
     );
-    setSelectedImage(images[(imageIndex - 1 + images.length) % images.length]);
+    setSelectedImage(
+      imageList[(imageIndex - 1 + imageList.length) % imageList.length]
+    );
   };
 
   const handleNext = () => {
-    setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    setSelectedImage(images[(imageIndex + 1) % images.length]);
+    setImageIndex((prevIndex) => (prevIndex + 1) % imageList.length);
+    setSelectedImage(imageList[(imageIndex + 1) % imageList.length]);
   };
 
-  const breakpointColumns = {
+  const defaultBreakpointColumns = {
     default: 5,
     1100: 3,
     700: 2,
   };
 
+  const defaultImages = [
+    '/campus/campus_1.png',
+    '/campus/campus_2.png',
+    '/campus/campus_3.png',
+    '/campus/campus_4.png',
+    '/campus/campus_5.png',
+    '/campus/campus_6.png',
+    '/campus/campus_7.png',
+    '/campus/campus_8.png',
+  ];
+
+  const columnsConfig = breakpointColumns || defaultBreakpointColumns;
+  const imageList = images || defaultImages;
+
   return (
     <div className="p-5 w-full">
-      <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
-        {t('title')}
-      </h2>
+      {showTitle && (
+        <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
+          {t('title')}
+        </h2>
+      )}
       <Masonry
-        breakpointCols={breakpointColumns}
+        breakpointCols={columnsConfig}
         className="flex gap-6 h-max overflow-hidden"
         columnClassName="space-y-6"
       >
-        {images.map((src, index) => (
+        {imageList.map((src, index) => (
           <div key={index} className="overflow-hidden shadow-md">
             <Image
               width={300}
@@ -93,14 +124,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-const images = [
-  '/campus/campus_1.png',
-  '/campus/campus_2.png',
-  '/campus/campus_3.png',
-  '/campus/campus_4.png',
-  '/campus/campus_5.png',
-  '/campus/campus_6.png',
-  '/campus/campus_7.png',
-  '/campus/campus_8.png',
-];

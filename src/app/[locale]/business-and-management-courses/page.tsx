@@ -49,13 +49,13 @@ function page() {
             className="w-300 md:w-480"
           />
           <Card
-            imgPath="/courses/business/business_2.jpg"
+            imgPath="/courses/business/business_2.png"
             title="Diploma of Business"
             link="/business-and-management-courses/bsb50120-diploma-of-business"
             className="w-300 md:w-480"
           />
           <Card
-            imgPath="/courses/business/business_3.jpg"
+            imgPath="/courses/business/business_3.png"
             title="Advanced Diploma of Business"
             link="/business-and-management-courses/bsb60120-advanced-diploma-of-business"
             className="w-300 md:w-480"

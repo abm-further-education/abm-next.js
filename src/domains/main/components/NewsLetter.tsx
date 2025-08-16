@@ -56,11 +56,10 @@ function NewsLetter() {
       </h2>
 
       <Swiper
-        navigation
         modules={[Autoplay, Scrollbar]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
-        className="flex items-center justify-center md:justify-between w-full md:max-w-[1400px] md:w-full mx-auto h-420 md:h-500 mt-60"
+        className="flex items-center justify-center md:justify-between w-full md:max-w-[1400px] md:w-full mx-auto h-420 md:h-460 mt-60"
         slidesPerView={isMobile ? 1 : isTablet ? 3 : 4}
         spaceBetween={30}
       >

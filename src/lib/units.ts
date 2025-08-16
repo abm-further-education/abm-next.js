@@ -1453,3 +1453,98 @@ export const ADVANCED_HR_UNITS = [
     type: 'Elective',
   },
 ];
+
+export const HEALTH_SERVICES_ASSISTANCE_UNITS = [
+  {
+    no: 1,
+    code: 'CHCCOM005',
+    title: 'Communicate and work in health or community services',
+    type: 'Core',
+  },
+  {
+    no: 2,
+    code: 'CHCDIV001',
+    title: 'Work with diverse people',
+    type: 'Core',
+  },
+  {
+    no: 3,
+    code: 'HLTAAP001',
+    title: 'Recognise healthy body systems',
+    type: 'Core',
+  },
+  {
+    no: 4,
+    code: 'HLTINF006',
+    title:
+      'Apply basic principles and practices of infection prevention and control',
+    type: 'Core',
+  },
+  {
+    no: 5,
+    code: 'HLTWHS001',
+    title: 'Participate in workplace health and safety',
+    type: 'Core',
+  },
+  {
+    no: 6,
+    code: 'BSBMED301',
+    title: 'Interpret and apply medical terminology appropriately',
+    type: 'Core',
+  },
+  {
+    no: 7,
+    code: 'BSBWOR301',
+    title: 'Organise personal work priorities and development',
+    type: 'Core',
+  },
+  {
+    no: 8,
+    code: 'CHCCCS002',
+    title: 'Assist with movement',
+    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+  },
+  {
+    no: 9,
+    code: 'CHCCCS020',
+    title: 'Respond effectively to behaviours of concern',
+    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+  },
+  {
+    no: 10,
+    code: 'CHCCCS026',
+    title: 'Transport individuals',
+    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+  },
+  {
+    no: 11,
+    code: 'HLTAIN001',
+    title:
+      'Assist with nursing care in an acute care environment (require an acute care work place)',
+    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+  },
+  {
+    no: 12,
+    code: 'HLTAIN002',
+    title: 'Provide non-client contact support in an acute care environment',
+    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+  },
+  {
+    no: 13,
+    code: 'CHCCCS031',
+    title: 'Provide individualised support',
+    type: 'Elective (Other elective)',
+  },
+  {
+    no: 14,
+    code: 'CHCCCS012',
+    title: 'Prepare and maintain beds',
+    type: 'Elective (Other SIS)',
+  },
+  {
+    no: 15,
+    code: 'CHCLEG001',
+    title: 'Work legally and ethically',
+    type: 'Elective (Other elective)',
+  },
+];

@@ -35,3 +35,7 @@ a:hover {
 .swiper-button-next {
   color: #ef7511 !important;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #ef7511 !important;
+}

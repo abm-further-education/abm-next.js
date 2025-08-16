@@ -70,14 +70,14 @@ export default function Page({
       </section>
       <section id={getSectionId('Course Detail')}>
         {/* Course Detail Section */}
-        <CourseDetail courseInfo={courseDetails[id] || {}} />
+        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
       </section>
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
         className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
       >
-        <Units params={{ id }} />
+        <Units id={id} />
       </section>
     </div>
   );

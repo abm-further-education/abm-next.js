@@ -9,6 +9,7 @@ export interface CourseData {
     | 'business'
     | 'project'
     | 'hr'
+    | 'health'
     | 'short-course-hospitality'
     | 'short-course-cooking'
     | 'short-course-online';
@@ -38,6 +39,7 @@ export const courseCategories = [
   { value: 'business', label: 'Business' },
   { value: 'project', label: 'Project Management' },
   { value: 'hr', label: 'HR Management' },
+  { value: 'health', label: 'Health & Wellness' },
   { value: 'short-course-hospitality', label: 'Short Courses - Hospitality' },
   { value: 'short-course-cooking', label: 'Short Courses - Cooking & Baking' },
   { value: 'short-course-online', label: 'Short Courses - Online' },

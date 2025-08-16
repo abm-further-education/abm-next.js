@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn, parseBoldText } from '@/lib/utils';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 // Helper component to render text with bold parsing
@@ -33,6 +34,7 @@ export interface CourseDetailInfo {
 
 interface CourseDetailProps {
   courseInfo: CourseDetailInfo;
+  courseId?: string;
 }
 
 // 배열인지 확인하는 함수
@@ -156,19 +158,62 @@ function renderDescription(
   );
 }
 
-function CourseDetail({ courseInfo }: CourseDetailProps) {
+function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
   const t = useTranslations('courseDetail');
+
+  const matchStudyPlan = {
+    'sit40521-certificate-iv-in-kitchen-management':
+      '/courses/study_plan/KM.png',
+    'sit50422-diploma-of-hospitality-management': '/courses/study_plan/HM.png',
+    'advanced-diploma-of-hospitality-management': '/courses/study_plan/HM.png',
+    'sis30321-certificate-iii-in-fitness': '/courses/study_plan/Fitness.png',
+    'sis40221-certificate-iv-in-fitness': '/courses/study_plan/Fitness.png',
+    'sis50321-diploma-of-sport': '/courses/study_plan/Fitness.png',
+    'certificate-iii-in-fitness-fast-track':
+      '/courses/study_plan/fitness_fast_track.png',
+    'certificate-iv-in-fitness-fast-track':
+      '/courses/study_plan/fitness_fast_track.png',
+  };
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-[1600px] mx-auto px-20 py-5 md:px-80">
         <h1 className="text-3xl font-bold mb-10">{t('title')}</h1>
-
-        {Object.entries(courseInfo).map(([sectionKey, sectionData]) => (
-          <div key={sectionKey} className="mb-14">
-            <h3 className={titleStyle}>{sectionData.title}</h3>
-            {renderDescription(sectionData.description)}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-40">
+          <div className="mb-30">
+            <div className="mt-15">
+              {/* <LearningPathway
+                courses={[
+                  {
+                    courseCode: 'SIT30321',
+                    courseName: 'Certificate III in Fitness',
+                    bgColor: '#78716C',
+                  },
+                  {
+                    courseCode: 'SIT30321',
+                    courseName: 'Certificate III in Fitness',
+                    bgColor: '#A8A29E',
+                  },
+                ]}
+              /> */}
+              <Image
+                src={matchStudyPlan[courseId as keyof typeof matchStudyPlan]}
+                alt="Kitchen Management Study Plan"
+                width={800}
+                height={600}
+                className="w-full max-w-800 h-auto rounded-lg shadow-md"
+              />
+            </div>
           </div>
-        ))}
+          <div>
+            {Object.entries(courseInfo).map(([sectionKey, sectionData]) => (
+              <div key={sectionKey} className="mb-14">
+                <h3 className={titleStyle}>{sectionData.title}</h3>
+                {renderDescription(sectionData.description)}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

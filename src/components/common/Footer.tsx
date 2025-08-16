@@ -44,26 +44,20 @@ function Footer() {
         <div>
           <ul>
             <li className="font-bold">{t('home')}</li>
-            <li>{t('courses')}</li>
             <li>
-              <Link href="/short-courses" target="_blank">
-                {t('shortCourses')}
-              </Link>
+              <Link href="/courses">{t('courses')} </Link>
             </li>
             <li>
-              <Link href="/study-with-us" target="_blank">
-                {t('studyWithUs')}
-              </Link>
+              <Link href="/short-courses">{t('shortCourses')}</Link>
             </li>
             <li>
-              <Link href="/current-students" target="_blank">
-                {t('currentStudents')}
-              </Link>
+              <Link href="/study-with-us">{t('studyWithUs')}</Link>
             </li>
             <li>
-              <Link href="/contact" target="_blank">
-                {t('contact')}
-              </Link>
+              <Link href="/current-students">{t('currentStudents')}</Link>
+            </li>
+            <li>
+              <Link href="/contact">{t('contact')}</Link>
             </li>
           </ul>
         </div>
@@ -71,28 +65,31 @@ function Footer() {
           <ul>
             <li className="font-bold">{t('courses')}</li>
             <li>
-              <Link href="/courses" target="_blank">
+              <Link href="/cookery-and-hospitality-courses">
                 {t('cookeryAndHospitality')}
               </Link>
             </li>
             <li>
-              <Link href="/courses" target="_blank">
+              <Link href="/fitness-and-sports-courses">
                 {t('fitnessAndSports')}
               </Link>
             </li>
             <li>
-              <Link href="/courses" target="_blank">
+              <Link href="/business-and-management-courses">
                 {t('business')}
               </Link>
             </li>
             <li>
-              <Link href="/courses" target="_blank">
+              <Link href="/project-and-program-courses">
                 {t('projectAndProgram')}
               </Link>
             </li>
             <li>
-              <Link href="/courses" target="_blank">
-                {t('humanResources')}
+              <Link href="/human-resources-courses">{t('humanResources')}</Link>
+            </li>
+            <li>
+              <Link href="/health-and-wellness-courses">
+                {t('healthAndWellness')}
               </Link>
             </li>
           </ul>
@@ -101,44 +98,37 @@ function Footer() {
           <ul>
             <li className="font-bold mt-20 md:mt-0">{t('shortCourses')}</li>
             <li>
-              <Link href="/short-courses" target="_blank">
-                {t('baristaCourse')}
-              </Link>
+              <Link href="/short-courses/barista">{t('baristaCourse')}</Link>
             </li>
             <li>
-              <Link href="/short-courses" target="_blank">
+              <Link href="/short-courses/pastries">
                 {t('classicFrenchPastriesCourse')}
               </Link>
             </li>
             <li>
-              <Link href="/short-courses" target="_blank">
-                {t('wineCourse')}
-              </Link>
+              <Link href="/short-courses/wine">{t('wineCourse')}</Link>
             </li>
             <li>
-              <Link href="/short-courses" target="_blank">
+              <Link href="/short-courses/focaccia">
                 {t('sourdoughAndFocacciaCourse')}
               </Link>
             </li>
             <li>
-              <Link href="/short-courses" target="_blank">
+              <Link href="/short-courses/dessert">
                 {t('fineDiningDessertPlating')}
               </Link>
             </li>
             <li>
-              <Link href="/short-courses" target="_blank">
-                {t('classicFrenchCakesCourse')}
-              </Link>
+              <Link href="/short-courses/mixology">{t('cocktail')}</Link>
             </li>
             <li>
-              <Link href="/short-courses" target="_blank">
-                {t('frenchPetitFourCourse')}
-              </Link>
+              <Link href="/short-courses">{t('classicFrenchCakesCourse')}</Link>
             </li>
             <li>
-              <Link href="/short-courses" target="_blank">
-                {t('veganAndVegetarianCourse')}
-              </Link>
+              <Link href="/short-courses">{t('frenchPetitFourCourse')}</Link>
+            </li>
+            <li>
+              <Link href="/short-courses">{t('veganAndVegetarianCourse')}</Link>
             </li>
             <li>
               <Link href="/short-courses" target="_blank">
@@ -153,11 +143,6 @@ function Footer() {
             <li>
               <Link href="/agent" target="_blank">
                 {t('agentPortal')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/agent" target="_blank">
-                {t('agentApplication')}
               </Link>
             </li>
             <li>

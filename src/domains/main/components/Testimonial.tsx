@@ -35,7 +35,7 @@ function Testimonial() {
           1024: { slidesPerView: 5 },
           1600: { slidesPerView: 6 },
         }}
-        spaceBetween={25}
+        spaceBetween={15}
       >
         {Array.from({ length: 18 }).map((_, index) => (
           <SwiperSlide key={index} className="relative">

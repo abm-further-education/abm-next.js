@@ -9,6 +9,7 @@ import IndustryPlacement from '@/domains/courses/contents/cookery/IndustryPlacem
 import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/IndustryPlacementHospitality';
 import getCourseDetailsData from '@/lib/courseDetails';
 import React, { useEffect, use } from 'react';
+import Gallery from '@/components/common/Gallery';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
@@ -24,11 +25,11 @@ const mappingCourseTitle: { [key: string]: string } = {
 };
 
 const mappingCourseImage: { [key: string]: string } = {
-  'sit40521-certificate-iv-in-kitchen-management': '/courses/cookery/KM.jpg',
+  'sit40521-certificate-iv-in-kitchen-management': '/courses/cookery/KM.png',
   'industry-placement-work-placement': '/courses/cookery/industry.png',
   fss: '/short-course/fss_1.png',
-  'sit50422-diploma-of-hospitality-management': '/courses/cookery/DHM.jpg',
-  'advanced-diploma-of-hospitality-management': '/courses/cookery/ADHM.jpg',
+  'sit50422-diploma-of-hospitality-management': '/courses/cookery/DHM.png',
+  'advanced-diploma-of-hospitality-management': '/courses/cookery/ADHM.png',
   'industry-placement-hospitality-management':
     '/courses/cookery/industry-hospitality.jpg',
 };
@@ -147,16 +148,33 @@ export default function Page({
 
       {/* Course Detail Section */}
       <section id={getSectionId('Course Detail')}>
-        <CourseDetail courseInfo={courseDetails[id] || {}} />
+        {/* Course Detail Section */}
+        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
       </section>
 
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
+        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40 grid grid-cols-1 lg:grid-cols-2 gap-40"
       >
-        <Units params={{ id }} />
+        <Units id={id} />
+        <Gallery
+          showTitle={false}
+          breakpointColumns={{
+            default: 2,
+            1100: 3,
+            700: 2,
+          }}
+          images={images}
+        />
       </section>
     </div>
   );
 }
+
+const images = [
+  '/courses/cookery/km_1.png',
+  '/courses/cookery/km_2.png',
+  '/courses/cookery/km_3.png',
+  '/courses/cookery/km_4.png',
+];

@@ -69,7 +69,8 @@ export default function Page({
 
       {/* Course Detail Section */}
       <section id={getSectionId('Course Detail')}>
-        <CourseDetail courseInfo={courseDetails[id] || {}} />
+        {/* Course Detail Section */}
+        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
       </section>
 
       {/* Units Section */}
@@ -77,7 +78,7 @@ export default function Page({
         id={getSectionId('Units')}
         className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
       >
-        <Units params={{ id }} />
+        <Units id={id} />
       </section>
     </div>
   );

@@ -13,14 +13,12 @@ import {
   DIPLOMA_PROJECT_UNITS,
   DIPLOMA_SPORT_UNITS,
   GRADUATE_MANAGEMENT_UNITS,
+  HEALTH_SERVICES_ASSISTANCE_UNITS,
   KM_UNITS,
 } from '@/lib/units';
 import React from 'react';
-import { useTranslations } from 'next-intl';
 
-function Units({ params }: { params: { id: string } }) {
-  const t = useTranslations('units');
-  const { id } = params;
+function Units({ id }: { id: string }) {
   const mappingCourseUnits: {
     [key: string]: { [key: string]: string | number }[];
   } = {
@@ -42,6 +40,8 @@ function Units({ params }: { params: { id: string } }) {
     'bsb40420-certificate-iv-in-human-resource-management': CERTIV_HR_UNITS,
     'bsb50320-diploma-of-human-resource-management': DIPLOMA_HR_UNITS,
     'bsb60320-advanced-diploma-of-human-resource-management': ADVANCED_HR_UNITS,
+    'hlt33115-certificate-iii-in-health-services-assistance':
+      HEALTH_SERVICES_ASSISTANCE_UNITS,
   };
 
   if (!mappingCourseUnits[id]) {
@@ -49,8 +49,8 @@ function Units({ params }: { params: { id: string } }) {
   }
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-10">{t('title')}</h1>
-      <table className="min-w-full border-b border-gray-300 text-sm text-left text-gray-700">
+      {/* <h1 className="text-3xl font-bold mb-10">{t('title')}</h1> */}
+      <table className="min-w-full border-b border-gray-300 text-[10px] text-left text-gray-700">
         <thead className="bg-gray-100">
           <tr>
             <th className="px-8 py-8 border-b border-gray-300 font-semibold">
