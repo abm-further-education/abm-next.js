@@ -552,7 +552,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       '/short-course/fss_1.png',
     ],
     dates: [
-      { date: '2025-07-18', displayDate: '18 July', time: '9:00am - 5:00pm' },
       { date: '2025-08-08', displayDate: '8 August', time: '9:00am - 5:00pm' },
       { date: '2025-08-29', displayDate: '29 August', time: '9:00am - 5:00pm' },
       {

@@ -752,11 +752,6 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
     },
     dates: [
       {
-        date: '2025-07-18',
-        displayDate: '18 de julio',
-        time: '9:00am - 5:00pm',
-      },
-      {
         date: '2025-08-08',
         displayDate: '8 de agosto',
         time: '9:00am - 5:00pm',

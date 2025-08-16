@@ -173,6 +173,25 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
       '/courses/study_plan/fitness_fast_track.png',
     'certificate-iv-in-fitness-fast-track':
       '/courses/study_plan/fitness_fast_track.png',
+    'bsb40120-certificate-iv-in-business': '/courses/study_plan/Business.png',
+    'bsb50120-diploma-of-business': '/courses/study_plan/Business.png',
+    'bsb60120-advanced-diploma-of-business': '/courses/study_plan/Business.png',
+    'bsb80120-graduate-diploma-of-management':
+      '/courses/study_plan/Business.png',
+    'bsb40920-certificate-iv-in-project-management-practice':
+      '/courses/study_plan/PM.png',
+    'bsb50820-diploma-of-project-management-practice':
+      '/courses/study_plan/PM.png',
+    'bsb60720-advanced-diploma-of-project-management-practice':
+      '/courses/study_plan/PM.png',
+    'bsb40420-certificate-iv-in-human-resource-management':
+      '/courses/study_plan/HR.png',
+    'bsb50320-diploma-of-human-resource-management':
+      '/courses/study_plan/HR.png',
+    'bsb60220-advanced-diploma-of-human-resource-management':
+      '/courses/study_plan/HR.png',
+    'bsb60320-advanced-diploma-of-human-resource-management':
+      '/courses/study_plan/HR.png',
   };
 
   return (
@@ -180,31 +199,20 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
       <div className="max-w-[1600px] mx-auto px-20 py-5 md:px-80">
         <h1 className="text-3xl font-bold mb-10">{t('title')}</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-40">
-          <div className="mb-30">
-            <div className="mt-15">
-              {/* <LearningPathway
-                courses={[
-                  {
-                    courseCode: 'SIT30321',
-                    courseName: 'Certificate III in Fitness',
-                    bgColor: '#78716C',
-                  },
-                  {
-                    courseCode: 'SIT30321',
-                    courseName: 'Certificate III in Fitness',
-                    bgColor: '#A8A29E',
-                  },
-                ]}
-              /> */}
-              <Image
-                src={matchStudyPlan[courseId as keyof typeof matchStudyPlan]}
-                alt="Kitchen Management Study Plan"
-                width={800}
-                height={600}
-                className="w-full max-w-800 h-auto rounded-lg shadow-md"
-              />
+          {courseId !==
+            'hlt33115-certificate-iii-in-health-services-assistance' && (
+            <div className="mb-30">
+              <div className="mt-15">
+                <Image
+                  src={matchStudyPlan[courseId as keyof typeof matchStudyPlan]}
+                  alt="Study Plan"
+                  width={800}
+                  height={600}
+                  className="w-full max-w-800 h-auto rounded-lg shadow-md"
+                />
+              </div>
             </div>
-          </div>
+          )}
           <div>
             {Object.entries(courseInfo).map(([sectionKey, sectionData]) => (
               <div key={sectionKey} className="mb-14">

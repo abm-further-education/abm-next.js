@@ -11,6 +11,7 @@ import {
 import { ChevronUpIcon } from 'lucide-react';
 import getShortCourseData from '@/lib/shortCourseData';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 function FSS() {
   const [type, setType] = useState('');
@@ -70,13 +71,13 @@ function FSS() {
             </p>
           </div>
           <div className="w-full max-w-sm mt-20">
-            <label
+            {/* <label
               htmlFor="course-date"
               className="block mb-2 text-sm text-gray-700 font-bold"
             >
               {fssData.courseType?.label || 'Choose the course'}
-            </label>
-            <select
+            </label> */}
+            {/* <select
               id="course-date"
               name="course-date"
               className="w-full px-8 py-12 border border-gray-300  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
@@ -91,17 +92,17 @@ function FSS() {
                   {opt}
                 </option>
               ))}
-            </select>
+            </select> */}
           </div>
 
           <div className="w-full max-w-sm mt-20">
-            <label
+            {/* <label
               htmlFor="course-date"
               className="block mb-2 text-sm text-gray-700 font-bold"
             >
               {fssData.selectDateLabel || 'Select Course Date'}
-            </label>
-            <select
+            </label> */}
+            {/* <select
               id="course-date"
               name="course-date"
               className="w-full px-8 py-12 border border-gray-300  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
@@ -123,14 +124,26 @@ function FSS() {
                   </option>
                 )
               )}
-            </select>
+              </select> */}
+            <div className="flex flex-col gap-10">
+              <span className="font-semibold">Course Date:</span>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>8th August 2025</li>
+                <li>29th August 2025</li>
+                <li>15th September 2025</li>
+              </ul>
+            </div>
             <div className="font-bold text-2xl mt-20 text-primary">
               ${type === 'recertificate' ? 110 : 180}
             </div>
-            <Button className="bg-black text-white w-full mt-20">
-              {fssData.callToAction || 'Enrol Now'}
-            </Button>
           </div>
+          <Link
+            className="bg-black text-white w-full block mt-20 px-20 py-10 text-center"
+            href="https://form.jotform.com/ABMonlineforms/Shortcourse-payment-purchase-form"
+            target="_blank"
+          >
+            {fssData.callToAction || 'Enrol Now'}
+          </Link>
         </div>
       </div>
       <p className="mt-20">{fssData.description}</p>

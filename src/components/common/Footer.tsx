@@ -141,7 +141,10 @@ function Footer() {
           <ul>
             <li className="font-bold mt-20 md:mt-0">{t('agent')}</li>
             <li>
-              <Link href="/agent" target="_blank">
+              <Link
+                href="https://www.jotform.com/app/abm-further-education/abm-agents"
+                target="_blank"
+              >
                 {t('agentPortal')}
               </Link>
             </li>

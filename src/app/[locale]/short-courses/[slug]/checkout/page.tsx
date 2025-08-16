@@ -122,6 +122,11 @@ export default function CheckoutPage() {
             discount > 0 && discountedPrice !== undefined
               ? discountedPrice
               : courseData?.price,
+          totalPriceWithSurcharge: (
+            (discount > 0 && discountedPrice !== undefined
+              ? discountedPrice
+              : courseData?.price) * 1.0193
+          ).toFixed(2),
           appliedPromo: discount > 0 ? appliedPromo : undefined,
         }),
       });
@@ -212,6 +217,28 @@ export default function CheckoutPage() {
             ) : (
               <span>${courseData?.price}</span>
             )}
+          </div>
+          <div className="mb-6">
+            <span className="">Surcharge: </span>
+            <span className="">
+              $
+              {(
+                (discount > 0 && discountedPrice !== undefined
+                  ? discountedPrice
+                  : courseData?.price) * 0.0193
+              ).toFixed(2)}
+            </span>
+          </div>
+          <div className="mb-6">
+            <span className="font-semibold">Total: </span>
+            <span className="font-bold text-lg text-primary">
+              $
+              {(
+                (discount > 0 && discountedPrice !== undefined
+                  ? discountedPrice
+                  : courseData?.price) * 1.0193
+              ).toFixed(2)}
+            </span>
           </div>
           {errors.promotionCode && (
             <div className="text-red-500 text-xs mb-4">

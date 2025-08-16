@@ -22,6 +22,7 @@ export async function POST(request: NextRequest) {
       selectedType,
       courseLocation,
       finalPrice,
+      totalPriceWithSurcharge,
       appliedPromo,
     } = body;
 
@@ -46,7 +47,11 @@ export async function POST(request: NextRequest) {
               description: courseData.description || '',
             },
             unit_amount:
-              (finalPrice !== undefined ? finalPrice : courseData.price) * 100, // Stripe는 센트 단위
+              (totalPriceWithSurcharge !== undefined
+                ? parseFloat(totalPriceWithSurcharge)
+                : finalPrice !== undefined
+                ? finalPrice
+                : courseData.price) * 100, // Stripe는 센트 단위
           },
           quantity: 1,
         },
@@ -73,6 +78,12 @@ export async function POST(request: NextRequest) {
         selectedDate: selectedDate || '',
         selectedType: selectedType || '',
         courseLocation: courseLocation || courseData.location || '',
+        surcharge: totalPriceWithSurcharge
+          ? (
+              parseFloat(totalPriceWithSurcharge) -
+              (finalPrice !== undefined ? finalPrice : courseData.price)
+            ).toFixed(2)
+          : '0',
         ...(appliedPromo && { appliedPromo }),
       },
       customer_creation: 'always',

@@ -1,6 +1,7 @@
 'use client';
 
 import Banner from '@/components/common/Banner';
+import Gallery from '@/components/common/Gallery';
 import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
@@ -75,10 +76,27 @@ export default function Page({
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
+        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40 grid grid-cols-1 lg:grid-cols-2 gap-40"
       >
         <Units id={id} />
+        <Gallery
+          showTitle={false}
+          breakpointColumns={{
+            default: 2,
+            1100: 3,
+            700: 2,
+          }}
+          images={images}
+        />
       </section>
     </div>
   );
 }
+
+const images = [
+  '/courses/fitness/prac_1.jpg',
+  '/courses/fitness/prac_2.png',
+  '/courses/fitness/prac_3.png',
+  '/courses/fitness/prac_4.jpg',
+  '/courses/fitness/prac_5.jpg',
+];
