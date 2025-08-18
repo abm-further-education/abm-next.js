@@ -49,7 +49,7 @@ function ShortCoursesPage() {
             <ShortCourseCard
               imgPath="/short-course/classic_french_cakes_2.png"
               title="Classic French Cake Course"
-              link="/short-courses/classic-french-cake"
+              link="/short-courses/cake"
               price={180}
             />
             <ShortCourseCard
@@ -61,7 +61,7 @@ function ShortCoursesPage() {
             <ShortCourseCard
               imgPath="/short-course/focaccia/sourdough_1.jpg"
               title="Sourdough and Focaccia Course"
-              link="/short-courses/sourdough"
+              link="/short-courses/focaccia"
               price={160}
             />
             <ShortCourseCard
@@ -73,7 +73,7 @@ function ShortCoursesPage() {
             <ShortCourseCard
               imgPath="/short-course/classic_french_pastries_1.png"
               title="Classic French Pastries Course"
-              link="/short-courses/classic-french-pastries"
+              link="/short-courses/pastries"
               price={160}
             />
             <ShortCourseCard
@@ -85,7 +85,7 @@ function ShortCoursesPage() {
             <ShortCourseCard
               imgPath="/short-course/macaroon_1.png"
               title="French petit four Course (Macaroon)"
-              link="/short-courses/macaroon"
+              link="/short-courses/petit"
               price={120}
             />
             <ShortCourseCard
@@ -97,7 +97,7 @@ function ShortCoursesPage() {
             <ShortCourseCard
               imgPath="/short-course/chocolate/xmas_1.png"
               title="Chocolate Class – Xmas"
-              link="/short-courses/xmas"
+              link="/short-courses/chocolate"
               price={130}
             />
             <ShortCourseCard
