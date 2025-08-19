@@ -152,7 +152,7 @@ export const courseData: CourseData[] = [
   },
   {
     id: 'business-graduate-diploma',
-    title: 'Graduate Diploma of Management',
+    title: 'Graduate Diploma of Management (Learning)',
     description: 'Postgraduate level management and leadership skills.',
     category: 'business',
     type: 'full-course',
@@ -166,7 +166,7 @@ export const courseData: CourseData[] = [
   // Project Management Courses
   {
     id: 'project-cert-iv',
-    title: 'Certificate IV in Project Management',
+    title: 'Certificate IV in Project Management Practice',
     description: 'Foundation project management skills and methodologies.',
     category: 'project',
     type: 'full-course',
@@ -190,14 +190,14 @@ export const courseData: CourseData[] = [
   },
   {
     id: 'project-advanced-diploma',
-    title: 'Advanced Diploma of Project Management',
+    title: 'Advanced Diploma of Program Management',
     description: 'Advanced project management and strategic planning skills.',
     category: 'project',
     type: 'full-course',
     level: 'advanced-diploma',
     duration: '78 weeks',
     image: '/courses/project/project_3.png',
-    link: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-project-management-practice',
+    link: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-program-management',
     tags: ['project-management', 'advanced-diploma', 'strategic-planning'],
   },
 
@@ -314,7 +314,7 @@ export const courseData: CourseData[] = [
   },
   {
     id: 'fss',
-    title: 'NSW Food Safety Supervisor Certificate',
+    title: 'NSW Food Safety Supervisor Recertificate',
     description: 'Become a certified Food Safety Supervisor in NSW.',
     category: 'short-course-hospitality',
     type: 'short-course',

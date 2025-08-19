@@ -36,7 +36,7 @@ async function TimetablePage() {
         }
       />
 
-      <section className="max-w-7xl mx-auto px-4 py-16">
+      <section className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             {t('pageTitle')}
@@ -103,7 +103,7 @@ async function TimetablePage() {
                       </td>
                     ) : null}
                     <td className="px-4 py-3 border-b border-gray-200 text-gray-600">
-                      {entry.intake}
+                      {entry.code === 'SIT40521' ? entry.intake : '-'}
                     </td>
                     <td className="px-4 py-3 border-b border-gray-200 text-center">
                       <span

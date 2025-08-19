@@ -195,7 +195,7 @@ export const courseData: CourseData[] = [
     level: 'advanced-diploma',
     duration: '78주',
     image: '/courses/project/project_3.png',
-    link: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-project-management-practice',
+    link: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-program-management',
     tags: ['project-management', 'advanced-diploma', 'strategic-planning'],
   },
   // 인사관리 과정

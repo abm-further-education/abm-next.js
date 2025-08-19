@@ -43,7 +43,7 @@ function CourseTimetable({ courseCode }: CourseTimetableProps) {
                 className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
               >
                 <td className="px-3 py-2 border-b border-r border-gray-200 font-medium text-gray-800">
-                  {entry.intake}
+                  {courseCode === 'SIT40521' ? entry.intake : '-'}
                 </td>
                 <td className="px-3 py-2 border-b border-gray-200 text-center">
                   <span

@@ -55,7 +55,7 @@ export default async function Page() {
           <Card
             imgPath="/courses/project/project_3.png"
             title={t('advDiplomaTitle')}
-            link="/project-and-program-management-courses/bsb60720-advanced-diploma-of-project-management-practice"
+            link="/project-and-program-management-courses/bsb60720-advanced-diploma-of-program-management"
             className="w-300 md:w-380"
           />
         </div>

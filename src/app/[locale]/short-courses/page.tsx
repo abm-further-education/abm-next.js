@@ -1,7 +1,8 @@
 import Banner from '@/components/common/Banner';
 import FadeIn from '@/components/common/FadeIn';
 import ShortCourseCard from '@/domains/short-course/components/ShortCourseCard';
-import React from 'react';
+import ShortCourseCalendar from '@/components/shortCourses/ShortCourseCalendar';
+import React, { use } from 'react';
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
     "Discover your passion with ABM's short courses! From barista training to French pastries, explore our one-day courses designed for food and hospitality enthusiasts.",
 };
 
-function ShortCoursesPage() {
+function ShortCoursesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(params);
   const t = useTranslations('shortCoursesPage');
   return (
     <div>
@@ -108,6 +110,20 @@ function ShortCoursesPage() {
             />
           </div>
         </FadeIn>
+      </section>
+
+      {/* Calendar Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {t('calendarHeading') || 'Course Calendar'}
+          </h2>
+          <p className="text-sm md:text-base text-neutral-700 max-w-800 mx-auto px-20 md:px-0">
+            {t('calendarDescription') ||
+              'Browse our short courses by month and find the perfect date for you'}
+          </p>
+        </div>
+        <ShortCourseCalendar locale={locale} />
       </section>
     </div>
   );

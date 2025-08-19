@@ -36,18 +36,18 @@ export default function CourseCard({ course }: CourseCardProps) {
     );
   };
 
-  const getLevelColor = (level?: string) => {
-    const colors = {
-      'certificate-iii': 'bg-green-100 text-green-800',
-      'certificate-iv': 'bg-blue-100 text-blue-800',
-      diploma: 'bg-purple-100 text-purple-800',
-      'advanced-diploma': 'bg-indigo-100 text-indigo-800',
-      'graduate-diploma': 'bg-red-100 text-red-800',
-    };
-    return level
-      ? colors[level as keyof typeof colors] || 'bg-gray-100 text-gray-800'
-      : '';
-  };
+  // const getLevelColor = (level?: string) => {
+  //   const colors = {
+  //     'certificate-iii': 'bg-green-100 text-green-800',
+  //     'certificate-iv': 'bg-blue-100 text-blue-800',
+  //     diploma: 'bg-purple-100 text-purple-800',
+  //     'advanced-diploma': 'bg-indigo-100 text-indigo-800',
+  //     'graduate-diploma': 'bg-red-100 text-red-800',
+  //   };
+  //   return level
+  //     ? colors[level as keyof typeof colors] || 'bg-gray-100 text-gray-800'
+  //     : '';
+  // };
 
   return (
     <div className="bg-white border border-gray-200  overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -77,7 +77,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             )}
           </span>
         </div>
-        {course.level && (
+        {/* {course.level && (
           <div className="absolute top-15 right-15">
             <span
               className={`inline-block px-10 py-5 text-xs font-medium rounded-full ${getLevelColor(
@@ -92,7 +92,7 @@ export default function CourseCard({ course }: CourseCardProps) {
               )}
             </span>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Content */}

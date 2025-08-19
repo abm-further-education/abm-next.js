@@ -9,7 +9,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Duración del Curso',
       description:
-        'Esta calificación se impartirá durante 78 semanas, incluyendo 60 semanas de capacitación y evaluación distribuidas en 6 términos de 10 semanas cada uno.',
+        'El Certificado IV en Gestión de Cocina se ofrece durante 18 meses, equivalente a 78 semanas, incluyendo 18 semanas de vacaciones. Esto se dividirá en seis términos de 10 semanas.',
     },
     workPlacement: {
       title: 'Prácticas Laborales',
@@ -36,7 +36,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Rutas de Estudio Adicional / Oportunidades Profesionales',
       description: [
-        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior SIT50422 DIPLOMA DE GESTIÓN HOTELERA',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'SIT50422 DIPLOMA DE GESTIÓN HOTELERA',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
         'Los títulos de trabajo posibles incluyen:',
         'Chef',
         'Chef de partie',
@@ -58,7 +63,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     courseDuration2: {
       title: 'Duración del Curso – Modalidad de Alimentos y Bebidas',
       description:
-        'La calificación se imparte durante 78 semanas que comprenden:\nSeis (6) términos de 10 semanas cada uno (60 semanas en total) de período de enseñanza.\nRecesos vacacionales por un total de 18 semanas (según se especifica en el horario)',
+        'El Diploma de Gestión Hotelera se ofrece durante 18 meses, equivalente a 78 semanas, incluyendo 18 semanas de vacaciones. Esto se dividirá en seis términos de 10 semanas.',
     },
     courseStructure1: {
       title:
@@ -403,12 +408,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
             ],
             [
               '7',
-              'SITHFAB027*, Servir alimentos y bebidas',
+              'SITHFAB027, Servir alimentos y bebidas',
               'Electivos- Grupo C',
             ],
             [
               '8',
-              'SITHFAB024*, Preparar y servir bebidas no alcohólicas',
+              'SITHFAB024, Preparar y servir bebidas no alcohólicas',
               'Electivos- Grupo C',
             ],
           ],
@@ -530,7 +535,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Ruta de estudio adicional',
       description: [
-        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior SIS40221 Certificado IV en Fitness',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'SIS40221 Certificado IV en Fitness',
+          url: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness',
+        },
       ],
     },
     additionalInfo: {
@@ -573,7 +583,18 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Ruta de estudio adicional',
       description: [
-        'Los estudiantes que completen este curso pueden desear continuar su educación en la industria del fitness con calificaciones como el SIS50122 Diploma de Gestión de Deportes, Acuáticos y Recreación, SIS50321 Diploma de Deportes, SIS50421 Diploma de Liderazgo al Aire Libre o continuar su educación en una gama de calificaciones de Educación Superior.',
+        'Los estudiantes que completen este curso pueden desear continuar su educación en la industria del fitness con calificaciones como el:',
+        {
+          type: 'link',
+          text: 'SIS50122 Diploma de Gestión de Deportes, Acuáticos y Recreación',
+          url: '/fitness-instructor-personal-trainer-courses/diploma-of-sport',
+        },
+        {
+          type: 'link',
+          text: 'SIS50321 Diploma de Deportes',
+          url: '/fitness-instructor-personal-trainer-courses/diploma-of-sport',
+        },
+        'SIS50421 Diploma de Liderazgo al Aire Libre o continuar su educación en una gama de calificaciones de Educación Superior.',
       ],
     },
     additionalInfo: {
@@ -695,7 +716,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
       description: [
-        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior BSB50120 Diploma de Negocios.',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'BSB50120 Diploma de Negocios',
+          url: '/business-and-management-courses/diploma-of-business',
+        },
       ],
     },
     additionalInfo: {
@@ -731,7 +757,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Rutas de estudio adicional / oportunidades profesionales',
       description: [
-        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior BSB60120 Diploma Avanzado de Negocios.',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'BSB60120 Diploma Avanzado de Negocios',
+          url: '/business-and-management-courses/advanced-diploma-of-business',
+        },
       ],
     },
     additionalInfo: {
@@ -878,7 +909,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
       description: [
-        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior BSB50820 – Diploma de Gestión de Proyectos',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'BSB50820 – Diploma de Gestión de Proyectos',
+          url: '/project-and-program-management-courses/diploma-of-project-management-practice',
+        },
       ],
     },
     additionalInfo: {
@@ -918,7 +954,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
       description: [
-        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior BSB60720 Diploma Avanzado de Gestión de Programas',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'BSB60720 Diploma Avanzado de Gestión de Programas',
+          url: '/project-and-program-management-courses/advanced-diploma-of-project-management-practice',
+        },
       ],
     },
     additionalInfo: {
@@ -927,7 +968,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
         'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre ABM. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
     },
   },
-  'bsb60720-advanced-diploma-of-project-management-practice': {
+  'bsb60720-advanced-diploma-of-program-management': {
     courseDuration: {
       title: 'Duración del Curso',
       description:
@@ -1001,7 +1042,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
       description: [
-        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior BSB50320 – Diploma de Gestión de Recursos Humanos',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'BSB50320 – Diploma de Gestión de Recursos Humanos',
+          url: '/human-resources-courses/diploma-of-human-resource-management',
+        },
       ],
     },
     additionalInfo: {
@@ -1040,7 +1086,12 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
       description: [
-        'BSB60320 – Diploma Avanzado de Gestión de Recursos Humanos',
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'BSB60320 – Diploma Avanzado de Gestión de Recursos Humanos',
+          url: '/human-resources-courses/advanced-diploma-of-human-resource-management',
+        },
       ],
     },
     additionalInfo: {
@@ -1101,7 +1152,14 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     },
     pathways: {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
-      description: ['BSB80120 – Diploma de Graduado de Gestión (Aprendizaje)'],
+      description: [
+        'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
+        {
+          type: 'link',
+          text: 'BSB80120 – Diploma de Graduado de Gestión (Aprendizaje)',
+          url: '/business-and-management-courses/graduate-diploma-of-management',
+        },
+      ],
     },
     additionalInfo: {
       title: 'Información Adicional',

@@ -65,7 +65,7 @@ export const businessMenu = [
     href: '/business-and-management-courses/business3/',
   },
   {
-    title: 'Graduate Diploma of Management',
+    title: 'Graduate Diploma of Management (Learning)',
     href: '/business-and-management-courses/business4/',
   },
 ];
@@ -321,7 +321,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/business-and-management-courses/bsb60120-advanced-diploma-of-business',
           },
           {
-            title: 'Graduate Diploma of Management',
+            title: 'Graduate Diploma of Management (Learning)',
             href: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
           },
         ],
@@ -339,8 +339,8 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/project-and-program-management-courses/bsb50820-diploma-of-project-management-practice',
           },
           {
-            title: 'Advanced Diploma of Project Management Practice',
-            href: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-project-management-practice',
+            title: 'Advanced Diploma of Program Management',
+            href: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-program-management',
           },
         ],
       },

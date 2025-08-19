@@ -10,6 +10,8 @@ import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/Ind
 import getCourseDetailsData from '@/lib/courseDetails';
 import React, { useEffect, use } from 'react';
 import Gallery from '@/components/common/Gallery';
+import getCourseInformationData from '@/lib/courseInformation';
+import { cn } from '@/lib';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
@@ -57,6 +59,7 @@ export default function Page({
 }) {
   const { id, locale } = use(params);
   const courseDetails = getCourseDetailsData(locale);
+  const courseInformationData = getCourseInformationData(locale);
 
   // 동적으로 페이지 타이틀 설정
   useEffect(() => {
@@ -87,7 +90,7 @@ export default function Page({
             <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
           }
         />
-        <div className="max-w-[1600px] mx-auto px-20 py-40">
+        <div className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
           <IndustryPlacementHospitality />
         </div>
       </div>
@@ -111,7 +114,7 @@ export default function Page({
             <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
           }
         />
-        <div className="max-w-[1600px] mx-auto px-20 py-40">
+        <div className="max-max-w-[1600px] mx-auto px-20 md:px-80 py-40">
           <IndustryPlacement />
         </div>
       </div>
@@ -129,8 +132,9 @@ export default function Page({
         slides={[
           {
             imgPath: mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
-            title: mappingCourseTitle[id],
+            title: `${courseInformationData[id]?.courseCode} ${mappingCourseTitle[id]}`,
             content: '',
+            // subtitle: `CRICOS CODE: ${courseInformationData[id]?.cricosCode}`,
           },
         ]}
         dimmed={
@@ -155,26 +159,44 @@ export default function Page({
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40 grid grid-cols-1 lg:grid-cols-2 gap-40"
+        className={cn(
+          'max-w-[1600px] mx-auto px-20 md:px-80 py-40 gap-40',
+          id === 'sit40521-certificate-iv-in-kitchen-management' &&
+            'grid grid-cols-1 lg:grid-cols-2'
+        )}
       >
         <Units id={id} />
         <Gallery
           showTitle={false}
           breakpointColumns={{
-            default: 2,
+            default:
+              id === 'sit40521-certificate-iv-in-kitchen-management' ? 2 : 4,
             1100: 3,
             700: 2,
           }}
-          images={images}
+          images={
+            id === 'sit40521-certificate-iv-in-kitchen-management'
+              ? images_KM
+              : images_HM
+          }
         />
       </section>
     </div>
   );
 }
 
-const images = [
+const images_KM = [
   '/courses/cookery/km_1.png',
   '/courses/cookery/km_2.png',
   '/courses/cookery/km_3.png',
+  '/courses/cookery/km_4.png',
+  '/courses/cookery/km_5.png',
+  '/courses/cookery/km_6.png',
+];
+
+const images_HM = [
+  '/courses/cookery/hm_1.png',
+  '/courses/cookery/hm_2.png',
+  '/courses/cookery/hm_3.png',
   '/courses/cookery/km_4.png',
 ];

@@ -4,11 +4,10 @@ import Banner from '@/components/common/Banner';
 import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
-import Units from '@/domains/courses/components/Units';
 import getCourseDetailsData from '@/lib/courseDetails';
 import React, { useEffect, use } from 'react';
 
-const menuItems = ['Course Information', 'Course Detail', 'Units'];
+const menuItems = ['Course Information', 'Course Detail'];
 
 const mappingCourseTitle: { [key: string]: string } = {
   'hlt33115-certificate-iii-in-health-services-assistance':
@@ -65,10 +64,8 @@ export default function Page({
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="max-w-[1600px] mx-auto px-20 md:px-80 py-40"
-      >
-        <Units id={id} />
-      </section>
+        className="mx-auto px-20 md:px-80 py-40"
+      ></section>
     </div>
   );
 }

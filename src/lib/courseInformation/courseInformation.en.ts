@@ -4,6 +4,7 @@ import { CourseInformationInfo } from '@/domains/courses/components/CourseInform
 export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'sit40521-certificate-iv-in-kitchen-management': {
     courseCode: 'SIT40521',
+    cricosCode: '109578H',
     description:
       'This qualification (updated from SIT40516 – Certificate IV in Commercial Cookery on 09 June 2022) is for chefs and cooks in supervisory or team leader roles. They work independently or with limited guidance and solve non-routine problems.\n\nIt prepares students for jobs in restaurants, hotels, clubs, pubs, cafes, coffee shops, or to run a small business in these areas.\n\nSkills must be used according to Australian laws, standards, and industry codes.\n\nThere are no licensing or certification requirements for this qualification at the time of publication.',
     duration: '78 weeks',
@@ -34,6 +35,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'bsb40120-certificate-iv-in-business': {
     courseCode: 'BSB40120',
+    cricosCode: '107906B',
     description:
       'Students participating in Certificate IV in Business will focus on building effective leadership and problem-solving capabilities crucial to success within a variety of business service job roles. Students pursuing a business-oriented career path will be armed with skills relating towards the completion of specialist and moderately complex administrative or operational tasks that will require advanced self-developmental skills. Upon the completion of Certificate IV in Business, you will be able to implement effective communication and problem-solving skills that will prove to be instrumental to their success within their chosen sector. Students will learn and implement a high level of skills and broad knowledge to apply solutions to a defined range of unpredictable complications and be able to concisely direct a team through any resolution proposed. Individuals with an aptitude for leadership and problem solving will be able to further their skills and learn key communication and problem-solving techniques to enable them to navigate a team through-out the many problems faced within the business environment.',
     duration: '52 weeks',
@@ -48,22 +50,17 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
           type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
-        {
-          type: 'ABM Kitchen',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
       ],
     },
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB40120',
     },
   },
   'bsb50120-diploma-of-business': {
     courseCode: 'BSB50120',
+    cricosCode: '107904D',
     description:
       'This qualification reflects the role of individuals who apply specialised knowledge and skills, together with experience in leadership and management, across a range of enterprise and industry contexts.\n\nIndividuals at this level display initiative and judgement in planning, organising, implementing and monitoring their own workload and the workload of others. They use communication skills to support individuals and teams to meet organisational or enterprise requirements.\n\nThey may plan, design, apply and evaluate solutions to unpredictable problems, and identify, analyse and synthesise information from a variety of sources.',
     duration: '52 weeks',
@@ -78,22 +75,17 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
           type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
-        {
-          type: 'ABM Kitchen',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
       ],
     },
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB50120',
     },
   },
   'bsb60120-advanced-diploma-of-business': {
     courseCode: 'BSB60120',
+    cricosCode: '107905C',
     description:
       'Individuals who seek to improve upon their leadership capabilities, learn key problem-solving procedures and engage in a team environment should look no further than ABMs Advanced Diploma of Business. Graduates in this course will leave with all the necessary tools required to tackle highly complex tasks in their specialised field of expertise. ABMs Advanced Diploma of Business will provide students with the key building blocks required for you to specialise and enter the business environment in your chosen field.\n\nThroughout this course, students will engage in exercises aimed to assist in complex problem solving, develop and implement business plans, develop organisational strategies and contribute to strategic workforce planning \n– All Necessary skills to excel in your specialised field of work.\n\nOur Advanced Diploma of Business is suited towards individuals with a passion for leadership, strong problem-solving capabilities and the ability to motivate and guide a team.',
     duration: '78 weeks',
@@ -108,22 +100,17 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
           type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
-        {
-          type: 'ABM Kitchen',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
       ],
     },
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
   'bsb80120-graduate-diploma-of-management': {
     courseCode: 'BSB80120',
+    cricosCode: '107907A',
     description:
       'This qualification reflects the role of individuals who apply highly specialised management knowledge and skills to lead and influence change in complex and dynamic management environments.\n\nIndividuals at this level use cognitive and communication skills to identify, analyse, synthesise and act on information from a variety of sources, and transfer knowledge and skills to others.\n\nThey apply creative, conceptual and analytical skills to formulate and evaluate complex ideas or initiate change. They demonstrate self-directed application of knowledge and skills, with substantial personal responsibility and autonomy in complex situations.',
     duration: '52 weeks',
@@ -138,24 +125,18 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
           type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
-        {
-          type: 'ABM Kitchen',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
       ],
     },
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
     },
   },
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:
-      "Are you ready to take your cookery skills to the next level?\n\nAt ABM Further Education, we offer a certificate IV in Kitchen Management that combines academic learning with practical experience. You will have the opportunity to work in real commercial kitchens, such as restaurants, hotels, and aged care facilities, and learn from the best in the industry.\n\nAs part of your course, you will need to complete a mandatory work placement at the end of term 5 and throughout term 6. This is not just a requirement, but a chance for you to apply what you have learned in the classroom and gain valuable insights into the culinary world. You will be able to work the required hours in addition to your student visa requirements, so you don't have to worry about that.\n\nDuring the work placement period, you will need to complete 60 shifts and a total of 30 hours per week. You will also need to complete two units of competency that will help you work effectively as a cook and coordinate cooking operations.",
+      "Are you ready to take your cookery skills to the next level?\n\nAt ABM Further Education, we offer a Certificate IV in Kitchen Management that combines academic learning with practical experience. You will have the opportunity to work in real commercial kitchens, such as restaurants, hotels, and aged care facilities, and learn from the best in the industry.\n\nAs part of your course, you will need to complete a mandatory work placement at the end of term 5 and throughout term 6. This is not just a requirement, but a chance for you to apply what you have learned in the classroom and gain valuable insights into the culinary world. You will be able to work the required hours in addition to your student visa requirements, so you don't have to worry about that.\n\nDuring the work placement period, you will need to complete 60 shifts and a total of 30 hours per week. You will also need to complete two units of competency that will help you work effectively as a cook and coordinate cooking operations.",
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face + Industry Placement',
@@ -246,14 +227,6 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
             '60 weeks teaching period + 18 weeks break = 78 weeks',
             'Total: 360 hours',
           ],
-          ['Diploma of Hospitality Management', 'Term 7', '10 weeks', 'N/A'],
-          ['Diploma of Hospitality Management', 'Term 8', '10 weeks', 'N/A'],
-          [
-            'Total',
-            '',
-            '20 weeks teaching period + 6 weeks break = 26 weeks',
-            'Total: 0 hours',
-          ],
         ],
       },
     ],
@@ -332,7 +305,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     },
     additionalInfo: {
       description:
-        "We encourage you to find your own work placement that suits your interests and goals, but we are also here to support you if you need any assistance. We have strong connections with various industry partners who are always looking for talented and motivated students like you.\n\nWe believe that this work placement is a key component of your course that will prepare you for the challenges and opportunities of the hospitality industry. You will not only improve your hospitality management skills, but also develop your confidence, communication, and teamwork abilities. This is your chance to shine and show the world what you can do!\n\nAt ABM Further Education, we are proud of our strong connections with various industry partners who are always on the lookout for talented and motivated students like you. You can work with some of the best names in the hospitality industry, such as:\n\n• Accor (Accor A&R): Leading multinational hospitality group\n• AMA Hospitality: Catering and event management company\n• Bills: Popular restaurant chain serving fresh and delicious food\n• Catering HQ: Food and beverage company operating in various venues\n• Grand Royale: Luxury hotel offering elegant accommodation and fine dining\n• Hurricane's Grill: Steakhouse and bar serving mouth-watering steaks and ribs\n• ICC Sydney: Australia's top venue for conventions, exhibitions, and events\n• Industry Placement Solutions: Recruitment and placement agency\n• Liverpool Catholic Club: Community club offering entertainment and dining\n• Primi Italian: Family-owned restaurant serving authentic Italian cuisine\n• Kuon Omakase: Japanese restaurant offering unique dining experiences",
+        'We encourage you to find your own work placement that suits your interests and goals, but we are also here to support you if you need any assistance. We have strong connections with various industry partners who are always looking for talented and motivated students like you.\n\nWe believe that this work placement is a key component of your course that will prepare you for the challenges and opportunities of the hospitality industry. You will not only improve your hospitality management skills, but also develop your confidence, communication, and teamwork abilities. This is your chance to shine and show the world what you can do!\n\nAt ABM Further Education, we are proud of our strong connections with various industry partners who are always on the lookout for talented and motivated students like you. You can work with some of the best names in the hospitality industry, such as:',
     },
     tables: [
       {
@@ -471,9 +444,10 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'sit50422-diploma-of-hospitality-management': {
     courseCode: 'SIT50422',
+    cricosCode: '111165M',
     description:
       'This qualification reflects the role of highly skilled senior operators who use a broad range of hospitality skills combined with managerial skills and sound knowledge of industry to coordinate hospitality operations.\n\nThey operate independently, have responsibility for others and make a range of operational business decisions.\n\nThis qualification provides a pathway to work in any hospitality industry sector as a departmental or small business manager. The diversity of employers includes restaurants, hotels, motels, catering operations, clubs, pubs, cafés and coffee shops.\nThis qualification allows for multiskilling and for specialisation in accommodation services, cookery, food and beverage and gaming.\n\nThe skills in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian standards and industry codes of practice.\nNo occupational licensing, certification or specific legislative requirements apply to this qualification at the time of publication.',
-    duration: '78 weeks / 104 weeks',
+    duration: '76 weeks / 102 weeks',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -500,6 +474,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'advanced-diploma-of-hospitality-management': {
     courseCode: 'SIT60322',
+    cricosCode: '111166K',
     description:
       'Individuals well suited for our Advanced Diploma of Hospitality Management are those looking to pursue a career that will utilize a broad range of hospitality skills, combined with specialized managerial skills and substantial knowledge of industry to coordinate and monitor hospitality operations. Students in this field will operate with a high level of autonomy and will be responsible for the creation and implementation of strategic business management decisions.\n\nOur Advanced Diploma of Hospitality Management qualification provides students with a clear pathway to work in any hospitality industry sector and for a diverse range of employers including restaurants, hotels, motels, catering operations, clubs, pubs, cafes and coffee shops. Students completing this course will achieve the skills and framework required for multiskilling and for specialization in accommodation services, cookery, food and beverage gaming.\n\nDue to the nature of this course and the flexible electives available for students, we can ensure that you are working towards your goals in their chosen industry by allowing for specialized learning activities, catered towards your own preferences and career goals.',
     duration: '104 weeks',
@@ -529,7 +504,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     },
   },
   'bsb40920-certificate-iv-in-project-management-practice': {
-    courseCode: 'bsb40920',
+    courseCode: 'BSB40920',
+    cricosCode: '112545B',
     description:
       'This qualification reflects the role of individuals who possess well-developed skills in a range of project management processes.\n\nThey apply project management knowledge and skills to a defined range of contexts and are responsible for project outcomes where there are limited, non-routine or contingency measures and solutions.\n\nThis qualification is suitable for individuals working in team environments who support or are responsible for project activities and outcomes. It can apply to any industry or community context.',
     duration: '52 weeks',
@@ -544,22 +520,17 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
           type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
-        {
-          type: 'ABM Kitchen',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
       ],
     },
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB40920',
     },
   },
   'bsb50820-diploma-of-project-management-practice': {
     courseCode: 'BSB50820',
+    cricosCode: '112361K',
     description:
       'This qualification reflects the role of individuals who apply project management skills and knowledge in a variety of contexts, across a number of industry sectors. The job roles that relate to this qualification may include Project Manager and Project Team Leader. Individuals in these roles have project leadership and management roles and are responsible for achieving project objectives. They possess a sound theoretical knowledge base and use a range of specialised, technical, and managerial competencies to initiate, plan, execute and evaluate their own work and/or the work of others.',
     duration: '52 weeks',
@@ -583,25 +554,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'bsb60720-advanced-diploma-of-program-management': {
     courseCode: 'BSB60720',
-    description:
-      'This qualification reflects the role of individuals who apply specialised knowledge and skills, together with experience in leadership and management of complex programs.\n\nIndividuals at this level display initiative and judgement in planning, organising, implementing and monitoring program outcomes with accountability for personal and program outcomes within broad parameters.\n\nThey use cognitive and communication skills to identify, analyse and synthesise information from a variety of sources and transfer their knowledge to others, and creative or conceptual skills to express ideas and perspectives or respond to complex problems in program environments.',
-    duration: '78 weeks',
-    deliveryMode: {
-      title: 'Delivery mode',
-      mode: 'Face to Face',
-    },
-    deliverySite: {
-      title: 'Delivery site:',
-      locations: [
-        {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-  },
-  'bsb60720-advanced-diploma-of-project-management-practice': {
-    courseCode: 'BSB60820',
+    cricosCode: '112362J',
     description:
       'This qualification reflects the role of individuals who apply project management skills and knowledge in a variety of contexts, across a number of industry sectors. The job roles that relate to this qualification may include Project Manager and Project Team Leader.\n\nIndividuals in these roles have project leadership and management roles and are responsible for achieving project objectives. They possess a sound theoretical knowledge base and use a range of specialised, technical, and managerial competencies to initiate, plan, execute and evaluate their own work and/or the work of others.',
     duration: '78 weeks',
@@ -625,6 +578,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'bsb40420-certificate-iv-in-human-resource-management': {
     courseCode: 'BSB40420',
+    cricosCode: '113476B',
     description:
       'This qualification describes the skills and knowledge for workers in human resources (HR) roles who apply a broad range of competencies using some discretion, judgement and relevant theoretical knowledge.\n\nThey may provide technical advice and support to a team.\n\nJob roles that relate to this qualification include Human Resources Officer, Human Resources Assistant, Recruitment Officer, and Learning and Development Officer.',
     duration: '52 weeks',
@@ -644,12 +598,12 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB40420',
     },
   },
   'bsb50320-diploma-of-human-resource-management': {
     courseCode: 'BSB50320',
+    cricosCode: '113477A',
     description:
       'This qualification describes the skills and knowledge for workers in human resources specialist roles who apply a broad range of competencies using discretion, judgement and relevant theoretical knowledge.\n\nThey may provide technical advice and support to a team and take responsibility for the work outcomes of junior staff.\n\nJob roles that relate to this qualification include Human Resources Adviser, Human Resources Coordinator, Industrial Relations Adviser, Learning and Development Coordinator, Recruitment Consultant, and Workplace Health and Safety Adviser.',
     duration: '52 weeks',
@@ -669,12 +623,12 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB50320',
     },
   },
   'bsb60320-advanced-diploma-of-human-resource-management': {
     courseCode: 'BSB60320',
+    cricosCode: '113479K',
     description:
       'This qualification describes the skills and knowledge for workers in senior human resources specialist or generalist roles who apply an advanced broad range of competencies using discretion, judgement and relevant theoretical knowledge.\n\nThey may provide leadership and guidance to others and have responsibility for making a range of operational and strategic decisions.\n\nJob roles that relate to this qualification include Human Resources Manager, Learning and Development Manager, Industrial Relations Manager, Recruitment Manager, and Workplace Health and Safety Manager.',
     duration: '78 weeks',
@@ -694,12 +648,12 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60320',
     },
   },
   'sis30321-certificate-iii-in-fitness': {
     courseCode: 'SIS30321',
+    cricosCode: '116599M',
     description:
       'This qualification reflects the role of individuals who perform a range of activities and functions within the fitness industry.\n\nIndividuals with this qualification are competent in providing fitness services including fitness orientation and health screening, fitness instruction, group exercise instruction and gym instruction.\n\nWork is performed in controlled environments such as fitness centres, gyms, aquatic centres, community centres, workplace fitness facilities and outdoor fitness settings. Individuals typically work independently with some level of autonomy in a controlled environment.',
     duration: '52 weeks',
@@ -723,41 +677,12 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     additionalInfo: {
       description: '* More information is available via the',
       linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
-    },
-  },
-  'sis30321-certificate-iv-in-fitness': {
-    courseCode: 'SIS30321',
-    description:
-      "Studying Certificate III in Fitness is a great way to start your journey as a fitness instructor. You'll learn how to plan and deliver group exercise classes and design gym-based programs for individuals who don't need ongoing monitoring. You'll be working in predictable environments, under general supervision, and using your judgement to handle routine matters, all while following clear policies and procedures.\n\nThis qualification opens the door to a career as a fitness instructor in settings such as gyms, fitness centres, leisure centres, or community hubs. The skills You'll develop will be in line with Australian standards and regulations, ensuring you're prepared to meet both Commonwealth and State requirements.",
-    duration: '52 weeks',
-    deliveryMode: {
-      title: 'Delivery mode',
-      mode: 'Face to Face',
-    },
-    deliverySite: {
-      title: 'Delivery site:',
-      locations: [
-        {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Practical',
-          address: 'Private Gymnasium for practical training and assessment',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* More information is available via the',
-      linkText: 'My Skills Website.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIS30321?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/SIS30321',
     },
   },
   'sis40221-certificate-iv-in-fitness': {
     courseCode: 'SIS40221',
+    cricosCode: '116600A',
     description:
       "The SIS40221 Certificate IV in Fitness is perfect for anyone looking to become a personal trainer. You'll learn how to design, instruct, and assess exercise programmes for healthy clients aiming to achieve their fitness goals. If a client has more serious health concerns, You'll refer them to medical professionals. Personal trainers work independently, using their fitness knowledge in both routine and unpredictable situations, and communicate well with clients and health experts to achieve the best results.\nThis course offers a pathway to work as a personal trainer in gyms, fitness centres, leisure facilities, client workplaces, homes, and even outdoors. You can train individuals or groups and may also provide online services. You could also step into leadership roles in some settings.\n\nThe target group for this qualification includes international students who:\n– Want to start or advance their career in the fitness industry.\n– Want to switch to a new field.\n– Have completed a Certificate III in Fitness and wish to develop further skills.\n– Are looking for a pathway to higher qualifications in fitness.\n\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
     duration: '52 weeks',
@@ -787,6 +712,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'sis50321-diploma-of-sport': {
     courseCode: 'SIS50321',
+    cricosCode: '117762H',
     description:
       "Build Your Future in the Australian Sport and Fitness Industry\n\nThe Diploma of Sport (Coaching) equips students with the practical skills and knowledge needed to take on a range of roles in the Australian sport sector. Whether you're aiming to coach, lead a team, or support a community sports organisation, this qualification provides a strong foundation for success.\n\nStudents will learn to work independently, manage and supervise others, and apply their skills in accordance with Australian legislation, standards and industry best practice. The course also includes key leadership and communication elements essential for working within dynamic sporting environments.\n\nWho Is This Course For?\n\nThis course is ideal for international students who are:\n- Looking to begin or progress a career in the sport or fitness industry\n- Changing career paths or entering a new sector\n- Already holding a Certificate III or IV in Fitness and wishing to advance their skills\n- Interested in pathways to higher-level sport qualifications\n\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
     duration: '52 weeks',
@@ -815,7 +741,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     },
   },
   'certificate-iii-in-fitness-fast-track': {
-    courseCode: 'SIS30321 & SIS40221',
+    courseCode: 'SIS30321',
     description:
       'Start Your Career as a Fitness Instructor\n\nThe SIS30321 Certificate III & SIS40221 Certificate IV in Fitness is designed for those looking to become Group Exercise Instructors or Gym Instructors. This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
     duration: '12 weeks or 24 weeks',
@@ -842,7 +768,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     },
   },
   'certificate-iv-in-fitness-fast-track': {
-    courseCode: 'SIS30321 & SIS40221',
+    courseCode: 'SIS40221',
     description:
       'Start Your Career as a Fitness Instructor\n\nThe SIS30321 Certificate III & SIS40221 Certificate IV in Fitness is designed for those looking to become Group Exercise Instructors or Gym Instructors. This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
     duration: '12 weeks or 24 weeks',
@@ -881,15 +807,10 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       title: 'Delivery site:',
       locations: [
         {
-          type: 'Classroom',
+          type: 'ABM Campus',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
-    },
-    additionalInfo: {
-      description: 'More information is available via the',
-      linkText: 'My Skills Website.',
-      linkUrl: 'https://training.gov.au/Training/Details/HLT33115',
     },
   },
 };

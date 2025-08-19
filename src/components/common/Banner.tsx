@@ -13,7 +13,12 @@ import FadeInBottomToTop from './FadeInBottomToTop';
 import MiniTestimonial from './MiniTestimonial';
 
 type Props = {
-  slides: { imgPath: string; title: string; content?: string }[];
+  slides: {
+    imgPath: string;
+    title: string;
+    content?: string;
+    subtitle?: string;
+  }[];
   dimmed?: React.ReactNode;
   isNeedContactBtn?: boolean;
   autoplayDelay?: number;
@@ -71,6 +76,11 @@ function Banner({
                 >
                   {slide.title}
                 </h1>
+                {slide.subtitle && (
+                  <h2 className="font-[family-name:var(--font-montserrat)] text-white text-xl md:text-2xl font-bold drop-shadow-lg max-w-1000 pt-10">
+                    {slide.subtitle}
+                  </h2>
+                )}
               </FadeInBottomToTop>
 
               <Link

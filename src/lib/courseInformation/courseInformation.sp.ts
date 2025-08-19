@@ -5,6 +5,7 @@ export const courseInformationData_sp: {
 } = {
   'sit40521-certificate-iv-in-kitchen-management': {
     courseCode: 'SIT40521',
+    cricosCode: '109578H',
     description:
       'Esta calificación refleja el rol de chefs y cocineros que tienen un papel de supervisión o liderazgo de equipo en la cocina. Operan de forma independiente o con orientación limitada y usan discreción para resolver problemas no rutinarios. Esta calificación proporciona una vía para trabajar en organizaciones como restaurantes, hoteles, clubes, pubs, cafeterías o administrar un pequeño negocio en estos sectores. Las habilidades de esta calificación deben aplicarse de acuerdo con la legislación y los estándares australianos. No se requieren licencias ocupacionales ni requisitos legislativos específicos en el momento de la publicación.',
     deliveryMode: {
@@ -34,6 +35,7 @@ export const courseInformationData_sp: {
   },
   'bsb40120-certificate-iv-in-business': {
     courseCode: 'BSB40120',
+    cricosCode: '107906B',
     description:
       'Los estudiantes que participan en el Certificado IV en Negocios se enfocarán en desarrollar capacidades efectivas de liderazgo y resolución de problemas cruciales para el éxito en una variedad de roles laborales de servicios empresariales. Los estudiantes que buscan una carrera orientada a los negocios estarán equipados con habilidades relacionadas con la finalización de tareas administrativas u operativas especializadas y moderadamente complejas que requerirán habilidades avanzadas de autodesarrollo. Al completar el Certificado IV en Negocios, podrán implementar habilidades efectivas de comunicación y resolución de problemas que serán instrumentales para su éxito en el sector elegido.',
     deliveryMode: {
@@ -57,12 +59,12 @@ export const courseInformationData_sp: {
     additionalInfo: {
       description: '* Más información disponible en',
       linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB40120',
     },
   },
   'bsb50120-diploma-of-business': {
     courseCode: 'BSB50120',
+    cricosCode: '107904D',
     description:
       'Esta calificación refleja el rol de individuos que aplican conocimientos y habilidades especializadas, junto con experiencia en liderazgo y gestión, en una variedad de contextos empresariales e industriales.\n\nLos individuos en este nivel demuestran iniciativa y juicio en la planificación, organización, implementación y monitoreo de su propia carga de trabajo y la de otros. Utilizan habilidades de comunicación para apoyar a individuos y equipos para cumplir con los requisitos organizacionales o empresariales.\n\nPueden planificar, diseñar, aplicar y evaluar soluciones a problemas impredecibles, e identificar, analizar y sintetizar información de una variedad de fuentes.',
     deliveryMode: {
@@ -86,12 +88,12 @@ export const courseInformationData_sp: {
     additionalInfo: {
       description: '* Más información disponible en',
       linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB50120',
     },
   },
   'bsb60120-advanced-diploma-of-business': {
     courseCode: 'BSB60120',
+    cricosCode: '107905C',
     description:
       'Los individuos que buscan mejorar sus capacidades de liderazgo, aprender procedimientos clave de resolución de problemas y participar en un entorno de equipo no deberían buscar más allá del Diploma Avanzado de Negocios de ABM. Los graduados de este curso se irán con todas las herramientas necesarias requeridas para abordar tareas altamente complejas en su campo especializado de experiencia. El Diploma Avanzado de Negocios de ABM proporcionará a los estudiantes los bloques de construcción clave requeridos para especializarse y entrar en el entorno empresarial en su campo elegido.\n\nA lo largo de este curso, los estudiantes participarán en ejercicios destinados a ayudar en la resolución de problemas complejos, desarrollar e implementar planes de negocios, desarrollar estrategias organizacionales y contribuir a la planificación estratégica de la fuerza laboral – Todas las habilidades necesarias para sobresalir en su campo especializado de trabajo.\n\nNuestro Diploma Avanzado de Negocios es adecuado para individuos con pasión por el liderazgo, fuertes capacidades de resolución de problemas y la habilidad para motivar y guiar a un equipo.',
     deliveryMode: {
@@ -115,12 +117,12 @@ export const courseInformationData_sp: {
     additionalInfo: {
       description: '* Más información disponible en',
       linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
   'bsb80120-graduate-diploma-of-management': {
     courseCode: 'BSB80120',
+    cricosCode: '107907A',
     description:
       'Esta calificación refleja el rol de individuos que aplican conocimientos y habilidades de gestión altamente especializados para liderar e influir en el cambio en entornos de gestión complejos y dinámicos.\n\nLos individuos en este nivel utilizan habilidades cognitivas y de comunicación para identificar, analizar, sintetizar y actuar sobre información de una variedad de fuentes, y transferir conocimientos y habilidades a otros.\n\nAplican habilidades creativas, conceptuales y analíticas para formular y evaluar ideas complejas o iniciar cambios. Demuestran aplicación autodirigida de conocimientos y habilidades, con responsabilidad personal sustancial y autonomía en situaciones complejas.',
     deliveryMode: {
@@ -144,8 +146,7 @@ export const courseInformationData_sp: {
     additionalInfo: {
       description: '* Más información disponible en',
       linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
     },
   },
   'industry-placement-work-placement': {
@@ -482,6 +483,7 @@ export const courseInformationData_sp: {
   },
   'sit50422-diploma-of-hospitality-management': {
     courseCode: 'SIT50422',
+    cricosCode: '111165M',
     description:
       'Esta titulación refleja el rol de operadores senior altamente capacitados que utilizan una amplia gama de habilidades de hospitalidad combinadas con habilidades gerenciales y un sólido conocimiento del sector para coordinar operaciones de hospitalidad.\n\nTrabajan de forma independiente, tienen responsabilidad sobre otros y toman decisiones operativas de negocio.\n\nEsta titulación permite trabajar en cualquier sector de hospitalidad como gerente de departamento o de pequeños negocios. Los empleadores incluyen restaurantes, hoteles, moteles, catering, clubes, pubs, cafés, etc. Permite multiespecialización y especialización en alojamiento, cocina, alimentos y bebidas, y juegos.\n\nLas habilidades deben aplicarse según la legislación y estándares australianos. No se requieren licencias ni requisitos legislativos específicos.',
     deliveryMode: {
@@ -509,37 +511,9 @@ export const courseInformationData_sp: {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
-  'sit60322-advanced-diploma-of-hospitality-management': {
-    courseCode: 'SIT60322',
-    description:
-      'Esta titulación refleja el rol de gerentes senior que utilizan un conocimiento sustancial del sector y habilidades operativas amplias para coordinar operaciones de hospitalidad.\n\nTrabajan con gran autonomía y son responsables de tomar decisiones estratégicas de negocio.\n\nPermite trabajar en cualquier sector de hospitalidad y para una variedad de empleadores como hoteles, restaurantes, moteles, catering, clubes, pubs, cafés, etc. Los posibles cargos incluyen gerente de hotel, motel, ama de llaves, gerente de alimentos y bebidas, gerente de café.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Cocina ABM',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
-    },
-  },
   'advanced-diploma-of-hospitality-management': {
     courseCode: 'SIT60322',
+    cricosCode: '111166K',
     description:
       'El Diploma Avanzado de Gestión de Hospitalidad de ABM es ideal para quienes desean coordinar y supervisar operaciones de hospitalidad utilizando habilidades amplias y conocimientos especializados.\n\nLos estudiantes tendrán gran autonomía y responsabilidad en la toma de decisiones estratégicas, y podrán especializarse en alojamiento, cocina, alimentos y bebidas, juegos, etc.\n\nEl curso permite actividades de aprendizaje personalizadas según los objetivos y trayectorias de cada estudiante, asegurando que adquieran las competencias y la especialización que demanda el sector.',
     deliveryMode: {
@@ -567,8 +541,152 @@ export const courseInformationData_sp: {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIT60322?distanceFilter=25',
     },
   },
+  'bsb40920-certificate-iv-in-project-management-practice': {
+    courseCode: 'BSB40920',
+    cricosCode: '112545B',
+    description:
+      'Esta titulación refleja el rol de individuos con habilidades desarrolladas en procesos de gestión de proyectos.\n\nAplican conocimientos y habilidades de gestión de proyectos en diversos contextos y son responsables de los resultados cuando existen medidas limitadas, no rutinarias o de contingencia.\n\nEs adecuada para quienes trabajan en equipo apoyando o liderando actividades y resultados de proyectos, aplicable a cualquier sector o comunidad.',
+    deliveryMode: {
+      title: 'Modalidad de entrega',
+      mode: 'Presencial',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Cocina ABM',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* Más información disponible en',
+      linkText: 'el sitio web My Skills.',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB40920',
+    },
+  },
+  'bsb50820-diploma-of-project-management-practice': {
+    courseCode: 'BSB50820',
+    cricosCode: '112361K',
+    description:
+      'Esta titulación refleja el rol de individuos que aplican habilidades y conocimientos de gestión de proyectos en diversos contextos y sectores. Los cargos relacionados incluyen Gerente de Proyectos y Líder de Equipo.\n\nEstos profesionales lideran y gestionan proyectos, siendo responsables de alcanzar los objetivos. Poseen una base teórica sólida y competencias especializadas, técnicas y de gestión para planificar, ejecutar y evaluar su propio trabajo y el de otros.',
+    deliveryMode: {
+      title: 'Modalidad de entrega',
+      mode: 'Presencial (20 horas por semana)',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'La formación es presencial y todas las clases se imparten en las aulas de ABM Further Education.',
+    },
+  },
+  'bsb60720-advanced-diploma-of-program-management': {
+    courseCode: 'BSB60720',
+    cricosCode: '112362J',
+    description:
+      'Esta titulación refleja el rol de individuos que aplican conocimientos y habilidades especializadas, junto con experiencia en liderazgo y gestión de programas complejos.\n\nDemuestran iniciativa y juicio en la planificación, organización, implementación y monitoreo de resultados personales y de programas dentro de parámetros amplios.\n\nUtilizan habilidades cognitivas y de comunicación para identificar, analizar y sintetizar información de diversas fuentes y transferir conocimientos a otros, así como habilidades creativas y conceptuales para expresar ideas o resolver problemas complejos en entornos de programas.',
+    deliveryMode: {
+      title: 'Modalidad de entrega',
+      mode: 'Presencial',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+  },
+  'bsb40420-certificate-iv-in-human-resource-management': {
+    courseCode: 'BSB40420',
+    cricosCode: '113476B',
+    description:
+      'Esta titulación describe las habilidades y conocimientos para trabajadores en roles de recursos humanos (RRHH) que aplican una amplia gama de competencias usando cierto grado de criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar asesoramiento técnico y apoyo a un equipo.\n\nLos cargos relacionados incluyen Oficial de Recursos Humanos, Asistente de RRHH, Oficial de Reclutamiento y Oficial de Aprendizaje y Desarrollo.',
+    deliveryMode: {
+      title: 'Modalidad de entrega',
+      mode: 'Presencial',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* Más información disponible en',
+      linkText: 'el sitio web My Skills.',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB40420',
+    },
+  },
+  'bsb50320-diploma-of-human-resource-management': {
+    courseCode: 'BSB50320',
+    cricosCode: '113477A',
+    description:
+      'Esta titulación describe las habilidades y conocimientos para trabajadores en roles especializados de recursos humanos que aplican una amplia gama de competencias usando criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar asesoramiento técnico y apoyo a un equipo y asumir responsabilidad por los resultados del trabajo de personal junior.\n\nLos cargos relacionados incluyen Asesor de RRHH, Coordinador de RRHH, Asesor de Relaciones Laborales, Coordinador de Aprendizaje y Desarrollo, Consultor de Reclutamiento y Asesor de Salud y Seguridad en el Trabajo.',
+    deliveryMode: {
+      title: 'Modalidad de entrega',
+      mode: 'Presencial',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* Más información disponible en',
+      linkText: 'el sitio web My Skills.',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB50320',
+    },
+  },
+  'bsb60320-advanced-diploma-of-human-resource-management': {
+    courseCode: 'BSB60320',
+    cricosCode: '113479K',
+    description:
+      'Esta titulación describe las habilidades y conocimientos para trabajadores en roles senior de recursos humanos, ya sea especializados o generalistas, que aplican una amplia gama de competencias avanzadas usando criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar liderazgo y orientación a otros y asumir responsabilidad por una variedad de decisiones operativas y estratégicas.\n\nLos cargos relacionados incluyen Gerente de RRHH, Gerente de Aprendizaje y Desarrollo, Gerente de Relaciones Laborales, Gerente de Reclutamiento y Gerente de Salud y Seguridad en el Trabajo.',
+    deliveryMode: {
+      title: 'Modalidad de entrega',
+      mode: 'Presencial',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* Más información disponible en',
+      linkText: 'el sitio web My Skills.',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60320',
+    },
+  },
   'sis30321-certificate-iii-in-fitness': {
     courseCode: 'SIS30321',
+    cricosCode: '116599M',
     description:
       'Esta titulación refleja el rol de individuos que realizan una variedad de actividades y funciones dentro de la industria del fitness.\n\nQuienes obtienen esta titulación son competentes para ofrecer servicios de fitness, incluyendo orientación, evaluación de salud, instrucción de fitness, clases grupales y entrenamiento en gimnasio.\n\nEl trabajo se realiza en entornos controlados como gimnasios, centros acuáticos, comunitarios, instalaciones laborales y al aire libre, generalmente de forma independiente y con cierto nivel de autonomía.',
     deliveryMode: {
@@ -591,40 +709,12 @@ export const courseInformationData_sp: {
     additionalInfo: {
       description: '* Más información disponible en',
       linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
-    },
-  },
-  'sis30321-certificate-iv-in-fitness': {
-    courseCode: 'SIS30321',
-    description:
-      'El Certificado III en Fitness es una excelente manera de comenzar tu carrera como instructor de fitness. Aprenderás a planificar y dictar clases grupales y a diseñar programas de gimnasio para personas que no requieren monitoreo continuo. Trabajarás en entornos predecibles, bajo supervisión general y usando tu criterio para resolver asuntos rutinarios, siguiendo políticas y procedimientos claros.\n\nEsta titulación abre la puerta a una carrera como instructor de fitness en gimnasios, centros de fitness, centros recreativos o comunitarios. Las habilidades adquiridas cumplen con los estándares y regulaciones australianas, preparándote para los requisitos estatales y federales.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Prácticas',
-          address: 'Gimnasio privado para prácticas y evaluación',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIS30321?distanceFilter=25',
+      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/SIS30321',
     },
   },
   'sis40221-certificate-iv-in-fitness': {
     courseCode: 'SIS40221',
+    cricosCode: '116600A',
     description:
       'El Certificado IV en Fitness SIS40221 es ideal para quienes desean ser entrenadores personales. Aprenderás a diseñar, instruir y evaluar programas de ejercicio para clientes sanos que buscan alcanzar sus objetivos. Si un cliente tiene problemas de salud más serios, lo derivarás a profesionales médicos. Los entrenadores personales trabajan de forma independiente, usando su conocimiento tanto en situaciones rutinarias como impredecibles, y se comunican eficazmente con clientes y expertos en salud para lograr los mejores resultados.\nEste curso permite trabajar como entrenador personal en gimnasios, centros de fitness, instalaciones recreativas, lugares de trabajo, hogares y al aire libre. Puedes entrenar a individuos o grupos, e incluso ofrecer servicios online o asumir roles de liderazgo.\n\nEl grupo objetivo incluye estudiantes internacionales que:\n– Quieren iniciar o avanzar en su carrera en fitness.\n– Desean cambiar de sector.\n– Han completado el Certificado III en Fitness y desean desarrollar más habilidades.\n– Buscan acceder a titulaciones superiores en fitness.\n\nNuestros estudiantes provienen de diversos países. Algunos son nuevos en Australia, otros han vivido aquí antes. Esta titulación es tu primer paso en la industria del fitness, sin necesidad de licencias especiales, siguiendo los estándares y prácticas australianas.',
     deliveryMode: {
@@ -653,6 +743,7 @@ export const courseInformationData_sp: {
   },
   'sis50321-diploma-of-sport': {
     courseCode: 'SIS50321',
+    cricosCode: '117762H',
     description:
       '¡Construye tu futuro en la industria australiana del deporte y fitness!\n\nEl Diploma de Deporte (Coaching) brinda a los estudiantes habilidades y conocimientos prácticos para desempeñar diversos roles en el sector deportivo australiano. Ya sea que busques ser entrenador, líder de equipo o apoyar una organización deportiva comunitaria, esta titulación te da una base sólida.\n\nAprenderás a trabajar de forma independiente, gestionar y supervisar a otros, y aplicar tus habilidades según la legislación, estándares y mejores prácticas australianas. El curso incluye elementos clave de liderazgo y comunicación esenciales para entornos deportivos dinámicos.\n\n¿Para quién es este curso?\n\nIdeal para estudiantes internacionales que:\n- Quieren comenzar o avanzar en el sector deportivo o fitness\n- Cambian de carrera o sector\n- Ya tienen un Certificado III o IV en Fitness y desean avanzar\n- Buscan acceder a titulaciones superiores en deporte\n\nNuestros estudiantes provienen de diversos países. Algunos son nuevos en Australia, otros han vivido aquí antes. Esta titulación es tu primer paso en la industria del fitness, sin necesidad de licencias especiales, siguiendo los estándares y prácticas australianas.',
     deliveryMode: {
@@ -680,7 +771,7 @@ export const courseInformationData_sp: {
     },
   },
   'certificate-iii-in-fitness-fast-track': {
-    courseCode: 'SIS30321 & SIS40221',
+    courseCode: 'SIS30321',
     description:
       '¡Comienza tu carrera como instructor de fitness!\n\nEl Certificado III y IV en Fitness está diseñado para quienes desean ser instructores de grupo o de gimnasio. Aprenderás a planificar y dictar sesiones grupales y a crear programas personalizados de gimnasio.\n\nTrabajarás en entornos estructurados y supervisados como gimnasios, centros de fitness y centros comunitarios. Como instructor, usarás tu criterio y seguirás las políticas y procedimientos de la organización.\n\nEsta titulación te permite trabajar en:\n– Gimnasios y centros de fitness\n– Centros recreativos y comunitarios\n– Clubes de salud y bienestar',
     deliveryMode: {
@@ -706,7 +797,7 @@ export const courseInformationData_sp: {
     },
   },
   'certificate-iv-in-fitness-fast-track': {
-    courseCode: 'SIS30321 & SIS40221',
+    courseCode: 'SIS40221',
     description:
       '¡Comienza tu carrera como instructor de fitness!\n\nEl Certificado III y IV en Fitness está diseñado para quienes desean ser instructores de grupo o de gimnasio. Aprenderás a planificar y dictar sesiones grupales y a crear programas personalizados de gimnasio.\n\nTrabajarás en entornos estructurados y supervisados como gimnasios, centros de fitness y centros comunitarios. Como instructor, usarás tu criterio y seguirás las políticas y procedimientos de la organización.\n\nEsta titulación te permite trabajar en:\n– Gimnasios y centros de fitness\n– Centros recreativos y comunitarios\n– Clubes de salud y bienestar',
     deliveryMode: {
@@ -731,196 +822,23 @@ export const courseInformationData_sp: {
         'Fechas de inicio (cada 3 semanas):\n2025: 28 de julio, 18 de agosto, 8 de septiembre, 29 de septiembre, 20 de octubre, 10 de noviembre, 1 de diciembre, 22 de diciembre\n2026: 12 de enero, 2 de febrero, 23 de febrero, 16 de marzo, 6 de abril, 27 de abril, 18 de mayo, 8 de junio\n\nRegulaciones y estándares\nLas habilidades adquiridas deben aplicarse según la legislación australiana y los estándares del sector.\n\n¡Da el primer paso hacia una carrera gratificante en fitness!\n\n¡Consulta las opciones de pago flexibles!',
     },
   },
-  'bsb40920-certificate-iv-in-project-management-practice': {
-    courseCode: 'BSB40920',
+  'hlt33115-certificate-iii-in-health-services-assistance': {
+    courseCode: 'HLT33115',
     description:
-      'Esta titulación refleja el rol de individuos con habilidades desarrolladas en procesos de gestión de proyectos.\n\nAplican conocimientos y habilidades de gestión de proyectos en diversos contextos y son responsables de los resultados cuando existen medidas limitadas, no rutinarias o de contingencia.\n\nEs adecuada para quienes trabajan en equipo apoyando o liderando actividades y resultados de proyectos, aplicable a cualquier sector o comunidad.',
+      'Ruta Profesional de Apoyo de Enfermería: Inglés + Certificado III en Asistencia de Servicios de Salud + Práctica Laboral\n\nIncluye: HLT33115 Certificado III en Asistencia de Servicios de Salud (Asistencia en Trabajo de Enfermería en Cuidados Agudos)\n\nDa tu primer paso hacia una carrera gratificante en el sector de la salud con la Ruta Profesional de Apoyo de Enfermería de ABM. Este programa integral está diseñado para estudiantes internacionales o nuevos ingresos al sector de la salud que desean convertirse en trabajadores de apoyo calificados en hospitales e instalaciones de cuidado de ancianos.\n\n¿Por qué elegir este programa?\n• Aprende en un entorno de aula presencial de apoyo\n• Desarrolla inglés especializado para la comunicación en el sector de la salud\n• Obtén una calificación reconocida a nivel nacional\n• Completa 80 horas de práctica laboral en entornos reales de atención médica\n• Adecuado para aquellos con o sin experiencia previa en el sector de la salud',
+    duration: '16 semanas',
     deliveryMode: {
-      title: 'Modalidad de entrega',
+      title: 'Modo de entrega:',
       mode: 'Presencial',
     },
     deliverySite: {
-      title: 'Lugar de entrega:',
+      title: 'Sitio de entrega:',
       locations: [
         {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Cocina ABM',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
-    },
-  },
-  'bsb50820-diploma-of-project-management': {
-    courseCode: 'BSB50820',
-    description:
-      'Esta titulación refleja el rol de individuos que aplican conocimientos, habilidades prácticas y experiencia en liderazgo y gestión en diversos contextos empresariales e industriales en un entorno de proyectos.\n\nInician, planifican, ejecutan y evalúan su propio trabajo y/o el de otros, usando habilidades desarrolladas y una base de conocimientos amplia para analizar información.\n\nEs ideal para quienes trabajan en proyectos y requieren reconocimiento formal de sus habilidades, o para quienes buscan consolidar y formalizar su experiencia en gestión de proyectos.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Cocina ABM',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
-    },
-  },
-  'bsb50820-diploma-of-project-management-practice': {
-    courseCode: 'BSB50820',
-    description:
-      'Esta titulación refleja el rol de individuos que aplican habilidades y conocimientos de gestión de proyectos en diversos contextos y sectores. Los cargos relacionados incluyen Gerente de Proyectos y Líder de Equipo.\n\nEstos profesionales lideran y gestionan proyectos, siendo responsables de alcanzar los objetivos. Poseen una base teórica sólida y competencias especializadas, técnicas y de gestión para planificar, ejecutar y evaluar su propio trabajo y el de otros.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial (20 horas por semana)',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
+          type: 'Aula',
           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
         },
       ],
-    },
-    additionalInfo: {
-      description:
-        'La formación es presencial y todas las clases se imparten en las aulas de ABM Further Education.',
-    },
-  },
-  'BSB60720-diploma-of-project-management-practice': {
-    courseCode: 'BSB60720',
-    description:
-      'Esta titulación refleja el rol de individuos que aplican habilidades y conocimientos de gestión de proyectos en diversos contextos y sectores. Los cargos relacionados incluyen Gerente de Proyectos y Líder de Equipo.\n\nEstos profesionales lideran y gestionan proyectos, siendo responsables de alcanzar los objetivos. Poseen una base teórica sólida y competencias especializadas, técnicas y de gestión para planificar, ejecutar y evaluar su propio trabajo y el de otros.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial (20 horas por semana)',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description:
-        'La formación es presencial y todas las clases se imparten en las aulas de ABM Further Education.',
-    },
-  },
-  'bsb60720-advanced-diploma-of-program-management': {
-    courseCode: 'BSB60720',
-    description:
-      'Esta titulación refleja el rol de individuos que aplican conocimientos y habilidades especializadas, junto con experiencia en liderazgo y gestión de programas complejos.\n\nDemuestran iniciativa y juicio en la planificación, organización, implementación y monitoreo de resultados personales y de programas dentro de parámetros amplios.\n\nUtilizan habilidades cognitivas y de comunicación para identificar, analizar y sintetizar información de diversas fuentes y transferir conocimientos a otros, así como habilidades creativas y conceptuales para expresar ideas o resolver problemas complejos en entornos de programas.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-  },
-  'bsb40420-certificate-iv-in-human-resource-management': {
-    courseCode: 'BSB40420',
-    description:
-      'Esta titulación describe las habilidades y conocimientos para trabajadores en roles de recursos humanos (RRHH) que aplican una amplia gama de competencias usando cierto grado de criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar asesoramiento técnico y apoyo a un equipo.\n\nLos cargos relacionados incluyen Oficial de Recursos Humanos, Asistente de RRHH, Oficial de Reclutamiento y Oficial de Aprendizaje y Desarrollo.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
-    },
-  },
-  'bsb50320-diploma-of-human-resource-management': {
-    courseCode: 'BSB50320',
-    description:
-      'Esta titulación describe las habilidades y conocimientos para trabajadores en roles especializados de recursos humanos que aplican una amplia gama de competencias usando criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar asesoramiento técnico y apoyo a un equipo y asumir responsabilidad por los resultados del trabajo de personal junior.\n\nLos cargos relacionados incluyen Asesor de RRHH, Coordinador de RRHH, Asesor de Relaciones Laborales, Coordinador de Aprendizaje y Desarrollo, Consultor de Reclutamiento y Asesor de Salud y Seguridad en el Trabajo.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
-    },
-  },
-  'bsb60320-advanced-diploma-of-human-resource-management': {
-    courseCode: 'BSB60320',
-    description:
-      'Esta titulación describe las habilidades y conocimientos para trabajadores en roles senior de recursos humanos, ya sea especializados o generalistas, que aplican una amplia gama de competencias avanzadas usando criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar liderazgo y orientación a otros y asumir responsabilidad por una variedad de decisiones operativas y estratégicas.\n\nLos cargos relacionados incluyen Gerente de RRHH, Gerente de Aprendizaje y Desarrollo, Gerente de Relaciones Laborales, Gerente de Reclutamiento y Gerente de Salud y Seguridad en el Trabajo.',
-    deliveryMode: {
-      title: 'Modalidad de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl:
-        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
 };

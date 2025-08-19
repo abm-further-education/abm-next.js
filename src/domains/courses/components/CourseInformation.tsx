@@ -12,6 +12,7 @@ import { useTranslations } from 'next-intl';
 export interface CourseInformationInfo {
   description?: string;
   courseCode?: string;
+  cricosCode?: string;
   duration?: string;
   deliveryMode?: {
     title: string;

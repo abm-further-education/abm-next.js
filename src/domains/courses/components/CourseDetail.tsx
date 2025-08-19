@@ -3,6 +3,7 @@ import { cn, parseBoldText } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Units from './Units';
 
 // Helper component to render text with bold parsing
 const BoldText: React.FC<{ children: string }> = ({ children }) => {
@@ -80,17 +81,33 @@ function renderDescription(
                   <table className="w-full border border-gray-300 text-sm">
                     <thead className="bg-gray-100">
                       <tr>
-                        {item.headers.map((header, headerIndex) => (
-                          <th
-                            key={headerIndex}
-                            className={cn(
-                              'px-4 py-2 border border-gray-300 font-semibold text-left',
-                              headerIndex === 0 ? 'w-120' : ''
-                            )}
-                          >
-                            {header}
-                          </th>
-                        ))}
+                        {item.headers.map((header, headerIndex) => {
+                          // 첫 번째 헤더가 빈 문자열이고 두 번째 헤더가 있는 경우 두 번째 헤더에 colspan=2 적용
+                          if (
+                            headerIndex === 0 &&
+                            header === '' &&
+                            item.headers[1]
+                          ) {
+                            return null;
+                          }
+                          const isSecondHeaderWithMerge =
+                            headerIndex === 1 &&
+                            item.headers[0] === '' &&
+                            item.headers[1];
+
+                          return (
+                            <th
+                              key={headerIndex}
+                              className={cn(
+                                'px-4 py-2 border border-gray-300 font-semibold text-left',
+                                headerIndex === 0 ? 'w-120' : ''
+                              )}
+                              colSpan={isSecondHeaderWithMerge ? 2 : 1}
+                            >
+                              {header}
+                            </th>
+                          );
+                        })}
                       </tr>
                     </thead>
                     <tbody>
@@ -101,14 +118,25 @@ function renderDescription(
                             rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                           }
                         >
-                          {row.map((cell, cellIndex) => (
-                            <td
-                              key={cellIndex}
-                              className="px-4 py-2 border border-gray-300"
-                            >
-                              <BoldText>{cell}</BoldText>
-                            </td>
-                          ))}
+                          {row.map((cell, cellIndex) => {
+                            // 첫 번째 셀이 빈 문자열이고 두 번째 셀이 있는 경우 첫 번째 셀을 숨김
+                            if (cellIndex === 0 && cell === '' && row[1]) {
+                              return null;
+                            }
+
+                            const isSecondCellWithMerge =
+                              cellIndex === 1 && row[0] === '' && row[1];
+
+                            return (
+                              <td
+                                key={cellIndex}
+                                className="px-4 py-2 border border-gray-300"
+                                colSpan={isSecondCellWithMerge ? 2 : 1}
+                              >
+                                <BoldText>{cell}</BoldText>
+                              </td>
+                            );
+                          })}
                         </tr>
                       ))}
                     </tbody>
@@ -182,7 +210,7 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
       '/courses/study_plan/PM.png',
     'bsb50820-diploma-of-project-management-practice':
       '/courses/study_plan/PM.png',
-    'bsb60720-advanced-diploma-of-project-management-practice':
+    'bsb60720-advanced-diploma-of-program-management':
       '/courses/study_plan/PM.png',
     'bsb40420-certificate-iv-in-human-resource-management':
       '/courses/study_plan/HR.png',
@@ -193,6 +221,24 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
     'bsb60320-advanced-diploma-of-human-resource-management':
       '/courses/study_plan/HR.png',
   };
+
+  // courseStructure가 있는 코스들 (hospitality 코스들)
+  const hasCourseStructure =
+    courseId &&
+    (courseId === 'sit50422-diploma-of-hospitality-management' ||
+      courseId === 'advanced-diploma-of-hospitality-management');
+
+  // courseStructure 섹션들을 찾기
+  const courseStructureSections = hasCourseStructure
+    ? Object.entries(courseInfo).filter(([key]) =>
+        key.startsWith('courseStructure')
+      )
+    : [];
+
+  // courseStructure가 아닌 섹션들
+  const otherSections = Object.entries(courseInfo).filter(
+    ([key]) => !key.startsWith('courseStructure')
+  );
 
   return (
     <section className="py-20 bg-gray-50">
@@ -208,13 +254,33 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
                   alt="Study Plan"
                   width={800}
                   height={600}
-                  className="w-full max-w-800 h-auto rounded-lg shadow-md"
+                  className="w-full max-w-800 h-auto rounded-lg shadow-md mb-30"
                 />
               </div>
+
+              {/* courseStructure가 있는 경우 이미지 아래에 courseStructure 섹션들을 배치 */}
+              {hasCourseStructure && courseStructureSections.length > 0 && (
+                <div className="mt-8 mb-30">
+                  {courseStructureSections.map(([sectionKey, sectionData]) => (
+                    <div key={sectionKey} className="mb-14">
+                      <h3 className={titleStyle}>{sectionData.title}</h3>
+                      {renderDescription(sectionData.description)}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
+          {courseId ===
+            'hlt33115-certificate-iii-in-health-services-assistance' && (
+            <Units id={courseId} />
+          )}
           <div>
-            {Object.entries(courseInfo).map(([sectionKey, sectionData]) => (
+            {/* courseStructure가 있는 경우 courseStructure를 제외한 나머지 섹션들만 표시 */}
+            {(hasCourseStructure
+              ? otherSections
+              : Object.entries(courseInfo)
+            ).map(([sectionKey, sectionData]) => (
               <div key={sectionKey} className="mb-14">
                 <h3 className={titleStyle}>{sectionData.title}</h3>
                 {renderDescription(sectionData.description)}

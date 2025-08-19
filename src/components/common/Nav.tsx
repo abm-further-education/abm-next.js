@@ -316,7 +316,7 @@ function Nav() {
                   ['Courses', '과정', 'Cursos'].includes(subMenu)
                     ? 'grid-cols-3'
                     : 'grid-cols-2',
-                  'grid gap-x-40 gap-y-18'
+                  'grid gap-x-40 gap-y-26'
                 )}
               >
                 {menuList
@@ -349,7 +349,7 @@ function Nav() {
                           {menu.items.map((li) => (
                             <li
                               onClick={() => setSubMenu('')}
-                              className="text-[15px] my-5"
+                              className="text-[15px] my-2"
                               key={`${li.title}_${menu.title}_${li.href}`}
                             >
                               {li.href.startsWith('http') ? (

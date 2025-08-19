@@ -83,7 +83,7 @@ export default async function HigherEducationPathwayPage({
                 <div className="p-6">
                   <div className="flex items-center mb-4">
                     <Image
-                      src="https://abm.edu.au/wp-content/uploads/2024/01/SCU_RGB_Horizontal-1-1024x328.png"
+                      src="/study-with-us/souther_cross.jpeg"
                       alt="Southern Cross University Logo"
                       width={500}
                       height={100}
@@ -141,7 +141,7 @@ export default async function HigherEducationPathwayPage({
                 <div className="p-6">
                   <div className="flex items-center mb-4">
                     <Image
-                      src="https://abm.edu.au/wp-content/uploads/2025/04/UBSS.png"
+                      src="/study-with-us/UBSS_logo.png"
                       alt="UBSS Universal Business School Sydney Logo"
                       width={500}
                       height={100}

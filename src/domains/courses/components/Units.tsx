@@ -35,8 +35,7 @@ function Units({ id }: { id: string }) {
     'bsb40920-certificate-iv-in-project-management-practice':
       CERTIV_PROJECT_UNITS,
     'bsb50820-diploma-of-project-management-practice': DIPLOMA_PROJECT_UNITS,
-    'bsb60720-advanced-diploma-of-project-management-practice':
-      ADVANCED_PROJECT_UNITS,
+    'bsb60720-advanced-diploma-of-program-management': ADVANCED_PROJECT_UNITS,
     'bsb40420-certificate-iv-in-human-resource-management': CERTIV_HR_UNITS,
     'bsb50320-diploma-of-human-resource-management': DIPLOMA_HR_UNITS,
     'bsb60320-advanced-diploma-of-human-resource-management': ADVANCED_HR_UNITS,

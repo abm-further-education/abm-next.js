@@ -61,7 +61,7 @@ function FSS() {
                   {fssData.specialOffer.textBeforeCode || 'Use code'}{' '}
                   <strong>{fssData.specialOffer.code}</strong>{' '}
                   {fssData.specialOffer.textAfterCode || 'at checkout for a'}{' '}
-                  <span className="bg-orange-100 text-orange-700 font-semibold">
+                  <span className="bg-orange-100 text-primary font-semibold">
                     {fssData.specialOffer.discount}
                   </span>{' '}
                   {fssData.specialOffer.note}
@@ -127,7 +127,6 @@ function FSS() {
             <div className="flex flex-col gap-10">
               <span className="font-semibold">Course Date:</span>
               <ul className="list-disc pl-5 space-y-1">
-                <li>8th August 2025</li>
                 <li>29th August 2025</li>
                 <li>15th September 2025</li>
               </ul>
@@ -223,7 +222,7 @@ function FSS() {
         <Disclosure>
           {({ open }) => (
             <div>
-              <DisclosureButton className="flex w-full justify-between items-center bg-orange-400 px-16 py-9 text-left text-sm font-medium text-white hover:bg-black cursor-pointer transition">
+              <DisclosureButton className="flex w-full justify-between items-center bg-primary px-16 py-9 text-left text-sm font-medium text-white hover:bg-black cursor-pointer transition">
                 <span className="text-lg">
                   {fssData.faq1?.question ||
                     'Who Needs NSW Food Safety Supervisor Certificate (FSS)?'}
@@ -251,7 +250,7 @@ function FSS() {
         <Disclosure as="div" className="mt-4">
           {({ open }) => (
             <>
-              <DisclosureButton className="flex w-full justify-between items-center bg-orange-400 px-16 py-9 text-left text-sm font-medium text-white hover:bg-black cursor-pointer transition">
+              <DisclosureButton className="flex w-full justify-between items-center bg-primary px-16 py-9 text-left text-sm font-medium text-white hover:bg-black cursor-pointer transition">
                 <span className="text-lg">
                   {fssData.faq2?.question || 'Why Is It Important?'}
                 </span>

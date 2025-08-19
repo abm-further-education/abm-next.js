@@ -23,7 +23,9 @@ export default async function Page() {
       />
 
       <div className="max-w-[1600px] mx-auto px-20 py-40">
-        <h1 className="text-3xl font-bold mb-20 text-center">{t('title')}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-30 font-[family-name:var(--font-montserrat)] text-center mt-40">
+          {t('title')}
+        </h1>
 
         {/* What is a USI */}
         <div className="mb-40">

@@ -8,7 +8,7 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: '과정 기간',
       description:
-        '이 자격증 과정은 총 78주 동안 진행되며, 6학기(각 10주)로 구성된 60주의 교육 및 평가 기간을 포함합니다.',
+        '키친 매니지먼트 4급 자격증은 18개월 동안 진행되며, 총 78주에 해당하며, 18주의 방학을 포함합니다. 이는 6개의 10주 학기로 나뉩니다.',
     },
     workPlacement: {
       title: '현장 실습',
@@ -35,7 +35,12 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: '추가 학업/진로 경로',
       description: [
-        '이 자격증 취득 후, 졸업생은 SIT50422 호텔경영 디플로마 과정을 이수할 수 있습니다.',
+        '이 자격증 취득 후, 졸업생은 다음 과정을 이수할 수 있습니다:',
+        {
+          type: 'link',
+          text: 'SIT50422 호텔경영 디플로마',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
         '가능한 직업군:',
         '셰프',
         '셰프 드 파르티',
@@ -57,7 +62,7 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     courseDuration2: {
       title: '과정 기간 – 식음료(Food & Beverage) 트랙',
       description:
-        '이 자격증 과정은 총 78주 동안 진행되며, 6학기(각 10주)로 구성된 60주의 교육 기간과 18주의 방학(시간표에 명시됨)으로 구성됩니다.',
+        '호텔경영 디플로마는 18개월 동안 진행되며, 총 78주에 해당하며, 18주의 방학을 포함합니다. 이는 6개의 10주 학기로 나뉩니다.',
     },
     courseStructure1: {
       title: '과정 구성 – 키친 매니지먼트 4급과 패키지',
@@ -376,7 +381,18 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: '추가 학업 경로',
       description: [
-        '이 과정을 이수한 학생은 SIS50122 스포츠, 수상 및 레크리에이션 경영 디플로마, SIS50321 스포츠 디플로마, SIS50421 야외 리더십 디플로마 또는 다양한 고등교육 과정으로 진학할 수 있습니다.',
+        '이 과정을 이수한 학생은 다음 과정들로 진학할 수 있습니다:',
+        {
+          type: 'link',
+          text: 'SIS50122 스포츠, 수상 및 레크리에이션 경영 디플로마',
+          url: '/fitness-instructor-personal-trainer-courses/diploma-of-sport',
+        },
+        {
+          type: 'link',
+          text: 'SIS50321 스포츠 디플로마',
+          url: '/fitness-instructor-personal-trainer-courses/diploma-of-sport',
+        },
+        'SIS50421 야외 리더십 디플로마 또는 다양한 고등교육 과정으로 진학할 수 있습니다.',
       ],
     },
     additionalInfo: {
@@ -419,7 +435,18 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: '추가 학업 경로',
       description: [
-        '이 과정을 이수한 학생은 SIS50122 스포츠, 수상 및 레크리에이션 경영 디플로마, SIS50321 스포츠 디플로마, SIS50421 야외 리더십 디플로마 또는 다양한 고등교육 과정으로 진학할 수 있습니다.',
+        '이 과정을 이수한 학생은 다음 과정들로 진학할 수 있습니다:',
+        {
+          type: 'link',
+          text: 'SIS50122 스포츠, 수상 및 레크리에이션 경영 디플로마',
+          url: '/fitness-instructor-personal-trainer-courses/diploma-of-sport',
+        },
+        {
+          type: 'link',
+          text: 'SIS50321 스포츠 디플로마',
+          url: '/fitness-instructor-personal-trainer-courses/diploma-of-sport',
+        },
+        'SIS50421 야외 리더십 디플로마 또는 다양한 고등교육 과정으로 진학할 수 있습니다.',
       ],
     },
     additionalInfo: {
@@ -585,7 +612,12 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: '추가 학업/진로 경로',
       description: [
-        '이 자격증 취득 후, 졸업생은 BSB50120 비즈니스 디플로마 과정을 이수할 수 있습니다.',
+        '이 자격증 취득 후, 졸업생은 다음 과정을 이수할 수 있습니다:',
+        {
+          type: 'link',
+          text: 'BSB50120 비즈니스 디플로마',
+          url: '/business-and-management-courses/diploma-of-business',
+        },
       ],
     },
     additionalInfo: {
@@ -1445,7 +1477,7 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
         '등록 전 학생 안내서를 반드시 읽어보시기 바랍니다. 추가 문의는 info@abm.edu.au로 이메일 또는 +61 (02) 9160 4507로 전화해 주세요.',
     },
   },
-  'bsb60720-advanced-diploma-of-project-management-practice': {
+  'bsb60720-advanced-diploma-of-program-management': {
     courseDuration: {
       title: '과정 기간',
       description: '기간: 78주 (60주 교육 및 평가 + 18주 방학)',

@@ -16,6 +16,7 @@
     "emailPlaceholder": "Email",
     "enquiryType": "What is your Enquiry Type?",
     "selectEnquiryType": "Select Enquiry Type",
+    "generalEnquiry": "General Enquiry",
     "bookCampusTour": "Book a Campus Tour",
     "becomeStudent": "Become a Student",
     "becomeAgent": "Become an Agent",
@@ -42,7 +43,7 @@
     "description": "Choosing the right course is key to reaching your career goals. Think beyond interest—consider if the path leads to a future you'll enjoy. Whether it's business, commercial cookery, or advancing in hospitality, ABM helps you gain the skills to become job-ready and confident in your chosen field."
   },
   "studyWithUs": {
-    "studentInsights": "ABM Student Testimonials",
+    "studentInsights": "Testimonials",
     "academicCalendar": "Academic Calendar",
     "feesAndPayment": "Fees and Payment",
     "entryRequirements": "Entry Requirements",
@@ -130,7 +131,7 @@
       "onlineCourses": "Online Courses"
     },
     "studyWithUs": {
-      "studentInsights": "ABM Student Testimonials",
+      "studentInsights": "Testimonials",
       "academicCalendar": "Academic Calendar",
       "feesAndPayment": "Fees and Payment",
       "entryRequirements": "Entry Requirements",
@@ -642,7 +643,9 @@
   "shortCoursesPage": {
     "heading": "Discover Your Passion with ABM’s New Short Courses!",
     "description": "ABM is thrilled to announce our latest project – ABM Short Courses – designed for anyone who loves food, drink, and the art of hospitality! Whether you’re a home cook, aspiring chef, or curious enthusiast, these one-day courses are your gateway to new skills and unforgettable experiences.",
-    "heading2": "ABM Short Courses for 2025"
+    "heading2": "ABM Short Courses for 2025",
+    "calendarHeading": "Course Calendar",
+    "calendarDescription": "Browse our short courses by month and find the perfect date for you"
   },
   "footer": {
     "home": "Home",

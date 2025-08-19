@@ -96,7 +96,7 @@ export default async function AcademicCalendar() {
           <div className="bg-neutral-900/70 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <h2 className="text-3xl font-bold mb-10 text-center mt-100">
+      <h2 className="text-3xl md:text-4xl font-bold mb-30 font-[family-name:var(--font-montserrat)] text-center mt-40">
         Academic Calendar
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-32 px-16 max-w-7xl mx-auto">

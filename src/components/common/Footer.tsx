@@ -35,7 +35,7 @@ function Footer() {
             </Link>
           </li>
           <li className="mt-10">+61 (02) 9160 4507</li>
-          <li>(WhatsApp) + 61 482 796 0</li>
+          <li>(WhatsApp) + 61 482 796 010</li>
           <li className="mt-10">RTO 45578 | CRICOS 03826M</li>
           <li>ABN 37 623 414 817</li>
         </ul>

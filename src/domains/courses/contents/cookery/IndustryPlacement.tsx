@@ -87,6 +87,7 @@ function IndustryPlacement() {
         alt="partners"
         width={900}
         height={400}
+        className="mx-auto"
       />
     </div>
   );

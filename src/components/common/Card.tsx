@@ -32,9 +32,9 @@ function Card({
         fill
         className="md:object-center object-cover group-hover:scale-105 transition-all"
       />
-      <div className="absolute bottom-0 left-0 w-full text-2xl p-20 font-[family-name:var(--font-montserrat)] text-white font-bold bg-black/70 flex items-center justify-between">
+      <div className="absolute bottom-0 left-0 w-full text-xl p-20 font-[family-name:var(--font-montserrat)] text-white font-bold bg-black/70 flex items-center justify-between">
         {title}
-        <div className="group-hover:bg-primary rounded-full p-10 transition-all text-primary group-hover:text-black">
+        <div className="group-hover:bg-primary rounded-full p-8 transition-all text-primary group-hover:text-black">
           <ArrowRight />
         </div>
       </div>

@@ -16,6 +16,7 @@
     "emailPlaceholder": "Correo electrónico",
     "enquiryType": "¿Cuál es tu tipo de consulta?",
     "selectEnquiryType": "Seleccionar tipo de consulta",
+    "generalEnquiry": "Consulta general",
     "bookCampusTour": "Reservar un tour del campus",
     "becomeStudent": "Convertirse en estudiante",
     "becomeAgent": "Convertirse en agente",
@@ -644,7 +645,9 @@
   "shortCoursesPage": {
     "heading": "¡Descubre tu pasión con los nuevos Cursos Cortos de ABM!",
     "description": "¡En ABM estamos emocionados de anunciar nuestro nuevo proyecto – ABM Cursos Cortos – diseñado para todos los amantes de la comida, la bebida y el arte de la hospitalidad! Ya seas un cocinero aficionado, un chef en formación o simplemente un entusiasta curioso, estos cursos de un día son tu puerta de entrada a nuevas habilidades, trabajos y experiencias inolvidables.",
-    "heading2": "Cursos Cortos de ABM para 2025"
+    "heading2": "Cursos Cortos de ABM para 2025",
+    "calendarHeading": "Calendario de Cursos",
+    "calendarDescription": "Explora nuestros cursos cortos por mes y encuentra la fecha perfecta para ti"
   },
   "shortCoursesMenu": {
     "hospitality": "Hospitalidad",

@@ -20,8 +20,10 @@ export default async function Page() {
           <div className="bg-neutral-900/50 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <div className="max-w-[1600px] mx-auto px-20 py-40">
-        <h1 className="text-3xl font-bold mb-20 text-center">{t('title')}</h1>
+      <div className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
+        <h1 className="text-3xl md:text-4xl font-bold mb-30 font-[family-name:var(--font-montserrat)] text-center mt-40">
+          {t('title')}
+        </h1>
 
         {/* Promotional Message */}
         <div className="mb-40 p-20 bg-orange-50 text-center">

@@ -49,7 +49,12 @@ function Contact() {
     }
   };
 
-  const options = [t('bookCampusTour'), t('becomeStudent'), t('becomeAgent')];
+  const options = [
+    t('generalEnquiry'),
+    t('bookCampusTour'),
+    t('becomeStudent'),
+    t('becomeAgent'),
+  ];
 
   return (
     <section className={cn('px-16 md:px-0 my-60 md:my-120')}>

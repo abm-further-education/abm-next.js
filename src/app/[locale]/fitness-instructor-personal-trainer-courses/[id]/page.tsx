@@ -7,6 +7,7 @@ import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
 import getCourseDetailsData from '@/lib/courseDetails';
+import getCourseInformationData from '@/lib/courseInformation';
 import React, { useEffect, use } from 'react';
 
 const menuItems = ['Course Information', 'Course Detail', 'Units'];
@@ -38,6 +39,7 @@ export default function Page({
 }) {
   const { id, locale } = use(params);
   const courseDetails = getCourseDetailsData(locale);
+  const courseInformationData = getCourseInformationData(locale);
 
   // 동적으로 페이지 타이틀 설정
   useEffect(() => {
@@ -56,8 +58,9 @@ export default function Page({
         slides={[
           {
             imgPath: mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
-            title: mappingCourseTitle[id],
+            title: `${courseInformationData[id]?.courseCode} ${mappingCourseTitle[id]}`,
             content: '',
+            // subtitle: `CRICOS CODE: ${courseInformationData[id]?.cricosCode}`,
           },
         ]}
         dimmed={
@@ -98,5 +101,4 @@ const images = [
   '/courses/fitness/prac_2.png',
   '/courses/fitness/prac_3.png',
   '/courses/fitness/prac_4.jpg',
-  '/courses/fitness/prac_5.jpg',
 ];
