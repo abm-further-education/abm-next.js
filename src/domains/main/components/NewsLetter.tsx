@@ -61,7 +61,7 @@ function NewsLetter() {
         loop
         className="flex items-center justify-center md:justify-between w-full md:max-w-[1400px] md:w-full mx-auto h-420 md:h-460 mt-60"
         slidesPerView={isMobile ? 1 : isTablet ? 3 : 4}
-        spaceBetween={30}
+        spaceBetween={0}
       >
         {newsData.map((news) => (
           <SwiperSlide key={news.id} className="">

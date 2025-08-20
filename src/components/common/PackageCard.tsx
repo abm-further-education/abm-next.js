@@ -30,7 +30,10 @@ function PackageCard({
         }`}
         style={
           backgroundImage
-            ? { backgroundImage: `url(${backgroundImage})` }
+            ? {
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundPosition: '20% 20%',
+              }
             : undefined
         }
       >

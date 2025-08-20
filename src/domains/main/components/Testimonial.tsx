@@ -31,9 +31,11 @@ function Testimonial() {
         className="w-full mx-40 h-300 mt-60"
         slidesPerView={1}
         breakpoints={{
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 5 },
-          1600: { slidesPerView: 6 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+          1440: { slidesPerView: 5 },
+          1690: { slidesPerView: 6 },
+          2000: { slidesPerView: 7 },
         }}
         spaceBetween={20}
       >

@@ -18,7 +18,7 @@ function MiniTestimonial() {
   };
 
   return (
-    <div className="hidden md:block absolute bottom-4 right-4 w-[280px] z-50">
+    <div className="hidden md:block absolute bottom-40 md:right-4 lg:right-200 w-[280px] z-50">
       <Swiper
         spaceBetween={0}
         className="bg-black/60 overflow-hidden"
@@ -31,10 +31,10 @@ function MiniTestimonial() {
       >
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
-            <div onClick={handleClick} className="cursor-pointer p-20">
+            <div onClick={handleClick} className="cursor-pointer px-20 pt-6">
               {/* Profile Image */}
               <div className="flex justify-center mb-15">
-                <div className="w-60 h-60 rounded-full overflow-hidden">
+                <div className="w-50 h-50 rounded-full overflow-hidden">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -46,7 +46,7 @@ function MiniTestimonial() {
               </div>
 
               {/* Stars */}
-              <div className="flex justify-center mb-15">
+              <div className="flex justify-center mb-10">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star
                     key={i}
@@ -58,7 +58,7 @@ function MiniTestimonial() {
 
               {/* Review Message */}
               <div className="text-center">
-                <p className="text-sm text-white leading-relaxed mb-10">
+                <p className="text-sm text-white mb-10">
                   &quot;{testimonial.message}&quot;
                 </p>
                 <p className="text-xs text-gray-50 font-medium">

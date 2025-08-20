@@ -47,7 +47,7 @@ function Page() {
             ]}
           />
           <PackageCard
-            backgroundImage="/courses/cookery/DHM.png"
+            backgroundImage="/courses/cookery/KM.png"
             title="Chef & Restaurant Manager Essentials"
             duration="4–8 weeks"
             items={[
@@ -58,7 +58,7 @@ function Page() {
             ]}
           />
           <PackageCard
-            backgroundImage="/courses/cookery/DHM.png"
+            backgroundImage="/courses/cookery/ADHM.png"
             title="Diploma of Hospitality"
             duration="4 months – 1 year"
             items={[
@@ -75,7 +75,7 @@ function Page() {
         </h2>
         <div className="flex flex-wrap md:gap-40 py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
           <PackageCard
-            backgroundImage="/courses/cookery/DHM.png"
+            backgroundImage="/courses/fitness/fitness_1.png"
             title="Functional Movement & Rehab"
             duration="3 weeks"
             items={[
@@ -85,7 +85,7 @@ function Page() {
             ]}
           />
           <PackageCard
-            backgroundImage="/courses/cookery/DHM.png"
+            backgroundImage="/courses/fitness/fitness_2.png"
             title="Manual Therapy for OT Students"
             duration="3 weeks"
             items={[
@@ -95,7 +95,7 @@ function Page() {
             ]}
           />
           <PackageCard
-            backgroundImage="/courses/cookery/DHM.png"
+            backgroundImage="/courses/fitness/fitness_3.png"
             title="Certificate III & IV in Fitness"
             duration="12–24 weeks"
             items={[
@@ -112,7 +112,7 @@ function Page() {
         </h2>
         <div className="flex flex-wrap md:gap-40 py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
           <PackageCard
-            backgroundImage="/courses/cookery/DHM.png"
+            backgroundImage="/courses/health/health_1.png"
             title="Health Services Assistance"
             duration="16 weeks"
             items={[
@@ -122,7 +122,7 @@ function Page() {
             ]}
           />
           <PackageCard
-            backgroundImage="/courses/cookery/DHM.png"
+            backgroundImage="/courses/health/health_2.png"
             title="HSA + Nursing English"
             duration="16 weeks"
             items={[
