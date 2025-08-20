@@ -137,7 +137,8 @@
       "entryRequirements": "Requisitos de Ingreso",
       "getUSI": "Obtener un USI",
       "enrolNow": "Inscríbete Ahora",
-      "higherEducationPathway": "Vía de Educación Superior"
+      "higherEducationPathway": "Vía de Educación Superior",
+      "studyTourPrograms": "Programas de Tour de Estudio"
     }
   },
   "cookeryAndHospitality": {
@@ -164,6 +165,7 @@
     "studentPortal": "PORTAL DEL ESTUDIANTE"
   },
   "feeSchedule": {
+    "studyTourPrograms": "Programas de Tour de Estudio",
     "title": "Plan de Pagos y Montos",
     "bannerTitle": "Calendario de Tarifas 2025",
     "bannerSubtitle": "Información completa de tarifas para ABM Educación Superior",

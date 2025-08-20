@@ -66,7 +66,7 @@ function Nav() {
           // Study With Us 섹션의 items는 tStudy 번역 키를 사용
           if (section.titleKey === 'menu.studyWithUs') {
             // Timetable은 직접 제목을 사용
-            if (item.title === 'Timetable') {
+            if (item.title === 'timetable') {
               return {
                 title: 'Timetable',
                 href: item.href,

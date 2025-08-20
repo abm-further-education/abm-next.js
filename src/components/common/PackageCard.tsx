@@ -84,10 +84,10 @@ function PackageCard({
         <Button
           className="bg-primary text-white w-full"
           onClick={() => {
-            router.push('/abm-study-tour-programs');
+            router.push('/contact');
           }}
         >
-          {'Enrol Now'}
+          {'Enquire Now'}
         </Button>
       </div>
     </div>

@@ -503,6 +503,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
             title: 'higherEducationPathway',
             href: '/higher-education-pathway',
           },
+          {
+            title: 'studyTourPrograms',
+            href: '/abm-study-tour-programs',
+          },
         ],
       },
     ],

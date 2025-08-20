@@ -43,6 +43,7 @@
     "description": "올바른 과정을 선택하는 것은 커리어 목표를 이루는 데 있어 매우 중요합니다. 흥미를 넘어, 그 길이 여러분이 즐기고 지속할 수 있는 미래로 이어지는지 고민해보세요. 비즈니스, 요리, 호스피탈리티, 피트니스 등 다양한 분야에서 ABM은 여러분이 현장에서 필요한 실무 역량을 갖추고 자신감을 키울 수 있도록 지원합니다."
   },
   "studyWithUs": {
+    "studyTourPrograms": "스터디 투어 프로그램",
     "studentInsights": "ABM 학생 후기",
     "academicCalendar": "학사 일정",
     "feesAndPayment": "수업료 및 결제",
@@ -138,7 +139,8 @@
       "getUSI": "USI 발급",
       "enrolNow": "지금 등록하기",
       "timetable": "시간표",
-      "higherEducationPathway": "고등교육 진학 과정"
+      "higherEducationPathway": "고등교육 진학 과정",
+      "studyTourPrograms": "스터디 투어 프로그램"
     }
   },
   "cookeryAndHospitality": {

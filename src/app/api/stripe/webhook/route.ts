@@ -44,11 +44,25 @@ export async function POST(req: NextRequest) {
       // 이메일 발송
       try {
         if (metadata) {
+          console.log('📧 Starting email sending process...');
+          console.log('📧 SMTP Config check:', {
+            host: process.env.SMTP_HOST ? 'Set' : 'Not set',
+            port: process.env.SMTP_PORT ? 'Set' : 'Not set',
+            user: process.env.SMTP_USER ? 'Set' : 'Not set',
+            from: process.env.FROM_EMAIL ? 'Set' : 'Not set',
+          });
           await sendBookingEmails(metadata);
           console.log('✅ Emails sent successfully');
+        } else {
+          console.log('❌ No metadata found, skipping email sending');
         }
       } catch (emailError) {
         console.error('❌ Email sending failed:', emailError);
+        console.error('❌ Email error details:', {
+          message:
+            emailError instanceof Error ? emailError.message : 'Unknown error',
+          stack: emailError instanceof Error ? emailError.stack : undefined,
+        });
       }
     }
 
@@ -137,6 +151,9 @@ async function saveBookingToDatabase(
 
 async function sendBookingEmails(metadata: Record<string, string>) {
   try {
+    console.log('📧 sendBookingEmails function started');
+    console.log('📧 Metadata received in email function:', metadata);
+
     const {
       firstName,
       lastName,
@@ -153,6 +170,13 @@ async function sendBookingEmails(metadata: Record<string, string>) {
       courseLocation,
     } = metadata;
 
+    console.log('📧 Email validation:', {
+      firstName: firstName ? 'Valid' : 'Missing',
+      lastName: lastName ? 'Valid' : 'Missing',
+      email: email ? 'Valid' : 'Missing',
+      courseName: courseName ? 'Valid' : 'Missing',
+    });
+
     // SMTP 환경변수
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -164,7 +188,15 @@ async function sendBookingEmails(metadata: Record<string, string>) {
       },
     });
 
+    console.log('📧 SMTP transporter created');
+
     // 관리자에게 보내는 메일 (예약자 정보)
+    console.log('📧 Sending admin email to: info@abm.edu.au');
+    console.log(
+      '📧 Admin email subject:',
+      `[Short Course Booking] ${courseName} - ${firstName} ${lastName}`
+    );
+
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
       to: 'info@abm.edu.au',
@@ -181,7 +213,7 @@ async function sendBookingEmails(metadata: Record<string, string>) {
           <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
             <!-- Header with Logo -->
             <div style="background-color: #000000; padding: 30px; text-align: center;">
-              <img src="https://abm-next-js.vercel.app/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
+              <img src="/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
             </div>
             
             <!-- Content -->
@@ -241,6 +273,12 @@ async function sendBookingEmails(metadata: Record<string, string>) {
 
     // 예약자에게 자동 답장 (코스 정보 및 감사 메시지)
     if (email && typeof email === 'string' && email.trim() !== '') {
+      console.log('📧 Sending customer email to:', email);
+      console.log(
+        '📧 Customer email subject:',
+        `Thank you for booking ${courseName}`
+      );
+
       await transporter.sendMail({
         from: process.env.FROM_EMAIL,
         to: email,
@@ -257,7 +295,7 @@ async function sendBookingEmails(metadata: Record<string, string>) {
             <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
               <!-- Header with Logo -->
               <div style="background-color: #000000; padding: 30px; text-align: center;">
-                <img src="https://abm-next-js.vercel.app/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
+                <img src="/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
               </div>
               
               <!-- Content -->
@@ -318,8 +356,13 @@ async function sendBookingEmails(metadata: Record<string, string>) {
       });
     }
 
-    console.log('Booking emails sent successfully');
+    console.log('✅ Booking emails sent successfully');
   } catch (error) {
-    console.error('Error sending booking emails:', error);
+    console.error('❌ Error sending booking emails:', error);
+    console.error('❌ Email error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+    });
+    throw error; // 에러를 다시 던져서 상위에서 처리할 수 있도록 함
   }
 }
