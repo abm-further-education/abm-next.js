@@ -1,17 +1,14 @@
+'use client';
+
 import Banner from '@/components/common/Banner';
 import FadeIn from '@/components/common/FadeIn';
 import React from 'react';
-import type { Metadata } from 'next';
 import PackageCard from '@/components/common/PackageCard';
 import Button from '@/components/common/Button';
-
-export const metadata: Metadata = {
-  title: 'ABM Study Tour Programs',
-  description:
-    'Designed for international students and education partners, our short-term programs combine classroom knowledge with real industry practice — all in beautiful Sydney.',
-};
+import { useRouter } from 'next/navigation';
 
 function page() {
+  const router = useRouter();
   return (
     <div className="font-[family-name:var(--font-montserrat)] pt-60">
       <Banner
@@ -151,7 +148,10 @@ function page() {
             needs.
           </p>
 
-          <Button className="mt-10 p-10 border bg-primary">
+          <Button
+            className="mt-10 p-10 border bg-primary"
+            onClick={() => router.push('/contact')}
+          >
             Contact Us to Customise
           </Button>
         </div>
