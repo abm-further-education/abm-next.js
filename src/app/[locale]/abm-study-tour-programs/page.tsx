@@ -7,7 +7,7 @@ import PackageCard from '@/components/common/PackageCard';
 import Button from '@/components/common/Button';
 import { useRouter } from 'next/navigation';
 
-function page() {
+function Page() {
   const router = useRouter();
   return (
     <div className="font-[family-name:var(--font-montserrat)] pt-60">
@@ -160,4 +160,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
