@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     // 관리자에게 보내는 메일 (예약자 정보)
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
-      to: 'hannah.yoon@abm.edu.au',
+      to: 'info@abm.edu.au',
       subject: `[Short Course Booking] ${courseName} - ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>

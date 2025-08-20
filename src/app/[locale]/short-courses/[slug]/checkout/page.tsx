@@ -43,12 +43,23 @@ export default function CheckoutPage() {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [loading, setLoading] = useState(false);
   const [discount, setDiscount] = useState(0);
+  const [discountType, setDiscountType] = useState<'percentage' | 'fixed'>(
+    'percentage'
+  );
   const [appliedPromo, setAppliedPromo] = useState('');
 
-  // 프로모션 코드 목록
-  const promoCodes: { [code: string]: { discount: number; label: string } } = {
-    ASC10: { discount: 0.1, label: '10% OFF' },
-    ASC20: { discount: 0.2, label: '20% OFF' },
+  // 프로모션 코드 목록 - 퍼센트 할인과 고정 금액 할인 모두 지원
+  const promoCodes: {
+    [code: string]: {
+      discount: number;
+      label: string;
+      type: 'percentage' | 'fixed';
+    };
+  } = {
+    ASC10: { discount: 0.1, label: '10% OFF', type: 'percentage' },
+    ASC20: { discount: 0.2, label: '20% OFF', type: 'percentage' },
+    ELSISABM2025AUG: { discount: 1, label: '100% OFF', type: 'percentage' },
+    ELICOS15: { discount: 15, label: '$15 OFF', type: 'fixed' },
   };
 
   // 프로모션 코드 적용 함수
@@ -56,14 +67,17 @@ export default function CheckoutPage() {
     const code = form.promotionCode.trim().toUpperCase();
     if (promoCodes[code]) {
       setDiscount(promoCodes[code].discount);
+      setDiscountType(promoCodes[code].type);
       setAppliedPromo(code);
       setErrors((prev) => ({ ...prev, promotionCode: '' }));
     } else if (code === '') {
       setDiscount(0);
+      setDiscountType('percentage');
       setAppliedPromo('');
       setErrors((prev) => ({ ...prev, promotionCode: '' }));
     } else {
       setDiscount(0);
+      setDiscountType('percentage');
       setAppliedPromo('');
       setErrors((prev) => ({
         ...prev,
@@ -80,7 +94,9 @@ export default function CheckoutPage() {
 
   // 할인 적용된 가격 계산
   const discountedPrice = courseData?.price
-    ? Math.round(courseData.price * (1 - discount))
+    ? discountType === 'percentage'
+      ? Math.round(courseData.price * (1 - discount))
+      : Math.max(0, courseData.price - discount)
     : undefined;
 
   const validate = () => {

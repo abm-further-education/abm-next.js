@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getServerStripe } from '@/lib/stripe';
 import { headers } from 'next/headers';
 import nodemailer from 'nodemailer';
+import { supabaseAdmin } from '@/lib/supabase';
 
 export async function POST(req: NextRequest) {
   try {
@@ -30,6 +31,16 @@ export async function POST(req: NextRequest) {
       const metadata = session.metadata;
       console.log('📧 Metadata received:', metadata);
 
+      // Supabase에 결제자 정보 저장
+      try {
+        if (metadata) {
+          await saveBookingToDatabase(metadata, session);
+          console.log('✅ Booking saved to database successfully');
+        }
+      } catch (dbError) {
+        console.error('❌ Database save failed:', dbError);
+      }
+
       // 이메일 발송
       try {
         if (metadata) {
@@ -48,6 +59,75 @@ export async function POST(req: NextRequest) {
       { error: 'Webhook handler failed' },
       { status: 500 }
     );
+  }
+}
+
+async function saveBookingToDatabase(
+  metadata: Record<string, string>,
+  session: any
+) {
+  try {
+    if (!supabaseAdmin) {
+      throw new Error('Supabase admin client not available');
+    }
+
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      preferredDate,
+      otherInquiries,
+      howDidYouHear,
+      referrerName,
+      promotionCode,
+      courseName,
+      selectedDate,
+      selectedType,
+      courseLocation,
+      courseSlug,
+      appliedPromo,
+      surcharge,
+    } = metadata;
+
+    // 결제 정보
+    const paymentAmount = session.amount_total ? session.amount_total / 100 : 0; // Stripe는 센트 단위
+    const paymentStatus = session.payment_status;
+    const stripeSessionId = session.id;
+
+    const { data, error } = await supabaseAdmin.from('shortCourse').insert({
+      first_name: firstName || '',
+      last_name: lastName || '',
+      email: email || '',
+      phone: phone || '',
+      preferred_date: preferredDate || '',
+      other_inquiries: otherInquiries || '',
+      how_did_you_hear: howDidYouHear || '',
+      referrer_name: referrerName || '',
+      promotion_code: promotionCode || '',
+      course_name: courseName || '',
+      course_slug: courseSlug || '',
+      selected_date: selectedDate || '',
+      selected_type: selectedType || '',
+      course_location: courseLocation || '',
+      applied_promo: appliedPromo || '',
+      surcharge: surcharge ? parseFloat(surcharge) : 0,
+      payment_amount: paymentAmount,
+      payment_status: paymentStatus,
+      stripe_session_id: stripeSessionId,
+      created_at: new Date().toISOString(),
+    });
+
+    if (error) {
+      console.error('Database insert error:', error);
+      throw error;
+    }
+
+    console.log('Booking saved to database:', data);
+    return data;
+  } catch (error) {
+    console.error('Error saving booking to database:', error);
+    throw error;
   }
 }
 
@@ -83,7 +163,7 @@ async function sendBookingEmails(metadata: Record<string, string>) {
     // 관리자에게 보내는 메일 (예약자 정보)
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
-      to: 'hannah.yoon@abm.edu.au',
+      to: 'info@abm.edu.au',
       subject: `[Short Course Booking] ${courseName} - ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>
