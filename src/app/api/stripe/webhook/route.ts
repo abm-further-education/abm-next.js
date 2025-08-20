@@ -64,7 +64,11 @@ export async function POST(req: NextRequest) {
 
 async function saveBookingToDatabase(
   metadata: Record<string, string>,
-  session: any
+  session: {
+    id: string;
+    amount_total: number | null;
+    payment_status: string;
+  }
 ) {
   try {
     if (!supabaseAdmin) {
