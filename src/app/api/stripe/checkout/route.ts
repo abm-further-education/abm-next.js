@@ -58,10 +58,10 @@ export async function POST(request: NextRequest) {
       ],
       mode: 'payment',
       success_url: `${
-        process.env.NEXTAUTH_URL || 'https://www.abm.edu.au'
+        process.env.NEXTAUTH_URL || 'https://abm.edu.au'
       }/payment/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${
-        process.env.NEXTAUTH_URL || 'https://www.abm.edu.au'
+        process.env.NEXTAUTH_URL || 'https://abm.edu.au'
       }/short-courses/${courseSlug}`,
       metadata: {
         courseSlug,
