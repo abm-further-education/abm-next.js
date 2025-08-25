@@ -86,7 +86,13 @@ function Page({
     const params = new URLSearchParams();
     params.set('date', selectedDate);
     if (selectedType) params.set('type', selectedType);
-    router.push(`/short-courses/${slug}/checkout?${params.toString()}`);
+    if (slug === 'fss') {
+      router.push(
+        `/cookery-and-hospitality-courses/fss/checkout?${params.toString()}`
+      );
+    } else {
+      router.push(`/short-courses/${slug}/checkout?${params.toString()}`);
+    }
   };
 
   return courseData ? (

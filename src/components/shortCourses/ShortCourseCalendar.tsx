@@ -98,7 +98,11 @@ const ShortCourseCalendar: React.FC<ShortCourseCalendarProps> = ({
   const sortedMonths = Object.keys(coursesByMonth).sort();
 
   const handleCourseClick = (slug: string) => {
-    router.push(`/short-courses/${slug}`);
+    if (slug === 'fss') {
+      router.push(`/cookery-and-hospitality-courses/fss`);
+    } else {
+      router.push(`/short-courses/${slug}`);
+    }
   };
 
   const isPastDate = (dateString: string) => {

@@ -105,7 +105,7 @@ function ShortCoursesPage({ params }: { params: Promise<{ locale: string }> }) {
             <ShortCourseCard
               imgPath="/short-course/fss_1.png"
               title="NSW Food Safety Supervisor Certificate (FSS)"
-              link="/short-courses/fss"
+              link="/cookery-and-hospitality-courses/fss"
               price={180}
             />
           </div>

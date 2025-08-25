@@ -177,7 +177,7 @@ export default function CookeryClient() {
           <Card
             imgPath="/courses/cookery/fss.png"
             title={t('foodSafetySupervisor')}
-            link="/"
+            link="/cookery-and-hospitality-courses/fss"
             className="w-300 md:w-530"
           />
         </div>
