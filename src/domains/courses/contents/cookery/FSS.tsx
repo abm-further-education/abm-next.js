@@ -51,6 +51,15 @@ function FSS() {
             <p className="font-semibold">{fssData.timeLabel || 'Time:'}</p>
             <p>{fssData.time || '9:00am - 5:00pm'}</p>
           </div>
+          <div className="flex gap-10 mb-10">
+            <p className="font-semibold">
+              {fssData.addressLabel || 'Address:'}
+            </p>
+            <p>
+              {fssData.address ||
+                'ABM Main Campus (242 Castlereagh Street Sydney NSW 2000 Australia)'}
+            </p>
+          </div>
           <div className="flex flex-col mb-10">
             <p className="font-semibold">
               {fssData.specialOfferLabel || 'Special Offer:'}

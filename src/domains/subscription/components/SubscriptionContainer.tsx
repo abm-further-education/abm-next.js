@@ -26,7 +26,7 @@ function SubscriptionContainer() {
   };
 
   return (
-    <div className="bg-black text-white font-[family-name:var(--font-montserrat)] md:m-60 flex flex-col items-center justify-center p-10 md:p-40">
+    <div className="bg-black text-white font-[family-name:var(--font-montserrat)] md:m-60 flex flex-col items-center justify-center p-10 md:p-40 pt-20 md:pt-10">
       <h2 className="text-3xl md:text-5xl font-bold">{t('title')}</h2>
       <p className="text-neutral-300 pt-10">{t('desc')}</p>
       <div className="flex flex-col md:flex-row mt-40">

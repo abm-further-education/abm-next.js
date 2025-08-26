@@ -274,7 +274,7 @@
     "introDescription": "To ensure the best learning experience and outcomes, ABM has specific entry requirements for all our courses. These requirements help us maintain high educational standards and ensure students are well-prepared for their studies.",
     "generalRequirementsTitle": "General Requirements",
     "ageRequirementTitle": "Age Requirement",
-    "ageRequirementDescription": "Students must be at least 18 years of age at the time of course commencement. For students under 18, parental consent and additional documentation may be required.",
+    "ageRequirementDescription": "Students must be at least 18 years of age at the time of course commencement.",
     "englishRequirementTitle": "English Language Proficiency",
     "englishRequirementDescription": "All students must demonstrate English language proficiency to ensure they can successfully complete their studies. This applies to both domestic and international students.",
     "academicRequirementsTitle": "Academic Requirements",
@@ -309,8 +309,8 @@
     "englishEntryRequirementsDescription": "Have an IELTS* score of 5.5 with no band less than 5.0 (test results must be no more than 2 years old). English language competence can also be demonstrated through documented evidence of any of the following:",
     "englishEvidence1": "Educated for 5 years in an English-speaking country; or",
     "englishEvidence2": "Completed at least 6 months of a Certificate IV level course in an Australian RTO; or",
-    "englishEvidence3": "Successful completion of an English Placement Test",
-    "englishEvidence4": "Successful completion of an English course with exit level equivalent to IELTS overall 5.5 from one of our English Pathway Partners",
+    "englishEvidence3": "Successful completion of an ABM English Placement Test",
+    "englishEvidence4": "Successful completion of an English course with exit level equivalent to IELTS overall 5.5 from one of our ELICOS Pathway partners",
     "pteRequirementsTitle": "For PTE",
     "pteRequirementsDescription": "Have a PTE score of 45.4 (IELTS 5.5) or higher with no band less than (Listening – 42.7, Reading – 47.9, Speaking – 51, Writing – 42.2)",
     "pteTableTitle": "PTE equivalent to 5.5 IELTS per band",
@@ -409,7 +409,7 @@
     "courseRequirementsTableTitle": "Specific Course Entry Requirements",
     "courseRequirementsTableDescription": "Below are the specific entry requirements for each course offered at ABM:",
     "needHelpTitle": "Need Help with Your Application?",
-    "needHelpDescription": "Our friendly admissions team is here to help you through the application process.\nContact us for personalized assistance.",
+    "needHelpDescription": "Our friendly admissions team is here to help you through the application process.\nContact us for personalised assistance.",
     "contactUsButton": "Contact Us",
     "callUsButton": "Call Us",
     "courses": {
@@ -443,19 +443,19 @@
       },
       "sportDiploma": {
         "code": "SIS50321 Diploma of Sport (Coaching)",
-        "requirement": "Participate in a course entry interview to determine suitability for the course and student needs. Student must have completed an equivalent of Year 12"
+        "requirement": "Participate in a course entry interview to determine suitability for the course and student needs."
       },
       "businessCertIV": {
         "code": "BSB40120 Certificate IV in Business",
-        "requirement": "See above academic entry requirements. Student must have completed an equivalent of Year 10"
+        "requirement": "Student must have completed an equivalent of Year 10"
       },
       "businessDiploma": {
         "code": "BSB50120 Diploma of Business",
-        "requirement": "See above academic entry requirements. Student must have completed an equivalent of Year 12"
+        "requirement": "Student must have completed an equivalent of Year 12"
       },
       "businessAdvancedDiploma": {
         "code": "BSB60120 Advanced Diploma of Business",
-        "requirement": "Students must have completed a Diploma level course (AQF Level 5) or Advanced Diploma level course (AQF Level 6) from the BSB training package. Student must have completed an equivalent of Year 12"
+        "requirement": "Students must have completed a Diploma level course (AQF Level 5) or Advanced Diploma level course (AQF Level 6) from the BSB training package."
       },
       "hrCertIV": {
         "code": "BSB40420 Certificate IV in Human Resource Management",
@@ -463,11 +463,11 @@
       },
       "hrDiploma": {
         "code": "BSB50320 Diploma of Human Resource Management",
-        "requirement": "Have complete the following units:\n• BSBHRM411 Administer performance development processes\n• BSBHRM412 Support employee and industrial relations\n• BSBHRM415 Coordinate recruitment and onboarding\n• BSBHRM417 Support human resource functions and processes\n\nEquivalent competencies are predecessors to these units, which have been mapped as equivalent. Student must have completed an equivalent of Year 12"
+        "requirement": "Have complete the following units:\n• BSBHRM411 Administer performance development processes\n• BSBHRM412 Support employee and industrial relations\n• BSBHRM415 Coordinate recruitment and onboarding\n• BSBHRM417 Support human resource functions and processes\n\nEquivalent competencies are predecessors to these units, which have been mapped as equivalent."
       },
       "hrAdvancedDiploma": {
         "code": "BSB60320 Advance Diploma of Human Resource Management",
-        "requirement": "Have completed one of the following qualifications: BSB50320 Diploma of Human Resource Management, BSB50618 Diploma of Human Resources Management (or a superseded equivalent version). Student must have completed an equivalent of Year 12"
+        "requirement": "Have completed one of the following qualifications: BSB50320 Diploma of Human Resource Management, BSB50618 Diploma of Human Resources Management (or a superseded equivalent version)."
       },
       "projectCertIV": {
         "code": "BSB40920 Certificate IV in Project Management Practice",
@@ -479,11 +479,11 @@
       },
       "projectAdvancedDiploma": {
         "code": "BSB60720 Advance Diploma of Program Management",
-        "requirement": "Have completed one of the following qualifications: BSB50820 Diploma of Project Management, BSB51415 Diploma of Project Management (or a superseded equivalent version). Student must have completed an equivalent of Year 12"
+        "requirement": "Have completed one of the following qualifications: BSB50820 Diploma of Project Management, BSB51415 Diploma of Project Management (or a superseded equivalent version)."
       },
       "graduateDiploma": {
         "code": "BSB80120 Graduate Diploma of Management (Learning)",
-        "requirement": "Students must have completed Advanced Diploma level course (AQF Level 6) or higher. Student must have completed an equivalent of Year 12"
+        "requirement": "Students must have completed Advanced Diploma level course (AQF Level 6) or higher."
       }
     }
   },
@@ -607,7 +607,7 @@
     },
     "bannerTitle": "Fitness & Sports",
     "heading": "Turn Your Passion for\nFitness into a Career",
-    "description": "ABM's fitness courses prepare you for a career in Australia's growing fitness industry. Gain the skills to lead group classes, design personalized training programs, and work in gyms, outdoor settings, or online. Whether starting out or advancing your expertise, our flexible programs set you up for success.",
+    "description": "ABM's fitness courses prepare you for a career in Australia's growing fitness industry. Gain the skills to lead group classes, design personalised training programs, and work in gyms, outdoor settings, or online. Whether starting out or advancing your expertise, our flexible programs set you up for success.",
     "forInternational": "For International Students",
     "forDomestic": "For Domestic (Fast Track)",
     "cert3": "Certificate III in Fitness",

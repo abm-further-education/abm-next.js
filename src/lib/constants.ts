@@ -215,6 +215,17 @@ export const studyWithUsMenu = [
   },
 ];
 
+export const currentStudentsMenu = [
+  {
+    title: 'Moodle Login',
+    href: 'https://moodle.abm.edu.au/moodle/login/index.php',
+  },
+  {
+    title: 'Student Portal',
+    href: 'https://www.jotform.com/app/abm-further-education/student',
+  },
+];
+
 // 메뉴 구조 데이터
 export interface MenuItem {
   titleKey?: string;

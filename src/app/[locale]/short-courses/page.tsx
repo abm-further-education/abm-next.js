@@ -108,6 +108,18 @@ function ShortCoursesPage({ params }: { params: Promise<{ locale: string }> }) {
               link="/cookery-and-hospitality-courses/fss"
               price={180}
             />
+            <ShortCourseCard
+              imgPath="/short-course/web/web_1.png"
+              title="Introduction to HTML, CSS, and Basic Web Design (Online)"
+              link="https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1"
+              price={28}
+            />
+            <ShortCourseCard
+              imgPath="/short-course/web/web_2.png"
+              title="Advanced Course: Building a Portfolio Website (Online)"
+              link="https://www.openlearning.com/abm-further-education/courses/advanced-course-building-a-portfolio-website/?cl=1"
+              price={85}
+            />
           </div>
         </FadeIn>
       </section>

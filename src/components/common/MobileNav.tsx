@@ -14,6 +14,7 @@ import { AnimatePresence, easeOut, motion } from 'framer-motion';
 import {
   businessMenu,
   cookeryMenu,
+  currentStudentsMenu,
   fitnessMenu,
   hospitalityMenu,
   hrMenu,
@@ -112,7 +113,7 @@ function MobileNav() {
         `fixed top-56 z-[999] lg:hidden flex items-center justify-between text-white p-16 w-full`
       )}
     >
-      <Link href="/" className="" onClick={toggleMenu}>
+      <Link href="/" className="">
         <Image
           src="/abm_logo.png"
           alt="Logo"
@@ -270,6 +271,47 @@ function MobileNav() {
                                 key={item.href}
                                 className="ml-10 text-base block hover:underline"
                                 href={item.href}
+                              >
+                                {item.title}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        </DisclosurePanel>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )}
+              </Disclosure>
+            </li>
+            <li>
+              <Disclosure>
+                {({ open }) => (
+                  <div>
+                    <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
+                      <span>Current Students</span>
+                      {open ? (
+                        <ChevronUp size={20} />
+                      ) : (
+                        <ChevronDown size={20} />
+                      )}
+                    </DisclosureButton>
+                    <AnimatePresence>
+                      {open && (
+                        <DisclosurePanel static as={Fragment}>
+                          <motion.div
+                            initial={{ opacity: 0, y: -24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -24 }}
+                            transition={{ duration: 0.2, ease: easeOut }}
+                            className="origin-top flex flex-col gap-y-16 mt-10"
+                          >
+                            {currentStudentsMenu.map((item) => (
+                              <Link
+                                onClick={toggleMenu}
+                                key={item.href}
+                                className="ml-10 text-base block hover:underline"
+                                href={item.href}
+                                target="_blank"
                               >
                                 {item.title}
                               </Link>

@@ -99,7 +99,7 @@ async function TimetablePage() {
                         className="px-4 py-3 border-b border-gray-200 font-semibold text-gray-800"
                         rowSpan={group.length}
                       >
-                        [{entry.code}] {entry.qualification}
+                        {entry.code} {entry.qualification}
                       </td>
                     ) : null}
                     <td className="px-4 py-3 border-b border-gray-200 text-gray-600">

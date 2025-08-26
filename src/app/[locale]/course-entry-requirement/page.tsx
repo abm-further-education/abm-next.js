@@ -255,7 +255,16 @@ export default async function CourseEntryRequirementsPage() {
                   <li>{t('englishEvidence1')}</li>
                   <li>{t('englishEvidence2')}</li>
                   <li>{t('englishEvidence3')}</li>
-                  <li>{t('englishEvidence4')}</li>
+                  <li>
+                    Successful completion of an English course with exit level
+                    equivalent to IELTS overall 5.5 from one of our{' '}
+                    <a
+                      href="#elicos-pathway-partners"
+                      className="text-primary hover:text-primary/80 underline transition-colors cursor-pointer"
+                    >
+                      ELICOS Pathway partners
+                    </a>
+                  </li>
                 </ul>
               </div>
 
@@ -329,7 +338,7 @@ export default async function CourseEntryRequirementsPage() {
               </div>
 
               {/* ELICOS Pathway Partners */}
-              <div className="">
+              <div id="elicos-pathway-partners" className="">
                 <h4 className="text-xl font-semibold mb-30 text-primary">
                   {t('elicosPathwayPartnersTitle')}
                 </h4>

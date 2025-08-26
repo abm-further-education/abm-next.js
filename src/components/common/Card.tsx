@@ -21,7 +21,7 @@ function Card({
   return (
     <div
       className={cn(
-        'h-320 xl:h-300 relative group cursor-pointer overflow-hidden',
+        'h-200 xl:h-300 relative group cursor-pointer overflow-hidden',
         className
       )}
       onClick={() => link && router.push(`${link}`)}

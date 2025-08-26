@@ -59,6 +59,8 @@ export interface ShortCourseData {
   locationLabel?: string;
   timeLabel?: string;
   time?: string;
+  addressLabel?: string;
+  address?: string;
   specialOfferLabel?: string;
   selectDateLabel?: string;
   selectDateOptionLabel?: string;
@@ -81,6 +83,9 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     courseDelivery:
       'Face to Face. Participants will engage in hands-on activities',
     timeLabel: 'Time:',
+    addressLabel: 'Address:',
+    address:
+      'ABM Main Campus (242 Castlereagh Street Sydney NSW 2000 Australia)',
     locationLabel: 'Location:',
     selectDateOptionLabel: 'Select a date',
     dates: [

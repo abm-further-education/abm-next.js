@@ -491,6 +491,9 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
       },
     ],
     location: 'ABM Main Campus',
+    addressLabel: '주소:',
+    address:
+      'ABM Main Campus (242 Castlereagh Street Sydney NSW 2000 Australia)',
     price: 180,
     duration: '8시간 ',
     courseDeliveryLabel: '수업 방식:',
