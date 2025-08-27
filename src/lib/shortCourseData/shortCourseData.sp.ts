@@ -383,39 +383,9 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
     selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
-        date: '2025-04-22',
-        displayDate: '22 de abril de 2025',
-        time: '11:00 – 15:00',
-      },
-      {
-        date: '2025-05-06',
-        displayDate: '06 de mayo de 2025',
-        time: '11:00 – 15:00',
-      },
-      {
-        date: '2025-05-20',
-        displayDate: '20 de mayo de 2025',
-        time: '11:00 – 15:00',
-      },
-      {
-        date: '2025-06-03',
-        displayDate: '03 de junio de 2025',
-        time: '11:00 – 15:00',
-      },
-      {
-        date: '2025-07-11',
-        displayDate: '11 de julio de 2025',
-        time: '11:00 – 15:00',
-      },
-      {
-        date: '2025-08-05',
-        displayDate: '05 de agosto de 2025',
-        time: '11:00 – 15:00',
-      },
-      {
-        date: '2025-11-02',
-        displayDate: '02 de noviembre de 2025',
-        time: '11:00 – 15:00',
+        date: '2025-10-17',
+        displayDate: '17 de octubre de 2025',
+        time: '14:00 – 18:00',
       },
     ],
     location:
