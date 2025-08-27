@@ -34,7 +34,7 @@ function Page() {
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
           Hospitality & Cookery
         </h2>
-        <div className="flex flex-wrap md:gap-40 py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
+        <div className="flex flex-wrap gap-10 md:gap-40 py-10 md:py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
           <PackageCard
             backgroundImage="/courses/cookery/DHM.png"
             title="Hospitality Essentials"
@@ -73,7 +73,7 @@ function Page() {
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
           Fitness & Sport
         </h2>
-        <div className="flex flex-wrap md:gap-40 py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
+        <div className="flex flex-wrap gap-10 md:gap-40 py-10 md:py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
           <PackageCard
             backgroundImage="/courses/fitness/fitness_1.png"
             title="Functional Movement & Rehab"
@@ -110,7 +110,7 @@ function Page() {
         <h2 className="text-3xl md:text-4xl font-bold py-50 text-center">
           Health & Nursing
         </h2>
-        <div className="flex flex-wrap md:gap-40 py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
+        <div className="flex flex-wrap gap-10 md:gap-40 py-10 md:py-50 justify-items-center justify-center mx-auto border-b border-gray-200">
           <PackageCard
             backgroundImage="/courses/health/health_1.png"
             title="Health Services Assistance"

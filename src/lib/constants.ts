@@ -213,6 +213,10 @@ export const studyWithUsMenu = [
     title: 'Higher Education Pathway',
     href: '/higher-education-pathway',
   },
+  {
+    title: 'Study Tour Programs',
+    href: '/abm-study-tour-programs',
+  },
 ];
 
 export const currentStudentsMenu = [
