@@ -48,9 +48,7 @@ export async function POST(req: NextRequest) {
           <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
             <!-- Header with Logo -->
             <div style="background-color: #000000; padding: 30px; text-align: center;">
-              <img src="${
-                process.env.NEXTAUTH_URL || 'https://abm.edu.au'
-              }/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
+              <img src="https://abm.edu.au/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
             </div>
             
             <!-- Content -->
@@ -126,9 +124,7 @@ export async function POST(req: NextRequest) {
             <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
               <!-- Header with Logo -->
               <div style="background-color: #000000; padding: 30px; text-align: center;">
-                <img src="${
-                  process.env.NEXTAUTH_URL || 'https://abm.edu.au'
-                }/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
+                <img src="https://abm.edu.au/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
               </div>
               
               <!-- Content -->

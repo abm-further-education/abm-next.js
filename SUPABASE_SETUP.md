@@ -35,7 +35,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key_here
 STRIPE_SECRET_KEY=sk_test_your_secret_key_here
 
 # Next.js URL for redirects
-NEXTAUTH_URL=https://www.abm.edu.au
+NEXTAUTH_URL=https://abm.edu.au
 ```
 
 ## 4. 데이터베이스 스키마 설정
@@ -135,7 +135,7 @@ MongoDB 관련 패키지가 제거되고 Supabase 패키지가 추가됩니다.
    npm run dev
    ```
 
-2. `https://www.abm.edu.au/users` 방문
+2. `https://abm.edu.au/users` 방문
 3. 새 사용자 추가 테스트
 4. 사용자 목록 확인
 

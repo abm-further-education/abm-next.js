@@ -19,7 +19,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key_here
 STRIPE_SECRET_KEY=sk_test_your_secret_key_here
 
 # Next.js URL for Stripe redirects
-NEXTAUTH_URL=https://www.abm.edu.au
+NEXTAUTH_URL=https://abm.edu.au
 ```
 
 ## 3. 테스트 카드 번호

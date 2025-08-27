@@ -4,71 +4,112 @@ import { headers } from 'next/headers';
 import nodemailer from 'nodemailer';
 import { supabaseAdmin } from '@/lib/supabase';
 
+// 환경변수 체크 함수
+function checkRequiredEnvVars() {
+  const required = [
+    'STRIPE_WEBHOOK_SECRET',
+    'SMTP_HOST',
+    'SMTP_PORT',
+    'SMTP_USER',
+    'SMTP_PASS',
+    'FROM_EMAIL',
+    'SUPABASE_SERVICE_ROLE_KEY',
+  ];
+
+  const missing = required.filter((key) => !process.env[key]);
+
+  if (missing.length > 0) {
+    console.error('❌ Missing required environment variables:', missing);
+    return false;
+  }
+
+  return true;
+}
+
 export async function POST(req: NextRequest) {
+  console.log('🔔 Webhook received');
+
   try {
     const body = await req.text();
     const stripe = getServerStripe();
     const headersList = await headers();
     const sig = headersList.get('stripe-signature');
 
+    // 환경변수 체크
+    if (!checkRequiredEnvVars()) {
+      console.error('❌ Required environment variables are missing');
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
+
+    if (!sig) {
+      console.error('❌ No stripe-signature header found');
+      return NextResponse.json({ error: 'No signature' }, { status: 400 });
+    }
+
     let event;
 
     try {
       event = stripe.webhooks.constructEvent(
         body,
-        sig!,
+        sig,
         process.env.STRIPE_WEBHOOK_SECRET!
       );
     } catch (err) {
-      console.error('Webhook signature verification failed:', err);
+      console.error('❌ Webhook signature verification failed:', err);
       return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
     }
 
+    console.log('✅ Webhook signature verified');
+    console.log('📋 Event type:', event.type);
+
     // 결제 완료 이벤트 처리
     if (event.type === 'checkout.session.completed') {
-      console.log('✅ Webhook: checkout.session.completed received');
+      console.log('✅ Processing checkout.session.completed event');
       const session = event.data.object;
       const metadata = session.metadata;
       console.log('📧 Metadata received:', metadata);
 
+      let hasErrors = false;
+
       // Supabase에 결제자 정보 저장
-      try {
-        if (metadata) {
+      if (metadata) {
+        try {
           await saveBookingToDatabase(metadata, session);
           console.log('✅ Booking saved to database successfully');
+        } catch (dbError) {
+          console.error('❌ Database save failed:', dbError);
+          hasErrors = true;
         }
-      } catch (dbError) {
-        console.error('❌ Database save failed:', dbError);
-      }
 
-      // 이메일 발송
-      try {
-        if (metadata) {
+        // 이메일 발송
+        try {
           console.log('📧 Starting email sending process...');
-          console.log('📧 SMTP Config check:', {
-            host: process.env.SMTP_HOST ? 'Set' : 'Not set',
-            port: process.env.SMTP_PORT ? 'Set' : 'Not set',
-            user: process.env.SMTP_USER ? 'Set' : 'Not set',
-            from: process.env.FROM_EMAIL ? 'Set' : 'Not set',
-          });
           await sendBookingEmails(metadata);
           console.log('✅ Emails sent successfully');
-        } else {
-          console.log('❌ No metadata found, skipping email sending');
+        } catch (emailError) {
+          console.error('❌ Email sending failed:', emailError);
+          hasErrors = true;
         }
-      } catch (emailError) {
-        console.error('❌ Email sending failed:', emailError);
-        console.error('❌ Email error details:', {
-          message:
-            emailError instanceof Error ? emailError.message : 'Unknown error',
-          stack: emailError instanceof Error ? emailError.stack : undefined,
-        });
+      } else {
+        console.log('⚠️ No metadata found in session');
+      }
+
+      // 에러가 있으면 500 응답, 없으면 200 응답
+      if (hasErrors) {
+        return NextResponse.json(
+          { error: 'Some operations failed' },
+          { status: 500 }
+        );
       }
     }
 
-    return NextResponse.json({ received: true });
+    // 성공 응답
+    return NextResponse.json({ received: true }, { status: 200 });
   } catch (error) {
-    console.error('Webhook error:', error);
+    console.error('❌ Webhook handler error:', error);
     return NextResponse.json(
       { error: 'Webhook handler failed' },
       { status: 500 }
@@ -177,6 +218,16 @@ async function sendBookingEmails(metadata: Record<string, string>) {
       courseName: courseName ? 'Valid' : 'Missing',
     });
 
+    // SMTP 환경변수 체크
+    if (
+      !process.env.SMTP_HOST ||
+      !process.env.SMTP_PORT ||
+      !process.env.SMTP_USER ||
+      !process.env.SMTP_PASS
+    ) {
+      throw new Error('SMTP configuration is incomplete');
+    }
+
     // SMTP 환경변수
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -213,7 +264,7 @@ async function sendBookingEmails(metadata: Record<string, string>) {
           <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
             <!-- Header with Logo -->
             <div style="background-color: #000000; padding: 30px; text-align: center;">
-              <img src="/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
+              <img src="https://abm.edu.au/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
             </div>
             
             <!-- Content -->
@@ -295,7 +346,7 @@ async function sendBookingEmails(metadata: Record<string, string>) {
             <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
               <!-- Header with Logo -->
               <div style="background-color: #000000; padding: 30px; text-align: center;">
-                <img src="/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
+                <img src="https://abm.edu.au/abm_logo.png" alt="ABM Logo" style="max-height: 60px; width: auto;">
               </div>
               
               <!-- Content -->
