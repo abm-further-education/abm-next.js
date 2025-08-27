@@ -53,6 +53,7 @@
     "timetable": "시간표",
     "higherEducationPathway": "고등교육 진학 과정",
     "policiesAndProcedures": "정책 및 절차",
+    "trainers": "강사진",
     "title": "ABM과 함께 공부하기",
     "welcome": "ABM Further Education에 오신 것을 환영합니다!",
     "mission": "저희의 미션은 학생들이 성공적인 커리어를 쌓을 수 있도록 실무 중심의 고품질 교육을 제공하는 것입니다. ABM에서는 업계 경험이 풍부한 전문가들로부터 배울 수 있으며, 학생의 성장을 위해 헌신합니다. 실무 중심의 환경과 지원을 통해 여러분이 미래에 자신감을 갖고 성장할 수 있도록 돕습니다.",
@@ -140,7 +141,8 @@
       "enrolNow": "지금 등록하기",
       "timetable": "시간표",
       "higherEducationPathway": "고등교육 진학 과정",
-      "studyTourPrograms": "스터디 투어 프로그램"
+      "studyTourPrograms": "스터디 투어 프로그램",
+      "trainers": "강사진"
     }
   },
   "cookeryAndHospitality": {
@@ -722,5 +724,22 @@
     "term4Intake1": "4학기 1차 입학",
     "term4Intake2": "4학기 2차 입학",
     "christmasHoliday": "크리스마스 방학"
+  },
+  "trainers": {
+    "title": "우리 강사진",
+    "subtitle": "업계 최고의 전문가들을 만나보세요",
+    "heading": "전문 강사진을 만나보세요",
+    "description": "각 분야에서 다년간의 경험을 쌓은 업계 전문가들에게 배워보세요. 우리 강사진은 여러분의 성공에 필요한 지식과 기술을 제공하기 위해 헌신합니다.",
+    "readyToLearn": "최고의 강사진에게 배울 준비가 되셨나요?",
+    "contactDescription": "우리 과정과 전문 강사진이 어떻게 여러분의 목표 달성에 도움이 되는지 더 자세히 알아보려면 문의해 주세요.",
+    "contactUs": "문의하기",
+    "categories": {
+      "cookery": "요리 & 호스피탈리티",
+      "business": "비즈니스 & 경영",
+      "fitness": "피트니스 & 스포츠",
+      "hr": "인사관리",
+      "project": "프로젝트 관리",
+      "health": "건강 & 웰니스"
+    }
   }
 }

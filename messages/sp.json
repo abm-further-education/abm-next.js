@@ -51,6 +51,7 @@
     "enrolNow": "Inscríbete Ahora",
     "higherEducationPathway": "Vía de Educación Superior",
     "policiesAndProcedures": "Políticas y Procedimientos",
+    "trainers": "Formadores",
     "title": "Estudia con Nosotros",
     "timetable": "Horario",
     "welcome": "¡Bienvenido a ABM Further Education!",
@@ -139,7 +140,8 @@
       "getUSI": "Obtener un USI",
       "enrolNow": "Inscríbete Ahora",
       "higherEducationPathway": "Vía de Educación Superior",
-      "studyTourPrograms": "Programas de Tour de Estudio"
+      "studyTourPrograms": "Programas de Tour de Estudio",
+      "trainers": "Formadores"
     }
   },
   "cookeryAndHospitality": {
@@ -716,5 +718,22 @@
     "term4Intake1": "Trimestre 4 Ingreso 1",
     "term4Intake2": "Trimestre 4 Ingreso 2",
     "christmasHoliday": "Vacaciones de Navidad"
+  },
+  "trainers": {
+    "title": "Nuestros Formadores",
+    "subtitle": "Conoce a nuestros profesionales líderes en la industria",
+    "heading": "Conoce a Nuestros Formadores Expertos",
+    "description": "Aprende de profesionales de la industria con años de experiencia en sus respectivos campos. Nuestros formadores están dedicados a proporcionarte el conocimiento y las habilidades necesarias para el éxito.",
+    "readyToLearn": "¿Listo para aprender de los mejores?",
+    "contactDescription": "Contáctanos para obtener más información sobre nuestros cursos y cómo nuestros formadores expertos pueden ayudarte a alcanzar tus objetivos.",
+    "contactUs": "Contáctanos",
+    "categories": {
+      "cookery": "Cocina y Hospitalidad",
+      "business": "Negocios y Gestión",
+      "fitness": "Fitness y Deportes",
+      "hr": "Recursos Humanos",
+      "project": "Gestión de Proyectos",
+      "health": "Salud y Bienestar"
+    }
   }
 }

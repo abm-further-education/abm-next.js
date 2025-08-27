@@ -53,6 +53,7 @@
     "timetable": "Timetable",
     "higherEducationPathway": "Higher Education Pathway",
     "policiesAndProcedures": "Policies & Procedures",
+    "trainers": "Trainers",
     "title": "Study With Us",
     "welcome": "Welcome To ABM Further Education!",
     "mission": "Our mission is to provide high-quality, practical education that prepares students for successful careers. At ABM, you'll learn from experienced industry leaders who are dedicated to your growth. With a supportive environment and real-world training, we ensure you gain the skills and confidence to thrive in your future career.",
@@ -745,5 +746,22 @@
     "term4Intake1": "Term 4 Intake 1",
     "term4Intake2": "Term 4 Intake 2",
     "christmasHoliday": "Christmas Holiday"
+  },
+  "trainers": {
+    "title": "Our Trainers",
+    "subtitle": "Meet our industry-leading professionals",
+    "heading": "Meet Our Expert Trainers",
+    "description": "Learn from industry professionals with years of experience in their respective fields. Our trainers are dedicated to providing you with the knowledge and skills needed for success.",
+    "readyToLearn": "Ready to Learn from the Best?",
+    "contactDescription": "Contact us to learn more about our courses and how our expert trainers can help you achieve your goals.",
+    "contactUs": "Contact Us",
+    "categories": {
+      "cookery": "Cookery & Hospitality",
+      "business": "Business & Management",
+      "fitness": "Fitness & Sports",
+      "hr": "Human Resources",
+      "project": "Project Management",
+      "health": "Health & Wellness"
+    }
   }
 }

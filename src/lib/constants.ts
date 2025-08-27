@@ -217,6 +217,10 @@ export const studyWithUsMenu = [
     title: 'Study Tour Programs',
     href: '/abm-study-tour-programs',
   },
+  {
+    title: 'Trainers',
+    href: '/study-with-us/trainers',
+  },
 ];
 
 export const currentStudentsMenu = [
@@ -521,6 +525,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
           {
             title: 'studyTourPrograms',
             href: '/abm-study-tour-programs',
+          },
+          {
+            title: 'trainers',
+            href: '/study-with-us/trainers',
           },
         ],
       },
