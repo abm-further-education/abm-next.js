@@ -1,119 +1,78 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 import { getServerStripe } from '@/lib/stripe';
-import { headers } from 'next/headers';
+
 import nodemailer from 'nodemailer';
 import { supabaseAdmin } from '@/lib/supabase';
+import Stripe from 'stripe';
 
-// 환경변수 체크 함수
-function checkRequiredEnvVars() {
-  const required = [
-    'STRIPE_WEBHOOK_SECRET',
-    'SMTP_HOST',
-    'SMTP_PORT',
-    'SMTP_USER',
-    'SMTP_PASS',
-    'FROM_EMAIL',
-    'SUPABASE_SERVICE_ROLE_KEY',
-  ];
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
-  const missing = required.filter((key) => !process.env[key]);
-
-  if (missing.length > 0) {
-    console.error('❌ Missing required environment variables:', missing);
-    return false;
-  }
-
-  return true;
+function requireEnv(keys: string[]) {
+  const missing = keys.filter((k) => !process.env[k]);
+  if (missing.length) throw new Error('Missing env: ' + missing.join(', '));
 }
 
 export async function POST(req: NextRequest) {
-  console.log('🔔 Webhook received');
-
   try {
+    // 1) 최소 필수만 먼저 검사
+    requireEnv(['STRIPE_WEBHOOK_SECRET', 'STRIPE_SECRET_KEY']);
+
+    // 2) 서명 검증
+    const sig = req.headers.get('stripe-signature');
+    if (!sig) return new Response('No signature', { status: 400 });
     const body = await req.text();
     const stripe = getServerStripe();
-    const headersList = await headers();
-    const sig = headersList.get('stripe-signature');
 
-    // 환경변수 체크
-    if (!checkRequiredEnvVars()) {
-      console.error('❌ Required environment variables are missing');
-      return NextResponse.json(
-        { error: 'Server configuration error' },
-        { status: 500 }
-      );
-    }
-
-    if (!sig) {
-      console.error('❌ No stripe-signature header found');
-      return NextResponse.json({ error: 'No signature' }, { status: 400 });
-    }
-
-    let event;
-
+    let event: Stripe.Event;
     try {
       event = stripe.webhooks.constructEvent(
         body,
         sig,
         process.env.STRIPE_WEBHOOK_SECRET!
       );
-    } catch (err) {
-      console.error('❌ Webhook signature verification failed:', err);
-      return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
+    } catch {
+      return new Response('Invalid signature', { status: 400 });
     }
 
-    console.log('✅ Webhook signature verified');
-    console.log('📋 Event type:', event.type);
-
-    // 결제 완료 이벤트 처리
+    // 3) 이벤트 처리
     if (event.type === 'checkout.session.completed') {
-      console.log('✅ Processing checkout.session.completed event');
-      const session = event.data.object;
-      const metadata = session.metadata;
-      console.log('📧 Metadata received:', metadata);
+      const session = event.data.object as Stripe.Checkout.Session;
+      const metadata = (session.metadata ?? {}) as Record<string, string>;
 
-      let hasErrors = false;
-
-      // Supabase에 결제자 정보 저장
-      if (metadata) {
-        try {
-          await saveBookingToDatabase(metadata, session);
-          console.log('✅ Booking saved to database successfully');
-        } catch (dbError) {
-          console.error('❌ Database save failed:', dbError);
-          hasErrors = true;
-        }
-
-        // 이메일 발송
-        try {
-          console.log('📧 Starting email sending process...');
-          await sendBookingEmails(metadata);
-          console.log('✅ Emails sent successfully');
-        } catch (emailError) {
-          console.error('❌ Email sending failed:', emailError);
-          hasErrors = true;
-        }
-      } else {
-        console.log('⚠️ No metadata found in session');
+      // 조건부로 필요한 env만 검사
+      try {
+        requireEnv(['SUPABASE_SERVICE_ROLE_KEY']); // DB 저장할 때만
+        await saveBookingToDatabase(metadata, {
+          id: session.id!,
+          amount_total: session.amount_total,
+          payment_status: session.payment_status!,
+        });
+      } catch (e) {
+        console.error('[DB] save failed', e);
+        // 계속 200을 반환해야 Stripe 재시도를 막을 수 있음
       }
 
-      // 에러가 있으면 500 응답, 없으면 200 응답
-      if (hasErrors) {
-        return NextResponse.json(
-          { error: 'Some operations failed' },
-          { status: 500 }
-        );
+      try {
+        requireEnv([
+          'SMTP_HOST',
+          'SMTP_PORT',
+          'SMTP_USER',
+          'SMTP_PASS',
+          'FROM_EMAIL',
+        ]); // 메일 보낼 때만
+        await sendBookingEmails(metadata);
+      } catch (e) {
+        console.error('[MAIL] send failed', e);
       }
     }
 
-    // 성공 응답
-    return NextResponse.json({ received: true }, { status: 200 });
-  } catch (error) {
-    console.error('❌ Webhook handler error:', error);
-    return NextResponse.json(
-      { error: 'Webhook handler failed' },
-      { status: 500 }
-    );
+    // 4) 항상 2xx 응답 (검증 실패 제외)
+    return new Response('ok', { status: 200 });
+  } catch (e) {
+    console.error('Webhook handler fatal', e);
+    // 검증 이전의 진짜 설정 오류만 500
+    return new Response('Server configuration error', { status: 500 });
   }
 }
 
