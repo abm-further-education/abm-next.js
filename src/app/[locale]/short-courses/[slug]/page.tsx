@@ -57,12 +57,20 @@ function Page({
   // Determine available dates for this course
   const availableDates =
     courseData?.dates?.filter(
-      (date: { date: string; displayDate: string; time: string }) => {
+      (date: {
+        date: string;
+        displayDate: string;
+        time: string;
+        available?: boolean;
+      }) => {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
         const dateObj = new Date(date.date);
         dateObj.setHours(0, 0, 0, 0);
-        return dateObj >= today;
+        // Check if date is in the future AND available (if available field is defined)
+        const isFutureDate = dateObj >= today;
+        const isAvailable = date.available !== false; // Default to true if not specified
+        return isFutureDate && isAvailable;
       }
     ) || [];
 

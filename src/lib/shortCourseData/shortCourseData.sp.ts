@@ -24,6 +24,7 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
         date: '2025-02-21',
         displayDate: '21 de febrero de 2025',
         time: '13:00 – 17:00',
+        available: false,
       },
       {
         date: '2025-04-15',
@@ -382,6 +383,11 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
     locationLabel: 'Ubicación:',
     selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
+      {
+        date: '2025-08-29',
+        displayDate: '29 de agosto de 2025',
+        time: '14:00 – 18:00',
+      },
       {
         date: '2025-10-17',
         displayDate: '17 de octubre de 2025',

@@ -11,6 +11,7 @@ interface CourseDate {
   date: string;
   displayDate: string;
   time: string;
+  available?: boolean;
 }
 
 interface CalendarCourse {
@@ -60,6 +61,7 @@ const ShortCourseCalendar: React.FC<ShortCourseCalendarProps> = ({
   Object.entries(shortCourseData).forEach(([slug, course]) => {
     if (course && course.dates) {
       course.dates.forEach((date: CourseDate) => {
+        // Add all courses regardless of availability
         allCourses.push({
           slug,
           title: course.title,
@@ -153,11 +155,15 @@ const ShortCourseCalendar: React.FC<ShortCourseCalendarProps> = ({
                       <div
                         key={`${course.slug}-${course.date.date}-${index}`}
                         onClick={() => handleCourseClick(course.slug)}
-                        className="bg-gray-50  p-6 cursor-pointer hover:bg-orange-50 transition-colors duration-200 border border-gray-100"
+                        className={`p-6 border border-gray-100 cursor-pointer transition-colors duration-200 ${
+                          course.date.available === false
+                            ? 'bg-gray-100 opacity-60'
+                            : 'bg-gray-50 hover:bg-orange-50'
+                        }`}
                       >
                         <div className="flex items-center justify-between mb-2">
                           <span
-                            className={`text-xl font-bold ${
+                            className={`text-xl font-bold  ${
                               isPastDate(course.date.date)
                                 ? 'text-gray-600'
                                 : 'text-primary'
@@ -165,14 +171,21 @@ const ShortCourseCalendar: React.FC<ShortCourseCalendarProps> = ({
                           >
                             {formatDayMonth(course.date.date)}
                           </span>
-                          <span className="text-sm font-medium text-gray-600">
+                          <span className={`text-sm font-medium text-gray-600`}>
                             ${course.price}
                           </span>
                         </div>
-                        <h4 className="text-sm font-medium text-gray-800 mb-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                        <h4
+                          className={`text-sm text-gray-800 font-medium mb-1 overflow-hidden text-ellipsis whitespace-nowrap 
+                            
+                          `}
+                        >
                           {course.title}
                         </h4>
-                        <p className="text-xs text-gray-500">
+                        <p
+                          className={`text-xs text-gray-500
+                          `}
+                        >
                           {course.date.time}
                         </p>
                       </div>

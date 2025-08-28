@@ -6,6 +6,7 @@ export interface ShortCourseData {
     date: string;
     displayDate: string;
     time: string;
+    available?: boolean;
   }[];
   maxParticipants?: string;
   location: string;
@@ -123,6 +124,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         date: '2025-09-01',
         displayDate: '1 September 2025',
         time: '3:00 PM – 7:00 PM',
+        available: false,
       },
       {
         date: '2025-11-14',
@@ -349,6 +351,12 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       '/short-course/mixology/cocktail_2.png',
     ],
     dates: [
+      {
+        date: '2025-08-29',
+        displayDate: '29 August 2025',
+        time: '2:00pm – 6:00pm',
+        available: false,
+      },
       {
         date: '2025-10-17',
         displayDate: '17 October 2025',

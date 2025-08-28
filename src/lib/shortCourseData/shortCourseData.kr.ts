@@ -18,6 +18,7 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         date: '2025-02-21',
         displayDate: '2025년 2월 21일',
         time: '오후 1:00 – 5:00',
+        available: false,
       },
       {
         date: '2025-04-15',
@@ -271,6 +272,11 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
       '/short-course/mixology/cocktail_2.png',
     ],
     dates: [
+      {
+        date: '2025-08-29',
+        displayDate: '2025년 8월 29일',
+        time: '오후 2:00 – 6:00',
+      },
       {
         date: '2025-10-17',
         displayDate: '2025년 10월 17일',
