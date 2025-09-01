@@ -405,6 +405,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         date: '2025-09-18',
         displayDate: '18 September 2025',
         time: '1:00 PM – 4:30 PM',
+        available: false,
       },
     ],
     location:
