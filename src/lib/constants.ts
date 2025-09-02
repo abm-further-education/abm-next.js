@@ -54,49 +54,49 @@ export const fitnessMenu = [
 export const businessMenu = [
   {
     title: 'Certificate IV in Business',
-    href: '/business-and-management-courses/business1/',
+    href: '/business-and-management-courses/bsb40120-certificate-iv-in-business',
   },
   {
     title: 'Diploma of Business',
-    href: '/business-and-management-courses/business2/',
+    href: '/business-and-management-courses/bsb50120-diploma-of-business',
   },
   {
     title: 'Advanced Diploma of Business',
-    href: '/business-and-management-courses/business3/',
+    href: '/business-and-management-courses/bsb60120-advanced-diploma-of-business',
   },
   {
     title: 'Graduate Diploma of Management (Learning)',
-    href: '/business-and-management-courses/business4/',
+    href: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
   },
 ];
 
 export const projectMenu = [
   {
     title: 'Certificate IV in Business',
-    href: '/project-and-program-management-courses/project1/',
+    href: '/project-and-program-management-courses/bsb40920-certificate-iv-in-project-management-practice',
   },
   {
     title: 'Diploma of Business',
-    href: '/project-and-program-management-courses/project2/',
+    href: '/project-and-program-management-courses/bsb50820-diploma-of-project-management-practice',
   },
   {
     title: 'Advanced Diploma of Business',
-    href: '/project-and-program-management-courses/project3/',
+    href: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-program-management',
   },
 ];
 
 export const hrMenu = [
   {
     title: 'Certificate IV in Human Resource Management',
-    href: '/human-resources-courses/hr1/',
+    href: '/human-resources-courses/bsb40420-certificate-iv-in-human-resource-management',
   },
   {
     title: 'Diploma of Human Resource Management',
-    href: '/human-resources-courses/hr2/',
+    href: '/human-resources-courses/bsb50320-diploma-of-human-resource-management',
   },
   {
     title: 'Advanced Diploma of Human Resource Management',
-    href: '/human-resources-courses/hr3/',
+    href: '/human-resources-courses/bsb60320-advanced-diploma-of-human-resource-management',
   },
 ];
 
