@@ -10,6 +10,7 @@ import TopButton from '@/components/common/TopButton';
 import Footer from '@/components/common/Footer';
 import { Slide, ToastContainer } from 'react-toastify';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -58,6 +59,7 @@ export default async function RootLayout({
           theme="dark"
           transition={Slide}
         />
+        <Analytics />
         <NextIntlClientProvider messages={messages}>
           <Nav />
           <TopButton />
