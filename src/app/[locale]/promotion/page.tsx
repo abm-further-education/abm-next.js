@@ -59,19 +59,19 @@ export default async function PromotionPage({ params }: PageProps) {
                 {t('trialTitle')}
               </h3>
               <div className="space-y-20">
-                <div className="flex items-start space-x-15">
+                <div className="flex items-center space-x-15">
                   <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
                     <Check size={20} className="text-white" />
                   </div>
                   <p className="text-neutral-700">{t('benefit1')}</p>
                 </div>
-                <div className="flex items-start space-x-15">
+                <div className="flex items-center space-x-15">
                   <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
                     <Check size={20} className="text-white" />
                   </div>
                   <p className="text-neutral-700">{t('benefit2')}</p>
                 </div>
-                <div className="flex items-start space-x-15">
+                <div className="flex items-center space-x-15">
                   <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
                     <Check size={20} className="text-white" />
                   </div>
