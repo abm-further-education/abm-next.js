@@ -389,8 +389,8 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
         time: '14:00 – 18:00',
       },
       {
-        date: '2025-10-17',
-        displayDate: '17 de octubre de 2025',
+        date: '2025-11-07',
+        displayDate: '7 de noviembre de 2025',
         time: '14:00 – 18:00',
       },
     ],

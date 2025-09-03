@@ -62,6 +62,7 @@ export default function CheckoutPage() {
     ELICOS15: { discount: 15, label: '$15 OFF', type: 'fixed' },
     ABM3A25: { discount: 10, label: '$10 OFF', type: 'fixed' },
     ABM4A25: { discount: 20, label: '$20 OFF', type: 'fixed' },
+    NMABMSS: { discount: 0.2, label: '20% OFF', type: 'percentage' },
   };
 
   // 프로모션 코드 적용 함수

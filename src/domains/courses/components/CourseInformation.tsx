@@ -70,7 +70,7 @@ function CourseInformationContent({
         )}
       >
         <div>
-          <h1 className="text-3xl font-bold mb-10">{t('title')}</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-10">{t('title')}</h1>
           {courseInfo.description && (
             <div className="mb-20 col-span-2">
               {renderTextWithLineBreaks(courseInfo.description)}
