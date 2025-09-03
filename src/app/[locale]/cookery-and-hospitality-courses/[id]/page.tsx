@@ -45,6 +45,7 @@ const menuItems = {
   'sit50422-diploma-of-hospitality-management': [
     'Course Information',
     'Course Detail',
+    'Units',
   ],
   'advanced-diploma-of-hospitality-management': [
     'Course Information',
@@ -161,16 +162,14 @@ export default function Page({
         id={getSectionId('Units')}
         className={cn(
           'max-w-[1600px] mx-auto px-20 md:px-80 py-40 gap-40',
-          id === 'sit40521-certificate-iv-in-kitchen-management' &&
-            'grid grid-cols-1 lg:grid-cols-2'
+          'grid grid-cols-1 lg:grid-cols-2'
         )}
       >
         <Units id={id} />
         <Gallery
           showTitle={false}
           breakpointColumns={{
-            default:
-              id === 'sit40521-certificate-iv-in-kitchen-management' ? 2 : 4,
+            default: 2,
             1100: 3,
             700: 2,
           }}
@@ -199,4 +198,8 @@ const images_HM = [
   '/courses/cookery/hm_2.png',
   '/courses/cookery/hm_3.png',
   '/courses/cookery/km_4.png',
+  '/courses/cookery/hm_4.png',
+  '/courses/cookery/hm_5.png',
+  '/courses/cookery/hm_6.png',
+  '/courses/cookery/hm_7.png',
 ];

@@ -281,7 +281,7 @@ export const KM_UNITS = [
   },
 ];
 
-export const HM_UNITS = [
+export const HM_UNITS_1 = [
   {
     no: 1,
     code: 'SITXCCS015',
@@ -414,6 +414,57 @@ export const HM_UNITS = [
     code: 'SITXCCS012',
     title: 'Provide lost and found services',
     type: 'Elective',
+  },
+];
+
+export const HM_UNITS_2 = [
+  {
+    no: 1,
+    code: 'SITXFIN010',
+    title: 'Prepare and monitor budgets',
+    type: 'Core',
+  },
+  {
+    no: 2,
+    code: 'SITXWHS006',
+    title: 'Identify hazards, assess and control safety risks',
+    type: '',
+  },
+  {
+    no: 3,
+    code: 'SITXINV008',
+    title: 'Control stock',
+    type: 'Group C',
+  },
+  {
+    no: 4,
+    code: 'SITXMGT005',
+    title: 'Establish and conduct business relationships',
+    type: 'Core',
+  },
+  {
+    no: 5,
+    code: 'SITXGLC002',
+    title: 'Identify and manage legal risks and comply with law',
+    type: 'Core',
+  },
+  {
+    no: 6,
+    code: 'SITXCCS015',
+    title: 'Enhance customer service experiences',
+    type: 'Core',
+  },
+  {
+    no: 7,
+    code: 'SITXCCS010',
+    title: 'Provide visitor information',
+    type: 'Group C',
+  },
+  {
+    no: 8,
+    code: 'SITXCCS016',
+    title: 'Develop and manage quality customer service practices',
+    type: 'Core',
   },
 ];
 
