@@ -41,12 +41,12 @@ function CourseDetailMenu({ menuItems }: CourseDetailMenuProps) {
 
   return (
     <div className="sticky top-20 bg-white/95 backdrop-blur-sm shadow-sm z-40 border-b border-gray-100">
-      <div className="flex flex-wrap gap-24 py-20 text-base md:text-lg items-center justify-center font-[family-name:var(--font-montserrat)]">
+      <div className="flex flex-wrap gap-10 md:gap-24 py-10 md:py-20 text-base md:text-lg items-center justify-center font-[family-name:var(--font-montserrat)]">
         {menuItems.map((item) => (
           <button
             key={item}
             onClick={() => scrollToSection(item)}
-            className={`font-medium transition-all duration-200 cursor-pointer border border-primary text-primary px-10 py-6 hover:bg-primary hover:text-white`}
+            className={`font-medium transition-all duration-200 cursor-pointer border border-primary text-primary px-5 md:px-10 py-6 hover:bg-primary hover:text-white`}
           >
             {item}
           </button>
