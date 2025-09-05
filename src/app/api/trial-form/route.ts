@@ -102,7 +102,7 @@ export async function POST(req: NextRequest) {
     // 관리자에게 메일 전송
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
-      to: process.env.ADMIN_EMAIL || 'info@abm.edu.au',
+      to: process.env.ADMIN_EMAIL || 'sales@abm.edu.au',
       subject: `[Fitness Trial] New Trial Request from ${name}`,
       html: adminHtml,
       attachments: [
