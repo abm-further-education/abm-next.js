@@ -11,6 +11,7 @@ import Footer from '@/components/common/Footer';
 import { Slide, ToastContainer } from 'react-toastify';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
+import { CartProvider } from '@/contexts/CartContext';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -61,10 +62,12 @@ export default async function RootLayout({
         />
         <Analytics />
         <NextIntlClientProvider messages={messages}>
-          <Nav />
-          <TopButton />
-          <main>{children}</main>
-          <Footer />
+          <CartProvider>
+            <Nav />
+            <TopButton />
+            <main>{children}</main>
+            <Footer />
+          </CartProvider>
         </NextIntlClientProvider>
         <script
           src="https://static.elfsight.com/platform/platform.js"

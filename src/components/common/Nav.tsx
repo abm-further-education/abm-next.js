@@ -7,7 +7,8 @@ import { useParams, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import MobileNav from './MobileNav';
 import LanguageSwitcher from './LanguageSwitcher';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, ShoppingCart } from 'lucide-react';
+import { useCart } from '@/contexts/CartContext';
 import {
   cookeryMenu,
   hospitalityMenu,
@@ -43,6 +44,7 @@ function Nav() {
   const [results, setResults] = useState<{ title: string; href: string }[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const router = useRouter();
+  const { getItemCount } = useCart();
 
   // 특정 페이지에서 배경색을 항상 black으로 설정할 페이지들
   // const isSpecialPage =
@@ -258,6 +260,20 @@ function Nav() {
                 <path d="M19.321 5.562a5.121 5.121 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.246-1.985-1.246-3.197V.862h-3.068v15.298c0 .849-.443 1.628-1.137 2.063-.694.434-1.534.434-2.271 0-.737-.435-1.137-1.214-1.137-2.063 0-.849.4-1.628 1.137-2.063.694-.434 1.534-.434 2.271 0 .154.097.297.208.428.332v-3.234a5.85 5.85 0 0 0-1.82-.289c-3.234 0-5.857 2.623-5.857 5.857s2.623 5.857 5.857 5.857 5.857-2.623 5.857-5.857V8.367a9.298 9.298 0 0 0 5.411 1.703V6.902c-1.034 0-2.012-.354-2.774-.966a4.121 4.121 0 0 1-.572-.374z" />
               </svg>
             </Link>
+            <Link
+              href={`/${params.locale}/cart`}
+              className="relative transition-all duration-300 group"
+            >
+              <ShoppingCart
+                size={20}
+                className="fill-white group-hover:fill-primary transition-all duration-300"
+              />
+              {getItemCount() > 0 && (
+                <span className="absolute -top-8 -right-8 bg-primary text-black text-xs font-bold rounded-full h-16 w-16 flex items-center justify-center">
+                  {getItemCount()}
+                </span>
+              )}
+            </Link>
             <LanguageSwitcher />
           </div>
         </div>
@@ -419,6 +435,12 @@ function Nav() {
                 {item.title}
               </Link>
             ))}
+            <Link
+              href={`/${params.locale}/order-lookup`}
+              className="cursor-pointer hover:bg-[#171717] transition-all py-26 px-28"
+            >
+              Order Lookup
+            </Link>
             <Link
               target="_blank"
               href="https://form.jotform.com/ABMonlineforms/abm-further-education-application-f"

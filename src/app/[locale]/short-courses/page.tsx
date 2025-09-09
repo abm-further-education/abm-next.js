@@ -1,20 +1,24 @@
+'use client';
+
 import Banner from '@/components/common/Banner';
 import FadeIn from '@/components/common/FadeIn';
 import ShortCourseCard from '@/domains/short-course/components/ShortCourseCard';
 import ShortCourseCalendar from '@/components/shortCourses/ShortCourseCalendar';
-import React, { use } from 'react';
-import type { Metadata } from 'next';
+import React, { use, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-
-export const metadata: Metadata = {
-  title: 'Short Courses | ABM Further Education',
-  description:
-    "Discover your passion with ABM's short courses! From barista training to French pastries, explore our one-day courses designed for food and hospitality enthusiasts.",
-};
+import { useCart } from '@/contexts/CartContext';
+import getShortCourseData from '@/lib/shortCourseData';
 
 function ShortCoursesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = use(params);
   const t = useTranslations('shortCoursesPage');
+  const { addItem, items, getItemCount } = useCart();
+
+  // Set page title dynamically
+  useEffect(() => {
+    document.title = 'Short Courses | ABM Further Education';
+  }, []);
+
   return (
     <div>
       <Banner
@@ -47,66 +51,88 @@ function ShortCoursesPage({ params }: { params: Promise<{ locale: string }> }) {
               title="Barista Course"
               link="/short-courses/barista"
               price={150}
+              slug="barista"
+              courseData={getShortCourseData(locale).barista}
             />
             <ShortCourseCard
               imgPath="/short-course/classic_french_cakes_2.png"
               title="Classic French Cake Course"
               link="/short-courses/cake"
               price={180}
+              slug="cake"
+              courseData={getShortCourseData(locale).cake}
             />
             <ShortCourseCard
               imgPath="/short-course/wine/wine_1.jpg"
               title="Wine Course"
               link="/short-courses/wine"
               price={150}
+              slug="wine"
+              courseData={getShortCourseData(locale).wine}
             />
             <ShortCourseCard
               imgPath="/short-course/focaccia/sourdough_1.jpg"
               title="Sourdough and Focaccia Course"
               link="/short-courses/focaccia"
               price={160}
+              slug="focaccia"
+              courseData={getShortCourseData(locale).focaccia}
             />
             <ShortCourseCard
               imgPath="/short-course/dessert/fine_dining_dessert_1.jpg"
               title="Fine Dining Dessert Plating Course"
               link="/short-courses/dessert"
               price={150}
+              slug="dessert"
+              courseData={getShortCourseData(locale).dessert}
             />
             <ShortCourseCard
               imgPath="/short-course/classic_french_pastries_1.png"
               title="Classic French Pastries Course"
               link="/short-courses/pastries"
               price={160}
+              slug="pastries"
+              courseData={getShortCourseData(locale).pastries}
             />
             <ShortCourseCard
               imgPath="/short-course/mixology/cocktail_1.png"
               title="Cocktail-Making and Mixology Course"
               link="/short-courses/mixology"
               price={150}
+              slug="mixology"
+              courseData={getShortCourseData(locale).mixology}
             />
             <ShortCourseCard
               imgPath="/short-course/macaroon_1.png"
               title="French petit four Course (Macaroon)"
               link="/short-courses/petit"
               price={120}
+              slug="petit"
+              courseData={getShortCourseData(locale).petit}
             />
             <ShortCourseCard
               imgPath="/short-course/vegan/vegan_1.png"
               title="Vegan and Vegetarian Course"
               link="/short-courses/vegan"
               price={150}
+              slug="vegan"
+              courseData={getShortCourseData(locale).vegan}
             />
             <ShortCourseCard
               imgPath="/short-course/chocolate/xmas_1.png"
               title="Chocolate Class – Xmas"
               link="/short-courses/chocolate"
               price={130}
+              slug="chocolate"
+              courseData={getShortCourseData(locale).chocolate}
             />
             <ShortCourseCard
               imgPath="/short-course/fss_1.png"
               title="NSW Food Safety Supervisor Certificate (FSS)"
               link="/cookery-and-hospitality-courses/fss"
               price={180}
+              slug="fss"
+              courseData={getShortCourseData(locale).fss}
             />
             <ShortCourseCard
               imgPath="/short-course/web/web_1.png"

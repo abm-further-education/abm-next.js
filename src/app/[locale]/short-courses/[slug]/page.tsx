@@ -8,6 +8,8 @@ import getShortCourseData from '@/lib/shortCourseData';
 import React, { use, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
+import { useCart } from '@/contexts/CartContext';
+import { ShoppingCart } from 'lucide-react';
 
 const titleMatch: { [key: string]: string } = {
   barista: 'Barista Course',
@@ -45,6 +47,7 @@ function Page({
   const { slug, locale } = use(params);
   const courseData = getShortCourseData(locale)[slug];
   const router = useRouter();
+  const { addItem, items } = useCart();
 
   React.useEffect(() => {
     if (!courseData) {
@@ -80,8 +83,8 @@ function Page({
     document.title = `${courseTitle} | ABM Further Education`;
   }, [slug]);
 
-  // Stripe 결제 처리 함수
-  const handleEnrollNow = () => {
+  // 장바구니에 추가하는 함수
+  const handleAddToCart = () => {
     if (!selectedDate) {
       toast.error('Please select a course date');
       return;
@@ -90,6 +93,86 @@ function Page({
       toast.error('Please select a course type');
       return;
     }
+
+    // 선택된 날짜가 유효한지 확인
+    const selectedDateObj = courseData.dates?.find(
+      (date: any) => date.date === selectedDate
+    );
+
+    if (!selectedDateObj) {
+      toast.error('Selected date is not available');
+      return;
+    }
+
+    // 날짜가 오늘보다 이전인지 확인
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const dateObj = new Date(selectedDate);
+    dateObj.setHours(0, 0, 0, 0);
+
+    if (dateObj < today) {
+      toast.error('Cannot select past dates');
+      return;
+    }
+
+    // availability가 false인지 확인
+    if (selectedDateObj.available === false) {
+      toast.error('This date is not available for booking');
+      return;
+    }
+
+    // 장바구니에 추가
+    addItem({
+      slug,
+      title: courseData.title,
+      price: courseData.price,
+      image: imgMatch[slug],
+      selectedDate,
+      selectedType,
+      courseData,
+    });
+
+    toast.success(`${courseData.title} added to cart!`);
+  };
+
+  // 바로 결제하는 함수 (기존 기능)
+  const handleBuyNow = () => {
+    if (!selectedDate) {
+      toast.error('Please select a course date');
+      return;
+    }
+    if (courseData.courseType && !selectedType) {
+      toast.error('Please select a course type');
+      return;
+    }
+
+    // 선택된 날짜가 유효한지 확인
+    const selectedDateObj = courseData.dates?.find(
+      (date: any) => date.date === selectedDate
+    );
+
+    if (!selectedDateObj) {
+      toast.error('Selected date is not available');
+      return;
+    }
+
+    // 날짜가 오늘보다 이전인지 확인
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const dateObj = new Date(selectedDate);
+    dateObj.setHours(0, 0, 0, 0);
+
+    if (dateObj < today) {
+      toast.error('Cannot select past dates');
+      return;
+    }
+
+    // availability가 false인지 확인
+    if (selectedDateObj.available === false) {
+      toast.error('This date is not available for booking');
+      return;
+    }
+
     // checkout 페이지로 이동 (선택값 쿼리스트링 전달)
     const params = new URLSearchParams();
     params.set('date', selectedDate);
@@ -102,6 +185,9 @@ function Page({
       router.push(`/short-courses/${slug}/checkout?${params.toString()}`);
     }
   };
+
+  // 장바구니에 이미 있는지 확인
+  const isInCart = items.some((item) => item.slug === slug);
 
   return courseData ? (
     <div>
@@ -258,13 +344,26 @@ function Page({
               <div className="font-bold text-2xl mt-20 text-primary">
                 ${courseData.price}
               </div>
-              <Button
-                className="bg-black text-white w-full mt-20"
-                onClick={handleEnrollNow}
-                disabled={availableDates.length === 0}
-              >
-                {courseData.callToAction || 'Enrol Now'}
-              </Button>
+
+              {/* 버튼들 */}
+              <div className="space-y-10 mt-20">
+                <Button
+                  className="bg-primary text-black w-full py-15 font-semibold flex items-center justify-center gap-10"
+                  onClick={handleAddToCart}
+                  disabled={availableDates.length === 0 || isInCart}
+                >
+                  <ShoppingCart size={20} />
+                  {isInCart ? 'Already in Cart' : 'Add to Cart'}
+                </Button>
+
+                <Button
+                  className="bg-black text-white w-full py-15 font-semibold"
+                  onClick={handleBuyNow}
+                  disabled={availableDates.length === 0}
+                >
+                  {courseData.callToAction || 'Buy Now'}
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -9,12 +9,21 @@ import Button from '@/components/common/Button';
 import CheckEmoji from '@/components/common/CheckEmoji';
 
 interface PaymentDetails {
-  courseSlug: string;
-  courseName: string;
-  selectedDate: string;
-  selectedType: string;
+  courseSlug?: string;
+  courseName?: string;
+  selectedDate?: string;
+  selectedType?: string;
   customerEmail: string;
   amountPaid: number;
+  orderNumber?: string;
+  isMultiCourse?: boolean;
+  items?: Array<{
+    title: string;
+    price: number;
+    selectedDate?: string;
+    selectedType?: string;
+    image: string;
+  }>;
 }
 
 // 코스 이미지 매칭
@@ -36,6 +45,7 @@ export default function PaymentSuccessPage() {
   const t = useTranslations('paymentSuccess');
   const searchParams = useSearchParams();
   const sessionId = searchParams.get('session_id');
+  const orderNumber = searchParams.get('order_number');
   const [paymentDetails, setPaymentDetails] = useState<PaymentDetails | null>(
     null
   );
@@ -111,7 +121,7 @@ export default function PaymentSuccessPage() {
         <div className="relative w-full h-400 overflow-hidden">
           <Image
             src={courseImage}
-            alt={paymentDetails.courseName}
+            alt={paymentDetails.courseName || 'Course'}
             fill
             className="object-cover"
             priority
@@ -138,20 +148,62 @@ export default function PaymentSuccessPage() {
           {paymentDetails && (
             <div className="bg-gray-50 p-8 mb-18 text-left">
               <h3 className="font-semibold text-gray-800 mb-12">
-                {t('registrationInfo')}
+                {paymentDetails.isMultiCourse
+                  ? 'Order Information'
+                  : t('registrationInfo')}
               </h3>
-              <div className="space-y-2 text-sm">
-                <p>
-                  <strong>{t('course')}:</strong> {paymentDetails.courseName}
-                </p>
-                <p>
-                  <strong>{t('date')}:</strong> {paymentDetails.selectedDate}
-                </p>
-                {paymentDetails.selectedType && (
-                  <p>
-                    <strong>{t('type')}:</strong> {paymentDetails.selectedType}
+
+              {paymentDetails.orderNumber && (
+                <div className="mb-12">
+                  <p className="text-sm">
+                    <strong>Order Number:</strong> {paymentDetails.orderNumber}
                   </p>
-                )}
+                </div>
+              )}
+
+              {paymentDetails.isMultiCourse && paymentDetails.items ? (
+                <div className="space-y-3">
+                  <p className="text-sm">
+                    <strong>Courses ({paymentDetails.items.length}):</strong>
+                  </p>
+                  {paymentDetails.items.map((item, index) => (
+                    <div
+                      key={index}
+                      className="ml-4 p-3 bg-white rounded border"
+                    >
+                      <p className="font-medium">{item.title}</p>
+                      <p className="text-xs text-gray-600">${item.price}</p>
+                      {item.selectedDate && (
+                        <p className="text-xs text-gray-600">
+                          Date: {item.selectedDate}
+                        </p>
+                      )}
+                      {item.selectedType && (
+                        <p className="text-xs text-gray-600">
+                          Type: {item.selectedType}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="space-y-2 text-sm">
+                  <p>
+                    <strong>{t('course')}:</strong> {paymentDetails.courseName}
+                  </p>
+                  <p>
+                    <strong>{t('date')}:</strong> {paymentDetails.selectedDate}
+                  </p>
+                  {paymentDetails.selectedType && (
+                    <p>
+                      <strong>{t('type')}:</strong>{' '}
+                      {paymentDetails.selectedType}
+                    </p>
+                  )}
+                </div>
+              )}
+
+              <div className="space-y-2 text-sm mt-12">
                 <p>
                   <strong>{t('email')}:</strong> {paymentDetails.customerEmail}
                 </p>
@@ -168,6 +220,14 @@ export default function PaymentSuccessPage() {
           </div>
 
           <div className="space-y-3">
+            {paymentDetails?.orderNumber && (
+              <Link href={`/order-lookup?order=${paymentDetails.orderNumber}`}>
+                <Button className="bg-blue-600 text-white w-full">
+                  View Order Details
+                </Button>
+              </Link>
+            )}
+
             <Link href="/short-courses">
               <Button className="bg-primary-bk text-white w-full">
                 {t('viewOtherCourses')}
