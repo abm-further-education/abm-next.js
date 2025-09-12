@@ -791,9 +791,28 @@ export const courseInformationData_sp: {
         },
       ],
     },
+    startingDates: [
+      {
+        title: '2025',
+        dates: ['29 Sep', '20 Oct', '10 Nov', '1 Dec', '22 Dec'],
+      },
+      {
+        title: '2026',
+        dates: [
+          '12 Jan',
+          '2 Feb',
+          '23 Feb',
+          '16 Mar',
+          '6 Apr',
+          '27 Apr',
+          '18 May',
+          '8 Jun',
+        ],
+      },
+    ],
     additionalInfo: {
       description:
-        'Fechas de inicio (cada 3 semanas):\n2025: 28 de julio, 18 de agosto, 8 de septiembre, 29 de septiembre, 20 de octubre, 10 de noviembre, 1 de diciembre, 22 de diciembre\n2026: 12 de enero, 2 de febrero, 23 de febrero, 16 de marzo, 6 de abril, 27 de abril, 18 de mayo, 8 de junio\n\nRegulaciones y estándares\nLas habilidades adquiridas deben aplicarse según la legislación australiana y los estándares del sector.\n\n¡Da el primer paso hacia una carrera gratificante en fitness!',
+        'Regulaciones y estándares\nLas habilidades adquiridas deben aplicarse según la legislación australiana y los estándares del sector.\n\n¡Da el primer paso hacia una carrera gratificante en fitness!',
     },
   },
   'certificate-iv-in-fitness-fast-track': {
@@ -817,15 +836,43 @@ export const courseInformationData_sp: {
         },
       ],
     },
+    startingDates: [
+      {
+        title: '2025',
+        dates: [
+          '28 Jul',
+          '18 Aug',
+          '8 Sep',
+          '29 Sep',
+          '20 Oct',
+          '10 Nov',
+          '1 Dec',
+          '22 Dec',
+        ],
+      },
+      {
+        title: '2026',
+        dates: [
+          '12 Jan',
+          '2 Feb',
+          '23 Feb',
+          '16 Mar',
+          '6 Apr',
+          '27 Apr',
+          '18 May',
+          '8 Jun',
+        ],
+      },
+    ],
     additionalInfo: {
       description:
-        'Fechas de inicio (cada 3 semanas):\n2025: 28 de julio, 18 de agosto, 8 de septiembre, 29 de septiembre, 20 de octubre, 10 de noviembre, 1 de diciembre, 22 de diciembre\n2026: 12 de enero, 2 de febrero, 23 de febrero, 16 de marzo, 6 de abril, 27 de abril, 18 de mayo, 8 de junio\n\nRegulaciones y estándares\nLas habilidades adquiridas deben aplicarse según la legislación australiana y los estándares del sector.\n\n¡Da el primer paso hacia una carrera gratificante en fitness!\n\n¡Consulta las opciones de pago flexibles!',
+        'Regulaciones y estándares\nLas habilidades adquiridas deben aplicarse según la legislación australiana y los estándares del sector.\n\n¡Da el primer paso hacia una carrera gratificante en fitness!\n\n¡Consulta las opciones de pago flexibles!',
     },
   },
   'hlt33115-certificate-iii-in-health-services-assistance': {
     courseCode: 'HLT33115',
     description:
-      'Ruta Profesional de Apoyo de Enfermería: Inglés + Certificado III en Asistencia de Servicios de Salud + Práctica Laboral\n\nIncluye: HLT33115 Certificado III en Asistencia de Servicios de Salud (Asistencia en Trabajo de Enfermería en Cuidados Agudos)\n\nDa tu primer paso hacia una carrera gratificante en el sector de la salud con la Ruta Profesional de Apoyo de Enfermería de ABM. Este programa integral está diseñado para estudiantes internacionales o nuevos ingresos al sector de la salud que desean convertirse en trabajadores de apoyo calificados en hospitales e instalaciones de cuidado de ancianos.\n\n¿Por qué elegir este programa?\n• Aprende en un entorno de aula presencial de apoyo\n• Desarrolla inglés especializado para la comunicación en el sector de la salud\n• Obtén una calificación reconocida a nivel nacional\n• Completa 80 horas de práctica laboral en entornos reales de atención médica\n• Adecuado para aquellos con o sin experiencia previa en el sector de la salud',
+      'Ruta Profesional de Apoyo de Enfermería: Inglés + Certificado III en Asistencia de Servicios de Salud + Práctica Laboral\n\nIncluye: HLT33115 Certificado III en Asistencia de Servicios de Salud (Asistencia en Trabajo de Enfermería en Cuidados Agudos)\n\nDa tu primer paso hacia una carrera gratificante en el sector de la salud con la Ruta Profesional de Apoyo de Enfermería de ABM. Este programa integral está diseñado para estudiantes internacionales o nuevos ingresos al sector de la salud que desean convertirse en trabajadores de apoyo calificados en hospitales e instalaciones de cuidado de ancianos.',
     duration: '16 semanas',
     deliveryMode: {
       title: 'Modo de entrega:',
@@ -840,5 +887,39 @@ export const courseInformationData_sp: {
         },
       ],
     },
+    startingDates: [
+      {
+        title: '2026',
+        dates: [
+          '12 Jan',
+          '9 Feb',
+          '9 Mar',
+          '13 Apr',
+          '11 May',
+          '8 Jun',
+          '13 Jul',
+          '10 Aug',
+          '7 Sep',
+          '12 Oct',
+          '9 Nov',
+        ],
+      },
+      {
+        title: '2027',
+        dates: [
+          '11 Jan',
+          '15 Feb',
+          '15 Mar',
+          '12 Apr',
+          '17 May',
+          '14 Jun',
+          '12 Jul',
+          '16 Aug',
+          '13 Sep',
+          '11 Oct',
+          '15 Nov',
+        ],
+      },
+    ],
   },
 };

@@ -137,7 +137,9 @@ function FSS() {
               <span className="font-semibold">Course Date:</span>
               <ul className="list-disc pl-5 space-y-1">
                 <li>15th September 2025</li>
+                <li>17th September 2025</li>
                 <li>21st November 2025</li>
+                <li>12th December 2025</li>
               </ul>
             </div>
             <div className="font-bold text-2xl mt-20 text-primary">$180</div>

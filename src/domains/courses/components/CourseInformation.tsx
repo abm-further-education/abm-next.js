@@ -30,6 +30,10 @@ export interface CourseInformationInfo {
     linkUrl?: string;
     description?: string;
   };
+  startingDates?: {
+    title?: string;
+    dates?: string[];
+  }[];
   tables?: {
     headers: string[];
     rows: string[][];
@@ -130,6 +134,34 @@ function CourseInformationContent({
                     </>
                   )}
               </p>
+            </div>
+          )}
+
+          {courseInfo.startingDates && (
+            <div className="mt-20">
+              <h3 className={titleStyle}>Starting Dates</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10">
+                {courseInfo.startingDates.map((yearData, yearIndex) => (
+                  <div
+                    key={yearIndex}
+                    className="border border-neutral-200 p-15 bg-neutral-50"
+                  >
+                    <h4 className="text-lg font-semibold text-primary mb-10 border-b border-neutral-200 pb-2">
+                      {yearData.title}
+                    </h4>
+                    <div className="grid grid-cols-2 gap-8">
+                      {yearData.dates?.map((date, dateIndex) => (
+                        <div
+                          key={dateIndex}
+                          className="text-sm text-neutral-700 bg-white p-4 border border-neutral-100"
+                        >
+                          {date}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 

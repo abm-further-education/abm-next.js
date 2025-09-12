@@ -1,7 +1,9 @@
+import { cn } from '@/lib/utils';
+
 interface CourseProgressItem {
-  code: string;
+  code?: string;
   title: string;
-  duration: string;
+  duration?: string;
 }
 
 interface CourseProgressProps {
@@ -20,12 +22,16 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
       <div className="flex items-center space-x-2">
         {courses.map((course, index) => (
           <div
-            key={course.code}
-            className={`p-8 md:p-12 md:w-[50%] h-150 relative ${
+            key={course.code || course.title}
+            className={cn(
+              'p-8 md:p-12 md:w-[50%] h-150 relative',
               index === activeIndex
                 ? 'bg-primary text-white'
-                : 'bg-neutral-500 text-white'
-            } ${index > 0 ? 'ml-[-20px] md:ml-[-30px]' : ''}`}
+                : 'bg-neutral-500 text-white',
+              index > 0 && 'ml-[-20px] md:ml-[-30px]',
+              (!course.code || !course.duration) &&
+                'flex flex-col justify-center'
+            )}
             style={{
               clipPath:
                 index + startIndex === 0
@@ -34,25 +40,28 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
             }}
           >
             <div
-              className={`text-xs md:text-sm font-semibold mb-2 ${
-                index + startIndex > 0 ? 'pl-35 md:pl-60' : ''
-              }`}
+              className={cn(
+                'text-xs md:text-sm font-semibold mb-2',
+                index + startIndex > 0 && 'pl-35 md:pl-60'
+              )}
             >
-              {course.code}
+              {course.code || ''}
             </div>
             <div
-              className={`text-sm md:text-base font-bold max-w-200 mb-2 leading-tight ${
-                index + startIndex > 0 ? 'pl-35 md:pl-60' : ''
-              }`}
+              className={cn(
+                'text-sm md:text-base font-bold max-w-220 mb-2 leading-tight',
+                index + startIndex > 0 && 'pl-35 md:pl-60'
+              )}
             >
               {course.title}
             </div>
             <div
-              className={`text-xs md:text-sm absolute bottom-10 ${
-                index + startIndex > 0 ? 'pl-35 md:pl-60' : ''
-              }`}
+              className={cn(
+                'text-xs md:text-sm absolute bottom-10',
+                index + startIndex > 0 && 'pl-35 md:pl-60'
+              )}
             >
-              {course.duration}
+              {course.duration || ''}
             </div>
           </div>
         ))}

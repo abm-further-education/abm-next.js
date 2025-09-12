@@ -1,9 +1,12 @@
 'use client';
 
 import Banner from '@/components/common/Banner';
+import Gallery from '@/components/common/Gallery';
 import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
+import Units from '@/domains/courses/components/Units';
+import { cn } from '@/lib';
 import getCourseDetailsData from '@/lib/courseDetails';
 import React, { useEffect, use } from 'react';
 
@@ -64,8 +67,29 @@ export default function Page({
       {/* Units Section */}
       <section
         id={getSectionId('Units')}
-        className="mx-auto px-20 md:px-80 py-40"
-      ></section>
+        className={cn(
+          'max-w-[1600px] mx-auto px-20 md:px-80 py-40 gap-40',
+          'grid grid-cols-1 lg:grid-cols-2'
+        )}
+      >
+        <Units id={id} />
+        <Gallery
+          showTitle={false}
+          breakpointColumns={{
+            default: 2,
+            1100: 3,
+            700: 2,
+          }}
+          images={images_HSA}
+        />
+      </section>
     </div>
   );
 }
+
+const images_HSA = [
+  '/courses/health/health_4.png',
+  '/courses/health/health_5.png',
+  '/courses/health/health_6.png',
+  '/courses/health/health_7.png',
+];

@@ -1657,32 +1657,32 @@ export const HEALTH_SERVICES_ASSISTANCE_UNITS = [
     no: 8,
     code: 'CHCCCS002',
     title: 'Assist with movement',
-    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+    type: 'Elective',
   },
   {
     no: 9,
     code: 'CHCCCS020',
     title: 'Respond effectively to behaviours of concern',
-    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+    type: 'Elective',
   },
   {
     no: 10,
     code: 'CHCCCS026',
     title: 'Transport individuals',
-    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+    type: 'Elective',
   },
   {
     no: 11,
     code: 'HLTAIN001',
     title:
       'Assist with nursing care in an acute care environment (require an acute care work place)',
-    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+    type: 'Elective',
   },
   {
     no: 12,
     code: 'HLTAIN002',
     title: 'Provide non-client contact support in an acute care environment',
-    type: 'Elective (Group B – assisting in nursing work in acute care specialisation)',
+    type: 'Elective',
   },
   {
     no: 13,

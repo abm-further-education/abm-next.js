@@ -762,9 +762,28 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         },
       ],
     },
+    startingDates: [
+      {
+        title: '2025',
+        dates: ['29 Sep', '20 Oct', '10 Nov', '1 Dec', '22 Dec'],
+      },
+      {
+        title: '2026',
+        dates: [
+          '12 Jan',
+          '2 Feb',
+          '23 Feb',
+          '16 Mar',
+          '6 Apr',
+          '27 Apr',
+          '18 May',
+          '8 Jun',
+        ],
+      },
+    ],
     additionalInfo: {
       description:
-        'Starting Date (Every 3 weeks):\n\n2025:\n• 28th July\n• 18th August\n• 8th September, 29th September\n• 20th October\n• 10th November\n• 1st December, 22nd December\n\n2026:\n• 12th January\n• 2nd February, 23rd February\n• 16th March\n• 6th April, 27th April\n• 18th May\n• 8th June\n\nRegulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n',
+        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n',
     },
   },
   'certificate-iv-in-fitness-fast-track': {
@@ -789,16 +808,36 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         },
       ],
     },
+    startingDates: [
+      {
+        title: '2025',
+        dates: ['29 Sep', '20 Oct', '10 Nov', '1 Dec', '22 Dec'],
+      },
+      {
+        title: '2026',
+        dates: [
+          '12 Jan',
+          '2 Feb',
+          '23 Feb',
+          '16 Mar',
+          '6 Apr',
+          '27 Apr',
+          '18 May',
+          '8 Jun',
+        ],
+      },
+    ],
     additionalInfo: {
       description:
-        'Starting Date (Every 3 weeks):\n\n2025:\n• 28th July\n• 18th August\n• 8th September, 29th September\n• 20th October\n• 10th November\n• 1st December, 22nd December\n\n2026:\n• 12th January\n• 2nd February, 23rd February\n• 16th March\n• 6th April, 27th April\n• 18th May\n• 8th June\n\nRegulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment options here!',
+        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment options here!',
     },
   },
   'hlt33115-certificate-iii-in-health-services-assistance': {
     courseCode: 'HLT33115',
     description:
-      "Nursing Support Career Pathway: English + Certificate III in Health Services Assistance + Work Placement\n\nIncludes: HLT33115 Certificate III in Health Services Assistance (Assisting in Nursing Work in Acute Care)\n\nTake your first step towards a rewarding career in healthcare with ABM's Nursing Support Career Pathway. This comprehensive programme is designed for international students or new entrants to the health sector who wish to become skilled support workers in hospitals and aged care facilities.\n\nWhy Choose This Programme?\n• Learn in a supportive, face-to-face classroom environment\n• Build specialised English for healthcare communication\n• Gain a nationally recognised qualification\n• Complete 80 hours of work placement in real healthcare settings\n• Suitable for those with or without prior healthcare experience",
-    duration: '16 weeks',
+      "Nursing Support Career Pathway: English + Certificate III in Health Services Assistance + Work Placement\n\nIncludes: HLT33115 Certificate III in Health Services Assistance (Assisting in Nursing Work in Acute Care)\n\nTake your first step towards a rewarding career in healthcare with ABM's Nursing Support Career Pathway. This comprehensive programme is designed for international students or new entrants to the health sector who wish to become skilled support workers in hospitals and aged care facilities.",
+    duration:
+      '16 weeks (2 days per week + 1 day tutorial) + 80 work placement hours',
     deliveryMode: {
       title: 'Delivery mode:',
       mode: 'Face to Face',
@@ -812,5 +851,39 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         },
       ],
     },
+    startingDates: [
+      {
+        title: '2026',
+        dates: [
+          '12 Jan',
+          '9 Feb',
+          '9 Mar',
+          '13 Apr',
+          '11 May',
+          '8 Jun',
+          '13 Jul',
+          '10 Aug',
+          '7 Sep',
+          '12 Oct',
+          '9 Nov',
+        ],
+      },
+      {
+        title: '2027',
+        dates: [
+          '11 Jan',
+          '15 Feb',
+          '15 Mar',
+          '12 Apr',
+          '17 May',
+          '14 Jun',
+          '12 Jul',
+          '16 Aug',
+          '13 Sep',
+          '11 Oct',
+          '15 Nov',
+        ],
+      },
+    ],
   },
 };
