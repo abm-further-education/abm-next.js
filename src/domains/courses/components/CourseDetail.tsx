@@ -3,7 +3,6 @@ import { cn, parseBoldText } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import Units from './Units';
 import DiplomaHM from '../contents/cookery/DiplomaHM';
 import CertIIIHSA from '../contents/health/CertIIIHSA';
 
