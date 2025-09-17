@@ -39,17 +39,20 @@ function Testimonial() {
         }}
         spaceBetween={20}
       >
-        {Array.from({ length: 18 }).map((_, index) => (
-          <SwiperSlide key={index} className="relative">
-            <Image
-              src={`/testimonials/${index + 1}.png`}
-              alt="banner_image"
-              width={300}
-              height={300}
-              className="md:object-center object-cover"
-            />
-          </SwiperSlide>
-        ))}
+        {Array.from({ length: 25 }, (_, i) => i + 1)
+          .map((value) => ({ value, key: Math.random() }))
+          .sort((a, b) => a.key - b.key)
+          .map(({ value }) => (
+            <SwiperSlide key={value} className="relative">
+              <Image
+                src={`/testimonials/${value}.png`}
+                alt={`banner_image_${value}`}
+                width={300}
+                height={300}
+                className="md:object-center object-cover"
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
       <Link
         href={`/${params.locale}/abm-student-insights`}

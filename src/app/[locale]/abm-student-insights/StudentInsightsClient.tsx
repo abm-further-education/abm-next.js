@@ -11,7 +11,9 @@ export default function StudentInsightsClient() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   // Testimonial images array
-  const testimonialImages = Array.from({ length: 19 }, (_, i) => i + 1);
+  const testimonialImages = Array.from({ length: 25 }, (_, i) => i + 1).sort(
+    () => Math.random() - 0.5
+  );
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -90,7 +92,7 @@ export default function StudentInsightsClient() {
                   className="w-full h-200 md:h-250 object-cover"
                   priority={imageNumber <= 8}
                 />
-                <div className="absolute inset-0 bg-black/20 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
                     <p className="text-sm font-semibold">{t('clickToView')}</p>
                   </div>

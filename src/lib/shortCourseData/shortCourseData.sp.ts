@@ -57,16 +57,6 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
         time: '13:00 – 17:00',
       },
       {
-        date: '2025-11-14',
-        displayDate: '14 de noviembre de 2025',
-        time: '13:00 – 17:00',
-      },
-      {
-        date: '2025-11-28',
-        displayDate: '28 de noviembre de 2025',
-        time: '9:00 AM – 1:00 PM',
-      },
-      {
         date: '2025-11-28',
         displayDate: '28 de noviembre de 2025',
         time: '2:00 PM – 6:00 PM',
