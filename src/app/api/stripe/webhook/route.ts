@@ -2,7 +2,7 @@ import { NextRequest } from 'next/server';
 import { getServerStripe } from '@/lib/stripe';
 
 import nodemailer from 'nodemailer';
-import { supabaseAdmin } from '@/lib/supabase';
+import { supabaseServer } from '@/lib/supabase-server';
 import Stripe from 'stripe';
 
 export const runtime = 'nodejs';
@@ -85,8 +85,8 @@ async function saveBookingToDatabase(
   }
 ) {
   try {
-    if (!supabaseAdmin) {
-      throw new Error('Supabase admin client not available');
+    if (!supabaseServer) {
+      throw new Error('Supabase server client not available');
     }
 
     const {
@@ -113,7 +113,7 @@ async function saveBookingToDatabase(
     const paymentStatus = session.payment_status;
     const stripeSessionId = session.id;
 
-    const { data, error } = await supabaseAdmin.from('shortCourse').insert({
+    const { data, error } = await supabaseServer.from('shortCourse').insert({
       first_name: firstName || '',
       last_name: lastName || '',
       email: email || '',

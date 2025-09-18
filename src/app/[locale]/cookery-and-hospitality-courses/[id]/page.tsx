@@ -115,7 +115,7 @@ export default function Page({
             <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
           }
         />
-        <div className="max-max-w-[1600px] mx-auto px-20 md:px-80 py-40">
+        <div className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
           <IndustryPlacement />
         </div>
       </div>

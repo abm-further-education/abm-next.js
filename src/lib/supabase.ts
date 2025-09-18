@@ -18,7 +18,13 @@ if (!supabaseAnonKey) {
 // Primary Supabase client using anon key (safe for both client and server)
 export const supabase = createClient(
   supabaseUrl || 'https://placeholder.supabase.co',
-  supabaseAnonKey || 'placeholder-key'
+  supabaseAnonKey || 'placeholder-key',
+  {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  }
 );
 
 // Optional: Only include service role client if you really need admin operations
