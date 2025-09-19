@@ -72,11 +72,10 @@ export default async function RootLayout({
           src="https://static.elfsight.com/platform/platform.js"
           async
         ></script>
-        <Script
-          src="//code.tidio.co/i1fukzcsngiw3hs2o3f9iarvwmdrseuf.js"
+        <script
+          src="//code.tidio.co/cqb4wkv3i9cnjjekeyzeixzkodsmdhkb.js"
           async
-          strategy="lazyOnload"
-        />
+        ></script>
       </body>
     </html>
   );
