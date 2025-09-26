@@ -6,6 +6,7 @@ import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+import FloatingTrialButton from '@/components/common/FloatingTrialButton';
 
 export default async function Home() {
   const t = await getTranslations();
@@ -135,6 +136,7 @@ export default async function Home() {
           data-elfsight-app-lazy
         ></div> */}
       </main>
+      <FloatingTrialButton />
     </div>
   );
 }
