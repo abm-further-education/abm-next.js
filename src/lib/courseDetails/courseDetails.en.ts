@@ -494,7 +494,6 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           text: 'SIS50321 Diploma of Sport',
           url: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
         },
-        'SIS50421 Diploma of Outdoor Leadership.',
       ],
     },
     additionalInfo: {
@@ -540,7 +539,6 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           text: 'SIS50321 Diploma of Sport',
           url: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
         },
-        'SIS50421 Diploma of Outdoor Leadership.',
       ],
     },
     additionalInfo: {

@@ -15,7 +15,7 @@ const menuItems = ['Course Information', 'Course Detail', 'Units'];
 const mappingCourseTitle: { [key: string]: string } = {
   'sis30321-certificate-iii-in-fitness': 'Certificate III in Fitness',
   'sis40221-certificate-iv-in-fitness': 'Certificate IV in Fitness',
-  'sis50321-diploma-of-sport': 'SIS50321 – Diploma of Sport (Coaching)',
+  'sis50321-diploma-of-sport': 'Diploma of Sport (Coaching)',
   'certificate-iv-in-fitness-fast-track':
     'Certificate IV in Fitness (Fast Track)',
   'certificate-iii-in-fitness-fast-track':
