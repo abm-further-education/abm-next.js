@@ -320,6 +320,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         date: '2025-10-03',
         displayDate: '3 October 2025',
         time: '12:30pm – 4:00pm',
+        available: false,
       },
     ],
     location:
@@ -361,6 +362,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         date: '2025-11-07',
         displayDate: '7 November 2025',
         time: '2:00pm – 6:00pm',
+        available: false,
       },
     ],
     location:
@@ -566,6 +568,21 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       {
         date: '2025-09-15',
         displayDate: '15 September',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2025-10-17',
+        displayDate: '17 October',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2025-11-21',
+        displayDate: '21 November',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2025-12-12',
+        displayDate: '12 December',
         time: '9:00am - 5:00pm',
       },
     ],

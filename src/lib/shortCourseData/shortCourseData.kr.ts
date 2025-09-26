@@ -242,6 +242,7 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         date: '2025-10-03',
         displayDate: '2025년 10월 3일',
         time: '오후 12:30 – 4:00',
+        available: false,
       },
     ],
     location:
@@ -281,6 +282,7 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         date: '2025-11-07',
         displayDate: '2025년 11월 7일',
         time: '오후 2:00 – 6:00',
+        available: false,
       },
     ],
     location:
@@ -488,6 +490,21 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
       {
         date: '2025-09-15',
         displayDate: '9월 15일',
+        time: '오전 9:00 - 오후 5:00',
+      },
+      {
+        date: '2025-10-17',
+        displayDate: '10월 17일',
+        time: '오전 9:00 - 오후 5:00',
+      },
+      {
+        date: '2025-11-21',
+        displayDate: '11월 21일',
+        time: '오전 9:00 - 오후 5:00',
+      },
+      {
+        date: '2025-12-12',
+        displayDate: '12월 12일',
         time: '오전 9:00 - 오후 5:00',
       },
     ],

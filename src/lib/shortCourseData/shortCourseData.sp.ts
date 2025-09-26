@@ -309,39 +309,10 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
     selectDateOptionLabel: 'Selecciona una fecha',
     dates: [
       {
-        date: '2025-04-15',
-        displayDate: '15 de abril de 2025',
-        time: '10:00 – 14:00',
-      },
-      {
-        date: '2025-04-29',
-        displayDate: '29 de abril de 2025',
-        time: '10:00 – 14:00',
-      },
-      {
-        date: '2025-05-13',
-        displayDate: '13 de mayo de 2025',
-        time: '10:00 – 14:00',
-      },
-      {
-        date: '2025-06-03',
-        displayDate: '03 de junio de 2025',
-        time: '10:00 – 14:00',
-      },
-      {
-        date: '2025-07-11',
-        displayDate: '11 de julio de 2025',
-        time: '10:00 – 14:00',
-      },
-      {
-        date: '2025-08-05',
-        displayDate: '05 de agosto de 2025',
-        time: '10:00 – 14:00',
-      },
-      {
-        date: '2025-11-02',
-        displayDate: '02 de noviembre de 2025',
-        time: '10:00 – 14:00',
+        date: '2025-10-03',
+        displayDate: '3 de octubre de 2025',
+        time: '12:30 – 4:00',
+        available: false,
       },
     ],
     location:
@@ -392,6 +363,7 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
         date: '2025-11-07',
         displayDate: '7 de noviembre de 2025',
         time: '14:00 – 18:00',
+        available: false,
       },
     ],
     location:
@@ -740,6 +712,21 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       {
         date: '2025-09-15',
         displayDate: '15 de septiembre',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2025-10-17',
+        displayDate: '17 de octubre',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2025-11-21',
+        displayDate: '21 de noviembre',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2025-12-12',
+        displayDate: '12 de diciembre',
         time: '9:00am - 5:00pm',
       },
     ],
