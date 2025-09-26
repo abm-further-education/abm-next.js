@@ -197,7 +197,7 @@ export async function POST(req: NextRequest) {
       `;
 
       await transporter.sendMail({
-        from: process.env.FROM_EMAIL,
+        from: process.env.FROM_EMAIL || 'sales@abm.edu.au',
         to: email,
         subject:
           'Thank you for your fitness trial request - ABM Further Education',
