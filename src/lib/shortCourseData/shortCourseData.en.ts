@@ -127,6 +127,12 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         available: false,
       },
       {
+        date: '2025-10-28',
+        displayDate: '28 October 2025',
+        time: '3:00 PM – 7:00 PM',
+        available: false,
+      },
+      {
         date: '2025-11-28',
         displayDate: '28 November 2025',
         time: '2:00 PM – 6:00 PM',

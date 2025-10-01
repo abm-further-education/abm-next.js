@@ -141,7 +141,22 @@ function FSS() {
                 <li>12th December 2025</li>
               </ul>
             </div>
-            <div className="font-bold text-2xl mt-20 text-primary">$180</div>
+            <div className="flex flex-col gap-10 mt-20 bg-orange-100 p-10 md: w-600">
+              <span className="font-semibold">Recertification:</span>
+              <p className="text-gray-700 text-sm">
+                The NSW Food Safety Supervisor (FSS) Recertification Course is
+                designed for those whose certificate is about to expire or has
+                expired within the last 90 days. Upon completion, you will
+                receive a renewed NSW FSS Certificate (Blue and Orange) valid
+                for five years.
+              </p>
+            </div>
+            <div className="font-bold text-2xl mt-20 text-primary">
+              $180{' '}
+              <span className="text-lg font-normal text-gray-700">
+                (Recertification: $110)
+              </span>
+            </div>
           </div>
           <Link
             className="bg-black text-white w-full block mt-20 px-20 py-10 text-center"
