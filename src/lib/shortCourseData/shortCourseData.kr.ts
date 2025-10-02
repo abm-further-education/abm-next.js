@@ -51,6 +51,11 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         time: '오후 3:00 – 오후 7:00',
       },
       {
+        date: '2025-10-17',
+        displayDate: '17 October 2025',
+        time: '4:00 PM – 8:00 PM',
+      },
+      {
         date: '2025-10-28',
         displayDate: '28 October 2025',
         time: '3:00 PM – 7:00 PM',
