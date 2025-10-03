@@ -3,11 +3,13 @@
 import Banner from '@/components/common/Banner';
 import Button from '@/components/common/Button';
 import ImageSlider from '@/components/shortCourses/ImageSlider';
+import NotifyMeModal from '@/components/common/NotifyMeModal';
 import getShortCourseData from '@/lib/shortCourseData';
 
 import React, { use, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
+import { Bell } from 'lucide-react';
 
 const titleMatch: { [key: string]: string } = {
   barista: 'Barista Course',
@@ -54,6 +56,7 @@ function Page({
 
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedType, setSelectedType] = useState('');
+  const [isNotifyModalOpen, setIsNotifyModalOpen] = useState(false);
   // Determine available dates for this course
   const availableDates =
     courseData?.dates?.filter(
@@ -224,37 +227,48 @@ function Page({
               >
                 {courseData.selectDateLabel || 'Course Date (Face to Face)'}
               </label>
-              <select
-                id="course-date"
-                name="course-date"
-                value={selectedDate}
-                onChange={(e) => setSelectedDate(e.target.value)}
-                className="w-full px-8 py-12 border border-gray-300  shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm"
-                disabled={availableDates.length === 0}
-              >
-                {availableDates.length === 0 ? (
-                  <option value="" disabled className="">
-                    Not Available at the moment.
-                  </option>
-                ) : (
-                  [
-                    <option value="" key="select">
-                      {courseData.selectDateOptionLabel || 'Select a date'}
-                    </option>,
-                    ...availableDates.map(
-                      (date: {
-                        date: string;
-                        displayDate: string;
-                        time: string;
-                      }) => (
-                        <option key={date.date} value={date.date}>
-                          {date.displayDate} • {date.time}
-                        </option>
-                      )
-                    ),
-                  ]
+              <div className="flex gap-2">
+                <select
+                  id="course-date"
+                  name="course-date"
+                  value={selectedDate}
+                  onChange={(e) => setSelectedDate(e.target.value)}
+                  className="flex-1 px-8 py-12 border border-gray-300  shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm"
+                  disabled={availableDates.length === 0}
+                >
+                  {availableDates.length === 0 ? (
+                    <option value="" disabled className="">
+                      Not Available at the moment.
+                    </option>
+                  ) : (
+                    [
+                      <option value="" key="select">
+                        {courseData.selectDateOptionLabel || 'Select a date'}
+                      </option>,
+                      ...availableDates.map(
+                        (date: {
+                          date: string;
+                          displayDate: string;
+                          time: string;
+                        }) => (
+                          <option key={date.date} value={date.date}>
+                            {date.displayDate} • {date.time}
+                          </option>
+                        )
+                      ),
+                    ]
+                  )}
+                </select>
+                {availableDates.length === 0 && (
+                  <Button
+                    className="bg-orange-600 text-white px-4 py-2 text-sm whitespace-nowrap flex items-center gap-2"
+                    onClick={() => setIsNotifyModalOpen(true)}
+                  >
+                    <Bell size={16} />
+                    Notify Me
+                  </Button>
                 )}
-              </select>
+              </div>
               <div className="font-bold text-2xl mt-20 text-primary">
                 ${courseData.price}
               </div>
@@ -411,6 +425,14 @@ function Page({
           )}
         </div>
       </section>
+
+      {/* Notify Me Modal */}
+      <NotifyMeModal
+        isOpen={isNotifyModalOpen}
+        onClose={() => setIsNotifyModalOpen(false)}
+        courseTitle={titleMatch[slug]}
+        slug={slug}
+      />
     </div>
   ) : null;
 }
