@@ -430,7 +430,6 @@ function Page({
       <NotifyMeModal
         isOpen={isNotifyModalOpen}
         onClose={() => setIsNotifyModalOpen(false)}
-        courseTitle={titleMatch[slug]}
         slug={slug}
       />
     </div>

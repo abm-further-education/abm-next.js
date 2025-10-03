@@ -2,19 +2,17 @@
 
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import { X, Mail, BookOpen, Bell } from 'lucide-react';
+import { X, Bell } from 'lucide-react';
 
 interface NotifyMeModalProps {
   isOpen: boolean;
   onClose: () => void;
-  courseTitle: string;
   slug: string;
 }
 
 const NotifyMeModal: React.FC<NotifyMeModalProps> = ({
   isOpen,
   onClose,
-  courseTitle,
   slug,
 }) => {
   const [email, setEmail] = useState('');
@@ -114,7 +112,8 @@ const NotifyMeModal: React.FC<NotifyMeModalProps> = ({
             <h2 className="text-xl font-bold">Get Notified</h2>
           </div>
           <p className="text-gray-600 text-sm">
-            We'll let you know when new dates become available for this course.
+            We&apos;ll let you know when new dates become available for this
+            course.
           </p>
         </div>
 
