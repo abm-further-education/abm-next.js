@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 interface FormData {
   date: string;
@@ -14,6 +15,7 @@ interface FormData {
 
 const TrialForm: React.FC = () => {
   const t = useTranslations('promotion');
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     date: '',
     name: '',
@@ -82,23 +84,17 @@ const TrialForm: React.FC = () => {
       });
 
       if (response.ok) {
-        // 성공 상태로 설정
-        setSubmitStatus('success');
-
-        // 폼 초기화
-        setFormData({
-          date: '',
-          name: '',
-          email: '',
-          phone: '',
-          howDidYouFindUs: '',
-          goal: '',
+        // Thank you 페이지로 리다이렉트 (폼 데이터를 URL 파라미터로 전달)
+        const searchParams = new URLSearchParams({
+          date: formData.date,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          howDidYouFindUs: formData.howDidYouFindUs,
+          goal: formData.goal,
         });
 
-        // 3초 후 상태 초기화
-        setTimeout(() => {
-          setSubmitStatus('idle');
-        }, 3000);
+        router.push(`/promotion/thank-you?${searchParams.toString()}`);
       } else {
         // API 오류 시 에러 상태로 설정
         setSubmitStatus('error');
@@ -117,12 +113,6 @@ const TrialForm: React.FC = () => {
   return (
     <div className="w-full">
       <h3 className="text-2xl font-bold text-center mb-30">{t('formTitle')}</h3>
-
-      {submitStatus === 'success' && (
-        <div className="mb-20 p-20 bg-green-100 border border-green-400 text-green-700 rounded-10">
-          {t('formSuccess')}
-        </div>
-      )}
 
       {submitStatus === 'error' && (
         <div className="mb-20 p-20 bg-red-100 border border-red-400 text-red-700 rounded-10">

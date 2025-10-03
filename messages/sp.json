@@ -123,7 +123,21 @@
     "submitting": "Reservando...",
     "formSuccess": "¡Gracias! Tu prueba gratuita ha sido reservada exitosamente. Te contactaremos pronto para confirmar los detalles.",
     "formError": "Lo sentimos, hubo un error al reservar tu prueba. Por favor, inténtalo de nuevo o contáctanos directamente.",
-    "formNote": "Los campos marcados con * son obligatorios. Te contactaremos dentro de 24 horas para confirmar tu reserva."
+    "formNote": "Los campos marcados con * son obligatorios. Te contactaremos dentro de 24 horas para confirmar tu reserva.",
+    "thankYouTitle": "¡Reserva Confirmada!",
+    "thankYouSubtitle": "Tu prueba gratuita ha sido reservada exitosamente.",
+    "bookingDetails": "Detalles de la Reserva",
+    "nextStepsTitle": "¿Qué Sigue?",
+    "nextStep1Title": "Llamada de Confirmación",
+    "nextStep1Description": "Te contactaremos dentro de 24 horas para confirmar los detalles de tu reserva.",
+    "nextStep2Title": "Prepárate para tu Prueba",
+    "nextStep2Description": "Por favor trae ropa cómoda para hacer ejercicio y una botella de agua el día de la prueba.",
+    "nextStep3Title": "Asiste a tu Prueba",
+    "nextStep3Description": "Visita nuestro campus ABM en tu horario programado.",
+    "contactInfoTitle": "¿Necesitas Ayuda?",
+    "contactInfoDescription": "Si tienes alguna pregunta, no dudes en contactarnos en cualquier momento.",
+    "backToHome": "Volver al Inicio",
+    "exploreCourses": "Explorar Otros Cursos"
   },
   "timetable": {
     "title": "Horario",

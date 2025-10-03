@@ -123,7 +123,21 @@
     "submitting": "Booking...",
     "formSuccess": "Thank you! Your free trial has been booked successfully. We'll contact you soon to confirm the details.",
     "formError": "Sorry, there was an error booking your trial. Please try again or contact us directly.",
-    "formNote": "Fields marked with * are required. We'll contact you within 24 hours to confirm your booking."
+    "formNote": "Fields marked with * are required. We'll contact you within 24 hours to confirm your booking.",
+    "thankYouTitle": "Booking Confirmed!",
+    "thankYouSubtitle": "Your free trial has been successfully booked.",
+    "bookingDetails": "Booking Details",
+    "nextStepsTitle": "What's Next?",
+    "nextStep1Title": "Confirmation Call",
+    "nextStep1Description": "We'll contact you within 24 hours to confirm your booking details.",
+    "nextStep2Title": "Prepare for Your Trial",
+    "nextStep2Description": "Please bring comfortable workout clothes and a water bottle on the day.",
+    "nextStep3Title": "Attend Your Trial",
+    "nextStep3Description": "Visit our ABM campus at your scheduled time.",
+    "contactInfoTitle": "Need Help?",
+    "contactInfoDescription": "If you have any questions, feel free to contact us anytime.",
+    "backToHome": "Back to Home",
+    "exploreCourses": "Explore Other Courses"
   },
   "timetable": {
     "title": "Timetable",
