@@ -6,7 +6,6 @@ import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import FloatingTrialButton from '@/components/common/FloatingTrialButton';
 
 export default async function Home() {
   const t = await getTranslations();
@@ -23,8 +22,12 @@ export default async function Home() {
             },
             {
               imgPath: '/home/banner.png',
-              title: 'Book Your Free Campus, Gym & Kitchen Tour Today!',
+              title: 'Book Your Free Campus, Gym & Kitchen Tour or 1-Day Trial',
               content: '',
+              linkButton: {
+                href: '/promotion',
+                text: 'Book Your Free Campus, Gym & Kitchen Tour or 1-Day Trial',
+              },
             },
           ]}
           dimmed={
@@ -136,7 +139,7 @@ export default async function Home() {
           data-elfsight-app-lazy
         ></div> */}
       </main>
-      <FloatingTrialButton />
+      {/* <FloatingTrialButton /> */}
     </div>
   );
 }

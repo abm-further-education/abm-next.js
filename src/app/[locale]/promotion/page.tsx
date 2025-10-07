@@ -20,9 +20,12 @@ export default async function PromotionPage({ params }: PageProps) {
       <Banner
         slides={[
           {
-            imgPath: '/promotion_1.png',
-            title: '1-Day Free Trial',
-            subtitle: 'Experience Our Fitness Course',
+            imgPath: '/promotion_2.png',
+            title: 'Book Your Free Campus, Gym & Kitchen Tour or 1-Day Trial',
+            linkButton: {
+              href: '/promotion',
+              text: 'Book Your Free Campus, Gym & Kitchen Tour or 1-Day Trial',
+            },
           },
         ]}
         dimmed={

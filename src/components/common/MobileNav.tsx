@@ -1,3 +1,5 @@
+'use client';
+
 import React, { Fragment, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -22,8 +24,10 @@ import {
   shortCourseMenu,
   studyWithUsMenu,
 } from '@/lib';
+import { useTranslations } from 'next-intl';
 
 function MobileNav() {
+  const t = useTranslations('nav');
   const params = useParams();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -153,7 +157,7 @@ function MobileNav() {
                 {({ open }) => (
                   <div>
                     <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
-                      <span>Courses</span>
+                      <span>{t('menu.courses')}</span>
                       {open ? (
                         <ChevronUp size={20} />
                       ) : (
@@ -171,27 +175,27 @@ function MobileNav() {
                             className="origin-top px-10 flex flex-col gap-y-16 mt-10"
                           >
                             <DisclosureContainer
-                              title="Cookery"
+                              title={t('subMenu.cookery')}
                               list={cookeryMenu}
                             />
                             <DisclosureContainer
-                              title="Hospitality"
+                              title={t('subMenu.hospitality')}
                               list={hospitalityMenu}
                             />
                             <DisclosureContainer
-                              title="Fitness & Sport"
+                              title={t('subMenu.fitnessAndSport')}
                               list={fitnessMenu}
                             />
                             <DisclosureContainer
-                              title="Business"
+                              title={t('subMenu.business')}
                               list={businessMenu}
                             />
                             <DisclosureContainer
-                              title="Project & Program"
+                              title={t('subMenu.projectAndProgram')}
                               list={projectMenu}
                             />
                             <DisclosureContainer
-                              title="Human Resource"
+                              title={t('subMenu.humanResource')}
                               list={hrMenu}
                             />
                           </motion.div>
@@ -208,7 +212,7 @@ function MobileNav() {
                 {({ open }) => (
                   <div>
                     <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
-                      <span>Short Courses</span>
+                      <span>{t('menu.shortCourses')}</span>
                       {open ? (
                         <ChevronUp size={20} />
                       ) : (
@@ -248,7 +252,7 @@ function MobileNav() {
                 {({ open }) => (
                   <div>
                     <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
-                      <span>Study With Us</span>
+                      <span>{t('menu.studyWithUs')}</span>
                       {open ? (
                         <ChevronUp size={20} />
                       ) : (
@@ -288,7 +292,7 @@ function MobileNav() {
                 {({ open }) => (
                   <div>
                     <DisclosureButton className="flex w-full items-center justify-between p-3 hover:underline">
-                      <span>Current Students</span>
+                      <span>{t('currentStudents')}</span>
                       {open ? (
                         <ChevronUp size={20} />
                       ) : (
@@ -330,7 +334,7 @@ function MobileNav() {
                 href={`/${params.locale}/contact`}
                 className="block p-3 hover:underline"
               >
-                Contact
+                {t('menu.contact')}
               </Link>
             </li>
             <li>
@@ -339,7 +343,16 @@ function MobileNav() {
                 href="https://form.jotform.com/ABMonlineforms/abm-further-education-application-f"
                 className="block p-3 hover:underline"
               >
-                Enrol Now
+                {t('enrolNow')}
+              </Link>
+            </li>
+            <li>
+              <Link
+                target="_blank"
+                href="/files/ABM_Brochure_2025_outlined_v2_web.pdf"
+                className="block p-3 hover:underline"
+              >
+                {t('downloadGuide')}
               </Link>
             </li>
           </ul>

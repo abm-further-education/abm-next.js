@@ -15,6 +15,13 @@ function ImageSlider() {
 
   // Fitness 관련 이미지들 (실제 이미지 경로로 수정 필요)
   const fitnessImages = [
+    '/campus/campus_1.png',
+    '/campus/campus_2.png',
+    '/campus/campus_3.png',
+    '/campus/campus_4.png',
+    '/campus/campus_5.png',
+    '/campus/campus_6.png',
+    '/campus/campus_7.png',
     '/courses/fitness/prac_1.jpg',
     '/courses/fitness/prac_2.png',
     '/courses/fitness/prac_3.png',

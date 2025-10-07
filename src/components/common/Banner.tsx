@@ -18,6 +18,11 @@ type Props = {
     title: string;
     content?: string;
     subtitle?: string;
+    linkButton?: {
+      href: string;
+      text: string;
+      target?: string;
+    };
   }[];
   dimmed?: React.ReactNode;
   isNeedContactBtn?: boolean;
@@ -83,13 +88,23 @@ function Banner({
                 )}
               </FadeInBottomToTop>
 
-              <Link
-                target="_blank"
-                href="/files/ABM_Brochure_2025_outlined_v2_web.pdf"
-                className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
-              >
-                DOWNLOAD 2025 International Student Guidebook
-              </Link>
+              {slide.linkButton ? (
+                <Link
+                  target={slide.linkButton.target || '_blank'}
+                  href={slide.linkButton.href}
+                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
+                >
+                  {slide.linkButton.text}
+                </Link>
+              ) : (
+                <Link
+                  target="_blank"
+                  href="/files/ABM_Brochure_2025_outlined_v2_web.pdf"
+                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
+                >
+                  DOWNLOAD 2025 International Student Guidebook
+                </Link>
+              )}
             </div>
           </SwiperSlide>
         ))}

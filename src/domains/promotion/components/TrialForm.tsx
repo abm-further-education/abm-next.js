@@ -3,8 +3,13 @@
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
+import DatePicker, { registerLocale } from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import './DatePicker.css';
+import { ko } from 'date-fns/locale';
 
 interface FormData {
+  type: string;
   date: string;
   name: string;
   email: string;
@@ -16,7 +21,17 @@ interface FormData {
 const TrialForm: React.FC = () => {
   const t = useTranslations('promotion');
   const router = useRouter();
+
+  // 현재 locale 감지
+  const currentLocale =
+    typeof window !== 'undefined'
+      ? window.location.pathname.split('/')[1] || 'en'
+      : 'en';
+
+  // 한국어 locale 등록
+  registerLocale('ko', ko);
   const [formData, setFormData] = useState<FormData>({
+    type: '',
     date: '',
     name: '',
     email: '',
@@ -24,19 +39,20 @@ const TrialForm: React.FC = () => {
     howDidYouFindUs: '',
     goal: '',
   });
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
 
-  // 월, 화, 수만 선택 가능한 날짜 생성
+  // 피트니스 트라이얼용: 월, 화, 수만 선택 가능한 날짜 생성 (오늘 제외)
   const getAvailableDates = () => {
     const dates = [];
     const today = new Date();
     const currentDate = new Date(today);
 
-    // 다음 4주 동안의 월, 화, 수 날짜 생성
-    for (let i = 0; i < 28; i++) {
+    // 다음 4주 동안의 월, 화, 수 날짜 생성 (오늘부터 1일 후부터 시작)
+    for (let i = 1; i < 29; i++) {
       currentDate.setDate(today.getDate() + i);
       const dayOfWeek = currentDate.getDay();
 
@@ -57,12 +73,80 @@ const TrialForm: React.FC = () => {
     return dates;
   };
 
+  // 캠퍼스 투어용: 최소 날짜와 최대 날짜 계산 (토, 일 제외)
+  const getDatePickerConstraints = () => {
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+
+    const maxDate = new Date(today);
+    maxDate.setDate(today.getDate() + 60); // 2개월 후까지
+
+    return {
+      min: tomorrow.toISOString().split('T')[0],
+      max: maxDate.toISOString().split('T')[0],
+    };
+  };
+
+  // 선택된 날짜가 주말인지 확인
+  const isWeekend = (dateString: string) => {
+    const date = new Date(dateString);
+    const dayOfWeek = date.getDay();
+    return dayOfWeek === 0 || dayOfWeek === 6; // 일요일(0) 또는 토요일(6)
+  };
+
+  // react-datepicker용 주말 필터링 함수
+  const isWeekendDate = (date: Date) => {
+    const dayOfWeek = date.getDay();
+    return dayOfWeek === 0 || dayOfWeek === 6; // 일요일(0) 또는 토요일(6)
+  };
+
+  // react-datepicker용 날짜 변경 핸들러
+  const handleDateChange = (date: Date | null) => {
+    setSelectedDate(date);
+    if (date) {
+      setFormData((prev) => ({
+        ...prev,
+        date: date.toISOString().split('T')[0],
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        date: '',
+      }));
+    }
+  };
+
   const handleInputChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
     const { name, value } = e.target;
+
+    // 타입이 변경되면 날짜 필드 초기화
+    if (name === 'type') {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+        date: '', // 타입 변경 시 날짜 초기화
+      }));
+      setSelectedDate(null); // react-datepicker 상태도 초기화
+      return;
+    }
+
+    // 캠퍼스 투어에서 날짜 선택 시 주말 체크
+    if (
+      name === 'date' &&
+      formData.type === 'campus-tour' &&
+      value &&
+      isWeekend(value)
+    ) {
+      // 주말 선택 시 경고 표시하고 값 설정하지 않음
+      alert('주말은 선택할 수 없습니다. 평일을 선택해주세요.');
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -72,6 +156,17 @@ const TrialForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // 캠퍼스 투어에서 주말 선택 시 추가 검증
+    if (
+      formData.type === 'campus-tour' &&
+      formData.date &&
+      isWeekend(formData.date)
+    ) {
+      alert('주말은 선택할 수 없습니다. 평일을 선택해주세요.');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       // API 호출하여 이메일 전송
@@ -86,6 +181,7 @@ const TrialForm: React.FC = () => {
       if (response.ok) {
         // Thank you 페이지로 리다이렉트 (폼 데이터를 URL 파라미터로 전달)
         const searchParams = new URLSearchParams({
+          type: formData.type,
           date: formData.date,
           name: formData.name,
           email: formData.email,
@@ -108,7 +204,11 @@ const TrialForm: React.FC = () => {
   };
 
   const isFormValid =
-    formData.date && formData.name && formData.email && formData.phone;
+    formData.type &&
+    formData.date &&
+    formData.name &&
+    formData.email &&
+    formData.phone;
 
   return (
     <div className="w-full">
@@ -121,6 +221,28 @@ const TrialForm: React.FC = () => {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-25">
+        {/* Type Selection */}
+        <div>
+          <label
+            htmlFor="type"
+            className="block text-sm font-medium text-gray-700 mb-10"
+          >
+            {t('typeLabel')} *
+          </label>
+          <select
+            id="type"
+            name="type"
+            value={formData.type}
+            onChange={handleInputChange}
+            required
+            className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
+          >
+            <option value="">{t('selectType')}</option>
+            <option value="campus-tour">{t('campusTour')}</option>
+            <option value="one-day-trial">{t('oneDayTrial')}</option>
+          </select>
+        </div>
+
         {/* Date Selection */}
         <div>
           <label
@@ -129,21 +251,45 @@ const TrialForm: React.FC = () => {
           >
             {t('dateLabel')} *
           </label>
-          <select
-            id="date"
-            name="date"
-            value={formData.date}
-            onChange={handleInputChange}
-            required
-            className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
-          >
-            <option value="">{t('selectDate')}</option>
-            {getAvailableDates().map((date) => (
-              <option key={date.value} value={date.value}>
-                {date.label}
-              </option>
-            ))}
-          </select>
+
+          {formData.type === 'campus-tour' ? (
+            // Campus Tour: React DatePicker (주말 제외)
+            <div>
+              <DatePicker
+                selected={selectedDate}
+                onChange={handleDateChange}
+                filterDate={(date) => !isWeekendDate(date)}
+                minDate={new Date(getDatePickerConstraints().min)}
+                maxDate={new Date(getDatePickerConstraints().max)}
+                dateFormat="yyyy-MM-dd"
+                placeholderText={t('selectDate')}
+                className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
+                wrapperClassName="w-full"
+                locale={currentLocale === 'kr' ? 'ko' : 'en'}
+                showPopperArrow={false}
+                popperPlacement="bottom-start"
+                required
+              />
+              <p className="text-xs text-gray-500 mt-5">{t('weekdaysOnly')}</p>
+            </div>
+          ) : (
+            // Fitness Trial: Dropdown (월, 화, 수만)
+            <select
+              id="date"
+              name="date"
+              value={formData.date}
+              onChange={handleInputChange}
+              required
+              className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
+            >
+              <option value="">{t('selectDate')}</option>
+              {getAvailableDates().map((date) => (
+                <option key={date.value} value={date.value}>
+                  {date.label}
+                </option>
+              ))}
+            </select>
+          )}
         </div>
 
         {/* Name */}
