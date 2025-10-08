@@ -14,12 +14,12 @@ interface PolicyDocument {
 const policyDocuments: PolicyDocument[] = [
   {
     title: 'International Student Handbook',
-    filename: 'International_Student_Handbook.pdf',
+    filename: 'International-student-handbook-V23.2.pdf',
     description: 'Comprehensive guide for international students',
   },
   {
     title: 'Course Credit Policy',
-    filename: 'Course_Credit_Policy.pdf',
+    filename: '2c.-Course-Credit-Policy-V22.1-1.pdf',
     description: 'Policy for course credit recognition and transfer',
   },
   {
@@ -29,37 +29,38 @@ const policyDocuments: PolicyDocument[] = [
   },
   {
     title: 'Student Support Services Policy',
-    filename: 'Student_Support_Services_Policy.pdf',
+    filename: '6a.-Student-Support-Services-Policy-22.1.pdf',
     description: 'Available support services for students',
   },
   {
     title: 'Critical Incident Policy',
-    filename: 'Critical_Incident_Policy.pdf',
+    filename: '6c.-Critical-Incident-Policy-22.1.pdf',
     description: 'Procedures for handling critical incidents',
   },
   {
     title: 'Deferring, Suspending or Cancelling the Student Enrolment Policy',
-    filename: 'Deferring_Suspending_Cancelling_Enrolment_Policy.pdf',
+    filename:
+      '9b.-Deferring-suspending-or-cancelling-the-students-enrolment-Policy.pdf',
     description: 'Policy for enrollment changes and cancellations',
   },
   {
     title: 'Fees and Refund Policy',
-    filename: 'Fees_and_Refund_Policy.pdf',
+    filename: 'Fees-and-Refund-Policy.pdf',
     description: 'General fees and refund procedures',
   },
   {
     title: 'Complaints and Appeals – International-Domestic-Staff',
-    filename: 'Complaints_and_Appeals_Policy.pdf',
+    filename: 'International-Student-Complaints-and-Appeals-Policy.pdf',
     description: 'Complaints and appeals procedures for all stakeholders',
   },
   {
     title: 'Attendance Policy',
-    filename: 'Attendance_Policy.pdf',
+    filename: 'Attendance-Policy.pdf',
     description: 'Student attendance requirements and monitoring',
   },
   {
     title: 'Privacy Policy',
-    filename: 'Privacy_Policy.pdf',
+    filename: 'Privacy-Policy-1.pdf',
     description: 'How we collect, use, and protect your personal information',
   },
 ];
@@ -69,17 +70,12 @@ export default function PoliciesPage() {
     // 실제 PDF 파일이 있다면 해당 경로로 수정
     const filePath = `/files/policies/${filename}`;
 
-    // 파일 다운로드 링크 생성
-    const link = document.createElement('a');
-    link.href = filePath;
-    link.download = filename;
-    link.target = '_blank';
-
-    // 파일이 존재하는지 확인 (실제 구현에서는 서버에서 확인)
+    // 파일이 존재하는지 확인 후 새 창에서 열기
     fetch(filePath, { method: 'HEAD' })
       .then((response) => {
         if (response.ok) {
-          link.click();
+          // 새 창에서 PDF 파일 열기
+          window.open(filePath, '_blank');
         } else {
           // 파일이 없는 경우 알림
           alert(
@@ -140,7 +136,7 @@ export default function PoliciesPage() {
                     className="flex items-center gap-10 px-20 py-12 bg-primary text-white  hover:bg-primary/90 transition-colors text-sm font-medium"
                   >
                     <Download size={16} />
-                    Download PDF
+                    View PDF
                   </button>
                 </div>
               ))}
