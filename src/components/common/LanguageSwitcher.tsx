@@ -5,7 +5,7 @@ import { Link as Linki18n } from '../../../i18n/routing';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { useParams } from 'next/navigation';
 
-const multilingual = ['en', 'kr', 'sp'];
+const multilingual = ['en', 'kr', 'sp', 'pt', 'jp'];
 
 export const languageFlags: { [key: string]: string } = {
   en: '🇺🇸',
