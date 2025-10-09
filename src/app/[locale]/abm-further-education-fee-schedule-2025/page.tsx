@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Banner from '@/components/common/Banner';
 import DownloadButton from '@/components/common/DownloadButton';
 import { getTranslations } from 'next-intl/server';
@@ -40,7 +41,7 @@ export default async function Page() {
             {t('paymentTitle')}
           </h2>
           <p className="text-gray-700 mb-10">{t('paymentDescription')}</p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 mb-20">
             {t('contactText')}{' '}
             <a
               href="mailto:accounts@abm.edu.au"
@@ -49,6 +50,18 @@ export default async function Page() {
               accounts@abm.edu.au
             </a>
           </p>
+
+          {/* Instalment Payment Option Button */}
+          <div className="text-center">
+            <Link
+              href="https://abm.edu.au/news/2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-white px-30 py-12 font-semibold hover:bg-primary-bk transition-colors duration-200"
+            >
+              View Direct Debit Instalment Plan Details
+            </Link>
+          </div>
         </div>
 
         {/* Other Fees Table */}
