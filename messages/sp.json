@@ -689,6 +689,32 @@
     "agentList": "Lista de Agentes",
     "abmPoliciesAndProcedures": "Políticas y Procedimientos de ABM"
   },
+  "healthPage": {
+    "metadata": {
+      "title": "Cursos de Salud y Bienestar | ABM Further Education",
+      "description": "Comienza tu carrera en salud con ABM Further Education. Explora nuestros cursos de salud y bienestar incluyendo el Certificado III en Asistencia de Servicios de Salud con apoyo integral y colocación laboral."
+    },
+    "bannerTitle": "Salud y Bienestar",
+    "heading": "Comienza tu Carrera\nGratificante en Salud",
+    "description": "Da tu primer paso hacia una carrera gratificante en salud con la Ruta de Carrera de Apoyo de Enfermería de ABM. Este programa integral está diseñado para estudiantes internacionales o nuevos participantes en el sector de salud que desean convertirse en trabajadores de apoyo calificados en hospitales y centros de atención para adultos mayores.",
+    "nursingSupport": "Ruta de Carrera de Apoyo de Enfermería",
+    "cert3Health": "HLT33115 Certificado III en Asistencia de Servicios de Salud",
+    "whyChoose": "¿Por qué elegir este programa?",
+    "realHealthcare": "Entornos de Salud Reales",
+    "realHealthcareDesc": "Completa 80 horas de colocación laboral en entornos de salud reales",
+    "workPlacement": "Apoyo de Colocación Laboral",
+    "workPlacementDesc": "Apoyo integral incluyendo acuerdos, supervisión y programación flexible",
+    "recognised": "Reconocido Nacionalmente",
+    "recognisedDesc": "Obtén una calificación reconocida nacionalmente que abre oportunidades de carrera",
+    "careerOpportunities": "Oportunidades de Carrera",
+    "ain": "Asistente de Enfermería (AIN)",
+    "healthServicesAssistant": "Asistente de Servicios de Salud",
+    "personalCareAssistant": "Asistente de Cuidado Personal",
+    "hospitalOrderly": "Ordenanza de Hospital",
+    "patientSupport": "Asistente de Apoyo al Paciente",
+    "supportWorker": "Trabajador de Apoyo",
+    "careWorker": "Trabajador de Cuidado"
+  },
   "fitnessPage": {
     "metadata": {
       "title": "Cursos de Fitness y Deportes | ABM Further Education",
