@@ -35,7 +35,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'bsb40120-certificate-iv-in-business': {
     courseCode: 'BSB40120',
-    cricosCode: '107906B',
+    cricosCode: '107908M',
     description:
       'Students participating in Certificate IV in Business will focus on building effective leadership and problem-solving capabilities crucial to success within a variety of business service job roles. Students pursuing a business-oriented career path will be armed with skills relating towards the completion of specialist and moderately complex administrative or operational tasks that will require advanced self-developmental skills. Upon the completion of Certificate IV in Business, you will be able to implement effective communication and problem-solving skills that will prove to be instrumental to their success within their chosen sector. Students will learn and implement a high level of skills and broad knowledge to apply solutions to a defined range of unpredictable complications and be able to concisely direct a team through any resolution proposed. Individuals with an aptitude for leadership and problem solving will be able to further their skills and learn key communication and problem-solving techniques to enable them to navigate a team through-out the many problems faced within the business environment.',
     duration: '52 weeks',

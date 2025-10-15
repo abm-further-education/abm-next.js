@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 import Button from '@/components/common/Button';
 
 import { useParams } from 'next/navigation';
-import { Book, Calendar, MapPin } from 'lucide-react';
+import { Book, Calendar, Info, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export interface CourseInformationInfo {
@@ -84,6 +84,15 @@ function CourseInformationContent({
 
         <div className="border p-20 border-neutral-200 h-max shadow-sm">
           <h2 className="text-xl font-bold mb-10">{t('overview')}</h2>
+          {courseInfo.cricosCode && (
+            <div className="mb-8 flex items-center gap-x-10">
+              <Info className="w-24 h-24 text-primary" />
+              <div className="flex gap-x-10">
+                <h3 className={titleStyle}>CRICOS Code</h3>
+                <span>{courseInfo.cricosCode}</span>
+              </div>
+            </div>
+          )}
           {courseInfo.duration && (
             <div className="mb-8 flex items-center gap-10">
               <Calendar className="w-24 h-24 text-primary" />
