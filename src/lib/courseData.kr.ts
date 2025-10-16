@@ -292,7 +292,7 @@ export const courseData: CourseData[] = [
     category: 'short-course-hospitality',
     type: 'short-course',
     duration: '1일',
-    price: 100,
+    price: 110,
     image: '/home/Cookery.png',
     link: '/cookery-and-hospitality-courses/fss',
     tags: ['food-safety', 'supervisor', 'certification', 'nsw'],
