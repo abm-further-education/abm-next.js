@@ -440,10 +440,9 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     description: `프랑스의 대표적인 페이스트리 두 가지, 밀푀유와 크로캉부슈(크로캉부슈)를 직접 만들어보고 집으로 가져가세요! 하이티, 생일, 특별한 날에 어울리는 이 페이스트리로 나만의 파티를 완성해보세요.`,
     images: [
       '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
+      '/short-course/pastries/pastries_2.png',
+      '/short-course/pastries/pastries_3.png',
+      '/short-course/pastries/pastries_4.png',
     ],
     dates: [
       {

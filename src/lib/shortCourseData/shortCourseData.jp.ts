@@ -460,10 +460,9 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
     description: `ミルフィーユとクロカンブッシュ（Croque en Bouche）の2品を制作し、お持ち帰り。アフタヌーンティーやバースデー、特別なイベントを上品に演出します。香ばしいパイ生地とバニラカスタードのミルフィーユ、キャラメルの糸で飾るシュー塔・クロカンブッシュは、結婚式や洗礼式でも主役級の華やかさです。`,
     images: [
       '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
+      '/short-course/pastries/pastries_2.png',
+      '/short-course/pastries/pastries_3.png',
+      '/short-course/pastries/pastries_4.png',
     ],
     dates: [
       {

@@ -525,10 +525,9 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     description: `Learn to create two iconic French pastries—Mille Feuille and Croque en Bouche (croquembouche) and take your delicious creations home to share! Whether it's a high tea, birthday, or any special event, these pastries will elevate your hosting game. Mille Feuille, with its layers of puff pastry and creamy vanilla custard, is perfect for afternoon teas and celebratory gatherings, while the stunning Croque en Bouche, a tower of profiteroles with caramel threads, is a show-stopper at weddings and christenings. Imagine your home filled with the irresistible aroma of buttery pastries, setting the perfect atmosphere for any occasion.`,
     images: [
       '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
+      '/short-course/pastries/pastries_2.png',
+      '/short-course/pastries/pastries_3.png',
+      '/short-course/pastries/pastries_4.png',
     ],
     dates: [
       {

@@ -454,10 +454,9 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
     description: `Aprenda a criar duas confeitarias francesas icônicas—Mille Feuille e Croque en Bouche (croquembouche) e leve suas criações deliciosas para casa para compartilhar! Seja um chá da tarde, aniversário ou qualquer evento especial, essas confeitarias elevarão seu jogo de hospedagem. O Mille Feuille, com suas camadas de massa folhada e creme de baunilha cremoso, é perfeito para chás da tarde e reuniões comemorativas, enquanto o deslumbrante Croque en Bouche, uma torre de profiteroles com fios de caramelo, é um show-stopper em casamentos e batizados. Imagine sua casa cheia do aroma irresistível de confeitarias amanteigadas, criando a atmosfera perfeita para qualquer ocasião.`,
     images: [
       '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
-      '/short-course/classic_french_pastries_1.png',
+      '/short-course/petit/petit_2.png',
+      '/short-course/petit/petit_3.png',
+      '/short-course/petit/petit_4.png',
     ],
     dates: [
       {

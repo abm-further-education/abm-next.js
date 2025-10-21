@@ -623,10 +623,10 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
     title: 'Masterclass de Pastelería 🥧',
     description: `¿Te encanta hornear pero nunca has intentado hacer pasteles? ¡Esta clase es para ti! Ya seas principiante o con ganas de explorar la pastelería, este masterclass práctico te enseñará todas las técnicas esenciales para crear pasteles impresionantes.`,
     images: [
-      '/short-course/pastries/pastries_1.png',
-      '/short-course/pastries/pastries_2.png',
-      '/short-course/pastries/pastries_3.png',
-      '/short-course/pastries/pastries_4.png',
+      '/short-course/classic_french_pastries_1.png',
+      '/short-course/petit/petit_2.png',
+      '/short-course/petit/petit_3.png',
+      '/short-course/petit/petit_4.png',
     ],
     courseDeliveryLabel: 'Entrega del Curso:',
     courseDelivery:
