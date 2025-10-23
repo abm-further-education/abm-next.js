@@ -5,13 +5,18 @@ import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { fitnessTestimonials } from '@/lib/testimonial';
 
 export default function StudentInsightsClient() {
   const t = useTranslations('studentInsights');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  // Testimonial images array
-  const testimonialImages = Array.from({ length: 25 }, (_, i) => i + 1).sort(
+  // Testimonial images array - 기존 25개 + fitness 2개
+  const regularTestimonials = Array.from({ length: 26 }, (_, i) => i + 1);
+  const fitnessImages = fitnessTestimonials.map(
+    (testimonial) => testimonial.image
+  );
+  const allTestimonialImages = [...regularTestimonials, ...fitnessImages].sort(
     () => Math.random() - 0.5
   );
 
@@ -26,7 +31,7 @@ export default function StudentInsightsClient() {
   const nextImage = () => {
     if (selectedImage !== null) {
       setSelectedImage(
-        selectedImage === testimonialImages.length ? 1 : selectedImage + 1
+        selectedImage === allTestimonialImages.length ? 1 : selectedImage + 1
       );
     }
   };
@@ -34,7 +39,7 @@ export default function StudentInsightsClient() {
   const prevImage = () => {
     if (selectedImage !== null) {
       setSelectedImage(
-        selectedImage === 1 ? testimonialImages.length : selectedImage - 1
+        selectedImage === 1 ? allTestimonialImages.length : selectedImage - 1
       );
     }
   };
@@ -78,19 +83,23 @@ export default function StudentInsightsClient() {
 
           {/* Image Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20">
-            {testimonialImages.map((imageNumber) => (
+            {allTestimonialImages.map((imagePath, index) => (
               <div
-                key={imageNumber}
+                key={index}
                 className="relative group cursor-pointer overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                onClick={() => openModal(imageNumber)}
+                onClick={() => openModal(index + 1)}
               >
                 <Image
-                  src={`/testimonials/${imageNumber}.png`}
-                  alt={t('testimonialImageAlt', { number: imageNumber })}
+                  src={
+                    typeof imagePath === 'number'
+                      ? `/testimonials/${imagePath}.png`
+                      : imagePath
+                  }
+                  alt={t('testimonialImageAlt', { number: index + 1 })}
                   width={300}
                   height={250}
                   className="w-full h-200 md:h-250 object-cover"
-                  priority={imageNumber <= 8}
+                  priority={index <= 8}
                 />
                 <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
@@ -146,7 +155,13 @@ export default function StudentInsightsClient() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={`/testimonials/${selectedImage}.png`}
+              src={
+                typeof allTestimonialImages[selectedImage - 1] === 'number'
+                  ? `/testimonials/${
+                      allTestimonialImages[selectedImage - 1]
+                    }.png`
+                  : (allTestimonialImages[selectedImage - 1] as string)
+              }
               alt={t('testimonialImageAlt', { number: selectedImage })}
               width={800}
               height={600}
@@ -156,7 +171,7 @@ export default function StudentInsightsClient() {
 
             {/* Image Counter */}
             <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-20 py-10">
-              {selectedImage} / {testimonialImages.length}
+              {selectedImage} / {allTestimonialImages.length}
             </div>
           </div>
         </div>

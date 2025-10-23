@@ -4,14 +4,22 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { Star } from 'lucide-react';
 
 import 'swiper/css';
-import { testimonials } from '@/lib/testimonial';
+import { testimonials, fitnessTestimonials } from '@/lib/testimonial';
 
 function MiniTestimonial() {
   const router = useRouter();
+  const pathname = usePathname();
+
+  // fitness나 sport가 경로에 포함되어 있으면 fitnessTestimonials 사용
+  const isFitnessOrSport =
+    pathname.includes('fitness') || pathname.includes('sport');
+  const currentTestimonials = isFitnessOrSport
+    ? fitnessTestimonials
+    : testimonials;
 
   const handleClick = () => {
     router.push('/abm-student-insights');
@@ -29,7 +37,7 @@ function MiniTestimonial() {
         }}
         loop={true}
       >
-        {testimonials.map((testimonial) => (
+        {currentTestimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
             <div onClick={handleClick} className="cursor-pointer px-20 pt-6">
               {/* Profile Image */}

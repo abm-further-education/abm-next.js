@@ -1,11 +1,11 @@
 export const testimonials = [
   {
     id: 1,
-    name: 'Changhui Seo',
-    image: '/testimonials/1.png',
+    name: 'Janghun Seo',
+    image: '/testimonials/26.png',
     rating: 5,
     message:
-      'I learned many new things, making it both exciting and challenging.',
+      'This is my first time learning cooking, and the teachers are very kind. In practical class, the roles are well organised, so it\u2019s easy to follow. I\u2019ve been studying for 6 months now. Making bread, scones, salads, and learning different knife skills is intersting and fun. The theory is a bit difficult, but it\u2019s very helpfulå.',
   },
   {
     id: 2,
@@ -57,5 +57,22 @@ export const testimonials = [
     image: '/testimonials/8.png',
     rating: 5,
     message: 'My studies have been amazing.',
+  },
+];
+
+export const fitnessTestimonials = [
+  {
+    id: 10,
+    name: 'Ronald',
+    image: '/testimonials/fitness/1.png',
+    rating: 5,
+    message: `I chose to study Fitness because it\u2019s been my passion for years, and I wanted to do something I truly love. I\u2019ve learned a lot about my body\u2019s limits and how to help others reach theirs too. ABM\u2019s experienced trainers and hands-on learning have made me more confident and skilled. I\u2019m ready to start working with my own clients when I return home this November and share everything I\u2019ve learned from ABM and Australia.`,
+  },
+  {
+    id: 20,
+    name: 'Diana',
+    image: '/testimonials/fitness/2.png',
+    rating: 5,
+    message: `I chose the Fitness course at ABM because I wanted to study something I truly enjoy. I love working out, and ABM stood out as one of the few colleges offering face-to-face classes. I prefer in-person learning because I enjoy doing activities with other students. My trainers, Jonathon and Brayden, always give clear examples and keep us engaged. I also love that we regularly go to the gym and apply what we learn in class to real practice.`,
   },
 ];
