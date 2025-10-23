@@ -66,7 +66,7 @@ function MiniTestimonial() {
 
               {/* Review Message */}
               <div className="text-center">
-                <p className="text-sm text-white mb-10">
+                <p className="text-sm text-white mb-10 line-clamp-3">
                   &quot;{testimonial.message}&quot;
                 </p>
                 <p className="text-xs text-gray-50 font-medium">
