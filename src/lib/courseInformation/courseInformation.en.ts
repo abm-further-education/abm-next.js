@@ -136,7 +136,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:
-      "Are you ready to take your cookery skills to the next level?\n\nAt ABM Further Education, we offer a Certificate IV in Kitchen Management that combines academic learning with practical experience. You will have the opportunity to work in real commercial kitchens, such as restaurants, hotels, and aged care facilities, and learn from the best in the industry.\n\nAs part of your course, you will need to complete a mandatory work placement at the end of term 5 and throughout term 6. This is not just a requirement, but a chance for you to apply what you have learned in the classroom and gain valuable insights into the culinary world. You will be able to work the required hours in addition to your student visa requirements, so you don't have to worry about that.\n\nDuring the work placement period, you will need to complete 60 shifts and a total of 30 hours per week. You will also need to complete two units of competency that will help you work effectively as a cook and coordinate cooking operations.",
+      "Are you ready to take your cookery skills to the next level?\n\nAt ABM Further Education, we offer a Certificate IV in Kitchen Management that combines academic learning with practical experience. You will have the opportunity to work in real commercial kitchens, such as restaurants, hotels, and aged care facilities, and learn from the best in the industry.\n\nAs part of your course, you will need to complete a mandatory work placement at the end of term 5 and throughout term 6. This is not just a requirement, but a chance for you to apply what you have learned in the classroom and gain valuable insights into the culinary world. You will be able to work the required hours in addition to your student visa requirements, so you don't have to worry about that.\n\nDuring the work placement period, you will need to complete a total of 600 hours of work placement. You will also need to complete two units of competency that will help you work effectively as a cook and coordinate cooking operations.",
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face + Industry Placement',
@@ -165,68 +165,32 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'We encourage you to find your own work placement that suits your interests and goals, but we are also here to support you if you need any assistance. We have strong connections with various industry partners who are always looking for talented and motivated students like you.\n\nWe believe that this work placement is a key component of your course that will prepare you for the challenges and opportunities of the cookery industry. You will not only improve your culinary skills, but also develop your confidence, communication, and teamwork abilities. This is your chance to shine and show the world what you can do!',
     },
     tables: [
+      // {
+      //   headers: [
+      //     'Unit Code',
+      //     'Unit Name',
+      //     'Number of Service Periods',
+      //     'Total hours',
+      //   ],
+      //   rows: [
+      //     ['SITHCCC043', 'Work effectively as a cook', '48', '288 hours'],
+      //     ['SITHKOP013', 'Coordinate cooking operations', '12', '72 hours'],
+      //   ],
+      // },
       {
-        headers: [
-          'Unit Code',
-          'Unit Name',
-          'Number of Service Periods',
-          'Total hours',
-        ],
+        headers: ['Term', '', 'Industry Placement Hours'],
         rows: [
-          ['SITHCCC043', 'Work effectively as a cook', '48', '288 hours'],
-          ['SITHKOP013', 'Coordinate cooking operations', '12', '72 hours'],
-        ],
-      },
-      {
-        headers: [
-          'Course',
-          'Term',
-          'Learning Method',
-          'Industry Placement Hours',
-        ],
-        rows: [
+          ['Term 1', 'Week 1–10: Theory + Practical Class', 'Nil'],
+          ['Term 2', 'Week 1–10: Theory + Practical Class', 'Nil'],
           [
-            'Certificate IV in Kitchen Management',
-            'Term 1',
-            'Week 1–10: Theory + Practical Class',
-            'Nil',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Term 2',
-            'Week 1–10: Theory + Practical Class',
-            'Nil',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
             'Term 3',
-            'Week 1–10: Theory + Practical Class',
-            'Nil',
+            'Week 1–5: Theory + Practical Class',
+            'Week 6–10: 16 hours each week',
           ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Term 4',
-            'Week 1–10: Theory + Practical Class',
-            'Nil',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Term 5',
-            'Week 9: Induction & Theory (5h) + Work Placement (6h × 5)\nWeek 10: Work Placement (6h × 5)',
-            '(SITHCCC043) Work effectively as a cook\n• Week 9 = 30h\n• Week 10 = 30h',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Term 6',
-            'Week 1–10: Work Placement (6h × 5 shifts)',
-            '(SITHCCC043) Work effectively as a cook: 38 × 6 = 228h\n(SITHKOP013) Plan cooking operations: 12 × 6 = 72h',
-          ],
-          [
-            'Total',
-            '',
-            '60 weeks teaching period + 18 weeks break = 78 weeks',
-            'Total: 360 hours',
-          ],
+          ['Term 4', '-', '16 hours each week'],
+          ['Term 5', '-', '16 hours each week'],
+          ['Term 6', '-', '20 hours each week'],
+          ['Total', '-', '600 hours'],
         ],
       },
     ],
