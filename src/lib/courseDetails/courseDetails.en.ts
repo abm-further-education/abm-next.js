@@ -13,7 +13,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     workPlacement: {
       title: 'Work Placement',
-      description: '360 hours',
+      description: '600 hours',
     },
     studentSupport: {
       title: 'Student Support',

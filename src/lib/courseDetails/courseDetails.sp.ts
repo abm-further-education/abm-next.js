@@ -13,7 +13,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     },
     workPlacement: {
       title: 'Prácticas Laborales',
-      description: '360 horas',
+      description: '600 horas',
     },
     studentSupport: {
       title: 'Apoyo Estudiantil',

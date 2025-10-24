@@ -12,7 +12,7 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     },
     workPlacement: {
       title: '현장 실습',
-      description: '360시간',
+      description: '600시간',
     },
     studentSupport: {
       title: '학생 지원',

@@ -13,7 +13,7 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
     },
     workPlacement: {
       title: 'Estágio',
-      description: '360 horas',
+      description: '600 horas',
     },
     studentSupport: {
       title: 'Apoio ao Estudante',

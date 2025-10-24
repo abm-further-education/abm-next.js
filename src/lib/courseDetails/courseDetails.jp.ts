@@ -13,7 +13,7 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
     },
     workPlacement: {
       title: '実習（ワークプレースメント）',
-      description: '360時間',
+      description: '600時間',
     },
     studentSupport: {
       title: '学生サポート',

@@ -237,7 +237,7 @@ export const courseInformationData_pt: {
             'Total',
             '',
             '60 semanas letivas + 18 semanas de recesso = 78 semanas',
-            'Total: 360 horas',
+            'Total: 600 horas',
           ],
         ],
       },

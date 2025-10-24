@@ -246,7 +246,7 @@ export const courseInformationData_sp: {
             'Total',
             '',
             '60 semanas de enseñanza + 18 semanas de descanso = 78 semanas',
-            'Total: 360 horas',
+            'Total: 600 horas',
           ],
           [
             'Diplomado en Gestión de Hospitalidad',
