@@ -180,8 +180,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       {
         headers: ['Term', '', 'Industry Placement Hours'],
         rows: [
-          ['Term 1', 'Week 1–10: Theory + Practical Class', 'Nil'],
-          ['Term 2', 'Week 1–10: Theory + Practical Class', 'Nil'],
+          ['Term 1', 'Week 1–10: Theory + Practical Class', 'N/A'],
+          ['Term 2', 'Week 1–10: Theory + Practical Class', 'N/A'],
           [
             'Term 3',
             'Week 1–5: Theory + Practical Class',
