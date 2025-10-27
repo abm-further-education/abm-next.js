@@ -806,7 +806,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Course Duration',
       description:
-        'The Advanced Diploma of Project Management Practice is offered over 18 months, equating to 78 weeks, including 18 weeks of holidays. This will be split into six 10-week terms.',
+        'The Advanced Diploma of Program Management is offered over 18 months, equating to 78 weeks, including 18 weeks of holidays. This will be split into six 10-week terms.',
     },
     studentSupport: {
       title: 'Student Support',

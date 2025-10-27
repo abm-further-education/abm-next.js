@@ -840,7 +840,7 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: '受講期間',
       description:
-        '「Advanced Diploma of Project Management Practice」は総期間18か月（78週間、うち休暇18週間）。10週間×6学期に分割して実施します。',
+        '「Advanced Diploma of Program Management」は総期間18か月（78週間、うち休暇18週間）。10週間×6学期に分割して実施します。',
     },
     studentSupport: {
       title: '学生サポート',
