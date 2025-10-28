@@ -21,7 +21,7 @@ function FitnessPage() {
       <Banner
         slides={[
           {
-            imgPath: '/courses/fitness/fitness_1.png',
+            imgPath: '/courses/fitness/ABM_Fitness_Photos_12.jpg',
             title: t('bannerTitle'),
             content: '',
           },

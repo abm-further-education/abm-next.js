@@ -67,7 +67,7 @@ function Banner({
                 src={slide.imgPath}
                 alt="banner_image"
                 fill
-                className="md:object-top object-cover"
+                className="md:object-center object-cover"
               />
             )}
 

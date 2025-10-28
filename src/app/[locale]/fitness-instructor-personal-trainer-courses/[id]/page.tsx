@@ -23,13 +23,15 @@ const mappingCourseTitle: { [key: string]: string } = {
 };
 
 const mappingCourseImage: { [key: string]: string } = {
-  'sis30321-certificate-iii-in-fitness': '/courses/fitness/fitness_1.png',
-  'sis40221-certificate-iv-in-fitness': '/courses/fitness/fitness_5-banner.png',
+  'sis30321-certificate-iii-in-fitness':
+    '/courses/fitness/ABM_Fitness_Photos_13.jpg',
+  'sis40221-certificate-iv-in-fitness':
+    '/courses/fitness/ABM_Fitness_Photos_10.jpg',
   'sis50321-diploma-of-sport': '/courses/fitness/diploma-of-sport.png',
   'certificate-iv-in-fitness-fast-track':
-    '/courses/fitness/fitness_3-banner.png',
+    '/courses/fitness/ABM_Fitness_Photos_9.jpg',
   'certificate-iii-in-fitness-fast-track':
-    '/courses/fitness/fitness_2-banner.png',
+    '/courses/fitness/ABM_Fitness_Photos_11.jpg',
 };
 
 export default function Page({

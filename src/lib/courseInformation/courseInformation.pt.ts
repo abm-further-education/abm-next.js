@@ -143,7 +143,7 @@ export const courseInformationData_pt: {
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:
-      'Pronto para levar suas habilidades de cozinha ao próximo nível?\n\nNa ABM Further Education, oferecemos o Certificado IV em Gestão de Cozinha que combina aprendizado acadêmico com experiência prática. Você terá a oportunidade de trabalhar em cozinhas comerciais reais — como restaurantes, hotéis e instituições de cuidados a idosos — e aprender com os melhores do setor.\n\nComo parte do curso, é necessário concluir um estágio obrigatório no final do período 5 e ao longo do período 6. Isso não é apenas uma exigência, mas uma chance de aplicar o que foi aprendido em sala de aula e obter insights valiosos do mundo culinário. Você poderá cumprir as horas exigidas além dos requisitos do visto de estudante.\n\nDurante o período de estágio, será necessário completar 60 turnos e um total de 30 horas por semana. Também será preciso concluir duas unidades de competência que o ajudarão a atuar efetivamente como cozinheiro e a coordenar operações de cozinha.',
+      'Pronto para levar suas habilidades culinárias ao próximo nível?\n\nNa ABM Further Education, reconhecemos que a experiência real da indústria é tão importante quanto o aprendizado teórico e prático na cozinha.\n\nO Certificate IV in Kitchen Management prepara os alunos para funções de supervisão e liderança em cozinhas comerciais, combinando aprendizado em sala de aula com experiência prática extensiva. Os alunos terão a oportunidade de treinar em ambientes reais de hospitalidade, como restaurantes, hotéis e instituições de cuidados a idosos, orientados por profissionais experientes da indústria.\n\nPara fortalecer a empregabilidade e garantir prontidão para a carreira, o curso agora inclui 600 horas de estágio estruturado na indústria, começando no Termo 3.\n\nA partir do Termo 3, os alunos podem completar até 16 horas adicionais por semana, e a partir do Termo 6, até 20 horas adicionais por semana como parte de seu estágio na indústria. Esta estrutura aprimorada permite que os alunos apliquem seu aprendizado em sala de aula em locais de trabalho reais, desenvolvendo habilidades essenciais, confiança e uma compreensão mais profunda das operações de cozinha.\n\nEssas horas de estágio na indústria são um componente obrigatório da qualificação e formam uma parte integral do compromisso da ABM de fornecer educação prática e focada na carreira.',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial + Estágio na Indústria',
@@ -172,73 +172,32 @@ export const courseInformationData_pt: {
         'Incentivamos você a encontrar um estágio alinhado aos seus interesses e objetivos, mas também oferecemos suporte quando necessário. Temos fortes conexões com diversos parceiros do setor que buscam estudantes talentosos e motivados como você.\n\nAcreditamos que este estágio é um componente essencial do seu curso e o preparará para os desafios e oportunidades da indústria culinária. Além de aprimorar suas habilidades técnicas, você desenvolverá confiança, comunicação e trabalho em equipe. É a sua chance de brilhar e mostrar do que é capaz!',
     },
     tables: [
+      // {
+      //   headers: [
+      //     'Código da Unidade',
+      //     'Nome da Unidade',
+      //     'Número de Períodos de Serviço',
+      //     'Total de horas',
+      //   ],
+      //   rows: [
+      //     ['SITHCCC043', 'Trabalhar de forma eficaz como cozinheiro', '48', '288 horas'],
+      //     ['SITHKOP013', 'Coordenar operações de cozinha', '12', '72 horas'],
+      //   ],
+      // },
       {
-        headers: [
-          'Código da Unidade',
-          'Nome da Unidade',
-          'Número de Períodos de Serviço',
-          'Total de horas',
-        ],
+        headers: ['Termo', '', 'Horas de Estágio na Indústria'],
         rows: [
+          ['Termo 1', 'Semanas 1–10: Teoria + Aula Prática', 'N/A'],
+          ['Termo 2', 'Semanas 1–10: Teoria + Aula Prática', 'N/A'],
           [
-            'SITHCCC043',
-            'Trabalhar de forma eficaz como cozinheiro',
-            '48',
-            '288 horas',
-          ],
-          ['SITHKOP013', 'Coordenar operações de cozinha', '12', '72 horas'],
-        ],
-      },
-      {
-        headers: [
-          'Curso',
-          'Termo',
-          'Método de Aprendizagem',
-          'Horas de Estágio',
-        ],
-        rows: [
-          [
-            'Certificate IV in Kitchen Management',
-            'Termo 1',
-            'Semanas 1–10: Teoria + Aula Prática',
-            'Nenhuma',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Termo 2',
-            'Semanas 1–10: Teoria + Aula Prática',
-            'Nenhuma',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
             'Termo 3',
-            'Semanas 1–10: Teoria + Aula Prática',
-            'Nenhuma',
+            'Semanas 1–5: Teoria + Aula Prática',
+            'Semanas 6–10: 16 horas por semana',
           ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Termo 4',
-            'Semanas 1–10: Teoria + Aula Prática',
-            'Nenhuma',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Termo 5',
-            'Semana 9: Indução & Teoria (5h) + Estágio (6h × 5)\nSemana 10: Estágio (6h × 5)',
-            '(SITHCCC043) Trabalhar de forma eficaz como cozinheiro\n• Semana 9 = 30h\n• Semana 10 = 30h',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            'Termo 6',
-            'Semanas 1–10: Estágio (6h × 5 turnos)',
-            '(SITHCCC043) Trabalhar de forma eficaz como cozinheiro: 38 × 6 = 228h\n(SITHKOP013) Planejar operações de cozinha: 12 × 6 = 72h',
-          ],
-          [
-            'Total',
-            '',
-            '60 semanas letivas + 18 semanas de recesso = 78 semanas',
-            'Total: 600 horas',
-          ],
+          ['Termo 4', '-', '16 horas por semana'],
+          ['Termo 5', '-', '16 horas por semana'],
+          ['Termo 6', '-', '20 horas por semana'],
+          ['Total', '-', '600 horas'],
         ],
       },
     ],
@@ -269,7 +228,7 @@ export const courseInformationData_pt: {
       },
       {
         name: 'ICC Sydney',
-        desc: 'O International Convention Centre Sydney é o principal local da Austrália para convenções e eventos, em Darling Harbour, com instalações de ponta e vistas à beira-mar.',
+        desc: 'O International Convention Centre Sydney (ICC Sydney) é o principal local da Austrália para convenções, exposições e eventos. Localizado em Darling Harbour, oferece instalações de última geração e espaços versáteis para eventos com vistas deslumbrantes para o porto. Renomado por sustentabilidade e serviço excepcional, o ICC Sydney é perfeito para eventos de todos os tamanhos. Sua localização privilegiada oferece fácil acesso às principais atrações de Sydney.',
       },
       {
         name: 'Industry Placement Solutions',
