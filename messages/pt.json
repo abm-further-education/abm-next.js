@@ -543,6 +543,10 @@
       "graduateDiploma": {
         "code": "BSB80120 Graduate Diploma of Management (Learning)",
         "requirement": "Os alunos devem ter concluído curso de nível Advanced Diploma (AQF Nível 6) ou superior."
+      },
+      "healthServicesAssistance": {
+        "code": "HLT33115 Certificate III in Health Services Assistance",
+        "requirement": "Os alunos devem ter pelo menos 18 anos na data de início do curso.\nIELTS 5.5 ou equivalente, se o aluno tiver IELTS 4.5 ou equivalente através do ABM EPT, matricular-se com Plus Nursing English.\nO aluno deve ter concluído o equivalente ao Year 10"
       }
     }
   },

@@ -547,6 +547,10 @@
       "graduateDiploma": {
         "code": "BSB80120 Diploma de Posgrado en Gestión (Aprendizaje)",
         "requirement": "Los estudiantes deben haber completado un curso de nivel Diploma Avanzado (Nivel AQF 6) o superior. El estudiante debe haber completado el equivalente al Año 12"
+      },
+      "healthServicesAssistance": {
+        "code": "HLT33115 Certificate III in Health Services Assistance",
+        "requirement": "Los estudiantes deben tener al menos 18 años al momento del inicio del curso.\nIELTS 5.5 o equivalente, si el estudiante tiene IELTS 4.5 o equivalente a través de ABM EPT, inscribirse con Plus Nursing English.\nEl estudiante debe haber completado el equivalente al Año 10"
       }
     }
   },

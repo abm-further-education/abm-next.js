@@ -554,6 +554,10 @@
       "graduateDiploma": {
         "code": "BSB80120 매니지먼트 대학원 디플로마 (학습)",
         "requirement": "학생들은 고급 디플로마 수준 과정(AQF 레벨 6) 이상을 완료해야 합니다. 학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"
+      },
+      "healthServicesAssistance": {
+        "code": "HLT33115 헬스 서비스 어시스턴트 수료증 III",
+        "requirement": "학생은 과정 시작 시 최소 18세 이상이어야 합니다.\nIELTS 5.5 또는 이에 상응하는 점수, 학생이 ABM EPT를 통해 IELTS 4.5 또는 이에 상응하는 점수를 받은 경우, Plus Nursing English와 함께 등록해야 합니다.\n학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
       }
     }
   },

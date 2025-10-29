@@ -543,6 +543,10 @@
       "graduateDiploma": {
         "code": "BSB80120 Graduate Diploma of Management (Learning)",
         "requirement": "Advanced Diploma（AQF6）以上の修了"
+      },
+      "healthServicesAssistance": {
+        "code": "HLT33115 Certificate III in Health Services Assistance",
+        "requirement": "入学時点で18歳以上であること。\nIELTS 5.5相当、ABM EPTでIELTS 4.5相当の場合はPlus Nursing Englishと併せて登録。\nYear 10修了相当"
       }
     }
   },
