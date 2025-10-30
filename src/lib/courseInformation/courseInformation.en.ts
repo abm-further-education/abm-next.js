@@ -180,17 +180,25 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       {
         headers: ['Term', '', 'Industry Placement Hours'],
         rows: [
-          ['Term 1', 'Week 1–10: Theory + Practical Class', 'N/A'],
-          ['Term 2', 'Week 1–10: Theory + Practical Class', 'N/A'],
+          ['Term 1', 'Theory + Practical Class', 'N/A'],
+          ['Term 2', 'Theory + Practical Class', 'N/A'],
           [
             'Term 3',
-            'Week 1–5: Theory + Practical Class',
-            'Week 6–10: 16 hours each week',
+            'Theory + Practical Class',
+            'additional 16 hours each week',
           ],
-          ['Term 4', '-', '16 hours each week'],
-          ['Term 5', '-', '16 hours each week'],
+          [
+            'Term 4',
+            'Theory + Practical Class',
+            'additional 16 hours each week',
+          ],
+          [
+            'Term 5',
+            'Theory + Practical Class',
+            'additional 16 hours each week',
+          ],
           ['Term 6', '-', '20 hours each week'],
-          ['Total', '-', '600 hours'],
+          ['Total', 'Theory + Practical Class', '600 hours'],
         ],
       },
     ],
