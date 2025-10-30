@@ -171,68 +171,28 @@ export const courseInformationData_jp: {
         'ご自身の興味や目標に合うワークプレースメントを見つけることを推奨しますが、必要なサポートも提供します。ABM は業界パートナーとの強いつながりを持ち、意欲ある学生を支援しています。\n\nこのワークプレースメントは、調理業界の課題と機会に備えるための重要な要素です。単なる調理技術の向上だけでなく、信頼、自信、コミュニケーション、チームワーク能力を発展させる機会でもあります。自身の能力を示すチャンスです！',
     },
     tables: [
+      // {
+      //   headers: [
+      //     'ユニット コード',
+      //     'ユニット名',
+      //     'サービス実施回数',
+      //     '合計時間',
+      //   ],
+      //   rows: [
+      //     ['SITHCCC043', 'Work effectively as a cook', '48', '288時間'],
+      //     ['SITHKOP013', 'Coordinate cooking operations', '12', '72時間'],
+      //   ],
+      // },
       {
-        headers: [
-          'ユニット コード',
-          'ユニット名',
-          'サービス実施回数',
-          '合計時間',
-        ],
+        headers: ['学期', '', 'インダストリープレースメント時間'],
         rows: [
-          ['SITHCCC043', 'Work effectively as a cook', '48', '288時間'],
-          ['SITHKOP013', 'Coordinate cooking operations', '12', '72時間'],
-        ],
-      },
-      {
-        headers: [
-          'コース',
-          '学期',
-          '学習方式',
-          'インダストリープレースメント時間',
-        ],
-        rows: [
-          [
-            'Certificate IV in Kitchen Management',
-            '学期1',
-            '週1–10：理論＋実技授業',
-            'なし',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            '学期2',
-            '週1–10：理論＋実技授業',
-            'なし',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            '学期3',
-            '週1–10：理論＋実技授業',
-            'なし',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            '学期4',
-            '週1–10：理論＋実技授業',
-            'なし',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            '学期5',
-            '週9：導入＋理論（5h）＋ワークプレースメント（6h × 5回）\n週10：ワークプレースメント（6h × 5回）',
-            '(SITHCCC043) Work effectively as a cook\n・週9 = 30時間\n・週10 = 30時間',
-          ],
-          [
-            'Certificate IV in Kitchen Management',
-            '学期6',
-            '週1–10：ワークプレースメント（6h × 5シフト）',
-            '(SITHCCC043) Work effectively as a cook: 38 × 6 = 228時間\n(SITHKOP013) Coordinate cooking operations: 12 × 6 = 72時間',
-          ],
-          [
-            '合計',
-            '',
-            '60週間の授業期間 + 18週間の休暇 = 78週間',
-            '合計：600時間',
-          ],
+          ['学期1', '理論＋実技授業', 'N/A'],
+          ['学期2', '理論＋実技授業', 'N/A'],
+          ['学期3', '理論＋実技授業', '週16時間追加'],
+          ['学期4', '理論＋実技授業', '週16時間追加'],
+          ['学期5', '理論＋実技授業', '週16時間追加'],
+          ['学期6', '-', '週20時間'],
+          ['合計', '理論＋実技授業', '600時間'],
         ],
       },
     ],

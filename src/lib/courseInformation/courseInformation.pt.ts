@@ -187,17 +187,25 @@ export const courseInformationData_pt: {
       {
         headers: ['Termo', '', 'Horas de Estágio na Indústria'],
         rows: [
-          ['Termo 1', 'Semanas 1–10: Teoria + Aula Prática', 'N/A'],
-          ['Termo 2', 'Semanas 1–10: Teoria + Aula Prática', 'N/A'],
+          ['Termo 1', 'Teoria + Aula Prática', 'N/A'],
+          ['Termo 2', 'Teoria + Aula Prática', 'N/A'],
           [
             'Termo 3',
-            'Semanas 1–5: Teoria + Aula Prática',
-            'Semanas 6–10: 16 horas por semana',
+            'Teoria + Aula Prática',
+            '16 horas adicionais por semana',
           ],
-          ['Termo 4', '-', '16 horas por semana'],
-          ['Termo 5', '-', '16 horas por semana'],
+          [
+            'Termo 4',
+            'Teoria + Aula Prática',
+            '16 horas adicionais por semana',
+          ],
+          [
+            'Termo 5',
+            'Teoria + Aula Prática',
+            '16 horas adicionais por semana',
+          ],
           ['Termo 6', '-', '20 horas por semana'],
-          ['Total', '-', '600 horas'],
+          ['Total', 'Teoria + Aula Prática', '600 horas'],
         ],
       },
     ],
