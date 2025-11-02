@@ -27,66 +27,32 @@ interface GooglePlacesResponse {
 const GOOGLE_PLACES_ENDPOINT =
   'https://maps.googleapis.com/maps/api/place/details/json';
 
+let cached: any = null;
+let lastFetched = 0;
+
 export async function GET() {
-  try {
-    const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-    const placeId = process.env.GOOGLE_PLACE_ID;
+  const now = Date.now();
+  const ONE_DAY = 1000 * 60 * 60 * 24;
 
-    if (!apiKey || !placeId) {
-      return NextResponse.json(
-        { error: 'Missing GOOGLE_PLACES_API_KEY or GOOGLE_PLACE_ID' },
-        { status: 500 }
-      );
-    }
-
-    const url = new URL(GOOGLE_PLACES_ENDPOINT);
-    url.searchParams.set('place_id', placeId);
-    // include rating & user_ratings_total so we can render the badge layout
-    url.searchParams.set(
-      'fields',
-      'reviews,rating,user_ratings_total,name,url'
-    );
-    url.searchParams.set('key', apiKey);
-
-    const res = await fetch(url.toString(), { cache: 'no-store' });
-    const data: GooglePlacesResponse = await res.json();
-
-    if (data.status !== 'OK') {
-      const msg = data.error_message || data.status || 'Unknown error';
-      return NextResponse.json(
-        { error: `Google API status: ${msg}` },
-        { status: 500 }
-      );
-    }
-
-    const placeName: string | undefined = data.result?.name;
-    const placeUrl: string | undefined = data.result?.url;
-    const rating: number | undefined = data.result?.rating;
-    const user_ratings_total: number | undefined =
-      data.result?.user_ratings_total;
-
-    const reviews = (data.result?.reviews || [])
-      .slice(0, 5)
-      .map((r: GoogleReview) => ({
-        author_name: r.author_name,
-        profile_photo_url: r.profile_photo_url,
-        rating: r.rating,
-        relative_time_description: r.relative_time_description,
-        text: r.text,
-        author_url: r.author_url,
-        time: r.time,
-      }));
-
-    return NextResponse.json({
-      placeName,
-      placeUrl,
-      rating,
-      user_ratings_total,
-      reviews,
-    });
-  } catch (err: unknown) {
-    const errorMessage =
-      err instanceof Error ? err.message : 'Unexpected error';
-    return NextResponse.json({ error: errorMessage }, { status: 500 });
+  if (cached && now - lastFetched < ONE_DAY) {
+    return NextResponse.json(cached);
   }
+
+  const url = new URL(GOOGLE_PLACES_ENDPOINT);
+  url.searchParams.set('place_id', process.env.GOOGLE_PLACE_ID!);
+  url.searchParams.set('fields', 'reviews,rating,user_ratings_total,name,url');
+  url.searchParams.set('key', process.env.GOOGLE_PLACES_API_KEY!);
+
+  const res = await fetch(url.toString());
+  const data: GooglePlacesResponse = await res.json();
+
+  cached = {
+    rating: data.result?.rating,
+    user_ratings_total: data.result?.user_ratings_total,
+    reviews: data.result?.reviews?.slice(0, 5),
+    placeUrl: data.result?.url,
+  };
+  lastFetched = now;
+
+  return NextResponse.json(cached);
 }
