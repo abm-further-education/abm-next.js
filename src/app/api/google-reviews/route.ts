@@ -24,10 +24,17 @@ interface GooglePlacesResponse {
   error_message?: string;
 }
 
+interface CachedReviewData {
+  rating?: number;
+  user_ratings_total?: number;
+  reviews?: GoogleReview[];
+  placeUrl?: string;
+}
+
 const GOOGLE_PLACES_ENDPOINT =
   'https://maps.googleapis.com/maps/api/place/details/json';
 
-let cached: any = null;
+let cached: CachedReviewData | null = null;
 let lastFetched = 0;
 
 export async function GET() {
