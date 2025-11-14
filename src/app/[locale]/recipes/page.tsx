@@ -10,7 +10,7 @@ function page() {
         slides={[
           {
             imgPath: '/recipes.png',
-            title: 'Recipes',
+            title: 'Recipes using our Christmas gifts',
           },
         ]}
         dimmed={
