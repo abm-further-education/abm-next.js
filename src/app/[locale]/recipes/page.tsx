@@ -175,7 +175,8 @@ function page() {
                         3.
                       </span>
                       <span>
-                        If it hasn't naturally broken into 4 lengths, cut it so.
+                        If it hasn&apos;t naturally broken into 4 lengths, cut
+                        it so.
                       </span>
                     </li>
                     <li className="flex gap-15">
