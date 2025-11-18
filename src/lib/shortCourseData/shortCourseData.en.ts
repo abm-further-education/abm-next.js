@@ -162,8 +162,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       'Leave with the skills to impress your friends and family with your barista-level coffee at home!',
     dressCode:
       'For safety and comfort, please wear flat, enclosed, rubber-soled shoes. Long hair must be tied back, and jewellery removed to follow food safety standards.',
-    callToAction:
-      "Limited spots available! Don't miss out—book your place now!",
+    callToAction: 'Book now',
   },
   cake: {
     title: 'Classic French Cakes Masterclass 🍰',
@@ -209,8 +208,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       "This class is led by a former pastry chef from one of Sydney's most renowned hatted restaurants. With years of experience in high-end patisseries, they'll guide you through each step, making it easy for anyone—even if you've never baked a French cake before!",
     dressCode:
       'For safety and comfort in the kitchen, please wear flat, enclosed, rubber-soled shoes. Long hair must be tied back, and jewellery removed to comply with food safety standards.',
-    callToAction:
-      "Limited spots available! Don't miss this chance to learn from a top pastry chef and take home your own handmade French cakes.",
+    callToAction: 'Book now',
   },
   focaccia: {
     title: 'Sourdough & Focaccia Masterclass 🥖✨',
@@ -265,8 +263,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       'Make your baking experience truly special – learn from an expert and take home more than just bread, but a skill for life!',
     dressCode:
       'Participants are advised to wear flat, enclosed, rubber soled shoes for comfort and safety in the kitchens. To ensure food safety procedures are followed, long hair should be tied back and all unnecessary jewellery removed.',
-    callToAction:
-      "Limited spots available! Don't miss this chance to learn from a medal-winning sourdough expert and take home your own handmade artisan bread.",
+    callToAction: 'Book now',
   },
   wine: {
     title: 'Wine One-Day Class 🍷✨',
@@ -315,8 +312,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       '🎁 Take Home Your Knowledge! Walk away with the confidence to choose, taste, and serve wine like an expert!',
     dressCode:
       'For safety and comfort, please wear flat, enclosed, rubber-soled shoes. Long hair must be tied back, and jewellery removed to follow food safety standards.',
-    callToAction:
-      "🔥 Limited spots available! Don't miss out—book your place now!",
+    callToAction: 'Book now',
   },
   dessert: {
     title: 'Fine Dining Dessert Plating Course 🍰✨',
@@ -352,8 +348,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     takeHomeMessage: "Let's make your desserts unforgettable!",
     dressCode:
       'Participants are advised to wear flat, enclosed, rubber soled shoes for comfort and safety in the kitchens. To ensure food safety procedures are followed, long hair should be tied back and all unnecessary jewellery removed.',
-    callToAction:
-      "🔥 Limited spots available! Don't miss out—book your place now!",
+    callToAction: 'Book now',
   },
   mixology: {
     title: 'Cocktail Making & Mixology Class! 🍹',
@@ -396,8 +391,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     takeHomeMessage: 'Make it a memorable afternoon with your besties!',
     dressCode:
       'For safety and comfort, please wear flat, enclosed, rubber-soled shoes. Long hair must be tied back, and jewellery removed to follow food safety standards.',
-    callToAction:
-      '📅 Book now – limited spots available! 🔞 Must be over 18 to attend.',
+    callToAction: 'Book now',
   },
   petit: {
     title: 'French Petit Four – Macaron Edition!',
@@ -441,8 +435,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       "This class is led by a former pastry chef from one of Sydney's top hatted restaurants. With years of experience in high-end patisseries, they'll guide you through each step, making it easy for anyone—even if you've never made macarons before!",
     dressCode:
       'For safety and comfort, please wear flat, enclosed, rubber-soled shoes. Long hair must be tied back, and jewellery removed to follow food safety standards.',
-    callToAction:
-      "🔥 Limited spots available! Don't miss out—book your place now!",
+    callToAction: 'Book now',
   },
   vegan: {
     title: 'Vegan & Vegetarian Cooking Class',
@@ -480,7 +473,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       "Impress your family and friends with your new skills—they'll be surprised at how good plant-based cooking can be!",
     dressCode:
       'Participants are advised to wear flat, enclosed, rubber soled shoes for comfort and safety in the kitchens. To ensure food safety procedures are followed, long hair should be tied back and all unnecessary jewellery removed.',
-    callToAction: '📅 Limited spots available – book now!',
+    callToAction: 'Book now',
   },
   chocolate: {
     title: 'Chocolate Class – Xmas 🍫',
@@ -517,8 +510,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       'Take home your beautifully decorated gingerbread house and chocolate creations to share with family and friends this Christmas!',
     dressCode:
       'Participants are advised to wear flat, enclosed, rubber soled shoes for comfort and safety in the kitchens. To ensure food safety procedures are followed, long hair should be tied back and all unnecessary jewellery removed.',
-    callToAction:
-      '🎄 Limited spots available – book your Christmas chocolate adventure now!',
+    callToAction: 'Book now',
   },
   pastries: {
     title: 'Classic French Pastries Masterclass 🥐',

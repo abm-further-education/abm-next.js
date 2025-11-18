@@ -188,7 +188,8 @@ function Page({
             {courseData.callToAction && (
               <div className="mb-20 p-15 bg-orange-50 ">
                 <p className="font-bold text-orange-700">
-                  🔥 {courseData.callToAction}
+                  🔥 Limited spots available! Don't miss out—book your place
+                  now!
                 </p>
               </div>
             )}
@@ -273,7 +274,7 @@ function Page({
                 ${courseData.price}
               </div>
               <Button
-                className="bg-black text-white w-full mt-20"
+                className="bg-black text-white w-full mt-20 hover:bg-primary"
                 onClick={handleEnrollNow}
                 disabled={availableDates.length === 0}
               >

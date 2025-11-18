@@ -23,20 +23,20 @@ function page() {
         <FadeIn>
           <div className="mb-80">
             <h2 className="text-3xl md:text-4xl font-bold mb-40 text-center">
-              Chili Oil
+              Chilli Oil
             </h2>
 
             <div className="bg-white rounded-20 shadow-lg p-40 md:p-60 space-y-30 flex gap-20 flex-wrap justify-center items-center md:justify-start md:items-start">
               <div className="relative w-300 h-300 md:h-300 md:w-300 mb-30 rounded-10 overflow-hidden">
                 <Image
                   src="/recipes/chili_oil.png"
-                  alt="Chili Oil"
+                  alt="Chilli Oil"
                   fill
                   className="object-cover"
                 />
               </div>
               <div>
-                <div className="space-y-20">
+                <div className="space-y-8">
                   <h3 className="text-2xl font-bold text-primary">Marinade</h3>
                   <p className="text-neutral-700 text-lg">
                     Combine chilli oil with soy sauce, garlic, ginger for
@@ -44,7 +44,7 @@ function page() {
                   </p>
                 </div>
 
-                <div className="space-y-20">
+                <div className="space-y-8 mt-20">
                   <h3 className="text-2xl font-bold text-primary">
                     Drizzle on Your Favourites
                   </h3>
@@ -53,7 +53,7 @@ function page() {
                   </p>
                 </div>
 
-                <div className="space-y-20">
+                <div className="space-y-8 mt-20">
                   <h3 className="text-2xl font-bold text-primary">
                     Dipping Sauce
                   </h3>
@@ -80,11 +80,11 @@ function page() {
                   className="object-cover"
                 />
               </div>
-              <div className="space-y-20">
+              <div className="space-y-10">
                 <h3 className="text-2xl font-bold text-primary">
                   Flavoured Salt
                 </h3>
-                <p className="text-neutral-700 text-lg mb-20">
+                <p className="text-neutral-700 text-lg">
                   Season your steak, chicken, pork or fish
                 </p>
                 <p className="text-neutral-700 text-lg">
