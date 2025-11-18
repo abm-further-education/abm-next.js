@@ -44,13 +44,13 @@ export default async function Home() {
             className="w-full md:w-300 h-200 xl:w-400"
           />
           <Card
-            imgPath="/home/FastTrack.png"
+            imgPath="/courses/fitness/ABM_Fitness_Photos_10.jpg"
             title={t('fastTrack')}
             link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track"
             className="w-full md:w-300 h-200 xl:w-400"
           />
           <Card
-            imgPath="/home/ShortCourse.png"
+            imgPath="/short-course/barista/barista_course_1.jpg"
             title={t('nav.menu.shortCourses')}
             link={`short-courses`}
             className="w-full md:w-300 h-200 xl:w-400"
@@ -79,7 +79,7 @@ export default async function Home() {
                 className="w-300 xl:w-300"
               />
               <Card
-                imgPath="/home/Fitness.png"
+                imgPath="/courses/fitness/ABM_Fitness_Photos_11.jpg"
                 title={t('nav.subMenu.fitnessAndSport')}
                 link="/fitness-instructor-personal-trainer-courses"
                 className="w-300 xl:w-300"
