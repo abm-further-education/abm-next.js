@@ -166,7 +166,7 @@ export const shortCourseMenu = [
   },
   {
     title: 'Online Courses',
-    href: '/short-courses/online',
+    href: 'https://online.abm.edu.au/',
     items: [
       {
         title: 'Introduction to HTML, CSS, and Basic Web Design',
@@ -466,8 +466,13 @@ export const MENU_STRUCTURE: MenuSection[] = [
       },
       {
         titleKey: 'subMenu.onlineCourses',
-        href: '/short-courses',
+        href: 'https://online.abm.edu.au',
         items: [
+          {
+            titleKey: 'onlineCourses',
+            title: 'ABM Online Courses',
+            href: 'https://online.abm.edu.au',
+          },
           {
             titleKey: 'htmlIntro',
             title: 'Introduction to HTML, CSS, and Basic Web Design',
