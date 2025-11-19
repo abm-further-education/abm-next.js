@@ -8,7 +8,7 @@ export default async function NewsPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  
+
   // Supabase에서 뉴스 가져오기 시도, 실패하면 기존 데이터 사용
   let newsList;
   try {
