@@ -12,7 +12,7 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
-    id: '9fd90dd8-27be-4cc3-9537-f33964b66f4b',
+    id: 1,
     image: '/news/15-03-2025.png',
     category: 'Event',
     date: '15/03/2025',
@@ -23,7 +23,7 @@ export const newsData: NewsItem[] = [
     link: '/',
   },
   {
-    id: 'fb413fe6-ca75-495b-9bfe-de5ceff255c8',
+    id: 2,
     image: '/news/15-03-2025_2.png',
     category: 'ABM',
     date: '15/03/2025',
