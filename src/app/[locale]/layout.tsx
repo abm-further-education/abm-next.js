@@ -12,6 +12,7 @@ import { Slide, ToastContainer } from 'react-toastify';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { GoogleReviewsBadge } from '@/components/common/GoogleReviewToast';
+import AdminUserInfo from '@/components/admin/AdminUserInfo';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -92,6 +93,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <main>{children}</main>
           <Footer />
           <GoogleReviewsBadge fixed align="left" width={260} />
+          <AdminUserInfo />
         </NextIntlClientProvider>
         <script
           src="https://static.elfsight.com/platform/platform.js"

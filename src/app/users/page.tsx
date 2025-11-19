@@ -1,8 +1,14 @@
 import { getUsers, createUser } from './actions';
 import { redirect } from 'next/navigation';
 import type { User } from '@/lib/supabase';
+import { getAdminSession } from '@/lib/auth';
 
 export default async function UsersPage() {
+  // 어드민 권한 확인
+  const session = await getAdminSession();
+  if (!session) {
+    redirect('/admin/login');
+  }
   let users: User[];
   let error: string | undefined;
 

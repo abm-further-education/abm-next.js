@@ -2,11 +2,16 @@
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { newsData } from '@/lib';
 import Banner from '@/components/common/Banner';
 import { useTranslations } from 'next-intl';
+import type { NewsItem } from '@/lib/news-db';
 
-export default function NewsClient({ locale }: { locale: string }) {
+interface NewsClientProps {
+  locale: string;
+  newsList: NewsItem[];
+}
+
+export default function NewsClient({ locale, newsList }: NewsClientProps) {
   const t = useTranslations('news');
 
   const [search, setSearch] = useState('');
@@ -14,13 +19,13 @@ export default function NewsClient({ locale }: { locale: string }) {
 
   // 날짜 파싱 및 정렬
   const sortedNews = useMemo(() => {
-    const sorted = [...newsData].sort((a, b) => {
+    const sorted = [...newsList].sort((a, b) => {
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
       return sortOrder === 'newest' ? dateB - dateA : dateA - dateB;
     });
     return sorted;
-  }, [sortOrder]);
+  }, [sortOrder, newsList]);
 
   // 검색 필터
   const filteredNews = useMemo(() => {
@@ -105,7 +110,9 @@ export default function NewsClient({ locale }: { locale: string }) {
                       <span className="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 ">
                         {news.category}
                       </span>
-                      <span className="text-gray-500 text-sm">{news.date}</span>
+                      <span className="text-gray-500 text-sm">
+                        {new Date(news.date).toLocaleDateString()}
+                      </span>
                     </div>
 
                     <h3 className="text-xl font-semibold mb-3 line-clamp-2">
