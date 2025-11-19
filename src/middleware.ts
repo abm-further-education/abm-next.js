@@ -35,19 +35,24 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // locale이 없는 /news/[id] 경로를 처리
-  // localePrefix: 'as-needed' 설정 때문에 기본 locale('en')은 URL에 포함되지 않음
-  // 따라서 /news/[id]는 이미 올바른 경로이므로 next-intl 미들웨어가 처리하도록 함
-  // 단, locale이 명시적으로 포함된 경로(/en/news/[id], /kr/news/[id] 등)는 그대로 통과
-  const newsMatch = pathname.match(/^\/(en|kr|sp|pt|jp)\/news\/([^/]+)$/);
-  if (newsMatch) {
-    // locale이 포함된 경로는 next-intl 미들웨어가 처리
-    return intlMiddleware(request);
+  // locale이 없는 /news/[id] 경로를 명시적으로 처리
+  // localePrefix: 'as-needed' 설정 때문에 기본 locale('en')은 URL에 포함되지 않지만
+  // 파일 구조는 [locale]/news/[id]이므로 내부적으로 locale이 필요함
+  // 배포 환경에서 동적 라우트가 제대로 작동하도록 rewrite 사용
+  const newsMatchWithoutLocale = pathname.match(/^\/news\/([^/]+)$/);
+  if (newsMatchWithoutLocale) {
+    const newsId = newsMatchWithoutLocale[1];
+    // rewrite를 사용하여 내부적으로 /en/news/[id]로 처리하되 URL은 변경하지 않음
+    const url = request.nextUrl.clone();
+    url.pathname = `/en/news/${newsId}`;
+    // rewrite된 요청에 대해 next-intl 미들웨어 실행
+    const rewrittenRequest = new NextRequest(url, {
+      headers: request.headers,
+    });
+    return intlMiddleware(rewrittenRequest);
   }
 
-  // locale이 없는 /news/[id] 경로는 next-intl 미들웨어가 자동으로 처리
-  // localePrefix: 'as-needed' 설정으로 인해 기본 locale('en')은 URL에서 제거되지만
-  // 내부적으로는 /en/news/[id]로 처리됨
+  // locale이 포함된 경로는 next-intl 미들웨어가 처리
   return intlMiddleware(request);
 }
 
