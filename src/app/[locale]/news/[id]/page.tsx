@@ -32,10 +32,13 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
 
   // Supabase에서 찾지 못하면 기존 데이터에서 찾기
   if (!news) {
-    const oldNews = newsData.find((item) => item.id === parseInt(id));
+    const numericId = parseInt(id, 10);
+    const oldNews = newsData.find((item) => item.id === numericId);
     if (oldNews) {
       news = {
         id: oldNews.id.toString(),
+        displayId: oldNews.id as number,
+        dbId: oldNews.id.toString(),
         title: oldNews.title,
         description: oldNews.description,
         content: oldNews.content || null,
@@ -59,15 +62,18 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
   try {
     const allNews = await getNewsList(true);
     relatedNewsList = allNews
-      .filter((item) => item.id !== news!.id)
+      .filter((item) => item.displayId !== news!.displayId)
       .slice(0, 2);
   } catch {
     // 에러 발생 시 기존 데이터에서 관련 뉴스 찾기
+    const numericId = parseInt(id, 10);
     relatedNewsList = newsData
-      .filter((item) => item.id !== parseInt(id))
+      .filter((item) => item.id !== numericId)
       .slice(0, 2)
       .map((item) => ({
         id: item.id.toString(),
+        displayId: item.id as number,
+        dbId: item.id.toString(),
         title: item.title,
         description: item.description,
         content: item.content || null,

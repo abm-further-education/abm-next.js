@@ -25,8 +25,10 @@ export default async function Home({
     newsList = newsList.slice(0, 8);
     // Supabase 데이터가 없으면 기존 데이터 사용 (호환성을 위해 변환)
     if (newsList.length === 0) {
-      newsList = newsData.slice(0, 8).map((news) => ({
+      newsList = newsData.slice(0, 8).map((news, index) => ({
         id: news.id.toString(),
+        displayId: news.id as number,
+        dbId: news.id.toString(),
         title: news.title,
         description: news.description,
         content: news.content || null,
@@ -44,6 +46,8 @@ export default async function Home({
     // 에러 발생 시 기존 데이터 사용
     newsList = newsData.slice(0, 8).map((news) => ({
       id: news.id.toString(),
+      displayId: news.id as number,
+      dbId: news.id.toString(),
       title: news.title,
       description: news.description,
       content: news.content || null,

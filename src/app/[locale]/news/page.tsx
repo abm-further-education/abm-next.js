@@ -17,6 +17,8 @@ export default async function NewsPage({
     if (newsList.length === 0) {
       newsList = newsData.map((news) => ({
         id: news.id.toString(),
+        displayId: news.id as number,
+        dbId: news.id.toString(),
         title: news.title,
         description: news.description,
         content: news.content || null,
@@ -34,6 +36,8 @@ export default async function NewsPage({
     // 에러 발생 시 기존 데이터 사용
     newsList = newsData.map((news) => ({
       id: news.id.toString(),
+      displayId: news.id as number,
+      dbId: news.id.toString(),
       title: news.title,
       description: news.description,
       content: news.content || null,

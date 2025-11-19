@@ -15,6 +15,10 @@ export interface NewsItem {
   created_at: string;
   updated_at: string;
   created_by?: string | null;
+  // 숫자 ID (URL에 사용)
+  displayId?: number;
+  // 실제 DB UUID
+  dbId?: string;
 }
 
 // 인증된 Supabase 클라이언트 생성 (서버 사이드)
@@ -96,13 +100,54 @@ export async function getNewsList(published?: boolean): Promise<NewsItem[]> {
     throw new Error(`Failed to fetch news: ${error.message}`);
   }
 
-  return data || [];
+  const newsList = data || [];
+
+  // 숫자 ID 매핑 (1, 2, 3, 4...)
+  return newsList.map((news, index) => ({
+    ...news,
+    displayId: index + 1,
+    dbId: news.id,
+    // id는 숫자 ID로 설정 (URL에 사용)
+    id: (index + 1).toString(),
+  }));
+}
+
+// 숫자 ID를 실제 DB UUID로 변환
+// getNewsList와 동일한 순서를 보장하기 위해 getNewsList를 사용
+async function getDbIdFromDisplayId(
+  displayId: string,
+  published?: boolean
+): Promise<string | null> {
+  const numericId = parseInt(displayId, 10);
+
+  // 숫자가 아니면 UUID로 간주하여 그대로 반환
+  if (isNaN(numericId)) {
+    return displayId;
+  }
+
+  try {
+    // getNewsList를 사용하여 동일한 순서 보장
+    // 무한 루프 방지를 위해 published 파라미터를 그대로 전달
+    const newsList = await getNewsList(published);
+    const news = newsList.find((item) => item.displayId === numericId);
+    return news?.dbId || null;
+  } catch (error) {
+    console.error('Error getting DB ID from display ID:', error);
+    return null;
+  }
 }
 
 export async function getNewsById(
   id: string,
   publishedOnly: boolean = true
 ): Promise<NewsItem | null> {
+  // 숫자 ID인 경우 실제 DB UUID로 변환
+  // publishedOnly를 published로 변환 (getNewsList와 일치)
+  const dbId = await getDbIdFromDisplayId(id, publishedOnly ? true : undefined);
+  if (!dbId) {
+    return null;
+  }
+
   const client = await getAuthenticatedSupabase();
 
   // 관리자 권한 확인
@@ -117,7 +162,7 @@ export async function getNewsById(
       ? supabaseAdmin
       : client;
 
-  let query = queryClient.from('news').select('*').eq('id', id);
+  let query = queryClient.from('news').select('*').eq('id', dbId);
 
   // publishedOnly가 true일 때만 published 필터 적용
   // 단, 관리자이고 Service Role Key를 사용하는 경우는 필터 무시
@@ -136,7 +181,34 @@ export async function getNewsById(
     return null;
   }
 
-  return data;
+  if (!data) {
+    return null;
+  }
+
+  // 숫자 ID 찾기
+  const numericId = parseInt(id, 10);
+  if (!isNaN(numericId)) {
+    // 숫자 ID인 경우 이미 getDbIdFromDisplayId에서 찾았으므로 그대로 사용
+    return {
+      ...data,
+      displayId: numericId,
+      dbId: data.id,
+      // id는 숫자 ID로 설정 (URL에 사용)
+      id: numericId.toString(),
+    };
+  }
+
+  // UUID인 경우 displayId 찾기 (숫자 ID가 아닌 경우에만)
+  const allNews = await getNewsList(publishedOnly ? true : undefined);
+  const newsWithDisplayId = allNews.find((item) => item.dbId === data.id);
+
+  return {
+    ...data,
+    displayId: newsWithDisplayId?.displayId,
+    dbId: data.id,
+    // id는 숫자 ID로 설정 (URL에 사용)
+    id: newsWithDisplayId?.id || data.id,
+  };
 }
 
 export async function createNews(
