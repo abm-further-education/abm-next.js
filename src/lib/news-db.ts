@@ -146,8 +146,15 @@ async function getDbIdFromDisplayId(
 
     const { data, error } = await query.order('date', { ascending: false });
 
-    if (error || !data || data.length === 0) {
+    if (error) {
       console.error('Error getting DB ID from display ID:', error);
+      console.error('Error details:', JSON.stringify(error, null, 2));
+      // 에러가 발생해도 getNewsList를 통해 재시도할 수 있도록 null 반환
+      return null;
+    }
+
+    if (!data || data.length === 0) {
+      console.error('No news data found');
       return null;
     }
 
@@ -163,6 +170,10 @@ async function getDbIdFromDisplayId(
     return news.id;
   } catch (error) {
     console.error('Error getting DB ID from display ID:', error);
+    console.error(
+      'Error stack:',
+      error instanceof Error ? error.stack : 'No stack'
+    );
     return null;
   }
 }
@@ -171,10 +182,43 @@ export async function getNewsById(
   id: string,
   publishedOnly: boolean = true
 ): Promise<NewsItem | null> {
-  // 숫자 ID인 경우 실제 DB UUID로 변환
-  // publishedOnly를 published로 변환 (getNewsList와 일치)
-  const dbId = await getDbIdFromDisplayId(id, publishedOnly ? true : undefined);
+  const numericId = parseInt(id, 10);
+  const isNumericId = !isNaN(numericId);
+
+  // 숫자 ID인 경우 실제 DB UUID로 변환 시도
+  let dbId: string | null = null;
+  if (isNumericId) {
+    dbId = await getDbIdFromDisplayId(id, publishedOnly ? true : undefined);
+
+    // getDbIdFromDisplayId가 실패한 경우, getNewsList를 통해 직접 찾기 (fallback)
+    if (!dbId) {
+      console.log(
+        `getDbIdFromDisplayId failed for id ${id}, trying getNewsList fallback`
+      );
+      try {
+        const allNews = await getNewsList(publishedOnly ? true : undefined);
+        const newsItem = allNews.find(
+          (item) => item.displayId === numericId || item.id === id
+        );
+        if (newsItem && newsItem.dbId) {
+          dbId = newsItem.dbId;
+          console.log(`Found news via getNewsList fallback: ${dbId}`);
+        } else {
+          console.error(
+            `News with displayId ${numericId} not found in getNewsList. Total: ${allNews.length}`
+          );
+        }
+      } catch (error) {
+        console.error('Error in getNewsList fallback:', error);
+      }
+    }
+  } else {
+    // UUID인 경우 그대로 사용
+    dbId = id;
+  }
+
   if (!dbId) {
+    console.error(`Could not resolve DB ID for id: ${id}`);
     return null;
   }
 
@@ -208,17 +252,64 @@ export async function getNewsById(
   if (error) {
     console.error('Error fetching news:', error);
     console.error('Error details:', JSON.stringify(error, null, 2));
+    console.error('Attempted to fetch with dbId:', dbId);
+
+    // 에러가 발생했지만 숫자 ID인 경우, getNewsList를 통해 재시도
+    if (isNumericId) {
+      console.log(
+        `Query failed, trying getNewsList fallback for numeric ID ${id}`
+      );
+      try {
+        const allNews = await getNewsList(publishedOnly ? true : undefined);
+        const newsItem = allNews.find(
+          (item) => item.displayId === numericId || item.id === id
+        );
+        if (newsItem) {
+          console.log(`Found news via getNewsList fallback after query error`);
+          return newsItem;
+        }
+      } catch (fallbackError) {
+        console.error(
+          'Error in getNewsList fallback after query error:',
+          fallbackError
+        );
+      }
+    }
+
     return null;
   }
 
   if (!data) {
+    console.error(`No data returned for dbId: ${dbId}`);
+
+    // 데이터가 없지만 숫자 ID인 경우, getNewsList를 통해 재시도
+    if (isNumericId) {
+      console.log(
+        `No data found, trying getNewsList fallback for numeric ID ${id}`
+      );
+      try {
+        const allNews = await getNewsList(publishedOnly ? true : undefined);
+        const newsItem = allNews.find(
+          (item) => item.displayId === numericId || item.id === id
+        );
+        if (newsItem) {
+          console.log(`Found news via getNewsList fallback after no data`);
+          return newsItem;
+        }
+      } catch (fallbackError) {
+        console.error(
+          'Error in getNewsList fallback after no data:',
+          fallbackError
+        );
+      }
+    }
+
     return null;
   }
 
   // 숫자 ID 찾기
-  const numericId = parseInt(id, 10);
-  if (!isNaN(numericId)) {
-    // 숫자 ID인 경우 이미 getDbIdFromDisplayId에서 찾았으므로 그대로 사용
+  if (isNumericId) {
+    // 숫자 ID인 경우 이미 찾았으므로 그대로 사용
     return {
       ...data,
       displayId: numericId,
@@ -229,16 +320,26 @@ export async function getNewsById(
   }
 
   // UUID인 경우 displayId 찾기 (숫자 ID가 아닌 경우에만)
-  const allNews = await getNewsList(publishedOnly ? true : undefined);
-  const newsWithDisplayId = allNews.find((item) => item.dbId === data.id);
+  try {
+    const allNews = await getNewsList(publishedOnly ? true : undefined);
+    const newsWithDisplayId = allNews.find((item) => item.dbId === data.id);
 
-  return {
-    ...data,
-    displayId: newsWithDisplayId?.displayId,
-    dbId: data.id,
-    // id는 숫자 ID로 설정 (URL에 사용)
-    id: newsWithDisplayId?.id || data.id,
-  };
+    return {
+      ...data,
+      displayId: newsWithDisplayId?.displayId,
+      dbId: data.id,
+      // id는 숫자 ID로 설정 (URL에 사용)
+      id: newsWithDisplayId?.id || data.id,
+    };
+  } catch (error) {
+    console.error('Error getting displayId for UUID:', error);
+    // displayId를 찾지 못해도 기본 데이터는 반환
+    return {
+      ...data,
+      dbId: data.id,
+      id: data.id,
+    };
+  }
 }
 
 export async function createNews(
