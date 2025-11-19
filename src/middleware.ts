@@ -35,17 +35,19 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // locale이 없는 /news/[id] 경로를 기본 locale로 리다이렉트
-  // 예: /news/fb413fe6-ca75-495b-9bfe-de5ceff255c8 -> /en/news/fb413fe6-ca75-495b-9bfe-de5ceff255c8
-  const newsMatch = pathname.match(/^\/news\/([^/]+)$/);
+  // locale이 없는 /news/[id] 경로를 처리
+  // localePrefix: 'as-needed' 설정 때문에 기본 locale('en')은 URL에 포함되지 않음
+  // 따라서 /news/[id]는 이미 올바른 경로이므로 next-intl 미들웨어가 처리하도록 함
+  // 단, locale이 명시적으로 포함된 경로(/en/news/[id], /kr/news/[id] 등)는 그대로 통과
+  const newsMatch = pathname.match(/^\/(en|kr|sp|pt|jp)\/news\/([^/]+)$/);
   if (newsMatch) {
-    const newsId = newsMatch[1];
-    const url = request.nextUrl.clone();
-    url.pathname = `/en/news/${newsId}`;
-    return NextResponse.redirect(url);
+    // locale이 포함된 경로는 next-intl 미들웨어가 처리
+    return intlMiddleware(request);
   }
 
-  // next-intl 미들웨어 실행
+  // locale이 없는 /news/[id] 경로는 next-intl 미들웨어가 자동으로 처리
+  // localePrefix: 'as-needed' 설정으로 인해 기본 locale('en')은 URL에서 제거되지만
+  // 내부적으로는 /en/news/[id]로 처리됨
   return intlMiddleware(request);
 }
 
