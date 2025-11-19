@@ -38,11 +38,25 @@ const NewsCard = ({ news, locale }: NewsCardProps) => {
     }
   };
 
+  // 숫자 ID 사용 (displayId 우선, 없으면 id 사용)
+  // id가 UUID일 수 있으므로 displayId를 우선 사용
+  const newsId = news.displayId?.toString() || news.id;
+
+  // 디버깅: news 객체 확인
+  if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+    console.log('NewsCard - news:', {
+      id: news.id,
+      displayId: news.displayId,
+      dbId: news.dbId,
+      newsId,
+    });
+  }
+
   return (
     <div
       className="shadow-xl w-320 h-[390px] flex flex-col bg-white overflow-hidden cursor-pointer"
       onClick={() => {
-        router.push(`/${locale}/news/${news.id}`);
+        router.push(`/${locale}/news/${newsId}`);
       }}
     >
       <div className="w-full h-[180px] overflow-hidden">
@@ -90,7 +104,7 @@ function NewsLetter({ newsList, locale }: NewsLetterProps) {
         spaceBetween={0}
       >
         {newsList.map((news) => (
-          <SwiperSlide key={news.id} className="">
+          <SwiperSlide key={news.displayId || news.id} className="">
             <NewsCard news={news} locale={locale} />
           </SwiperSlide>
         ))}

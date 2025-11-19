@@ -94,8 +94,12 @@ export default function NewsClient({ locale, newsList }: NewsClientProps) {
               {t('noResults')}
             </div>
           ) : (
-            filteredNews.map((news) => (
-              <Link key={news.id} href={`/${locale}/news/${news.id}`}>
+            filteredNews.map((news) => {
+              // 숫자 ID 사용 (displayId 우선, 없으면 id 사용)
+              // id가 UUID일 수 있으므로 displayId를 우선 사용
+              const newsId = news.displayId?.toString() || news.id;
+              return (
+              <Link key={news.id} href={`/${locale}/news/${newsId}`}>
                 <div className="bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-280">
                   <div className="relative h-100">
                     <Image
@@ -125,7 +129,8 @@ export default function NewsClient({ locale, newsList }: NewsClientProps) {
                   </div>
                 </div>
               </Link>
-            ))
+              );
+            })
           )}
         </div>
       </div>

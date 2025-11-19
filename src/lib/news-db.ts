@@ -113,7 +113,7 @@ export async function getNewsList(published?: boolean): Promise<NewsItem[]> {
 }
 
 // 숫자 ID를 실제 DB UUID로 변환
-// getNewsList와 동일한 순서를 보장하기 위해 getNewsList를 사용
+// getNewsList와 동일한 순서를 보장하기 위해 직접 쿼리 (무한 루프 방지)
 async function getDbIdFromDisplayId(
   displayId: string,
   published?: boolean
@@ -126,11 +126,41 @@ async function getDbIdFromDisplayId(
   }
 
   try {
-    // getNewsList를 사용하여 동일한 순서 보장
-    // 무한 루프 방지를 위해 published 파라미터를 그대로 전달
-    const newsList = await getNewsList(published);
-    const news = newsList.find((item) => item.displayId === numericId);
-    return news?.dbId || null;
+    // getNewsList와 동일한 쿼리를 직접 실행하여 무한 루프 방지
+    const client = await getAuthenticatedSupabase();
+    const {
+      data: { user },
+    } = await client.auth.getUser();
+
+    const queryClient =
+      user?.user_metadata?.isAdmin === true && supabaseAdmin
+        ? supabaseAdmin
+        : client;
+
+    let query = queryClient.from('news').select('id, date');
+
+    // published 파라미터가 제공된 경우에만 필터링 (getNewsList와 동일)
+    if (published !== undefined) {
+      query = query.eq('published', published);
+    }
+
+    const { data, error } = await query.order('date', { ascending: false });
+
+    if (error || !data || data.length === 0) {
+      console.error('Error getting DB ID from display ID:', error);
+      return null;
+    }
+
+    // 인덱스로 매핑 (0-based이므로 -1)
+    const news = data[numericId - 1];
+    if (!news) {
+      console.error(
+        `News with displayId ${numericId} not found. Total news: ${data.length}`
+      );
+      return null;
+    }
+
+    return news.id;
   } catch (error) {
     console.error('Error getting DB ID from display ID:', error);
     return null;

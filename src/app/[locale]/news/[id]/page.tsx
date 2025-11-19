@@ -22,10 +22,13 @@ interface NewsDetailProps {
 export default async function NewsDetailPage({ params }: NewsDetailProps) {
   const { locale, id } = await params;
 
+  console.log('NewsDetailPage - locale:', locale, 'id:', id);
+
   // Supabase에서 뉴스 가져오기 시도
   let news: NewsItem | null = null;
   try {
     news = await getNewsById(id);
+    console.log('NewsDetailPage - news found:', news ? 'yes' : 'no');
   } catch (error) {
     console.error('Error fetching news from Supabase:', error);
   }
