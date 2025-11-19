@@ -1,6 +1,6 @@
 // 뉴스 데이터
 export interface NewsItem {
-  id: number;
+  id: number | string;
   image: string;
   category: string;
   date: string;
@@ -12,42 +12,18 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
-    id: 1,
+    id: '9fd90dd8-27be-4cc3-9537-f33964b66f4b',
     image: '/news/15-03-2025.png',
     category: 'Event',
     date: '15/03/2025',
     title: 'ABM Open Day – Explore Your Future Career Path!',
     description: `Come and experience what it’s really like to study at ABM Further Education! Whether you’re passionate about Fitness, Hospitality, Kitchen Management, or Business, our Open Day is your chance to explore real classes, meet trainers, tour our facilities, and find the right course for you.
 
-🎓 Why Attend?  
-✅ Live Fitness & Hospitality class demonstrations
-✅ Tour our Gym and Hospitality Lab
-✅ Speak with trainers, current students, and support staff
-✅ Learn about our flexible course and payment options
-✅ Instant enrolment support available on-site
-
-🎁 Exclusive Open Day Offers:
-
-Enrol on the day and receive a $500 Visa/Mastercard gift voucher
-All attendees get a $20 voucher to use on any ABM short course (valid for 3 months)
-
-📍 Location:
-ABM Main Campus – Level 2, 242 Castlereagh Street, Sydney NSW 2000
-(Just 2 minutes from Gadigal Metro Station)
-
-📅 Date: Tuesday, 27 May 2025
-🕒 Time: 11:30am – 2:00pm
-
-👉 Register now to secure your spot:
-https://form.jotform.com/ABMonlineforms/abm-open-day-registration-form
-
-Come along, bring a friend, and take the first step towards your future career!
-
-Register here https://form.jotform.com/ABMonlineforms/abm-open-day-registration-form`,
+`,
     link: '/',
   },
   {
-    id: 2,
+    id: 'fb413fe6-ca75-495b-9bfe-de5ceff255c8',
     image: '/news/15-03-2025_2.png',
     category: 'ABM',
     date: '15/03/2025',

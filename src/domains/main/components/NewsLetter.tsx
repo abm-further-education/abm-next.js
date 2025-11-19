@@ -9,20 +9,40 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { newsData, NewsItem } from '@/lib/news';
 import { useRouter } from 'next/navigation';
+import type { NewsItem } from '@/lib/news-db';
 
 interface NewsCardProps {
   news: NewsItem;
+  locale: string;
 }
 
-const NewsCard = ({ news }: NewsCardProps) => {
+const NewsCard = ({ news, locale }: NewsCardProps) => {
   const router = useRouter();
+  // 날짜 포맷팅 (ISO 형식 또는 기존 형식 모두 처리)
+  const formatDate = (dateStr: string) => {
+    try {
+      // ISO 형식인 경우 (YYYY-MM-DD)
+      if (dateStr.includes('-') && dateStr.length >= 10) {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('en-GB', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+        });
+      }
+      // 기존 형식인 경우 (DD/MM/YYYY) 그대로 반환
+      return dateStr;
+    } catch {
+      return dateStr;
+    }
+  };
+
   return (
     <div
       className="shadow-xl w-320 h-[390px] flex flex-col bg-white overflow-hidden cursor-pointer"
       onClick={() => {
-        router.push(`/news/${news.id}`);
+        router.push(`/${locale}/news/${news.id}`);
       }}
     >
       <div className="w-full h-[180px] overflow-hidden">
@@ -37,7 +57,7 @@ const NewsCard = ({ news }: NewsCardProps) => {
       <div className="flex flex-col flex-1 px-12 py-8">
         <div className="flex justify-between items-center text-xs text-neutral-500 mb-2">
           <span>{news.category}</span>
-          <span>{news.date}</span>
+          <span>{formatDate(news.date)}</span>
         </div>
         <h3 className="font-semibold mb-2">{news.title}</h3>
         <p className="font-[family-name:var(--font-inter)] text-sm text-neutral-400 line-clamp-4">
@@ -47,7 +67,13 @@ const NewsCard = ({ news }: NewsCardProps) => {
     </div>
   );
 };
-function NewsLetter() {
+
+interface NewsLetterProps {
+  newsList: NewsItem[];
+  locale: string;
+}
+
+function NewsLetter({ newsList, locale }: NewsLetterProps) {
   const tNews = useTranslations('news');
   return (
     <section className="flex flex-col items-center justify-center py-20 md:py-40">
@@ -58,18 +84,21 @@ function NewsLetter() {
       <Swiper
         modules={[Autoplay, Scrollbar]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
-        loop
+        loop={newsList.length > 4}
         className="flex items-center justify-center md:justify-between w-full md:max-w-[1400px] md:w-full mx-auto h-420 md:h-460 mt-60"
         slidesPerView={isMobile ? 1 : isTablet ? 3 : 4}
         spaceBetween={0}
       >
-        {newsData.map((news) => (
+        {newsList.map((news) => (
           <SwiperSlide key={news.id} className="">
-            <NewsCard news={news} />
+            <NewsCard news={news} locale={locale} />
           </SwiperSlide>
         ))}
       </Swiper>
-      <Link href="/news" className="bg-black text-white px-20 py-10">
+      <Link
+        href={`/${locale}/news`}
+        className="bg-black text-white px-20 py-10"
+      >
         {tNews('readMore')}
       </Link>
     </section>

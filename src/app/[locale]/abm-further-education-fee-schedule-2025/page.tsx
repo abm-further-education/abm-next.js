@@ -54,7 +54,7 @@ export default async function Page() {
           {/* Instalment Payment Option Button */}
           <div className="text-center">
             <Link
-              href="https://abm.edu.au/news/2"
+              href="https://abm.edu.au/news/fb413fe6-ca75-495b-9bfe-de5ceff255c8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-primary text-white px-30 py-12 font-semibold hover:bg-primary-bk transition-colors duration-200"

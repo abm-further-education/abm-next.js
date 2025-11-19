@@ -6,9 +6,56 @@ import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+import { getNewsList } from '@/lib/news-db';
+import { newsData } from '@/lib/news';
 
-export default async function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations();
+
+  // Supabase에서 뉴스 가져오기 시도, 실패하면 기존 데이터 사용
+  let newsList;
+  try {
+    newsList = await getNewsList(true);
+    // 최신 뉴스만 가져오기 (슬라이더용)
+    newsList = newsList.slice(0, 8);
+    // Supabase 데이터가 없으면 기존 데이터 사용 (호환성을 위해 변환)
+    if (newsList.length === 0) {
+      newsList = newsData.slice(0, 8).map((news) => ({
+        id: news.id.toString(),
+        title: news.title,
+        description: news.description,
+        content: news.content || null,
+        image: news.image,
+        category: news.category,
+        date: convertDateToISO(news.date),
+        link: news.link || null,
+        published: true,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      }));
+    }
+  } catch (error) {
+    console.error('Error fetching news from Supabase:', error);
+    // 에러 발생 시 기존 데이터 사용
+    newsList = newsData.slice(0, 8).map((news) => ({
+      id: news.id.toString(),
+      title: news.title,
+      description: news.description,
+      content: news.content || null,
+      image: news.image,
+      category: news.category,
+      date: convertDateToISO(news.date),
+      link: news.link || null,
+      published: true,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    }));
+  }
   return (
     <div className="font-[family-name:var(--font-montserrat)] pt-60">
       <main className="">
@@ -125,7 +172,7 @@ export default async function Home() {
           <Testimonial />
         </FadeIn>
         <FadeIn>
-          <NewsLetter />
+          <NewsLetter newsList={newsList} locale={locale} />
         </FadeIn>
         <FadeIn>
           <SubscriptionContainer />
@@ -142,4 +189,10 @@ export default async function Home() {
       {/* <FloatingTrialButton /> */}
     </div>
   );
+}
+
+function convertDateToISO(dateStr: string): string {
+  // DD/MM/YYYY 형식을 YYYY-MM-DD로 변환
+  const [day, month, year] = dateStr.split('/');
+  return `${year}-${month}-${day}`;
 }
