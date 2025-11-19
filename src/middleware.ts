@@ -35,6 +35,16 @@ export default async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // locale이 없는 /news/[id] 경로를 기본 locale로 리다이렉트
+  // 예: /news/fb413fe6-ca75-495b-9bfe-de5ceff255c8 -> /en/news/fb413fe6-ca75-495b-9bfe-de5ceff255c8
+  const newsMatch = pathname.match(/^\/news\/([^/]+)$/);
+  if (newsMatch) {
+    const newsId = newsMatch[1];
+    const url = request.nextUrl.clone();
+    url.pathname = `/en/news/${newsId}`;
+    return NextResponse.redirect(url);
+  }
+
   // next-intl 미들웨어 실행
   return intlMiddleware(request);
 }
