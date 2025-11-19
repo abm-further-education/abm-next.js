@@ -92,7 +92,7 @@ export async function getNewsList(published?: boolean): Promise<NewsItem[]> {
       data: { user: authUser },
     } = await client.auth.getUser();
     user = authUser;
-  } catch (error) {
+  } catch {
     // 인증되지 않은 사용자도 뉴스를 읽을 수 있어야 하므로 에러를 무시
     console.log('No authenticated user, using anonymous access');
   }
@@ -265,7 +265,7 @@ export async function getNewsById(
       data: { user: authUser },
     } = await client.auth.getUser();
     user = authUser;
-  } catch (error) {
+  } catch {
     // 인증되지 않은 사용자도 뉴스를 읽을 수 있어야 하므로 에러를 무시
     console.log('No authenticated user, using anonymous access');
   }
