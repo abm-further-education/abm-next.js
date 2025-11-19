@@ -72,15 +72,33 @@ async function getAuthenticatedSupabase() {
 }
 
 export async function getNewsList(published?: boolean): Promise<NewsItem[]> {
+  // 환경 변수 확인
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.warn(
+      'Supabase environment variables are not set. Cannot fetch news from database.'
+    );
+    throw new Error('Supabase configuration is missing');
+  }
+
   const client = await getAuthenticatedSupabase();
 
-  // 관리자 권한 확인
-  const {
-    data: { user },
-  } = await client.auth.getUser();
+  // 관리자 권한 확인 (에러가 발생해도 계속 진행)
+  let user = null;
+  try {
+    const {
+      data: { user: authUser },
+    } = await client.auth.getUser();
+    user = authUser;
+  } catch (error) {
+    // 인증되지 않은 사용자도 뉴스를 읽을 수 있어야 하므로 에러를 무시
+    console.log('No authenticated user, using anonymous access');
+  }
 
   // 관리자인 경우 Service Role Key 사용 (모든 뉴스 조회 가능)
-  // 일반 사용자인 경우 일반 클라이언트 사용 (published만 조회)
+  // 일반 사용자인 경우 일반 클라이언트 사용 (published만 조회, RLS 정책에 의존)
   const queryClient =
     user?.user_metadata?.isAdmin === true && supabaseAdmin
       ? supabaseAdmin
@@ -97,6 +115,11 @@ export async function getNewsList(published?: boolean): Promise<NewsItem[]> {
 
   if (error) {
     console.error('Error fetching news:', error);
+    console.error('Error code:', error.code);
+    console.error('Error message:', error.message);
+    console.error('Error hint:', error.hint);
+    console.error('Supabase URL:', supabaseUrl ? 'set' : 'missing');
+    console.error('Supabase Anon Key:', supabaseAnonKey ? 'set' : 'missing');
     throw new Error(`Failed to fetch news: ${error.message}`);
   }
 
@@ -182,6 +205,17 @@ export async function getNewsById(
   id: string,
   publishedOnly: boolean = true
 ): Promise<NewsItem | null> {
+  // 환경 변수 확인
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.warn(
+      'Supabase environment variables are not set. Cannot fetch news from database.'
+    );
+    return null;
+  }
+
   const numericId = parseInt(id, 10);
   const isNumericId = !isNaN(numericId);
 
@@ -224,13 +258,20 @@ export async function getNewsById(
 
   const client = await getAuthenticatedSupabase();
 
-  // 관리자 권한 확인
-  const {
-    data: { user },
-  } = await client.auth.getUser();
+  // 관리자 권한 확인 (에러가 발생해도 계속 진행)
+  let user = null;
+  try {
+    const {
+      data: { user: authUser },
+    } = await client.auth.getUser();
+    user = authUser;
+  } catch (error) {
+    // 인증되지 않은 사용자도 뉴스를 읽을 수 있어야 하므로 에러를 무시
+    console.log('No authenticated user, using anonymous access');
+  }
 
   // 관리자인 경우 Service Role Key 사용 (모든 뉴스 조회 가능)
-  // 일반 사용자인 경우 일반 클라이언트 사용 (published만 조회)
+  // 일반 사용자인 경우 일반 클라이언트 사용 (published만 조회, RLS 정책에 의존)
   const queryClient =
     user?.user_metadata?.isAdmin === true && supabaseAdmin
       ? supabaseAdmin

@@ -27,10 +27,25 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
   // Supabase에서 뉴스 가져오기 시도
   let news: NewsItem | null = null;
   try {
-    news = await getNewsById(id);
+    news = await getNewsById(id, true); // publishedOnly = true
     console.log('NewsDetailPage - news found:', news ? 'yes' : 'no');
+    if (news) {
+      console.log(
+        'NewsDetailPage - news content:',
+        news.content ? 'has content' : 'no content'
+      );
+      console.log(
+        'NewsDetailPage - news description:',
+        news.description ? 'has description' : 'no description'
+      );
+    }
   } catch (error) {
     console.error('Error fetching news from Supabase:', error);
+    // 에러 상세 정보 로깅
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
   }
 
   // Supabase에서 찾지 못하면 기존 데이터에서 찾기
@@ -138,16 +153,17 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
         </div>
 
         <div className="prose prose-lg max-w-none">
-          {/* <p className="text-lg text-gray-700 leading-relaxed mb-6 whitespace-pre-line">
-            {news.description}
-          </p> */}
-
-          {news.content && (
+          {/* content가 있으면 HTML로 렌더링, 없으면 description을 표시 */}
+          {news.content ? (
             <div
               id="news-content"
               className="text-gray-700 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: news.content }}
             />
+          ) : (
+            <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+              {news.description}
+            </p>
           )}
         </div>
 
