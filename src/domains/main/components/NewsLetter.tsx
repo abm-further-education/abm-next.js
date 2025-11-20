@@ -66,6 +66,12 @@ const NewsCard = ({ news, locale }: NewsCardProps) => {
           width={288}
           height={180}
           className="object-cover w-full h-full"
+          unoptimized={
+            // 로컬 경로(/로 시작)가 아닌 경우에만 unoptimized 적용
+            !news.image.startsWith('/') &&
+            (news.image.includes('r2.cloudflarestorage.com') ||
+              news.image.startsWith('http'))
+          }
         />
       </div>
       <div className="flex flex-col flex-1 px-12 py-8">

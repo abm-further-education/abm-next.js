@@ -7,6 +7,8 @@ import { newsData } from '@/lib/news';
 import Banner from '@/components/common/Banner';
 import { ChevronLeftIcon } from 'lucide-react';
 import type { NewsItem } from '@/lib/news-db';
+import { getR2ImageUrl } from '@/lib/r2';
+import NewsContent from '@/components/news/NewsContent';
 
 // 동적 라우트를 강제로 동적 렌더링으로 설정
 export const dynamic = 'force-dynamic';
@@ -75,6 +77,9 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
     notFound();
   }
 
+  // R2 이미지 URL 변환
+  const newsImageUrl = await getR2ImageUrl(news.image);
+
   // 관련 뉴스 가져오기
   let relatedNewsList: NewsItem[] = [];
   try {
@@ -82,6 +87,14 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
     relatedNewsList = allNews
       .filter((item) => item.displayId !== news!.displayId)
       .slice(0, 2);
+
+    // 관련 뉴스 이미지 URL도 변환
+    relatedNewsList = await Promise.all(
+      relatedNewsList.map(async (item) => ({
+        ...item,
+        image: await getR2ImageUrl(item.image),
+      }))
+    );
   } catch {
     // 에러 발생 시 기존 데이터에서 관련 뉴스 찾기
     const numericId = parseInt(id, 10);
@@ -112,7 +125,7 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
       <Banner
         slides={[
           {
-            imgPath: news.image,
+            imgPath: newsImageUrl,
             title: news.title,
           },
         ]}
@@ -145,21 +158,23 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
 
         <div className="relative h-280 mb-16 overflow-hidden">
           <Image
-            src={news.image}
+            src={newsImageUrl}
             alt={news.title}
             fill
             className="object-cover"
+            unoptimized={
+              // 로컬 경로(/로 시작)가 아닌 경우에만 unoptimized 적용
+              !newsImageUrl.startsWith('/') &&
+              (newsImageUrl.includes('r2.cloudflarestorage.com') ||
+                newsImageUrl.startsWith('http'))
+            }
           />
         </div>
 
         <div className="prose prose-lg max-w-none">
           {/* content가 있으면 HTML로 렌더링, 없으면 description을 표시 */}
           {news.content ? (
-            <div
-              id="news-content"
-              className="text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: news.content }}
-            />
+            <NewsContent content={news.content} />
           ) : (
             <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
               {news.description}
@@ -183,6 +198,12 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
                         alt={relatedNews.title}
                         fill
                         className="object-cover"
+                        unoptimized={
+                          // 로컬 경로(/로 시작)가 아닌 경우에만 unoptimized 적용
+                          !relatedNews.image.startsWith('/') &&
+                          (relatedNews.image.includes('r2.cloudflarestorage.com') ||
+                            relatedNews.image.startsWith('http'))
+                        }
                       />
                     </div>
                     <div className="p-8">

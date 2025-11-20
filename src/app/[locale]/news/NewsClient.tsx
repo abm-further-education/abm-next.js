@@ -107,6 +107,12 @@ export default function NewsClient({ locale, newsList }: NewsClientProps) {
                       alt={news.title}
                       fill
                       className="object-cover"
+                      unoptimized={
+                        // 로컬 경로(/로 시작)가 아닌 경우에만 unoptimized 적용
+                        !news.image.startsWith('/') &&
+                        (news.image.includes('r2.cloudflarestorage.com') ||
+                          news.image.startsWith('http'))
+                      }
                     />
                   </div>
                   <div className="p-12">

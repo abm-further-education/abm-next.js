@@ -1,6 +1,7 @@
 import NewsClient from './NewsClient';
 import { getNewsList } from '@/lib/news-db';
 import { newsData } from '@/lib/news';
+import { getR2ImageUrl } from '@/lib/r2';
 
 export default async function NewsPage({
   params,
@@ -13,6 +14,13 @@ export default async function NewsPage({
   let newsList;
   try {
     newsList = await getNewsList(true);
+    // R2 이미지 URL 변환
+    newsList = await Promise.all(
+      newsList.map(async (news) => ({
+        ...news,
+        image: await getR2ImageUrl(news.image),
+      }))
+    );
     // Supabase 데이터가 없으면 기존 데이터 사용 (호환성을 위해 변환)
     if (newsList.length === 0) {
       newsList = newsData.map((news) => ({

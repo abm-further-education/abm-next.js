@@ -8,6 +8,7 @@ import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { getNewsList } from '@/lib/news-db';
 import { newsData } from '@/lib/news';
+import { getR2ImageUrl } from '@/lib/r2';
 
 export default async function Home({
   params,
@@ -23,6 +24,13 @@ export default async function Home({
     newsList = await getNewsList(true);
     // 최신 뉴스만 가져오기 (슬라이더용)
     newsList = newsList.slice(0, 8);
+    // R2 이미지 URL 변환
+    newsList = await Promise.all(
+      newsList.map(async (news) => ({
+        ...news,
+        image: await getR2ImageUrl(news.image),
+      }))
+    );
     // Supabase 데이터가 없으면 기존 데이터 사용 (호환성을 위해 변환)
     if (newsList.length === 0) {
       newsList = newsData.slice(0, 8).map((news) => ({

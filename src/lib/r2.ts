@@ -1,4 +1,9 @@
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import {
+  S3Client,
+  PutObjectCommand,
+  GetObjectCommand,
+} from '@aws-sdk/client-s3';
+import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
 // Cloudflare R2는 S3 호환 API를 사용합니다
 const s3Client = new S3Client({
@@ -81,3 +86,53 @@ export function generateUniqueFileName(originalFileName: string): string {
   return `${timestamp}-${randomString}.${extension}`;
 }
 
+/**
+ * R2 이미지 경로를 실제 URL로 변환합니다
+ * 로컬 경로와 R2 경로를 모두 처리합니다
+ * @param imagePath - R2 key, 로컬 경로, 또는 전체 URL
+ * @returns 실제 이미지 URL 또는 로컬 경로
+ */
+export async function getR2ImageUrl(imagePath: string): Promise<string> {
+  // 이미 전체 URL인 경우 그대로 반환
+  if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+    return imagePath;
+  }
+
+  // 로컬 경로인 경우 (Next.js public 폴더 경로) 그대로 반환
+  // /로 시작하는 경로는 로컬 경로로 간주
+  if (imagePath.startsWith('/')) {
+    return imagePath;
+  }
+
+  // ./로 시작하는 경로도 로컬 경로로 간주
+  if (imagePath.startsWith('./')) {
+    return imagePath;
+  }
+
+  // 위 조건에 해당하지 않으면 R2 key로 간주하여 변환
+  // R2_PUBLIC_URL이 설정되어 있으면 직접 URL 구성
+  if (process.env.R2_PUBLIC_URL) {
+    return `${process.env.R2_PUBLIC_URL}/${imagePath}`;
+  }
+
+  // R2_PUBLIC_URL이 없으면 presigned URL 생성
+  const bucketName = process.env.R2_BUCKET;
+  if (!bucketName) {
+    console.warn('R2_BUCKET이 설정되지 않았습니다. 원본 경로를 반환합니다.');
+    return imagePath;
+  }
+
+  try {
+    const command = new GetObjectCommand({
+      Bucket: bucketName,
+      Key: imagePath,
+    });
+
+    const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 }); // 1시간 유효
+    return url;
+  } catch (error) {
+    console.error('R2 presigned URL 생성 오류:', error);
+    // 에러 발생 시 원본 경로 반환
+    return imagePath;
+  }
+}
