@@ -464,6 +464,20 @@ export async function updateNews(
     throw new Error('관리자 권한이 필요합니다.');
   }
 
+  // 숫자 ID를 실제 DB UUID로 변환
+  const numericId = parseInt(id, 10);
+  const isNumericId = !isNaN(numericId);
+  let dbId: string = id;
+
+  if (isNumericId) {
+    // 숫자 ID인 경우 실제 DB UUID로 변환
+    const resolvedDbId = await getDbIdFromDisplayId(id, undefined);
+    if (!resolvedDbId) {
+      throw new Error(`뉴스를 찾을 수 없습니다: ${id}`);
+    }
+    dbId = resolvedDbId;
+  }
+
   // Service Role Key가 있으면 사용 (RLS 우회)
   // 없으면 일반 클라이언트 사용 (RLS 정책에 의존)
   const updateClient = supabaseAdmin || client;
@@ -471,7 +485,7 @@ export async function updateNews(
   const { data, error } = await updateClient
     .from('news')
     .update(news)
-    .eq('id', id)
+    .eq('id', dbId)
     .select()
     .single();
 
@@ -479,6 +493,8 @@ export async function updateNews(
     console.error('Error updating news:', error);
     console.error('Error details:', JSON.stringify(error, null, 2));
     console.error('Using Service Role:', !!supabaseAdmin);
+    console.error('Original ID:', id);
+    console.error('Resolved DB ID:', dbId);
     throw new Error(`Failed to update news: ${error.message}`);
   }
 
@@ -503,16 +519,32 @@ export async function deleteNews(id: string): Promise<void> {
     throw new Error('관리자 권한이 필요합니다.');
   }
 
+  // 숫자 ID를 실제 DB UUID로 변환
+  const numericId = parseInt(id, 10);
+  const isNumericId = !isNaN(numericId);
+  let dbId: string = id;
+
+  if (isNumericId) {
+    // 숫자 ID인 경우 실제 DB UUID로 변환
+    const resolvedDbId = await getDbIdFromDisplayId(id, undefined);
+    if (!resolvedDbId) {
+      throw new Error(`뉴스를 찾을 수 없습니다: ${id}`);
+    }
+    dbId = resolvedDbId;
+  }
+
   // Service Role Key가 있으면 사용 (RLS 우회)
   // 없으면 일반 클라이언트 사용 (RLS 정책에 의존)
   const deleteClient = supabaseAdmin || client;
 
-  const { error } = await deleteClient.from('news').delete().eq('id', id);
+  const { error } = await deleteClient.from('news').delete().eq('id', dbId);
 
   if (error) {
     console.error('Error deleting news:', error);
     console.error('Error details:', JSON.stringify(error, null, 2));
     console.error('Using Service Role:', !!supabaseAdmin);
+    console.error('Original ID:', id);
+    console.error('Resolved DB ID:', dbId);
     throw new Error(`Failed to delete news: ${error.message}`);
   }
 }
