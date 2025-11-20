@@ -469,9 +469,14 @@ export const MENU_STRUCTURE: MenuSection[] = [
         href: 'https://online.abm.edu.au',
         items: [
           {
-            titleKey: 'onlineCourses',
-            title: 'ABM Online Courses',
-            href: 'https://online.abm.edu.au',
+            titleKey: 'baristaSampleCourse',
+            title: 'Barista Sample Course',
+            href: 'https://online.abm.edu.au/courses/441285e0-35ec-4863-a31b-15014febb51f',
+          },
+          {
+            titleKey: 'baristaOnlineCourse',
+            title: 'Barista Online Course',
+            href: 'https://online.abm.edu.au/courses/ccff3f2c-1c2c-4fc3-a322-fee0338cbf39',
           },
           {
             titleKey: 'htmlIntro',

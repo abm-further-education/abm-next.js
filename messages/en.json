@@ -188,7 +188,9 @@
       "humanResource": "Human Resource",
       "health": "Health & Wellness",
       "cookingAndBaking": "Cooking & Baking",
-      "onlineCourses": "Online Courses"
+      "onlineCourses": "Online Courses",
+      "baristaSampleCourse": "Barista Sample Course",
+      "baristaOnlineCourse": "Barista Online Course"
     },
     "studyWithUs": {
       "studyTourPrograms": "Study Tour Programs",
@@ -757,7 +759,9 @@
     "vegan": "Vegan and Vegetarian Course",
     "chocolate": "Chocolate Class – Xmas",
     "htmlIntro": "Introduction to HTML, CSS, and Basic Web Design",
-    "portfolioWebsite": "Advanced Course: Building a Portfolio Website"
+    "portfolioWebsite": "Advanced Course: Building a Portfolio Website",
+    "baristaSampleCourse": "Barista Sample Course",
+    "baristaOnlineCourse": "Barista Online Course"
   },
   "gallery": {
     "title": "Campus Gallery"

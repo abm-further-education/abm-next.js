@@ -757,7 +757,9 @@
     "vegan": "ヴィーガン＆ベジタリアン",
     "chocolate": "チョコレート（クリスマス）",
     "htmlIntro": "HTML・CSS・基本Webデザイン入門",
-    "portfolioWebsite": "上級：ポートフォリオサイト制作"
+    "portfolioWebsite": "上級：ポートフォリオサイト制作",
+    "baristaSampleCourse": "バリスタサンプルコース",
+    "baristaOnlineCourse": "バリスタオンラインコース"
   },
   "gallery": {
     "title": "キャンパスギャラリー"
