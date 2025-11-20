@@ -80,3 +80,4 @@ export function generateUniqueFileName(originalFileName: string): string {
   const extension = originalFileName.split('.').pop() || 'jpg';
   return `${timestamp}-${randomString}.${extension}`;
 }
+

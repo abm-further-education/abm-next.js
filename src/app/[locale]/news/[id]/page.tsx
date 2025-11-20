@@ -94,7 +94,7 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
         dbId: item.id.toString(),
         title: item.title,
         description: item.description,
-        content: item.content || null,
+        content: item.content,
         image: item.image,
         category: item.category,
         date: convertDateToISO(item.date),

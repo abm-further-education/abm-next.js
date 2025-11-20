@@ -70,7 +70,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/fitness-and-sports-courses">
+              <Link href="/fitness-instructor-personal-trainer-courses">
                 {t('fitnessAndSports')}
               </Link>
             </li>
@@ -80,7 +80,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/project-and-program-courses">
+              <Link href="/project-and-program-management-courses">
                 {t('projectAndProgram')}
               </Link>
             </li>

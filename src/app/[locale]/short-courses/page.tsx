@@ -120,6 +120,18 @@ function ShortCoursesPage({ params }: { params: Promise<{ locale: string }> }) {
               link="https://www.openlearning.com/abm-further-education/courses/advanced-course-building-a-portfolio-website/?cl=1"
               price={85}
             />
+            <ShortCourseCard
+              imgPath="/short-course/barista/barista_sample_course.png"
+              title="Barista Sample Course"
+              link="https://online.abm.edu.au/courses/441285e0-35ec-4863-a31b-15014febb51f"
+              price={0}
+            />
+            <ShortCourseCard
+              imgPath="/short-course/barista_1.jpg"
+              title="Barista Online Course"
+              link="https://online.abm.edu.au/courses/ccff3f2c-1c2c-4fc3-a322-fee0338cbf39"
+              price={79}
+            />
           </div>
         </FadeIn>
       </section>

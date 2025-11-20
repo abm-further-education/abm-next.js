@@ -52,3 +52,4 @@ FOR DELETE USING (true);
 -- 테이블 생성 확인
 SELECT 'Users table created successfully!' AS status;
 
+
