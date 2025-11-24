@@ -149,7 +149,7 @@ export default function CourseCard({ course }: CourseCardProps) {
         {/* CTA Button */}
         <Link
           href={course.link}
-          className="block w-full text-center bg-primary text-white py-12 px-20  hover:bg-primary/90 transition-colors duration-200 font-medium"
+          className="block w-full text-center bg-primary text-white py-12 px-20  hover:bg-primary-bk transition-colors duration-200 font-medium"
         >
           {course.type === 'short-course' ? 'Book Now' : 'Learn More'}
         </Link>

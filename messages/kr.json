@@ -831,5 +831,131 @@
       "project": "프로젝트 관리",
       "health": "건강 & 웰니스"
     }
+  },
+  "courseData": {
+    "kitchen-management": {
+      "title": "주방 관리 4급 자격증",
+      "description": "전문적인 주방 관리 기술과 요리 기법을 배웁니다."
+    },
+    "food-safety": {
+      "title": "NSW 식품 안전 관리자",
+      "description": "식품 안전 및 위생 관리법을 배웁니다."
+    },
+    "hospitality-diploma": {
+      "title": "호텔경영 디플로마",
+      "description": "호텔경영에 필요한 종합적인 관리 역량을 배웁니다."
+    },
+    "hospitality-advanced-diploma": {
+      "title": "호텔경영 고급 디플로마",
+      "description": "고급 호텔경영 및 리더십 역량을 배웁니다."
+    },
+    "fitness-cert-iii": {
+      "title": "피트니스 3급 자격증",
+      "description": "기초 피트니스 및 퍼스널 트레이닝 역량을 배웁니다."
+    },
+    "fitness-cert-iv": {
+      "title": "피트니스 4급 자격증",
+      "description": "고급 피트니스 트레이닝 및 지도 역량을 배웁니다."
+    },
+    "fitness-cert-iii-fast-track": {
+      "title": "피트니스 3급 자격증 (패스트트랙)",
+      "description": "스포츠 코칭 및 트레이닝을 빠르게 배우는 과정입니다."
+    },
+    "fitness-cert-iv-fast-track": {
+      "title": "피트니스 4급 자격증 (패스트트랙)",
+      "description": "고급 스포츠 코칭 및 개발 프로그램입니다."
+    },
+    "sport-diploma": {
+      "title": "스포츠 디플로마",
+      "description": "스포츠 코칭 및 개발에 대한 종합 프로그램입니다."
+    },
+    "business-cert-iv": {
+      "title": "비즈니스 4급 자격증",
+      "description": "비즈니스의 기초 역량과 지식을 배웁니다."
+    },
+    "business-diploma": {
+      "title": "비즈니스 디플로마",
+      "description": "비즈니스 관리 및 리더십에 대한 종합 역량을 배웁니다."
+    },
+    "business-advanced-diploma": {
+      "title": "비즈니스 고급 디플로마",
+      "description": "고급 비즈니스 전략 및 경영 역량을 배웁니다."
+    },
+    "business-graduate-diploma": {
+      "title": "경영학 석사 디플로마",
+      "description": "석사 수준의 경영 및 리더십 역량을 배웁니다."
+    },
+    "project-cert-iv": {
+      "title": "프로젝트 관리 4급 자격증",
+      "description": "프로젝트 관리의 기초 역량과 방법론을 배웁니다."
+    },
+    "project-diploma": {
+      "title": "프로젝트 관리 디플로마",
+      "description": "프로젝트 관리 및 리더십에 대한 종합 역량을 배웁니다."
+    },
+    "project-advanced-diploma": {
+      "title": "프로젝트 관리 고급 디플로마",
+      "description": "고급 프로젝트 관리 및 전략적 기획 역량을 배웁니다."
+    },
+    "hr-certificate-iv": {
+      "title": "인사관리 4급 자격증",
+      "description": "기초 인사관리 역량과 실무를 배웁니다."
+    },
+    "hr-diploma": {
+      "title": "인사관리 디플로마",
+      "description": "인사관리 및 조직관리 종합 역량을 배웁니다."
+    },
+    "hr-advanced-diploma": {
+      "title": "인사관리 고급 디플로마",
+      "description": "고급 인사 전략 및 조직 개발 역량을 배웁니다."
+    },
+    "health-services-assistance": {
+      "title": "HLT33115 Certificate III in Health Services Assistance",
+      "description": "영어 지원과 80시간의 실습을 포함한 포괄적인 간호 지원 커리어 경로로 헬스케어 커리어를 시작하세요."
+    },
+    "barista": {
+      "title": "원데이 바리스타 클래스 ☕️",
+      "description": "단 하루 만에 완벽한 에스프레소, 부드러운 우유 거품, 멋진 라떼아트까지 배워보세요!"
+    },
+    "wine": {
+      "title": "와인 감별 클래스 🍷",
+      "description": "와인 종류, 테이스팅 기법, 음식 페어링을 배웁니다."
+    },
+    "dessert-plating": {
+      "title": "파인다이닝 디저트 플레이팅 클래스 🍰",
+      "description": "전문적인 디저트 플레이팅과 프레젠테이션을 마스터하세요."
+    },
+    "cocktail": {
+      "title": "칵테일 & 믹솔로지 클래스 🍹",
+      "description": "칵테일 제조와 믹솔로지 기법을 마스터하세요."
+    },
+    "fss": {
+      "title": "NSW 식품 안전 관리자 자격증",
+      "description": "NSW에서 인증받은 식품 안전 관리자가 되어보세요."
+    },
+    "french-cakes": {
+      "title": "프랑스 클래식 케이크 마스터클래스 🍰",
+      "description": "오페라 케이크, 레몬 타르트 등 멋진 프랑스식 케이크를 배워보세요."
+    },
+    "sourdough": {
+      "title": "사워도우 & 포카치아 마스터클래스 🥖✨",
+      "description": "수상 경력의 전문가와 함께하는 장인급 사워도우 빵 만들기."
+    },
+    "french-pastries": {
+      "title": "프랑스 클래식 페이스트리 클래스 🥐",
+      "description": "정통 프랑스 페이스트리와 비에누와즈리를 배워보세요."
+    },
+    "macaron": {
+      "title": "프랑스 마카롱 & 쁘띠푸르 클래스 🍪",
+      "description": "완벽한 프랑스 마카롱과 쁘띠푸르를 만들어보세요."
+    },
+    "vegan": {
+      "title": "비건 & 채식 클래스 🌱",
+      "description": "식물성 재료로 만드는 다양한 요리법을 배워보세요."
+    },
+    "chocolate": {
+      "title": "초콜릿 클래스 – 크리스마스 🍫",
+      "description": "연말 분위기의 초콜릿 디저트와 선물용 과자를 만들어보세요."
+    }
   }
 }

@@ -201,7 +201,9 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
                         unoptimized={
                           // 로컬 경로(/로 시작)가 아닌 경우에만 unoptimized 적용
                           !relatedNews.image.startsWith('/') &&
-                          (relatedNews.image.includes('r2.cloudflarestorage.com') ||
+                          (relatedNews.image.includes(
+                            'r2.cloudflarestorage.com'
+                          ) ||
                             relatedNews.image.startsWith('http'))
                         }
                       />

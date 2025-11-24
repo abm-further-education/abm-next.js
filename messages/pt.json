@@ -827,5 +827,131 @@
       "project": "Gestão de Projetos",
       "health": "Saúde & Bem-Estar"
     }
+  },
+  "courseData": {
+    "kitchen-management": {
+      "title": "Certificado IV em Gestão de Cozinha",
+      "description": "Aprenda técnicas profissionais de culinária e gestão de cozinha."
+    },
+    "food-safety": {
+      "title": "Supervisor de Segurança Alimentar NSW",
+      "description": "Aprenda gestão de segurança e higiene alimentar."
+    },
+    "hospitality-diploma": {
+      "title": "Diploma em Gestão de Hospitalidade",
+      "description": "Aprenda habilidades abrangentes de gestão em hospitalidade."
+    },
+    "hospitality-advanced-diploma": {
+      "title": "Diploma Avançado em Gestão de Hospitalidade",
+      "description": "Aprimore suas habilidades de liderança e gestão avançada em hospitalidade."
+    },
+    "fitness-cert-iii": {
+      "title": "Certificado III em Fitness",
+      "description": "Aprenda fundamentos de treinamento físico e personal trainer."
+    },
+    "fitness-cert-iv": {
+      "title": "Certificado IV em Fitness",
+      "description": "Aprimore suas habilidades avançadas de treinamento e instrução física."
+    },
+    "fitness-cert-iii-fast-track": {
+      "title": "Certificado III em Fitness (Intensivo)",
+      "description": "Programa acelerado de treinamento e coaching esportivo."
+    },
+    "fitness-cert-iv-fast-track": {
+      "title": "Certificado IV em Fitness (Intensivo)",
+      "description": "Programa avançado de desenvolvimento e coaching esportivo."
+    },
+    "sport-diploma": {
+      "title": "Diploma em Esportes",
+      "description": "Programa completo de desenvolvimento e coaching esportivo."
+    },
+    "business-cert-iv": {
+      "title": "Certificado IV em Negócios",
+      "description": "Aprenda fundamentos essenciais de negócios e gestão."
+    },
+    "business-diploma": {
+      "title": "Diploma em Negócios",
+      "description": "Desenvolva competências amplas em gestão e liderança empresarial."
+    },
+    "business-advanced-diploma": {
+      "title": "Diploma Avançado em Negócios",
+      "description": "Aprenda estratégias empresariais e gestão avançada."
+    },
+    "business-graduate-diploma": {
+      "title": "Diploma de Pós-Graduação em Gestão (Aprendizagem)",
+      "description": "Habilidades avançadas de gestão e liderança em nível de pós-graduação."
+    },
+    "project-cert-iv": {
+      "title": "Certificado IV em Prática de Gestão de Projetos",
+      "description": "Aprenda fundamentos e metodologias de gestão de projetos."
+    },
+    "project-diploma": {
+      "title": "Diploma em Gestão de Projetos",
+      "description": "Habilidades abrangentes de gestão e liderança em projetos."
+    },
+    "project-advanced-diploma": {
+      "title": "Diploma Avançado em Gestão de Programas",
+      "description": "Gestão estratégica e avançada de projetos e programas."
+    },
+    "hr-certificate-iv": {
+      "title": "Certificado IV em Gestão de Recursos Humanos",
+      "description": "Desenvolva habilidades para cargos de entrada em RH."
+    },
+    "hr-diploma": {
+      "title": "Diploma em Gestão de Recursos Humanos",
+      "description": "Habilidades avançadas em gestão estratégica de pessoas."
+    },
+    "hr-advanced-diploma": {
+      "title": "Diploma Avançado em Gestão de Recursos Humanos",
+      "description": "Liderança sênior e estratégias de gestão de RH."
+    },
+    "health-services-assistance": {
+      "title": "Certificado III em Assistência de Serviços de Saúde (HLT33115)",
+      "description": "Inicie sua carreira na área da saúde com este curso abrangente que inclui suporte de enfermagem, apoio ao inglês e 80 horas de estágio prático."
+    },
+    "barista": {
+      "title": "Curso de Barista de Um Dia ☕️",
+      "description": "Aprenda a preparar o espresso perfeito, vaporização de leite e arte de latte em apenas um dia!"
+    },
+    "wine": {
+      "title": "Curso de Apreciação de Vinhos 🍷",
+      "description": "Aprenda sobre tipos de vinho, técnicas de degustação e harmonização com alimentos."
+    },
+    "dessert-plating": {
+      "title": "Curso de Empratamento de Sobremesas 🍰",
+      "description": "Domine a arte do empratamento e apresentação de sobremesas finas."
+    },
+    "cocktail": {
+      "title": "Curso de Coquetelaria e Mixologia 🍹",
+      "description": "Aprenda técnicas profissionais de preparo de coquetéis e mixologia."
+    },
+    "fss": {
+      "title": "Recertificação de Supervisor de Segurança Alimentar NSW",
+      "description": "Torne-se um Supervisor de Segurança Alimentar certificado em NSW."
+    },
+    "french-cakes": {
+      "title": "Masterclass de Bolos Franceses Clássicos 🍰",
+      "description": "Aprenda a criar bolos e tortas francesas, incluindo Bolo Ópera e Mini Tortas de Limão."
+    },
+    "sourdough": {
+      "title": "Masterclass de Pães Artesanais: Sourdough & Focaccia 🥖✨",
+      "description": "Descubra a arte da panificação artesanal com um especialista premiado em sourdough."
+    },
+    "french-pastries": {
+      "title": "Curso de Viennoiseries e Confeitaria Francesa 🥐",
+      "description": "Aprenda a preparar croissants e doces franceses autênticos."
+    },
+    "macaron": {
+      "title": "Curso de Petit Four Francês (Macaron) 🍪",
+      "description": "Aprenda a fazer macarons e petits fours franceses perfeitos."
+    },
+    "vegan": {
+      "title": "Curso Vegano e Vegetariano 🌱",
+      "description": "Explore técnicas e receitas da culinária à base de plantas."
+    },
+    "chocolate": {
+      "title": "Aula de Chocolate – Natal 🍫",
+      "description": "Crie delícias de chocolate e confeitos festivos para o Natal."
+    }
   }
 }

@@ -827,5 +827,131 @@
       "project": "プロジェクトマネジメント",
       "health": "ヘルス＆ウェルネス"
     }
+  },
+  "courseData": {
+    "kitchen-management": {
+      "title": "キッチンマネジメント IV級 認定資格",
+      "description": "プロのキッチンマネジメントと調理技術を学びます。"
+    },
+    "food-safety": {
+      "title": "NSW フードセーフティスーパーバイザー講習",
+      "description": "食品安全と衛生管理を学び、認定スーパーバイザーになりましょう。"
+    },
+    "hospitality-diploma": {
+      "title": "ホスピタリティマネジメント ディプロマ",
+      "description": "ホスピタリティ分野で必要な包括的な管理スキルを習得します。"
+    },
+    "hospitality-advanced-diploma": {
+      "title": "ホスピタリティマネジメント 上級ディプロマ",
+      "description": "ホスピタリティ分野における高度なリーダーシップと管理スキルを学びます。"
+    },
+    "fitness-cert-iii": {
+      "title": "フィットネス III級 認定資格",
+      "description": "基礎的なフィットネス知識とパーソナルトレーニングスキルを学びます。"
+    },
+    "fitness-cert-iv": {
+      "title": "フィットネス IV級 認定資格",
+      "description": "高度なフィットネストレーニングと指導スキルを習得します。"
+    },
+    "fitness-cert-iii-fast-track": {
+      "title": "フィットネス III級（短期集中コース）",
+      "description": "スポーツコーチングとトレーニングを加速的に学ぶプログラムです。"
+    },
+    "fitness-cert-iv-fast-track": {
+      "title": "フィットネス IV級（短期集中コース）",
+      "description": "上級スポーツコーチングとトレーニングスキルを短期間で習得します。"
+    },
+    "sport-diploma": {
+      "title": "スポーツ ディプロマ",
+      "description": "スポーツコーチングと選手育成に関する包括的なプログラムです。"
+    },
+    "business-cert-iv": {
+      "title": "ビジネス IV級 認定資格",
+      "description": "ビジネスの基礎知識とスキルを学びます。"
+    },
+    "business-diploma": {
+      "title": "ビジネス ディプロマ",
+      "description": "包括的なビジネスマネジメントとリーダーシップスキルを養います。"
+    },
+    "business-advanced-diploma": {
+      "title": "ビジネス 上級ディプロマ",
+      "description": "高度なビジネス戦略とマネジメントスキルを学びます。"
+    },
+    "business-graduate-diploma": {
+      "title": "経営学大学院ディプロマ（学習専攻）",
+      "description": "大学院レベルの経営・リーダーシップスキルを習得します。"
+    },
+    "project-cert-iv": {
+      "title": "プロジェクトマネジメント IV級 認定資格",
+      "description": "プロジェクト管理の基礎スキルと手法を学びます。"
+    },
+    "project-diploma": {
+      "title": "プロジェクトマネジメント ディプロマ",
+      "description": "包括的なプロジェクト管理とリーダーシップスキルを養います。"
+    },
+    "project-advanced-diploma": {
+      "title": "プログラムマネジメント 上級ディプロマ",
+      "description": "高度なプロジェクト戦略と計画立案スキルを学びます。"
+    },
+    "hr-certificate-iv": {
+      "title": "人材マネジメント IV級 認定資格",
+      "description": "人事分野の基礎スキルを身につけ、エントリーレベルのキャリアを目指します。"
+    },
+    "hr-diploma": {
+      "title": "人材マネジメント ディプロマ",
+      "description": "戦略的思考を伴う上級人事マネジメントスキルを学びます。"
+    },
+    "hr-advanced-diploma": {
+      "title": "人材マネジメント 上級ディプロマ",
+      "description": "上級管理職に必要な人事戦略とリーダーシップを学びます。"
+    },
+    "health-services-assistance": {
+      "title": "医療サービス支援 III級 認定資格（HLT33115）",
+      "description": "英語サポートと80時間の実習を含む包括的な看護支援キャリアパスをスタート。"
+    },
+    "barista": {
+      "title": "1日バリスタクラス ☕️",
+      "description": "エスプレッソの抽出からラテアートまで、1日で学べる実践的なクラスです！"
+    },
+    "wine": {
+      "title": "ワインテイスティング講座 🍷",
+      "description": "ワインの種類、テイスティング技法、料理とのペアリングを学びます。"
+    },
+    "dessert-plating": {
+      "title": "デザート盛り付けマスタークラス 🍰",
+      "description": "プロフェッショナルなデザートプレーティング技法を学びます。"
+    },
+    "cocktail": {
+      "title": "カクテル＆ミクソロジー講座 🍹",
+      "description": "クラシックから創作まで、カクテル作りの技術を学びます。"
+    },
+    "fss": {
+      "title": "NSW フードセーフティ再認定講習",
+      "description": "NSW州で認定フードセーフティスーパーバイザーを目指しましょう。"
+    },
+    "french-cakes": {
+      "title": "クラシックフレンチケーキ講座 🍰",
+      "description": "オペラケーキやレモンタルトなど、美しいフレンチペストリーを作りましょう。"
+    },
+    "sourdough": {
+      "title": "サワードウ＆フォカッチャ講座 🥖✨",
+      "description": "受賞歴のあるパン職人からアーティザンブレッド作りの技を学びます。"
+    },
+    "french-pastries": {
+      "title": "クラシックフレンチペストリー講座 🥐",
+      "description": "本格的なフレンチペストリーとヴィエノワズリーを学びます。"
+    },
+    "macaron": {
+      "title": "プチフール講座（マカロン）🍪",
+      "description": "完璧なフレンチマカロンとプチフールの作り方を学びます。"
+    },
+    "vegan": {
+      "title": "ヴィーガン＆ベジタリアン料理講座 🌱",
+      "description": "植物由来の食材を使った料理技法とレシピを学びます。"
+    },
+    "chocolate": {
+      "title": "チョコレートクラス – クリスマス特別講座 🍫",
+      "description": "ホリデーシーズンにぴったりなチョコレートスイーツとお菓子を作りましょう。"
+    }
   }
 }

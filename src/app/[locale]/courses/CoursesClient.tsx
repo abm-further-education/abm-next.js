@@ -5,7 +5,6 @@ import CourseFilter from '@/components/courses/CourseFilter';
 import CourseCard from '@/components/courses/CourseCard';
 import CourseCardMobile from '@/components/courses/CourseCardMobile';
 import {
-  getCourseDataByLocale,
   courseCategories,
   courseTypes,
   courseLevels,
@@ -14,10 +13,14 @@ import {
 
 interface CoursesClientProps {
   locale: string;
+  initialCourseData: CourseData[];
 }
 
-export default function CoursesClient({ locale }: CoursesClientProps) {
-  const courseData = getCourseDataByLocale(locale);
+export default function CoursesClient({
+  locale,
+  initialCourseData,
+}: CoursesClientProps) {
+  const courseData = initialCourseData;
 
   // Filter states
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,7 +30,7 @@ export default function CoursesClient({ locale }: CoursesClientProps) {
 
   // Filter courses based on search and filters
   const filteredCourses = useMemo(() => {
-    return getCourseDataByLocale(locale).filter((course: CourseData) => {
+    return courseData.filter((course: CourseData) => {
       // Search filter
       const matchesSearch =
         searchTerm === '' ||
@@ -51,7 +54,7 @@ export default function CoursesClient({ locale }: CoursesClientProps) {
 
       return matchesSearch && matchesCategory && matchesType && matchesLevel;
     });
-  }, [searchTerm, selectedCategory, selectedType, selectedLevel, locale]);
+  }, [searchTerm, selectedCategory, selectedType, selectedLevel, courseData]);
 
   return (
     <section className="py-50">
