@@ -67,6 +67,7 @@ function Banner({
                 src={slide.imgPath}
                 alt="banner_image"
                 fill
+                quality={100}
                 className="md:object-center object-cover"
               />
             )}
@@ -85,6 +86,11 @@ function Banner({
                   <h2 className="font-[family-name:var(--font-montserrat)] text-white text-xl md:text-2xl font-bold drop-shadow-lg max-w-1000 pt-10">
                     {slide.subtitle}
                   </h2>
+                )}
+                {slide.content && (
+                  <p className="font-[family-name:var(--font-montserrat)] text-white text-base leading-tight md:text-2xl drop-shadow-lg max-w-1000 pt-10 font-normal whitespace-pre-line">
+                    {slide.content}
+                  </p>
                 )}
               </FadeInBottomToTop>
 

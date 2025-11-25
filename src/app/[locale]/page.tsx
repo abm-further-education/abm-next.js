@@ -74,6 +74,26 @@ export default async function Home({
         <Banner
           slides={[
             {
+              imgPath: '/courses/hsa_banner_2.png',
+              title: 'Free Health Service Assistance Trial Class!',
+              content: `Join our one-time free session with our registered nurse trainer on 5 Dec, 3:30 PM.`,
+              linkButton: {
+                href: 'https://form.jotform.com/253237169340860',
+                text: 'Register Here',
+              },
+            },
+            {
+              imgPath: '/courses/fitness_banner_1.png',
+              title: 'Start Your Fitness Journey',
+              content: `January intake is open now. Spots are limited.\nIt’s a solid starting point if you want to work as a fitness trainer.`,
+            },
+            {
+              imgPath: '/courses/project_banner_1.png',
+              title: 'Your Career Starts Here',
+              content:
+                'Learn to ensure that the right people are in the right jobs and create a better workplace for everyone.',
+            },
+            {
               imgPath:
                 'https://www.youtube.com/embed/FOWrWhWZPb8?si=YYieNS7QfEQ0kgrx',
               title: 'Your Career Starts Here',
@@ -90,9 +110,9 @@ export default async function Home({
             },
           ]}
           dimmed={
-            <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div>
           }
-          autoplayDelay={20000}
+          autoplayDelay={5000}
         />
 
         <div className="flex flex-wrap xl:gap-20 items-center justify-center py-50 px-20 md:px-0 gap-10">

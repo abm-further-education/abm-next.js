@@ -593,8 +593,8 @@ export const CERTIV_FITNESS_UNITS = [
   },
   {
     no: 13,
-    code: 'BSBESB401',
-    title: 'Research and develop business plans',
+    code: 'SISXCAI009',
+    title: 'Instruct strength and conditioning techniques',
     type: 'Elective',
   },
   {
@@ -712,8 +712,8 @@ export const CERTIII_FITNESS_UNITS = [
   },
   {
     no: 15,
-    code: 'SISFFIT037',
-    title: 'Develop and instruct group movement programs for children',
+    code: 'SISXIND009',
+    title: 'Respond to interpersonal conflict',
     type: 'Elective',
   },
 ];
@@ -898,8 +898,8 @@ export const CERTIV_FITNESS_FAST_UNITS = [
   },
   {
     no: 14,
-    code: 'BSBESB401',
-    title: 'Research and develop business plans',
+    code: 'SISXCAI009',
+    title: 'Instruct strength and conditioning techniques',
     type: 'Elective',
   },
   {

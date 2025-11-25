@@ -263,6 +263,7 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
                     alt="Study Plan"
                     width={800}
                     height={600}
+                    quality={100}
                     className="w-full max-w-800 h-auto rounded-lg shadow-md mb-30"
                   />
                 </div>

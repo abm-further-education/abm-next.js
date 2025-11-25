@@ -26,7 +26,7 @@ function MiniTestimonial() {
   };
 
   return (
-    <div className="hidden md:block absolute bottom-40 md:right-4 lg:right-200 w-[280px] z-50">
+    <div className="hidden md:block absolute bottom-40 md:right-4 lg:right-100 2xl:right-200 w-[280px] z-50">
       <Swiper
         spaceBetween={0}
         className="bg-black/60 overflow-hidden"
