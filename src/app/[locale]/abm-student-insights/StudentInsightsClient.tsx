@@ -1,7 +1,7 @@
 'use client';
 
 import Banner from '@/components/common/Banner';
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
@@ -11,14 +11,15 @@ export default function StudentInsightsClient() {
   const t = useTranslations('studentInsights');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  // Testimonial images array - 기존 25개 + fitness 2개
-  const regularTestimonials = Array.from({ length: 26 }, (_, i) => i + 1);
-  const fitnessImages = fitnessTestimonials.map(
-    (testimonial) => testimonial.image
-  );
-  const allTestimonialImages = [...regularTestimonials, ...fitnessImages].sort(
-    () => Math.random() - 0.5
-  );
+  // Testimonial images array - 기존 26개 + fitness 2개
+  // useMemo를 사용하여 컴포넌트 마운트 시 한 번만 섞고 고정된 순서 유지
+  const allTestimonialImages = useMemo(() => {
+    const regularTestimonials = Array.from({ length: 26 }, (_, i) => i + 1);
+    const fitnessImages = fitnessTestimonials.map(
+      (testimonial) => testimonial.image
+    );
+    return [...regularTestimonials, ...fitnessImages];
+  }, []);
 
   const openModal = (index: number) => {
     setSelectedImage(index);
