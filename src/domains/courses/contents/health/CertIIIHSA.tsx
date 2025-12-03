@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseProgress from '@/components/common/CourseProgress';
+import Image from 'next/image';
 
 function CertIIIHSA() {
   return (
@@ -24,7 +25,14 @@ function CertIIIHSA() {
           </div>
           <div className="p-20">
             {/* Course Progression Structure */}
-            <CourseProgress
+            <Image
+              src="/courses/health/hsa-flow.png"
+              alt="HSA Flow"
+              width={1000}
+              height={1000}
+              className="w-full h-auto"
+            />
+            {/* <CourseProgress
               courses={[
                 {
                   title: 'English for Healthcare Communication',
@@ -41,7 +49,7 @@ function CertIIIHSA() {
                 },
               ]}
               activeIndex={1}
-            />
+            /> */}
             <span className="text-sm text-primary">
               * If the student has IELTS 4.5 or equivalent through ABM EPT,
               enrol with Plus Nursing English .
