@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseProgress from '@/components/common/CourseProgress';
+// import CourseProgress from '@/components/common/CourseProgress';
 import Image from 'next/image';
 
 function CertIIIHSA() {
