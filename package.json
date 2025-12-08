@@ -30,7 +30,7 @@
     "framer-motion": "^12.6.0",
     "hoist-non-react-statics": "^3.3.2",
     "lucide-react": "^0.483.0",
-    "next": "15.2.3",
+    "next": "15.2.6",
     "next-intl": "^4.0.2",
     "nodemailer": "^7.0.5",
     "react": "^19.0.0",

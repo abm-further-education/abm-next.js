@@ -213,6 +213,8 @@ function CourseInformation({ id }: { id: string }) {
     'industry-placement-work-placement',
     'industry-placement-hospitality-management',
     'fss',
+    'certificate-iv-in-fitness-fast-track',
+    'certificate-iii-in-fitness-fast-track',
   ];
 
   const shouldHideButtons = hideButtonsForCourses.includes(id);

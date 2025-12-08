@@ -734,28 +734,28 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         },
       ],
     },
-    startingDates: [
-      {
-        title: '2025',
-        dates: ['29 Sep', '20 Oct', '10 Nov', '1 Dec', '22 Dec'],
-      },
-      {
-        title: '2026',
-        dates: [
-          '12 Jan',
-          '2 Feb',
-          '23 Feb',
-          '16 Mar',
-          '6 Apr',
-          '27 Apr',
-          '18 May',
-          '8 Jun',
-        ],
-      },
-    ],
+    // startingDates: [
+    //   {
+    //     title: '2025',
+    //     dates: ['29 Sep', '20 Oct', '10 Nov', '1 Dec', '22 Dec'],
+    //   },
+    //   {
+    //     title: '2026',
+    //     dates: [
+    //       '12 Jan',
+    //       '2 Feb',
+    //       '23 Feb',
+    //       '16 Mar',
+    //       '6 Apr',
+    //       '27 Apr',
+    //       '18 May',
+    //       '8 Jun',
+    //     ],
+    //   },
+    // ],
     additionalInfo: {
       description:
-        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n',
+        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\n* The enrollment date will be published in April 2026.',
     },
   },
   'certificate-iv-in-fitness-fast-track': {
@@ -780,28 +780,28 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         },
       ],
     },
-    startingDates: [
-      {
-        title: '2025',
-        dates: ['29 Sep', '20 Oct', '10 Nov', '1 Dec', '22 Dec'],
-      },
-      {
-        title: '2026',
-        dates: [
-          '12 Jan',
-          '2 Feb',
-          '23 Feb',
-          '16 Mar',
-          '6 Apr',
-          '27 Apr',
-          '18 May',
-          '8 Jun',
-        ],
-      },
-    ],
+    // startingDates: [
+    //   {
+    //     title: '2025',
+    //     dates: ['29 Sep', '20 Oct', '10 Nov', '1 Dec', '22 Dec'],
+    //   },
+    //   {
+    //     title: '2026',
+    //     dates: [
+    //       '12 Jan',
+    //       '2 Feb',
+    //       '23 Feb',
+    //       '16 Mar',
+    //       '6 Apr',
+    //       '27 Apr',
+    //       '18 May',
+    //       '8 Jun',
+    //     ],
+    //   },
+    // ],
     additionalInfo: {
       description:
-        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment options here!',
+        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment options here!\n\n* The enrollment date will be published in April 2026.',
     },
   },
   'hlt33115-certificate-iii-in-health-services-assistance': {
