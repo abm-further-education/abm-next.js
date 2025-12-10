@@ -10,6 +10,7 @@ export const courseInformationData_pt: {
     description:
       'Pronto para levar suas habilidades culinárias ao próximo nível?\n\nNa ABM Further Education, reconhecemos que a experiência real da indústria é tão importante quanto o aprendizado teórico e prático na cozinha.\n\nO Certificate IV in Kitchen Management prepara os alunos para funções de supervisão e liderança em cozinhas comerciais, combinando aprendizado em sala de aula com experiência prática extensiva. Os alunos terão a oportunidade de treinar em ambientes reais de hospitalidade, como restaurantes, hotéis e instituições de cuidados a idosos, orientados por profissionais experientes da indústria.\n\nPara fortalecer a empregabilidade e garantir prontidão para a carreira, o curso agora inclui 600 horas de estágio estruturado na indústria, começando no Termo 3.\n\nA partir do Termo 3, os alunos podem completar até 16 horas adicionais por semana, e a partir do Termo 6, até 20 horas adicionais por semana como parte de seu estágio na indústria. Esta estrutura aprimorada permite que os alunos apliquem seu aprendizado em sala de aula em locais de trabalho reais, desenvolvendo habilidades essenciais, confiança e uma compreensão mais profunda das operações de cozinha.\n\nEssas horas de estágio na indústria são um componente obrigatório da qualificação e formam uma parte integral do compromisso da ABM de fornecer educação prática e focada na carreira.',
     duration: '78 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 10',
     deliveryMode: {
       title: 'Modalidade de oferta:',
       mode: 'Presencial',
@@ -42,6 +43,7 @@ export const courseInformationData_pt: {
     description:
       'Os alunos do Certificado IV em Negócios focarão no desenvolvimento de liderança eficaz e capacidades de resolução de problemas, cruciais para atuar em diversos cargos de serviços empresariais. Quem segue uma carreira orientada a negócios será capacitado para concluir tarefas administrativas ou operacionais especializadas e moderadamente complexas que exigem avançadas habilidades de autodesenvolvimento. Ao concluir o Certificado IV em Negócios, você será capaz de implementar comunicação eficaz e técnicas de solução de problemas essenciais para o sucesso em seu setor. Os alunos aprenderão e aplicarão um alto nível de habilidades e amplo conhecimento para propor soluções a uma variedade definida de complicações imprevisíveis e direcionar de forma concisa uma equipe rumo às resoluções propostas. Indivíduos com aptidão para liderança e solução de problemas poderão aprimorar suas habilidades e aprender técnicas-chave de comunicação e resolução de problemas para conduzir equipes pelos inúmeros desafios do ambiente de negócios.',
     duration: '52 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 10',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -68,6 +70,7 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação reflete o papel de indivíduos que aplicam conhecimento e habilidades especializadas, juntamente com experiência em liderança e gestão, em diversos contextos corporativos e setoriais.\n\nIndivíduos nesse nível demonstram iniciativa e julgamento ao planejar, organizar, implementar e monitorar sua própria carga de trabalho e a de outros. Utilizam habilidades de comunicação para apoiar pessoas e equipes no atendimento às exigências organizacionais.\n\nEles podem planejar, projetar, aplicar e avaliar soluções para problemas imprevisíveis e identificar, analisar e sintetizar informações de várias fontes.',
     duration: '52 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 12',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -94,6 +97,8 @@ export const courseInformationData_pt: {
     description:
       'Quem busca aprimorar capacidades de liderança, aprender procedimentos-chave de solução de problemas e atuar em equipe encontrará no Advanced Diploma of Business da ABM a escolha ideal. Os graduados sairão com todas as ferramentas necessárias para lidar com tarefas altamente complexas em sua área de especialização. O curso fornece os blocos fundamentais para você se especializar e ingressar no ambiente corporativo em seu campo escolhido.\n\nAo longo do curso, os alunos realizarão atividades voltadas à solução de problemas complexos, desenvolvimento e implementação de planos de negócios, criação de estratégias organizacionais e contribuição para o planejamento estratégico da força de trabalho — todas as habilidades necessárias para excelência na sua área de atuação.\n\nNosso Advanced Diploma of Business é indicado a pessoas com paixão por liderança, forte capacidade de resolver problemas e habilidade para motivar e orientar equipes.',
     duration: '78 semanas',
+    entryRequirement:
+      'Os alunos devem ter concluído um curso de nível Diploma (AQF Level 5) ou Advanced Diploma (AQF Level 6) do pacote de treinamento BSB.',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -120,6 +125,8 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação reflete o papel de indivíduos que aplicam conhecimento e habilidades gerenciais altamente especializadas para liderar e influenciar mudanças em ambientes complexos e dinâmicos.\n\nIndivíduos nesse nível utilizam habilidades cognitivas e de comunicação para identificar, analisar, sintetizar e agir sobre informações de várias fontes, além de transferir conhecimento e habilidades para outras pessoas.\n\nAplicam habilidades criativas, conceituais e analíticas para formular e avaliar ideias complexas ou iniciar mudanças. Demonstram aplicação autodirigida de conhecimento e habilidades, com substancial responsabilidade pessoal e autonomia em situações complexas.',
     duration: '52 semanas',
+    entryRequirement:
+      'Os alunos devem ter concluído um curso de nível Advanced Diploma (AQF Level 6) ou superior.',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -429,6 +436,7 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação reflete o papel de operadores seniores altamente qualificados que usam ampla gama de habilidades em hospitalidade combinadas a competências gerenciais e sólido conhecimento do setor para coordenar operações.\n\nAtuam de forma independente, têm responsabilidade sobre outras pessoas e tomam diversas decisões operacionais.\n\nFornece caminho para atuar em qualquer setor da hospitalidade como gestor departamental ou de pequenos negócios. A diversidade de empregadores inclui restaurantes, hotéis, motéis, operações de catering, clubes, pubs, cafés e cafeterias. Permite multicompetências e especialização em serviços de acomodação, cozinha, alimentos e bebidas e jogos.\n\nAs habilidades devem ser aplicadas conforme legislação da Commonwealth e Estadual/Territorial, normas australianas e códigos de prática da indústria.\nNo momento da publicação, não há exigências específicas de licenciamento ou certificação.',
     duration: '76 semanas / 102 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 12',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -460,6 +468,7 @@ export const courseInformationData_pt: {
     description:
       'O Advanced Diploma of Hospitality Management é indicado para quem deseja uma carreira que utilize ampla gama de habilidades em hospitalidade, combinadas a competências gerenciais especializadas e conhecimento substancial do setor para coordenar e monitorar operações. Os alunos atuarão com alto nível de autonomia e serão responsáveis por criar e implementar decisões estratégicas de gestão.\n\nA qualificação oferece um caminho claro para trabalhar em qualquer setor da hospitalidade e para diversos empregadores: restaurantes, hotéis, motéis, operações de catering, clubes, pubs, cafés e cafeterias. Os concluintes alcançarão a base necessária para multicompetências e especialização em acomodação, cozinha, alimentos e bebidas e jogos.\n\nGraças à natureza do curso e à flexibilidade das eletivas, garantimos atividades de aprendizagem alinhadas às suas preferências e metas de carreira.',
     duration: '104 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 12',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -492,6 +501,7 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação reflete o papel de indivíduos com habilidades bem desenvolvidas em uma variedade de processos de gestão de projetos.\n\nAplicam conhecimento e habilidades de gerenciamento de projetos a contextos definidos e são responsáveis por resultados em cenários com medidas e soluções limitadas, não rotineiras ou contingenciais.\n\nÉ adequada para quem trabalha em equipes que apoiam ou são responsáveis por atividades e resultados de projetos, em qualquer setor ou comunidade.',
     duration: '52 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 10',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -518,6 +528,7 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação reflete o papel de indivíduos que aplicam habilidades e conhecimento de gestão de projetos em vários contextos e setores. Cargos relacionados incluem Gerente de Projetos e Líder de Equipe. Esses profissionais possuem funções de liderança e gestão de projetos e são responsáveis por alcançar objetivos do projeto. Têm base teórica sólida e utilizam competências especializadas, técnicas e gerenciais para iniciar, planejar, executar e avaliar seu próprio trabalho e/ou o de outros.',
     duration: '52 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 12',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial (20 horas/semana)',
@@ -543,6 +554,11 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação reflete o papel de indivíduos que aplicam habilidades e conhecimento de gestão de projetos em diversos contextos e setores. Cargos relacionados incluem Gerente de Projetos e Líder de Equipe.\n\nEsses profissionais exercem liderança e gestão de projetos e são responsáveis por alcançar objetivos do projeto. Possuem base teórica consistente e utilizam competências especializadas, técnicas e gerenciais para iniciar, planejar, executar e avaliar seu próprio trabalho e/ou o de outros.',
     duration: '78 semanas',
+    entryRequirement: [
+      'Ter concluído uma das seguintes qualificações',
+      '• BSB50820 Diploma of Project Management',
+      '• BSB51415 Diploma of Project Management (ou uma versão equivalente substituída).',
+    ],
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial (20 horas/semana)',
@@ -568,6 +584,7 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação descreve as habilidades e conhecimentos para profissionais de recursos humanos (RH) que aplicam ampla gama de competências com discrição, julgamento e conhecimento teórico relevante.\n\nEles podem fornecer aconselhamento técnico e suporte a uma equipe.\n\nCargos relacionados incluem Assistente/Analista/Oficial de RH, Recrutamento e Aprendizagem & Desenvolvimento.',
     duration: '52 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 10',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -594,6 +611,15 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação descreve habilidades e conhecimentos para profissionais de RH em funções especializadas, aplicando ampla gama de competências com discrição, julgamento e conhecimento teórico relevante.\n\nPodem fornecer suporte técnico à equipe e assumir responsabilidade por resultados de colaboradores juniores.\n\nCargos relacionados incluem Assessor/Coordenador de RH, Consultor de Recrutamento, Assessor de Relações Trabalhistas, Coordenador de L&D e Assessor de SST.',
     duration: '52 semanas',
+    entryRequirement: [
+      'Ter concluído as seguintes unidades:',
+      '• BSBHRM411 Administer performance development processes',
+      '• BSBHRM412 Support employee and industrial relations',
+      '• BSBHRM415 Coordinate recruitment and onboarding',
+      '• BSBHRM417 Support human resource functions and processes',
+      '',
+      'Competências equivalentes são predecessoras dessas unidades, que foram mapeadas como equivalentes.',
+    ],
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -620,6 +646,11 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação descreve as habilidades e conhecimentos para profissionais seniores de RH, generalistas ou especialistas, que aplicam ampla gama de competências avançadas com discrição, julgamento e conhecimento teórico relevante.\n\nPodem liderar e orientar outros e têm responsabilidade por decisões operacionais e estratégicas.\n\nCargos relacionados incluem Gerente de RH, L&D, Relações Trabalhistas, Recrutamento e SST.',
     duration: '78 semanas',
+    entryRequirement: [
+      'Ter concluído uma das seguintes qualificações',
+      '• BSB50320 Diploma of Human Resource Management',
+      '• BSB50618 Diploma of Human Resources Management (ou uma versão equivalente substituída).',
+    ],
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -646,6 +677,7 @@ export const courseInformationData_pt: {
     description:
       'Esta qualificação reflete o papel de indivíduos que desempenham diversas atividades no setor de fitness.\n\nProfissionais com esta qualificação são competentes em orientar serviços de fitness, incluindo orientação inicial e triagem de saúde, instrução de exercícios, aulas em grupo e instrução em academia.\n\nO trabalho é realizado em ambientes controlados como academias, centros aquáticos, comunitários e corporativos, bem como ao ar livre. Atua-se de forma independente com certo nível de autonomia em ambiente controlado.',
     duration: '52 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 10',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -676,6 +708,20 @@ export const courseInformationData_pt: {
     description:
       'O Certificado IV em Fitness é ideal para quem deseja tornar-se personal trainer. Você aprenderá a projetar, instruir e avaliar programas de exercícios para clientes saudáveis que buscam atingir objetivos de condicionamento. Para clientes com questões de saúde mais sérias, você fará o encaminhamento a profissionais médicos. Personal trainers trabalham de forma independente, utilizando seu conhecimento em situações rotineiras e imprevisíveis, comunicando-se bem com clientes e especialistas para alcançar os melhores resultados.\nO curso oferece caminho para atuar como personal trainer em academias, centros de fitness, espaços de lazer, locais de trabalho, residências e ao ar livre. Você pode treinar indivíduos ou grupos e até oferecer serviços online, além de assumir funções de liderança em alguns contextos.\n\nPúblico-alvo:\n– Início ou avanço de carreira no setor de fitness;\n– Transição de carreira para nova área;\n– Concluintes do Certificado III em Fitness que desejam evoluir;\n– Interessa-se por caminhos para qualificações superiores em fitness.\n\nOs alunos vêm de vários países. Alguns podem ser novos na Austrália; outros já viveram aqui. Esta qualificação é seu passo inicial no setor, sem exigência especial de licenciamento. Você seguirá padrões e práticas da indústria australiana para estar bem preparado.',
     duration: '52 semanas',
+    entryRequirement: [
+      'Ter concluído as seguintes unidades:',
+      '• HLTAID011 Provide First Aid (ou uma unidade que substitua esta unidade)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+      '',
+      'O aluno deve ter concluído o equivalente ao Year 12',
+    ],
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -707,6 +753,8 @@ export const courseInformationData_pt: {
     description:
       'Construa seu futuro no setor australiano de Esportes e Fitness\n\nO Diploma of Sport (Coaching) fornece habilidades práticas e conhecimentos para assumir diversas funções no setor esportivo. Seja para treinar, liderar equipes ou apoiar organizações comunitárias, esta qualificação oferece base sólida para o sucesso.\n\nOs alunos aprenderão a trabalhar de forma independente, gerenciar e supervisionar outros e aplicar suas habilidades conforme legislação, normas e boas práticas australianas. O curso inclui elementos essenciais de liderança e comunicação para ambientes esportivos dinâmicos.\n\nPara quem é este curso?\n\nIdeal para estudantes internacionais que desejam:\n- Iniciar ou progredir na carreira de esporte/fitness;\n- Mudar de área profissional;\n- Já possuem Certificado III/IV em Fitness e querem avançar;\n- Procuram caminhos para qualificações de nível superior em esportes.\n\nOs alunos vêm de diversos países. Alguns podem ser novos na Austrália; outros já viveram aqui. Esta qualificação é seu passo inicial no setor, sem licenças específicas exigidas. Você seguirá padrões e práticas da indústria para iniciar sua carreira com segurança.',
     duration: '52 semanas',
+    entryRequirement:
+      'Participar de uma entrevista de entrada no curso para determinar a adequação ao curso e as necessidades do aluno.',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -737,6 +785,7 @@ export const courseInformationData_pt: {
     description:
       'Comece sua carreira como Instrutor de Fitness\n\nO Certificado III em Fitness é projetado para quem deseja atuar como Instrutor de Exercícios em Grupo ou Instrutor de Academia. Esta qualificação capacita você a planejar e ministrar sessões em grupo e criar programas em academia para indivíduos, com instrução personalizada e monitoramento contínuo limitados.\n\nVocê atuará em ambientes estruturados e supervisionados, como academias, centros de lazer e espaços comunitários. Como instrutor, utilizará discrição e julgamento ao conduzir sessões e interagir com clientes, seguindo políticas e procedimentos organizacionais.\n\nOnde esta qualificação pode te levar?\nEmprego direto em:\n– Academias e Centros de Fitness\n– Centros de Lazer e Comunitários\n– Clubes de Saúde & Bem-Estar',
     duration: '12 semanas ou 24 semanas',
+    entryRequirement: 'Você é capaz de participar de atividades de fitness.',
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -784,6 +833,18 @@ export const courseInformationData_pt: {
     description:
       'Comece sua carreira como Instrutor de Fitness (Avançado)\n\nO Certificado IV em Fitness é projetado para quem deseja atuar como Personal Trainer e Instrutor Avançado. Você aprenderá a planejar e ministrar sessões em grupo e criar programas de academia para indivíduos, com instrução personalizada e monitoramento contínuo limitados.\n\nVocê atuará em ambientes estruturados e supervisionados (academias, centros de lazer e espaços comunitários). Como instrutor, utilizará discrição e julgamento, seguindo políticas e procedimentos da organização.\n\nOnde esta qualificação pode te levar?\nEmprego direto em:\n– Academias e Centros de Fitness\n– Centros de Lazer e Comunitários\n– Clubes de Saúde & Bem-Estar',
     duration: '12 semanas ou 24 semanas',
+    entryRequirement: [
+      'Ter concluído as seguintes unidades:',
+      '• HLTAID011 Provide First Aid (ou uma unidade que substitua esta unidade)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+    ],
     deliveryMode: {
       title: 'Modalidade de oferta',
       mode: 'Presencial',
@@ -832,6 +893,11 @@ export const courseInformationData_pt: {
       'Trilha de Carreira em Apoio à Enfermagem: Inglês + Certificado III em Assistência a Serviços de Saúde + Estágio\n\nInclui: HLT33115 Certificate III in Health Services Assistance (Apoio ao Trabalho de Enfermagem em Cuidados Agudos)\n\nDê o primeiro passo para uma carreira gratificante na saúde com a trilha de Apoio à Enfermagem da ABM. Programa abrangente projetado para estudantes internacionais ou iniciantes no setor que desejam atuar como profissionais de apoio em hospitais e instituições de cuidados a idosos.',
     duration:
       '16 semanas (2 dias por semana + 1 dia de tutoria) + 80 horas de estágio',
+    entryRequirement: [
+      'Os alunos devem ter pelo menos 18 anos de idade no início do curso.',
+      'IELTS 5.5 ou equivalente. Se o aluno tiver IELTS 4.5 ou equivalente através do ABM EPT, inscreva-se no Plus Nursing English.',
+      'O aluno deve ter concluído o equivalente ao Year 10',
+    ],
     deliveryMode: {
       title: 'Modalidade de oferta:',
       mode: 'Presencial',

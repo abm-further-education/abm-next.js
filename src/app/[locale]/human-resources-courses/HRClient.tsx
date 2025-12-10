@@ -3,7 +3,7 @@
 import Banner from '@/components/common/Banner';
 import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
-import Testimonial from '@/domains/main/components/Testimonial';
+// import Testimonial from '@/domains/main/components/Testimonial';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 
@@ -59,9 +59,9 @@ export default function HRClient() {
           />
         </div>
       </FadeIn>
-      <FadeIn>
+      {/* <FadeIn>
         <Testimonial />
-      </FadeIn>
+      </FadeIn> */}
     </div>
   );
 }

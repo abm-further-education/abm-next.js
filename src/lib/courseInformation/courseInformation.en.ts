@@ -8,6 +8,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification (updated from SIT40516 – Certificate IV in Commercial Cookery on 09 June 2022) is for chefs and cooks in supervisory or team leader roles. They work independently or with limited guidance and solve non-routine problems.\n\nIt prepares students for jobs in restaurants, hotels, clubs, pubs, cafes, coffee shops, or to run a small business in these areas.\n\nSkills must be used according to Australian laws, standards, and industry codes.\n\nThere are no licensing or certification requirements for this qualification at the time of publication.',
     duration: '78 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 10',
     deliveryMode: {
       title: 'Delivery mode:',
       mode: 'Face to Face',
@@ -39,6 +40,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'Students participating in Certificate IV in Business will focus on building effective leadership and problem-solving capabilities crucial to success within a variety of business service job roles. Students pursuing a business-oriented career path will be armed with skills relating towards the completion of specialist and moderately complex administrative or operational tasks that will require advanced self-developmental skills. Upon the completion of Certificate IV in Business, you will be able to implement effective communication and problem-solving skills that will prove to be instrumental to their success within their chosen sector. Students will learn and implement a high level of skills and broad knowledge to apply solutions to a defined range of unpredictable complications and be able to concisely direct a team through any resolution proposed. Individuals with an aptitude for leadership and problem solving will be able to further their skills and learn key communication and problem-solving techniques to enable them to navigate a team through-out the many problems faced within the business environment.',
     duration: '52 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 10',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -64,6 +66,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification reflects the role of individuals who apply specialised knowledge and skills, together with experience in leadership and management, across a range of enterprise and industry contexts.\n\nIndividuals at this level display initiative and judgement in planning, organising, implementing and monitoring their own workload and the workload of others. They use communication skills to support individuals and teams to meet organisational or enterprise requirements.\n\nThey may plan, design, apply and evaluate solutions to unpredictable problems, and identify, analyse and synthesise information from a variety of sources.',
     duration: '52 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 12',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -89,6 +92,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'Individuals who seek to improve upon their leadership capabilities, learn key problem-solving procedures and engage in a team environment should look no further than ABMs Advanced Diploma of Business. Graduates in this course will leave with all the necessary tools required to tackle highly complex tasks in their specialised field of expertise. ABMs Advanced Diploma of Business will provide students with the key building blocks required for you to specialise and enter the business environment in your chosen field.\n\nThroughout this course, students will engage in exercises aimed to assist in complex problem solving, develop and implement business plans, develop organisational strategies and contribute to strategic workforce planning \n– All Necessary skills to excel in your specialised field of work.\n\nOur Advanced Diploma of Business is suited towards individuals with a passion for leadership, strong problem-solving capabilities and the ability to motivate and guide a team.',
     duration: '78 weeks',
+    entryRequirement:
+      'Students must have completed a Diploma level course (AQF Level 5) or Advanced Diploma level course (AQF Level 6) from the BSB training package.',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -114,6 +119,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification reflects the role of individuals who apply highly specialised management knowledge and skills to lead and influence change in complex and dynamic management environments.\n\nIndividuals at this level use cognitive and communication skills to identify, analyse, synthesise and act on information from a variety of sources, and transfer knowledge and skills to others.\n\nThey apply creative, conceptual and analytical skills to formulate and evaluate complex ideas or initiate change. They demonstrate self-directed application of knowledge and skills, with substantial personal responsibility and autonomy in complex situations.',
     duration: '52 weeks',
+    entryRequirement:
+      'Students must have completed Advanced Diploma level course (AQF Level 6) or higher.',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -420,6 +427,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification reflects the role of highly skilled senior operators who use a broad range of hospitality skills combined with managerial skills and sound knowledge of industry to coordinate hospitality operations.\n\nThey operate independently, have responsibility for others and make a range of operational business decisions.\n\nThis qualification provides a pathway to work in any hospitality industry sector as a departmental or small business manager. The diversity of employers includes restaurants, hotels, motels, catering operations, clubs, pubs, cafés and coffee shops.\nThis qualification allows for multiskilling and for specialisation in accommodation services, cookery, food and beverage and gaming.\n\nThe skills in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian standards and industry codes of practice.\nNo occupational licensing, certification or specific legislative requirements apply to this qualification at the time of publication.',
     duration: '76 weeks / 102 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 12',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -450,6 +458,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'Individuals well suited for our Advanced Diploma of Hospitality Management are those looking to pursue a career that will utilize a broad range of hospitality skills, combined with specialized managerial skills and substantial knowledge of industry to coordinate and monitor hospitality operations. Students in this field will operate with a high level of autonomy and will be responsible for the creation and implementation of strategic business management decisions.\n\nOur Advanced Diploma of Hospitality Management qualification provides students with a clear pathway to work in any hospitality industry sector and for a diverse range of employers including restaurants, hotels, motels, catering operations, clubs, pubs, cafes and coffee shops. Students completing this course will achieve the skills and framework required for multiskilling and for specialization in accommodation services, cookery, food and beverage gaming.\n\nDue to the nature of this course and the flexible electives available for students, we can ensure that you are working towards your goals in their chosen industry by allowing for specialized learning activities, catered towards your own preferences and career goals.',
     duration: '104 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 12',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -481,6 +490,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification reflects the role of individuals who possess well-developed skills in a range of project management processes.\n\nThey apply project management knowledge and skills to a defined range of contexts and are responsible for project outcomes where there are limited, non-routine or contingency measures and solutions.\n\nThis qualification is suitable for individuals working in team environments who support or are responsible for project activities and outcomes. It can apply to any industry or community context.',
     duration: '52 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 10',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -506,6 +516,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification reflects the role of individuals who apply project management skills and knowledge in a variety of contexts, across a number of industry sectors. The job roles that relate to this qualification may include Project Manager and Project Team Leader. Individuals in these roles have project leadership and management roles and are responsible for achieving project objectives. They possess a sound theoretical knowledge base and use a range of specialised, technical, and managerial competencies to initiate, plan, execute and evaluate their own work and/or the work of others.',
     duration: '52 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 12',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face (20 hours per week)',
@@ -530,6 +541,11 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification reflects the role of individuals who apply project management skills and knowledge in a variety of contexts, across a number of industry sectors. The job roles that relate to this qualification may include Project Manager and Project Team Leader.\n\nIndividuals in these roles have project leadership and management roles and are responsible for achieving project objectives. They possess a sound theoretical knowledge base and use a range of specialised, technical, and managerial competencies to initiate, plan, execute and evaluate their own work and/or the work of others.',
     duration: '78 weeks',
+    entryRequirement: [
+      `Have completed one of the following qualifications`,
+      `• BSB50820 Diploma of Project Management`,
+      `• BSB51415 Diploma of Project Management (or a superseded equivalent version).`,
+    ],
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face (20 hours per week)',
@@ -554,6 +570,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification describes the skills and knowledge for workers in human resources (HR) roles who apply a broad range of competencies using some discretion, judgement and relevant theoretical knowledge.\n\nThey may provide technical advice and support to a team.\n\nJob roles that relate to this qualification include Human Resources Officer, Human Resources Assistant, Recruitment Officer, and Learning and Development Officer.',
     duration: '52 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 10',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -579,6 +596,15 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification describes the skills and knowledge for workers in human resources specialist roles who apply a broad range of competencies using discretion, judgement and relevant theoretical knowledge.\n\nThey may provide technical advice and support to a team and take responsibility for the work outcomes of junior staff.\n\nJob roles that relate to this qualification include Human Resources Adviser, Human Resources Coordinator, Industrial Relations Adviser, Learning and Development Coordinator, Recruitment Consultant, and Workplace Health and Safety Adviser.',
     duration: '52 weeks',
+    entryRequirement: [
+      'Have complete the following units:',
+      '• BSBHRM411 Administer performance development processes',
+      '• BSBHRM412 Support employee and industrial relations',
+      '• BSBHRM415 Coordinate recruitment and onboarding',
+      '• BSBHRM417 Support human resource functions and processes',
+      '',
+      'Equivalent competencies are predecessors to these units, which have been mapped as equivalent.',
+    ],
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -604,6 +630,11 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification describes the skills and knowledge for workers in senior human resources specialist or generalist roles who apply an advanced broad range of competencies using discretion, judgement and relevant theoretical knowledge.\n\nThey may provide leadership and guidance to others and have responsibility for making a range of operational and strategic decisions.\n\nJob roles that relate to this qualification include Human Resources Manager, Learning and Development Manager, Industrial Relations Manager, Recruitment Manager, and Workplace Health and Safety Manager.',
     duration: '78 weeks',
+    entryRequirement: [
+      'Have completed one of the following qualifications',
+      '• BSB50320 Diploma of Human Resource Management',
+      '• BSB50618 Diploma of Human Resources Management (or a superseded equivalent version).',
+    ],
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -629,6 +660,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'This qualification reflects the role of individuals who perform a range of activities and functions within the fitness industry.\n\nIndividuals with this qualification are competent in providing fitness services including fitness orientation and health screening, fitness instruction, group exercise instruction and gym instruction.\n\nWork is performed in controlled environments such as fitness centres, gyms, aquatic centres, community centres, workplace fitness facilities and outdoor fitness settings. Individuals typically work independently with some level of autonomy in a controlled environment.',
     duration: '52 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 10',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -658,6 +690,20 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       "The SIS40221 Certificate IV in Fitness is perfect for anyone looking to become a personal trainer. You'll learn how to design, instruct, and assess exercise programmes for healthy clients aiming to achieve their fitness goals. If a client has more serious health concerns, You'll refer them to medical professionals. Personal trainers work independently, using their fitness knowledge in both routine and unpredictable situations, and communicate well with clients and health experts to achieve the best results.\nThis course offers a pathway to work as a personal trainer in gyms, fitness centres, leisure facilities, client workplaces, homes, and even outdoors. You can train individuals or groups and may also provide online services. You could also step into leadership roles in some settings.\n\nThe target group for this qualification includes international students who:\n– Want to start or advance their career in the fitness industry.\n– Want to switch to a new field.\n– Have completed a Certificate III in Fitness and wish to develop further skills.\n– Are looking for a pathway to higher qualifications in fitness.\n\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
     duration: '52 weeks',
+    entryRequirement: [
+      'Have complete the following units:',
+      '• HLTAID011 Provide First Aid (or a unit that supersedes this unit)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+      '',
+      'Student must have completed an equivalent of Year 12',
+    ],
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -688,6 +734,8 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       "Build Your Future in the Australian Sport and Fitness Industry\n\nThe Diploma of Sport (Coaching) equips students with the practical skills and knowledge needed to take on a range of roles in the Australian sport sector. Whether you're aiming to coach, lead a team, or support a community sports organisation, this qualification provides a strong foundation for success.\n\nStudents will learn to work independently, manage and supervise others, and apply their skills in accordance with Australian legislation, standards and industry best practice. The course also includes key leadership and communication elements essential for working within dynamic sporting environments.\n\nWho Is This Course For?\n\nThis course is ideal for international students who are:\n- Looking to begin or progress a career in the sport or fitness industry\n- Changing career paths or entering a new sector\n- Already holding a Certificate III or IV in Fitness and wishing to advance their skills\n- Interested in pathways to higher-level sport qualifications\n\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
     duration: '52 weeks',
+    entryRequirement:
+      'Participate in a course entry interview to determine suitability for the course and student needs.',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -717,6 +765,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'Start Your Career as a Fitness Instructor\n\nThe SIS30321 Certificate III in Fitness is designed for those looking to become Group Exercise Instructors or Gym Instructors. This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
     duration: '12 weeks or 24 weeks',
+    entryRequirement: 'You are able to participate in fitness activities.',
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -763,6 +812,18 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     description:
       'Start Your Career as a Fitness Instructor\n\nThe SIS40221 Certificate IV in Fitness is designed for those looking to become Personal Trainer and Fitness Instructor (Advanced). This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
     duration: '12 weeks or 24 weeks',
+    entryRequirement: [
+      'Have complete the following units:',
+      '• HLTAID011 Provide First Aid (or a unit that supersedes this unit)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+    ],
     deliveryMode: {
       title: 'Delivery mode',
       mode: 'Face to Face',
@@ -810,6 +871,11 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       "Nursing Support Career Pathway: English + Certificate III in Health Services Assistance + Work Placement\n\nIncludes: HLT33115 Certificate III in Health Services Assistance (Assisting in Nursing Work in Acute Care)\n\nTake your first step towards a rewarding career in healthcare with ABM's Nursing Support Career Pathway. This comprehensive programme is designed for international students or new entrants to the health sector who wish to become skilled support workers in hospitals and aged care facilities.",
     duration:
       '16 weeks (2 days per week + 1 day tutorial) + 80 work placement hours',
+    entryRequirement: [
+      'Students must be at least 18 years of age at the time of course commencement.',
+      'IELTS 5.5 or equivalent, if student has IELTS 4.5 or equivalent through ABM EPT, enrol with Plus Nursing English.',
+      'Student must have completed an equivalent of Year 10',
+    ],
     deliveryMode: {
       title: 'Delivery mode:',
       mode: 'Face to Face',

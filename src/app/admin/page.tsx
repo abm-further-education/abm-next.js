@@ -56,6 +56,26 @@ export default async function AdminPage() {
                 Write and manage newsletters
               </p>
             </Link>
+            <Link
+              href="/admin/testimonials"
+              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <h3 className="font-semibold text-gray-800 mb-2">
+                Testimonials Management
+              </h3>
+              <p className="text-sm text-gray-600">Manage testimonials</p>
+            </Link>
+            <Link
+              href="/admin/testimonials/migrate"
+              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <h3 className="font-semibold text-gray-800 mb-2">
+                Migrate Testimonials
+              </h3>
+              <p className="text-sm text-gray-600">
+                Migrate testimonials to database
+              </p>
+            </Link>
           </div>
         </div>
       </div>

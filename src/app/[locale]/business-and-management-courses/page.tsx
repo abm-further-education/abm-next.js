@@ -6,6 +6,28 @@ import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
 import type { Metadata } from 'next';
+import { getR2ImageUrl } from '@/lib/r2';
+import { getTestimonialImages } from '@/lib/testimonial-db';
+
+/**
+ * 로컬 경로를 Cloudflare R2 key로 변환합니다
+ * @param imagePath - 이미지 경로 (/testimonials/... 또는 testimonials/...)
+ * @returns R2 key (testimonials/...)
+ */
+function convertToR2Key(imagePath: string): string {
+  // 이미 전체 URL이면 그대로 반환
+  if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+    return imagePath;
+  }
+
+  // 로컬 경로인 경우 (/testimonials/... -> testimonials/...)
+  if (imagePath.startsWith('/testimonials/')) {
+    return imagePath.substring(1); // 앞의 / 제거
+  }
+
+  // 이미 R2 key 형식이면 그대로 반환
+  return imagePath;
+}
 
 export const metadata: Metadata = {
   title: 'Business & Management Courses | ABM Further Education',
@@ -13,7 +35,14 @@ export const metadata: Metadata = {
     'Explore our comprehensive range of business and management courses at ABM Further Education. From Certificate IV to Graduate Diploma, build your business career with expert training.',
 };
 
-function page() {
+async function Page() {
+  const images = await getTestimonialImages(undefined, 10);
+  const cloudflareUrls = await Promise.all(
+    images.map(async (image) => {
+      const r2Key = convertToR2Key(image);
+      return await getR2ImageUrl(r2Key);
+    })
+  );
   return (
     <div className="font-[family-name:var(--font-montserrat)] pt-60">
       <Banner
@@ -69,7 +98,7 @@ function page() {
         </div>
       </FadeIn>
       <FadeIn>
-        <Testimonial />
+        <Testimonial images={cloudflareUrls} />
       </FadeIn>
       <FadeIn>
         <Gallery />
@@ -81,4 +110,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

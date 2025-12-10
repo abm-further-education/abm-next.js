@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import FadeInBottomToTop from './FadeInBottomToTop';
-import MiniTestimonial from './MiniTestimonial';
+import MiniTestimonialWrapper from './MiniTestimonialWrapper';
 
 type Props = {
   slides: {
@@ -39,6 +39,20 @@ function Banner({
     return path?.match(/\.(mp4|webm|ogg)$/i) || path.includes('youtube');
   };
 
+  /**
+   * YouTube URL에서 video ID를 추출합니다
+   * @param url - YouTube embed URL (예: https://www.youtube.com/embed/VIDEO_ID)
+   * @returns video ID 또는 null
+   */
+  const extractVideoId = (url: string): string | null => {
+    if (!url.includes('youtube.com/embed/')) {
+      return null;
+    }
+    // https://www.youtube.com/embed/VIDEO_ID?si=... 형식에서 VIDEO_ID 추출
+    const match = url.match(/youtube\.com\/embed\/([^?&]+)/);
+    return match ? match[1] : null;
+  };
+
   return (
     <div className="w-full h-[calc(100vh-160px)] md:h-700 relative">
       <Swiper
@@ -56,7 +70,16 @@ function Banner({
             {isVideo(slide.imgPath) ? (
               <iframe
                 className="w-full h-full"
-                src={`${slide.imgPath}&autoplay=1&mute=1&loop=1&playlist=FOWrWhWZPb8&controls=0`}
+                src={(() => {
+                  const videoId = extractVideoId(slide.imgPath);
+                  if (videoId) {
+                    // YouTube URL인 경우 video ID를 playlist에 사용
+                    const separator = slide.imgPath.includes('?') ? '&' : '?';
+                    return `${slide.imgPath}${separator}autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0`;
+                  }
+                  // 일반 비디오 파일인 경우 기존 로직 유지
+                  return `${slide.imgPath}&autoplay=1&mute=1&loop=1&controls=0`;
+                })()}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -115,7 +138,7 @@ function Banner({
           </SwiperSlide>
         ))}
       </Swiper>
-      <MiniTestimonial />
+      <MiniTestimonialWrapper />
     </div>
   );
 }

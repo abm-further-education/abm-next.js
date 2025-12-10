@@ -6,7 +6,14 @@ import { cn } from '@/lib/utils';
 import Button from '@/components/common/Button';
 
 import { useParams } from 'next/navigation';
-import { Book, Calendar, Info, MapPin } from 'lucide-react';
+import {
+  Bolt,
+  ChevronRightIcon,
+  Calendar,
+  CheckCircleIcon,
+  Info,
+  MapPin,
+} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export interface CourseInformationInfo {
@@ -14,6 +21,7 @@ export interface CourseInformationInfo {
   courseCode?: string;
   cricosCode?: string;
   duration?: string;
+  entryRequirement?: string | string[];
   deliveryMode?: {
     title: string;
     mode: string;
@@ -85,35 +93,68 @@ function CourseInformationContent({
         <div className="border p-20 border-neutral-200 h-max shadow-sm">
           <h2 className="text-xl font-bold mb-10">{t('overview')}</h2>
           {courseInfo.cricosCode && (
-            <div className="mb-8 flex items-center gap-x-10">
-              <Info className="w-24 h-24 text-primary" />
-              <div className="flex gap-x-10">
-                <h3 className={titleStyle}>CRICOS Code</h3>
+            <div className="mb-8 flex items-center gap-x-5">
+              <Info className="w-22 h-22 text-primary" />
+              <div className="flex gap-x-5">
+                <h3 className={titleStyle}>CRICOS Code:</h3>
                 <span>{courseInfo.cricosCode}</span>
               </div>
             </div>
           )}
           {courseInfo.duration && (
-            <div className="mb-8 flex items-center gap-10">
-              <Calendar className="w-24 h-24 text-primary" />
-              <h3 className={titleStyle}>Duration</h3>
+            <div className="mb-8 flex items-center gap-x-5">
+              <Calendar className="w-22 h-22 text-primary" />
+              <h3 className={titleStyle}>Duration:</h3>
               <span>{courseInfo.duration}</span>
             </div>
           )}
+          {courseInfo.entryRequirement && (
+            <div className="mb-8">
+              <div className="flex items-center gap-5 mb-8">
+                <CheckCircleIcon className="w-22 h-22 text-primary" />
+                <h3 className={titleStyle}>Entry Requirement </h3>
+                <Link
+                  href="/course-entry-requirement"
+                  target="_blank"
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-primary underline text-sm">
+                    More details
+                  </span>
+                  <ChevronRightIcon className="w-14 h-14 text-primary" />
+                </Link>
+              </div>
+              <div className="ml-34">
+                {Array.isArray(courseInfo.entryRequirement) ? (
+                  <ul className="">
+                    {courseInfo.entryRequirement.map((requirement, index) => (
+                      <li key={index} className="text-sm">
+                        {requirement}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="whitespace-pre-line">
+                    {courseInfo.entryRequirement}
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
           {courseInfo.deliveryMode && (
-            <div className="flex items-center gap-10">
-              <Book className="w-24 h-24 text-primary" />
+            <div className="flex items-center gap-5">
+              <Bolt className="w-22 h-22 text-primary" />
               <h3 className={titleStyle}>{courseInfo.deliveryMode.title}</h3>
               <span>{courseInfo.deliveryMode.mode}</span>
             </div>
           )}
           {courseInfo.deliverySite && (
             <div className="my-10">
-              <div className="flex items-center gap-10">
-                <MapPin className="w-24 h-24 text-primary" />
+              <div className="flex items-center gap-5">
+                <MapPin className="w-22 h-22 text-primary" />
                 <h3 className={titleStyle}>{courseInfo.deliverySite.title}</h3>
               </div>
-              <div>
+              <div className="ml-34">
                 {courseInfo.deliverySite.locations.map((location, index) => (
                   <div key={index}>
                     <span>

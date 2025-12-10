@@ -8,18 +8,33 @@ import { useRouter, usePathname } from 'next/navigation';
 import { Star } from 'lucide-react';
 
 import 'swiper/css';
-import { testimonials, fitnessTestimonials } from '@/lib/testimonial';
+import type { Testimonial } from '@/lib/testimonial-types';
 
-function MiniTestimonial() {
+interface MiniTestimonialProps {
+  testimonials: Testimonial[];
+}
+
+function MiniTestimonial({ testimonials }: MiniTestimonialProps) {
   const router = useRouter();
   const pathname = usePathname();
 
-  // fitness나 sport가 경로에 포함되어 있으면 fitnessTestimonials 사용
+  // fitness나 sport가 경로에 포함되어 있으면 fitness testimonials 사용
   const isFitnessOrSport =
     pathname.includes('fitness') || pathname.includes('sport');
-  const currentTestimonials = isFitnessOrSport
-    ? fitnessTestimonials
-    : testimonials;
+  const currentTestimonials = testimonials.filter((testimonial) =>
+    isFitnessOrSport
+      ? testimonial.course === 'fitness'
+      : testimonial.course === 'cookery&hospitality'
+  );
+
+  // 메시지가 있는 testimonial만 필터링
+  const testimonialsWithMessage = currentTestimonials.filter(
+    (testimonial) => testimonial.message
+  );
+
+  if (testimonialsWithMessage.length === 0) {
+    return null;
+  }
 
   const handleClick = () => {
     router.push('/abm-student-insights');
@@ -37,7 +52,7 @@ function MiniTestimonial() {
         }}
         loop={true}
       >
-        {currentTestimonials.map((testimonial) => (
+        {testimonialsWithMessage.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
             <div onClick={handleClick} className="cursor-pointer px-20 pt-6">
               {/* Profile Image */}
@@ -54,15 +69,17 @@ function MiniTestimonial() {
               </div>
 
               {/* Stars */}
-              <div className="flex justify-center mb-10">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star
-                    key={i}
-                    size={16}
-                    className="fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
+              {testimonial.rating && (
+                <div className="flex justify-center mb-10">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star
+                      key={i}
+                      size={16}
+                      className="fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
+              )}
 
               {/* Review Message */}
               <div className="text-center">

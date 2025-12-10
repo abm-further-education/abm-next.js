@@ -18,8 +18,7 @@ const mappingCourseTitle: { [key: string]: string } = {
 };
 
 const mappingCourseImage: { [key: string]: string } = {
-  'hlt33115-certificate-iii-in-health-services-assistance':
-    '/courses/health/health_1.png',
+  'hlt33115-certificate-iii-in-health-services-assistance': '/home/HSA.png',
 };
 
 export default function Page({
@@ -46,7 +45,7 @@ export default function Page({
       <Banner
         slides={[
           {
-            imgPath: mappingCourseImage[id] || '/courses/health/health_1.png',
+            imgPath: mappingCourseImage[id] || '/home/HSA.png',
             title: mappingCourseTitle[id],
             content: '',
           },

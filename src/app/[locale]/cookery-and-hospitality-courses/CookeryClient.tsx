@@ -6,7 +6,7 @@ import Banner from '@/components/common/Banner';
 import Button from '@/components/common/Button';
 import FadeIn from '@/components/common/FadeIn';
 import Card from '@/components/common/Card';
-import Testimonial from '@/domains/main/components/Testimonial';
+// import TestimonialWrapper from '@/domains/main/components/TestimonialWrapper';
 import Gallery from '@/components/common/Gallery';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { useTranslations } from 'next-intl';
@@ -182,9 +182,9 @@ export default function CookeryClient() {
           />
         </div>
       </FadeIn>
-      <FadeIn>
-        <Testimonial />
-      </FadeIn>
+      {/* <FadeIn>
+        <TestimonialWrapper limit={10} />
+      </FadeIn> */}
       <FadeIn>
         <Gallery />
       </FadeIn>

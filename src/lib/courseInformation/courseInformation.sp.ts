@@ -8,6 +8,8 @@ export const courseInformationData_sp: {
     cricosCode: '109578H',
     description:
       '¿Listo para llevar tus habilidades culinarias al siguiente nivel?\n\nEn ABM Further Education, reconocemos que la experiencia real de la industria es tan importante como el aprendizaje teórico y práctico en la cocina.\n\nEl Certificate IV in Kitchen Management prepara a los estudiantes para roles de supervisión y liderazgo en cocinas comerciales, combinando el aprendizaje en el aula con experiencia práctica extensiva. Los estudiantes tendrán la oportunidad de entrenar en entornos reales de hospitalidad como restaurantes, hoteles e instalaciones de cuidado de ancianos, guiados por profesionales experimentados de la industria.\n\nPara fortalecer la empleabilidad y asegurar la preparación para la carrera, el curso ahora incluye 600 horas de prácticas estructuradas en la industria, comenzando desde el Término 3.\n\nDesde el Término 3, los estudiantes pueden completar hasta 16 horas adicionales por semana, y desde el Término 6, hasta 20 horas adicionales por semana como parte de sus prácticas en la industria. Esta estructura mejorada permite a los estudiantes aplicar su aprendizaje del aula en lugares de trabajo reales, desarrollando habilidades esenciales, confianza y una comprensión más profunda de las operaciones de cocina.\n\nEstas horas de prácticas en la industria son un componente obligatorio de la calificación y forman una parte integral del compromiso de ABM de proporcionar educación práctica y enfocada en la carrera.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 10',
     deliveryMode: {
       title: 'Modo de entrega',
       mode: 'Presencial',
@@ -38,6 +40,8 @@ export const courseInformationData_sp: {
     cricosCode: '107906B',
     description:
       'Los estudiantes que participan en el Certificado IV en Negocios se enfocarán en desarrollar capacidades efectivas de liderazgo y resolución de problemas cruciales para el éxito en una variedad de roles laborales de servicios empresariales. Los estudiantes que buscan una carrera orientada a los negocios estarán equipados con habilidades relacionadas con la finalización de tareas administrativas u operativas especializadas y moderadamente complejas que requerirán habilidades avanzadas de autodesarrollo. Al completar el Certificado IV en Negocios, podrán implementar habilidades efectivas de comunicación y resolución de problemas que serán instrumentales para su éxito en el sector elegido.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 10',
     deliveryMode: {
       title: 'Modo de entrega',
       mode: 'Presencial',
@@ -67,6 +71,8 @@ export const courseInformationData_sp: {
     cricosCode: '107904D',
     description:
       'Esta calificación refleja el rol de individuos que aplican conocimientos y habilidades especializadas, junto con experiencia en liderazgo y gestión, en una variedad de contextos empresariales e industriales.\n\nLos individuos en este nivel demuestran iniciativa y juicio en la planificación, organización, implementación y monitoreo de su propia carga de trabajo y la de otros. Utilizan habilidades de comunicación para apoyar a individuos y equipos para cumplir con los requisitos organizacionales o empresariales.\n\nPueden planificar, diseñar, aplicar y evaluar soluciones a problemas impredecibles, e identificar, analizar y sintetizar información de una variedad de fuentes.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 12',
     deliveryMode: {
       title: 'Modo de entrega',
       mode: 'Presencial',
@@ -96,6 +102,8 @@ export const courseInformationData_sp: {
     cricosCode: '107905C',
     description:
       'Los individuos que buscan mejorar sus capacidades de liderazgo, aprender procedimientos clave de resolución de problemas y participar en un entorno de equipo no deberían buscar más allá del Diploma Avanzado de Negocios de ABM. Los graduados de este curso se irán con todas las herramientas necesarias requeridas para abordar tareas altamente complejas en su campo especializado de experiencia. El Diploma Avanzado de Negocios de ABM proporcionará a los estudiantes los bloques de construcción clave requeridos para especializarse y entrar en el entorno empresarial en su campo elegido.\n\nA lo largo de este curso, los estudiantes participarán en ejercicios destinados a ayudar en la resolución de problemas complejos, desarrollar e implementar planes de negocios, desarrollar estrategias organizacionales y contribuir a la planificación estratégica de la fuerza laboral – Todas las habilidades necesarias para sobresalir en su campo especializado de trabajo.\n\nNuestro Diploma Avanzado de Negocios es adecuado para individuos con pasión por el liderazgo, fuertes capacidades de resolución de problemas y la habilidad para motivar y guiar a un equipo.',
+    entryRequirement:
+      'Los estudiantes deben haber completado un curso de nivel Diploma (AQF Level 5) o Advanced Diploma (AQF Level 6) del paquete de entrenamiento BSB.',
     deliveryMode: {
       title: 'Modo de entrega',
       mode: 'Presencial',
@@ -125,6 +133,8 @@ export const courseInformationData_sp: {
     cricosCode: '107907A',
     description:
       'Esta calificación refleja el rol de individuos que aplican conocimientos y habilidades de gestión altamente especializados para liderar e influir en el cambio en entornos de gestión complejos y dinámicos.\n\nLos individuos en este nivel utilizan habilidades cognitivas y de comunicación para identificar, analizar, sintetizar y actuar sobre información de una variedad de fuentes, y transferir conocimientos y habilidades a otros.\n\nAplican habilidades creativas, conceptuales y analíticas para formular y evaluar ideas complejas o iniciar cambios. Demuestran aplicación autodirigida de conocimientos y habilidades, con responsabilidad personal sustancial y autonomía en situaciones complejas.',
+    entryRequirement:
+      'Los estudiantes deben haber completado un curso de nivel Advanced Diploma (AQF Level 6) o superior.',
     deliveryMode: {
       title: 'Modo de entrega',
       mode: 'Presencial',
@@ -470,6 +480,8 @@ export const courseInformationData_sp: {
     cricosCode: '111166K',
     description:
       'El Diploma Avanzado de Gestión de Hospitalidad de ABM es ideal para quienes desean coordinar y supervisar operaciones de hospitalidad utilizando habilidades amplias y conocimientos especializados.\n\nLos estudiantes tendrán gran autonomía y responsabilidad en la toma de decisiones estratégicas, y podrán especializarse en alojamiento, cocina, alimentos y bebidas, juegos, etc.\n\nEl curso permite actividades de aprendizaje personalizadas según los objetivos y trayectorias de cada estudiante, asegurando que adquieran las competencias y la especialización que demanda el sector.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 12',
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -500,6 +512,8 @@ export const courseInformationData_sp: {
     cricosCode: '112545B',
     description:
       'Esta titulación refleja el rol de individuos con habilidades desarrolladas en procesos de gestión de proyectos.\n\nAplican conocimientos y habilidades de gestión de proyectos en diversos contextos y son responsables de los resultados cuando existen medidas limitadas, no rutinarias o de contingencia.\n\nEs adecuada para quienes trabajan en equipo apoyando o liderando actividades y resultados de proyectos, aplicable a cualquier sector o comunidad.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 10',
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -529,6 +543,8 @@ export const courseInformationData_sp: {
     cricosCode: '112361K',
     description:
       'Esta titulación refleja el rol de individuos que aplican habilidades y conocimientos de gestión de proyectos en diversos contextos y sectores. Los cargos relacionados incluyen Gerente de Proyectos y Líder de Equipo.\n\nEstos profesionales lideran y gestionan proyectos, siendo responsables de alcanzar los objetivos. Poseen una base teórica sólida y competencias especializadas, técnicas y de gestión para planificar, ejecutar y evaluar su propio trabajo y el de otros.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 12',
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial (20 horas por semana)',
@@ -552,6 +568,11 @@ export const courseInformationData_sp: {
     cricosCode: '112362J',
     description:
       'Esta titulación refleja el rol de individuos que aplican conocimientos y habilidades especializadas, junto con experiencia en liderazgo y gestión de programas complejos.\n\nDemuestran iniciativa y juicio en la planificación, organización, implementación y monitoreo de resultados personales y de programas dentro de parámetros amplios.\n\nUtilizan habilidades cognitivas y de comunicación para identificar, analizar y sintetizar información de diversas fuentes y transferir conocimientos a otros, así como habilidades creativas y conceptuales para expresar ideas o resolver problemas complejos en entornos de programas.',
+    entryRequirement: [
+      'Haber completado una de las siguientes titulaciones',
+      '• BSB50820 Diploma of Project Management',
+      '• BSB51415 Diploma of Project Management (o una versión equivalente sustituida).',
+    ],
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -571,6 +592,8 @@ export const courseInformationData_sp: {
     cricosCode: '113476B',
     description:
       'Esta titulación describe las habilidades y conocimientos para trabajadores en roles de recursos humanos (RRHH) que aplican una amplia gama de competencias usando cierto grado de criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar asesoramiento técnico y apoyo a un equipo.\n\nLos cargos relacionados incluyen Oficial de Recursos Humanos, Asistente de RRHH, Oficial de Reclutamiento y Oficial de Aprendizaje y Desarrollo.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 10',
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -595,6 +618,15 @@ export const courseInformationData_sp: {
     cricosCode: '113477A',
     description:
       'Esta titulación describe las habilidades y conocimientos para trabajadores en roles especializados de recursos humanos que aplican una amplia gama de competencias usando criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar asesoramiento técnico y apoyo a un equipo y asumir responsabilidad por los resultados del trabajo de personal junior.\n\nLos cargos relacionados incluyen Asesor de RRHH, Coordinador de RRHH, Asesor de Relaciones Laborales, Coordinador de Aprendizaje y Desarrollo, Consultor de Reclutamiento y Asesor de Salud y Seguridad en el Trabajo.',
+    entryRequirement: [
+      'Haber completado las siguientes unidades:',
+      '• BSBHRM411 Administer performance development processes',
+      '• BSBHRM412 Support employee and industrial relations',
+      '• BSBHRM415 Coordinate recruitment and onboarding',
+      '• BSBHRM417 Support human resource functions and processes',
+      '',
+      'Las competencias equivalentes son predecesoras de estas unidades, que han sido mapeadas como equivalentes.',
+    ],
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -619,6 +651,11 @@ export const courseInformationData_sp: {
     cricosCode: '113479K',
     description:
       'Esta titulación describe las habilidades y conocimientos para trabajadores en roles senior de recursos humanos, ya sea especializados o generalistas, que aplican una amplia gama de competencias avanzadas usando criterio, juicio y conocimiento teórico relevante.\n\nPueden brindar liderazgo y orientación a otros y asumir responsabilidad por una variedad de decisiones operativas y estratégicas.\n\nLos cargos relacionados incluyen Gerente de RRHH, Gerente de Aprendizaje y Desarrollo, Gerente de Relaciones Laborales, Gerente de Reclutamiento y Gerente de Salud y Seguridad en el Trabajo.',
+    entryRequirement: [
+      'Haber completado una de las siguientes titulaciones',
+      '• BSB50320 Diploma of Human Resource Management',
+      '• BSB50618 Diploma of Human Resources Management (o una versión equivalente sustituida).',
+    ],
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -643,6 +680,8 @@ export const courseInformationData_sp: {
     cricosCode: '116599M',
     description:
       'Esta titulación refleja el rol de individuos que realizan una variedad de actividades y funciones dentro de la industria del fitness.\n\nQuienes obtienen esta titulación son competentes para ofrecer servicios de fitness, incluyendo orientación, evaluación de salud, instrucción de fitness, clases grupales y entrenamiento en gimnasio.\n\nEl trabajo se realiza en entornos controlados como gimnasios, centros acuáticos, comunitarios, instalaciones laborales y al aire libre, generalmente de forma independiente y con cierto nivel de autonomía.',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 10',
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -671,6 +710,20 @@ export const courseInformationData_sp: {
     cricosCode: '116600A',
     description:
       'El Certificado IV en Fitness SIS40221 es ideal para quienes desean ser entrenadores personales. Aprenderás a diseñar, instruir y evaluar programas de ejercicio para clientes sanos que buscan alcanzar sus objetivos. Si un cliente tiene problemas de salud más serios, lo derivarás a profesionales médicos. Los entrenadores personales trabajan de forma independiente, usando su conocimiento tanto en situaciones rutinarias como impredecibles, y se comunican eficazmente con clientes y expertos en salud para lograr los mejores resultados.\nEste curso permite trabajar como entrenador personal en gimnasios, centros de fitness, instalaciones recreativas, lugares de trabajo, hogares y al aire libre. Puedes entrenar a individuos o grupos, e incluso ofrecer servicios online o asumir roles de liderazgo.\n\nEl grupo objetivo incluye estudiantes internacionales que:\n– Quieren iniciar o avanzar en su carrera en fitness.\n– Desean cambiar de sector.\n– Han completado el Certificado III en Fitness y desean desarrollar más habilidades.\n– Buscan acceder a titulaciones superiores en fitness.\n\nNuestros estudiantes provienen de diversos países. Algunos son nuevos en Australia, otros han vivido aquí antes. Esta titulación es tu primer paso en la industria del fitness, sin necesidad de licencias especiales, siguiendo los estándares y prácticas australianas.',
+    entryRequirement: [
+      'Haber completado las siguientes unidades:',
+      '• HLTAID011 Provide First Aid (o una unidad que sustituya esta unidad)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+      '',
+      'El estudiante debe haber completado el equivalente al Year 12',
+    ],
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -700,6 +753,8 @@ export const courseInformationData_sp: {
     cricosCode: '117762H',
     description:
       '¡Construye tu futuro en la industria australiana del deporte y fitness!\n\nEl Diploma de Deporte (Coaching) brinda a los estudiantes habilidades y conocimientos prácticos para desempeñar diversos roles en el sector deportivo australiano. Ya sea que busques ser entrenador, líder de equipo o apoyar una organización deportiva comunitaria, esta titulación te da una base sólida.\n\nAprenderás a trabajar de forma independiente, gestionar y supervisar a otros, y aplicar tus habilidades según la legislación, estándares y mejores prácticas australianas. El curso incluye elementos clave de liderazgo y comunicación esenciales para entornos deportivos dinámicos.\n\n¿Para quién es este curso?\n\nIdeal para estudiantes internacionales que:\n- Quieren comenzar o avanzar en el sector deportivo o fitness\n- Cambian de carrera o sector\n- Ya tienen un Certificado III o IV en Fitness y desean avanzar\n- Buscan acceder a titulaciones superiores en deporte\n\nNuestros estudiantes provienen de diversos países. Algunos son nuevos en Australia, otros han vivido aquí antes. Esta titulación es tu primer paso en la industria del fitness, sin necesidad de licencias especiales, siguiendo los estándares y prácticas australianas.',
+    entryRequirement:
+      'Participar en una entrevista de entrada al curso para determinar la idoneidad del curso y las necesidades del estudiante.',
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',
@@ -773,6 +828,18 @@ export const courseInformationData_sp: {
     courseCode: 'SIS40221',
     description:
       '¡Comienza tu carrera como instructor de fitness!\n\nEl Certificado III y IV en Fitness está diseñado para quienes desean ser instructores de grupo o de gimnasio. Aprenderás a planificar y dictar sesiones grupales y a crear programas personalizados de gimnasio.\n\nTrabajarás en entornos estructurados y supervisados como gimnasios, centros de fitness y centros comunitarios. Como instructor, usarás tu criterio y seguirás las políticas y procedimientos de la organización.\n\nEsta titulación te permite trabajar en:\n– Gimnasios y centros de fitness\n– Centros recreativos y comunitarios\n– Clubes de salud y bienestar',
+    entryRequirement: [
+      'Haber completado las siguientes unidades:',
+      '• HLTAID011 Provide First Aid (o una unidad que sustituya esta unidad)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+    ],
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial',

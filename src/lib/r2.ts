@@ -19,11 +19,13 @@ const s3Client = new S3Client({
  * 이미지를 R2에 업로드합니다
  * @param file - 업로드할 파일 (File 또는 Buffer)
  * @param fileName - 저장할 파일명
+ * @param directory - 저장할 디렉토리 (기본값: 'news-letter')
  * @returns 업로드된 파일의 URL 경로
  */
 export async function uploadImageToR2(
   file: File | Buffer,
-  fileName: string
+  fileName: string,
+  directory: string = 'news-letter'
 ): Promise<string> {
   const bucketName = process.env.R2_BUCKET;
 
@@ -31,8 +33,8 @@ export async function uploadImageToR2(
     throw new Error('R2_BUCKET_NAME 환경 변수가 설정되지 않았습니다.');
   }
 
-  // news-letter 디렉토리에 저장
-  const key = `news-letter/${fileName}`;
+  // 지정된 디렉토리에 저장
+  const key = `${directory}/${fileName}`;
 
   // File 객체를 Buffer로 변환
   let buffer: Buffer;

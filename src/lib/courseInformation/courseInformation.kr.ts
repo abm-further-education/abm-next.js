@@ -8,6 +8,7 @@ export const courseInformationData_kr: {
     cricosCode: '109578H',
     description:
       '요리 실력을 한 단계 끌어올릴 준비가 되셨나요?\n\nABM Further Education에서는 실제 업계 경험이 주방에서의 이론적·실무적 학습만큼 중요하다는 것을 인식하고 있습니다.\n\nCertificate IV in Kitchen Management는 교실 학습과 광범위한 실무 경험을 결합하여 학생들을 상업 주방의 감독 및 리더십 역할에 준비시킵니다. 학생들은 경험 많은 업계 전문가들의 지도 하에 레스토랑, 호텔, 요양 시설 등의 실제 호스피탈리티 환경에서 훈련할 기회를 갖게 됩니다.\n\n고용 가능성을 강화하고 커리어 준비를 보장하기 위해, 이 과정에는 3학기부터 시작되는 600시간의 구조화된 산업체 실습이 포함되어 있습니다.\n\n3학기부터 학생들은 주 16시간까지, 6학기부터는 주 20시간까지 추가 산업체 실습 시간을 완료할 수 있습니다. 이 강화된 구조를 통해 학생들은 교실에서 배운 내용을 실제 직장에서 적용하고, 필수 기술, 자신감, 주방 운영에 대한 더 깊은 이해를 발전시킬 수 있습니다.\n\n이러한 산업체 실습 시간은 자격의 필수 구성 요소이며, ABM의 실무 중심적이고 커리어 지향적인 교육을 제공한다는 약속의 핵심 부분을 형성합니다.',
+    entryRequirement: '학생은 Year 10에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -38,6 +39,7 @@ export const courseInformationData_kr: {
     cricosCode: '107906B',
     description:
       'Certificate IV에 참여하는 학생들은 다양한 비즈니스 서비스 직무 역할에서 성공에 중요한 효과적인 리더십과 문제 해결 능력을 구축하는 데 중점을 둡니다. 비즈니스 지향적인 커리어 경로를 추구하는 학생들은 수준높은 자기 개발 기술이 필요한 전문적이고 복잡한 관리 또는 운영 업무 완료와 관련된 기술을 갖추게 됩니다. Certificate IV 완료 시, 해당 분야에서의 성공적이고 효과적인 커뮤니케이션 및 문제 해결 능력을 구현할 수 있게 됩니다.',
+    entryRequirement: '학생은 Year 10에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -67,6 +69,7 @@ export const courseInformationData_kr: {
     cricosCode: '107904D',
     description:
       '이 코스는 다양한 기업 및 산업 환경에서 리더십과 관리 경험과 함께 전문 지식과 기술을 적용하는 법을 배울 수 있습니다.\n\n이 학생들은 자신의 업무량과 다른 사람들의 업무량을 계획, 조직, 구현 및 모니터링하는 데 있어 주도적인 면모와 판단력을 보여줍니다. 그들은 개인과 팀이 조직 또는 기업 요구사항을 충족하도록 지원하기 위해 커뮤니케이션 기술을 사용합니다.\n\n그들은 예측할 수 없는 문제에 대한 해결책을 계획, 설계, 적용 및 평가하고, 다양한 출처로부터 정보를 식별, 분석 및 종합할 수 있습니다.',
+    entryRequirement: '학생은 Year 12에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -96,6 +99,8 @@ export const courseInformationData_kr: {
     cricosCode: '107905C',
     description:
       '리더십 능력을 향상시키고, 핵심 문제 해결 절차를 배우고, 팀 환경에서 참여하고자 하는 개인들은 ABM의 비즈니스 고급 디플로마를 찾아보시기 바랍니다. 이 과정의 졸업생들은 전문 분야에서 고도로 복잡한 업무를 해결하는 데 필요한 모든 도구를 갖추고 떠날 것입니다. ABM의 비즈니스 고급 디플로마는 학생들이 선택한 분야에서 전문화하고 비즈니스 환경에 진입하는 데 필요한 핵심 구성 요소를 제공합니다.\n\n이 과정 전반에 걸쳐 학생들은 복잡한 문제 해결을 지원하고, 비즈니스 계획을 개발하고 구현하며, 조직 전략을 개발하고 전략적 인력 계획에 기여하는 것을 목표로 하는 연습에 참여하게 됩니다 – 전문 업무 분야에서 탁월하기 위해 필요한 모든 기술입니다.\n\n우리의 비즈니스 고급 디플로마는 리더십에 대한 열정, 강한 문제 해결 능력, 그리고 팀을 동기부여하고 안내하는 능력을 가진 개인들에게 적합합니다.',
+    entryRequirement:
+      '학생은 BSB 훈련 패키지에서 Diploma 레벨 코스(AQF Level 5) 또는 Advanced Diploma 레벨 코스(AQF Level 6)를 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -125,6 +130,8 @@ export const courseInformationData_kr: {
     cricosCode: '107907A',
     description:
       '이 코스는 복잡하고 역동적인 관리 환경에서 변화를 이끌고 영향을 미치기 위해 고도로 전문화된 관리 지식과 기술을 적용하는 개인의 역할을 반영합니다.\n\n이 수준의 개인들은 다양한 출처의 정보를 식별, 분석, 종합하고 행동하며, 지식과 기술을 다른 사람들에게 전달하기 위해 인지적 및 커뮤니케이션 기술을 사용합니다.\n\n그들은 복잡한 아이디어를 공식화하고 평가하거나 변화를 시작하기 위해 창의적, 개념적 및 분석적 기술을 적용합니다. 그들은 복잡한 상황에서 상당한 개인적 책임과 자율성을 가지고 지식과 기술의 자기 주도적 적용을 보여줍니다.',
+    entryRequirement:
+      '학생은 Advanced Diploma 레벨 코스(AQF Level 6) 이상을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -396,6 +403,7 @@ export const courseInformationData_kr: {
     cricosCode: '111165M',
     description:
       '이 코스는 폭넓은 호스피탈리티 기술과 관리 역량, 업계에 대한 깊은 지식을 바탕으로 호스피탈리티 운영을 조정하는 고숙련 시니어 오퍼레이터의 역할을 반영합니다.\n\n이들은 독립적으로 일하며, 타인에 대한 책임을 지고 다양한 운영상의 비즈니스 결정을 내립니다.\n\n이 코스는 레스토랑, 호텔, 모텔, 케이터링, 클럽, 카페 등 다양한 호스피탈리티 업계에서 부서장 또는 소규모 비즈니스 매니저로 일할 수 있는 경로를 제공합니다. 숙박, 요리, 식음료, 게임 등 다양한 분야로의 멀티스킬링 및 전문화가 가능합니다.\n\n이 코스의 기술은 관련 법률 및 산업 표준에 따라 적용되어야 하며, 현재로서는 별도의 자격증이나 법적 요구사항이 없습니다.',
+    entryRequirement: '학생은 Year 12에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -426,6 +434,7 @@ export const courseInformationData_kr: {
     cricosCode: '111166K',
     description:
       'ABM의 호스피탈리티 고급 디플로마는 폭넓은 호스피탈리티 기술과 전문화된 관리 역량, 업계에 대한 깊은 지식을 바탕으로 호스피탈리티 운영을 조정 및 모니터링하는 커리어를 희망하는 분들에게 적합합니다.\n\n학생들은 높은 자율성을 가지고 전략적 비즈니스 관리 결정을 내릴 책임이 있으며, 다양한 분야(숙박, 요리, 식음료, 게임 등)로의 멀티스킬링 및 전문화가 가능합니다.\n\n학생 개개인의 목표와 진로에 맞춘 맞춤형 학습 활동을 통해, 업계에서 요구하는 실무 역량과 전문성을 갖출 수 있습니다.',
+    entryRequirement: '학생은 Year 12에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -456,6 +465,7 @@ export const courseInformationData_kr: {
     cricosCode: '112545B',
     description:
       '이 코스는 다양한 프로젝트 관리 프로세스에서 잘 발달된 기술을 보유한 개인의 역할을 반영합니다.\n\n이들은 프로젝트 관리 지식과 기술을 다양한 상황에 적용하며, 제한적이고 비정형적이거나 비상 대책이 필요한 프로젝트 결과에 책임을 집니다.\n\n이 코스는 팀 환경에서 프로젝트 활동과 결과를 지원하거나 책임지는 개인에게 적합하며, 모든 산업 또는 커뮤니티 환경에 적용될 수 있습니다.',
+    entryRequirement: '학생은 Year 10에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -485,6 +495,7 @@ export const courseInformationData_kr: {
     cricosCode: '112361K',
     description:
       '이 코스는 다양한 산업 분야에서 프로젝트 관리 기술과 지식을 적용하는 개인의 역할을 반영합니다. 관련 직무에는 프로젝트 매니저, 프로젝트 팀 리더 등이 포함됩니다.\n\n이들은 프로젝트 리더십과 관리 역할을 수행하며, 프로젝트 목표 달성에 책임을 집니다. 이들은 이론적 지식과 다양한 전문, 기술, 관리 역량을 활용해 자신의 업무와 타인의 업무를 주도적으로 계획, 실행, 평가합니다.',
+    entryRequirement: '학생은 Year 12에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업(주 20시간)',
@@ -508,6 +519,11 @@ export const courseInformationData_kr: {
     cricosCode: '112362J',
     description:
       '이 코스는 복잡한 프로그램의 리더십과 관리를 위해 전문 지식과 기술, 경험을 적용하는 개인의 역할을 반영합니다.\n\n이들은 광범위한 기준 내에서 개인 및 프로그램 결과에 대한 책임을 지고, 프로그램 결과를 계획, 조직, 실행, 모니터링하는 데 주도성과 판단력을 보여줍니다.\n\n이들은 다양한 출처의 정보를 식별, 분석, 종합해 타인에게 지식을 전달하고, 창의적·개념적·분석적 기술을 활용해 복잡한 문제에 대응합니다.',
+    entryRequirement: [
+      '다음 자격증 중 하나를 이수해야 합니다',
+      '• BSB50820 Diploma of Project Management',
+      '• BSB51415 Diploma of Project Management (또는 대체된 동등 버전).',
+    ],
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -527,6 +543,7 @@ export const courseInformationData_kr: {
     cricosCode: '113476B',
     description:
       '이 코스는 인사(HR) 분야에서 다양한 역량을 활용하며, 일정 수준의 재량과 판단력, 이론적 지식을 적용하는 실무자의 역할을 반영합니다.\n\n이들은 팀에 기술적 조언과 지원을 제공할 수 있습니다.\n\n관련 직무로는 인사 담당자, 인사 어시스턴트, 채용 담당자, 교육·개발 담당자 등이 있습니다.',
+    entryRequirement: '학생은 Year 10에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -552,6 +569,15 @@ export const courseInformationData_kr: {
     cricosCode: '113477A',
     description:
       '이 코스는 인사(HR) 전문 분야에서 재량과 판단력, 이론적 지식을 활용하는 실무자의 역할을 반영합니다.\n\n이들은 팀에 기술적 조언과 지원하고, 주니어 직원의 업무 결과에 책임을 집니다.\n\n관련 직무로는 인사 어드바이저, 인사 코디네이터, 노사관계 어드바이저, 교육·개발 코디네이터, 채용 컨설턴트, 산업안전 담당자 등이 있습니다.',
+    entryRequirement: [
+      '다음 유닛을 이수해야 합니다:',
+      '• BSBHRM411 Administer performance development processes',
+      '• BSBHRM412 Support employee and industrial relations',
+      '• BSBHRM415 Coordinate recruitment and onboarding',
+      '• BSBHRM417 Support human resource functions and processes',
+      '',
+      '동등한 역량은 이러한 유닛의 전신이며, 동등한 것으로 매핑되었습니다.',
+    ],
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -576,6 +602,11 @@ export const courseInformationData_kr: {
     cricosCode: '113479K',
     description:
       '이 코스는 고급 인사(HR) 전문 또는 제너럴리스트 역할에서 재량과 판단력, 이론적 지식을 폭넓게 활용하는 실무자의 역할을 반영합니다.\n\n이들은 타인에게 리더십과 지도를 제공하고, 다양한 운영 및 전략적 의사결정에 책임을 집니다.\n\n관련 직무로는 인사 매니저, 교육·개발 매니저, 노사관계 매니저, 채용 매니저, 산업안전 매니저 등이 있습니다.',
+    entryRequirement: [
+      '다음 자격증 중 하나를 이수해야 합니다',
+      '• BSB50320 Diploma of Human Resource Management',
+      '• BSB50618 Diploma of Human Resources Management (또는 대체된 동등 버전).',
+    ],
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -600,6 +631,7 @@ export const courseInformationData_kr: {
     cricosCode: '116599M',
     description:
       '이 코스는 피트니스 산업 내에서 다양한 활동과 기능을 수행하는 개인의 역할을 반영합니다.\n\n이 코스를 수료한 사람은 피트니스 오리엔테이션, 건강 스크리닝, 피트니스 지도, 그룹 운동 지도, 헬스장 지도 등 다양한 피트니스 서비스를 제공할 수 있습니다.\n\n업무는 피트니스 센터, 헬스장, 수영장, 커뮤니티 센터, 직장 내 피트니스 시설, 야외 등 통제된 환경에서 수행되며, 일반적으로 일정 수준의 자율성을 가지고 독립적으로 일합니다.',
+    entryRequirement: '학생은 Year 10에 해당하는 학력을 이수해야 합니다',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -628,6 +660,20 @@ export const courseInformationData_kr: {
     cricosCode: '116600A',
     description:
       'SIS40221 피트니스 수료증 IV 과정은 퍼스널 트레이너를 꿈꾸는 분들에게 적합합니다. 건강한 고객의 목표 달성을 위해 운동 프로그램을 설계, 지도, 평가하는 방법을 배우며, 건강상 문제가 있는 고객은 전문가에게 연계합니다. 퍼스널 트레이너는 예측 가능한 상황과 예측 불가한 상황 모두에서 피트니스 지식을 활용해 독립적으로 일하며, 고객 및 건강 전문가와의 소통을 통해 최상의 결과를 이끌어냅니다.\n이 과정은 헬스장, 피트니스 센터, 레저 시설, 고객의 직장·가정·야외 등 다양한 환경에서 퍼스널 트레이너로 일할 수 있는 경로를 제공합니다. 개인 또는 그룹을 지도할 수 있으며, 온라인 서비스 제공이나 리더십 역할로도 진출할 수 있습니다.\n\n이 과정의 주요 대상은:\n– 피트니스 업계에서 커리어를 시작하거나 발전시키고 싶은 분\n– 새로운 분야로 전향하고 싶은 분\n– 피트니스 수료증 III를 마치고 추가 역량을 개발하고 싶은 분\n– 피트니스 분야의 상위 자격증 취득을 희망하는 분\n\n학생들은 다양한 국가 출신으로, 호주에 처음 오거나, 최근 또는 과거에 거주한 경험이 있을 수 있습니다. 이 코스는 피트니스 업계로 진출하는 첫걸음이며, 별도의 라이선스나 인증 없이 호주 표준과 업계 관행에 따라 실무를 준비할 수 있습니다.',
+    entryRequirement: [
+      '다음 유닛을 이수해야 합니다:',
+      '• HLTAID011 Provide First Aid (또는 이 유닛을 대체하는 유닛)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+      '',
+      '학생은 Year 12에 해당하는 학력을 이수해야 합니다',
+    ],
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -657,6 +703,8 @@ export const courseInformationData_kr: {
     cricosCode: '117762H',
     description:
       '호주 스포츠 및 피트니스 산업에서 미래를 설계하세요!\n\n스포츠 디플로마(코칭) 과정은 학생들이 호주 스포츠 분야에서 다양한 역할을 수행하는 데 필요한 실무 기술과 지식을 제공합니다. 코치, 팀 리더, 커뮤니티 스포츠 조직 지원 등 다양한 진로에 적합합니다.\n\n학생들은 독립적으로 일하고, 타인을 관리·감독하며, 호주 법률·표준·업계 모범 사례에 따라 역량을 발휘합니다. 리더십과 커뮤니케이션 등 역동적인 스포츠 환경에서 필수적인 요소도 함께 배웁니다.\n\n이 과정은 다음과 같은 분들에게 적합합니다:\n- 스포츠/피트니스 업계에서 커리어를 시작하거나 발전시키고 싶은 분\n- 새로운 분야로 전향하고 싶은 분\n- 피트니스 수료증 III 또는 IV를 이미 보유하고 추가 역량을 개발하고 싶은 분\n- 상위 스포츠 자격증 취득을 희망하는 분\n\n학생들은 다양한 국가 출신으로, 호주에 처음 오거나, 최근 또는 과거에 거주한 경험이 있을 수 있습니다. 이 코스는 피트니스 업계로 진출하는 첫걸음이며, 별도의 라이선스나 인증 없이 호주 표준과 업계 관행에 따라 실무를 준비할 수 있습니다.',
+    entryRequirement:
+      '코스 적합성과 학생의 요구사항을 판단하기 위한 코스 입학 면접에 참여해야 합니다.',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -730,6 +778,18 @@ export const courseInformationData_kr: {
     courseCode: 'SIS40221',
     description:
       '피트니스 강사로서의 커리어를 시작하세요!\n\nSIS30321 피트니스 수료증 III & SIS40221 피트니스 수료증 IV 과정은 그룹 운동 강사 또는 헬스장 강사를 목표로 하는 분들을 위해 설계되었습니다. 이 코스는 그룹 운동 세션을 기획·진행하고, 개인 맞춤형 헬스장 프로그램을 설계하는 데 필요한 기술을 갖추게 해줍니다.\n\n학생들은 피트니스 센터, 헬스장, 커뮤니티 레저 시설 등 구조화되고 감독이 이루어지는 환경에서 일하게 됩니다. 강사로서 재량과 판단력을 발휘해 수업을 진행하고, 조직의 정책과 절차를 따릅니다.\n\n이 코스는 다음과 같은 분야로의 취업 경로를 제공합니다:\n– 피트니스 센터 & 헬스장\n– 레저 & 커뮤니티 센터\n– 건강 & 웰니스 클럽',
+    entryRequirement: [
+      '다음 유닛을 이수해야 합니다:',
+      '• HLTAID011 Provide First Aid (또는 이 유닛을 대체하는 유닛)',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+    ],
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업',
@@ -776,6 +836,11 @@ export const courseInformationData_kr: {
     description:
       '간호 지원 진로 경로: 영어 + 건강 서비스 지원 자격증 III + 실습\n\n포함: HLT33115 건강 서비스 지원 자격증 III (급성 치료 간호 업무 지원)\n\nABM의 간호 지원 진로 경로로 보건의료 분야에서 보람찬 경력을 향한 첫 걸음을 내딛으세요. 이 종합 프로그램은 병원 및 노인 요양 시설에서 숙련된 지원 직원이 되고자 하는 국제 학생이나 보건 분야 신규 진입자를 위해 설계되었습니다.',
     duration: '16주',
+    entryRequirement: [
+      '코스 시작 시점에 최소 18세 이상이어야 합니다.',
+      'IELTS 5.5 이상 또는 동등. 학생이 ABM EPT를 통해 IELTS 4.5 또는 동등을 취득한 경우, Plus Nursing English에 등록하세요.',
+      '학생은 Year 10에 해당하는 학력을 이수해야 합니다',
+    ],
     deliveryMode: {
       title: '수업 방식:',
       mode: '대면 수업',

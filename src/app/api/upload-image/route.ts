@@ -31,7 +31,10 @@ async function getAdminSessionFromRequest(req: NextRequest) {
       },
     });
 
-    const { data: { user }, error } = await supabase.auth.getUser();
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser();
 
     if (error || !user) {
       return null;
@@ -39,7 +42,7 @@ async function getAdminSessionFromRequest(req: NextRequest) {
 
     // 어드민 권한 확인
     const isAdmin = user.user_metadata?.isAdmin === true;
-    
+
     if (!isAdmin) {
       return null;
     }
@@ -92,8 +95,11 @@ export async function POST(req: NextRequest) {
     // 고유한 파일명 생성
     const fileName = generateUniqueFileName(file.name);
 
+    // 디렉토리 파라미터 (선택사항, 기본값: news-letter)
+    const directory = (formData.get('directory') as string) || 'news-letter';
+
     // R2에 업로드
-    const imagePath = await uploadImageToR2(file, fileName);
+    const imagePath = await uploadImageToR2(file, fileName, directory);
 
     return NextResponse.json({
       success: true,
@@ -103,10 +109,12 @@ export async function POST(req: NextRequest) {
     console.error('이미지 업로드 오류:', error);
     return NextResponse.json(
       {
-        error: error instanceof Error ? error.message : '이미지 업로드 중 오류가 발생했습니다.',
+        error:
+          error instanceof Error
+            ? error.message
+            : '이미지 업로드 중 오류가 발생했습니다.',
       },
       { status: 500 }
     );
   }
 }
-

@@ -10,6 +10,7 @@ export const courseInformationData_jp: {
     description:
       '料理技能を次のレベルへ引き上げる準備はできていますか？\n\nABM Further Education では、実際の業界経験がキッチンでの理論的・実践的学習と同様に重要であることを認識しています。\n\nCertificate IV in Kitchen Management は、教室での学習と豊富な実践経験を組み合わせて、学生を商業キッチンでの監督・リーダーシップ役職に備えさせます。学生は、経験豊富な業界専門家の指導の下、レストラン、ホテル、高齢者施設などの実際のホスピタリティ環境で訓練する機会を得ます。\n\n雇用可能性を強化し、キャリア準備を確保するため、コースには第3学期から開始される600時間の構造化された業界実習が含まれています。\n\n第3学期から、学生は週16時間まで、第6学期からは週20時間まで追加の業界実習時間を完了できます。この強化された構造により、学生は教室で学んだことを実際の職場で適用し、必須スキル、自信、キッチン運営へのより深い理解を発展させることができます。\n\nこれらの業界実習時間は資格の必須コンポーネントであり、ABMの実践的でキャリア重視の教育を提供するというコミットメントの不可欠な部分を形成しています。',
     duration: '78週間',
+    entryRequirement: '学生はYear 10相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -42,6 +43,7 @@ export const courseInformationData_jp: {
     description:
       'Certificate IV in Business の受講者は、さまざまなビジネスサービス系職種で成功するために必要な、効果的なリーダーシップと問題解決能力の構築に重点を置きます。受講者は、専門性がやや高い管理・運営業務を遂行するための高度な自己開発スキルを身につけます。受講修了後には、選択した分野で成功するために不可欠なコミュニケーション能力と問題解決スキルを発揮できるようになります。受講者は、定義された範囲の予測不可能な課題に対して解決策を適用し、チームを率いて明確に指導する能力を持ちます。',
     duration: '52週間',
+    entryRequirement: '学生はYear 10相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -68,6 +70,7 @@ export const courseInformationData_jp: {
     description:
       'この資格は、専門知識とスキル、加えてリーダーシップとマネジメント経験を、さまざまな事業や業界の文脈で応用できる人材を反映しています。\n\nこのレベルの個人は、自己および他者の作業量を計画、整理、実行、モニタリングする上でイニシアティブと判断を発揮し、コミュニケーション能力を用いて組織や企業の要件を満たす個人・チームを支援します。\n\n予測困難な問題に対して解決策を計画・設計・適用・評価し、様々な情報源から情報を分析・統合する力を持ちます。',
     duration: '52週間',
+    entryRequirement: '学生はYear 12相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -94,6 +97,8 @@ export const courseInformationData_jp: {
     description:
       'リーダーシップ能力を高めたい方、主要な問題解決手法を学びたい方、チーム環境で活躍したい方に最適な資格です。本 Advanced Diploma of Business を修了することで、専門分野での高度な課題に取り組むために必要なツールを習得できます。本コースでは、複雑な問題解決、事業計画の策定・実行、組織戦略の開発、戦略的人材計画への貢献といった活動を通じて、専門領域で卓越するための能力を養います。\n\nこの資格は、リーダーシップへの情熱、強い問題解決能力、チームを動機づけ導く能力を持つ方に適しています。',
     duration: '78週間',
+    entryRequirement:
+      '学生はBSB訓練パッケージからDiplomaレベルコース（AQF Level 5）またはAdvanced Diplomaレベルコース（AQF Level 6）を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -120,6 +125,8 @@ export const courseInformationData_jp: {
     description:
       'この資格は、複雑かつ動的なマネジメント環境の中で変化を主導・影響を与えるために、高度に専門的な知識とスキルを適用できる個人の役割を反映しています。\n\nこのレベルの個人は、様々な情報源から情報を識別・分析・統合・行動に移すための認知スキルとコミュニケーション能力を使用し、知識とスキルを他者に伝達します。\n\n創造的・概念的・分析的スキルを用いて複雑なアイデアを形成・評価したり、変化を主導する能力を発揮します。複雑な状況において知識とスキルを自己主導的に応用し、相応の責任と裁量を持って行動します。',
     duration: '52週間',
+    entryRequirement:
+      '学生はAdvanced Diplomaレベルコース（AQF Level 6）以上を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -411,6 +418,7 @@ export const courseInformationData_jp: {
     description:
       'この資格は、ホスピタリティ技能とマネジメント知識を融合し、ホスピタリティ業務を統括・調整する上級オペレーターの役割を反映しています。\n\n受講者は独立して業務を遂行し、他者への責任を持ち、さまざまな運営業務上の判断を行います。\n\nこの資格は、レストラン、ホテル、モーテル、ケータリング、クラブ、パブ、カフェ、コーヒーショップなど、多様なホスピタリティ業界分野で部門または小規模事業のマネージャーとして就業する道を提供します。本資格は、宿泊サービス、調理、フード＆ビバレッジ、ギャンブル分野でのマルチスキル化および専門化を可能にします。\n\n本資格の技能は、連邦・州／準州の法令、オーストラリア標準、業界行動規範に従って適用される必要があります。発行時点では、職業ライセンス、認証、特定の法的要件は適用されていません。',
     duration: '76週間／102週間',
+    entryRequirement: '学生はYear 12相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -442,6 +450,7 @@ export const courseInformationData_jp: {
     description:
       'この資格は、ホスピタリティ技能を幅広く用いながら、専門的なマネジメント能力と深い業界知識を駆使して事業を統括・監視するキャリアを志す方に適しています。学生は高度な自律性を持って働き、戦略的業務判断の策定および実行を担います。\n\n本資格は、レストラン、ホテル、モーテル、ケータリング、クラブ、パブ、カフェ、コーヒーショップなど多様なホスピタリティ業界分野での就業への道を提供します。修了者は、マルチスキル化および専門化に向けた能力と基盤を得ます。\n\n本コースは、選択科目の柔軟性を備えており、受講者の興味・キャリア目標に適した専門学習活動を提供できます。',
     duration: '104週間',
+    entryRequirement: '学生はYear 12相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -474,6 +483,7 @@ export const courseInformationData_jp: {
     description:
       'この資格は、プロジェクトマネジメントの幅広いプロセスに関する高度なスキルを持つ個人の役割を反映しています。\n\n受講者は定義された文脈内でプロジェクト知識とスキルを応用し、非定型または非常時対応策を含むプロジェクト成果に対して責任を持ちます。\n\n本資格は、チーム環境でプロジェクト活動および成果を支援または担当する個人に適しており、あらゆる業界または地域で適用可能です。',
     duration: '52週間',
+    entryRequirement: '学生はYear 10相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -500,6 +510,7 @@ export const courseInformationData_jp: {
     description:
       'この資格は、様々な文脈および複数の業界分野においてプロジェクトマネジメントスキルと知識を応用する個人の役割を反映しています。関連する職種にはプロジェクトマネージャーやプロジェクトチームリーダーがあります。これらの役割ではプロジェクトのリーダーシップと管理を行い、プロジェクト目標を達成する責任を持ちます。受講者は、理論知識と専門的・技術的・管理的能力の組み合わせを用いて、自分自身および他者の業務を開始・計画・実行・評価します。',
     duration: '52週間',
+    entryRequirement: '学生はYear 12相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（週20時間）',
@@ -525,6 +536,11 @@ export const courseInformationData_jp: {
     description:
       'この資格は、様々な文脈および複数の業界分野でプロジェクトマネジメントの知識とスキルを応用する個人の役割を反映しています。関連する職種にはプロジェクトマネージャーやプロジェクトチームリーダーがあります。\n\nこれらの役割ではプロジェクトのリーダーシップと管理を担い、プロジェクト目標を達成する責任があります。受講者は理論的基盤を持ち、専門的・技術的・管理的能力を駆使して、自分および他者の業務を開始・計画・実行・評価します。',
     duration: '78週間',
+    entryRequirement: [
+      '以下のいずれかの資格を修了している必要があります',
+      '• BSB50820 Diploma of Project Management',
+      '• BSB51415 Diploma of Project Management（または置き換えられた同等バージョン）。',
+    ],
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（週20時間）',
@@ -550,6 +566,7 @@ export const courseInformationData_jp: {
     description:
       'この資格は、人事（HR）職務において、広範な能力を裁量・判断・理論的知識をもとに適用できる技能と知識をもつ労働者を表します。\n\nこの資格を持つ者は、チームへの技術的助言・支援を提供することがあります。\n\n関連職種には、人事担当者、人事アシスタント、採用担当者、学習開発担当者などがあります。',
     duration: '52週間',
+    entryRequirement: '学生はYear 10相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -576,6 +593,15 @@ export const courseInformationData_jp: {
     description:
       'この資格は、人事（HR）専門職務において、裁量・判断・理論的知識を用いて広範な能力を適用できる技能と知識を持つ労働者を説明します。\n\nチームを支援または監督し、若手社員の成果に責任を持つことがあります。\n\n関連職種には、人事アドバイザー、人事コーディネーター、労使関係アドバイザー、学習開発コーディネーター、採用コンサルタント、安全衛生アドバイザーなどがあります。',
     duration: '52週間',
+    entryRequirement: [
+      '以下のユニットを修了している必要があります：',
+      '• BSBHRM411 Administer performance development processes',
+      '• BSBHRM412 Support employee and industrial relations',
+      '• BSBHRM415 Coordinate recruitment and onboarding',
+      '• BSBHRM417 Support human resource functions and processes',
+      '',
+      '同等の能力は、これらのユニットの前身であり、同等としてマッピングされています。',
+    ],
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -602,6 +628,11 @@ export const courseInformationData_jp: {
     description:
       'この資格は、高度な能力をもち、広範な専門能力を裁量・判断・理論的知識を用いて適用できる上級人事専門家または総合職を対象としています。\n\nリーダーシップや指導、 operational および戦略的判断の責任を持つことがあります。\n\n関連職種には、人事マネージャー、学習開発マネージャー、労使関係マネージャー、採用マネージャー、安全衛生マネージャーなどがあります。',
     duration: '78週間',
+    entryRequirement: [
+      '以下のいずれかの資格を修了している必要があります',
+      '• BSB50320 Diploma of Human Resource Management',
+      '• BSB50618 Diploma of Human Resources Management（または置き換えられた同等バージョン）。',
+    ],
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -628,6 +659,7 @@ export const courseInformationData_jp: {
     description:
       'この資格は、フィットネス業界で幅広い活動と機能を遂行する個人の役割を反映しています。\n\nこの資格を持つ者は、フィットネスオリエンテーション、健康スクリーニング、フィットネス指導、グループ運動指導、ジム指導などのサービス提供に対応できる能力を持ちます。\n\n業務は、フィットネスセンター、ジム、アクアティックセンター、コミュニティ施設、職域フィットネス施設、屋外フィットネス環境など、制御された環境で行われます。通常、一定の自律性のもとで業務が行われます。',
     duration: '52週間',
+    entryRequirement: '学生はYear 10相当を修了している必要があります',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -658,6 +690,20 @@ export const courseInformationData_jp: {
     description:
       'SIS40221 Certificate IV in Fitness は、パーソナルトレーナーを目指す方に最適な資格です。クライアントの目標に合わせた運動プログラムの設計、指導、評価スキルを学びます。健康上の問題がある場合は、医療専門家に紹介します。パーソナルトレーナーは、定型的および予測不能な状況でフィットネス知識を活用し、クライアントや医療専門家と効果的にコミュニケーションをとります。\n\n本コースは、ジム、フィットネスセンター、レジャー施設、クライアントの職域、戸外環境などで活動する道を提供します。個別またはグループへの指導、オンラインサービス提供も可能です。一部の環境ではリーダーシップ職に就くこともできます。\n\n対象となる学生は以下を含みます：\n– フィットネス業界でのキャリアを始めたい／進めたい方\n– キャリアチェンジを検討している方\n– Certificate III in Fitness を修了し、さらなるスキルを習得したい方\n– フィットネス分野の上位資格を目指す方\n\n学生は多国籍で構成されており、オーストラリアへの渡航が初めての方も含まれます。本資格には特別な免許や認証は不要で、オーストラリアの標準と業界慣行に沿って扱われます。',
     duration: '52週間',
+    entryRequirement: [
+      '以下のユニットを修了している必要があります：',
+      '• HLTAID011 Provide First Aid（またはこのユニットを置き換えるユニット）',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+      '',
+      '学生はYear 12相当を修了している必要があります',
+    ],
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -689,6 +735,8 @@ export const courseInformationData_jp: {
     description:
       'オーストラリアのスポーツ・フィットネス業界における将来を築こう！\n\nDiploma of Sport (Coaching) は、スポーツ分野での多様な役割に必要な実践的スキルと知識を提供します。コーチング、チーム運営、コミュニティスポーツ組織支援などを目指す方に最適です。\n\n学生は独立して働く能力を養い、他者を監督・支援し、オーストラリアの法令、基準、業界ベストプラクティスを遵守して技能を適用します。本コースには、動的なスポーツ環境で必要とされるリーダーシップとコミュニケーション要素も含まれます。\n\n対象：\n– フィットネス・スポーツ分野でキャリアを始めたい／進めたい方\n– キャリアチェンジを検討している方\n– Certificate III または IV in Fitness を修了し、さらなるスキルを習得したい方\n– 上位スポーツ資格への進路を目指す方\n\n学生は多国籍で構成されることが多く、オーストラリア初来訪者も含まれます。本資格には特定の免許や認証は不要で、オーストラリアの標準および業界慣行に従って運用されます。',
     duration: '52週間',
+    entryRequirement:
+      'コースへの適性と学生のニーズを判断するためのコース入学面接に参加すること。',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -766,6 +814,18 @@ export const courseInformationData_jp: {
     description:
       'フィットネスインストラクターとしてのキャリアをスタートさせよう！\n\nSIS40221 Certificate IV in Fitness（ファストトラック）は、パーソナルトレーナーおよび上級フィットネスインストラクターを目指す方を対象とします。本資格では、グループ運動セッションの指導および個別プログラムの設計能力を身につけます。ただし、個別指導や持続的なクライアントモニタリングには制限があります。\n\n受講者はフィットネスセンター、ジム、地域施設など、構造化された監督環境で働きます。運動指導やクライアントとのやり取りにおいては、組織の方針・手順に従い判断力を用います。\n\nこの資格は以下の就業分野への直接的な進路を提供します：\n– フィットネスセンター & ジム\n– レジャー & コミュニティ施設\n– 健康 & ウェルネスクラブ',
     duration: '12週間または24週間',
+    entryRequirement: [
+      '以下のユニットを修了している必要があります：',
+      '• HLTAID011 Provide First Aid（またはこのユニットを置き換えるユニット）',
+      '• HLTWHS001 Participate in workplace health and safety',
+      '• SISFFIT032 Complete pre-exercise screening and service orientation',
+      '• SISFFIT033 Complete client fitness assessments',
+      '• SISFFIT035 Plan group exercise sessions',
+      '• SISFFIT036 Instruct group exercise sessions',
+      '• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients',
+      '• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise',
+      '• SISFFIT052 Provide healthy eating information',
+    ],
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',
@@ -813,6 +873,11 @@ export const courseInformationData_jp: {
     description:
       '看護支援キャリアパス：英語 + Certificate III in Health Services Assistance + 実習\n\nHLT33115 Certificate III in Health Services Assistance（急性期看護支援）を含みます。\n\nABM の本プログラムは、国際学生および医療分野未経験者を対象とし、病院や高齢者施設で支援業務を担う有能な支援者を育成するために設計されています。',
     duration: '16週間（週2日授業 + 週1日補講）＋ 実習 80時間',
+    entryRequirement: [
+      'コース開始時に18歳以上である必要があります。',
+      'IELTS 5.5以上または同等。学生がABM EPTを通じてIELTS 4.5または同等を取得している場合、Plus Nursing Englishに登録してください。',
+      '学生はYear 10相当を修了している必要があります',
+    ],
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業（Face to Face）',

@@ -2,7 +2,7 @@ import Banner from '@/components/common/Banner';
 import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
 import Gallery from '@/components/common/Gallery';
-import Testimonial from '@/domains/main/components/Testimonial';
+// import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
 import { useTranslations } from 'next-intl';
@@ -86,9 +86,9 @@ function FitnessPage() {
           />
         </div>
       </FadeIn>
-      <FadeIn>
+      {/* <FadeIn>
         <Testimonial />
-      </FadeIn>
+      </FadeIn> */}
       <FadeIn>
         <Gallery />
       </FadeIn>

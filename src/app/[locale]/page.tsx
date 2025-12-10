@@ -2,7 +2,7 @@ import Banner from '@/components/common/Banner';
 import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
 import NewsLetter from '@/domains/main/components/NewsLetter';
-import Testimonial from '@/domains/main/components/Testimonial';
+import TestimonialWrapper from '@/domains/main/components/TestimonialWrapper';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
@@ -74,16 +74,17 @@ export default async function Home({
         <Banner
           slides={[
             {
-              imgPath: '/courses/hsa_banner_2.png',
-              title: 'Free Health Service Assistance Trial Class!',
-              content: `Join our one-time free session with our registered nurse trainer on 5 Dec, 3:30 PM.`,
+              imgPath: '/home/HSA_2.png',
+              title: 'Start Your Career in Health Service Assistance',
+              content: `Fast-track your growth in 16 weeks - Enrol now for January 2026!`,
               linkButton: {
-                href: 'https://form.jotform.com/253237169340860',
-                text: 'Register Here',
+                href: 'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
+                text: 'Enrol Here',
               },
             },
             {
-              imgPath: '/courses/fitness_banner_1.png',
+              imgPath:
+                'https://www.youtube.com/embed/NrGhzWgTS_I?si=Q9ce1AIuWGfMLgyW',
               title: 'Start Your Fitness Journey',
               content: `January intake is open now. Spots are limited.\nIt’s a solid starting point if you want to work as a fitness trainer.`,
             },
@@ -201,7 +202,7 @@ export default async function Home({
           </FadeIn>
         </section>
         <FadeIn>
-          <Testimonial />
+          <TestimonialWrapper limit={10} />
         </FadeIn>
         <FadeIn>
           <NewsLetter newsList={newsList} locale={locale} />
