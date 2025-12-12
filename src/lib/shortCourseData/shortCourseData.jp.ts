@@ -431,6 +431,7 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
         date: '2025-12-16',
         displayDate: '2025年12月16日',
         time: '午後1:00〜午後4:30',
+        available: false,
       },
     ],
     location:

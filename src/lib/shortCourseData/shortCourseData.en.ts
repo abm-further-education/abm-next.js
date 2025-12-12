@@ -489,6 +489,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         date: '2025-12-16',
         displayDate: '16 December 2025',
         time: '1:00pm – 4:30pm',
+        available: false,
       },
     ],
     location:

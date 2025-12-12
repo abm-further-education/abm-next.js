@@ -425,6 +425,7 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
         date: '2025-12-16',
         displayDate: '16 de dezembro de 2025',
         time: '13:00 – 16:30',
+        available: false,
       },
     ],
     location:

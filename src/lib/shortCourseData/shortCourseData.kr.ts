@@ -412,6 +412,7 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         date: '2025-12-16',
         displayDate: '2025년 12월 16일',
         time: '오후 1:00 – 4:30',
+        available: false,
       },
     ],
     location:
