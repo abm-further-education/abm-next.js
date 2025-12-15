@@ -156,12 +156,12 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
           <h1 className="text-4xl font-bold mb-24">{news.title}</h1>
         </div>
 
-        <div className="relative h-280 mb-16 overflow-hidden">
+        <div className="relative w-full min-h-500 mb-16 overflow-hidden">
           <Image
             src={newsImageUrl}
             alt={news.title}
             fill
-            className="object-cover"
+            className="object-contain"
             unoptimized={
               // 로컬 경로(/로 시작)가 아닌 경우에만 unoptimized 적용
               !newsImageUrl.startsWith('/') &&
@@ -201,7 +201,9 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
                         unoptimized={
                           // 로컬 경로(/로 시작)가 아닌 경우에만 unoptimized 적용
                           !relatedNews.image.startsWith('/') &&
-                          (relatedNews.image.includes('r2.cloudflarestorage.com') ||
+                          (relatedNews.image.includes(
+                            'r2.cloudflarestorage.com'
+                          ) ||
                             relatedNews.image.startsWith('http'))
                         }
                       />

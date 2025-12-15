@@ -1,11 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { toast } from 'react-toastify';
 import { createNewsAction, updateNewsAction } from '@/app/admin/news/actions';
 import TiptapEditor from '@/components/admin/TiptapEditor';
 import type { NewsItem } from '@/lib/news-db';
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 interface NewsFormProps {
   mode: 'create' | 'edit';
@@ -28,6 +31,43 @@ export default function NewsForm({ mode, news }: NewsFormProps) {
   const [link, setLink] = useState('');
   const [published, setPublished] = useState(true);
 
+  // R2 이미지 경로인지 확인하는 함수
+  const isR2ImagePath = useCallback((path: string): boolean => {
+    if (!path || path.trim() === '') return false;
+    // 이미 전체 URL이면 R2가 아님 (또는 이미 처리됨)
+    if (path.startsWith('http://') || path.startsWith('https://')) return false;
+    // 로컬 경로면 R2가 아님
+    if (path.startsWith('/') || path.startsWith('./')) return false;
+    // data URL이면 R2가 아님
+    if (path.startsWith('data:')) return false;
+    // 그 외는 R2 key로 간주
+    return true;
+  }, []);
+
+  // R2 이미지 URL을 가져오는 함수
+  const getR2ImageUrl = useCallback(
+    async (imagePath: string): Promise<string> => {
+      if (!isR2ImagePath(imagePath)) {
+        return imagePath;
+      }
+
+      try {
+        const response = await fetch(
+          `/api/r2/get-url?key=${encodeURIComponent(imagePath)}`
+        );
+        const data = await response.json();
+        if (data.url) {
+          return data.url;
+        }
+        return imagePath;
+      } catch (err) {
+        console.error('Failed to get R2 image URL:', err);
+        return imagePath;
+      }
+    },
+    [isR2ImagePath]
+  );
+
   // Edit 모드일 때 초기값 설정
   useEffect(() => {
     if (mode === 'edit' && news) {
@@ -39,10 +79,20 @@ export default function NewsForm({ mode, news }: NewsFormProps) {
       setDate(news.date.includes('T') ? news.date.split('T')[0] : news.date);
       setLink(news.link || '');
       setPublished(news.published);
+
       // 기존 이미지 경로를 미리보기로 설정
-      setImagePreview(news.image);
+      // R2 이미지인 경우 URL을 가져옴
+      if (news.image) {
+        const loadPreview = async () => {
+          const previewUrl = await getR2ImageUrl(news.image);
+          setImagePreview(previewUrl);
+        };
+        loadPreview();
+      } else {
+        setImagePreview('');
+      }
     }
-  }, [mode, news]);
+  }, [mode, news, getR2ImageUrl]);
 
   async function handleImageUpload(file: File) {
     setUploading(true);
@@ -65,6 +115,19 @@ export default function NewsForm({ mode, news }: NewsFormProps) {
       }
 
       setImagePath(data.imagePath);
+
+      // 업로드된 이미지가 R2 경로인 경우 URL을 가져와서 미리보기 업데이트
+      if (isR2ImagePath(data.imagePath)) {
+        const previewUrl = await getR2ImageUrl(data.imagePath);
+        setImagePreview(previewUrl);
+      } else {
+        // 로컬 경로나 data URL인 경우 그대로 사용
+        // (FileReader로 이미 미리보기가 설정되어 있을 수 있음)
+        if (!imagePreview || !imagePreview.startsWith('data:')) {
+          setImagePreview(data.imagePath);
+        }
+      }
+
       return data.imagePath;
     } catch (err) {
       const errorMessage =
@@ -85,6 +148,15 @@ export default function NewsForm({ mode, news }: NewsFormProps) {
     // 이미지 파일인지 확인
     if (!file.type.startsWith('image/')) {
       setError('Only image files can be uploaded.');
+      toast.error('Only image files can be uploaded.');
+      return;
+    }
+
+    // 파일 크기 확인 (5MB 제한)
+    if (file.size > MAX_FILE_SIZE) {
+      const errorMessage = 'File size must be 5MB or less.';
+      setError(errorMessage);
+      toast.error('File size must be 5MB or less.');
       return;
     }
 
@@ -243,6 +315,11 @@ export default function NewsForm({ mode, news }: NewsFormProps) {
                     width={400}
                     height={300}
                     className="rounded-md border border-gray-300"
+                    unoptimized={
+                      imagePreview.startsWith('data:') ||
+                      imagePreview.startsWith('http://') ||
+                      imagePreview.startsWith('https://')
+                    }
                   />
                 </div>
                 {imagePath && (
@@ -263,7 +340,18 @@ export default function NewsForm({ mode, news }: NewsFormProps) {
                 id="image"
                 type="text"
                 value={imagePath}
-                onChange={(e) => setImagePath(e.target.value)}
+                onChange={async (e) => {
+                  const newPath = e.target.value;
+                  setImagePath(newPath);
+
+                  // 경로가 변경되면 미리보기도 업데이트
+                  if (newPath) {
+                    const previewUrl = await getR2ImageUrl(newPath);
+                    setImagePreview(previewUrl);
+                  } else {
+                    setImagePreview('');
+                  }
+                }}
                 required
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="/news/image.png"
@@ -299,6 +387,11 @@ export default function NewsForm({ mode, news }: NewsFormProps) {
                     width={400}
                     height={300}
                     className="rounded-md border border-gray-300"
+                    unoptimized={
+                      imagePreview.startsWith('data:') ||
+                      imagePreview.startsWith('http://') ||
+                      imagePreview.startsWith('https://')
+                    }
                   />
                 </div>
                 {imagePath && (
