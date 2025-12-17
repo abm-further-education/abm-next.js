@@ -36,7 +36,9 @@
       "lastNameMinLength": "Last name must be at least 2 characters",
       "emailRequired": "Email is required",
       "emailInvalid": "Invalid email address"
-    }
+    },
+    "preferredDate": "Preferred Date",
+    "weekdaysOnly": "Weekdays only (Monday to Friday)"
   },
   "courses": {
     "title": "Find the Right Course for Your Future",
@@ -175,11 +177,12 @@
     "enrolNow": "Enrol Now",
     "menu": {
       "courses": "Courses",
-      "shortCourses": "Short Courses",
+      "shortCourses": "Custom Programs",
       "studyWithUs": "Study With Us",
       "contact": "Contact"
     },
     "subMenu": {
+      "studyTourPrograms": "Study Tour Programs",
       "cookery": "Cookery",
       "hospitality": "Hospitality",
       "fitnessAndSport": "Fitness & Sport",
@@ -708,15 +711,16 @@
     "careWorker": "Care Worker"
   },
   "shortCoursesPage": {
-    "heading": "Discover Your Passion with ABM’s New Short Courses!",
-    "description": "ABM is thrilled to announce our latest project – ABM Short Courses – designed for anyone who loves food, drink, and the art of hospitality! Whether you’re a home cook, aspiring chef, or curious enthusiast, these one-day courses are your gateway to new skills and unforgettable experiences.",
-    "heading2": "ABM Short Courses for 2025",
+    "heading": "Discover Your Passion with ABM’s New Custom Programs!",
+    "description": "ABM offers customized short-term courses and one-day programs delivered in a private group format. Tailored to each group’s needs, our programs are ideal for schools, universities, and hospitality enthusiasts. We have successfully collaborated with numerous high schools and universities, creating engaging and hands-on learning experiences.",
+    "heading2": "ABM Custom Programs",
     "calendarHeading": "Course Calendar",
     "calendarDescription": "Browse our short courses by month and find the perfect date for you"
   },
   "footer": {
     "home": "Home",
     "courses": "Courses",
+    "customPrograms": "Custom Programs",
     "shortCourses": "Short Courses",
     "studyWithUs": "Study With Us",
     "currentStudents": "Current Students",
@@ -741,7 +745,8 @@
     "agentPortal": "Agent Portal",
     "agentApplication": "Agent Application",
     "agentList": "Agent List",
-    "abmPoliciesAndProcedures": "ABM Policies and Procedures"
+    "abmPoliciesAndProcedures": "ABM Policies and Procedures",
+    "studyTourPrograms": "Study Tour Programs"
   },
   "shortCoursesMenu": {
     "hospitality": "Hospitality",
@@ -761,7 +766,8 @@
     "htmlIntro": "Introduction to HTML, CSS, and Basic Web Design",
     "portfolioWebsite": "Advanced Course: Building a Portfolio Website",
     "baristaSampleCourse": "Barista Sample Course",
-    "baristaOnlineCourse": "Barista Online Course"
+    "baristaOnlineCourse": "Barista Online Course",
+    "studyTourPrograms": "Study Tour Programs"
   },
   "gallery": {
     "title": "Campus Gallery"

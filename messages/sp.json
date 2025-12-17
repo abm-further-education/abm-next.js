@@ -36,7 +36,9 @@
       "lastNameMinLength": "El apellido debe tener al menos 2 caracteres",
       "emailRequired": "El email es obligatorio",
       "emailInvalid": "Dirección de email inválida"
-    }
+    },
+    "preferredDate": "Fecha Preferida",
+    "weekdaysOnly": "Nota: Los fines de semana no están disponibles. Solo se pueden seleccionar días laborables."
   },
   "courses": {
     "title": "Encuentra el Curso Adecuado para tu Futuro",
@@ -175,11 +177,12 @@
     "enrolNow": "Inscríbete Ahora",
     "menu": {
       "courses": "Cursos",
-      "shortCourses": "Cursos Cortos",
+      "shortCourses": "Programas Personalizados",
       "studyWithUs": "Estudia con Nosotros",
       "contact": "Contacto"
     },
     "subMenu": {
+      "studyTourPrograms": "Programas de Tour de Estudio",
       "cookery": "Cocina",
       "hospitality": "Hospitalidad",
       "fitnessAndSport": "Fitness y Deporte",
@@ -667,7 +670,7 @@
   "footer": {
     "home": "Inicio",
     "courses": "Cursos",
-    "shortCourses": "Cursos Cortos",
+    "customPrograms": "Programas Personalizados",
     "studyWithUs": "Estudia con Nosotros",
     "currentStudents": "Estudiantes Actuales",
     "contact": "Contacto",
@@ -691,7 +694,8 @@
     "agentPortal": "Portal de Agentes",
     "agentApplication": "Solicitud para Agentes",
     "agentList": "Lista de Agentes",
-    "abmPoliciesAndProcedures": "Políticas y Procedimientos de ABM"
+    "abmPoliciesAndProcedures": "Políticas y Procedimientos de ABM",
+    "studyTourPrograms": "Programas de Tour de Estudio"
   },
   "healthPage": {
     "metadata": {
@@ -736,9 +740,9 @@
     "cert4Fast": "Certificado IV en Fitness (Vía Rápida)"
   },
   "shortCoursesPage": {
-    "heading": "¡Descubre tu pasión con los nuevos Cursos Cortos de ABM!",
-    "description": "¡En ABM estamos emocionados de anunciar nuestro nuevo proyecto – ABM Cursos Cortos – diseñado para todos los amantes de la comida, la bebida y el arte de la hospitalidad! Ya seas un cocinero aficionado, un chef en formación o simplemente un entusiasta curioso, estos cursos de un día son tu puerta de entrada a nuevas habilidades, trabajos y experiencias inolvidables.",
-    "heading2": "Cursos Cortos de ABM para 2025",
+    "heading": "¡Descubre tu pasión con los nuevos Programas Personalizados de ABM!",
+    "description": "¡En ABM estamos emocionados de anunciar nuestro nuevo proyecto – ABM Programas Personalizados – diseñado para todos los amantes de la comida, la bebida y el arte de la hospitalidad! Ya seas un cocinero aficionado, un chef en formación o simplemente un entusiasta curioso, estos cursos de un día son tu puerta de entrada a nuevas habilidades, trabajos y experiencias inolvidables.",
+    "heading2": "Programas Personalizados ABM",
     "calendarHeading": "Calendario de Cursos",
     "calendarDescription": "Explora nuestros cursos cortos por mes y encuentra la fecha perfecta para ti"
   },
@@ -760,7 +764,8 @@
     "htmlIntro": "Introducción a HTML, CSS y Diseño Web Básico",
     "portfolioWebsite": "Curso Avanzado: Creación de un Sitio Web de Portafolio",
     "baristaSampleCourse": "Curso Muestra de Barista",
-    "baristaOnlineCourse": "Curso Online de Barista"
+    "baristaOnlineCourse": "Curso Online de Barista",
+    "studyTourPrograms": "Programas de Tour de Estudio"
   },
   "gallery": {
     "title": "Galería del Campus",

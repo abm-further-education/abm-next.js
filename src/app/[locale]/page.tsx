@@ -132,7 +132,7 @@ export default async function Home({
           <Card
             imgPath="/short-course/barista/barista_course_1.jpg"
             title={t('nav.menu.shortCourses')}
-            link={`short-courses`}
+            link={`custom-programs`}
             className="w-full md:w-300 h-200 xl:w-400"
           />
         </div>

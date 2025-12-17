@@ -103,7 +103,7 @@ const ShortCourseCalendar: React.FC<ShortCourseCalendarProps> = ({
     if (slug === 'fss') {
       router.push(`/cookery-and-hospitality-courses/fss`);
     } else {
-      router.push(`/short-courses/${slug}`);
+      router.push(`/custom-programs/${slug}`);
     }
   };
 

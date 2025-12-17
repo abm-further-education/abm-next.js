@@ -142,7 +142,7 @@ function MobileNav() {
           </button>
         </div>
         <nav className="mt-4 overflow-auto h-full">
-          <ul className="space-y-20 text-2xl">
+          <ul className="space-y-20 text-2xl max-h-[calc(100vh-220px)] overflow-y-auto">
             <li>
               <Link
                 onClick={toggleMenu}
@@ -227,18 +227,26 @@ function MobileNav() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -24 }}
                             transition={{ duration: 0.2, ease: easeOut }}
-                            className="origin-top flex flex-col gap-y-16 mt-10"
+                            className="origin-top px-10 flex flex-col gap-y-16 mt-10"
                           >
-                            {shortCourseMenu.map((item) => (
-                              <Link
-                                onClick={toggleMenu}
-                                key={item.href}
-                                className="ml-10 text-base block hover:underline"
-                                href={item.href}
-                              >
-                                {item.title}
-                              </Link>
-                            ))}
+                            {shortCourseMenu.map((menu) =>
+                              menu.items ? (
+                                <DisclosureContainer
+                                  key={menu.href}
+                                  title={menu.title}
+                                  list={menu.items}
+                                />
+                              ) : (
+                                <Link
+                                  onClick={toggleMenu}
+                                  key={menu.href}
+                                  className="ml-10 text-base block hover:underline"
+                                  href={menu.href}
+                                >
+                                  {menu.title}
+                                </Link>
+                              )
+                            )}
                           </motion.div>
                         </DisclosurePanel>
                       )}
@@ -357,7 +365,8 @@ function MobileNav() {
             </li>
           </ul>
           <div className="absolute bottom-40 left-40">
-            <div className="mb-20 text-xl">
+            <div className="mb-20 text-xl flex items-center gap-10">
+              Language:
               <LanguageSwitcher />
             </div>
             <Image src="/abm_logo.png" alt="Logo" width={120} height={120} />

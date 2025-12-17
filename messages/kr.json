@@ -36,7 +36,9 @@
       "lastNameMinLength": "성은 최소 2글자 이상이어야 합니다",
       "emailRequired": "이메일을 입력해주세요",
       "emailInvalid": "유효하지 않은 이메일 주소입니다"
-    }
+    },
+    "preferredDate": "희망 날짜",
+    "weekdaysOnly": "참고: 주말은 선택할 수 없습니다. 평일만 선택 가능합니다."
   },
   "courses": {
     "title": "당신의 미래를 위한 과정을 찾아보세요",
@@ -175,11 +177,12 @@
     "enrolNow": "지금 등록하기",
     "menu": {
       "courses": "과정",
-      "shortCourses": "단기 과정",
+      "shortCourses": "커스텀 프로그램",
       "studyWithUs": "함께 공부하기",
       "contact": "문의하기"
     },
     "subMenu": {
+      "studyTourPrograms": "스터디 투어 프로그램",
       "cookery": "요리",
       "hospitality": "호스피탈리티",
       "fitnessAndSport": "피트니스 & 스포츠",
@@ -668,7 +671,7 @@
   "footer": {
     "home": "홈",
     "courses": "과정",
-    "shortCourses": "단기과정",
+    "customPrograms": "커스텀 프로그램",
     "studyWithUs": "ABM과 함께 공부하기",
     "currentStudents": "재학생 안내",
     "contact": "문의하기",
@@ -694,7 +697,8 @@
     "agentList": "에이전트 목록",
     "abmPoliciesAndProcedures": "ABM 정책 및 절차",
     "mainCampus": "메인 캠퍼스",
-    "abmKitchen": "ABM 키친"
+    "abmKitchen": "ABM 키친",
+    "studyTourPrograms": "스터디 투어 프로그램"
   },
   "healthPage": {
     "metadata": {
@@ -756,12 +760,13 @@
     "htmlIntro": "HTML, CSS, 웹디자인 기초 입문",
     "portfolioWebsite": "포트폴리오 웹사이트 제작 고급 과정",
     "baristaSampleCourse": "바리스타 샘플 과정",
-    "baristaOnlineCourse": "바리스타 온라인 과정"
+    "baristaOnlineCourse": "바리스타 온라인 과정",
+    "studyTourPrograms": "스터디 투어 프로그램"
   },
   "shortCoursesPage": {
-    "heading": "새로운 단기과정을 살펴보세요!",
-    "description": "ABM 단기과정! 음식, 음료, 환대의 예술을 사랑하는 누구나 참여할 수 있도록 설계되었습니다. 집에서 요리를 즐기는 분, 셰프를 꿈꾸는 분, 새로운 경험을 원하는 분 모두를 위한 원데이 클래스! 새로운 기술과 잊지 못할 경험을 드립니다.",
-    "heading2": "2025년 ABM 단기과정",
+    "heading": "새로운 커스텀 프로그램을 살펴보세요!",
+    "description": "ABM 커스텀 프로그램! 음식, 음료, 환대의 예술을 사랑하는 누구나 참여할 수 있도록 설계되었습니다. 집에서 요리를 즐기는 분, 셰프를 꿈꾸는 분, 새로운 경험을 원하는 분 모두를 위한 원데이 클래스! 새로운 기술과 잊지 못할 경험을 드립니다.",
+    "heading2": "ABM 커스텀 프로그램",
     "calendarHeading": "과정 캘린더",
     "calendarDescription": "월별로 단기과정을 둘러보고 적합한 날짜를 찾아보세요"
   },

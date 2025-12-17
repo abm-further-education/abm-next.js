@@ -62,35 +62,43 @@ function Nav() {
       }
 
       const subMenu = section.subMenu?.map((subSection) => {
-        const items = subSection.items.map((item) => {
-          // Study With Us 섹션의 items는 tStudy 번역 키를 사용
-          if (section.titleKey === 'menu.studyWithUs') {
-            // Timetable은 직접 제목을 사용
-            if (item.title === 'timetable') {
+        const items = subSection.items
+          .filter((item) => {
+            // localeOnly가 지정된 경우 현재 locale과 일치하는지 확인
+            if (item.localeOnly) {
+              return params.locale === item.localeOnly;
+            }
+            return true;
+          })
+          .map((item) => {
+            // Study With Us 섹션의 items는 tStudy 번역 키를 사용
+            if (section.titleKey === 'menu.studyWithUs') {
+              // Timetable은 직접 제목을 사용
+              if (item.title === 'timetable') {
+                return {
+                  title: 'Timetable',
+                  href: item.href,
+                };
+              }
+              // 다른 항목들은 tStudy 번역 키 사용
               return {
-                title: 'Timetable',
+                title: tStudy(item.title),
                 href: item.href,
               };
             }
-            // 다른 항목들은 tStudy 번역 키 사용
+            // Short Courses 섹션의 items는 tShortCourse 번역 키를 사용
+            if (section.titleKey === 'menu.shortCourses') {
+              return {
+                title: tShortCourse(item?.titleKey || ''),
+                href: item.href,
+              };
+            }
+            // 다른 섹션은 그대로 사용
             return {
-              title: tStudy(item.title),
+              title: item.title,
               href: item.href,
             };
-          }
-          // Short Courses 섹션의 items는 tShortCourse 번역 키를 사용
-          if (section.titleKey === 'menu.shortCourses') {
-            return {
-              title: tShortCourse(item?.titleKey || ''),
-              href: item.href,
-            };
-          }
-          // 다른 섹션은 그대로 사용
-          return {
-            title: item.title,
-            href: item.href,
-          };
-        });
+          });
 
         return {
           title: t(subSection.titleKey),
@@ -165,8 +173,8 @@ function Nav() {
   return (
     <>
       <div className="bg-neutral-800 fixed p-16 top-0 w-full z-[800] flex flex-col lg:flex-row justify-between lg:px-80 font-[family-name:var(--font-montserrat)]">
-        <div className="hidden lg:flex flex-col md:flex-row items-center text-sm md:text-base">
-          <div className="text-white font-semibold hidden xl:block">
+        <div className="hidden xl:flex flex-col md:flex-row items-center text-sm md:text-base">
+          <div className="text-white font-semibold hidden 2xl:block">
             {t('internationalStudent')}
           </div>
           <Link
@@ -258,7 +266,11 @@ function Nav() {
                 <path d="M19.321 5.562a5.121 5.121 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.246-1.985-1.246-3.197V.862h-3.068v15.298c0 .849-.443 1.628-1.137 2.063-.694.434-1.534.434-2.271 0-.737-.435-1.137-1.214-1.137-2.063 0-.849.4-1.628 1.137-2.063.694-.434 1.534-.434 2.271 0 .154.097.297.208.428.332v-3.234a5.85 5.85 0 0 0-1.82-.289c-3.234 0-5.857 2.623-5.857 5.857s2.623 5.857 5.857 5.857 5.857-2.623 5.857-5.857V8.367a9.298 9.298 0 0 0 5.411 1.703V6.902c-1.034 0-2.012-.354-2.774-.966a4.121 4.121 0 0 1-.572-.374z" />
               </svg>
             </Link>
-            <LanguageSwitcher />
+            <div className="hidden lg:block w-1 h-20 bg-white mx-15" />
+            <div className="flex items-center gap-10">
+              Language:
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>

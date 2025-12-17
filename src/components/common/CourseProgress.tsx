@@ -49,8 +49,8 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
             </div>
             <div
               className={cn(
-                'text-sm md:text-base font-bold max-w-220 mb-2 leading-tight',
-                index + startIndex > 0 && 'pl-35 md:pl-50'
+                'text-sm md:text-base font-bold max-w-210 mb-2 leading-tight',
+                index + startIndex > 0 && 'pl-35 md:pl-50 pr-10'
               )}
             >
               {course.title}

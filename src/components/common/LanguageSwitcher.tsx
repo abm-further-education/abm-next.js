@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Link as Linki18n } from '../../../i18n/routing';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { useParams } from 'next/navigation';
@@ -8,13 +9,11 @@ import { useParams } from 'next/navigation';
 const multilingual = ['en', 'kr', 'sp', 'pt', 'jp'];
 
 export const languageFlags: { [key: string]: string } = {
-  en: '🇺🇸',
-  kr: '🇰🇷',
-  jp: '🇯🇵',
-  sp: '🇪🇸',
-  fr: '🇫🇷',
-  th: '🇹🇭',
-  pt: '🇵🇹',
+  en: '/flag/australia.png',
+  kr: '/flag/south-korea.png',
+  jp: '/flag/japan.png',
+  sp: '/flag/spain.png',
+  pt: '/flag/brazil.png',
 };
 
 const LanguageSwitcher = () => {
@@ -36,11 +35,17 @@ const LanguageSwitcher = () => {
             <Linki18n
               href="/"
               locale={lang}
-              className="hover:text-primary transition-colors duration-300"
+              className="hover:text-primary transition-colors duration-300 flex items-center gap-5"
               key={lang}
             >
-              {languageFlags[lang]}
-              <span className="ml-5">{lang.toUpperCase()}</span>
+              <Image
+                src={languageFlags[lang]}
+                alt={`${lang} flag`}
+                width={20}
+                height={15}
+                className="object-contain"
+              />
+              <span>{lang.toUpperCase()}</span>
             </Linki18n>
           ))}
         </PopoverPanel>

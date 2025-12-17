@@ -107,7 +107,7 @@ export default function CourseListSection({
                   <span>⏱️ {course.duration}</span>
                 </div>
                 <Link
-                  href={`/short-courses/${slug}`}
+                  href={`/custom-programs/${slug}`}
                   className="inline-block w-full bg-primary-bk text-white text-center py-10 px-16  font-semibold transition-colors"
                 >
                   View Course
@@ -159,7 +159,7 @@ export default function CourseListSection({
                       {course.dates.length > 1 ? 's' : ''}
                     </div>
                     <a
-                      href={`/short-courses/${slug}`}
+                      href={`/custom-programs/${slug}`}
                       className="bg-primary-bk text-white py-10 px-20  font-semibold hover:bg-primary/90 transition-colors"
                     >
                       View Course
@@ -175,7 +175,7 @@ export default function CourseListSection({
       {/* View All Courses Button */}
       <div className="text-center mt-40">
         <Link
-          href="/short-courses"
+          href="/custom-programs"
           className="inline-block bg-primary-bk text-white py-15 px-30  font-semibold hover:bg-gray-700 transition-colors"
         >
           View All Short Courses

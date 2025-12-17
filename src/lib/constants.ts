@@ -42,11 +42,11 @@ export const fitnessMenu = [
     href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
   },
   {
-    title: 'Certificate III in Fitness',
+    title: 'Certificate III in Fitness (Fast Track)',
     href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
   },
   {
-    title: 'Certificate IV in Fitness',
+    title: 'Certificate IV in Fitness (Fast Track)',
     href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
   },
 ];
@@ -72,15 +72,15 @@ export const businessMenu = [
 
 export const projectMenu = [
   {
-    title: 'Certificate IV in Business',
+    title: 'Certificate IV in Project Management Practice',
     href: '/project-and-program-management-courses/bsb40920-certificate-iv-in-project-management-practice',
   },
   {
-    title: 'Diploma of Business',
+    title: 'Diploma of Project Management Practice',
     href: '/project-and-program-management-courses/bsb50820-diploma-of-project-management-practice',
   },
   {
-    title: 'Advanced Diploma of Business',
+    title: 'Advanced Diploma of Program Management',
     href: '/project-and-program-management-courses/bsb60720-advanced-diploma-of-program-management',
   },
 ];
@@ -110,23 +110,23 @@ export const healthMenu = [
 export const shortCourseMenu = [
   {
     title: 'Hospitality',
-    href: '/short-courses/hospitality',
+    href: '/custom-programs/hospitality',
     items: [
       {
         title: 'Barista Course',
-        href: '/short-courses/barista',
+        href: '/custom-programs/barista',
       },
       {
         title: 'Wine Course',
-        href: '/short-courses/wine',
+        href: '/custom-programs/wine',
       },
       {
         title: 'Fine Dining Dessert Plating Course',
-        href: '/short-courses/dessert',
+        href: '/custom-programs/dessert',
       },
       {
         title: 'Cocktail-Making and Mixology Course',
-        href: '/short-courses/mixology',
+        href: '/custom-programs/mixology',
       },
       {
         title: 'NSW Food Safety Supervisor Certificate',
@@ -136,31 +136,31 @@ export const shortCourseMenu = [
   },
   {
     title: 'Cooking & Baking',
-    href: '/short-courses/cooking-baking',
+    href: '/custom-programs/cooking-baking',
     items: [
       {
         title: 'Classic French Cakes Course',
-        href: '/short-courses/cake',
+        href: '/custom-programs/cake',
       },
       {
         title: 'Sourdough and Focaccia Course',
-        href: '/short-courses/focaccia',
+        href: '/custom-programs/focaccia',
       },
       {
         title: 'Classic French Pastries Course',
-        href: '/short-courses/pastries',
+        href: '/custom-programs/pastries',
       },
       {
         title: 'French Petit Four Course (Macaroon)',
-        href: '/short-courses/petit',
+        href: '/custom-programs/petit',
       },
       {
         title: 'Vegan and Vegetarian Course',
-        href: '/short-courses/vegan',
+        href: '/custom-programs/vegan',
       },
       {
         title: 'Chocolate Class – Xmas',
-        href: '/short-courses/chocolate',
+        href: '/custom-programs/chocolate',
       },
     ],
   },
@@ -240,6 +240,7 @@ export interface MenuItem {
   title: string;
   href: string;
   items?: MenuItem[];
+  localeOnly?: string; // 특정 locale에서만 표시할 경우 지정
 }
 
 export interface MenuSection {
@@ -391,79 +392,6 @@ export const MENU_STRUCTURE: MenuSection[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    titleKey: 'menu.shortCourses',
-    href: '/short-courses',
-    subMenu: [
-      {
-        titleKey: 'subMenu.hospitality',
-        href: '/short-courses',
-        items: [
-          {
-            titleKey: 'barista',
-            title: 'Barista Course',
-            href: '/short-courses/barista',
-          },
-          {
-            titleKey: 'wine',
-            title: 'Wine Course',
-            href: '/short-courses/wine',
-          },
-          {
-            titleKey: 'fineDessert',
-            title: 'Fine Dining Dessert Plating Course',
-            href: '/short-courses/dessert',
-          },
-          {
-            titleKey: 'cocktail',
-            title: 'Cocktail-Making and Mixology Course',
-            href: '/short-courses/mixology',
-          },
-          {
-            titleKey: 'foodSafety',
-            title: 'NSW Food Safety Supervisor Certificate',
-            href: '/cookery-and-hospitality-courses/fss',
-          },
-        ],
-      },
-      {
-        titleKey: 'subMenu.cookingAndBaking',
-        href: '/short-courses',
-        items: [
-          {
-            titleKey: 'frenchCakes',
-            title: 'Classic French Cakes Course',
-            href: '/short-courses/cake',
-          },
-          {
-            titleKey: 'sourdough',
-            title: 'Sourdough and Focaccia Course',
-            href: '/short-courses/focaccia',
-          },
-          {
-            titleKey: 'frenchPastries',
-            title: 'Classic French Pastries Course',
-            href: '/short-courses/pastries',
-          },
-          {
-            titleKey: 'petitFour',
-            title: 'French Petit Four Course (Macaroon)',
-            href: '/short-courses/petit',
-          },
-          {
-            titleKey: 'vegan',
-            title: 'Vegan and Vegetarian Course',
-            href: '/short-courses/vegan',
-          },
-          {
-            titleKey: 'chocolate',
-            title: 'Chocolate Class – Xmas',
-            href: '/short-courses/chocolate',
-          },
-        ],
-      },
       {
         titleKey: 'subMenu.onlineCourses',
         href: 'https://online.abm.edu.au',
@@ -472,11 +400,13 @@ export const MENU_STRUCTURE: MenuSection[] = [
             titleKey: 'baristaSampleCourse',
             title: 'Barista Sample Course',
             href: 'https://online.abm.edu.au/courses/441285e0-35ec-4863-a31b-15014febb51f',
+            localeOnly: 'kr',
           },
           {
             titleKey: 'baristaOnlineCourse',
             title: 'Barista Online Course',
             href: 'https://online.abm.edu.au/courses/ccff3f2c-1c2c-4fc3-a322-fee0338cbf39',
+            localeOnly: 'kr',
           },
           {
             titleKey: 'htmlIntro',
@@ -487,6 +417,90 @@ export const MENU_STRUCTURE: MenuSection[] = [
             titleKey: 'portfolioWebsite',
             title: 'Advanced Course: Building a Portfolio Website',
             href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    titleKey: 'menu.shortCourses',
+    href: '/custom-programs',
+    subMenu: [
+      {
+        titleKey: 'subMenu.hospitality',
+        href: '/custom-programs',
+        items: [
+          {
+            titleKey: 'barista',
+            title: 'Barista Course',
+            href: '/custom-programs/barista',
+          },
+          {
+            titleKey: 'wine',
+            title: 'Wine Course',
+            href: '/custom-programs/wine',
+          },
+          {
+            titleKey: 'fineDessert',
+            title: 'Fine Dining Dessert Plating Course',
+            href: '/custom-programs/dessert',
+          },
+          {
+            titleKey: 'cocktail',
+            title: 'Cocktail-Making and Mixology Course',
+            href: '/custom-programs/mixology',
+          },
+          {
+            titleKey: 'foodSafety',
+            title: 'NSW Food Safety Supervisor Certificate',
+            href: '/cookery-and-hospitality-courses/fss',
+          },
+        ],
+      },
+      {
+        titleKey: 'subMenu.cookingAndBaking',
+        href: '/custom-programs',
+        items: [
+          {
+            titleKey: 'frenchCakes',
+            title: 'Classic French Cakes Course',
+            href: '/custom-programs/cake',
+          },
+          {
+            titleKey: 'sourdough',
+            title: 'Sourdough and Focaccia Course',
+            href: '/custom-programs/focaccia',
+          },
+          {
+            titleKey: 'frenchPastries',
+            title: 'Classic French Pastries Course',
+            href: '/custom-programs/pastries',
+          },
+          {
+            titleKey: 'petitFour',
+            title: 'French Petit Four Course (Macaroon)',
+            href: '/custom-programs/petit',
+          },
+          {
+            titleKey: 'vegan',
+            title: 'Vegan and Vegetarian Course',
+            href: '/custom-programs/vegan',
+          },
+          {
+            titleKey: 'chocolate',
+            title: 'Chocolate Class – Xmas',
+            href: '/custom-programs/chocolate',
+          },
+        ],
+      },
+      {
+        titleKey: 'subMenu.studyTourPrograms',
+        href: '/abm-study-tour-programs',
+        items: [
+          {
+            titleKey: 'studyTourPrograms',
+            title: 'Study Tour Programs',
+            href: '/abm-study-tour-programs',
           },
         ],
       },
@@ -531,10 +545,6 @@ export const MENU_STRUCTURE: MenuSection[] = [
           {
             title: 'higherEducationPathway',
             href: '/higher-education-pathway',
-          },
-          {
-            title: 'studyTourPrograms',
-            href: '/abm-study-tour-programs',
           },
           {
             title: 'trainers',

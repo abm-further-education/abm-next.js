@@ -15,6 +15,9 @@ export async function POST(req: NextRequest) {
       enquiry_type,
       nationality,
       message,
+      selected_course,
+      other_course,
+      preferred_date,
     } = await req.json();
 
     // SMTP 트랜스포터
@@ -72,6 +75,36 @@ export async function POST(req: NextRequest) {
                 nationality || 'Not specified'
               }</p>
             </div>
+
+            ${
+              enquiry_type === 'Private Group Booking for Custom Program' &&
+              (selected_course || other_course || preferred_date)
+                ? `<div style="background-color:#fff3cd;border:1px solid #ffeaa7;padding:20px;border-radius:8px;margin-bottom:20px;">
+                     <h3 style="color:#856404;margin:0 0 15px 0;">Private Group Booking Details</h3>
+                     ${
+                       selected_course && selected_course !== 'others'
+                         ? `<p style="margin:8px 0;color:#856404;"><strong>Selected Course:</strong> ${selected_course}</p>`
+                         : ''
+                     }
+                     ${
+                       other_course
+                         ? `<p style="margin:8px 0;color:#856404;"><strong>Other Course:</strong> ${other_course}</p>`
+                         : ''
+                     }
+                     ${
+                       preferred_date
+                         ? `<p style="margin:8px 0;color:#856404;"><strong>Preferred Date:</strong> ${new Date(
+                             preferred_date
+                           ).toLocaleDateString('en-AU', {
+                             year: 'numeric',
+                             month: 'long',
+                             day: 'numeric',
+                           })}</p>`
+                         : ''
+                     }
+                   </div>`
+                : ''
+            }
 
             ${
               message
@@ -146,6 +179,36 @@ export async function POST(req: NextRequest) {
                   }</p>
                   <p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Name:</strong> ${first_name} ${last_name}</p>
                   <p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Email:</strong> ${email}</p>
+                  ${
+                    enquiry_type ===
+                      'Private Group Booking for Custom Program' &&
+                    (selected_course || other_course || preferred_date)
+                      ? `<div style="margin-top:20px;padding-top:20px;border-top:1px solid #e9ecef;">
+                           <h4 style="color:#000000;margin:0 0 15px 0;">Booking Details</h4>
+                           ${
+                             selected_course && selected_course !== 'others'
+                               ? `<p style="margin:8px 0;color:#333333;font-size:16px;"><strong>Selected Course:</strong> ${selected_course}</p>`
+                               : ''
+                           }
+                           ${
+                             other_course
+                               ? `<p style="margin:8px 0;color:#333333;font-size:16px;"><strong>Other Course:</strong> ${other_course}</p>`
+                               : ''
+                           }
+                           ${
+                             preferred_date
+                               ? `<p style="margin:8px 0;color:#333333;font-size:16px;"><strong>Preferred Date:</strong> ${new Date(
+                                   preferred_date
+                                 ).toLocaleDateString('en-AU', {
+                                   year: 'numeric',
+                                   month: 'long',
+                                   day: 'numeric',
+                                 })}</p>`
+                               : ''
+                           }
+                         </div>`
+                      : ''
+                  }
                 </div>
               </div>
 

@@ -36,7 +36,9 @@
       "lastNameMinLength": "O sobrenome deve ter pelo menos 2 caracteres",
       "emailRequired": "O e-mail é obrigatório",
       "emailInvalid": "Endereço de e-mail inválido"
-    }
+    },
+    "preferredDate": "Data Preferida",
+    "weekdaysOnly": "Apenas dias úteis (segunda a sexta-feira)."
   },
   "courses": {
     "title": "Encontre o Curso Certo para o Seu Futuro",
@@ -175,11 +177,12 @@
     "enrolNow": "Matricule-se Agora",
     "menu": {
       "courses": "Cursos",
-      "shortCourses": "Cursos Rápidos",
+      "shortCourses": "Programas Personalizados",
       "studyWithUs": "Estude Conosco",
       "contact": "Contato"
     },
     "subMenu": {
+      "studyTourPrograms": "Programas de Study Tour",
       "cookery": "Culinária",
       "hospitality": "Hospitalidade",
       "fitnessAndSport": "Fitness & Esporte",
@@ -706,16 +709,16 @@
     "careWorker": "Cuidador"
   },
   "shortCoursesPage": {
-    "heading": "Descubra sua Paixão com os Novos Cursos Rápidos da ABM!",
-    "description": "A ABM tem o prazer de anunciar nosso mais novo projeto – ABM Short Courses – feitos para quem ama comida, bebida e a arte da hospitalidade! Se você é cozinheiro doméstico, aspirante a chef ou apenas curioso, estes cursos de um dia são seu portal para novas habilidades e experiências inesquecíveis.",
-    "heading2": "Cursos Rápidos ABM para 2025",
+    "heading": "Descubra sua Paixão com os Novos Programas Personalizados da ABM!",
+    "description": "A ABM tem o prazer de anunciar nosso mais novo projeto – ABM Programas Personalizados – feitos para quem ama comida, bebida e a arte da hospitalidade! Se você é cozinheiro doméstico, aspirante a chef ou apenas curioso, estes cursos de um dia são seu portal para novas habilidades e experiências inesquecíveis.",
+    "heading2": "Programas Personalizados ABM",
     "calendarHeading": "Calendário de Cursos",
     "calendarDescription": "Navegue por nossos cursos por mês e encontre a data perfeita para você"
   },
   "footer": {
     "home": "Início",
     "courses": "Cursos",
-    "shortCourses": "Cursos Rápidos",
+    "customPrograms": "Programas Personalizados",
     "studyWithUs": "Estude Conosco",
     "currentStudents": "Alunos Atuais",
     "contact": "Contato",
@@ -739,7 +742,8 @@
     "agentPortal": "Portal do Agente",
     "agentApplication": "Aplicação de Agente",
     "agentList": "Lista de Agentes",
-    "abmPoliciesAndProcedures": "Políticas e Procedimentos da ABM"
+    "abmPoliciesAndProcedures": "Políticas e Procedimentos da ABM",
+    "studyTourPrograms": "Programas de Study Tour"
   },
   "shortCoursesMenu": {
     "hospitality": "Hospitalidade",
@@ -759,7 +763,8 @@
     "htmlIntro": "Introdução a HTML, CSS e Web Design Básico",
     "portfolioWebsite": "Curso Avançado: Construindo um Site de Portfólio",
     "baristaSampleCourse": "Curso Amostra de Barista",
-    "baristaOnlineCourse": "Curso Online de Barista"
+    "baristaOnlineCourse": "Curso Online de Barista",
+    "studyTourPrograms": "Programas de Study Tour"
   },
   "gallery": {
     "title": "Galeria do Campus"

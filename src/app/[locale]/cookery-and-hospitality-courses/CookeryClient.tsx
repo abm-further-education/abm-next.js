@@ -171,7 +171,7 @@ export default function CookeryClient() {
           <Card
             imgPath="/short-course/french_cakes.jpg"
             title={t('shortCourse')}
-            link="/short-courses"
+            link="/custom-programs"
             className="w-300 md:w-530 mb-20 md:mb-0"
           />
           <Card

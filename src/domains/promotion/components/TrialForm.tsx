@@ -45,7 +45,7 @@ const TrialForm: React.FC = () => {
     'idle' | 'success' | 'error'
   >('idle');
 
-  // 피트니스 트라이얼용: 월, 화, 수만 선택 가능한 날짜 생성 (오늘 제외)
+  // 피트니스 트라이얼용: 월, 화, 수만 선택 가능한 날짜 생성 (오늘 제외, 12월 제외)
   const getAvailableDates = () => {
     const dates = [];
     const today = new Date();
@@ -55,9 +55,10 @@ const TrialForm: React.FC = () => {
     for (let i = 1; i < 29; i++) {
       currentDate.setDate(today.getDate() + i);
       const dayOfWeek = currentDate.getDay();
+      const month = currentDate.getMonth(); // 0-based (0=1월, 11=12월)
 
-      // 월요일(1), 화요일(2), 수요일(3)만 포함
-      if (dayOfWeek >= 1 && dayOfWeek <= 3) {
+      // 월요일(1), 화요일(2), 수요일(3)만 포함, 12월 제외
+      if (dayOfWeek >= 1 && dayOfWeek <= 3 && month !== 11) {
         dates.push({
           value: currentDate.toISOString().split('T')[0],
           label: currentDate.toLocaleDateString('en-US', {
@@ -99,6 +100,29 @@ const TrialForm: React.FC = () => {
   const isWeekendDate = (date: Date) => {
     const dayOfWeek = date.getDay();
     return dayOfWeek === 0 || dayOfWeek === 6; // 일요일(0) 또는 토요일(6)
+  };
+
+  // react-datepicker용 날짜 필터링 함수 (주말, 12월 전체, 1월 4일까지 제외)
+  const filterDate = (date: Date) => {
+    // 주말 제외
+    if (isWeekendDate(date)) {
+      return false;
+    }
+
+    const month = date.getMonth(); // 0-based (0=1월, 11=12월)
+    const day = date.getDate();
+
+    // 12월 전체 제외
+    if (month === 11) {
+      return false;
+    }
+
+    // 1월 4일까지 제외
+    if (month === 0 && day <= 4) {
+      return false;
+    }
+
+    return true;
   };
 
   // react-datepicker용 날짜 변경 핸들러
@@ -258,7 +282,7 @@ const TrialForm: React.FC = () => {
               <DatePicker
                 selected={selectedDate}
                 onChange={handleDateChange}
-                filterDate={(date) => !isWeekendDate(date)}
+                filterDate={filterDate}
                 minDate={new Date(getDatePickerConstraints().min)}
                 maxDate={new Date(getDatePickerConstraints().max)}
                 dateFormat="yyyy-MM-dd"

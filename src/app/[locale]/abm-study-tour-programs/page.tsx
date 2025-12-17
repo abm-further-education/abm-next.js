@@ -6,6 +6,7 @@ import React from 'react';
 import PackageCard from '@/components/common/PackageCard';
 import Button from '@/components/common/Button';
 import { useRouter } from 'next/navigation';
+import Gallery from '@/components/common/Gallery';
 
 function Page() {
   const router = useRouter();
@@ -133,7 +134,9 @@ function Page() {
           />
         </div>
       </FadeIn>
-
+      <FadeIn>
+        <Gallery images={images} />
+      </FadeIn>
       <FadeIn>
         <div className="bg-black text-white font-[family-name:var(--font-montserrat)] md:m-60 flex flex-col items-center justify-center p-10 md:p-40">
           <h2 className="text-2xl md:text-4xl font-bold">
@@ -149,7 +152,7 @@ function Page() {
           </p>
 
           <Button
-            className="mt-10 p-10 border bg-primary"
+            className="mt-20 p-10 bg-white text-black hover:bg-primary hover:text-white"
             onClick={() => router.push('/contact')}
           >
             Contact Us to Customise
@@ -161,3 +164,15 @@ function Page() {
 }
 
 export default Page;
+
+const images = [
+  '/study-tour-program/1.jpg',
+  '/study-tour-program/2.jpg',
+  '/study-tour-program/3.jpg',
+  '/study-tour-program/4.jpg',
+  '/study-tour-program/5.jpg',
+  '/study-tour-program/6.jpg',
+  '/study-tour-program/7.jpg',
+  '/study-tour-program/8.jpg',
+  '/study-tour-program/9.jpg',
+];

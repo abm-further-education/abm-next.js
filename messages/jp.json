@@ -36,7 +36,9 @@
       "lastNameMinLength": "姓は2文字以上で入力してください",
       "emailRequired": "メールアドレスは必須です",
       "emailInvalid": "メールアドレスの形式が正しくありません"
-    }
+    },
+    "preferredDate": "希望日",
+    "weekdaysOnly": "平日のみ選択可能です。"
   },
   "courses": {
     "title": "将来につながる最適なコースを見つけよう",
@@ -175,11 +177,12 @@
     "enrolNow": "今すぐ出願",
     "menu": {
       "courses": "コース",
-      "shortCourses": "短期コース",
+      "shortCourses": "カスタムプログラム",
       "studyWithUs": "ABMで学ぶ",
       "contact": "お問い合わせ"
     },
     "subMenu": {
+      "studyTourPrograms": "スタディツアー",
       "cookery": "調理",
       "hospitality": "ホスピタリティ",
       "fitnessAndSport": "フィットネス＆スポーツ",
@@ -706,16 +709,16 @@
     "careWorker": "ケアワーカー"
   },
   "shortCoursesPage": {
-    "heading": "ABMの新しい短期コースで、情熱を見つけよう！",
-    "description": "料理・飲料・ホスピタリティを愛する全ての人のための、ABM Short Courses。家庭料理から本格志向まで、1日で新しいスキルと忘れられない体験を。",
-    "heading2": "2025年の短期コース",
+    "heading": "ABMの新しいカスタムプログラムで、情熱を見つけよう！",
+    "description": "料理・飲料・ホスピタリティを愛する全ての人のための、ABMカスタムプログラム。家庭料理から本格志向まで、1日で新しいスキルと忘れられない体験を。",
+    "heading2": "ABMカスタムプログラム",
     "calendarHeading": "開講カレンダー",
     "calendarDescription": "月ごとのコースから、あなたに合う日程を見つけよう"
   },
   "footer": {
     "home": "ホーム",
     "courses": "コース",
-    "shortCourses": "短期コース",
+    "customPrograms": "カスタムプログラム",
     "studyWithUs": "ABMで学ぶ",
     "currentStudents": "在学生向け",
     "contact": "お問い合わせ",
@@ -739,7 +742,8 @@
     "agentPortal": "エージェントポータル",
     "agentApplication": "エージェント申請",
     "agentList": "エージェント一覧",
-    "abmPoliciesAndProcedures": "ABMの規程"
+    "abmPoliciesAndProcedures": "ABMの規程",
+    "studyTourPrograms": "スタディツアー"
   },
   "shortCoursesMenu": {
     "hospitality": "ホスピタリティ",
@@ -759,7 +763,8 @@
     "htmlIntro": "HTML・CSS・基本Webデザイン入門",
     "portfolioWebsite": "上級：ポートフォリオサイト制作",
     "baristaSampleCourse": "バリスタサンプルコース",
-    "baristaOnlineCourse": "バリスタオンラインコース"
+    "baristaOnlineCourse": "バリスタオンラインコース",
+    "studyTourPrograms": "スタディツアー"
   },
   "gallery": {
     "title": "キャンパスギャラリー"

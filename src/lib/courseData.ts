@@ -50,7 +50,6 @@ export const courseCategories = [
 export const courseTypes = [
   { value: 'all', label: 'All Types' },
   { value: 'full-course', label: 'Full Courses' },
-  { value: 'short-course', label: 'Short Courses' },
 ];
 
 export const courseLevels = [

@@ -89,7 +89,7 @@ export default function PaymentSuccessPage() {
             {t('errorOccurred')}
           </h1>
           <p className="text-gray-600 mb-6">{error}</p>
-          <Link href="/short-courses">
+          <Link href="/custom-programs">
             <Button className="bg-primary text-white">
               {t('backToCourses')}
             </Button>
@@ -168,7 +168,7 @@ export default function PaymentSuccessPage() {
           </div>
 
           <div className="space-y-3">
-            <Link href="/short-courses">
+            <Link href="/custom-programs">
               <Button className="bg-primary-bk text-white w-full">
                 {t('viewOtherCourses')}
               </Button>
