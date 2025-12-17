@@ -54,7 +54,7 @@ const NewsCard = ({ news, locale }: NewsCardProps) => {
 
   return (
     <div
-      className="shadow-xl w-320 h-[390px] flex flex-col bg-white overflow-hidden cursor-pointer"
+      className="shadow-xl w-280 2xl:w-320 h-[390px] flex flex-col bg-white overflow-hidden cursor-pointer"
       onClick={() => {
         router.push(`/${locale}/news/${newsId}`);
       }}
@@ -105,8 +105,8 @@ function NewsLetter({ newsList, locale }: NewsLetterProps) {
         modules={[Autoplay, Scrollbar]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop={newsList.length > 4}
-        className="flex items-center justify-center md:justify-between w-full md:max-w-[1400px] md:w-full mx-auto h-420 md:h-460 mt-60"
-        slidesPerView={isMobile ? 1 : isTablet ? 3 : 4}
+        className="flex items-center justify-center md:justify-between w-full md:max-w-[1800px] md:w-full mx-auto h-420 md:h-460 mt-60"
+        slidesPerView={isMobile ? 1 : isTablet ? 3 : 5}
         spaceBetween={0}
       >
         {newsList.map((news) => (
