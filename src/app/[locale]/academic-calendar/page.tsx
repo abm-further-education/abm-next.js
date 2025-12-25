@@ -13,23 +13,6 @@ type YearCalendar = {
 
 const calendars: YearCalendar[] = [
   {
-    year: 2025,
-    terms: [
-      { label: 'Term 1 Intake 1', date: '06 Jan – 09 Feb' },
-      { label: 'Term 1 Intake 2', date: '10 Feb – 16 Mar' },
-      { label: 'Holiday 1', date: '17 Mar – 06 Apr' },
-      { label: 'Term 2 Intake 1', date: '07 Apr – 11 May' },
-      { label: 'Term 2 Intake 2', date: '12 May – 15 Jun' },
-      { label: 'Holiday 2', date: '16 Jun – 06 Jul' },
-      { label: 'Term 3 Intake 1', date: '07 Jul – 10 Aug' },
-      { label: 'Term 3 Intake 2', date: '11 Aug – 14 Sep' },
-      { label: 'Holiday 3', date: '15 Sep – 05 Oct' },
-      { label: 'Term 4 Intake 1', date: '06 Oct – 09 Nov' },
-      { label: 'Term 4 Intake 2', date: '10 Nov – 14 Dec' },
-      { label: 'Christmas Holiday', date: '15 Dec – 04 Jan 2026' },
-    ],
-  },
-  {
     year: 2026,
     terms: [
       { label: 'Term 1 Intake 1', date: '05 Jan – 08 Feb' },
@@ -61,6 +44,23 @@ const calendars: YearCalendar[] = [
       { label: 'Term 4 Intake 1', date: '11 Oct – 14 Nov' },
       { label: 'Term 4 Intake 2', date: '15 Nov – 19 Dec' },
       { label: 'Christmas Holiday', date: '20 Dec – 09 Jan 2028' },
+    ],
+  },
+  {
+    year: 2028,
+    terms: [
+      { label: 'Term 1 Intake 1', date: '10 Jan – 13 Feb' },
+      { label: 'Term 1 Intake 2', date: '14 Feb – 19 Mar' },
+      { label: 'Holiday 1', date: '20 Mar – 09 Apr' },
+      { label: 'Term 2 Intake 1', date: '10 Apr – 14 May' },
+      { label: 'Term 2 Intake 2', date: '15 May – 18 Jun' },
+      { label: 'Holiday 2', date: '19 Jun – 09 Jul' },
+      { label: 'Term 3 Intake 1', date: '10 Jul – 13 Aug' },
+      { label: 'Term 3 Intake 2', date: '14 Aug – 17 Sep' },
+      { label: 'Holiday 3', date: '18 Sep – 08 Oct' },
+      { label: 'Term 4 Intake 1', date: '09 Oct – 12 Nov' },
+      { label: 'Term 4 Intake 2', date: '13 Nov – 17 Dec' },
+      { label: 'Christmas Holiday', date: '18 Dec – 07 Jan 2029' },
     ],
   },
 ];

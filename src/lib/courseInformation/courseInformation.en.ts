@@ -902,8 +902,6 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
           '13 Jul',
           '10 Aug',
           '7 Sep',
-          '12 Oct',
-          '9 Nov',
         ],
       },
       {
@@ -918,8 +916,6 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
           '12 Jul',
           '16 Aug',
           '13 Sep',
-          '11 Oct',
-          '15 Nov',
         ],
       },
     ],
