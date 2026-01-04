@@ -128,10 +128,10 @@ function Banner({
               ) : (
                 <Link
                   target="_blank"
-                  href="/files/ABM_Brochure_2025_outlined_v2_web.pdf"
+                  href="/files/ABM_Brochure_2026_final_web.pdf"
                   className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
                 >
-                  DOWNLOAD 2025 International Student Guidebook
+                  ABM Course Guide 2026
                 </Link>
               )}
             </div>

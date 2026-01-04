@@ -56,6 +56,7 @@
     "higherEducationPathway": "고등교육 진학 과정",
     "policiesAndProcedures": "정책 및 절차",
     "trainers": "강사진",
+    "studentAccommodation": "학생 숙소",
     "title": "ABM과 함께 공부하기",
     "welcome": "ABM Further Education에 오신 것을 환영합니다!",
     "mission": "저희의 미션은 학생들이 성공적인 커리어를 쌓을 수 있도록 실무 중심의 고품질 교육을 제공하는 것입니다. ABM에서는 업계 경험이 풍부한 전문가들로부터 배울 수 있으며, 학생의 성장을 위해 헌신합니다. 실무 중심의 환경과 지원을 통해 여러분이 미래에 자신감을 갖고 성장할 수 있도록 돕습니다.",
@@ -168,7 +169,7 @@
   },
   "nav": {
     "internationalStudent": "국제 학생이신가요?",
-    "downloadGuide": "과정 가이드 다운로드",
+    "downloadGuide": "ABM 과정 가이드 2026 다운로드",
     "currentStudents": "재학생",
     "agentPortal": "에이전트 포털",
     "findCourse": "과정 찾기",
@@ -203,7 +204,8 @@
       "timetable": "시간표",
       "higherEducationPathway": "고등교육 진학 과정",
       "studyTourPrograms": "스터디 투어 프로그램",
-      "trainers": "강사진"
+      "trainers": "강사진",
+      "studentAccommodation": "학생 숙소"
     }
   },
   "cookeryAndHospitality": {

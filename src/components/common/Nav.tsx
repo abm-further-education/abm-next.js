@@ -178,7 +178,7 @@ function Nav() {
             {t('internationalStudent')}
           </div>
           <Link
-            href="/files/ABM_Brochure_2025_outlined_v2_web.pdf"
+            href="/files/ABM_Brochure_2026_final_web.pdf"
             target="_blank"
             className="text-primary font-semibold underline ml-10"
           >

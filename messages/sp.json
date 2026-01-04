@@ -54,6 +54,7 @@
     "higherEducationPathway": "Vía de Educación Superior",
     "policiesAndProcedures": "Políticas y Procedimientos",
     "trainers": "Formadores",
+    "studentAccommodation": "Alojamiento Estudiantil",
     "title": "Estudia con Nosotros",
     "timetable": "Horario",
     "welcome": "¡Bienvenido a ABM Further Education!",
@@ -168,7 +169,7 @@
   },
   "nav": {
     "internationalStudent": "¿Eres un estudiante internacional?",
-    "downloadGuide": "Descarga la Guía de Cursos",
+    "downloadGuide": "ABM Guía de Cursos 2026",
     "currentStudents": "Estudiantes Actuales",
     "agentPortal": "Portal de Agentes",
     "findCourse": "Encontrar un curso",
@@ -202,7 +203,8 @@
       "enrolNow": "Inscríbete Ahora",
       "higherEducationPathway": "Vía de Educación Superior",
       "studyTourPrograms": "Programas de Tour de Estudio",
-      "trainers": "Formadores"
+      "trainers": "Formadores",
+      "studentAccommodation": "Alojamiento Estudiantil"
     }
   },
   "cookeryAndHospitality": {

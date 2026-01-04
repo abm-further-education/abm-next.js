@@ -56,6 +56,7 @@
     "higherEducationPathway": "高等教育パスウェイ",
     "policiesAndProcedures": "各種規程",
     "trainers": "講師紹介",
+    "studentAccommodation": "学生宿泊施設",
     "title": "ABMで学ぶ",
     "welcome": "ABM Further Educationへようこそ！",
     "mission": "ABMの使命は、実践的で質の高い教育を通じて、学生を成功するキャリアへ導くことです。経験豊富な業界リーダーから学び、支援的な環境と実践的トレーニングで、将来に必要なスキルと自信を身につけます。",
@@ -168,7 +169,7 @@
   },
   "nav": {
     "internationalStudent": "留学生の方へ",
-    "downloadGuide": "コースガイドをダウンロード",
+    "downloadGuide": "ABM コースガイド 2026 をダウンロード",
     "currentStudents": "在学生向け",
     "agentPortal": "エージェントポータル",
     "findCourse": "コースを探す",
@@ -201,7 +202,8 @@
       "entryRequirements": "入学要件",
       "getUSI": "USI取得",
       "enrolNow": "今すぐ出願",
-      "higherEducationPathway": "高等教育パスウェイ"
+      "higherEducationPathway": "高等教育パスウェイ",
+      "studentAccommodation": "学生宿泊施設"
     }
   },
   "cookeryAndHospitality": {

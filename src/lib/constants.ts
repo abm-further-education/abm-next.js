@@ -221,6 +221,10 @@ export const studyWithUsMenu = [
     title: 'Trainers',
     href: '/study-with-us/trainers',
   },
+  {
+    title: 'Student Accommodation',
+    href: '/student-accommodation',
+  },
 ];
 
 export const currentStudentsMenu = [
@@ -549,6 +553,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
           {
             title: 'trainers',
             href: '/study-with-us/trainers',
+          },
+          {
+            title: 'studentAccommodation',
+            href: '/student-accommodation',
           },
         ],
       },

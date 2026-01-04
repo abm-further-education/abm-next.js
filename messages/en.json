@@ -56,6 +56,7 @@
     "higherEducationPathway": "Higher Education Pathway",
     "policiesAndProcedures": "Policies & Procedures",
     "trainers": "Trainers",
+    "studentAccommodation": "Student Accommodation",
     "title": "Study With Us",
     "welcome": "Welcome To ABM Further Education!",
     "mission": "Our mission is to provide high-quality, practical education that prepares students for successful careers. At ABM, you'll learn from experienced industry leaders who are dedicated to your growth. With a supportive environment and real-world training, we ensure you gain the skills and confidence to thrive in your future career.",
@@ -168,7 +169,7 @@
   },
   "nav": {
     "internationalStudent": "Are you an International Student?",
-    "downloadGuide": "Download Course Guide",
+    "downloadGuide": "Download ABM Course Guide 2026",
     "currentStudents": "Current Students",
     "agentPortal": "Agent Portal",
     "findCourse": "Find a course",
@@ -203,7 +204,8 @@
       "entryRequirements": "Entry Requirements",
       "getUSI": "Get a USI",
       "enrolNow": "Enrol Now",
-      "higherEducationPathway": "Higher Education Pathway"
+      "higherEducationPathway": "Higher Education Pathway",
+      "studentAccommodation": "Student Accommodation"
     }
   },
   "cookeryAndHospitality": {

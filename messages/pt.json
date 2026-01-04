@@ -56,6 +56,7 @@
     "higherEducationPathway": "Trilha para Ensino Superior",
     "policiesAndProcedures": "Políticas e Procedimentos",
     "trainers": "Instrutores",
+    "studentAccommodation": "Acomodação Estudantil",
     "title": "Estude Conosco",
     "welcome": "Bem-vindo à ABM Further Education!",
     "mission": "Nossa missão é fornecer educação prática e de alta qualidade que prepare os alunos para carreiras de sucesso. Na ABM, você aprenderá com líderes experientes do setor dedicados ao seu crescimento. Com um ambiente de apoio e treinamento prático, garantimos que você adquira as habilidades e a confiança para prosperar na sua carreira futura.",
@@ -168,7 +169,7 @@
   },
   "nav": {
     "internationalStudent": "Você é Estudante Internacional?",
-    "downloadGuide": "Baixar Guia do Curso",
+    "downloadGuide": "ABM Guia do Curso 2026",
     "currentStudents": "Alunos Atuais",
     "agentPortal": "Portal do Agente",
     "findCourse": "Encontre um curso",
@@ -201,7 +202,8 @@
       "entryRequirements": "Requisitos de Ingresso",
       "getUSI": "Obter um USI",
       "enrolNow": "Matricule-se Agora",
-      "higherEducationPathway": "Trilha para Ensino Superior"
+      "higherEducationPathway": "Trilha para Ensino Superior",
+      "studentAccommodation": "Acomodação Estudantil"
     }
   },
   "cookeryAndHospitality": {
