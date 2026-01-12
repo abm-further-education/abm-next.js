@@ -108,6 +108,14 @@ export default async function CourseEntryRequirementsPage() {
                       {t('courses.hospitalityDiploma.requirement')}
                     </td>
                   </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-20 py-10 bg-gray-50 font-semibold">
+                      {t('courses.hospitalityAdvancedDiploma.code')}
+                    </td>
+                    <td className="border border-gray-300 px-20 py-10">
+                      {t('courses.hospitalityAdvancedDiploma.requirement')}
+                    </td>
+                  </tr>
 
                   <tr>
                     <td className="border border-gray-300 px-20 py-10 bg-gray-50 font-semibold">
