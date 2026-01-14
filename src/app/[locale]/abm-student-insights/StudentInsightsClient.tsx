@@ -1,25 +1,20 @@
 'use client';
 
 import Banner from '@/components/common/Banner';
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { fitnessTestimonials } from '@/lib/testimonial';
 
-export default function StudentInsightsClient() {
+interface StudentInsightsClientProps {
+  images: string[];
+}
+
+export default function StudentInsightsClient({
+  images,
+}: StudentInsightsClientProps) {
   const t = useTranslations('studentInsights');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-
-  // Testimonial images array - 기존 26개 + fitness 2개
-  // useMemo를 사용하여 컴포넌트 마운트 시 한 번만 섞고 고정된 순서 유지
-  const allTestimonialImages = useMemo(() => {
-    const regularTestimonials = Array.from({ length: 26 }, (_, i) => i + 1);
-    const fitnessImages = fitnessTestimonials.map(
-      (testimonial) => testimonial.image
-    );
-    return [...regularTestimonials, ...fitnessImages];
-  }, []);
 
   const openModal = (index: number) => {
     setSelectedImage(index);
@@ -31,17 +26,13 @@ export default function StudentInsightsClient() {
 
   const nextImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage(
-        selectedImage === allTestimonialImages.length ? 1 : selectedImage + 1
-      );
+      setSelectedImage(selectedImage === images.length ? 1 : selectedImage + 1);
     }
   };
 
   const prevImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage(
-        selectedImage === 1 ? allTestimonialImages.length : selectedImage - 1
-      );
+      setSelectedImage(selectedImage === 1 ? images.length : selectedImage - 1);
     }
   };
 
@@ -84,18 +75,14 @@ export default function StudentInsightsClient() {
 
           {/* Image Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-20">
-            {allTestimonialImages.map((imagePath, index) => (
+            {images.map((imageUrl, index) => (
               <div
                 key={index}
                 className="relative group cursor-pointer overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 onClick={() => openModal(index + 1)}
               >
                 <Image
-                  src={
-                    typeof imagePath === 'number'
-                      ? `/testimonials/${imagePath}.png`
-                      : imagePath
-                  }
+                  src={imageUrl}
                   alt={t('testimonialImageAlt', { number: index + 1 })}
                   width={300}
                   height={250}
@@ -156,13 +143,7 @@ export default function StudentInsightsClient() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={
-                typeof allTestimonialImages[selectedImage - 1] === 'number'
-                  ? `/testimonials/${
-                      allTestimonialImages[selectedImage - 1]
-                    }.png`
-                  : (allTestimonialImages[selectedImage - 1] as string)
-              }
+              src={images[selectedImage - 1]}
               alt={t('testimonialImageAlt', { number: selectedImage })}
               width={800}
               height={600}
@@ -172,7 +153,7 @@ export default function StudentInsightsClient() {
 
             {/* Image Counter */}
             <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-20 py-10">
-              {selectedImage} / {allTestimonialImages.length}
+              {selectedImage} / {images.length}
             </div>
           </div>
         </div>

@@ -47,61 +47,51 @@ function ShortCoursesPage() {
               imgPath="/short-course/barista_1.jpg"
               title="Barista Course"
               link="/custom-programs/barista"
-              price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/classic_french_cakes_2.png"
               title="Classic French Cake Course"
               link="/custom-programs/cake"
-              price={180}
             />
             <ShortCourseCard
               imgPath="/short-course/wine/wine_1.jpg"
               title="Wine Course"
               link="/custom-programs/wine"
-              price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/focaccia/sourdough_1.jpg"
               title="Sourdough and Focaccia Course"
               link="/custom-programs/focaccia"
-              price={160}
             />
             <ShortCourseCard
               imgPath="/short-course/dessert/fine_dining_dessert_1.jpg"
               title="Fine Dining Dessert Plating Course"
               link="/custom-programs/dessert"
-              price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/classic_french_pastries_1.png"
               title="Classic French Pastries Course"
               link="/custom-programs/pastries"
-              price={160}
             />
             <ShortCourseCard
               imgPath="/short-course/mixology/cocktail_1.png"
               title="Cocktail-Making and Mixology Course"
               link="/custom-programs/mixology"
-              price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/macaroon_1.png"
               title="French petit four Course (Macaroon)"
               link="/custom-programs/petit"
-              price={120}
             />
             <ShortCourseCard
               imgPath="/short-course/vegan/vegan_1.png"
               title="Vegan and Vegetarian Course"
               link="/custom-programs/vegan"
-              price={150}
             />
             <ShortCourseCard
               imgPath="/short-course/chocolate/xmas_1.png"
               title="Chocolate Class – Xmas"
               link="/custom-programs/chocolate"
-              price={130}
             />
           </div>
         </FadeIn>

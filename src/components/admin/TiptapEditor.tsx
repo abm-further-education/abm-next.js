@@ -154,11 +154,37 @@ export default function TiptapEditor({
           credentials: 'include',
         });
 
-        const data = await response.json();
-
+        // 응답이 성공하지 않으면 에러 처리
         if (!response.ok) {
-          throw new Error(data.error || '이미지 업로드에 실패했습니다.');
+          // Content-Type을 확인하여 JSON인지 판단
+          const contentType = response.headers.get('content-type');
+          let errorMessage = '이미지 업로드에 실패했습니다.';
+
+          if (contentType && contentType.includes('application/json')) {
+            // JSON 응답인 경우
+            try {
+              const data = await response.json();
+              errorMessage = data.error || errorMessage;
+            } catch {
+              // JSON 파싱 실패 시 텍스트로 읽기
+              const text = await response.text();
+              errorMessage = text || `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
+            }
+          } else {
+            // JSON이 아닌 경우 텍스트로 읽기
+            try {
+              const text = await response.text();
+              errorMessage = text || `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
+            } catch {
+              errorMessage = `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
+            }
+          }
+
+          throw new Error(errorMessage);
         }
+
+        // 성공 응답은 JSON으로 파싱
+        const data = await response.json();
 
         // 이미지 URL 처리 (상대 경로인 경우 절대 URL로 변환)
         let imageUrl = data.imagePath;

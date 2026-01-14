@@ -9,12 +9,10 @@ function ShortCourseCard({
   imgPath,
   title,
   link,
-  price,
 }: {
   imgPath: string;
   title: string;
   link?: string;
-  price?: number;
 }) {
   const router = useRouter();
   return (
@@ -37,7 +35,6 @@ function ShortCourseCard({
             <ArrowRight />
           </div>
         </div>
-        <div className="text-primary">${price}</div>
       </div>
     </div>
   );

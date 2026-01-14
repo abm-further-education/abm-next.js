@@ -60,12 +60,41 @@ export default function TestimonialForm({
         credentials: 'include',
       });
 
-      const data = await response.json();
-
+      // 응답이 성공하지 않으면 에러 처리
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to upload image.');
+        // Content-Type을 확인하여 JSON인지 판단
+        const contentType = response.headers.get('content-type');
+        let errorMessage = 'Failed to upload image.';
+
+        if (contentType && contentType.includes('application/json')) {
+          // JSON 응답인 경우
+          try {
+            const data = await response.json();
+            errorMessage = data.error || errorMessage;
+          } catch {
+            // JSON 파싱 실패 시 텍스트로 읽기
+            const text = await response.text();
+            errorMessage =
+              text ||
+              `Server returned ${response.status} ${response.statusText}`;
+          }
+        } else {
+          // JSON이 아닌 경우 텍스트로 읽기
+          try {
+            const text = await response.text();
+            errorMessage =
+              text ||
+              `Server returned ${response.status} ${response.statusText}`;
+          } catch {
+            errorMessage = `Server returned ${response.status} ${response.statusText}`;
+          }
+        }
+
+        throw new Error(errorMessage);
       }
 
+      // 성공 응답은 JSON으로 파싱
+      const data = await response.json();
       setImagePath(data.imagePath);
       return data.imagePath;
     } catch (err) {
@@ -114,6 +143,7 @@ export default function TestimonialForm({
     setLoading(true);
 
     try {
+      console.log('imagePath', imagePath);
       // 이미지 경로가 필수
       if (!imagePath) {
         throw new Error('Please upload an image.');
@@ -360,4 +390,3 @@ export default function TestimonialForm({
     </form>
   );
 }
-
