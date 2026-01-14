@@ -8,6 +8,7 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 async function getAdminSessionFromRequest(req: NextRequest) {
   try {
     if (!supabaseUrl || !supabaseAnonKey) {
+      console.error('[upload-image] Supabase 환경 변수가 설정되지 않았습니다.');
       return null;
     }
 
@@ -15,6 +16,7 @@ async function getAdminSessionFromRequest(req: NextRequest) {
     const accessToken = req.cookies.get('sb-access-token')?.value;
 
     if (!accessToken) {
+      console.error('[upload-image] Access token이 쿠키에 없습니다.');
       return null;
     }
 
@@ -36,7 +38,13 @@ async function getAdminSessionFromRequest(req: NextRequest) {
       error,
     } = await supabase.auth.getUser();
 
-    if (error || !user) {
+    if (error) {
+      console.error('[upload-image] Supabase 인증 오류:', error.message);
+      return null;
+    }
+
+    if (!user) {
+      console.error('[upload-image] 사용자를 찾을 수 없습니다.');
       return null;
     }
 
@@ -44,12 +52,13 @@ async function getAdminSessionFromRequest(req: NextRequest) {
     const isAdmin = user.user_metadata?.isAdmin === true;
 
     if (!isAdmin) {
+      console.error('[upload-image] 사용자가 어드민 권한이 없습니다. user_id:', user.id);
       return null;
     }
 
     return { user };
   } catch (error) {
-    console.error('Get admin session error:', error);
+    console.error('[upload-image] Get admin session error:', error);
     return null;
   }
 }
@@ -59,8 +68,9 @@ export async function POST(req: NextRequest) {
     // 관리자 인증 확인
     const session = await getAdminSessionFromRequest(req);
     if (!session) {
+      console.error('[upload-image] 인증 실패: 세션이 없습니다.');
       return NextResponse.json(
-        { error: '인증이 필요합니다.' },
+        { error: '인증이 필요합니다. 로그인 후 다시 시도해주세요.' },
         { status: 401 }
       );
     }
@@ -99,14 +109,37 @@ export async function POST(req: NextRequest) {
     const directory = (formData.get('directory') as string) || 'news-letter';
 
     // R2에 업로드
-    const imagePath = await uploadImageToR2(file, fileName, directory);
-
-    return NextResponse.json({
-      success: true,
-      imagePath,
-    });
+    try {
+      const imagePath = await uploadImageToR2(file, fileName, directory);
+      console.log('[upload-image] 이미지 업로드 성공:', imagePath);
+      
+      return NextResponse.json({
+        success: true,
+        imagePath,
+      });
+    } catch (r2Error) {
+      console.error('[upload-image] R2 업로드 오류:', r2Error);
+      const errorMessage = r2Error instanceof Error ? r2Error.message : 'R2 업로드 실패';
+      
+      // R2 권한 오류인 경우 특별 처리
+      if (errorMessage.includes('Forbidden') || errorMessage.includes('403')) {
+        return NextResponse.json(
+          {
+            error: '이미지 업로드 권한이 없습니다. R2 설정을 확인해주세요.',
+          },
+          { status: 403 }
+        );
+      }
+      
+      return NextResponse.json(
+        {
+          error: `이미지 업로드 실패: ${errorMessage}`,
+        },
+        { status: 500 }
+      );
+    }
   } catch (error) {
-    console.error('이미지 업로드 오류:', error);
+    console.error('[upload-image] 이미지 업로드 오류:', error);
     return NextResponse.json(
       {
         error:
