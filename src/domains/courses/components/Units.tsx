@@ -64,8 +64,8 @@ function Units({ id }: { id: string }) {
           {(unitsData as { [key: string]: string | number }[][]).map(
             (unitGroup, groupIndex) => (
               <div key={groupIndex}>
-                <h3 className="text-lg font-bold mb-4">
-                  {groupIndex === 0
+                <h3 className="text-lg font-bold my-8">
+                  {groupIndex !== 0
                     ? 'Packaged with Kitchen Management Course'
                     : 'Standalone Food & Beverage Stream'}
                 </h3>

@@ -5,17 +5,23 @@ import { cookies } from 'next/headers';
 export async function setSessionCookies(accessToken: string, refreshToken: string) {
   try {
     const cookieStore = await cookies();
+    const isProduction = process.env.NODE_ENV === 'production';
+    
+    // 프로덕션에서는 secure와 sameSite를 조정
+    // sameSite: 'none'은 secure: true가 필수이므로 HTTPS 환경에서만 사용
     cookieStore.set('sb-access-token', accessToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
+      secure: isProduction,
+      sameSite: 'lax', // same-site 요청에서만 쿠키 전송
+      path: '/', // 모든 경로에서 쿠키 사용 가능 (API 라우트 포함)
       maxAge: 60 * 60 * 24 * 7, // 7일
     });
 
     cookieStore.set('sb-refresh-token', refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: isProduction,
       sameSite: 'lax',
+      path: '/', // 모든 경로에서 쿠키 사용 가능
       maxAge: 60 * 60 * 24 * 7, // 7일
     });
 

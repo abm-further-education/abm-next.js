@@ -13,12 +13,23 @@ async function getAdminSessionFromRequest(req: NextRequest) {
     }
 
     // 요청에서 쿠키 가져오기
+    const allCookies = req.cookies.getAll();
+    console.log('[upload-image] 모든 쿠키:', allCookies.map(c => c.name));
+    
     const accessToken = req.cookies.get('sb-access-token')?.value;
 
     if (!accessToken) {
       console.error('[upload-image] Access token이 쿠키에 없습니다.');
+      console.error('[upload-image] 요청 URL:', req.url);
+      console.error('[upload-image] 요청 헤더:', {
+        origin: req.headers.get('origin'),
+        referer: req.headers.get('referer'),
+        cookie: req.headers.get('cookie'),
+      });
       return null;
     }
+    
+    console.log('[upload-image] Access token 발견됨 (길이:', accessToken.length, ')');
 
     // 쿠키의 토큰을 사용하여 Supabase 클라이언트 생성
     const supabase = createClient(supabaseUrl, supabaseAnonKey, {
@@ -52,7 +63,10 @@ async function getAdminSessionFromRequest(req: NextRequest) {
     const isAdmin = user.user_metadata?.isAdmin === true;
 
     if (!isAdmin) {
-      console.error('[upload-image] 사용자가 어드민 권한이 없습니다. user_id:', user.id);
+      console.error(
+        '[upload-image] 사용자가 어드민 권한이 없습니다. user_id:',
+        user.id
+      );
       return null;
     }
 
@@ -112,15 +126,16 @@ export async function POST(req: NextRequest) {
     try {
       const imagePath = await uploadImageToR2(file, fileName, directory);
       console.log('[upload-image] 이미지 업로드 성공:', imagePath);
-      
+
       return NextResponse.json({
         success: true,
         imagePath,
       });
     } catch (r2Error) {
       console.error('[upload-image] R2 업로드 오류:', r2Error);
-      const errorMessage = r2Error instanceof Error ? r2Error.message : 'R2 업로드 실패';
-      
+      const errorMessage =
+        r2Error instanceof Error ? r2Error.message : 'R2 업로드 실패';
+
       // R2 권한 오류인 경우 특별 처리
       if (errorMessage.includes('Forbidden') || errorMessage.includes('403')) {
         return NextResponse.json(
@@ -130,7 +145,7 @@ export async function POST(req: NextRequest) {
           { status: 403 }
         );
       }
-      
+
       return NextResponse.json(
         {
           error: `이미지 업로드 실패: ${errorMessage}`,

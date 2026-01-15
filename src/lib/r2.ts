@@ -5,14 +5,21 @@ import {
 } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
+const accessKeyId = process.env.R2_ACCESS_KEY_ID;
+const secretAccessKey = process.env.R2_SECRET_ACCESS_KEY;
+const accountId = process.env.R2_ACCOUNT_ID;
+
+if (!accountId || !accessKeyId || !secretAccessKey) {
+  throw new Error(
+    'Missing R2 env: R2_ACCOUNT_ID / R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY'
+  );
+}
+
 // Cloudflare R2는 S3 호환 API를 사용합니다
-const s3Client = new S3Client({
+export const s3Client = new S3Client({
   region: 'auto',
-  endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
-  credentials: {
-    accessKeyId: process.env.R2_ACCESS_KEY_ID || '',
-    secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
-  },
+  endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
+  credentials: { accessKeyId, secretAccessKey },
 });
 
 /**
@@ -50,8 +57,14 @@ export async function uploadImageToR2(
 
   try {
     // R2 환경 변수 확인
-    if (!process.env.R2_ACCOUNT_ID || !process.env.R2_ACCESS_KEY_ID || !process.env.R2_SECRET_ACCESS_KEY) {
-      throw new Error('R2 환경 변수가 설정되지 않았습니다. R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY를 확인해주세요.');
+    if (
+      !process.env.R2_ACCOUNT_ID ||
+      !process.env.R2_ACCESS_KEY_ID ||
+      !process.env.R2_SECRET_ACCESS_KEY
+    ) {
+      throw new Error(
+        'R2 환경 변수가 설정되지 않았습니다. R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY를 확인해주세요.'
+      );
     }
 
     const command = new PutObjectCommand({
@@ -73,20 +86,32 @@ export async function uploadImageToR2(
     return publicUrl;
   } catch (error) {
     console.error('R2 업로드 오류:', error);
-    
+
     // AWS SDK 에러인 경우 더 자세한 정보 추출
     if (error && typeof error === 'object' && 'name' in error) {
-      const awsError = error as { name: string; message: string; $metadata?: { httpStatusCode?: number } };
-      
-      if (awsError.name === 'Forbidden' || awsError.$metadata?.httpStatusCode === 403) {
-        throw new Error('R2 업로드 권한이 없습니다. R2_ACCESS_KEY_ID와 R2_SECRET_ACCESS_KEY를 확인해주세요.');
+      const awsError = error as {
+        name: string;
+        message: string;
+        $metadata?: { httpStatusCode?: number };
+      };
+
+      if (
+        awsError.name === 'Forbidden' ||
+        awsError.$metadata?.httpStatusCode === 403
+      ) {
+        throw new Error(
+          'R2 업로드 권한이 없습니다. R2_ACCESS_KEY_ID와 R2_SECRET_ACCESS_KEY를 확인해주세요.'
+        );
       }
-      
-      if (awsError.name === 'NoSuchBucket' || awsError.$metadata?.httpStatusCode === 404) {
+
+      if (
+        awsError.name === 'NoSuchBucket' ||
+        awsError.$metadata?.httpStatusCode === 404
+      ) {
         throw new Error(`R2 버킷을 찾을 수 없습니다: ${bucketName}`);
       }
     }
-    
+
     throw new Error(
       `이미지 업로드 실패: ${
         error instanceof Error ? error.message : '알 수 없는 오류'
