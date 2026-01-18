@@ -47,13 +47,31 @@ export interface ShortCourseData {
     description: string;
   }[];
   whoNeedsFSS?: string[];
+  whyYouNeedRSA?: string[];
+  whatToBring?: string[];
+  howToEnrol?: string[];
+  whyTrainWithABM?: string;
+  courseFormat?: string | string[];
   faq1?: {
     question: string;
-    answerList: string[];
+    answerList?: string[];
+    answer?: string;
   };
   faq2?: {
     question: string;
-    answer: string;
+    answer: string | string[];
+  };
+  faq3?: {
+    question: string;
+    answer: string | string[];
+  };
+  faq4?: {
+    question: string;
+    answer: string | string[];
+  };
+  faq5?: {
+    question: string;
+    answer: string | string[];
   };
   courseDeliveryLabel?: string;
   courseDelivery?: string;
@@ -646,5 +664,98 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       'Catering staff',
       'Supervisors managing food safety practices',
     ],
+  },
+  rsa: {
+    title: 'Responsible Service of Alcohol (RSA) - NSW (Face-to-face)',
+    description: ``,
+    images: [
+      '/short-course/fss_1.png',
+      '/short-course/fss_1.png',
+      '/short-course/fss_1.png',
+    ],
+    dates: [
+      {
+        date: '2026-03-25',
+        displayDate: '25th March 2026',
+        time: '9:00am start (includes a 30-minute lunch break)',
+      },
+    ],
+    location: 'ABM Campus',
+    price: 189,
+    duration: '7 hours (excludes breaks)',
+    courseDeliveryLabel: 'Course Delivery:',
+    courseDelivery: 'In-person classroom',
+    timeLabel: 'Schedule:',
+    time: '9:00am start (includes a 30-minute lunch break)',
+    addressLabel: 'Location:',
+    address:
+      'ABM Main Campus (242 Castlereagh Street Sydney NSW 2000 Australia)',
+    callToAction: 'Enrol Now',
+    whatYoullLearn: [
+      'The principles of Responsible Service of Alcohol',
+      'NSW liquor laws and compliance',
+      'Selling and serving responsibly: drink standards and safe practices',
+      'Spotting the signs: intoxication and risk awareness',
+      'Saying no: how to refuse service respectfully',
+      'Harm minimisation strategies',
+    ],
+    courseFormat: [
+      'Minimum duration of 7 hours of student contact time (excluding breaks).',
+      'Uses the official NSW-issued Participant Workbook, Facilitation Guide, and Assessment Booklet.',
+      'Includes supervised knowledge and practical activities such as refusal-of-service role-plays and basic numeracy tasks.',
+    ],
+    whoShouldAttend: [
+      'Hospitality workers (pubs, clubs, bars, restaurants)',
+      'Security and crowd controllers',
+      'Packaged liquor retail staff',
+      'Online alcohol sales and delivery staff',
+      'Wineries, breweries, and cellar door staff',
+      'Managers, licensees, and club directors involved in alcohol service',
+      'Event volunteers involved in alcohol supply',
+    ],
+    whyYouNeedRSA: [
+      'It is a legal requirement in NSW to hold an RSA certificate when working in licensed venues',
+      'Protects you and your employer from legal liability',
+      'Essential for employment in bars, restaurants, clubs, and hotels',
+      'Demonstrates your commitment to responsible alcohol service',
+      'Helps create a safer environment for patrons and staff',
+    ],
+    whatToBring: [
+      'Government-issued photo ID for identity verification',
+      'Unique Student Identifier (USI)',
+      'Pen and notepad (Participant Workbook supplied)',
+    ],
+    howToEnrol: [
+      '1. Choose a course date and book online.',
+      '2. Receive confirmation and pre-class details via email.',
+      '3. Arrive by 8:50am for a 9:00am start.',
+    ],
+    whyTrainWithABM:
+      'Although NSW standardises RSA content, ABM provides exceptional trainers, strong industry connections, and a supportive, efficient student experience.',
+    faq1: {
+      question: 'Is this the official NSW RSA course?',
+      answer:
+        'Yes. All training providers must use the statewide standardised RSA materials released by Liquor & Gaming NSW.',
+    },
+    faq2: {
+      question: 'Is NSW-specific training included?',
+      answer:
+        'Yes, including intoxication guidelines, NSW liquor laws, compliance requirements, and harm-minimisation topics.',
+    },
+    faq3: {
+      question: 'Will there be an online knowledge test?',
+      answer:
+        'Liquor & Gaming NSW anticipates a regulatory RSA knowledge test from mid-2026.',
+    },
+    faq4: {
+      question: 'What will I get at the end of my course?',
+      answer:
+        'You will receive a Statement of Attainment for SITHFAB021 – Provide responsible service of alcohol, which is the nationally recognised unit required for RSA in NSW. You will also receive instructions on how to complete the NSW RSA Online Knowledge Test (once implemented) so you can obtain your NSW RSA Interim Certificate.',
+    },
+    faq5: {
+      question: 'How will I get my RSA Interim Certificate?',
+      answer:
+        'After you are marked competent, your details are lodged through the Approved Training Provider (ATP) portal. Once you successfully complete the NSW RSA Online Knowledge Test (to be introduced by Liquor & Gaming NSW from mid 2026), you will be issued your RSA Interim Certificate directly by Liquor & Gaming NSW. You can then use this certificate to apply for your NSW Competency Card.',
+    },
   },
 };

@@ -136,7 +136,6 @@ function FSS() {
             <div className="flex flex-col gap-10">
               <span className="font-semibold">Course Date:</span>
               <ul className="list-disc pl-5 space-y-1">
-                <li>16th January 2026</li>
                 <li>20 February 2026</li>
                 <li>13th March 2026</li>
               </ul>
