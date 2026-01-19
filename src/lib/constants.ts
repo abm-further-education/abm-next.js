@@ -300,6 +300,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
             title: 'NSW Food Safety Supervisor',
             href: '/cookery-and-hospitality-courses/fss',
           },
+          {
+            title: 'Responsible Service of Alcohol (RSA)',
+            href: '/cookery-and-hospitality-courses/rsa',
+          },
         ],
       },
       {
@@ -458,6 +462,11 @@ export const MENU_STRUCTURE: MenuSection[] = [
             titleKey: 'foodSafety',
             title: 'NSW Food Safety Supervisor Certificate',
             href: '/cookery-and-hospitality-courses/fss',
+          },
+          {
+            titleKey: 'rsa',
+            title: 'Responsible Service of Alcohol (RSA)',
+            href: '/cookery-and-hospitality-courses/rsa',
           },
         ],
       },

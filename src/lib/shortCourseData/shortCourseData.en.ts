@@ -668,16 +668,12 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
   rsa: {
     title: 'Responsible Service of Alcohol (RSA) - NSW (Face-to-face)',
     description: ``,
-    images: [
-      '/short-course/fss_1.png',
-      '/short-course/fss_1.png',
-      '/short-course/fss_1.png',
-    ],
+    images: ['/rsa_banner.png'],
     dates: [
       {
         date: '2026-03-25',
         displayDate: '25th March 2026',
-        time: '9:00am start (includes a 30-minute lunch break)',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
     ],
     location: 'ABM Campus',
@@ -686,7 +682,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     courseDeliveryLabel: 'Course Delivery:',
     courseDelivery: 'In-person classroom',
     timeLabel: 'Schedule:',
-    time: '9:00am start (includes a 30-minute lunch break)',
+    time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
     addressLabel: 'Location:',
     address:
       'ABM Main Campus (242 Castlereagh Street Sydney NSW 2000 Australia)',

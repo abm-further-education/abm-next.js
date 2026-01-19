@@ -86,27 +86,13 @@ function RSA() {
               </ul>
             </div>
 
-            <div className="flex flex-col gap-10 mt-20 bg-orange-100 p-10 md: w-600">
-              <span className="font-semibold">Recertification:</span>
-              <p className="text-gray-700 text-sm">
-                The NSW Responsible Service of Alcohol (RSA) competency card is
-                valid for five years. To continue working in roles involving the
-                sale, supply or service of alcohol in New South Wales, you must
-                complete an RSA Refresher (recertification) course before your
-                current card expires.
-              </p>
-            </div>
-
             <div className="font-bold text-2xl mt-20 text-primary">
               ${rsaData.price || 189}
-              <span className="text-lg font-normal text-gray-700">
-                (Recertification: $179)
-              </span>
             </div>
           </div>
           <Link
             className="bg-black text-white w-full block mt-20 px-20 py-10 text-center"
-            href="https://form.jotform.com/ABMonlineforms/nsw-responsible-service-of-alcohol"
+            href="https://form.jotform.com/ABMonlineforms/Shortcourse-payment-purchase-form"
             target="_blank"
           >
             {rsaData.callToAction || 'Enrol Now'}

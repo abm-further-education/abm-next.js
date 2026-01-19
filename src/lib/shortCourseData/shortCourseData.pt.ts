@@ -599,30 +599,22 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
-        date: '2026-01-16',
-        displayDate: '16 de janeiro de 2026',
-        time: '9:00am - 5:00pm',
-      },
-      {
-        date: '2026-02-20',
-        displayDate: '20 de fevereiro de 2026',
-        time: '9:00am - 5:00pm',
-      },
-      {
-        date: '2026-03-13',
-        displayDate: '13 de março de 2026',
-        time: '9:00am - 5:00pm',
+        date: '2026-03-25',
+        displayDate: '25 de março de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
     ],
     location: 'Campus ABM',
-    price: 180,
-    duration: '8 horas (Apenas um dia)',
+    price: 189,
+    duration: '7 horas (excluindo intervalos)',
     courseDeliveryLabel: 'Modalidade do curso:',
-    courseDelivery: 'Presencial. Os participantes participarão de atividades práticas',
+    courseDelivery:
+      'Presencial. Os participantes participarão de atividades práticas',
     timeLabel: 'Horário:',
-    time: '9:00am - 5:00pm',
+    time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
     addressLabel: 'Endereço:',
-    address: 'Campus Principal ABM (242 Castlereagh Street Sydney NSW 2000 Australia)',
+    address:
+      'Campus Principal ABM (242 Castlereagh Street Sydney NSW 2000 Australia)',
     callToAction: 'Inscreva-se agora',
     whatYoullLearn: [
       'Requisitos legais para serviço de álcool em NSW',
@@ -651,13 +643,32 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
       'Demonstra seu compromisso com o serviço responsável de álcool',
       'Ajuda a criar um ambiente mais seguro para clientes e funcionários',
     ],
+    whyTrainWithABM:
+      'Embora o NSW padronize o conteúdo RSA, a ABM fornece treinadores excepcionais, fortes conexões com a indústria e uma experiência de estudante suportada e eficiente.',
     faq1: {
-      question: 'Por que você precisa de RSA',
-      answer: 'O certificado de Serviço Responsável de Álcool (RSA) é obrigatório para qualquer pessoa que trabalhe em estabelecimentos licenciados em NSW. Protege você e seu empregador de responsabilidade legal, é essencial para emprego em bares, restaurantes, clubes e hotéis, e demonstra seu compromisso com o serviço responsável de álcool enquanto ajuda a criar um ambiente mais seguro para clientes e funcionários.',
+      question: 'Este é o curso oficial NSW RSA?',
+      answer:
+        'Sim. Todos os fornecedores de treinamento devem usar os materiais RSA padronizados emitidos pela Liquor & Gaming NSW.',
     },
     faq2: {
-      question: 'O que você aprenderá',
-      answer: 'Você aprenderá os requisitos legais para serviço de álcool em NSW, como identificar e recusar serviço a clientes intoxicados, estratégias para prevenir danos relacionados ao álcool, compreensão da concentração de álcool no sangue (BAC), práticas e técnicas de serviço responsável, e tratamento de situações difíceis e resolução de conflitos.',
+      question: 'Treinamento específico para NSW está incluído?',
+      answer:
+        'Sim, incluindo diretrizes de intoxicação, leis de bebidas alcoólicas NSW, requisitos de conformidade e tópicos de minimização de danos.',
+    },
+    faq3: {
+      question: 'Haverá um teste de conhecimento online?',
+      answer:
+        'Liquor & Gaming NSW prevê um teste de conhecimento regulatório RSA a partir de meados de 2026.',
+    },
+    faq4: {
+      question: 'O que vou receber no final do meu curso?',
+      answer:
+        'Você receberá um Ato de Conquista para SITHFAB021 – Fornecer serviço responsável de álcool, que é a unidade nacionalmente reconhecida necessária para RSA em NSW. Você também receberá instruções sobre como completar o Teste de Conhecimento Online RSA NSW (uma vez implementado) para que possa obter seu Certificado Intermediário RSA NSW.',
+    },
+    faq5: {
+      question: 'Como vou obter meu Certificado Intermediário RSA?',
+      answer:
+        'Após você ser considerado competente, seus detalhes são registrados através do portal do Fornecedor de Treinamento Aprovado (ATP). Uma vez que você complete com sucesso o Teste de Conhecimento Online RSA NSW (a ser introduzido pela Liquor & Gaming NSW a partir de meados de 2026), você receberá seu Certificado Intermediário RSA diretamente da Liquor & Gaming NSW. Você pode então usar este certificado para aplicar sua Carteira de Competência NSW.',
     },
   },
 };

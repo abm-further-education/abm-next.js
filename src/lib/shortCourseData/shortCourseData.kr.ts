@@ -608,30 +608,21 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
-        date: '2026-01-16',
-        displayDate: '2026년 1월 16일',
-        time: '오전 9시 - 오후 5시',
-      },
-      {
-        date: '2026-02-20',
-        displayDate: '2026년 2월 20일',
-        time: '오전 9시 - 오후 5시',
-      },
-      {
-        date: '2026-03-13',
-        displayDate: '2026년 3월 13일',
-        time: '오전 9시 - 오후 5시',
+        date: '2026-03-25',
+        displayDate: '2026년 3월 25일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
       },
     ],
     location: 'ABM 캠퍼스',
-    price: 180,
-    duration: '8시간 (1일 과정)',
+    price: 189,
+    duration: '7시간 (휴식 제외)',
     courseDeliveryLabel: '과정 제공:',
     courseDelivery: '대면. 참가자는 실습 활동에 참여합니다',
     timeLabel: '시간:',
-    time: '오전 9시 - 오후 5시',
+    time: '9:00am - 4:30pm (30분 점심 포함)',
     addressLabel: '주소:',
-    address: 'ABM 메인 캠퍼스 (242 Castlereagh Street Sydney NSW 2000 Australia)',
+    address:
+      'ABM 메인 캠퍼스 (242 Castlereagh Street Sydney NSW 2000 Australia)',
     callToAction: '지금 등록하기',
     whatYoullLearn: [
       'NSW에서 알코올 서비스를 위한 법적 요구사항',
@@ -660,13 +651,32 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
       '책임 있는 알코올 서비스에 대한 귀하의 헌신을 보여줍니다',
       '고객과 직원을 위한 더 안전한 환경 조성에 도움이 됩니다',
     ],
+    whyTrainWithABM:
+      'NSW는 RSA 콘텐츠를 표준화하지만, ABM은 탁송 선박, 강한 산업 연결, 그리고 지원적이고 효율적인 학생 경험을 제공합니다.',
     faq1: {
-      question: '왜 RSA가 필요한가요',
-      answer: '알코올 책임 서비스(RSA) 자격증은 NSW에서 면허가 있는 장소에서 일하는 모든 사람에게 필수입니다. 귀하와 고용주를 법적 책임으로부터 보호하고, 바, 레스토랑, 클럽, 호텔에서 취업에 필수적이며, 책임 있는 알코올 서비스에 대한 귀하의 헌신을 보여주며 고객과 직원을 위한 더 안전한 환경 조성에 도움이 됩니다.',
+      question: '이것은 NSW 공식 RSA 과정입니까?',
+      answer:
+        '예. 모든 교육 제공자는 Liquor & Gaming NSW가 발행한 주 규정 RSA 자료를 사용해야 합니다.',
     },
     faq2: {
-      question: '무엇을 배우게 되나요',
-      answer: 'NSW에서 알코올 서비스를 위한 법적 요구사항, 만취한 고객을 식별하고 서비스를 거부하는 방법, 알코올 관련 피해 예방 전략, 혈중 알코올 농도(BAC) 이해, 책임 있는 서비스 실무 및 기법, 그리고 어려운 상황 처리 및 갈등 해결을 배우게 됩니다.',
+      question: 'NSW 관련 교육이 포함되어 있습니까?',
+      answer:
+        '예, 만취 가이드라인, NSW 술법, 준수 요구사항, 그리고 해를 줄이는 주제를 포함합니다.',
+    },
+    faq3: {
+      question: '온라인 지식 테스트가 있습니까?',
+      answer:
+        'Liquor & Gaming NSW는 2026년 중반에 규제 RSA 지식 테스트를 예상합니다.',
+    },
+    faq4: {
+      question: '과정이 끝나면 무엇을 얻게 됩니까?',
+      answer:
+        'SITHFAB021 – 알코올 책임 서비스(RSA)의 완료 선언을 받게 됩니다. 이는 NSW에서 RSA에 필요한 국가적으로 인정된 단위입니다. NSW RSA 온라인 지식 테스트(구현 후)를 완료하는 방법에 대한 지침도 받게 됩니다. 이를 통해 NSW RSA 임시 자격증을 얻을 수 있습니다.',
+    },
+    faq5: {
+      question: 'NSW RSA 임시 자격증을 얻는 방법은 무엇입니까?',
+      answer:
+        '당신이 능력이 있다고 평가된 후, 당신의 세부 정보는 승인된 교육 제공자(ATP) 포탈을 통해 제출됩니다. NSW RSA 온라인 지식 테스트(Liquor & Gaming NSW가 2026년 중반에 도입할 예정)를 성공적으로 완료하면, NSW RSA 임시 자격증은 Liquor & Gaming NSW에서 직접 발급됩니다. 이 자격증을 사용하여 NSW 능력 카드를 신청할 수 있습니다.',
     },
   },
 };

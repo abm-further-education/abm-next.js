@@ -597,37 +597,24 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
   rsa: {
     title: 'アルコール責任提供サービス（RSA）- NSW（対面）',
     description: `アルコール責任提供サービス（RSA）証明書は、NSWでライセンス施設で働くすべての人に必須です。この対面コースは、責任あるアルコール提供、法的要件、アルコール関連の害を防ぐ方法について包括的なトレーニングを提供します。`,
-    images: [
-      '/short-course/fss_1.png',
-      '/short-course/fss_1.png',
-      '/short-course/fss_1.png',
-    ],
+    images: ['/rsa_banner.png'],
     dates: [
       {
-        date: '2026-01-16',
-        displayDate: '2026年1月16日',
-        time: '午前9時 - 午後5時',
-      },
-      {
-        date: '2026-02-20',
-        displayDate: '2026年2月20日',
-        time: '午前9時 - 午後5時',
-      },
-      {
-        date: '2026-03-13',
-        displayDate: '2026年3月13日',
-        time: '午前9時 - 午後5時',
+        date: '2026-03-25',
+        displayDate: '25th March 2026',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
       },
     ],
     location: 'ABMキャンパス',
-    price: 180,
-    duration: '8時間（1日のみ）',
+    price: 189,
+    duration: '7時間（休憩時間を除く）',
     courseDeliveryLabel: 'コース提供:',
     courseDelivery: '対面。参加者は実践的な活動に参加します',
     timeLabel: '時間:',
-    time: '午前9時 - 午後5時',
+    time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
     addressLabel: '住所:',
-    address: 'ABMメインキャンパス（242 Castlereagh Street Sydney NSW 2000 Australia）',
+    address:
+      'ABMメインキャンパス（242 Castlereagh Street Sydney NSW 2000 Australia）',
     callToAction: '今すぐ登録',
     whatYoullLearn: [
       'NSWでのアルコール提供の法的要件',
@@ -656,13 +643,32 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
       '責任あるアルコール提供へのコミットメントを示します',
       '客とスタッフのためのより安全な環境を作るのに役立ちます',
     ],
+    whyTrainWithABM:
+      'NSWはRSAコンテンツを標準化していますが、ABMは優れたトレーナー、強力な業界接続、およびサポート的で効率的な学生体験を提供します。',
     faq1: {
-      question: 'なぜRSAが必要なのか',
-      answer: 'アルコール責任提供サービス（RSA）証明書は、NSWでライセンス施設で働くすべての人に必須です。あなたと雇用主を法的責任から保護し、バー、レストラン、クラブ、ホテルでの就職に不可欠であり、責任あるアルコール提供へのコミットメントを示し、客とスタッフのためのより安全な環境を作るのに役立ちます。',
+      question: 'これはNSW公式のRSAコースですか？',
+      answer:
+        'はい。すべてのトレーニングプロバイダーは、Liquor & Gaming NSWが発行した州内標準化されたRSA教材を使用する必要があります。',
     },
     faq2: {
-      question: '何を学ぶか',
-      answer: 'NSWでのアルコール提供の法的要件、酔った客を識別し、サービスを拒否する方法、アルコール関連の害を防ぐ戦略、血中アルコール濃度（BAC）の理解、責任ある提供の実践と技術、そして困難な状況の処理と紛争解決を学びます。',
+      question: 'NSW固有のトレーニングが含まれていますか？',
+      answer:
+        'はい、酔った客の識別ガイドライン、NSWの酒類法、遵守要件、ハーム低減戦略を含みます。',
+    },
+    faq3: {
+      question: 'オンライン知識テストはありますか？',
+      answer:
+        'Liquor & Gaming NSWは2026年半ばに規制RSA知識テストを予想しています。',
+    },
+    faq4: {
+      question: 'コースの最後に何を受け取りますか？',
+      answer:
+        'SITHFAB021 – アルコール責任提供サービス（RSA）の達成宣言を受け取ります。これは、NSWでのRSAに必要な全国的に認識された単位です。NSW RSAオンライン知識テスト（実施後）の完了方法についての指示も受け取ります。これにより、NSW RSA一時的な証明書を取得できます。',
+    },
+    faq5: {
+      question: 'NSW RSA一時的な証明書をどのように取得しますか？',
+      answer:
+        '十分に能力があると判断された後、あなたの詳細は承認されたトレーニングプロバイダー（ATP）ポータルを介して提出されます。NSW RSAオンライン知識テスト（Liquor & Gaming NSWが2026年半ばに導入予定）を成功裏に完了すると、NSW RSA一時的な証明書はLiquor & Gaming NSWから直接発行されます。この証明書を使用して、NSW能力カードの申請を行うことができます。',
     },
   },
 };
