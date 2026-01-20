@@ -29,8 +29,6 @@ export const sendNotifyMeEmail = async (data: NotifyMeEmailData) => {
       !process.env.SMTP_USER ||
       !process.env.SMTP_PASS
     ) {
-      console.log('SMTP credentials not configured. Skipping email send.');
-      console.log('Would send emails for:', data);
       return { success: true };
     }
 

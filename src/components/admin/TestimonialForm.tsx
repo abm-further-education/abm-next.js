@@ -54,12 +54,6 @@ export default function TestimonialForm({
       formData.append('file', file);
       formData.append('directory', 'testimonials'); // testimonial 이미지는 testimonials 디렉토리에 저장
 
-      // 프로덕션 환경에서 쿠키 전송 확인
-      if (process.env.NODE_ENV === 'production') {
-        console.log('[TestimonialForm] 이미지 업로드 요청 시작');
-        console.log('[TestimonialForm] 쿠키 전송:', document.cookie ? '있음' : '없음');
-      }
-
       const response = await fetch('/api/upload-image', {
         method: 'POST',
         body: formData,
@@ -149,8 +143,6 @@ export default function TestimonialForm({
     setLoading(true);
 
     try {
-      console.log('imagePath', imagePath);
-      // 이미지 경로가 필수
       if (!imagePath) {
         throw new Error('Please upload an image.');
       }

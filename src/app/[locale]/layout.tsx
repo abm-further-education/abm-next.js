@@ -1,10 +1,13 @@
+// src/app/[locale]/layout.tsx
 import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 import '@/app/globals.css';
+
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '../../../i18n/routing';
+
 import Nav from '@/components/common/Nav';
 import TopButton from '@/components/common/TopButton';
 import Footer from '@/components/common/Footer';
@@ -14,21 +17,28 @@ import { Analytics } from '@vercel/analytics/next';
 import { GoogleReviewsBadge } from '@/components/common/GoogleReviewToast';
 import AdminUserInfo from '@/components/admin/AdminUserInfo';
 
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-});
-
+const inter = Inter({ variable: '--font-inter', subsets: ['latin'] });
 const montserrat = Montserrat({
   variable: '--font-montserrat',
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'ABM Further Education',
-  description:
-    'ABM Further Education provides accredited business, hospitality, and management courses to help students succeed in various industries.',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as 'en' | 'kr' | 'sp')) notFound();
+
+  const t = await getTranslations({ locale });
+
+  return {
+    title: 'ABM Further Education',
+    description: t('HomePage.description'),
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -38,15 +48,16 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+
   if (!routing.locales.includes(locale as 'en' | 'kr' | 'sp')) {
     notFound();
   }
 
   const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
-        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -58,13 +69,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MWJGD6TJ');`,
           }}
         />
-        {/* End Google Tag Manager */}
       </head>
       <body
         className={`${inter.variable} ${montserrat.variable} antialiased`}
-        suppressHydrationWarning={true}
+        suppressHydrationWarning
       >
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MWJGD6TJ"
@@ -73,20 +82,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
+
         <ToastContainer
           position="bottom-right"
           autoClose={3000}
-          hideProgressBar={true}
+          hideProgressBar
           newestOnTop={false}
           closeOnClick
-          rtl={false}
           pauseOnFocusLoss
           draggable
           theme="dark"
           transition={Slide}
         />
+
         <Analytics />
+
         <NextIntlClientProvider messages={messages}>
           <Nav />
           <TopButton />
@@ -95,10 +105,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <GoogleReviewsBadge fixed align="left" width={260} />
           <AdminUserInfo />
         </NextIntlClientProvider>
-        <script
-          src="https://static.elfsight.com/platform/platform.js"
-          async
-        ></script>
+
+        <script src="https://static.elfsight.com/platform/platform.js" async />
         <Script
           src="//code.tidio.co/cqb4wkv3i9cnjjekeyzeixzkodsmdhkb.js"
           async

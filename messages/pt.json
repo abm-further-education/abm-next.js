@@ -1,5 +1,6 @@
 {
   "HomePage": {
+    "description": "Estude cursos credenciados nacionalmente em Administração, Hotelaria (Segurança Alimentar, RSA), Culinária, Fitness e Saúde na ABM Further Education, em Sydney. Treinamento prático e estágio no setor.",
     "bannerContent": "Onde a Paixão Encontra a Perfeição Culinária. Uma Experiência Inesquecível",
     "coursesTitle": "Cursos ABM",
     "coursesDescription": "Oferecemos educação de alta qualidade em um ambiente inovador e de apoio, garantindo o sucesso dos alunos com ensino especializado e oportunidades de experiência de trabalho em toda a Austrália.",
@@ -42,9 +43,10 @@
   },
   "courses": {
     "title": "Encontre o Curso Certo para o Seu Futuro",
-    "description": "Escolher o curso certo é fundamental para alcançar seus objetivos de carreira. Pense além do interesse — considere se o caminho leva a um futuro de que você vai gostar. Seja em negócios, cozinha comercial ou avanço em hospitalidade, a ABM ajuda você a ganhar as habilidades para estar pronto para o trabalho e confiante na área escolhida."
+    "description": "Cursos de Segurança Alimentar, RSA e Negócios, Hotelaria, Culinária, Fitness, Esporte e Saúde, do nível Certificado III ao Diploma Avançado."
   },
   "studyWithUs": {
+    "description": "Por que estudar na ABM: aulas práticas, instrutores com experiência na indústria, estágio profissional e forte apoio ao estudante em Sydney.",
     "studyTourPrograms": "Programas de Study Tour",
     "studentInsights": "Depoimentos",
     "academicCalendar": "Calendário Acadêmico",
@@ -228,7 +230,11 @@
     "moodleTitle": "Precisa acessar o Moodle?",
     "moodleLogin": "LOGIN NO MOODLE",
     "studentPortalTitle": "Precisa baixar formulários?",
-    "studentPortal": "PORTAL DO ALUNO"
+    "studentPortal": "PORTAL DO ALUNO",
+    "meta": {
+      "title": "Alunos Atuais da ABM",
+      "description": "Horários, informações sobre estágio, políticas, formulários e apoio acadêmico para alunos da ABM Further Education."
+    }
   },
   "feeSchedule": {
     "title": "Tabela de Taxas 2025",
@@ -834,6 +840,48 @@
       "hr": "Recursos Humanos",
       "project": "Gestão de Projetos",
       "health": "Saúde & Bem-Estar"
+    }
+  },
+  "hsaPage": {
+    "courseDuration": {
+      "title": "Duração do Curso",
+      "items": {
+        "qualificationDuration": "Duração da qualificação: 16 semanas",
+        "workPlacement": "Estágio: 80 horas em ambientes reais de saúde",
+        "noHoliday": "Sem períodos de férias"
+      }
+    },
+    "entryRequirements": {
+      "title": "Requisitos de Entrada",
+      "items": {
+        "basic": "Idade: 18 anos+, Inglês: IELTS 5.5 ou equivalente",
+        "lowerEnglishOption": "Se o estudante tiver IELTS 4.5 ou equivalente por meio do ABM EPT, deve matricular-se no curso Plus Nursing English."
+      }
+    },
+    "workPlacement": {
+      "title": "Informações sobre Estágio Prático",
+      "items": {
+        "hours": "80 horas de estágio supervisionado em hospitais e instalações de cuidados a idosos",
+        "applyLearning": "Oportunidade de aplicar o aprendizado em sala de aula em ambientes reais de saúde",
+        "confidence": "Desenvolva confiança e adquira experiência prática trabalhando com profissionais da área",
+        "support": "O suporte para o estágio é fornecido pela equipe da ABM"
+      }
+    },
+    "industryPartners": {
+      "title": "Principais Parceiros do Setor",
+      "items": {
+        "partners": "Hospitais privados, centros médicos e centros de cuidados a idosos"
+      }
+    },
+    "whyChoose": {
+      "title": "Por que escolher este programa?",
+      "items": {
+        "supportiveLearning": "Aprenda em um ambiente presencial e de apoio",
+        "healthcareEnglish": "Desenvolva inglês especializado para comunicação na área da saúde",
+        "qualification": "Obtenha uma qualificação reconhecida nacionalmente",
+        "workPlacement": "Conclua 80 horas de estágio prático em ambientes reais de saúde",
+        "suitableForAll": "Adequado para pessoas com ou sem experiência prévia na área da saúde"
+      }
     }
   }
 }

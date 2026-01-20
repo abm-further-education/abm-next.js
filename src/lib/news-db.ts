@@ -94,7 +94,7 @@ export async function getNewsList(published?: boolean): Promise<NewsItem[]> {
     user = authUser;
   } catch {
     // 인증되지 않은 사용자도 뉴스를 읽을 수 있어야 하므로 에러를 무시
-    console.log('No authenticated user, using anonymous access');
+    console.error('No authenticated user, using anonymous access');
   }
 
   // 관리자인 경우 Service Role Key 사용 (모든 뉴스 조회 가능)
@@ -226,9 +226,6 @@ export async function getNewsById(
 
     // getDbIdFromDisplayId가 실패한 경우, getNewsList를 통해 직접 찾기 (fallback)
     if (!dbId) {
-      console.log(
-        `getDbIdFromDisplayId failed for id ${id}, trying getNewsList fallback`
-      );
       try {
         const allNews = await getNewsList(publishedOnly ? true : undefined);
         const newsItem = allNews.find(
@@ -236,7 +233,6 @@ export async function getNewsById(
         );
         if (newsItem && newsItem.dbId) {
           dbId = newsItem.dbId;
-          console.log(`Found news via getNewsList fallback: ${dbId}`);
         } else {
           console.error(
             `News with displayId ${numericId} not found in getNewsList. Total: ${allNews.length}`
@@ -267,7 +263,7 @@ export async function getNewsById(
     user = authUser;
   } catch {
     // 인증되지 않은 사용자도 뉴스를 읽을 수 있어야 하므로 에러를 무시
-    console.log('No authenticated user, using anonymous access');
+    console.error('No authenticated user, using anonymous access');
   }
 
   // 관리자인 경우 Service Role Key 사용 (모든 뉴스 조회 가능)
@@ -297,16 +293,12 @@ export async function getNewsById(
 
     // 에러가 발생했지만 숫자 ID인 경우, getNewsList를 통해 재시도
     if (isNumericId) {
-      console.log(
-        `Query failed, trying getNewsList fallback for numeric ID ${id}`
-      );
       try {
         const allNews = await getNewsList(publishedOnly ? true : undefined);
         const newsItem = allNews.find(
           (item) => item.displayId === numericId || item.id === id
         );
         if (newsItem) {
-          console.log(`Found news via getNewsList fallback after query error`);
           return newsItem;
         }
       } catch (fallbackError) {
@@ -325,16 +317,12 @@ export async function getNewsById(
 
     // 데이터가 없지만 숫자 ID인 경우, getNewsList를 통해 재시도
     if (isNumericId) {
-      console.log(
-        `No data found, trying getNewsList fallback for numeric ID ${id}`
-      );
       try {
         const allNews = await getNewsList(publishedOnly ? true : undefined);
         const newsItem = allNews.find(
           (item) => item.displayId === numericId || item.id === id
         );
         if (newsItem) {
-          console.log(`Found news via getNewsList fallback after no data`);
           return newsItem;
         }
       } catch (fallbackError) {
@@ -397,23 +385,16 @@ export async function createNews(
 
   if (userError) {
     console.error('Get user error:', userError);
-    throw new Error(`인증 오류: ${userError.message}`);
+    throw new Error(`Authentication Failed: ${userError.message}`);
   }
 
   if (!user) {
-    throw new Error('인증된 사용자를 찾을 수 없습니다.');
+    throw new Error('No authenticated users found.');
   }
-
-  console.log(
-    'Current user:',
-    user.id,
-    'isAdmin:',
-    user.user_metadata?.isAdmin
-  );
 
   // 어드민 권한 확인
   if (user.user_metadata?.isAdmin !== true) {
-    throw new Error('관리자 권한이 필요합니다.');
+    throw new Error('Administrator privileges are required.');
   }
 
   // Service Role Key가 있으면 사용 (RLS 우회)
@@ -456,12 +437,12 @@ export async function updateNews(
   } = await client.auth.getUser();
 
   if (userError || !user) {
-    throw new Error('인증된 사용자를 찾을 수 없습니다.');
+    throw new Error('No authenticated users found.');
   }
 
   // 어드민 권한 확인
   if (user.user_metadata?.isAdmin !== true) {
-    throw new Error('관리자 권한이 필요합니다.');
+    throw new Error('Administrator privileges are required.');
   }
 
   // 숫자 ID를 실제 DB UUID로 변환
@@ -473,7 +454,7 @@ export async function updateNews(
     // 숫자 ID인 경우 실제 DB UUID로 변환
     const resolvedDbId = await getDbIdFromDisplayId(id, undefined);
     if (!resolvedDbId) {
-      throw new Error(`뉴스를 찾을 수 없습니다: ${id}`);
+      throw new Error(`Cannot find news: ${id}`);
     }
     dbId = resolvedDbId;
   }
@@ -511,12 +492,12 @@ export async function deleteNews(id: string): Promise<void> {
   } = await client.auth.getUser();
 
   if (userError || !user) {
-    throw new Error('인증된 사용자를 찾을 수 없습니다.');
+    throw new Error('No authenticated users found.');
   }
 
   // 어드민 권한 확인
   if (user.user_metadata?.isAdmin !== true) {
-    throw new Error('관리자 권한이 필요합니다.');
+    throw new Error('Administrator privileges are required.');
   }
 
   // 숫자 ID를 실제 DB UUID로 변환
@@ -528,7 +509,7 @@ export async function deleteNews(id: string): Promise<void> {
     // 숫자 ID인 경우 실제 DB UUID로 변환
     const resolvedDbId = await getDbIdFromDisplayId(id, undefined);
     if (!resolvedDbId) {
-      throw new Error(`뉴스를 찾을 수 없습니다: ${id}`);
+      throw new Error(`Cannot find news: ${id}`);
     }
     dbId = resolvedDbId;
   }

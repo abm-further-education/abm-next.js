@@ -19,7 +19,6 @@ export async function subscribe(email: string): Promise<{ error?: string }> {
 
     // Mailchimp에 구독자 추가
     try {
-      console.log('mailchimp-subscribe');
       const mailchimpResponse = await fetch('/api/mailchimp-subscribe', {
         method: 'POST',
         headers: {

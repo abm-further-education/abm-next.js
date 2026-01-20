@@ -11,7 +11,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'studyWithUs' });
 
   const title = t('title');
-  const description = t('mission');
+  const description = t('description');
 
   return {
     title: `${title} | ABM Further Education`,

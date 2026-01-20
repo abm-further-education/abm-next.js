@@ -3,8 +3,26 @@ import FadeIn from '@/components/common/FadeIn';
 import Link from 'next/link';
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 
-async function page() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'currentStudents',
+  });
+
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+  };
+}
+
+async function Page() {
   const t = await getTranslations('currentStudents');
 
   return (
@@ -62,4 +80,4 @@ async function page() {
   );
 }
 
-export default page;
+export default Page;

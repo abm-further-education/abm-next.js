@@ -50,13 +50,6 @@ export async function POST(request: NextRequest) {
         timestamp,
       });
 
-      console.log('Notify me request processed:', {
-        email,
-        course,
-        courseName,
-        timestamp,
-      });
-
       return NextResponse.json(
         {
           message: 'Successfully registered for notifications',
@@ -67,14 +60,6 @@ export async function POST(request: NextRequest) {
       );
     } catch (emailError) {
       console.error('Failed to send notification emails:', emailError);
-
-      // 이메일 전송 실패해도 요청은 기록하고 부분적 성공으로 처리
-      console.log('Notify me request (email failed):', {
-        email,
-        course,
-        courseName,
-        timestamp,
-      });
 
       return NextResponse.json(
         {

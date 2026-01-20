@@ -24,23 +24,10 @@ interface NewsDetailProps {
 export default async function NewsDetailPage({ params }: NewsDetailProps) {
   const { locale, id } = await params;
 
-  console.log('NewsDetailPage - locale:', locale, 'id:', id);
-
   // Supabase에서 뉴스 가져오기 시도
   let news: NewsItem | null = null;
   try {
     news = await getNewsById(id, true); // publishedOnly = true
-    console.log('NewsDetailPage - news found:', news ? 'yes' : 'no');
-    if (news) {
-      console.log(
-        'NewsDetailPage - news content:',
-        news.content ? 'has content' : 'no content'
-      );
-      console.log(
-        'NewsDetailPage - news description:',
-        news.description ? 'has description' : 'no description'
-      );
-    }
   } catch (error) {
     console.error('Error fetching news from Supabase:', error);
     // 에러 상세 정보 로깅
@@ -117,8 +104,6 @@ export default async function NewsDetailPage({ params }: NewsDetailProps) {
         updated_at: new Date().toISOString(),
       }));
   }
-
-  console.log(news);
 
   return (
     <div className="min-h-screen">

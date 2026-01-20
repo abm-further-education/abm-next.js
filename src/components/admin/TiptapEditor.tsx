@@ -168,13 +168,17 @@ export default function TiptapEditor({
             } catch {
               // JSON 파싱 실패 시 텍스트로 읽기
               const text = await response.text();
-              errorMessage = text || `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
+              errorMessage =
+                text ||
+                `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
             }
           } else {
             // JSON이 아닌 경우 텍스트로 읽기
             try {
               const text = await response.text();
-              errorMessage = text || `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
+              errorMessage =
+                text ||
+                `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
             } catch {
               errorMessage = `서버가 ${response.status} ${response.statusText}를 반환했습니다.`;
             }
@@ -201,8 +205,6 @@ export default function TiptapEditor({
           // 일단 경로를 그대로 사용 (나중에 R2_PUBLIC_URL 설정 필요)
           imageUrl = data.imagePath;
         }
-
-        console.log('Uploaded image URL:', imageUrl);
 
         // 업로드된 이미지 URL을 에디터에 삽입
         editor.chain().focus().setImage({ src: imageUrl }).run();

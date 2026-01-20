@@ -1,5 +1,6 @@
 {
   "HomePage": {
+    "description": "시드니 ABM에서 국가 공인 비즈니스, 호스피탈리티(식품 안전, RSA), 요리, 피트니스 및 간호보조 과정을 수강하세요. 실습 중심 교육과 현장 실습 기회를 제공합니다.",
     "bannerContent": "열정이 담긴 완벽한 요리. 지금 경험해보세요.",
     "coursesTitle": "ABM 코스",
     "coursesDescription": "최고의 환경과 전문성 있는 내용으로 고품질 교육을 제공하여, 실무 경험 기회를 통해 학생들의 성공을 보장합니다.",
@@ -41,10 +42,11 @@
     "weekdaysOnly": "참고: 주말은 선택할 수 없습니다. 평일만 선택 가능합니다."
   },
   "courses": {
-    "title": "당신의 미래를 위한 과정을 찾아보세요",
-    "description": "올바른 과정을 선택하는 것은 커리어 목표를 이루는 데 있어 매우 중요합니다. 흥미를 넘어, 그 길이 여러분이 즐기고 지속할 수 있는 미래로 이어지는지 고민해보세요. 비즈니스, 요리, 호스피탈리티, 피트니스 등 다양한 분야에서 ABM은 여러분이 현장에서 필요한 실무 역량을 갖추고 자신감을 키울 수 있도록 지원합니다."
+    "title": "ABM 코스",
+    "description": "식품 안전, RSA 및 비즈니스, 호스피탈리티, 조리, 피트니스, 스포츠 및 건강 과정 (Certificate III부터 Advanced Diploma 수준까지)"
   },
   "studyWithUs": {
+    "description": "ABM에서 공부해야 하는 이유: 실습 중심 수업, 업계 경력 트레이너, 현장 실습, 그리고 시드니에서 제공되는 강력한 학생 지원.",
     "studyTourPrograms": "스터디 투어 프로그램",
     "studentInsights": "ABM 학생 후기",
     "academicCalendar": "학사 일정",
@@ -229,7 +231,11 @@
     "moodleTitle": "Moodle에 로그인이 필요하신가요?",
     "moodleLogin": "무들 로그인",
     "studentPortalTitle": "양식을 다운로드해야 하나요?",
-    "studentPortal": "학생 포털"
+    "studentPortal": "학생 포털",
+    "meta": {
+      "title": "ABM 재학생 안내",
+      "description": "ABM Further Education 재학생을 위한 시간표, 실습 정보, 학사 규정, 각종 서류 및 학업 지원 안내 페이지입니다."
+    }
   },
   "feeSchedule": {
     "title": "2025년 수업료 일정",
@@ -838,6 +844,48 @@
       "hr": "인사관리",
       "project": "프로젝트 관리",
       "health": "건강 & 웰니스"
+    }
+  },
+  "hsaPage": {
+    "courseDuration": {
+      "title": "과정 기간",
+      "items": {
+        "qualificationDuration": "자격 취득 기간: 16주",
+        "workPlacement": "실습: 실제 의료 환경에서 80시간",
+        "noHoliday": "휴일 없음"
+      }
+    },
+    "entryRequirements": {
+      "title": "입학 요건",
+      "items": {
+        "basic": "연령: 18세 이상, 영어: IELTS 5.5 또는 동등 수준",
+        "lowerEnglishOption": "학생이 ABM EPT 기준 IELTS 4.5 또는 동등 수준의 영어 점수를 가진 경우, Plus Nursing English 과정과 함께 등록해야 합니다."
+      }
+    },
+    "workPlacement": {
+      "title": "워크 플레이스먼트 안내",
+      "items": {
+        "hours": "병원 및 요양 시설에서 총 80시간의 감독 하 실습 진행",
+        "applyLearning": "교실에서 배운 이론을 실제 의료 현장에서 적용할 수 있습니다",
+        "confidence": "전문 의료진과 함께 근무하며 실무 경험과 자신감을 쌓을 수 있습니다",
+        "support": "실습 배정은 ABM 직원이 지원합니다"
+      }
+    },
+    "industryPartners": {
+      "title": "주요 산업 파트너",
+      "items": {
+        "partners": "사립 병원, 메디컬 센터, 요양 시설"
+      }
+    },
+    "whyChoose": {
+      "title": "왜 이 프로그램을 선택해야 하나요?",
+      "items": {
+        "supportiveLearning": "지원적인 대면 수업 환경에서 학습할 수 있습니다",
+        "healthcareEnglish": "의료 커뮤니케이션에 필요한 전문 영어 능력 향상",
+        "qualification": "전국적으로 인정되는 자격 취득",
+        "workPlacement": "실제 의료 환경에서 80시간의 실습 진행",
+        "suitableForAll": "의료 경험 유무와 관계없이 수강 가능합니다"
+      }
     }
   }
 }

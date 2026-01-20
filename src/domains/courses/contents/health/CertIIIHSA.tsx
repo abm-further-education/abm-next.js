@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 function CertIIIHSA() {
+  const t = useTranslations('hsaPage');
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-40">
@@ -50,29 +52,34 @@ function CertIIIHSA() {
               activeIndex={1}
             /> */}
             <span className="text-sm text-primary">
-              * If the student has IELTS 4.5 or equivalent through ABM EPT,
-              enrol with Plus Nursing English .
+              {t('entryRequirements.items.lowerEnglishOption')}
             </span>
 
             {/* Course Description */}
             <div className="text-gray-600 mb-8">
-              <h3 className="text-base font-bold mb-8">Course Duration</h3>
+              <h3 className="text-base font-bold mb-8">
+                {t('courseDuration.title')}
+              </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
                 <li>
-                  <span className="font-semibold">Qualification duration:</span>{' '}
-                  16 weeks
+                  <span className="font-semibold">
+                    {t('courseDuration.items.qualificationDuration')}
+                  </span>
                 </li>
                 <li>
-                  <span className="font-semibold">Work Placement:</span> 80
-                  hours in real healthcare settings
+                  <span className="font-semibold">
+                    {t('courseDuration.items.workPlacement')}
+                  </span>
                 </li>
-                <li>No Holiday breaks</li>
+                <li>{t('courseDuration.items.noHoliday')}</li>
               </ul>
             </div>
             <div className="text-gray-600 mb-8">
-              <h3 className="text-base font-bold mb-8">Entry Requirements</h3>
+              <h3 className="text-base font-bold mb-8">
+                {t('entryRequirements.title')}
+              </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                <li>Age: 18 years+ , English: IELTS 5.5 or equivalent</li>
+                <li>{t('entryRequirements.items.basic')}</li>
               </ul>
             </div>
           </div>
@@ -96,50 +103,34 @@ function CertIIIHSA() {
             {/*  Work Placement Information */}
             <div className="text-gray-600 mb-8">
               <h3 className="text-base font-bold mb-8">
-                Work Placement Information
+                {t('workPlacement.title')}
               </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                <li>
-                  80 hours of supervised work placement in hospitals and aged
-                  care facilities
-                </li>
-                <li>
-                  Opportunity to apply classroom learning in real healthcare
-                  environments
-                </li>
-                <li>
-                  Build confidence and gain hands-on experience working
-                  alongside professionals
-                </li>
-                <li>Placement assistance provided by ABM staff</li>
+                <li>{t('workPlacement.items.hours')}</li>
+                <li>{t('workPlacement.items.applyLearning')}</li>
+                <li>{t('workPlacement.items.confidence')}</li>
+                <li>{t('workPlacement.items.support')}</li>
               </ul>
             </div>
             <div className="text-gray-600 mb-8">
               <h3 className="text-base font-bold mb-8">
-                Key Industry partners
+                {t('industryPartners.title')}
               </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                <li>Private Hospitals, Medical Centres , Aged Care Centres</li>
+                <li>{t('industryPartners.items.partners')}</li>
               </ul>
             </div>
             {/*  Why Choose This Programme? */}
             <div className="text-gray-600 mb-8">
               <h3 className="text-base font-bold mb-8">
-                Why Choose This Programme?
+                {t('whyChoose.title')}
               </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                <li>
-                  Learn in a supportive, face-to-face classroom environment
-                </li>
-                <li>Build specialised English for healthcare communication</li>
-                <li>Gain a nationally recognised qualification</li>
-                <li>
-                  Complete 80 hours of work placement in real healthcare
-                  settings
-                </li>
-                <li>
-                  Suitable for those with or without prior healthcare experience
-                </li>
+                <li>{t('whyChoose.items.supportiveLearning')}</li>
+                <li>{t('whyChoose.items.healthcareEnglish')}</li>
+                <li>{t('whyChoose.items.qualification')}</li>
+                <li>{t('whyChoose.items.workPlacement')}</li>
+                <li>{t('whyChoose.items.suitableForAll')}</li>
               </ul>
             </div>
           </div>

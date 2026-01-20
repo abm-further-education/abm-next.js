@@ -1,5 +1,6 @@
 {
   "HomePage": {
+    "description": "Study nationally accredited Business, Hospitality(Food Safety, RSA), Cookery, Fitness and Health courses at ABM Further Education in Sydney. Hands-on training and industry placement.",
     "bannerContent": "Where Passion Meets Culinary Perfection. An Unforgettable Experience",
     "coursesTitle": "ABM Courses",
     "coursesDescription": "We provide high-quality education in an innovative and supportive environment, ensuring student success with expert teaching and work experience opportunities across Australia.",
@@ -42,9 +43,10 @@
   },
   "courses": {
     "title": "Find the Right Course for Your Future",
-    "description": "Choosing the right course is key to reaching your career goals. Think beyond interest—consider if the path leads to a future you'll enjoy. Whether it's business, commercial cookery, or advancing in hospitality, ABM helps you gain the skills to become job-ready and confident in your chosen field."
+    "description": "Food Safety, RSA and Business, Hospitality, Cookery, Fitness, Sport and Health courses from Certificate III to Advanced Diploma level."
   },
   "studyWithUs": {
+    "description": "Why study at ABM: practical classes, industry trainers, work placement and strong student support in Sydney.",
     "studyTourPrograms": "Study Tour Programs",
     "studentInsights": "Testimonials",
     "academicCalendar": "Academic Calendar",
@@ -230,7 +232,11 @@
     "moodleTitle": "Do you need to login to Moodle?",
     "moodleLogin": "MOODLE LOGIN",
     "studentPortalTitle": "Do you need to download forms?",
-    "studentPortal": "STUDENT PORTAL"
+    "studentPortal": "STUDENT PORTAL",
+    "meta": {
+      "title": "ABM Current Student",
+      "description": "Student timetables, placement information, policies, forms and academic support at ABM Further Education."
+    }
   },
   "feeSchedule": {
     "title": "Fee Schedule 2025",
@@ -837,6 +843,48 @@
       "hr": "Human Resources",
       "project": "Project Management",
       "health": "Health & Wellness"
+    }
+  },
+  "hsaPage": {
+    "courseDuration": {
+      "title": "Course Duration",
+      "items": {
+        "qualificationDuration": "Qualification duration: 16 weeks",
+        "workPlacement": "Work Placement: 80 hours in real healthcare settings",
+        "noHoliday": "No holiday breaks"
+      }
+    },
+    "entryRequirements": {
+      "title": "Entry Requirements",
+      "items": {
+        "basic": "Age: 18 years+, English: IELTS 5.5 or equivalent",
+        "lowerEnglishOption": "If the student has IELTS 4.5 or equivalent through ABM EPT, enrol with Plus Nursing English."
+      }
+    },
+    "workPlacement": {
+      "title": "Work Placement Information",
+      "items": {
+        "hours": "80 hours of supervised work placement in hospitals and aged care facilities",
+        "applyLearning": "Opportunity to apply classroom learning in real healthcare environments",
+        "confidence": "Build confidence and gain hands-on experience working alongside professionals",
+        "support": "Placement assistance provided by ABM staff"
+      }
+    },
+    "industryPartners": {
+      "title": "Key Industry Partners",
+      "items": {
+        "partners": "Private Hospitals, Medical Centres, Aged Care Centres"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose This Programme?",
+      "items": {
+        "supportiveLearning": "Learn in a supportive, face-to-face classroom environment",
+        "healthcareEnglish": "Build specialised English for healthcare communication",
+        "qualification": "Gain a nationally recognised qualification",
+        "workPlacement": "Complete 80 hours of work placement in real healthcare settings",
+        "suitableForAll": "Suitable for those with or without prior healthcare experience"
+      }
     }
   }
 }

@@ -141,7 +141,6 @@ async function saveBookingToDatabase(
       throw error;
     }
 
-    console.log('Booking saved to database:', data);
     return data;
   } catch (error) {
     console.error('Error saving booking to database:', error);
@@ -151,9 +150,6 @@ async function saveBookingToDatabase(
 
 async function sendBookingEmails(metadata: Record<string, string>) {
   try {
-    console.log('📧 sendBookingEmails function started');
-    console.log('📧 Metadata received in email function:', metadata);
-
     const {
       firstName,
       lastName,
@@ -169,13 +165,6 @@ async function sendBookingEmails(metadata: Record<string, string>) {
       selectedType,
       courseLocation,
     } = metadata;
-
-    console.log('📧 Email validation:', {
-      firstName: firstName ? 'Valid' : 'Missing',
-      lastName: lastName ? 'Valid' : 'Missing',
-      email: email ? 'Valid' : 'Missing',
-      courseName: courseName ? 'Valid' : 'Missing',
-    });
 
     // SMTP 환경변수 체크
     if (
@@ -197,15 +186,6 @@ async function sendBookingEmails(metadata: Record<string, string>) {
         pass: process.env.SMTP_PASS,
       },
     });
-
-    console.log('📧 SMTP transporter created');
-
-    // 관리자에게 보내는 메일 (예약자 정보)
-    console.log('📧 Sending admin email to: info@abm.edu.au');
-    console.log(
-      '📧 Admin email subject:',
-      `[Short Course Booking] ${courseName} - ${firstName} ${lastName}`
-    );
 
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
@@ -283,12 +263,6 @@ async function sendBookingEmails(metadata: Record<string, string>) {
 
     // 예약자에게 자동 답장 (코스 정보 및 감사 메시지)
     if (email && typeof email === 'string' && email.trim() !== '') {
-      console.log('📧 Sending customer email to:', email);
-      console.log(
-        '📧 Customer email subject:',
-        `Thank you for booking ${courseName}`
-      );
-
       await transporter.sendMail({
         from: process.env.FROM_EMAIL,
         to: email,
@@ -365,8 +339,6 @@ async function sendBookingEmails(metadata: Record<string, string>) {
         `,
       });
     }
-
-    console.log('✅ Booking emails sent successfully');
   } catch (error) {
     console.error('❌ Error sending booking emails:', error);
     console.error('❌ Email error details:', {

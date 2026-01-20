@@ -1,5 +1,6 @@
 {
   "HomePage": {
+    "description": "シドニーのABM継続教育機関で、国家認定のビジネス、ホスピタリティ（食品安全、RSA）、調理、フィットネス、健康コースを学びましょう。実践的なトレーニングと業界での実習を提供します。",
     "bannerContent": "情熱が料理の完成へ。忘れられない体験を。",
     "coursesTitle": "ABM コース",
     "coursesDescription": "ABMは、革新的で支援的な学習環境において質の高い教育を提供します。経験豊富な講師陣と、オーストラリア各地での実習・就労機会により、学生の成功を後押しします。",
@@ -42,9 +43,10 @@
   },
   "courses": {
     "title": "将来につながる最適なコースを見つけよう",
-    "description": "キャリア目標の達成には、適切なコース選びが重要です。興味だけでなく、将来の働き方まで見据えて選択しましょう。ビジネス、調理、ホスピタリティのステップアップなど、ABMは就業につながる実践力と自信の獲得をサポートします。"
+    "description": "食品安全、RSAおよびビジネス、ホスピタリティ、調理、フィットネス、スポーツ、健康に関するコース（Certificate IIIからAdvanced Diplomaレベルまで）"
   },
   "studyWithUs": {
+    "description": "ABMで学ぶ理由：実践的な授業、業界経験豊富なトレーナー、実習のサポート、そしてシドニーでの強力な学生サポート。",
     "studyTourPrograms": "スタディツアー",
     "studentInsights": "体験談",
     "academicCalendar": "学年暦",
@@ -228,7 +230,11 @@
     "moodleTitle": "Moodle にログインしますか？",
     "moodleLogin": "Moodle ログイン",
     "studentPortalTitle": "各種申請書のダウンロードはこちら",
-    "studentPortal": "学生ポータル"
+    "studentPortal": "学生ポータル",
+    "meta": {
+      "title": "ABM 在校生向け情報",
+      "description": "ABM Further Educationの在校生向けに、時間割、実習情報、規則、各種申請フォーム、学習サポートを提供しています。"
+    }
   },
   "feeSchedule": {
     "title": "学費一覧 2025",
@@ -834,6 +840,48 @@
       "hr": "人事",
       "project": "プロジェクトマネジメント",
       "health": "ヘルス＆ウェルネス"
+    }
+  },
+  "hsaPage": {
+    "courseDuration": {
+      "title": "コース期間",
+      "items": {
+        "qualificationDuration": "資格取得期間：16週間",
+        "workPlacement": "実習：実際の医療現場で80時間",
+        "noHoliday": "休暇期間はありません"
+      }
+    },
+    "entryRequirements": {
+      "title": "入学条件",
+      "items": {
+        "basic": "年齢：18歳以上、英語：IELTS 5.5相当",
+        "lowerEnglishOption": "ABM EPTでIELTS 4.5相当の英語力がある場合は、Plus Nursing Englishコースにお申し込みください。"
+      }
+    },
+    "workPlacement": {
+      "title": "実習（ワークプレイスメント）について",
+      "items": {
+        "hours": "病院および高齢者介護施設にて、80時間の監督付き実習を実施",
+        "applyLearning": "教室で学んだ内容を、実際の医療現場で活かすことができます",
+        "confidence": "専門スタッフと共に働きながら、実践的な経験と自信を身につけます",
+        "support": "実習先の手配はABMスタッフがサポートします"
+      }
+    },
+    "industryPartners": {
+      "title": "主な提携業界パートナー",
+      "items": {
+        "partners": "民間病院、クリニック、高齢者介護施設"
+      }
+    },
+    "whyChoose": {
+      "title": "このプログラムを選ぶ理由",
+      "items": {
+        "supportiveLearning": "安心できる対面授業の学習環境で学べます",
+        "healthcareEnglish": "医療現場で必要な専門英語を身につけられます",
+        "qualification": "全国的に認められた資格を取得できます",
+        "workPlacement": "実際の医療施設にて80時間の実習を修了",
+        "suitableForAll": "医療経験の有無に関わらず受講可能です"
+      }
     }
   }
 }

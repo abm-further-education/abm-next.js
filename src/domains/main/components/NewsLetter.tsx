@@ -42,16 +42,6 @@ const NewsCard = ({ news, locale }: NewsCardProps) => {
   // id가 UUID일 수 있으므로 displayId를 우선 사용
   const newsId = news.displayId?.toString() || news.id;
 
-  // 디버깅: news 객체 확인
-  if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-    console.log('NewsCard - news:', {
-      id: news.id,
-      displayId: news.displayId,
-      dbId: news.dbId,
-      newsId,
-    });
-  }
-
   return (
     <div
       className="shadow-xl w-280 2xl:w-320 h-[390px] flex flex-col bg-white overflow-hidden cursor-pointer"

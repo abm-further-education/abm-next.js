@@ -1,5 +1,6 @@
 {
   "HomePage": {
+    "description": "Estudia cursos acreditados a nivel nacional de Negocios, Hostelería (Seguridad Alimentaria, RSA), Cocina, Fitness y Salud en ABM Further Education en Sídney. Formación práctica y prácticas en empresas del sector.",
     "bannerContent": "Donde la Pasión se Encuentra con la Perfección Culinaria. Una Experiencia Inolvidable",
     "coursesTitle": "Cursos de ABM",
     "coursesDescription": "Proporcionamos educación de alta calidad en un ambiente innovador y de apoyo, asegurando el éxito de nuestros estudiantes con enseñanza experta y oportunidades de experiencia laboral en toda Australia.",
@@ -42,9 +43,10 @@
   },
   "courses": {
     "title": "Encuentra el Curso Adecuado para tu Futuro",
-    "description": "Elegir el curso correcto es clave para alcanzar tus objetivos profesionales. Piensa más allá del interés: considera si el camino lleva a un futuro que disfrutarás. Ya sea en negocios, cocina comercial o avanzando en hospitalidad, ABM te ayuda a adquirir las habilidades para estar listo para el trabajo y confiado en tu campo elegido."
+    "description": "Cursos de seguridad alimentaria, RSA y negocios, hostelería, cocina, fitness, deporte y salud, desde el Certificado III hasta el Diploma Avanzado."
   },
   "studyWithUs": {
+    "description": "Por qué estudiar en ABM: clases prácticas, formadores con experiencia en la industria, prácticas profesionales y un sólido apoyo estudiantil en Sídney.",
     "studentInsights": "Perspectivas de Estudiantes ABM",
     "academicCalendar": "Calendario Académico",
     "feesAndPayment": "Tarifas y Pago",
@@ -228,7 +230,11 @@
     "moodleTitle": "¿Necesitas iniciar sesión en Moodle?",
     "moodleLogin": "ACCESO A MOODLE",
     "studentPortalTitle": "¿Necesitas descargar formularios?",
-    "studentPortal": "PORTAL DEL ESTUDIANTE"
+    "studentPortal": "PORTAL DEL ESTUDIANTE",
+    "meta": {
+      "title": "Estudiantes Actuales de ABM",
+      "description": "Horarios académicos, información sobre prácticas, políticas, formularios y apoyo académico en ABM Further Education."
+    }
   },
   "feeSchedule": {
     "studyTourPrograms": "Programas de Tour de Estudio",
@@ -832,6 +838,48 @@
       "hr": "Recursos Humanos",
       "project": "Gestión de Proyectos",
       "health": "Salud y Bienestar"
+    }
+  },
+  "hsaPage": {
+    "courseDuration": {
+      "title": "Duración del Curso",
+      "items": {
+        "qualificationDuration": "Duración de la cualificación: 16 semanas",
+        "workPlacement": "Prácticas: 80 horas en entornos reales de atención médica",
+        "noHoliday": "Sin períodos de vacaciones"
+      }
+    },
+    "entryRequirements": {
+      "title": "Requisitos de Admisión",
+      "items": {
+        "basic": "Edad: 18 años+, Inglés: IELTS 5.5 o equivalente",
+        "lowerEnglishOption": "Si el estudiante tiene IELTS 4.5 o un equivalente a través del ABM EPT, debe inscribirse en el curso Plus Nursing English."
+      }
+    },
+    "workPlacement": {
+      "title": "Información sobre Prácticas Profesionales",
+      "items": {
+        "hours": "80 horas de prácticas supervisadas en hospitales y centros de cuidado de personas mayores",
+        "applyLearning": "Oportunidad de aplicar el aprendizaje en el aula en entornos reales de atención médica",
+        "confidence": "Desarrolle confianza y obtenga experiencia práctica trabajando junto a profesionales",
+        "support": "El apoyo para las prácticas es proporcionado por el personal de ABM"
+      }
+    },
+    "industryPartners": {
+      "title": "Principales Socios de la Industria",
+      "items": {
+        "partners": "Hospitales privados, centros médicos y centros de cuidado de personas mayores"
+      }
+    },
+    "whyChoose": {
+      "title": "¿Por qué elegir este programa?",
+      "items": {
+        "supportiveLearning": "Aprenda en un entorno presencial y de apoyo",
+        "healthcareEnglish": "Desarrolle inglés especializado para la comunicación en el sector salud",
+        "qualification": "Obtenga una cualificación reconocida a nivel nacional",
+        "workPlacement": "Complete 80 horas de prácticas en entornos reales de atención médica",
+        "suitableForAll": "Adecuado para personas con o sin experiencia previa en salud"
+      }
     }
   }
 }
