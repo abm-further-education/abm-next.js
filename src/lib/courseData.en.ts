@@ -269,7 +269,7 @@ export const courseData: CourseData[] = [
     category: 'short-course-hospitality',
     type: 'short-course',
     duration: 'Flexible',
-    image: '/custom_program.png',
+    image: '/custom_program_1.png',
     link: '/custom-programs',
     tags: ['custom', 'programs', 'tailored', 'institutions', 'partnership'],
   },
