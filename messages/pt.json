@@ -210,7 +210,7 @@
   },
   "cookeryAndHospitality": {
     "title": "Comece Sua Carreira em Culinária & Hospitalidade",
-    "description": "Entre em uma das carreiras mais dinâmicas e gratificantes da Austrália com os cursos de Gestão de Cozinha e Hospitalidade da ABM.",
+    "description": "Adquira experiência real em cozinhas comerciais com o Certificado IV em Gestão de Cozinhas. Aprenda técnicas avançadas de culinária, liderança e supervisão para construir sua carreira de chef na Austrália.",
     "streams": "Trilhas",
     "kitchenManagementStream": "Trilha de Gestão de Cozinha",
     "foodAndBeverageStream": "Trilha de Alimentos e Bebidas",
@@ -693,14 +693,14 @@
   "healthPage": {
     "metadata": {
       "title": "Cursos de Saúde & Bem-Estar | ABM Further Education",
-      "description": "Comece sua carreira em saúde com a ABM Further Education. Explore o Certificate III in Health Services Assistance com suporte completo e estágio."
+      "description": "Mesmo sem experiência em enfermagem, você pode trabalhar e aprender como Assistente de Enfermagem (AIN) em hospitais e instituições de saúde na Austrália. É fácil começar, mesmo para iniciantes em inglês, com muitas oportunidades de treinamento prático e emprego. Este programa popular está disponível para participantes com vistos de trabalho temporário e de estudante."
     },
     "bannerTitle": "Saúde & Bem-Estar",
-    "heading": "Comece uma Carreira\nGratificante em Saúde",
+    "heading": "Estude e trabalhe\ncomo auxiliar de enfermagem na Austrália",
     "description": "Dê seu primeiro passo rumo a uma carreira gratificante em saúde com a Trilha de Suporte em Enfermagem da ABM. Este programa abrangente foi desenvolvido para estudantes internacionais ou recém-chegados ao setor que desejam atuar como profissionais de suporte em hospitais e instituições de cuidados a idosos.",
     "nursingSupport": "Trilha de Suporte em Enfermagem",
     "cert3Health": "HLT33115 Certificate III in Health Services Assistance",
-    "whyChoose": "Por que Escolher Este Programa?",
+    "whyChoose": "Por que escolher o Certificado III em Assistência em Serviços de Saúde?",
     "realHealthcare": "Ambientes Reais de Saúde",
     "realHealthcareDesc": "Conclua 80 horas de estágio em ambientes reais de saúde",
     "workPlacement": "Suporte ao Estágio",
@@ -843,6 +843,10 @@
     }
   },
   "hsaPage": {
+    "metadata": {
+      "title": "Curso de Assistente de Enfermagem (Certificate III in Health Services Assistance)",
+      "description": "Curso HLT33115 Certificate III in Health Services Assistance para se tornar assistente de enfermagem na Austrália. Acessível para iniciantes em inglês, com 80 horas de estágio em hospitais e instalações de cuidados a idosos. Qualificação reconhecida nacionalmente para impulsionar sua carreira na saúde."
+    },
     "courseDuration": {
       "title": "Duração do Curso",
       "items": {
@@ -873,14 +877,39 @@
         "partners": "Hospitais privados, centros médicos e centros de cuidados a idosos"
       }
     },
-    "whyChoose": {
-      "title": "Por que escolher este programa?",
+    "courseBenefits": {
+      "title": "Benefícios do Curso",
       "items": {
-        "supportiveLearning": "Aprenda em um ambiente presencial e de apoio",
-        "healthcareEnglish": "Desenvolva inglês especializado para comunicação na área da saúde",
-        "qualification": "Obtenha uma qualificação reconhecida nacionalmente",
-        "workPlacement": "Conclua 80 horas de estágio prático em ambientes reais de saúde",
-        "suitableForAll": "Adequado para pessoas com ou sem experiência prévia na área da saúde"
+        "fundamentalSkills": "Adquira habilidades fundamentais para trabalhar em hospitais e instalações de cuidados na Austrália após a certificação",
+        "practicalExperience": "Ganhe experiência prática através de 80 horas de treinamento presencial",
+        "medicalEnglish": "Aprimore suas habilidades de comunicação em inglês médico",
+        "beginnerFriendly": "Design de aprendizagem acessível mesmo para iniciantes",
+        "careerAdvancement": "Pode ser aproveitado para progressão de carreira futura (graduação em enfermagem/qualificações avançadas)"
+      }
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": {
+        "q1": {
+          "question": "Quanto custa o curso de assistente de enfermagem?",
+          "answer": "Por favor, consulte nossa lista de preços oficial para obter as informações mais atualizadas sobre as mensalidades."
+        },
+        "q2": {
+          "question": "Qual visto me permite fazer a matrícula?",
+          "answer": "Este curso é adequado para estudantes com visto de Working Holiday ou qualquer tipo de visto que permita estudar por 16 semanas sem uma Confirmação de Matrícula (CoE). Não fornecemos aconselhamento sobre vistos. Por favor, verifique as condições do seu visto ou consulte um agente de imigração registrado se tiver dúvidas."
+        },
+        "q3": {
+          "question": "Como funciona o estágio e o suporte para treinamento clínico?",
+          "answer": "A ABM oferece 80 horas de estágio como parte do curso, organizadas através de nossos parceiros da indústria. Após a conclusão, também oferecemos oportunidades de emprego remunerado para graduados elegíveis, apoiando sua transição suave para a força de trabalho da saúde."
+        },
+        "q4": {
+          "question": "Consigo encontrar emprego com esta qualificação?",
+          "answer": "Sim, nossos graduados frequentemente conseguem vagas em Hospitais Privados, Centros Médicos e Centros de Cuidados para Idosos."
+        },
+        "q5": {
+          "question": "E se meu inglês for insuficiente?",
+          "answer": "O requisito mínimo de entrada é IELTS 5.5 ou equivalente. Se você atualmente possui IELTS 4.5 ou equivalente, pode se matricular no curso com Plus Nursing English, que fornece suporte linguístico adicional adaptado para ambientes de saúde. Se você não tiver um resultado de teste de inglês, pode ter sua proficiência em inglês avaliada através do Teste de Nivelamento de Inglês da ABM."
+        }
       }
     }
   }

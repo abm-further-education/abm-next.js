@@ -212,7 +212,7 @@
   },
   "cookeryAndHospitality": {
     "title": "요리 & 호스피탈리티 커리어 시작하기",
-    "description": "ABM의 키친 매니지먼트 및 호스피탈리티 과정으로 호주에서 가장 보람 있고 역동적인 커리어 중 하나를 시작해보세요.",
+    "description": "ABM의 키친 매니지먼트 및 호스피탈리티 과정으로 고급 요리 기술, 리더십 및 감독 역량을 습득하여 호주에서 셰프 경력을 쌓으세요.",
     "streams": "프로그램",
     "kitchenManagementStream": "키친 매니지먼트 프로그램",
     "foodAndBeverageStream": "식음료 프로그램",
@@ -711,15 +711,15 @@
   "healthPage": {
     "metadata": {
       "title": "건강 & 웰니스 과정 | ABM Further Education",
-      "description": "ABM Further Education과 함께 헬스케어 커리어를 시작하세요. 포괄적인 지원과 실습 배치를 포함한 HLT33115 헬스 서비스 어시스턴트 자격증을 포함한 건강 및 웰니스 과정을 탐색해보세요."
+      "description": "호주 병원 및 요양 시설에서 간호 보조원(AIN)으로 근무하며 배울 수 있습니다. 간호 경험이 없어도 가능합니다. 영어 초보자도 쉽게 시작할 수 있으며, 실무 훈련과 취업 기회가 풍부합니다. 워킹홀리데이 비자 및 학생 비자 소지자 모두 참여 가능한 인기 프로그램입니다."
     },
     "bannerTitle": "건강 & 웰니스",
-    "heading": "여러분의 헬스케어\n커리어를 시작하세요",
+    "heading": "호주에서 간호조무사로\n일하며 공부하기",
     "description": "ABM의 간호 지원 커리어 경로를 통해 헬스케어 커리어로의 첫 걸음을 내딛어보세요. 이 프로그램은 병원과 노인 요양 시설에서 숙련된 지원 직원이 되고자 하는 유학생이나 헬스 분야 신규 진입자를 위해 설계되었습니다.",
     "nursingSupport": "간호 지원 커리어 경로",
     "cert3Health": "HLT33115 Certificate III in Health Services Assistance",
-    "whyChoose": "이 프로그램을 선택해야 하는 이유는?",
-    "realHealthcare": "실제 헬스케어 환경",
+    "whyChoose": "Certificate III in Health Services Assistance 코스를 선택해야 하는 이유는?",
+    "realHealthcare": "실제 간호보조 환경",
     "realHealthcareDesc": "실제 헬스케어 환경에서 80시간의 실습 완료",
     "workPlacement": "실습 배치 지원",
     "workPlacementDesc": "협약, 감독, 유연한 일정을 포함한 전반적인 지원",
@@ -736,8 +736,8 @@
   },
   "fitnessPage": {
     "metadata": {
-      "title": "피트니스 & 스포츠 과정 | ABM 퍼더에듀케이션",
-      "description": "ABM 퍼더에듀케이션과 함께 피트니스에 대한 열정을 커리어로 바꿔보세요. 유학생과 국내 패스트트랙 모두를 위한 피트니스 및 스포츠 과정을 만나보세요."
+      "title": "피트니스 & 스포츠 과정 | ABM Further Education",
+      "description": "ABM Further Education과 함께 피트니스에 대한 열정을 커리어로 바꿔보세요. 유학생과 국내 패스트트랙 모두를 위한 피트니스 및 스포츠 과정을 만나보세요."
     },
     "bannerTitle": "피트니스 & 스포츠",
     "heading": "여러분의 피트니스 열정을\n커리어로 바꾸세요",
@@ -794,8 +794,8 @@
   },
   "hrPage": {
     "metadata": {
-      "title": "인사관리 과정 | ABM 퍼더에듀케이션",
-      "description": "ABM 퍼더에듀케이션과 함께 인사관리 분야에서 보람 있는 커리어를 쌓아보세요. 4급 자격증부터 고급 디플로마까지, 변화하는 현대 직장에 꼭 필요한 HR 역량을 키울 수 있습니다."
+      "title": "인사관리 과정 | ABM Further Education",
+      "description": "ABM Further Education과 함께 인사관리 분야에서 보람 있는 커리어를 쌓아보세요. 4급 자격증부터 고급 디플로마까지, 변화하는 현대 직장에 꼭 필요한 HR 역량을 키울 수 있습니다."
     },
     "bannerTitle": "인사관리",
     "heading": "인사관리 분야에서 보람 있는 커리어를 시작하세요",
@@ -847,6 +847,10 @@
     }
   },
   "hsaPage": {
+    "metadata": {
+      "title": "간호 조무사(Certificate III in Health Services Assistance) 과정",
+      "description": "호주에서 간호 조무사를 목표로 하는 HLT33115 Certificate III in Health Services Assistance 과정. 영어 초보자도 OK, 병원 및 요양 시설에서 80시간 실습 포함. 국가 공인 자격으로 커리어 업그레이드 실현. 자세한 내용 및 지원은 여기에서."
+    },
     "courseDuration": {
       "title": "과정 기간",
       "items": {
@@ -877,14 +881,39 @@
         "partners": "사립 병원, 메디컬 센터, 요양 시설"
       }
     },
-    "whyChoose": {
-      "title": "왜 이 프로그램을 선택해야 하나요?",
+    "courseBenefits": {
+      "title": "코스 혜택",
       "items": {
-        "supportiveLearning": "지원적인 대면 수업 환경에서 학습할 수 있습니다",
-        "healthcareEnglish": "의료 커뮤니케이션에 필요한 전문 영어 능력 향상",
-        "qualification": "전국적으로 인정되는 자격 취득",
-        "workPlacement": "실제 의료 환경에서 80시간의 실습 진행",
-        "suitableForAll": "의료 경험 유무와 관계없이 수강 가능합니다"
+        "fundamentalSkills": "자격 취득 후, 호주 병원 및 요양 시설에서 일하기 위한 기본 스킬 습득",
+        "practicalExperience": "80시간의 실습을 통해 현장 경험 쌓기",
+        "medicalEnglish": "의료 영어 커뮤니케이션 능력 향상",
+        "beginnerFriendly": "초보자도 쉽게 시작할 수 있는 학습 설계",
+        "careerAdvancement": "미래 커리어 발전에 활용 가능 (간호학과/상위 자격)"
+      }
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "items": {
+        "q1": {
+          "question": "간호 조무사 과정의 비용은 얼마입니까?",
+          "answer": "최신 학비 정보는 공식 가격표를 참조해 주세요."
+        },
+        "q2": {
+          "question": "어떤 비자로 등록할 수 있습니까?",
+          "answer": "이 과정은 워킹홀리데이 비자 또는 입학확인서(CoE) 없이 16주간 학업이 허용되는 비자를 소지한 학생에게 적합합니다. 저희는 비자 관련 조언을 제공하지 않습니다. 불확실한 경우 비자 조건을 확인하거나 공인 이민 에이전트와 상담해 주세요."
+        },
+        "q3": {
+          "question": "임상 실습 배치와 지원은 어떻게 됩니까?",
+          "answer": "ABM은 신뢰할 수 있는 업계 파트너를 통해 과정의 일부로 80시간의 현장 실습을 제공합니다. 수료 후에는 자격을 갖춘 졸업생에게 유급 취업 기회도 제공하여 의료 분야로의 원활한 전환을 지원합니다."
+        },
+        "q4": {
+          "question": "이 자격증으로 취업이 가능합니까?",
+          "answer": "네, 저희 졸업생들은 민간 병원, 의료 센터, 노인 요양 시설 등에서 자주 취업합니다."
+        },
+        "q5": {
+          "question": "영어 실력이 부족하면 어떻게 합니까?",
+          "answer": "최소 입학 요건은 IELTS 5.5 또는 동등 수준입니다. 현재 IELTS 4.5 또는 동등 수준인 경우, 의료 환경에 맞춘 추가 언어 지원을 제공하는 Plus Nursing English와 함께 과정에 등록할 수 있습니다. 영어 시험 결과가 없는 경우, ABM 영어 배치 시험을 통해 영어 능력을 평가받을 수 있습니다."
+        }
       }
     }
   }

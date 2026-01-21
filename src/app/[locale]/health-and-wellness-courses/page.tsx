@@ -2,29 +2,47 @@ import Banner from '@/components/common/Banner';
 import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
 import Gallery from '@/components/common/Gallery';
-// import Testimonial from '@/domains/main/components/Testimonial';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import React from 'react';
+import { getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
 import { BriefcaseBusiness, GraduationCap, Hospital } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Health | ABM Further Education',
-  description:
-    'Start your healthcare career with ABM Further Education. Explore our health and wellness courses including Certificate III in Health Services Assistance with comprehensive support and work placement.',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'healthPage',
+  });
+
+  return {
+    title: t('metadata.title'),
+    description: t('metadata.description'),
+  };
+}
+
+// export const metadata: Metadata = {
+//   title: 'Health | ABM Further Education',
+//   description:
+//     'Start your healthcare career with ABM Further Education. Explore our health and wellness courses including Certificate III in Health Services Assistance with comprehensive support and work placement.',
+// };
 
 function HealthPage() {
   const t = useTranslations('healthPage');
+
   return (
     <div className="pt-60">
       <Banner
         slides={[
           {
-            imgPath: '/courses/health/health_1.png',
+            imgPath: '/courses/hsa_banner_1.png',
             title: t('bannerTitle'),
-            content: '',
+            content: t('realHealthcareDesc'),
           },
         ]}
       />

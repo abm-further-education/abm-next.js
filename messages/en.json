@@ -42,7 +42,7 @@
     "weekdaysOnly": "Weekdays only (Monday to Friday)"
   },
   "courses": {
-    "title": "Find the Right Course for Your Future",
+    "title": "Courses | Business, Hospitality & Health Courses | ABM Further Education",
     "description": "Food Safety, RSA and Business, Hospitality, Cookery, Fitness, Sport and Health courses from Certificate III to Advanced Diploma level."
   },
   "studyWithUs": {
@@ -212,7 +212,7 @@
   },
   "cookeryAndHospitality": {
     "title": "Start Your Career in Cookery & Hospitality",
-    "description": "Step into one of the most rewarding and dynamic career paths in Australia with ABM's Kitchen Management and Hospitality courses.",
+    "description": "Gain real commercial kitchen experience with the Certificate IV in Kitchen Management. Learn advanced cookery skills, leadership, and supervisory training to build your chef career in Australia.",
     "streams": "Streams",
     "kitchenManagementStream": "Kitchen Management Stream",
     "foodAndBeverageStream": "Food and Beverage Stream",
@@ -695,14 +695,14 @@
   "healthPage": {
     "metadata": {
       "title": "Health & Wellness Courses | ABM Further Education",
-      "description": "Start your healthcare career with ABM Further Education. Explore our health and wellness courses including Certificate III in Health Services Assistance with comprehensive support and work placement."
+      "description": "Even without nursing experience, you can work and learn as an Assistant in Nursing (AIN) in hospitals and care facilities in Australia. It's easy to start even for beginners in English, with abundant opportunities for practical training and employment. This popular program is available to participants on both Working Holiday and Student visas."
     },
     "bannerTitle": "Health & Wellness",
-    "heading": "Start Your Rewarding\nHealthcare Career",
+    "heading": "Study & Work\nas a Nursing Assistant in Australia",
     "description": "Take your first step towards a rewarding career in healthcare with ABM's Nursing Support Career Pathway. This comprehensive programme is designed for international students or new entrants to the health sector who wish to become skilled support workers in hospitals and aged care facilities.",
     "nursingSupport": "Nursing Support Career Pathway",
     "cert3Health": "HLT33115 Certificate III in Health Services Assistance",
-    "whyChoose": "Why Choose This Programme?",
+    "whyChoose": "Why Choose Certificate III in Health Services Assistance?",
     "realHealthcare": "Real Healthcare Settings",
     "realHealthcareDesc": "Complete 80 hours of work placement in real healthcare environments",
     "workPlacement": "Work Placement Support",
@@ -846,6 +846,10 @@
     }
   },
   "hsaPage": {
+    "metadata": {
+      "title": "Certificate III in Health Services Assistance",
+      "description": "HLT33115 Certificate III in Health Services Assistance course to become a nursing assistant in Australia. Beginner-friendly with 80 hours of practical training in hospitals and aged care facilities. Gain a nationally recognised qualification and advance your healthcare career."
+    },
     "courseDuration": {
       "title": "Course Duration",
       "items": {
@@ -876,14 +880,39 @@
         "partners": "Private Hospitals, Medical Centres, Aged Care Centres"
       }
     },
-    "whyChoose": {
-      "title": "Why Choose This Programme?",
+    "courseBenefits": {
+      "title": "Course Benefits",
       "items": {
-        "supportiveLearning": "Learn in a supportive, face-to-face classroom environment",
-        "healthcareEnglish": "Build specialised English for healthcare communication",
-        "qualification": "Gain a nationally recognised qualification",
-        "workPlacement": "Complete 80 hours of work placement in real healthcare settings",
-        "suitableForAll": "Suitable for those with or without prior healthcare experience"
+        "fundamentalSkills": "Acquire fundamental skills to work in Australian hospitals and care facilities after certification",
+        "practicalExperience": "Gain practical experience through 80 hours of hands-on training",
+        "medicalEnglish": "Enhance medical English communication skills",
+        "beginnerFriendly": "Learning design accessible even for beginners",
+        "careerAdvancement": "Can be leveraged for future career advancement (nursing degree/advanced qualifications)"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "q1": {
+          "question": "How much does the nursing assistant course cost?",
+          "answer": "Please refer to our official pricelist for the most up-to-date tuition information."
+        },
+        "q2": {
+          "question": "Which visa allows me to enrol?",
+          "answer": "This course is suitable for students on a Working Holiday Visa or any visa type that allows you to study for 16 weeks without a Confirmation of Enrolment (CoE). We do not provide visa advice. Please check your visa conditions or consult a registered migration agent if you are unsure."
+        },
+        "q3": {
+          "question": "What about placement and support for clinical training?",
+          "answer": "ABM provides 80 hours of work placement as part of the course, arranged through our trusted industry partners. Upon completion, we also offer paid employment opportunities for eligible graduates, supporting your smooth transition into the healthcare workforce."
+        },
+        "q4": {
+          "question": "Can I find employment with this qualification?",
+          "answer": "Yes, our graduates often secure roles in Private Hospitals, Medical Centres, Aged Care Centres."
+        },
+        "q5": {
+          "question": "What if my English skills are insufficient?",
+          "answer": "The minimum entry requirement is IELTS 5.5 or equivalent. If you currently hold IELTS 4.5 or equivalent, you can enrol in the course with Plus Nursing English, which provides additional language support tailored to healthcare settings. If you do not have an English test result, you may have your English proficiency assessed through the ABM English Placement Test."
+        }
       }
     }
   }

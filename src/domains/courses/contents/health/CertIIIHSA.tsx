@@ -1,6 +1,22 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react';
+import { ChevronUpIcon } from 'lucide-react';
+
+const faqItems = [
+  { key: 'q1' },
+  { key: 'q2' },
+  { key: 'q3' },
+  { key: 'q4' },
+  { key: 'q5' },
+];
 
 function CertIIIHSA() {
   const t = useTranslations('hsaPage');
@@ -10,6 +26,7 @@ function CertIIIHSA() {
         {/* Dimmed overlay */}
 
         {/* Content */}
+
         <div className="relative z-10 bg-white">
           <div
             className="relative bg-cover bg-[20%_20%] bg-no-repeat h-120 p-20"
@@ -120,21 +137,54 @@ function CertIIIHSA() {
                 <li>{t('industryPartners.items.partners')}</li>
               </ul>
             </div>
-            {/*  Why Choose This Programme? */}
+            {/* Course Benefits */}
             <div className="text-gray-600 mb-8">
-              <h3 className="text-base font-bold mb-8">
-                {t('whyChoose.title')}
+              <h3 className="text-base font-bold mb-8 font-montserrat">
+                {t('courseBenefits.title')}
               </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                <li>{t('whyChoose.items.supportiveLearning')}</li>
-                <li>{t('whyChoose.items.healthcareEnglish')}</li>
-                <li>{t('whyChoose.items.qualification')}</li>
-                <li>{t('whyChoose.items.workPlacement')}</li>
-                <li>{t('whyChoose.items.suitableForAll')}</li>
+                <li>{t('courseBenefits.items.fundamentalSkills')}</li>
+                <li>{t('courseBenefits.items.practicalExperience')}</li>
+                <li>{t('courseBenefits.items.medicalEnglish')}</li>
+                <li>{t('courseBenefits.items.beginnerFriendly')}</li>
+                <li>{t('courseBenefits.items.careerAdvancement')}</li>
               </ul>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="w-full mt-40 mx-auto">
+        <h3 className="text-xl font-bold mb-20 font-montserrat">
+          {t('faq.title')}
+        </h3>
+
+        {faqItems.map((item, index) => (
+          <Disclosure
+            key={item.key}
+            as="div"
+            className={index > 0 ? 'mt-4' : ''}
+          >
+            {({ open }) => (
+              <>
+                <DisclosureButton className="flex w-full justify-between items-center bg-primary px-16 py-9 text-left text-sm font-medium text-white hover:bg-black cursor-pointer transition font-montserrat">
+                  <span className="text-lg">
+                    {t(`faq.items.${item.key}.question`)}
+                  </span>
+                  <ChevronUpIcon
+                    className={`h-24 w-24 transform transition-transform duration-200 ${
+                      open ? 'rotate-180' : ''
+                    }`}
+                  />
+                </DisclosureButton>
+                <DisclosurePanel className="px-16 pt-4 pb-2 text-sm text-gray-700">
+                  <p>{t(`faq.items.${item.key}.answer`)}</p>
+                </DisclosurePanel>
+              </>
+            )}
+          </Disclosure>
+        ))}
       </div>
     </div>
   );

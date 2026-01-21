@@ -211,7 +211,7 @@
   },
   "cookeryAndHospitality": {
     "title": "Comienza tu Carrera en Cocina y Hospitalidad",
-    "description": "Entra en una de las carreras más gratificantes y dinámicas de Australia con los cursos de Gestión de Cocina y Hospitalidad de ABM.",
+    "description": "Adquiera experiencia real en cocinas comerciales con el Certificado IV en Gestión de Cocinas. Aprenda técnicas culinarias avanzadas, liderazgo y formación en supervisión para desarrollar su carrera como chef en Australia.",
     "streams": "Especialidades",
     "kitchenManagementStream": "Especialidad en Gestión de Cocina",
     "foodAndBeverageStream": "Especialidad en Alimentos y Bebidas",
@@ -708,14 +708,14 @@
   "healthPage": {
     "metadata": {
       "title": "Cursos de Salud y Bienestar | ABM Further Education",
-      "description": "Comienza tu carrera en salud con ABM Further Education. Explora nuestros cursos de salud y bienestar incluyendo el Certificado III en Asistencia de Servicios de Salud con apoyo integral y colocación laboral."
+      "description": "Incluso sin experiencia en enfermería, puedes trabajar y aprender como asistente de enfermería (AIN) en hospitales y centros de atención en Australia. Es fácil empezar, incluso para principiantes en inglés, con abundantes oportunidades de formación práctica y empleo. Este popular programa está disponible para participantes con visados de trabajo y vacaciones y de estudiante."
     },
     "bannerTitle": "Salud y Bienestar",
-    "heading": "Comienza tu Carrera\nGratificante en Salud",
+    "heading": "Estudiar y trabajar\ncomo auxiliar de enfermería en Australia",
     "description": "Da tu primer paso hacia una carrera gratificante en salud con la Ruta de Carrera de Apoyo de Enfermería de ABM. Este programa integral está diseñado para estudiantes internacionales o nuevos participantes en el sector de salud que desean convertirse en trabajadores de apoyo calificados en hospitales y centros de atención para adultos mayores.",
     "nursingSupport": "Ruta de Carrera de Apoyo de Enfermería",
     "cert3Health": "HLT33115 Certificado III en Asistencia de Servicios de Salud",
-    "whyChoose": "¿Por qué elegir este programa?",
+    "whyChoose": "¿Por qué elegir el Certificado III en Asistencia en Servicios de Salud?",
     "realHealthcare": "Entornos de Salud Reales",
     "realHealthcareDesc": "Completa 80 horas de colocación laboral en entornos de salud reales",
     "workPlacement": "Apoyo de Colocación Laboral",
@@ -841,6 +841,10 @@
     }
   },
   "hsaPage": {
+    "metadata": {
+      "title": "Curso de Asistente de Enfermería (Certificate III in Health Services Assistance)",
+      "description": "Curso HLT33115 Certificate III in Health Services Assistance para convertirse en asistente de enfermería en Australia. Accesible para principiantes en inglés, con 80 horas de prácticas en hospitales e instalaciones de cuidado de mayores. Cualificación reconocida nacionalmente para impulsar tu carrera en salud."
+    },
     "courseDuration": {
       "title": "Duración del Curso",
       "items": {
@@ -871,14 +875,39 @@
         "partners": "Hospitales privados, centros médicos y centros de cuidado de personas mayores"
       }
     },
-    "whyChoose": {
-      "title": "¿Por qué elegir este programa?",
+    "courseBenefits": {
+      "title": "Beneficios del Curso",
       "items": {
-        "supportiveLearning": "Aprenda en un entorno presencial y de apoyo",
-        "healthcareEnglish": "Desarrolle inglés especializado para la comunicación en el sector salud",
-        "qualification": "Obtenga una cualificación reconocida a nivel nacional",
-        "workPlacement": "Complete 80 horas de prácticas en entornos reales de atención médica",
-        "suitableForAll": "Adecuado para personas con o sin experiencia previa en salud"
+        "fundamentalSkills": "Adquiera habilidades fundamentales para trabajar en hospitales e instalaciones de cuidado en Australia después de la certificación",
+        "practicalExperience": "Obtenga experiencia práctica a través de 80 horas de capacitación presencial",
+        "medicalEnglish": "Mejore sus habilidades de comunicación en inglés médico",
+        "beginnerFriendly": "Diseño de aprendizaje accesible incluso para principiantes",
+        "careerAdvancement": "Puede aprovecharse para el avance profesional futuro (carrera de enfermería/calificaciones avanzadas)"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": {
+        "q1": {
+          "question": "¿Cuánto cuesta el curso de asistente de enfermería?",
+          "answer": "Por favor, consulte nuestra lista de precios oficial para obtener la información más actualizada sobre las tarifas."
+        },
+        "q2": {
+          "question": "¿Qué visa me permite inscribirme?",
+          "answer": "Este curso es adecuado para estudiantes con visa de Working Holiday o cualquier tipo de visa que permita estudiar durante 16 semanas sin una Confirmación de Inscripción (CoE). No proporcionamos asesoramiento sobre visas. Por favor, verifique las condiciones de su visa o consulte a un agente de migración registrado si tiene dudas."
+        },
+        "q3": {
+          "question": "¿Qué hay sobre las prácticas y el apoyo para la formación clínica?",
+          "answer": "ABM proporciona 80 horas de prácticas laborales como parte del curso, organizadas a través de nuestros socios de la industria de confianza. Al finalizar, también ofrecemos oportunidades de empleo remunerado para graduados elegibles, apoyando su transición fluida hacia la fuerza laboral de la salud."
+        },
+        "q4": {
+          "question": "¿Puedo encontrar empleo con esta calificación?",
+          "answer": "Sí, nuestros graduados frecuentemente obtienen puestos en Hospitales Privados, Centros Médicos y Centros de Cuidado de Ancianos."
+        },
+        "q5": {
+          "question": "¿Qué pasa si mi inglés es insuficiente?",
+          "answer": "El requisito mínimo de entrada es IELTS 5.5 o equivalente. Si actualmente tiene IELTS 4.5 o equivalente, puede inscribirse en el curso con Plus Nursing English, que proporciona apoyo lingüístico adicional adaptado a entornos de atención médica. Si no tiene un resultado de prueba de inglés, puede evaluar su competencia en inglés a través de la Prueba de Ubicación de Inglés de ABM."
+        }
       }
     }
   }
