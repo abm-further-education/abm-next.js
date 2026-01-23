@@ -129,7 +129,7 @@ export async function POST(req: NextRequest) {
     // 관리자에게 발송 (CID 첨부)
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
-      to: 'info@abm.edu.au',
+      to: ['info@abm.edu.au', 'sales@abm.edu.au'],
       subject: `[Inquiry From Website] ${
         enquiry_type || ''
       } - ${first_name} ${last_name}`,

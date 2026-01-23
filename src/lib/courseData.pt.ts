@@ -27,7 +27,18 @@ export const courseData: CourseData[] = [
     link: '/cookery-and-hospitality-courses/fss',
     tags: ['segurança-alimentar', 'higiene', 'supervisor', 'nsw'],
   },
-
+  {
+    id: 'rsa',
+    title: 'Responsible Service of Alcohol (RSA) - NSW',
+    description: 'Os princípios do Serviço Responsável de Álcool.',
+    category: 'hospitality',
+    type: 'short-course',
+    duration: '1 dia',
+    price: 189,
+    image: '/rsa_banner.png',
+    link: '/cookery-and-hospitality-courses/rsa',
+    tags: ['RSA', 'Alcohol', 'liquor laws', 'nsw'],
+  },
   // Cursos de Hospitalidade
   {
     id: 'hospitality-diploma',
