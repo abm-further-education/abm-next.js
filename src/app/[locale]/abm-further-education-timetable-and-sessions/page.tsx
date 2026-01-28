@@ -1,7 +1,7 @@
-import React from 'react';
 import Banner from '@/components/common/Banner';
 import { getTranslations } from 'next-intl/server';
 import { allTimetableData, TimetableEntry } from '@/lib/timetableData';
+import { redirect } from 'next/navigation';
 
 // 데이터를 그룹화하는 함수
 function groupTimetableData(data: TimetableEntry[]) {
@@ -19,6 +19,8 @@ function groupTimetableData(data: TimetableEntry[]) {
 }
 
 async function TimetablePage() {
+  redirect('/');
+  
   const t = await getTranslations('timetable');
 
   return (
@@ -160,7 +162,7 @@ async function TimetablePage() {
                       </span>
                     </td>
                   </tr>
-                ))
+                )),
               )}
             </tbody>
           </table>

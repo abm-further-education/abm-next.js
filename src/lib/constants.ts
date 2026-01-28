@@ -189,10 +189,10 @@ export const studyWithUsMenu = [
     title: 'Academic Calendar',
     href: '/academic-calendar',
   },
-  {
-    title: 'Timetable',
-    href: '/abm-further-education-timetable-and-sessions',
-  },
+  // {
+  //   title: 'Timetable',
+  //   href: '/abm-further-education-timetable-and-sessions',
+  // },
   {
     title: 'Fees & Payment',
     href: '/abm-further-education-fee-schedule-2026',
@@ -535,10 +535,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
             title: 'academicCalendar',
             href: '/academic-calendar',
           },
-          {
-            title: 'timetable',
-            href: '/abm-further-education-timetable-and-sessions',
-          },
+          // {
+          //   title: 'timetable',
+          //   href: '/abm-further-education-timetable-and-sessions',
+          // },
           {
             title: 'feesAndPayment',
             href: '/abm-further-education-fee-schedule-2026',

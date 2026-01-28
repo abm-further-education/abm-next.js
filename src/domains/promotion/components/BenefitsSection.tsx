@@ -13,11 +13,8 @@ const BenefitsSection: React.FC = () => {
         {t('trialTitle')}
       </h3>
 
-      {/* Fitness Section */}
+      {/* What You'll Get - Common for both Fitness and HSA */}
       <div className="space-y-20">
-        <h4 className="text-xl font-semibold text-gray-800">
-          {t('fitnessCategory')}
-        </h4>
         <div className="space-y-20">
           <div className="flex items-center space-x-15">
             <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
@@ -37,38 +34,11 @@ const BenefitsSection: React.FC = () => {
             </div>
             <p className="text-neutral-700">{t('benefit3')}</p>
           </div>
-        </div>
-      </div>
-
-      {/* HSA Section */}
-      <div className="space-y-20">
-        <h4 className="text-xl font-semibold text-gray-800">
-          {t('hsaCategory')}
-        </h4>
-        <div className="space-y-20">
           <div className="flex items-center space-x-15">
             <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
               <Check size={20} className="text-white" />
             </div>
-            <p className="text-neutral-700">{t('hsaBenefit1')}</p>
-          </div>
-          <div className="flex items-center space-x-15">
-            <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
-              <Check size={20} className="text-white" />
-            </div>
-            <p className="text-neutral-700">{t('hsaBenefit2')}</p>
-          </div>
-          <div className="flex items-center space-x-15">
-            <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
-              <Check size={20} className="text-white" />
-            </div>
-            <p className="text-neutral-700">{t('hsaBenefit3')}</p>
-          </div>
-          <div className="flex items-center space-x-15">
-            <div className="w-30 h-30 bg-primary rounded-full mt-5 flex items-center justify-center">
-              <Check size={20} className="text-white" />
-            </div>
-            <p className="text-neutral-700">{t('hsaBenefit4')}</p>
+            <p className="text-neutral-700">{t('benefit4')}</p>
           </div>
         </div>
       </div>
@@ -84,8 +54,7 @@ const BenefitsSection: React.FC = () => {
           </h5>
           <ul className="space-y-15 text-neutral-700">
             <li>• {t('expectation1')}</li>
-            <li>• {t('expectation3')}</li>
-            <li>• {t('expectation4')}</li>
+            <li>• {t('expectation2')}</li>
           </ul>
         </div>
 
@@ -98,7 +67,6 @@ const BenefitsSection: React.FC = () => {
             <li>• {t('hsaExpectation1')}</li>
             <li>• {t('hsaExpectation2')}</li>
             <li>• {t('hsaExpectation3')}</li>
-            <li>• {t('hsaExpectation4')}</li>
           </ul>
         </div>
       </div>
