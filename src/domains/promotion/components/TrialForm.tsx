@@ -1,15 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './DatePicker.css';
 import { ko } from 'date-fns/locale';
+import { CourseTypeContext } from './CourseTypeContext';
 
 interface FormData {
   type: string;
+  courseType: string;
   date: string;
   name: string;
   email: string;
@@ -21,6 +23,7 @@ interface FormData {
 const TrialForm: React.FC = () => {
   const t = useTranslations('promotion');
   const router = useRouter();
+  const { setCourseType } = useContext(CourseTypeContext);
 
   // 현재 locale 감지
   const currentLocale =
@@ -32,6 +35,7 @@ const TrialForm: React.FC = () => {
   registerLocale('ko', ko);
   const [formData, setFormData] = useState<FormData>({
     type: '',
+    courseType: '',
     date: '',
     name: '',
     email: '',
@@ -148,14 +152,27 @@ const TrialForm: React.FC = () => {
   ) => {
     const { name, value } = e.target;
 
-    // 타입이 변경되면 날짜 필드 초기화
+    // 타입이 변경되면 courseType과 날짜 필드 초기화
     if (name === 'type') {
       setFormData((prev) => ({
         ...prev,
         [name]: value,
+        courseType: '', // 타입 변경 시 courseType 초기화
         date: '', // 타입 변경 시 날짜 초기화
       }));
       setSelectedDate(null); // react-datepicker 상태도 초기화
+      return;
+    }
+
+    // courseType이 변경되면 날짜 필드 초기화 (HSA일 때는 날짜가 없으므로)
+    if (name === 'courseType') {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+        date: '', // courseType 변경 시 날짜 초기화
+      }));
+      setSelectedDate(null); // react-datepicker 상태도 초기화
+      setCourseType(value); // Context에 courseType 업데이트
       return;
     }
 
@@ -199,7 +216,11 @@ const TrialForm: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          // HSA일 때는 date를 빈 문자열로 전송
+          date: formData.courseType === 'hsa' ? '' : formData.date,
+        }),
       });
 
       if (response.ok) {
@@ -227,9 +248,15 @@ const TrialForm: React.FC = () => {
     }
   };
 
+  // HSA일 때는 date가 필수가 아니고, Fitness일 때는 date가 필수
   const isFormValid =
     formData.type &&
-    formData.date &&
+    (formData.type === 'one-day-trial' ? formData.courseType : true) &&
+    (formData.type === 'one-day-trial' && formData.courseType === 'fitness'
+      ? formData.date
+      : formData.type === 'campus-tour'
+        ? formData.date
+        : true) &&
     formData.name &&
     formData.email &&
     formData.phone;
@@ -267,14 +294,41 @@ const TrialForm: React.FC = () => {
           </select>
         </div>
 
-        {/* Date Selection */}
-        <div>
-          <label
-            htmlFor="date"
-            className="block text-sm font-medium text-gray-700 mb-10"
-          >
-            {t('dateLabel')} *
-          </label>
+        {/* Course Type Selection (only for one-day-trial) */}
+        {formData.type === 'one-day-trial' && (
+          <div>
+            <label
+              htmlFor="courseType"
+              className="block text-sm font-medium text-gray-700 mb-10"
+            >
+              {t('courseTypeLabel')} *
+            </label>
+            <select
+              id="courseType"
+              name="courseType"
+              value={formData.courseType}
+              onChange={handleInputChange}
+              required
+              className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
+            >
+              <option value="">{t('selectCourseType')}</option>
+              <option value="fitness">{t('fitness')}</option>
+              <option value="hsa">{t('hsa')}</option>
+            </select>
+          </div>
+        )}
+
+        {/* Date Selection (only for campus-tour or fitness one-day-trial) */}
+        {formData.type === 'campus-tour' ||
+        (formData.type === 'one-day-trial' &&
+          formData.courseType === 'fitness') ? (
+          <div>
+            <label
+              htmlFor="date"
+              className="block text-sm font-medium text-gray-700 mb-10"
+            >
+              {t('dateLabel')} *
+            </label>
 
           {formData.type === 'campus-tour' ? (
             // Campus Tour: React DatePicker (주말 제외)
@@ -314,7 +368,8 @@ const TrialForm: React.FC = () => {
               ))}
             </select>
           )}
-        </div>
+          </div>
+        ) : null}
 
         {/* Name */}
         <div>

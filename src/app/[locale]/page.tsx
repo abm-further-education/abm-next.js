@@ -29,7 +29,7 @@ export default async function Home({
       newsList.map(async (news) => ({
         ...news,
         image: await getR2ImageUrl(news.image),
-      }))
+      })),
     );
     // Supabase 데이터가 없으면 기존 데이터 사용 (호환성을 위해 변환)
     if (newsList.length === 0) {
@@ -101,12 +101,13 @@ export default async function Home({
               content: '',
             },
             {
-              imgPath: '/home/banner.png',
-              title: 'Book Your Free Campus, Gym & Kitchen Tour or 1-Day Trial',
-              content: '',
+              imgPath: '/promotion_3.png',
+              title: 'Get a Free 1-Day Trial Now',
+              content:
+                'Book a Free Tour of Our Campus, Gym & Kitchen, or Enjoy a Fitness & HSA 1-Day Trial.',
               linkButton: {
                 href: '/promotion',
-                text: 'Book Your Free Campus, Gym & Kitchen Tour or 1-Day Trial',
+                text: 'Try It Now',
               },
             },
           ]}

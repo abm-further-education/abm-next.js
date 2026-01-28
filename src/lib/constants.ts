@@ -195,7 +195,7 @@ export const studyWithUsMenu = [
   },
   {
     title: 'Fees & Payment',
-    href: '/abm-further-education-fee-schedule-2025',
+    href: '/abm-further-education-fee-schedule-2026',
   },
   {
     title: 'Entry Requirements',
@@ -541,7 +541,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
           },
           {
             title: 'feesAndPayment',
-            href: '/abm-further-education-fee-schedule-2025',
+            href: '/abm-further-education-fee-schedule-2026',
           },
           {
             title: 'entryRequirements',
