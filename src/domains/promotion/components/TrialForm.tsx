@@ -129,6 +129,30 @@ const TrialForm: React.FC = () => {
     return true;
   };
 
+  // HSA 트라이얼용 날짜 필터링 함수 (목요일, 금요일만 선택 가능, 12월 전체, 1월 4일까지 제외)
+  const filterHsaDate = (date: Date) => {
+    const dayOfWeek = date.getDay();
+    const month = date.getMonth(); // 0-based (0=1월, 11=12월)
+    const day = date.getDate();
+
+    // 목요일(4), 금요일(5)만 허용
+    if (dayOfWeek !== 4 && dayOfWeek !== 5) {
+      return false;
+    }
+
+    // 12월 전체 제외
+    if (month === 11) {
+      return false;
+    }
+
+    // 1월 4일까지 제외
+    if (month === 0 && day <= 4) {
+      return false;
+    }
+
+    return true;
+  };
+
   // react-datepicker용 날짜 변경 핸들러
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
@@ -148,7 +172,7 @@ const TrialForm: React.FC = () => {
   const handleInputChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     const { name, value } = e.target;
 
@@ -184,7 +208,7 @@ const TrialForm: React.FC = () => {
       isWeekend(value)
     ) {
       // 주말 선택 시 경고 표시하고 값 설정하지 않음
-      alert('주말은 선택할 수 없습니다. 평일을 선택해주세요.');
+      alert(t('weekendsNotAvailable'));
       return;
     }
 
@@ -204,7 +228,7 @@ const TrialForm: React.FC = () => {
       formData.date &&
       isWeekend(formData.date)
     ) {
-      alert('주말은 선택할 수 없습니다. 평일을 선택해주세요.');
+      alert(t('weekendsNotAvailable'));
       setIsSubmitting(false);
       return;
     }
@@ -218,8 +242,6 @@ const TrialForm: React.FC = () => {
         },
         body: JSON.stringify({
           ...formData,
-          // HSA일 때는 date를 빈 문자열로 전송
-          date: formData.courseType === 'hsa' ? '' : formData.date,
         }),
       });
 
@@ -248,11 +270,11 @@ const TrialForm: React.FC = () => {
     }
   };
 
-  // HSA일 때는 date가 필수가 아니고, Fitness일 때는 date가 필수
+  // 모든 one-day-trial (fitness, hsa 모두)과 campus-tour에서 date가 필수
   const isFormValid =
     formData.type &&
     (formData.type === 'one-day-trial' ? formData.courseType : true) &&
-    (formData.type === 'one-day-trial' && formData.courseType === 'fitness'
+    (formData.type === 'one-day-trial'
       ? formData.date
       : formData.type === 'campus-tour'
         ? formData.date
@@ -318,10 +340,9 @@ const TrialForm: React.FC = () => {
           </div>
         )}
 
-        {/* Date Selection (only for campus-tour or fitness one-day-trial) */}
+        {/* Date Selection (for campus-tour or one-day-trial with courseType selected) */}
         {formData.type === 'campus-tour' ||
-        (formData.type === 'one-day-trial' &&
-          formData.courseType === 'fitness') ? (
+        (formData.type === 'one-day-trial' && formData.courseType) ? (
           <div>
             <label
               htmlFor="date"
@@ -330,44 +351,71 @@ const TrialForm: React.FC = () => {
               {t('dateLabel')} *
             </label>
 
-          {formData.type === 'campus-tour' ? (
-            // Campus Tour: React DatePicker (주말 제외)
-            <div>
-              <DatePicker
-                selected={selectedDate}
-                onChange={handleDateChange}
-                filterDate={filterDate}
-                minDate={new Date(getDatePickerConstraints().min)}
-                maxDate={new Date(getDatePickerConstraints().max)}
-                dateFormat="yyyy-MM-dd"
-                placeholderText={t('selectDate')}
-                className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
-                wrapperClassName="w-full"
-                locale={currentLocale === 'kr' ? 'ko' : 'en'}
-                showPopperArrow={false}
-                popperPlacement="bottom-start"
+            {formData.type === 'campus-tour' ? (
+              // Campus Tour: React DatePicker (주말 제외)
+              <div>
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={handleDateChange}
+                  filterDate={filterDate}
+                  minDate={new Date(getDatePickerConstraints().min)}
+                  maxDate={new Date(getDatePickerConstraints().max)}
+                  dateFormat="yyyy-MM-dd"
+                  placeholderText={t('selectDate')}
+                  className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  wrapperClassName="w-full"
+                  locale={currentLocale === 'kr' ? 'ko' : 'en'}
+                  showPopperArrow={false}
+                  popperPlacement="bottom-start"
+                  required
+                />
+                <p className="text-xs text-gray-500 mt-5">
+                  {t('weekdaysOnly')}
+                </p>
+              </div>
+            ) : formData.courseType === 'hsa' ? (
+              // HSA Trial: React DatePicker (목요일, 금요일만)
+              <div>
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={handleDateChange}
+                  filterDate={filterHsaDate}
+                  minDate={new Date(getDatePickerConstraints().min)}
+                  maxDate={new Date(getDatePickerConstraints().max)}
+                  dateFormat="yyyy-MM-dd"
+                  placeholderText={t('selectDate')}
+                  className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  wrapperClassName="w-full"
+                  locale={currentLocale === 'kr' ? 'ko' : 'en'}
+                  showPopperArrow={false}
+                  popperPlacement="bottom-start"
+                  required
+                />
+                <p className="text-xs text-gray-500 mt-5">
+                  {t('hsaTrialDays')}
+                </p>
+                <p className="text-xs text-primary font-medium mt-3">
+                  {t('hsaTrialTime')}
+                </p>
+              </div>
+            ) : (
+              // Fitness Trial: Dropdown (월, 화, 수만)
+              <select
+                id="date"
+                name="date"
+                value={formData.date}
+                onChange={handleInputChange}
                 required
-              />
-              <p className="text-xs text-gray-500 mt-5">{t('weekdaysOnly')}</p>
-            </div>
-          ) : (
-            // Fitness Trial: Dropdown (월, 화, 수만)
-            <select
-              id="date"
-              name="date"
-              value={formData.date}
-              onChange={handleInputChange}
-              required
-              className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
-            >
-              <option value="">{t('selectDate')}</option>
-              {getAvailableDates().map((date) => (
-                <option key={date.value} value={date.value}>
-                  {date.label}
-                </option>
-              ))}
-            </select>
-          )}
+                className="w-full px-15 py-12 border border-gray-300 rounded-10 focus:ring-2 focus:ring-primary focus:border-transparent"
+              >
+                <option value="">{t('selectDate')}</option>
+                {getAvailableDates().map((date) => (
+                  <option key={date.value} value={date.value}>
+                    {date.label}
+                  </option>
+                ))}
+              </select>
+            )}
           </div>
         ) : null}
 

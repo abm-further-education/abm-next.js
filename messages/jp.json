@@ -39,7 +39,15 @@
       "emailInvalid": "メールアドレスの形式が正しくありません"
     },
     "preferredDate": "希望日",
-    "weekdaysOnly": "平日のみ選択可能です。"
+    "weekdaysOnly": "平日のみ選択可能です。",
+    "selectDate": "日付を選択",
+    "oneDayTrial": "1日無料体験",
+    "courseTypeLabel": "コースタイプ",
+    "selectCourseType": "コースタイプを選択",
+    "fitness": "フィットネス",
+    "hsa": "健康サービス支援 (HSA)",
+    "hsaTrialDays": "HSA体験は木曜日と金曜日のみ実施しています。",
+    "hsaTrialTime": "体験授業は午前10時開始です"
   },
   "courses": {
     "title": "将来につながる最適なコースを見つけよう",
@@ -126,6 +134,8 @@
     "dateLabel": "希望日",
     "selectDate": "日付を選択",
     "weekdaysOnly": "土日は実施していません。平日のみ選択可能です。",
+    "hsaTrialDays": "HSA体験は木曜日と金曜日のみ実施しています。",
+    "hsaTrialTime": "体験授業は午前10時開始です",
     "nameLabel": "氏名（フルネーム）",
     "namePlaceholder": "氏名を入力",
     "emailLabel": "メールアドレス",

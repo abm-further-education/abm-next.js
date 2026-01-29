@@ -39,7 +39,15 @@
       "emailInvalid": "Invalid email address"
     },
     "preferredDate": "Preferred Date",
-    "weekdaysOnly": "Weekdays only (Monday to Friday)"
+    "weekdaysOnly": "Weekdays only (Monday to Friday)",
+    "selectDate": "Select a date",
+    "oneDayTrial": "1-Day Free Trial",
+    "courseTypeLabel": "Course Type",
+    "selectCourseType": "Select course type",
+    "fitness": "Fitness",
+    "hsa": "Health Services Assistance (HSA)",
+    "hsaTrialDays": "HSA trial sessions are available on Thursdays and Fridays only.",
+    "hsaTrialTime": "Trial class starts at 10:00 AM"
   },
   "courses": {
     "title": "Courses | Business, Hospitality & Health Courses | ABM Further Education",
@@ -126,6 +134,8 @@
     "dateLabel": "Preferred Date",
     "selectDate": "Select a date",
     "weekdaysOnly": "Please note: Weekends are not available. Only weekdays can be selected.",
+    "hsaTrialDays": "HSA trial sessions are available on Thursdays and Fridays only.",
+    "hsaTrialTime": "Trial class starts at 10:00 AM",
     "nameLabel": "Full Name",
     "namePlaceholder": "Enter your full name",
     "emailLabel": "Email Address",

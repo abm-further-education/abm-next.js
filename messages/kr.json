@@ -39,7 +39,15 @@
       "emailInvalid": "유효하지 않은 이메일 주소입니다"
     },
     "preferredDate": "희망 날짜",
-    "weekdaysOnly": "참고: 주말은 선택할 수 없습니다. 평일만 선택 가능합니다."
+    "weekdaysOnly": "참고: 주말은 선택할 수 없습니다. 평일만 선택 가능합니다.",
+    "selectDate": "날짜 선택",
+    "oneDayTrial": "1일 무료 체험",
+    "courseTypeLabel": "과정 유형",
+    "selectCourseType": "과정 유형을 선택하세요",
+    "fitness": "피트니스",
+    "hsa": "건강 서비스 지원 (HSA)",
+    "hsaTrialDays": "HSA 체험 수업은 목요일과 금요일에만 가능합니다.",
+    "hsaTrialTime": "체험 수업은 오전 10시에 시작합니다"
   },
   "courses": {
     "title": "ABM 코스",
@@ -126,6 +134,8 @@
     "dateLabel": "희망 날짜",
     "selectDate": "날짜 선택",
     "weekdaysOnly": "참고: 주말은 선택할 수 없습니다. 평일만 선택 가능합니다.",
+    "hsaTrialDays": "HSA 체험 수업은 목요일과 금요일에만 가능합니다.",
+    "hsaTrialTime": "체험 수업은 오전 10시에 시작합니다",
     "nameLabel": "전체 이름",
     "namePlaceholder": "전체 이름을 입력하세요",
     "emailLabel": "이메일 주소",

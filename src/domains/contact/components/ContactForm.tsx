@@ -23,6 +23,7 @@ type ContactFormData = {
   selected_course?: string;
   other_course?: string;
   preferred_date?: string;
+  trial_course_type?: string;
 };
 
 function Contact() {
@@ -49,15 +50,28 @@ function Contact() {
 
   const enquiryType = watch('enquiry_type');
   const selectedCourse = watch('selected_course');
+  const trialCourseType = watch('trial_course_type');
   const isBookCampusTour = enquiryType === t('bookCampusTour');
+  const isOneDayTrial = enquiryType === t('oneDayTrial');
 
-  // enquiry_type이 변경되면 selectedDate 초기화
+  // enquiry_type이 변경되면 selectedDate 및 trial_course_type 초기화
   React.useEffect(() => {
-    if (!isBookCampusTour) {
+    if (!isBookCampusTour && !isOneDayTrial) {
       setSelectedDate(null);
       setValue('preferred_date', '');
     }
-  }, [enquiryType, isBookCampusTour, setValue]);
+    if (!isOneDayTrial) {
+      setValue('trial_course_type', '');
+    }
+  }, [enquiryType, isBookCampusTour, isOneDayTrial, setValue]);
+
+  // trial_course_type이 변경되면 selectedDate 초기화
+  React.useEffect(() => {
+    if (isOneDayTrial) {
+      setSelectedDate(null);
+      setValue('preferred_date', '');
+    }
+  }, [trialCourseType, isOneDayTrial, setValue]);
 
   // 캠퍼스 투어용: 최소 날짜와 최대 날짜 계산
   const getDatePickerConstraints = () => {
@@ -101,6 +115,59 @@ function Contact() {
     }
 
     return true;
+  };
+
+  // HSA 트라이얼용 날짜 필터링 함수 (목요일, 금요일만 선택 가능, 12월 전체, 1월 4일까지 제외)
+  const filterHsaDate = (date: Date) => {
+    const dayOfWeek = date.getDay();
+    const month = date.getMonth(); // 0-based (0=1월, 11=12월)
+    const day = date.getDate();
+
+    // 목요일(4), 금요일(5)만 허용
+    if (dayOfWeek !== 4 && dayOfWeek !== 5) {
+      return false;
+    }
+
+    // 12월 전체 제외
+    if (month === 11) {
+      return false;
+    }
+
+    // 1월 4일까지 제외
+    if (month === 0 && day <= 4) {
+      return false;
+    }
+
+    return true;
+  };
+
+  // 피트니스 트라이얼용: 월, 화, 수만 선택 가능한 날짜 생성 (오늘 제외, 12월 제외)
+  const getAvailableFitnessDates = () => {
+    const dates = [];
+    const today = new Date();
+    const currentDate = new Date(today);
+
+    // 다음 4주 동안의 월, 화, 수 날짜 생성 (오늘부터 1일 후부터 시작)
+    for (let i = 1; i < 29; i++) {
+      currentDate.setDate(today.getDate() + i);
+      const dayOfWeek = currentDate.getDay();
+      const month = currentDate.getMonth(); // 0-based (0=1월, 11=12월)
+
+      // 월요일(1), 화요일(2), 수요일(3)만 포함, 12월 제외
+      if (dayOfWeek >= 1 && dayOfWeek <= 3 && month !== 11) {
+        dates.push({
+          value: currentDate.toISOString().split('T')[0],
+          label: currentDate.toLocaleDateString('en-US', {
+            weekday: 'long',
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+          }),
+        });
+      }
+    }
+
+    return dates;
   };
 
   // react-datepicker용 날짜 변경 핸들러
@@ -167,6 +234,7 @@ function Contact() {
   const options = [
     t('generalEnquiry'),
     t('bookCampusTour'),
+    t('oneDayTrial'),
     t('becomeStudent'),
     t('becomeAgent'),
     'Private Group Booking for Custom Program',
@@ -339,6 +407,76 @@ function Contact() {
               <p className="text-xs text-gray-500">
                 {t('weekdaysOnly') || 'Weekdays only (Monday to Friday)'}
               </p>
+            </div>
+          )}
+
+          {/* 1-Day Trial 선택 시 표시되는 필드 */}
+          {isOneDayTrial && (
+            <div className="flex flex-col gap-10">
+              <label htmlFor="trial_course_type" className="text-black">
+                {t('courseTypeLabel') || 'Course Type'} *
+              </label>
+              <select
+                {...register('trial_course_type')}
+                id="trial_course_type"
+                className="w-full h-40 bg-white border border-neutral-600 text-black text-sm focus:ring-secondary focus:border-secondary p-2.5"
+              >
+                <option value="">{t('selectCourseType') || 'Select course type'}</option>
+                <option value="fitness">{t('fitness') || 'Fitness'}</option>
+                <option value="hsa">{t('hsa') || 'Health Services Assistance (HSA)'}</option>
+              </select>
+
+              {/* Fitness 선택 시 드롭다운 */}
+              {trialCourseType === 'fitness' && (
+                <div className="flex flex-col gap-10">
+                  <label htmlFor="preferred_date" className="text-black">
+                    {t('preferredDate') || 'Preferred Date'} *
+                  </label>
+                  <select
+                    {...register('preferred_date')}
+                    id="preferred_date"
+                    className="w-full h-40 bg-white border border-neutral-600 text-black text-sm focus:ring-secondary focus:border-secondary p-2.5"
+                    required
+                  >
+                    <option value="">{t('selectDate') || 'Select a date'}</option>
+                    {getAvailableFitnessDates().map((date) => (
+                      <option key={date.value} value={date.value}>
+                        {date.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
+
+              {/* HSA 선택 시 DatePicker (목, 금만) */}
+              {trialCourseType === 'hsa' && (
+                <div className="flex flex-col gap-10">
+                  <label htmlFor="preferred_date" className="text-black">
+                    {t('preferredDate') || 'Preferred Date'} *
+                  </label>
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={handleDateChange}
+                    filterDate={filterHsaDate}
+                    minDate={new Date(getDatePickerConstraints().min)}
+                    maxDate={new Date(getDatePickerConstraints().max)}
+                    dateFormat="yyyy-MM-dd"
+                    placeholderText={t('selectDate') || 'Select a date'}
+                    className="w-full h-40 bg-white border border-neutral-600 text-black text-sm focus:ring-secondary focus:border-secondary p-2.5"
+                    wrapperClassName="w-full"
+                    locale={currentLocale === 'kr' ? 'ko' : 'en'}
+                    showPopperArrow={false}
+                    popperPlacement="bottom-start"
+                    required
+                  />
+                  <p className="text-xs text-gray-500">
+                    {t('hsaTrialDays') || 'HSA trial sessions are available on Thursdays and Fridays only.'}
+                  </p>
+                  <p className="text-xs text-primary font-medium">
+                    {t('hsaTrialTime') || 'Trial class starts at 10:00 AM'}
+                  </p>
+                </div>
+              )}
             </div>
           )}
 

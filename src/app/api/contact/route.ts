@@ -18,7 +18,17 @@ export async function POST(req: NextRequest) {
       selected_course,
       other_course,
       preferred_date,
+      trial_course_type,
     } = await req.json();
+
+    // 코스 타입별 이름 정의
+    const courseTypeNames: Record<string, string> = {
+      fitness: 'Fitness',
+      hsa: 'Health Services Assistance (HSA)',
+    };
+
+    // 1-Day Trial 여부 확인
+    const isOneDayTrial = enquiry_type?.includes('1-Day') || enquiry_type?.includes('Trial');
 
     // SMTP 트랜스포터
     const transporter = nodemailer.createTransport({
@@ -75,6 +85,35 @@ export async function POST(req: NextRequest) {
                 nationality || 'Not specified'
               }</p>
             </div>
+
+            ${
+              isOneDayTrial && (trial_course_type || preferred_date)
+                ? `<div style="background-color:#d4edda;border:1px solid #c3e6cb;padding:20px;border-radius:8px;margin-bottom:20px;">
+                     <h3 style="color:#155724;margin:0 0 15px 0;">1-Day Trial Details</h3>
+                     ${
+                       trial_course_type
+                         ? `<p style="margin:8px 0;color:#155724;"><strong>Course Type:</strong> ${courseTypeNames[trial_course_type] || trial_course_type}</p>`
+                         : ''
+                     }
+                     ${
+                       preferred_date
+                         ? `<p style="margin:8px 0;color:#155724;"><strong>Preferred Date:</strong> ${new Date(
+                             preferred_date
+                           ).toLocaleDateString('en-AU', {
+                             year: 'numeric',
+                             month: 'long',
+                             day: 'numeric',
+                           })}</p>`
+                         : ''
+                     }
+                     ${
+                       trial_course_type === 'hsa'
+                         ? `<p style="margin:8px 0;color:#155724;"><strong>Trial Time:</strong> 10:00 AM</p>`
+                         : ''
+                     }
+                   </div>`
+                : ''
+            }
 
             ${
               enquiry_type === 'Private Group Booking for Custom Program' &&
@@ -179,6 +218,34 @@ export async function POST(req: NextRequest) {
                   }</p>
                   <p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Name:</strong> ${first_name} ${last_name}</p>
                   <p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Email:</strong> ${email}</p>
+                  ${
+                    isOneDayTrial && (trial_course_type || preferred_date)
+                      ? `<div style="margin-top:20px;padding-top:20px;border-top:1px solid #e9ecef;">
+                           <h4 style="color:#000000;margin:0 0 15px 0;">Trial Details</h4>
+                           ${
+                             trial_course_type
+                               ? `<p style="margin:8px 0;color:#333333;font-size:16px;"><strong>Course Type:</strong> ${courseTypeNames[trial_course_type] || trial_course_type}</p>`
+                               : ''
+                           }
+                           ${
+                             preferred_date
+                               ? `<p style="margin:8px 0;color:#333333;font-size:16px;"><strong>Preferred Date:</strong> ${new Date(
+                                   preferred_date
+                                 ).toLocaleDateString('en-AU', {
+                                   year: 'numeric',
+                                   month: 'long',
+                                   day: 'numeric',
+                                 })}</p>`
+                               : ''
+                           }
+                           ${
+                             trial_course_type === 'hsa'
+                               ? `<p style="margin:8px 0;color:#333333;font-size:16px;"><strong>Trial Time:</strong> 10:00 AM</p>`
+                               : ''
+                           }
+                         </div>`
+                      : ''
+                  }
                   ${
                     enquiry_type ===
                       'Private Group Booking for Custom Program' &&

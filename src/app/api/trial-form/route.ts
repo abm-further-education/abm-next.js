@@ -7,7 +7,7 @@ export const runtime = 'nodejs';
 
 export async function POST(req: NextRequest) {
   try {
-    const { type, date, name, email, phone, howDidYouFindUs, goal } =
+    const { type, courseType, date, name, email, phone, howDidYouFindUs, goal } =
       await req.json();
 
     // SMTP 트랜스포터
@@ -21,6 +21,12 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    // 코스 타입별 이름 정의
+    const courseTypeNames: Record<string, string> = {
+      fitness: 'Fitness',
+      hsa: 'Health Services Assistance (HSA)',
+    };
+
     // 타입별 정보 정의
     const typeInfo = {
       'campus-tour': {
@@ -30,7 +36,9 @@ export async function POST(req: NextRequest) {
       },
       'one-day-trial': {
         title: '1-Day Free Trial Request',
-        serviceName: 'Fitness Course Trial',
+        serviceName: courseType
+          ? `${courseTypeNames[courseType] || courseType} Course Trial`
+          : 'Course Trial',
         description: '1-Day Free Trial Request',
       },
     };
@@ -77,7 +85,17 @@ export async function POST(req: NextRequest) {
             <!-- Customer Information -->
             <div style="background-color:#ffffff;border:1px solid #e9ecef;padding:20px;border-radius:8px;margin-bottom:20px;">
               <h3 style="color:#000000;margin:0 0 15px 0;">Request Information</h3>
-              <p style="margin:8px 0;color:#333333;"><strong>Preferred Date:</strong> ${date}</p>
+              ${
+                type === 'one-day-trial' && courseType
+                  ? `<p style="margin:8px 0;color:#333333;"><strong>Course Type:</strong> ${courseTypeNames[courseType] || courseType}</p>`
+                  : ''
+              }
+              <p style="margin:8px 0;color:#333333;"><strong>Preferred Date:</strong> ${date || 'Not specified'}</p>
+              ${
+                courseType === 'hsa'
+                  ? `<p style="margin:8px 0;color:#333333;"><strong>Trial Time:</strong> 10:00 AM</p>`
+                  : ''
+              }
               <p style="margin:8px 0;color:#333333;"><strong>Name:</strong> ${name}</p>
               <p style="margin:8px 0;color:#333333;"><strong>Email:</strong> ${email}</p>
               <p style="margin:8px 0;color:#333333;"><strong>Phone:</strong> ${phone}</p>
@@ -91,7 +109,7 @@ export async function POST(req: NextRequest) {
                   ? `<p style="margin:8px 0;color:#333333;"><strong>${
                       type === 'campus-tour'
                         ? 'Interest/Questions'
-                        : 'Fitness Goal'
+                        : 'Goal'
                     }:</strong> ${goal}</p>`
                   : ''
               }
@@ -104,7 +122,9 @@ export async function POST(req: NextRequest) {
                 ${
                   type === 'campus-tour'
                     ? 'Please contact the customer to schedule the campus tour and provide further details about our facilities and courses.'
-                    : 'Please contact the customer to confirm the trial session and provide further details about the fitness course.'
+                    : courseType === 'hsa'
+                      ? 'Please contact the customer to confirm the HSA trial session (10:00 AM on selected date) and provide further details about the Health Services Assistance course.'
+                      : 'Please contact the customer to confirm the trial session and provide further details about the fitness course.'
                 }
               </p>
             </div>
@@ -122,7 +142,11 @@ export async function POST(req: NextRequest) {
           <div style="background-color:#000000;padding:30px;text-align:center;">
             <p style="margin:0;color:#ffffff;font-size:16px;font-weight:bold;">ABM Further Education</p>
             <p style="margin:10px 0 0 0;color:#ffffff;font-size:16px;">${
-              type === 'campus-tour' ? 'Admissions Team' : 'Fitness Course Team'
+              type === 'campus-tour'
+                ? 'Admissions Team'
+                : courseType === 'hsa'
+                  ? 'HSA Course Team'
+                  : 'Fitness Course Team'
             }</p>
           </div>
         </div>
@@ -135,7 +159,11 @@ export async function POST(req: NextRequest) {
       from: process.env.FROM_EMAIL,
       to: process.env.ADMIN_EMAIL || 'sales@abm.edu.au',
       subject: `[${
-        type === 'campus-tour' ? 'Campus Tour' : 'Fitness Trial'
+        type === 'campus-tour'
+          ? 'Campus Tour'
+          : courseType === 'hsa'
+            ? 'HSA Trial'
+            : 'Fitness Trial'
       }] New ${currentType.description} from ${name}`,
       html: adminHtml,
       attachments: [
@@ -177,7 +205,17 @@ export async function POST(req: NextRequest) {
                 <h3 style="color:#000000;margin:0 0 15px 0;">Your ${
                   type === 'campus-tour' ? 'Campus Tour' : 'Trial'
                 } Details</h3>
-                <p style="margin:8px 0;color:#333333;"><strong>Preferred Date:</strong> ${date}</p>
+                ${
+                  type === 'one-day-trial' && courseType
+                    ? `<p style="margin:8px 0;color:#333333;"><strong>Course Type:</strong> ${courseTypeNames[courseType] || courseType}</p>`
+                    : ''
+                }
+                <p style="margin:8px 0;color:#333333;"><strong>Preferred Date:</strong> ${date || 'To be confirmed'}</p>
+                ${
+                  courseType === 'hsa'
+                    ? `<p style="margin:8px 0;color:#333333;"><strong>Trial Time:</strong> 10:00 AM</p>`
+                    : ''
+                }
                 <p style="margin:8px 0;color:#333333;"><strong>Name:</strong> ${name}</p>
               </div>
 
@@ -185,7 +223,9 @@ export async function POST(req: NextRequest) {
                 ${
                   type === 'campus-tour'
                     ? "We've received your request for a campus tour. Our admissions team will review your application and contact you within 24 hours to confirm the details and schedule your campus visit."
-                    : "We've received your request for a 1-day free trial of our fitness course. Our team will review your application and contact you within 24 hours to confirm the details and schedule your trial session."
+                    : courseType === 'hsa'
+                      ? "We've received your request for a 1-day free trial of our Health Services Assistance (HSA) course. Our team will review your application and contact you within 24 hours to confirm the details and schedule your trial session."
+                      : "We've received your request for a 1-day free trial of our fitness course. Our team will review your application and contact you within 24 hours to confirm the details and schedule your trial session."
                 }
               </p>
 
@@ -199,10 +239,15 @@ export async function POST(req: NextRequest) {
                        <li style="margin-bottom:8px;">Meet with our experienced trainers and staff</li>
                        <li style="margin-bottom:8px;">Overview of our course offerings and career pathways</li>
                        <li style="margin-bottom:8px;">Information about enrollment process and support services</li>`
-                      : `<li style="margin-bottom:8px;">Introduction to our fitness equipment and safety protocols</li>
-                       <li style="margin-bottom:8px;">Personalized fitness assessment and goal setting</li>
-                       <li style="margin-bottom:8px;">Sample workout session tailored to your fitness level</li>
-                       <li style="margin-bottom:8px;">Overview of our course structure and learning outcomes</li>`
+                      : courseType === 'hsa'
+                        ? `<li style="margin-bottom:8px;">A guided tour of our campus, including a dedicated practical room for AIN students</li>
+                         <li style="margin-bottom:8px;">Information about work placement providers</li>
+                         <li style="margin-bottom:8px;">Course structure and curriculum overview</li>
+                         <li style="margin-bottom:8px;">Career pathway guidance in health services</li>`
+                        : `<li style="margin-bottom:8px;">Introduction to our fitness equipment and safety protocols</li>
+                         <li style="margin-bottom:8px;">Personalized fitness assessment and goal setting</li>
+                         <li style="margin-bottom:8px;">Sample workout session tailored to your fitness level</li>
+                         <li style="margin-bottom:8px;">Overview of our course structure and learning outcomes</li>`
                   }
                 </ul>
               </div>
@@ -225,10 +270,15 @@ export async function POST(req: NextRequest) {
                      <p style="color:#333333;font-size:14px;line-height:1.6;margin:0;">
                        Discover our world-class facilities and meet the team that will support your educational journey. We're excited to show you what ABM has to offer!
                      </p>`
-                    : `<h4 style="color:#000000;margin:0 0 10px 0;">💪 Ready to Transform Your Fitness Journey?</h4>
-                     <p style="color:#333333;font-size:14px;line-height:1.6;margin:0;">
-                       Our expert trainers are here to help you achieve your fitness goals. Get ready for an exciting and challenging experience!
-                     </p>`
+                    : courseType === 'hsa'
+                      ? `<h4 style="color:#000000;margin:0 0 10px 0;">🏥 Ready to Start Your Healthcare Career?</h4>
+                       <p style="color:#333333;font-size:14px;line-height:1.6;margin:0;">
+                         Our Health Services Assistance course prepares you for a rewarding career in healthcare. Discover how we can help you achieve your career goals!
+                       </p>`
+                      : `<h4 style="color:#000000;margin:0 0 10px 0;">💪 Ready to Transform Your Fitness Journey?</h4>
+                       <p style="color:#333333;font-size:14px;line-height:1.6;margin:0;">
+                         Our expert trainers are here to help you achieve your fitness goals. Get ready for an exciting and challenging experience!
+                       </p>`
                 }
               </div>
 
@@ -257,7 +307,11 @@ export async function POST(req: NextRequest) {
         from: process.env.FROM_EMAIL || 'sales@abm.edu.au',
         to: email,
         subject: `Thank you for your ${
-          type === 'campus-tour' ? 'campus tour' : 'fitness trial'
+          type === 'campus-tour'
+            ? 'campus tour'
+            : courseType === 'hsa'
+              ? 'HSA course trial'
+              : 'fitness trial'
         } request - ABM Further Education`,
         html: userHtml,
         attachments: [

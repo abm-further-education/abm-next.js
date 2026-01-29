@@ -39,7 +39,15 @@
       "emailInvalid": "Endereço de e-mail inválido"
     },
     "preferredDate": "Data Preferida",
-    "weekdaysOnly": "Apenas dias úteis (segunda a sexta-feira)."
+    "weekdaysOnly": "Apenas dias úteis (segunda a sexta-feira).",
+    "selectDate": "Selecione uma data",
+    "oneDayTrial": "Teste Gratuito de 1 Dia",
+    "courseTypeLabel": "Tipo de Curso",
+    "selectCourseType": "Selecione o tipo de curso",
+    "fitness": "Fitness",
+    "hsa": "Assistência em Serviços de Saúde (HSA)",
+    "hsaTrialDays": "As sessões de teste HSA estão disponíveis apenas às quintas e sextas-feiras.",
+    "hsaTrialTime": "A aula de teste começa às 10:00"
   },
   "courses": {
     "title": "Encontre o Curso Certo para o Seu Futuro",
@@ -126,6 +134,8 @@
     "dateLabel": "Data Preferida",
     "selectDate": "Selecione uma data",
     "weekdaysOnly": "Observação: fins de semana não estão disponíveis. Apenas dias úteis podem ser selecionados.",
+    "hsaTrialDays": "As sessões de teste HSA estão disponíveis apenas às quintas e sextas-feiras.",
+    "hsaTrialTime": "A aula de teste começa às 10:00",
     "nameLabel": "Nome Completo",
     "namePlaceholder": "Digite seu nome completo",
     "emailLabel": "Endereço de E-mail",
