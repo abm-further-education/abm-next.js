@@ -32,6 +32,9 @@ import { courseData as courseDataKr } from './courseData.kr';
 import { courseData as courseDataSp } from './courseData.sp';
 import { courseData as courseDataPt } from './courseData.pt';
 import { courseData as courseDataJp } from './courseData.jp';
+import { courseData as courseDataTl } from './courseData.tl';
+import { courseData as courseDataZh } from './courseData.zh';
+import { courseData as courseDataId } from './courseData.id';
 
 export const courseCategories = [
   { value: 'all', label: 'All Categories' },
@@ -71,6 +74,12 @@ export function getCourseDataByLocale(locale: string): CourseData[] {
       return courseDataPt;
     case 'jp':
       return courseDataJp;
+    case 'tl':
+      return courseDataTl;
+    case 'zh':
+      return courseDataZh;
+    case 'id':
+      return courseDataId;
     case 'en':
     default:
       return courseDataEn;

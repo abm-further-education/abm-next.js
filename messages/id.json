@@ -1,0 +1,967 @@
+{
+  "HomePage": {
+    "description": "Pelajari kursus Bisnis, Perhotelan (Keamanan Pangan, RSA), Memasak, Kebugaran dan Kesehatan yang terakreditasi nasional di ABM Further Education di Sydney. Pelatihan praktis dan penempatan industri.",
+    "bannerContent": "Di Mana Gairah Bertemu Kesempurnaan Kuliner. Pengalaman yang Tak Terlupakan",
+    "coursesTitle": "Kursus ABM",
+    "coursesDescription": "Kami menyediakan pendidikan berkualitas tinggi dalam lingkungan yang inovatif dan mendukung, memastikan keberhasilan siswa dengan pengajaran ahli dan kesempatan pengalaman kerja di seluruh Australia.",
+    "testimonialTitle": "Testimoni",
+    "testimonialDescription": "Di mana Anda melihat diri Anda bekerja dengan bahagia dalam waktu dekat?",
+    "banners": {
+      "hsa": {
+        "title": "Mulai Karir Anda di Layanan Kesehatan",
+        "content": "Percepat pertumbuhan Anda dalam 16 minggu - Daftar sekarang untuk Februari 2026!",
+        "button": "Daftar Di Sini"
+      },
+      "fitness": {
+        "title": "Mulai Perjalanan Kebugaran Anda",
+        "content": "Intake Januari sudah dibuka. Tempat terbatas.\nIni adalah titik awal yang solid jika Anda ingin bekerja sebagai pelatih kebugaran."
+      },
+      "career": {
+        "title": "Karir Anda Dimulai Di Sini",
+        "content": "Pelajari untuk memastikan bahwa orang yang tepat berada di pekerjaan yang tepat dan menciptakan tempat kerja yang lebih baik untuk semua orang."
+      },
+      "video": {
+        "title": "Karir Anda Dimulai Di Sini",
+        "content": ""
+      },
+      "trial": {
+        "title": "Dapatkan Uji Coba Gratis 1 Hari Sekarang",
+        "content": "Pesan Tur Gratis ke Kampus, Gym & Dapur Kami, atau Nikmati Uji Coba Kebugaran & HSA 1 Hari.",
+        "button": "Coba Sekarang"
+      }
+    },
+    "lookingForAllCourses": "Mencari Semua Kursus?",
+    "clickHere": "Klik di sini!"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "getInTouch": "Hubungi kami",
+    "address": "242 Castlereagh Street Sydney NSW 2000 Australia",
+    "phone": "+61 (02) 9160 4507",
+    "whatsapp": "(WhatsApp) + 61 482 796 010",
+    "email": "info@abm.edu.au",
+    "emailPlaceholder": "Email",
+    "enquiryType": "Apa Jenis Pertanyaan Anda?",
+    "selectEnquiryType": "Pilih Jenis Pertanyaan",
+    "generalEnquiry": "Pertanyaan Umum",
+    "bookCampusTour": "Pesan Tur Kampus",
+    "becomeStudent": "Menjadi Siswa",
+    "becomeAgent": "Menjadi Agen",
+    "firstName": "Nama Depan",
+    "lastName": "Nama Belakang",
+    "phonePlaceholder": "Telepon",
+    "nationality": "Kewarganegaraan",
+    "message": "Pesan",
+    "sendMessage": "Kirim Pesan",
+    "successMessage": "Pertanyaan Anda telah dikirim. Terima kasih!",
+    "errorMessage": "Gagal mengirim. Silakan coba lagi nanti.",
+    "sending": "Mengirim...",
+    "validation": {
+      "firstNameRequired": "Nama depan wajib diisi",
+      "firstNameMinLength": "Nama depan harus minimal 2 karakter",
+      "lastNameRequired": "Nama belakang wajib diisi",
+      "lastNameMinLength": "Nama belakang harus minimal 2 karakter",
+      "emailRequired": "Email wajib diisi",
+      "emailInvalid": "Alamat email tidak valid"
+    },
+    "preferredDate": "Tanggal yang Diinginkan",
+    "weekdaysOnly": "Hanya hari kerja (Senin sampai Jumat)",
+    "selectDate": "Pilih tanggal",
+    "oneDayTrial": "Uji Coba Gratis 1 Hari",
+    "courseTypeLabel": "Jenis Kursus",
+    "selectCourseType": "Pilih jenis kursus",
+    "fitness": "Kebugaran",
+    "hsa": "Health Services Assistance (HSA)",
+    "hsaTrialDays": "Sesi uji coba HSA hanya tersedia pada hari Kamis dan Jumat.",
+    "hsaTrialTime": "Kelas uji coba dimulai pukul 10:00 pagi"
+  },
+  "courses": {
+    "title": "Kursus | Kursus Bisnis, Perhotelan & Kesehatan | ABM Further Education",
+    "description": "Kursus Keamanan Pangan, RSA dan Bisnis, Perhotelan, Memasak, Kebugaran, Olahraga dan Kesehatan dari level Certificate III hingga Advanced Diploma."
+  },
+  "studyWithUs": {
+    "description": "Mengapa belajar di ABM: kelas praktis, pelatih industri, penempatan kerja dan dukungan siswa yang kuat di Sydney.",
+    "studyTourPrograms": "Program Tur Studi",
+    "studentInsights": "Testimoni",
+    "academicCalendar": "Kalender Akademik",
+    "feesAndPayment": "Biaya dan Pembayaran",
+    "entryRequirements": "Persyaratan Masuk",
+    "getUSI": "Dapatkan USI",
+    "enrolNow": "Daftar Sekarang",
+    "timetable": "Jadwal",
+    "higherEducationPathway": "Jalur Pendidikan Tinggi",
+    "policiesAndProcedures": "Kebijakan & Prosedur",
+    "trainers": "Pelatih",
+    "studentAccommodation": "Akomodasi Siswa",
+    "title": "Belajar Bersama Kami",
+    "welcome": "Selamat Datang di ABM Further Education!",
+    "mission": "Misi kami adalah menyediakan pendidikan praktis berkualitas tinggi yang mempersiapkan siswa untuk karir yang sukses. Di ABM, Anda akan belajar dari pemimpin industri berpengalaman yang berdedikasi untuk pertumbuhan Anda. Dengan lingkungan yang mendukung dan pelatihan dunia nyata, kami memastikan Anda mendapatkan keterampilan dan kepercayaan diri untuk berkembang dalam karir masa depan Anda.",
+    "why": "Mengapa belajar di ABM Further Education?",
+    "whyContent": "ABM Further Education adalah penyedia pendidikan kejuruan yang baru didirikan di Australia, menawarkan kursus yang diakui secara nasional yang dipimpin oleh profesional industri berpengalaman. Kami fokus pada membekali siswa dengan keterampilan praktis untuk karir masa depan mereka dan secara aktif membangun kemitraan industri untuk memastikan lulusan kami siap kerja dan sesuai dengan kebutuhan tenaga kerja saat ini.",
+    "highlights": {
+      "primeLocation": {
+        "title": "Lokasi utama",
+        "desc": "ABM berada di pusat Sydney! Anda bisa sampai di sana dengan kereta, light rail atau bus, dan ada banyak pekerjaan di daerah tersebut."
+      },
+      "modernKitchen": {
+        "title": "Dapur modern terdepan di industri dan kampus canggih",
+        "desc": "Kami ingin Anda sukses, jadi kami baru saja memperbarui kampus kami dengan dapur paling modern dan teknologi terbaru. Siswa juga memiliki akses gratis ke ruang istirahat, wifi, komputer, mesin fotokopi, scanner, stasiun pengisian telepon, dan dapur kecil!"
+      },
+      "trainers": {
+        "title": "Pelatih terdepan di industri",
+        "desc": "Belajar dari profesional dengan pengalaman bertahun-tahun di industri mereka!"
+      },
+      "workPlacement": {
+        "title": "Dukungan penempatan kerja",
+        "desc": "ABM berada di pusat Sydney! Anda bisa sampai di sana dengan kereta, light rail atau bus, dan ada banyak pekerjaan di daerah tersebut."
+      },
+      "serviceTeam": {
+        "title": "Tim layanan siswa multibahasa",
+        "desc": "Kami ingin Anda sukses, jadi kami baru saja memperbarui kampus kami dengan dapur paling modern dan teknologi terbaru. Siswa juga memiliki akses gratis ke ruang istirahat, wifi, komputer, mesin fotokopi, scanner, stasiun pengisian telepon, dan dapur kecil!"
+      },
+      "partnerships": {
+        "title": "Kemitraan Industri",
+        "desc": "Belajar dari profesional dengan pengalaman bertahun-tahun di industri mereka!"
+      }
+    }
+  },
+  "promotion": {
+    "title": "Uji Coba Gratis 1 Hari & Tur Kampus Gratis",
+    "description": "Rasakan program Kebugaran kami atau jelajahi kursus Health Services Assistance (HSA) kami dengan sesi uji coba gratis 1 hari — dan ikuti tur terpandu di kampus, gym, dan fasilitas dapur kami. Temukan potensi Anda, temui pelatih ahli kami, dan lihat bagaimana lingkungan holistik kami mendukung tujuan karir dan kesehatan Anda.",
+    "trialTitle": "Apa yang Akan Anda Dapatkan",
+    "fitnessCategory": "Kebugaran",
+    "hsaCategory": "Health Services Assistance (HSA)",
+    "benefit1": "Informasi kursus",
+    "benefit2": "Jadwal kelas",
+    "benefit3": "Informasi penempatan kerja & penempatan pekerjaan",
+    "benefit4": "Panduan jalur karir",
+    "hsaBenefit1": "Informasi kursus",
+    "hsaBenefit2": "Jadwal kelas",
+    "hsaBenefit3": "Informasi penempatan kerja & penempatan pekerjaan",
+    "hsaBenefit4": "Panduan jalur karir",
+    "whatToExpect": "Apa yang Diharapkan",
+    "expectation1": "Tur terpandu di kampus dan fasilitas gym kami",
+    "expectation2": "Bimbingan personal dari profesional kebugaran bersertifikat kami",
+    "hsaExpectation1": "Tur terpandu di kampus kami, termasuk ruang praktik khusus untuk siswa AIN",
+    "hsaExpectation2": "Informasi tentang penyedia penempatan kerja",
+    "hsaExpectation3": "Gambaran struktur dan kurikulum kursus",
+    "galleryTitle": "Kampus & Pelatihan Kami",
+    "ctaTitle": "Siap Memulai Perjalanan Karir Kebugaran atau Kesehatan Anda?",
+    "ctaDescription": "Pesan uji coba gratis Anda hari ini dan ambil langkah pertama untuk mencapai tujuan kebugaran Anda atau menjelajahi karir di bidang kesehatan dengan bimbingan ahli ABM.",
+    "formTitle": "Pesan Tur Kampus Gratis atau Uji Coba 1 Hari Anda",
+    "typeLabel": "Jenis Kunjungan",
+    "selectType": "Pilih jenis kunjungan",
+    "campusTour": "Tur Kampus",
+    "oneDayTrial": "Uji Coba Gratis 1 Hari",
+    "courseTypeLabel": "Jenis Kursus",
+    "selectCourseType": "Pilih jenis kursus",
+    "fitness": "Kebugaran",
+    "hsa": "Health Services Assistance (HSA)",
+    "dateLabel": "Tanggal yang Diinginkan",
+    "selectDate": "Pilih tanggal",
+    "weekdaysOnly": "Harap dicatat: Akhir pekan tidak tersedia. Hanya hari kerja yang dapat dipilih.",
+    "hsaTrialDays": "Sesi uji coba HSA hanya tersedia pada hari Kamis dan Jumat.",
+    "hsaTrialTime": "Kelas uji coba dimulai pukul 10:00 pagi",
+    "nameLabel": "Nama Lengkap",
+    "namePlaceholder": "Masukkan nama lengkap Anda",
+    "emailLabel": "Alamat Email",
+    "emailPlaceholder": "Masukkan alamat email Anda",
+    "phoneLabel": "Nomor Telepon",
+    "phonePlaceholder": "Masukkan nomor telepon Anda",
+    "howDidYouFindUsLabel": "Bagaimana Anda menemukan kami?",
+    "selectOption": "Pilih opsi",
+    "socialMedia": "Media Sosial",
+    "googleSearch": "Pencarian Google",
+    "friendRecommendation": "Rekomendasi Teman",
+    "advertisement": "Iklan",
+    "other": "Lainnya",
+    "goalLabel": "Apa tujuan kebugaran Anda?",
+    "goalPlaceholder": "Ceritakan tentang tujuan kebugaran Anda dan apa yang ingin Anda capai",
+    "submitButton": "Pesan Tur Kampus Gratis atau Uji Coba 1 Hari",
+    "submitting": "Memesan...",
+    "formSuccess": "Terima kasih! Uji coba gratis Anda telah berhasil dipesan. Kami akan segera menghubungi Anda untuk mengonfirmasi detailnya.",
+    "formError": "Maaf, terjadi kesalahan saat memesan uji coba Anda. Silakan coba lagi atau hubungi kami langsung.",
+    "formNote": "Bidang yang ditandai dengan * wajib diisi. Kami akan menghubungi Anda dalam 24 jam untuk mengonfirmasi pemesanan Anda.",
+    "thankYouTitle": "Pemesanan Dikonfirmasi!",
+    "thankYouSubtitle": "Uji coba gratis Anda telah berhasil dipesan.",
+    "bookingDetails": "Detail Pemesanan",
+    "nextStepsTitle": "Langkah Selanjutnya?",
+    "nextStep1Title": "Telepon Konfirmasi",
+    "nextStep1Description": "Kami akan menghubungi Anda dalam 24 jam untuk mengonfirmasi detail pemesanan Anda.",
+    "nextStep2Title": "Persiapan untuk Uji Coba Anda",
+    "nextStep2Description": "Harap bawa pakaian olahraga yang nyaman dan botol air pada hari itu.",
+    "nextStep3Title": "Hadiri Uji Coba Anda",
+    "nextStep3Description": "Kunjungi kampus ABM kami pada waktu yang dijadwalkan.",
+    "contactInfoTitle": "Butuh Bantuan?",
+    "contactInfoDescription": "Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami kapan saja.",
+    "backToHome": "Kembali ke Beranda",
+    "exploreCourses": "Jelajahi Kursus Lain"
+  },
+  "timetable": {
+    "title": "Jadwal",
+    "subtitle": "Rencanakan Jadwal Belajar Anda",
+    "pageTitle": "Jadwal Kelas",
+    "importantInfo": "Informasi Penting",
+    "selfPacedLearning": "Semua siswa harus menyelesaikan 5 – 6 jam pembelajaran mandiri tergantung pada kursus.",
+    "schedule": "Pagi: 2,5 hari seminggu, Malam: 3 hari seminggu.",
+    "subjectToChange": "Jadwal ini dapat berubah.",
+    "studyHours": "*15-24 jam pembelajaran tatap muka ditambah 5-6 jam pembelajaran mandiri tergantung pada kursus.",
+    "qualification": "Kualifikasi",
+    "intake": "Intake / Kursus",
+    "monday": "SEN",
+    "tuesday": "SEL",
+    "wednesday": "RAB",
+    "thursday": "KAM",
+    "friday": "JUM",
+    "tutorial": "Tutorial",
+    "note": "Catatan",
+    "noteDescription": "Silakan hubungi kami untuk informasi jadwal terbaru karena jadwal dapat berubah berdasarkan pendaftaran dan kebutuhan operasional."
+  },
+  "nav": {
+    "internationalStudent": "Apakah Anda Siswa Internasional?",
+    "downloadGuide": "Unduh Panduan Kursus ABM 2026",
+    "currentStudents": "Siswa Saat Ini",
+    "agentPortal": "Portal Agen",
+    "findCourse": "Temukan kursus",
+    "searchPlaceholder": "Cari Di Sini...",
+    "noResults": "Tidak ada hasil ditemukan.",
+    "enrolNow": "Daftar Sekarang",
+    "menu": {
+      "courses": "Kursus",
+      "shortCourses": "Program Khusus",
+      "studyWithUs": "Belajar Bersama Kami",
+      "contact": "Hubungi"
+    },
+    "subMenu": {
+      "studyTourPrograms": "Program Tur Studi",
+      "cookery": "Memasak",
+      "hospitality": "Perhotelan",
+      "fitnessAndSport": "Kebugaran & Olahraga",
+      "business": "Bisnis",
+      "projectAndProgram": "Proyek & Program",
+      "humanResource": "Sumber Daya Manusia",
+      "health": "Kesehatan & Kebugaran",
+      "cookingAndBaking": "Memasak & Memanggang",
+      "onlineCourses": "Kursus Online",
+      "baristaSampleCourse": "Kursus Contoh Barista",
+      "baristaOnlineCourse": "Kursus Online Barista"
+    },
+    "studyWithUs": {
+      "studyTourPrograms": "Program Tur Studi",
+      "studentInsights": "Testimoni",
+      "academicCalendar": "Kalender Akademik",
+      "feesAndPayment": "Biaya dan Pembayaran",
+      "entryRequirements": "Persyaratan Masuk",
+      "getUSI": "Dapatkan USI",
+      "enrolNow": "Daftar Sekarang",
+      "higherEducationPathway": "Jalur Pendidikan Tinggi",
+      "studentAccommodation": "Akomodasi Siswa"
+    }
+  },
+  "cookeryAndHospitality": {
+    "title": "Mulai Karir Anda di Memasak & Perhotelan",
+    "description": "Dapatkan pengalaman dapur komersial nyata dengan Certificate IV in Kitchen Management. Pelajari keterampilan memasak tingkat lanjut, kepemimpinan, dan pelatihan supervisi untuk membangun karir chef Anda di Australia.",
+    "streams": "Aliran",
+    "kitchenManagementStream": "Aliran Manajemen Dapur",
+    "foodAndBeverageStream": "Aliran Makanan dan Minuman",
+    "streamDescription": "Aliran ini untuk siswa yang ingin meningkatkan keterampilan dan studi mereka dalam memasak ke tingkat yang lebih lanjut.",
+    "specialisedShortCourses": "Kursus singkat khusus",
+    "shortCourse": "Kelas Satu Hari",
+    "eliteCookingClass": "Seri Kelas Memasak Elite",
+    "foodSafetySupervisor": "NSW Food Safety Supervisor Certificate (FSS)"
+  },
+  "common": {
+    "findOutMore": "PELAJARI LEBIH LANJUT"
+  },
+  "currentStudents": {
+    "title": "Info Siswa",
+    "welcome": "Selamat datang di halaman Siswa Saat Ini!",
+    "description": "Di sini Anda akan menemukan informasi penting, sumber daya, dan pembaruan untuk mendukung studi Anda di ABM",
+    "moodleTitle": "Perlu login ke Moodle?",
+    "moodleLogin": "LOGIN MOODLE",
+    "studentPortalTitle": "Perlu mengunduh formulir?",
+    "studentPortal": "PORTAL SISWA",
+    "meta": {
+      "title": "Siswa Saat Ini ABM",
+      "description": "Jadwal siswa, informasi penempatan, kebijakan, formulir dan dukungan akademik di ABM Further Education."
+    }
+  },
+  "feeSchedule": {
+    "title": "Jadwal Biaya 2026",
+    "bannerTitle": "Jadwal Biaya 2026",
+    "bannerSubtitle": "Informasi biaya lengkap untuk ABM Further Education",
+    "promotionTitle": "Promosi Waktu Terbatas!",
+    "promotionDescription": "Jangan lewatkan kesempatan menarik ini! Klik tombol di bawah untuk mengunduh promosi waktu terbatas kami yang merayakan peluncuran kampus dan kursus baru kami. Temukan diskon dan penawaran eksklusif yang dirancang khusus untuk Anda!",
+    "downloadButton": "Unduh Detail Promosi",
+    "paymentTitle": "Opsi Pembayaran",
+    "paymentDescription": "Mulai Agustus 2022, siswa dan agen kami dapat melakukan pembayaran melalui PayPal atau kartu kredit online (Biaya Tambahan Pembayaran Kartu Kredit/Debit 2%)",
+    "contactText": "Untuk pertanyaan, silakan hubungi Tim Akun kami di:",
+    "otherFeesTitle": "Biaya Lain",
+    "enrolmentFee": "Biaya Pendaftaran",
+    "materialFee": "Biaya Material",
+    "rplFee": "Biaya RPL",
+    "creditTransferFee": "Biaya Transfer Kredit",
+    "changeSessionFee": "Biaya Perubahan Sesi",
+    "changeCourseFee": "Biaya Perubahan Kursus",
+    "reassessmentFee": "Biaya Penilaian Ulang/Tidak Hadir*",
+    "latePaymentFee": "Biaya Keterlambatan Pembayaran",
+    "withdrawalFee": "Biaya Aplikasi Penarikan",
+    "defermentFee": "Biaya Penundaan",
+    "lateSubmissionFee": "Biaya Keterlambatan Pengumpulan",
+    "theoryCatchupFee": "Kelas Pengejaran Teori (kursus Manajemen Dapur)",
+    "practicalCatchupFee": "Kelas Pengejaran Praktis (kursus Manajemen Dapur)",
+    "repeatUnitFee": "Pengulangan Unit (kursus Manajemen Dapur)",
+    "enrolmentFeeAmount": "$250 (Tidak dapat dikembalikan)",
+    "materialFeeAmount": "$50 Per term (tidak termasuk: kursus Manajemen Dapur dan Manajemen Perhotelan – Lihat di atas)",
+    "rplFeeAmount": "$300 per unit (Tidak dapat dikembalikan)",
+    "creditTransferFeeAmount": "$500 (Tidak dapat dikembalikan)",
+    "changeSessionFeeAmount": "$200",
+    "changeCourseFeeAmount": "$200",
+    "reassessmentFeeAmount": "$300 per unit (Tidak dapat dikembalikan)",
+    "latePaymentFeeAmount": "$200 (Tidak dapat dikembalikan)",
+    "withdrawalFeeAmount": "$300 (Tidak dapat dikembalikan)",
+    "defermentFeeAmount": "$200",
+    "lateSubmissionFeeAmount": "$50 per unit",
+    "theoryCatchupFeeAmount": "$100 per unit",
+    "practicalCatchupFeeAmount": "$250 per unit",
+    "repeatUnitTheoryAmount": "$250 per unit (Teori)",
+    "repeatUnitPracticalAmount": "$350 per unit (Unit teori & praktis)",
+    "nonRefundableNote": "* Biaya yang tidak dapat dikembalikan berlaku untuk semua biaya yang tercantum kecuali dinyatakan lain"
+  },
+  "usi": {
+    "title": "Dapatkan USI",
+    "bannerTitle": "Dapatkan USI",
+    "bannerSubtitle": "Unique Student Identifier - Kunci Anda untuk Pendidikan Kejuruan",
+    "whatIsUSITitle": "Apa itu USI?",
+    "whatIsUSIDescription": "USI (Unique Student Identifier) adalah nomor referensi yang terdiri dari 10 angka dan huruf yang memberi Anda akses ke akun USI Anda dan akan muncul di catatan pelatihan dan hasil Anda. Ini gratis dan mudah dibuat dan akan tetap bersama Anda seumur hidup.",
+    "usiBenefit1": "Akses catatan pelatihan dan hasil Anda secara online",
+    "usiBenefit2": "Terima kualifikasi atau pernyataan pencapaian Anda",
+    "usiBenefit3": "Lacak kemajuan Anda di berbagai penyedia pelatihan",
+    "usiBenefit4": "Pastikan pencapaian pelatihan Anda dicatat dengan benar",
+    "whoNeedsUSITitle": "Siapa yang membutuhkan USI?",
+    "whoNeedsUSIDescription": "Anda membutuhkan USI jika Anda belajar pelatihan yang diakui secara nasional di Australia. Ini termasuk:",
+    "needUSI1": "Siswa yang belajar kursus VET yang diakui secara nasional",
+    "needUSI2": "Siswa yang belajar kursus pendidikan tinggi yang diakui secara nasional",
+    "needUSI3": "Siswa yang belajar magang atau pelatihan kerja yang diakui secara nasional",
+    "needUSI4": "Siswa yang belajar kursus singkat yang diakui secara nasional",
+    "howToGetUSITitle": "Cara mendapatkan USI",
+    "howToGetUSIDescription": "Anda dapat membuat USI secara online atau melalui telepon. Metode online adalah cara tercepat dan termudah.",
+    "onlineMethodTitle": "Metode Online",
+    "onlineStep1": "Kunjungi website USI di www.usi.gov.au",
+    "onlineStep2": "Klik 'Create USI'",
+    "onlineStep3": "Masukkan detail pribadi dan dokumen identifikasi Anda",
+    "onlineStep4": "USI Anda akan dibuat secara instan",
+    "createUSIButton": "Buat USI Online",
+    "phoneMethodTitle": "Metode Telepon",
+    "phoneMethodDescription": "Jika Anda tidak dapat membuat USI secara online, Anda dapat menelepon Kantor USI:",
+    "phoneNumber": "1300 857 536",
+    "phoneHours": "Senin sampai Jumat, 8:00 pagi sampai 6:00 sore (AEST)",
+    "requiorangeDocumentsTitle": "Dokumen yang Diperlukan",
+    "requiorangeDocumentsDescription": "Untuk membuat USI Anda, Anda perlu menyediakan salah satu bentuk identifikasi berikut:",
+    "requiredDocumentsTitle": "Dokumen yang Diperlukan",
+    "requiredDocumentsDescription": "Untuk membuat USI Anda, Anda perlu menyediakan salah satu bentuk identifikasi berikut:",
+    "primaryDocumentsTitle": "Dokumen Utama",
+    "primaryDoc1": "Paspor Australia",
+    "primaryDoc2": "Akta Kelahiran Australia",
+    "primaryDoc3": "Sertifikat Kewarganegaraan Australia",
+    "primaryDoc4": "SIM Australia",
+    "secondaryDocumentsTitle": "Dokumen Sekunder",
+    "secondaryDoc1": "Kartu Medicare",
+    "secondaryDoc2": "Visa Australia",
+    "secondaryDoc3": "Kartu Identitas Siswa Australia",
+    "secondaryDoc4": "Kartu Identitas Kerja Australia",
+    "importantInfoTitle": "Informasi Penting",
+    "importantInfo1": "Anda hanya perlu membuat USI sekali - akan tetap bersama Anda seumur hidup",
+    "importantInfo2": "Jaga USI Anda tetap aman dan terjamin - jangan bagikan dengan orang lain",
+    "importantInfo3": "Anda dapat mengakses akun USI Anda secara online kapan saja",
+    "importantInfo4": "Jika Anda lupa USI Anda, Anda dapat mengambilnya secara online atau melalui telepon",
+    "importantInfo5": "USI Anda diperlukan untuk semua pelatihan yang diakui secara nasional di Australia",
+    "needHelpTitle": "Butuh Bantuan?",
+    "needHelpDescription": "Jika Anda memerlukan bantuan untuk membuat USI atau memiliki pertanyaan, kami di sini untuk membantu:",
+    "contactABMTitle": "Hubungi ABM",
+    "contactABMDescription": "Tim layanan siswa kami dapat membantu Anda dengan proses pembuatan USI dan menjawab pertanyaan Anda.",
+    "contactABMButton": "Hubungi ABM",
+    "usiHelpTitle": "Bantuan USI",
+    "usiHelpDescription": "Untuk dukungan teknis atau pertanyaan tentang akun USI Anda, kunjungi halaman bantuan USI resmi.",
+    "usiHelpButton": "Bantuan USI"
+  },
+  "courseEntryRequirements": {
+    "metaTitle": "Persyaratan Masuk Kursus - ABM Further Education",
+    "metaDescription": "Pelajari tentang persyaratan masuk untuk kursus ABM termasuk persyaratan akademik, persyaratan bahasa Inggris, dan proses aplikasi.",
+    "bannerTitle": "Persyaratan Masuk Kursus",
+    "bannerSubtitle": "Semua yang perlu Anda ketahui tentang mendaftar di kursus ABM",
+    "introTitle": "Persyaratan Masuk untuk Kursus ABM",
+    "introDescription": "Untuk memastikan pengalaman dan hasil belajar terbaik, ABM memiliki persyaratan masuk khusus untuk semua kursus kami. Persyaratan ini membantu kami menjaga standar pendidikan tinggi dan memastikan siswa siap untuk studi mereka.",
+    "generalRequirementsTitle": "Persyaratan Umum",
+    "ageRequirementTitle": "Persyaratan Usia",
+    "ageRequirementDescription": "Siswa harus berusia minimal 18 tahun pada saat kursus dimulai.",
+    "englishRequirementTitle": "Kemampuan Bahasa Inggris",
+    "englishRequirementDescription": "Semua siswa harus menunjukkan kemampuan bahasa Inggris untuk memastikan mereka dapat berhasil menyelesaikan studi mereka. Ini berlaku untuk siswa domestik dan internasional.",
+    "academicRequirementsTitle": "Persyaratan Akademik",
+    "certificateIIITitle": "Kursus Certificate III",
+    "certificateIIIRequirement1": "Menyelesaikan Year 10 atau setara",
+    "certificateIIIRequirement2": "Keterampilan literasi dan numerasi dasar",
+    "certificateIIIRequirement3": "Kemampuan bekerja mandiri dan dalam tim",
+    "certificateIVTitle": "Kursus Certificate IV",
+    "certificateIVRequirement1": "Menyelesaikan Year 12 atau setara",
+    "certificateIVRequirement2": "Certificate III di bidang terkait (direkomendasikan)",
+    "certificateIVRequirement3": "Keterampilan komunikasi dan pemecahan masalah yang kuat",
+    "diplomaTitle": "Kursus Diploma",
+    "diplomaRequirement1": "Menyelesaikan Year 12 atau setara",
+    "diplomaRequirement2": "Certificate IV di bidang terkait (direkomendasikan)",
+    "diplomaRequirement3": "Menunjukkan potensi kepemimpinan",
+    "advancedDiplomaTitle": "Kursus Advanced Diploma",
+    "advancedDiplomaRequirement1": "Diploma di bidang terkait",
+    "advancedDiplomaRequirement2": "Minimal 2 tahun pengalaman kerja yang relevan",
+    "advancedDiplomaRequirement3": "Latar belakang akademik yang kuat",
+    "englishLanguageTitle": "Persyaratan Masuk Bahasa Inggris",
+    "acceptedTestsTitle": "Tes Bahasa Inggris yang Diterima",
+    "acceptedTest1": "IELTS Academic: Overall 5.5 (tidak ada band kurang dari 5.0)",
+    "acceptedTest2": "TOEFL iBT: Overall 46 (tidak ada band kurang dari 10)",
+    "acceptedTest3": "PTE Academic: Overall 42 (tidak ada band kurang dari 36)",
+    "acceptedTest4": "Cambridge English: B2 First (FCE) - Grade C",
+    "acceptedTest5": "OET: Grade C di semua band",
+    "exemptionsTitle": "Pengecualian Bahasa Inggris",
+    "exemption1": "Penutur asli bahasa Inggris dari Australia, Selandia Baru, UK, USA, Kanada, atau Irlandia",
+    "exemption2": "Siswa yang telah menyelesaikan minimal 2 tahun studi penuh waktu dalam bahasa Inggris di tingkat menengah atau perguruan tinggi",
+    "exemption3": "Siswa dengan kualifikasi sebelumnya dari institusi berbahasa Inggris",
+    "englishEntryRequirementsTitle": "Persyaratan Masuk Bahasa Inggris",
+    "englishEntryRequirementsDescription": "Memiliki skor IELTS* 5.5 dengan tidak ada band kurang dari 5.0 (hasil tes tidak boleh lebih dari 2 tahun). Kompetensi bahasa Inggris juga dapat ditunjukkan melalui bukti terdokumentasi dari salah satu hal berikut:",
+    "englishEvidence1": "Dididik selama 5 tahun di negara berbahasa Inggris; atau",
+    "englishEvidence2": "Menyelesaikan minimal 6 bulan kursus level Certificate IV di RTO Australia; atau",
+    "englishEvidence3": "Berhasil menyelesaikan Tes Penempatan Bahasa Inggris ABM",
+    "englishEvidence4": "Berhasil menyelesaikan kursus bahasa Inggris dengan level keluar setara dengan IELTS overall 5.5 dari salah satu mitra ELICOS Pathway kami",
+    "pteRequirementsTitle": "Untuk PTE",
+    "pteRequirementsDescription": "Memiliki skor PTE 45.4 (IELTS 5.5) atau lebih tinggi dengan tidak ada band kurang dari (Listening – 42.7, Reading – 47.9, Speaking – 51, Writing – 42.2)",
+    "pteTableTitle": "PTE setara dengan 5.5 IELTS per band",
+    "pteListening": "PTE -A Listening",
+    "pteReading": "PTE – A Reading",
+    "pteSpeaking": "PTE – A Speaking",
+    "pteWriting": "PTE – A Writing",
+    "pteListeningScore": "42.7",
+    "pteReadingScore": "47.9",
+    "pteSpeakingScore": "51",
+    "pteWritingScore": "42.2",
+    "competencyInEnglishTitle": "Kompetensi dalam Bahasa Inggris",
+    "competencyDescription": "Jika salah satu hal berikut berlaku, Anda tidak perlu memberikan bukti skor tes bahasa Inggris dengan aplikasi visa Anda:",
+    "competency1": "Anda terdaftar dalam studi sekolah penuh waktu sebagai kursus utama termasuk dalam program pertukaran menengah, kursus penelitian pascasarjana, English Language Intensive Course for Overseas Students (ELICOS) mandiri, dan siswa yang disponsori Urusan Luar Negeri atau Pertahanan.",
+    "competency2": "Anda telah menyelesaikan minimal lima tahun studi di satu atau lebih negara berikut: Australia, UK, USA, Kanada, Selandia Baru, Afrika Selatan, atau Republik Irlandia.",
+    "competency3": "Anda adalah warga negara dan memegang paspor dari UK, USA, Kanada, NZ atau Republik Irlandia.",
+    "competency4": "Dalam dua tahun sebelum mengajukan visa pelajar, Anda telah menyelesaikan, di Australia dan dalam bahasa Inggris, baik Sertifikat Pendidikan Menengah Atas atau komponen substansial dari kursus yang mengarah ke kualifikasi dari Australian Qualifications Framework pada level Certificate IV atau lebih tinggi, saat Anda memegang visa pelajar.",
+    "englishNote": "*Perhatikan bahwa tes bahasa Inggris lainnya seperti PTE dan TOEFL dapat diterima. Siswa diminta untuk memberikan hasil mereka agar dapat dikonfirmasi bahwa mereka setara dengan IELTS 5.5.",
+    "elicosPathwayPartnersTitle": "Mitra ELICOS Pathway",
+    "elicosPartners": {
+      "ctic": {
+        "name": "CTIC English",
+        "url": "http://ctic.com.au/",
+        "courses": "• EAP dengan level keluar Credit\n• IELTS Preparation dengan level keluar Grade C\n• Real English, General English, Cambridge dengan level keluar B2"
+      },
+      "elc": {
+        "name": "ELC",
+        "url": "http://www.elc.edu.au/english",
+        "courses": "• English for Academic Purposes: Min. 10 minggu Academic English dengan hasil keluar sukses EAP 1\n• Cambridge English: Min. complete course (10-12 minggu) Cambridge B2 First (Min grade C)\n• IELTS Preparation: Min. 10 minggu IELTS Preparation dengan hasil prediksi sukses 5.5"
+      },
+      "elsis": {
+        "name": "ELSIS",
+        "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
+        "courses": "• Menyelesaikan General English Upper Intermediate level\n• Menyelesaikan EAP 1"
+      },
+      "englishUnlimited": {
+        "name": "English Unlimited",
+        "url": "https://eu.edu.au/",
+        "courses": "• General English (Everyday English teaching method – Upper intermediate level)\n• EAP (B+ dari level B)"
+      },
+      "greenwich": {
+        "name": "Greenwich College",
+        "url": "https://www.greenwichcollege.edu.au/your-campus/sydney",
+        "courses": "• General English (Upper intermediate level) dengan minimum 8 minggu\n• IELTS Preparation dengan skor keluar 5.5-7.0+\n• Cambridge Preparation PET, FCE, CAE dengan skor keluar 5.5 +\n• English for Business (Cambridge Linguaskill Business) dengan skor keluar 5.5\n• English for Vocational Studies (EVS) (Pass)\n• EAP dengan level keluar Pass"
+      },
+      "ilsc": {
+        "name": "ILSC Language Schools",
+        "url": "http://ilsc.com",
+        "courses": "• General English dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi.\n• English for Academic Purposes dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi.\n• IELTS Preparation dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi.\n• Cambridge FCE Preparation dan Cambridge CAE Preparation dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi."
+      },
+      "inus": {
+        "name": "INUS",
+        "url": "https://www.inus.edu.au/",
+        "courses": "• Menyelesaikan General English atau EAP [Upper Intermediate level] dengan kesetaraan level keluar IELTS 5.5 atau lebih tinggi.\n• Menyelesaikan EAP Advanced [Advanced level]."
+      },
+      "lalingua": {
+        "name": "LA LINGUA",
+        "url": "https://www.lalingua.com/",
+        "courses": "• IELTS Preparation dengan level keluar setara IELTS 5.5"
+      },
+      "navitas": {
+        "name": "NAVITAS English",
+        "url": "https://www.navitasenglish.edu.au/",
+        "courses": "• Academic English 2: 60% pass tanpa sub skill di bawah 55%\n• IELTS Preparation: Berhasil menyelesaikan 10 minggu\n• Cambridge Preparation – B2 First : Berhasil menyelesaikan 10 atau 12 minggu\n• General English: Berhasil menyelesaikan 10 minggu Upper Intermediate"
+      },
+      "scic": {
+        "name": "Sunshine Coast International College",
+        "url": "https://scic.nsw.edu.au/",
+        "courses": "• English for Academic Purposes (EAP3): Sertifikat EAP 3 (Upper Intermediate: CEFR = B2)\n• General English: Berhasil menyelesaikan Upper Intermediate atau lebih tinggi (CEFR=B2)"
+      },
+      "uec": {
+        "name": "Universal English College (UEC)",
+        "url": "https://uec.edu.au/",
+        "courses": "• General English dengan level keluar Upper Intermediate\n• IELTS Preparation dengan level keluar setara IELTS 5.5\n• Academic English Program dengan level keluar setara IELTS 5.5"
+      }
+    },
+    "additionalRequirementsTitle": "Persyaratan Tambahan",
+    "healthRequirementsTitle": "Persyaratan Kesehatan dan Keselamatan",
+    "healthRequirementsDescription": "Beberapa kursus mungkin memiliki persyaratan kesehatan dan keselamatan khusus, terutama untuk komponen praktis.",
+    "healthRequirement1": "Izin medis untuk aktivitas praktis",
+    "healthRequirement2": "Catatan vaksinasi (jika diperlukan)",
+    "healthRequirement3": "Penilaian kebugaran untuk kursus yang membutuhkan fisik",
+    "workingWithChildrenTitle": "Working with Children Check",
+    "workingWithChildrenDescription": "Siswa dalam kursus yang melibatkan pekerjaan dengan anak-anak atau orang rentan mungkin memerlukan Working with Children Check.",
+    "wwcRequirement1": "Izin Working with Children Check yang valid",
+    "wwcRequirement2": "Izin pemeriksaan latar belakang",
+    "applicationProcessTitle": "Proses Aplikasi",
+    "step1Title": "Langkah 1: Pemilihan Kursus",
+    "step1Description": "Pilih kursus Anda dan periksa persyaratan masuk.",
+    "step2Title": "Langkah 2: Persiapan Dokumen",
+    "step2Description": "Kumpulkan dokumen dan transkrip yang diperlukan.",
+    "step3Title": "Langkah 3: Pengajuan Aplikasi",
+    "step3Description": "Ajukan aplikasi Anda dengan semua dokumen.",
+    "step4Title": "Langkah 4: Penilaian dan Penawaran",
+    "step4Description": "Terima hasil penilaian dan penawaran pendaftaran.",
+    "courseRequirementsTableTitle": "Persyaratan Masuk Kursus Khusus",
+    "courseRequirementsTableDescription": "Berikut adalah persyaratan masuk khusus untuk setiap kursus yang ditawarkan di ABM:",
+    "needHelpTitle": "Butuh Bantuan dengan Aplikasi Anda?",
+    "needHelpDescription": "Tim penerimaan kami yang ramah siap membantu Anda melalui proses aplikasi.\nHubungi kami untuk bantuan yang dipersonalisasi.",
+    "contactUsButton": "Hubungi Kami",
+    "callUsButton": "Telepon Kami",
+    "courses": {
+      "kitchenManagement": {
+        "code": "SIT40521 Certificate IV in Kitchen Management",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10"
+      },
+      "hospitalityDiploma": {
+        "code": "SIT50422 Diploma of Hospitality Management",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 12"
+      },
+      "hospitalityAdvancedDiploma": {
+        "code": "SIT60322 Advanced Diploma of Hospitality Management",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 12"
+      },
+      "fitnessCertIII": {
+        "code": "SIS30321 Certificate III in Fitness",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10"
+      },
+      "fitnessCertIIIFast": {
+        "code": "SIS30321 Certificate III in Fitness (Fast Track)",
+        "requirement": "Anda dapat berpartisipasi dalam aktivitas kebugaran."
+      },
+      "fitnessCertIV": {
+        "code": "SIS40221 Certificate IV in Fitness",
+        "requirement": "Telah menyelesaikan unit berikut:\n• HLTAID011 Provide First Aid (atau unit yang menggantikan unit ini)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information\n\nSiswa harus telah menyelesaikan setara dengan Year 12"
+      },
+      "fitnessCertIVFast": {
+        "code": "SIS40221 Certificate IV in Fitness (Fast Track)",
+        "requirement": "Telah menyelesaikan unit berikut:\n• HLTAID011 Provide First Aid (atau unit yang menggantikan unit ini)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information"
+      },
+      "sportDiploma": {
+        "code": "SIS50321 Diploma of Sport (Coaching)",
+        "requirement": "Berpartisipasi dalam wawancara masuk kursus untuk menentukan kesesuaian untuk kursus dan kebutuhan siswa."
+      },
+      "businessCertIV": {
+        "code": "BSB40120 Certificate IV in Business",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10"
+      },
+      "businessDiploma": {
+        "code": "BSB50120 Diploma of Business",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 12"
+      },
+      "businessAdvancedDiploma": {
+        "code": "BSB60120 Advanced Diploma of Business",
+        "requirement": "Siswa harus telah menyelesaikan kursus level Diploma (AQF Level 5) atau kursus level Advanced Diploma (AQF Level 6) dari paket pelatihan BSB."
+      },
+      "hrCertIV": {
+        "code": "BSB40420 Certificate IV in Human Resource Management",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10"
+      },
+      "hrDiploma": {
+        "code": "BSB50320 Diploma of Human Resource Management",
+        "requirement": "Telah menyelesaikan unit berikut:\n• BSBHRM411 Administer performance development processes\n• BSBHRM412 Support employee and industrial relations\n• BSBHRM415 Coordinate recruitment and onboarding\n• BSBHRM417 Support human resource functions and processes\n\nKompetensi setara adalah pendahulu dari unit ini, yang telah dipetakan sebagai setara."
+      },
+      "hrAdvancedDiploma": {
+        "code": "BSB60320 Advance Diploma of Human Resource Management",
+        "requirement": "Telah menyelesaikan salah satu kualifikasi berikut: BSB50320 Diploma of Human Resource Management, BSB50618 Diploma of Human Resources Management (atau versi setara yang digantikan)."
+      },
+      "projectCertIV": {
+        "code": "BSB40920 Certificate IV in Project Management Practice",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10"
+      },
+      "projectDiploma": {
+        "code": "BSB50820 Diploma of Project Management",
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 12"
+      },
+      "projectAdvancedDiploma": {
+        "code": "BSB60720 Advance Diploma of Program Management",
+        "requirement": "Telah menyelesaikan salah satu kualifikasi berikut: BSB50820 Diploma of Project Management, BSB51415 Diploma of Project Management (atau versi setara yang digantikan)."
+      },
+      "graduateDiploma": {
+        "code": "BSB80120 Graduate Diploma of Management (Learning)",
+        "requirement": "Siswa harus telah menyelesaikan kursus level Advanced Diploma (AQF Level 6) atau lebih tinggi."
+      },
+      "healthServicesAssistance": {
+        "code": "HLT33115 Certificate III in Health Services Assistance",
+        "requirement": "Siswa harus berusia minimal 18 tahun pada saat kursus dimulai.\nIELTS 5.5 atau setara, jika siswa memiliki IELTS 4.5 atau setara melalui ABM EPT, daftar dengan Plus Nursing English.\nSiswa harus telah menyelesaikan setara dengan Year 10"
+      }
+    }
+  },
+  "higherEducationPathway": {
+    "title": "Jalur Pendidikan Tinggi",
+    "bannerTitle": "Ingin Melanjutkan Setelah Kursus ABM Anda?",
+    "bannerSubtitle": "Setelah menyelesaikan Certificate IV, Diploma, atau Advanced Diploma Anda di ABM Further Education, Anda dapat mengambil langkah selanjutnya dan melanjutkan studi Anda di tingkat yang lebih tinggi.",
+    "pathwayTitle": "Jalur ke Pendidikan Tinggi",
+    "pathwayDescription": "ABM memiliki perjanjian jalur dengan penyedia pendidikan tinggi terkemuka di Australia, termasuk Southern Cross University (SCU). Ini berarti Anda mungkin memenuhi syarat untuk kredit terhadap gelar Sarjana, membantu Anda menghemat waktu dan uang.",
+    "exploreOptions": "Jika Anda mempertimbangkan studi lanjutan dan ingin meningkatkan kualifikasi Anda, jelajahi opsi Anda melalui jalur akademik ABM.",
+    "hotelSchoolTitle": "The Hotel School Sydney / Southern Cross University",
+    "hotelSchoolProgram": "Bachelor of Business in Hotel Management",
+    "certificateIVKitchen": "Certificate IV in Kitchen Management SIT40521",
+    "certificateIVKitchenCredit": "Kredit yang diberikan: 4 unit, dari total 24 (48 CP, 6 bulan atau 16% dari kursus)",
+    "diplomaHospitality": "Diploma of Hospitality Management SIT50416/SIT50422",
+    "diplomaHospitalityCredit": "Kredit yang diberikan: 8 unit, dari total 24 (96 CP, 1 tahun atau 33% dari kursus) – 4 unit elektif tidak ditentukan",
+    "advancedDiplomaHospitality": "Advanced Diploma of Hospitality Management SIT60316/SIT60322",
+    "advancedDiplomaHospitalityCredit": "Kredit yang diberikan: 12 unit, dari total 24 (144 CP, 1,5 tahun atau 50% dari kursus) – 3 unit elektif tidak ditentukan; 9 unit yang ditentukan",
+    "ubssTitle": "UBSS Universal Business School Sydney",
+    "ubssProgram": "Bachelor of Business dan Master of Business Administration",
+    "ubssBachelorTitle": "Menuju UBSS Bachelor of Business (24 mata kuliah total)",
+    "diplomaBusiness": "Diploma of Business: 6 mata kuliah",
+    "advancedDiplomaBusiness": "Advanced Diploma of Business: 9 mata kuliah",
+    "diplomaHR": "Diploma of Human Resource Management: 5 mata kuliah",
+    "advancedDiplomaHR": "Advanced Diploma of Human Resource Management: 7 mata kuliah",
+    "diplomaHospitalityUBSS": "Diploma of Hospitality Management: 4 mata kuliah",
+    "advancedDiplomaHospitalityUBSS": "Advanced Diploma of Hospitality Management: 5 mata kuliah",
+    "ubssMasterTitle": "Menuju UBSS Master of Business Administration (16 mata kuliah total)",
+    "graduateDiplomaManagement": "Graduate Diploma of Management (Learning): 8 mata kuliah",
+    "benefitsTitle": "Manfaat Jalur Pendidikan Tinggi",
+    "saveTimeTitle": "Hemat Waktu",
+    "saveTimeDescription": "Dapatkan kredit untuk kualifikasi yang ada dan selesaikan gelar Anda lebih cepat",
+    "saveMoneyTitle": "Hemat Uang",
+    "saveMoneyDescription": "Kurangi biaya kuliah dengan menerima kredit untuk unit yang telah diselesaikan",
+    "careerAdvancementTitle": "Kemajuan Karir",
+    "careerAdvancementDescription": "Tingkatkan prospek karir Anda dengan kualifikasi yang lebih tinggi",
+    "readyToStartTitle": "Siap Mengambil Langkah Selanjutnya?",
+    "readyToStartDescription": "Hubungi kami untuk informasi terperinci tentang jalur pendidikan tinggi kami dan cara memulai.",
+    "contactUs": "Hubungi Kami",
+    "enrolNow": "Daftar Sekarang"
+  },
+  "news": {
+    "bannerTitle": "Berita Terbaru",
+    "intro": "Temukan berita terbaru dari ABM.",
+    "searchPlaceholder": "Cari berita...",
+    "sortBy": "Urutkan berdasarkan:",
+    "newest": "Terbaru",
+    "oldest": "Terlama",
+    "readMore": "Baca Selengkapnya",
+    "noResults": "Tidak ada berita ditemukan."
+  },
+  "checkout": {
+    "title": "Pendaftaran Kursus",
+    "firstName": "Nama Depan",
+    "lastName": "Nama Belakang",
+    "email": "Email",
+    "phone": "Telepon",
+    "preferredDate": "Tanggal yang diinginkan (jika Anda ingin mendaftar sebagai grup)",
+    "otherInquiries": "Pertanyaan lainnya",
+    "howDidYouHear": "Bagaimana Anda mendengar tentang kursus ini?",
+    "agent": "Agen",
+    "socialMedia": "Media Sosial",
+    "friend": "Teman",
+    "searchPortal": "Portal Pencarian",
+    "abmWebsite": "Website ABM",
+    "referrerName": "Jika Anda dirujuk oleh agen atau salah satu siswa kami, silakan berikan nama mereka.",
+    "promotionCode": "Kode promosi",
+    "submit": "Lanjutkan ke Pembayaran",
+    "back": "Kembali",
+    "required": "Bidang wajib",
+    "enterFirstName": "Silakan masukkan nama depan Anda.",
+    "enterEmail": "Silakan masukkan email Anda.",
+    "invalidEmail": "Alamat email tidak valid.",
+    "success": "Melanjutkan ke pembayaran..."
+  },
+  "paymentSuccess": {
+    "title": "Pembayaran Selesai!",
+    "subtitle": "Pendaftaran kursus Anda telah berhasil diselesaikan.",
+    "registrationInfo": "Informasi Pendaftaran",
+    "course": "Kursus",
+    "date": "Tanggal",
+    "type": "Jenis",
+    "email": "Email",
+    "amountPaid": "Jumlah yang Dibayar",
+    "emailNotification": "Email konfirmasi akan segera dikirim. Instruksi tambahan akan diberikan sebelum kursus dimulai.",
+    "viewOtherCourses": "Lihat Kursus Lain",
+    "contactUs": "Hubungi Kami",
+    "errorOccurred": "Terjadi Kesalahan",
+    "sessionNotFound": "ID sesi pembayaran tidak ditemukan.",
+    "fetchError": "Gagal mengambil informasi pembayaran.",
+    "verificationError": "Terjadi kesalahan saat memverifikasi informasi pembayaran.",
+    "backToCourses": "Kembali ke Kursus",
+    "verifyingPayment": "Memverifikasi informasi pembayaran..."
+  },
+  "newsletter": {
+    "title": "Berlangganan Newsletter",
+    "desc": "Berlangganan sekarang dan jangan pernah ketinggalan pembaruan!",
+    "placeholder": "Masukkan email Anda",
+    "button": "Berlangganan"
+  },
+  "studentInsights": {
+    "bannerTitle": "Sekilas Pengalaman Siswa",
+    "testimonialTitle": "Testimoni Siswa",
+    "testimonialDescription": "Temukan apa yang siswa kami katakan tentang pengalaman mereka di ABM",
+    "testimonialImageAlt": "Testimoni siswa {number}",
+    "clickToView": "Klik untuk melihat"
+  },
+  "shortCourses": {
+    "exploreOtherShortCourses": "Jelajahi Kursus Singkat Kami Lainnya",
+    "exploreOtherShortCoursesDesc": "Temukan lebih banyak pengalaman kuliner yang menarik dan tingkatkan keterampilan Anda dengan berbagai macam kursus singkat kami."
+  },
+  "fullCourses": "Semua Kursus",
+  "fastTrack": "Fast Track",
+  "fitnessAndSports": "Kebugaran & Olahraga",
+  "projectAndProgram": "Proyek & Program",
+  "hrManagement": "Manajemen SDM",
+  "fitnessPage": {
+    "metadata": {
+      "title": "Kursus Kebugaran & Olahraga | ABM Further Education",
+      "description": "Ubah hasrat Anda untuk kebugaran menjadi karir di ABM Further Education. Jelajahi kursus kebugaran dan olahraga kami yang dirancang untuk siswa internasional dan opsi fast-track domestik."
+    },
+    "bannerTitle": "Kebugaran & Olahraga",
+    "heading": "Ubah Hasrat Anda untuk\nKebugaran Menjadi Karir",
+    "description": "Kursus kebugaran ABM mempersiapkan Anda untuk karir di industri kebugaran Australia yang berkembang. Dapatkan keterampilan untuk memimpin kelas grup, merancang program pelatihan yang dipersonalisasi, dan bekerja di gym, pengaturan outdoor, atau online. Baik Anda baru memulai atau meningkatkan keahlian Anda, program fleksibel kami menyiapkan Anda untuk sukses.",
+    "forInternational": "Untuk Siswa Internasional",
+    "forDomestic": "Untuk Domestik (Fast Track)",
+    "cert3": "Certificate III in Fitness",
+    "cert4": "Certificate IV in Fitness",
+    "diploma": "Diploma in Sport (Coaching)",
+    "cert3Fast": "Certificate III in Fitness (Fast Track)",
+    "cert4Fast": "Certificate IV in Fitness (Fast Track)"
+  },
+  "healthPage": {
+    "metadata": {
+      "title": "Kursus Kesehatan & Kebugaran | ABM Further Education",
+      "description": "Bahkan tanpa pengalaman keperawatan, Anda dapat bekerja dan belajar sebagai Assistant in Nursing (AIN) di rumah sakit dan fasilitas perawatan di Australia. Mudah untuk memulai bahkan untuk pemula dalam bahasa Inggris, dengan banyak kesempatan untuk pelatihan praktis dan pekerjaan. Program populer ini tersedia untuk peserta dengan visa Working Holiday dan Student."
+    },
+    "bannerTitle": "Kesehatan & Kebugaran",
+    "heading": "Belajar & Bekerja\nsebagai Asisten Perawat di Australia",
+    "description": "Ambil langkah pertama Anda menuju karir yang memuaskan di bidang kesehatan dengan ABM's Nursing Support Career Pathway. Program komprehensif ini dirancang untuk siswa internasional atau pendatang baru di sektor kesehatan yang ingin menjadi pekerja pendukung terampil di rumah sakit dan fasilitas perawatan lansia.",
+    "nursingSupport": "Nursing Support Career Pathway",
+    "cert3Health": "HLT33115 Certificate III in Health Services Assistance",
+    "whyChoose": "Mengapa Memilih Certificate III in Health Services Assistance?",
+    "realHealthcare": "Pengaturan Kesehatan Nyata",
+    "realHealthcareDesc": "Selesaikan 80 jam penempatan kerja di lingkungan kesehatan nyata",
+    "workPlacement": "Dukungan Penempatan Kerja",
+    "workPlacementDesc": "Dukungan komprehensif termasuk perjanjian, pengawasan, dan penjadwalan fleksibel",
+    "recognised": "Diakui Secara Nasional",
+    "recognisedDesc": "Dapatkan kualifikasi yang diakui secara nasional yang membuka peluang karir",
+    "careerOpportunities": "Peluang Karir",
+    "ain": "Assistant in Nursing (AIN)",
+    "healthServicesAssistant": "Health Services Assistant",
+    "personalCareAssistant": "Personal Care Assistant",
+    "hospitalOrderly": "Hospital Orderly",
+    "patientSupport": "Patient Support Assistant",
+    "supportWorker": "Support Worker",
+    "careWorker": "Care Worker"
+  },
+  "shortCoursesPage": {
+    "heading": "Temukan Hasrat Anda dengan Program Khusus Baru ABM!",
+    "description": "ABM menawarkan kursus jangka pendek yang disesuaikan dan program satu hari yang disampaikan dalam format grup privat. Disesuaikan dengan kebutuhan setiap grup, program kami ideal untuk sekolah, universitas, dan penggemar perhotelan. Kami telah berhasil berkolaborasi dengan banyak sekolah menengah dan universitas, menciptakan pengalaman belajar yang menarik dan praktis.",
+    "heading2": "Program Khusus ABM",
+    "calendarHeading": "Kalender Kursus",
+    "calendarDescription": "Jelajahi kursus singkat kami berdasarkan bulan dan temukan tanggal yang sempurna untuk Anda"
+  },
+  "footer": {
+    "home": "Beranda",
+    "courses": "Kursus",
+    "customPrograms": "Program Khusus",
+    "shortCourses": "Kursus Singkat",
+    "studyWithUs": "Belajar Bersama Kami",
+    "currentStudents": "Siswa Saat Ini",
+    "contact": "Hubungi",
+    "cookeryAndHospitality": "Memasak & Perhotelan",
+    "fitnessAndSports": "Kebugaran & Olahraga",
+    "business": "Bisnis",
+    "projectAndProgram": "Proyek & Program",
+    "humanResources": "Sumber Daya Manusia",
+    "healthAndWellness": "Kesehatan",
+    "baristaCourse": "Kursus Barista",
+    "classicFrenchPastriesCourse": "Kursus Pastry Prancis Klasik",
+    "cocktail": "Kursus Pembuatan Koktail dan Mixologi",
+    "wineCourse": "Kursus Anggur",
+    "sourdoughAndFocacciaCourse": "Kursus Sourdough dan Focaccia",
+    "fineDiningDessertPlating": "Plating Dessert Fine Dining",
+    "classicFrenchCakesCourse": "Kursus Kue Prancis Klasik",
+    "frenchPetitFourCourse": "Kursus French Petit Four (Macaroon)",
+    "veganAndVegetarianCourse": "Kursus Vegan dan Vegetarian",
+    "chocolateClassXmas": "Kelas Cokelat - Natal",
+    "agent": "Agen",
+    "agentPortal": "Portal Agen",
+    "agentApplication": "Aplikasi Agen",
+    "agentList": "Daftar Agen",
+    "abmPoliciesAndProcedures": "Kebijakan dan Prosedur ABM",
+    "studyTourPrograms": "Program Tur Studi"
+  },
+  "shortCoursesMenu": {
+    "hospitality": "Perhotelan",
+    "cookingAndBaking": "Memasak & Memanggang",
+    "onlineCourses": "Kursus Online",
+    "barista": "Kursus Barista",
+    "wine": "Kursus Anggur",
+    "fineDessert": "Kursus Plating Dessert Fine Dining",
+    "cocktail": "Kursus Pembuatan Koktail dan Mixologi",
+    "foodSafety": "NSW Food Safety Supervisor Certificate",
+    "rsa": "Responsible Service of Alcohol (RSA)",
+    "frenchCakes": "Kursus Kue Prancis Klasik",
+    "sourdough": "Kursus Sourdough dan Focaccia",
+    "frenchPastries": "Kursus Pastry Prancis Klasik",
+    "petitFour": "Kursus French Petit Four (Macaroon)",
+    "vegan": "Kursus Vegan dan Vegetarian",
+    "chocolate": "Kelas Cokelat – Natal",
+    "htmlIntro": "Pengantar HTML, CSS, dan Desain Web Dasar",
+    "portfolioWebsite": "Kursus Lanjutan: Membangun Website Portofolio",
+    "baristaSampleCourse": "Kursus Contoh Barista",
+    "baristaOnlineCourse": "Kursus Online Barista",
+    "studyTourPrograms": "Program Tur Studi"
+  },
+  "gallery": {
+    "title": "Galeri Kampus"
+  },
+  "courseInformation": {
+    "title": "Informasi Kursus",
+    "overview": "Gambaran Umum"
+  },
+  "courseDetail": {
+    "title": "Detail Kursus"
+  },
+  "units": {
+    "title": "Unit"
+  },
+  "hrPage": {
+    "metadata": {
+      "title": "Kursus Manajemen Sumber Daya Manusia | ABM Further Education",
+      "description": "Bangun karir yang memuaskan di sumber daya manusia dengan ABM Further Education. Dari Certificate IV hingga Advanced Diploma, kembangkan keterampilan HR penting untuk tempat kerja yang terus berkembang saat ini."
+    },
+    "bannerTitle": "Manajemen Sumber Daya Manusia",
+    "heading": "Bangun Karir yang Memuaskan di Sumber Daya Manusia",
+    "description": "Kursus Manajemen Sumber Daya Manusia ABM mempersiapkan Anda untuk peran HR di setiap tingkat—dari petugas tingkat pemula hingga pemimpin HR strategis. Dapatkan keterampilan dalam rekrutmen, resolusi konflik, penggajian, dan perencanaan tenaga kerja melalui kursus fleksibel yang disesuaikan dengan tujuan Anda. Baik Anda memulai dengan Certificate IV atau maju ke Advanced Diploma, ABM membekali Anda dengan pengetahuan dan pengalaman untuk berkembang di tempat kerja yang terus berkembang saat ini.",
+    "projectHeading": "Kursus Sumber Daya Manusia",
+    "cert4": "Certificate IV in Human Resource Management",
+    "diploma": "Diploma of Human Resource Management",
+    "advDiploma": "Advanced Diploma of Human Resource Management"
+  },
+  "projectProgram": {
+    "bannerTitle": "Proyek & Program",
+    "bannerContent": "",
+    "leadProjectsTitle": "Pimpin Proyek yang Berdampak",
+    "leadProjectsDescription": "Kursus Manajemen Proyek dan Program ABM membekali Anda dengan keterampilan untuk memimpin proyek yang sukses di berbagai industri seperti konstruksi, teknologi, dan sektor korporat. Dari peran dasar dengan Certificate IV hingga kepemimpinan senior dengan Advanced Diploma, kursus fleksibel kami mencakup perencanaan proyek, manajemen risiko, dan keterlibatan pemangku kepentingan. Baik Anda baru memulai atau mengincar peran lanjutan, ABM membantu Anda membangun keahlian untuk mengubah ide menjadi hasil nyata.",
+    "coursesTitle": "Kursus Proyek & Program",
+    "certIVTitle": "Certificate IV in Project Management Practice",
+    "diplomaTitle": "Diploma of Project Management",
+    "advDiplomaTitle": "Advanced Diploma of Program Management"
+  },
+  "academicCalendar": {
+    "term1Intake1": "Term 1 Intake 1",
+    "term1Intake2": "Term 1 Intake 2",
+    "holiday1": "Liburan 1",
+    "term2Intake1": "Term 2 Intake 1",
+    "term2Intake2": "Term 2 Intake 2",
+    "holiday2": "Liburan 2",
+    "term3Intake1": "Term 3 Intake 1",
+    "term3Intake2": "Term 3 Intake 2",
+    "holiday3": "Liburan 3",
+    "term4Intake1": "Term 4 Intake 1",
+    "term4Intake2": "Term 4 Intake 2",
+    "christmasHoliday": "Liburan Natal"
+  },
+  "trainers": {
+    "title": "Pelatih Kami",
+    "subtitle": "Temui para profesional terdepan di industri kami",
+    "heading": "Temui Pelatih Ahli Kami",
+    "description": "Belajar dari profesional industri dengan pengalaman bertahun-tahun di bidang masing-masing. Pelatih kami berdedikasi untuk memberi Anda pengetahuan dan keterampilan yang diperlukan untuk sukses.",
+    "readyToLearn": "Siap Belajar dari yang Terbaik?",
+    "contactDescription": "Hubungi kami untuk mempelajari lebih lanjut tentang kursus kami dan bagaimana pelatih ahli kami dapat membantu Anda mencapai tujuan Anda.",
+    "contactUs": "Hubungi Kami",
+    "categories": {
+      "cookery": "Memasak & Perhotelan",
+      "business": "Bisnis & Manajemen",
+      "fitness": "Kebugaran & Olahraga",
+      "hr": "Sumber Daya Manusia",
+      "project": "Manajemen Proyek",
+      "health": "Kesehatan & Kebugaran"
+    }
+  },
+  "hsaPage": {
+    "metadata": {
+      "title": "Certificate III in Health Services Assistance",
+      "description": "Kursus HLT33115 Certificate III in Health Services Assistance untuk menjadi asisten perawat di Australia. Ramah pemula dengan 80 jam pelatihan praktis di rumah sakit dan fasilitas perawatan lansia. Dapatkan kualifikasi yang diakui secara nasional dan majukan karir kesehatan Anda."
+    },
+    "courseDuration": {
+      "title": "Durasi Kursus",
+      "items": {
+        "qualificationDuration": "Durasi kualifikasi: 16 minggu",
+        "workPlacement": "Penempatan Kerja: 80 jam di pengaturan kesehatan nyata",
+        "noHoliday": "Tidak ada jeda liburan"
+      }
+    },
+    "entryRequirements": {
+      "title": "Persyaratan Masuk",
+      "items": {
+        "basic": "Usia: 18 tahun ke atas, Bahasa Inggris: IELTS 5.5 atau setara",
+        "lowerEnglishOption": "Jika siswa memiliki IELTS 4.5 atau setara melalui ABM EPT, daftar dengan Plus Nursing English."
+      }
+    },
+    "workPlacement": {
+      "title": "Informasi Penempatan Kerja",
+      "items": {
+        "hours": "80 jam penempatan kerja yang diawasi di rumah sakit dan fasilitas perawatan lansia",
+        "applyLearning": "Kesempatan untuk menerapkan pembelajaran kelas di lingkungan kesehatan nyata",
+        "confidence": "Bangun kepercayaan diri dan dapatkan pengalaman langsung bekerja bersama profesional",
+        "support": "Bantuan penempatan disediakan oleh staf ABM"
+      }
+    },
+    "industryPartners": {
+      "title": "Mitra Industri Utama",
+      "items": {
+        "partners": "Rumah Sakit Swasta, Pusat Medis, Pusat Perawatan Lansia"
+      }
+    },
+    "courseBenefits": {
+      "title": "Manfaat Kursus",
+      "items": {
+        "fundamentalSkills": "Dapatkan keterampilan dasar untuk bekerja di rumah sakit dan fasilitas perawatan Australia setelah sertifikasi",
+        "practicalExperience": "Dapatkan pengalaman praktis melalui 80 jam pelatihan langsung",
+        "medicalEnglish": "Tingkatkan keterampilan komunikasi bahasa Inggris medis",
+        "beginnerFriendly": "Desain pembelajaran yang dapat diakses bahkan untuk pemula",
+        "careerAdvancement": "Dapat dimanfaatkan untuk kemajuan karir di masa depan (gelar keperawatan/kualifikasi lanjutan)"
+      }
+    },
+    "faq": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "items": {
+        "q1": {
+          "question": "Berapa biaya kursus asisten perawat?",
+          "answer": "Silakan lihat daftar harga resmi kami untuk informasi biaya kuliah terbaru."
+        },
+        "q2": {
+          "question": "Visa mana yang memungkinkan saya mendaftar?",
+          "answer": "Kursus ini cocok untuk siswa dengan Visa Working Holiday atau jenis visa apa pun yang memungkinkan Anda belajar selama 16 minggu tanpa Confirmation of Enrolment (CoE). Kami tidak memberikan saran visa. Silakan periksa kondisi visa Anda atau konsultasikan dengan agen migrasi terdaftar jika Anda tidak yakin."
+        },
+        "q3": {
+          "question": "Bagaimana dengan penempatan dan dukungan untuk pelatihan klinis?",
+          "answer": "ABM menyediakan 80 jam penempatan kerja sebagai bagian dari kursus, diatur melalui mitra industri terpercaya kami. Setelah selesai, kami juga menawarkan kesempatan kerja berbayar untuk lulusan yang memenuhi syarat, mendukung transisi lancar Anda ke tenaga kerja kesehatan."
+        },
+        "q4": {
+          "question": "Bisakah saya menemukan pekerjaan dengan kualifikasi ini?",
+          "answer": "Ya, lulusan kami sering mendapatkan posisi di Rumah Sakit Swasta, Pusat Medis, Pusat Perawatan Lansia."
+        },
+        "q5": {
+          "question": "Bagaimana jika kemampuan bahasa Inggris saya tidak mencukupi?",
+          "answer": "Persyaratan masuk minimum adalah IELTS 5.5 atau setara. Jika Anda saat ini memiliki IELTS 4.5 atau setara, Anda dapat mendaftar di kursus dengan Plus Nursing English, yang menyediakan dukungan bahasa tambahan yang disesuaikan untuk pengaturan kesehatan. Jika Anda tidak memiliki hasil tes bahasa Inggris, kemampuan bahasa Inggris Anda dapat dinilai melalui ABM English Placement Test."
+        }
+      }
+    }
+  }
+}

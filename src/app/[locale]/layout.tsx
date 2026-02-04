@@ -56,7 +56,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <Script
           id="gtm-script"
@@ -115,4 +115,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </body>
     </html>
   );
+}
+
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'kr' }];
 }

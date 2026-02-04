@@ -1,0 +1,967 @@
+{
+  "HomePage": {
+    "description": "在悉尼ABM Further Education学习国家认可的商业、酒店管理(食品安全、RSA)、烹饪、健身和健康课程。实践培训和行业实习。",
+    "bannerContent": "热情与烹饪完美的交汇。难忘的体验",
+    "coursesTitle": "ABM课程",
+    "coursesDescription": "我们在创新和支持性的环境中提供高质量的教育，通过专业教学和全澳大利亚的工作体验机会确保学生成功。",
+    "testimonialTitle": "学员感言",
+    "testimonialDescription": "你希望在不久的将来在哪里快乐地工作？",
+    "banners": {
+      "hsa": {
+        "title": "开启您的健康服务助理职业生涯",
+        "content": "16周快速成长 - 立即报名2026年2月入学！",
+        "button": "立即报名"
+      },
+      "fitness": {
+        "title": "开始您的健身之旅",
+        "content": "1月入学现已开放。名额有限。\n如果您想成为健身教练，这是一个坚实的起点。"
+      },
+      "career": {
+        "title": "您的职业从这里开始",
+        "content": "学习确保合适的人在合适的岗位上，为每个人创造更好的工作环境。"
+      },
+      "video": {
+        "title": "您的职业从这里开始",
+        "content": ""
+      },
+      "trial": {
+        "title": "立即获取免费1天体验",
+        "content": "预约免费参观我们的校园、健身房和厨房，或享受健身和HSA 1天体验。",
+        "button": "立即体验"
+      }
+    },
+    "lookingForAllCourses": "寻找所有课程？",
+    "clickHere": "点击这里！"
+  },
+  "contact": {
+    "title": "联系我们",
+    "getInTouch": "与我们取得联系",
+    "address": "242 Castlereagh Street Sydney NSW 2000 Australia",
+    "phone": "+61 (02) 9160 4507",
+    "whatsapp": "(WhatsApp) + 61 482 796 010",
+    "email": "info@abm.edu.au",
+    "emailPlaceholder": "电子邮件",
+    "enquiryType": "您的咨询类型是什么？",
+    "selectEnquiryType": "选择咨询类型",
+    "generalEnquiry": "一般咨询",
+    "bookCampusTour": "预约校园参观",
+    "becomeStudent": "成为学生",
+    "becomeAgent": "成为代理",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "phonePlaceholder": "电话",
+    "nationality": "国籍",
+    "message": "留言",
+    "sendMessage": "发送消息",
+    "successMessage": "您的咨询已发送。谢谢！",
+    "errorMessage": "发送失败。请稍后重试。",
+    "sending": "发送中...",
+    "validation": {
+      "firstNameRequired": "名字为必填项",
+      "firstNameMinLength": "名字至少需要2个字符",
+      "lastNameRequired": "姓氏为必填项",
+      "lastNameMinLength": "姓氏至少需要2个字符",
+      "emailRequired": "电子邮件为必填项",
+      "emailInvalid": "无效的电子邮件地址"
+    },
+    "preferredDate": "首选日期",
+    "weekdaysOnly": "仅限工作日（周一至周五）",
+    "selectDate": "选择日期",
+    "oneDayTrial": "1天免费试课",
+    "courseTypeLabel": "课程类型",
+    "selectCourseType": "选择课程类型",
+    "fitness": "健身",
+    "hsa": "健康服务助理 (HSA)",
+    "hsaTrialDays": "HSA试课仅在周四和周五开放。",
+    "hsaTrialTime": "试课于上午10:00开始"
+  },
+  "courses": {
+    "title": "课程 | 商业、酒店管理和健康课程 | ABM Further Education",
+    "description": "食品安全、RSA和商业、酒店管理、烹饪、健身、运动和健康课程，从三级证书到高级文凭级别。"
+  },
+  "studyWithUs": {
+    "description": "为什么在ABM学习：实践课程、行业培训师、工作实习和悉尼强大的学生支持。",
+    "studyTourPrograms": "游学项目",
+    "studentInsights": "学员感言",
+    "academicCalendar": "学术日历",
+    "feesAndPayment": "费用与付款",
+    "entryRequirements": "入学要求",
+    "getUSI": "获取USI",
+    "enrolNow": "立即报名",
+    "timetable": "课程表",
+    "higherEducationPathway": "高等教育通道",
+    "policiesAndProcedures": "政策与程序",
+    "trainers": "培训师",
+    "studentAccommodation": "学生住宿",
+    "title": "与我们一起学习",
+    "welcome": "欢迎来到ABM Further Education！",
+    "mission": "我们的使命是提供高质量的实践教育，为学生的成功职业生涯做好准备。在ABM，您将向致力于您成长的经验丰富的行业领袖学习。通过支持性的环境和真实世界的培训，我们确保您获得在未来职业中蓬勃发展所需的技能和信心。",
+    "why": "为什么选择在ABM Further Education学习？",
+    "whyContent": "ABM Further Education是澳大利亚新成立的职业教育提供商，提供由经验丰富的行业专业人士领导的国家认可课程。我们专注于为学生提供未来职业所需的实践技能，并积极建立行业合作关系，以确保我们的毕业生做好就业准备并符合当前的劳动力需求。",
+    "highlights": {
+      "primeLocation": {
+        "title": "优越位置",
+        "desc": "ABM位于悉尼市中心！您可以乘坐火车、轻轨或公共汽车到达，该地区有很多工作机会。"
+      },
+      "modernKitchen": {
+        "title": "行业领先的现代厨房和最先进的校园",
+        "desc": "我们希望您成功，因此我们刚刚用最现代化的厨房和最新技术翻新了我们的校园。学生还可以免费使用休息室、wifi、电脑、复印机、扫描仪、手机充电站和小厨房！"
+      },
+      "trainers": {
+        "title": "行业领先的培训师",
+        "desc": "向在其行业拥有多年经验的专业人士学习！"
+      },
+      "workPlacement": {
+        "title": "工作实习支持",
+        "desc": "ABM位于悉尼市中心！您可以乘坐火车、轻轨或公共汽车到达，该地区有很多工作机会。"
+      },
+      "serviceTeam": {
+        "title": "多语言学生服务团队",
+        "desc": "我们希望您成功，因此我们刚刚用最现代化的厨房和最新技术翻新了我们的校园。学生还可以免费使用休息室、wifi、电脑、复印机、扫描仪、手机充电站和小厨房！"
+      },
+      "partnerships": {
+        "title": "行业合作伙伴",
+        "desc": "向在其行业拥有多年经验的专业人士学习！"
+      }
+    }
+  },
+  "promotion": {
+    "title": "1天免费试课和免费校园参观",
+    "description": "通过免费的1天试课体验我们的健身项目或了解我们的健康服务助理(HSA)课程——并参加我们校园、健身房和厨房设施的导览。发现您的潜力，认识我们的专家培训师，了解我们的整体环境如何支持您的职业和健康目标。",
+    "trialTitle": "您将获得",
+    "fitnessCategory": "健身",
+    "hsaCategory": "健康服务助理 (HSA)",
+    "benefit1": "课程信息",
+    "benefit2": "课程表",
+    "benefit3": "工作实习和就业信息",
+    "benefit4": "职业路径指导",
+    "hsaBenefit1": "课程信息",
+    "hsaBenefit2": "课程表",
+    "hsaBenefit3": "工作实习和就业信息",
+    "hsaBenefit4": "职业路径指导",
+    "whatToExpect": "期待什么",
+    "expectation1": "校园和健身房设施的导览",
+    "expectation2": "我们认证健身专业人士的个人指导",
+    "hsaExpectation1": "校园导览，包括AIN学生专用的实践室",
+    "hsaExpectation2": "工作实习提供商信息",
+    "hsaExpectation3": "课程结构和课程概述",
+    "galleryTitle": "我们的校园和培训",
+    "ctaTitle": "准备好开始您的健身或医疗保健职业之旅了吗？",
+    "ctaDescription": "今天预约您的免费试课，迈出实现健身目标或在ABM专家指导下探索医疗保健职业的第一步。",
+    "formTitle": "预约您的免费校园参观或1天试课",
+    "typeLabel": "访问类型",
+    "selectType": "选择访问类型",
+    "campusTour": "校园参观",
+    "oneDayTrial": "1天免费试课",
+    "courseTypeLabel": "课程类型",
+    "selectCourseType": "选择课程类型",
+    "fitness": "健身",
+    "hsa": "健康服务助理 (HSA)",
+    "dateLabel": "首选日期",
+    "selectDate": "选择日期",
+    "weekdaysOnly": "请注意：周末不可选。只能选择工作日。",
+    "hsaTrialDays": "HSA试课仅在周四和周五开放。",
+    "hsaTrialTime": "试课于上午10:00开始",
+    "nameLabel": "全名",
+    "namePlaceholder": "输入您的全名",
+    "emailLabel": "电子邮件地址",
+    "emailPlaceholder": "输入您的电子邮件地址",
+    "phoneLabel": "电话号码",
+    "phonePlaceholder": "输入您的电话号码",
+    "howDidYouFindUsLabel": "您是如何找到我们的？",
+    "selectOption": "选择一个选项",
+    "socialMedia": "社交媒体",
+    "googleSearch": "Google搜索",
+    "friendRecommendation": "朋友推荐",
+    "advertisement": "广告",
+    "other": "其他",
+    "goalLabel": "您的健身目标是什么？",
+    "goalPlaceholder": "告诉我们您的健身目标以及您希望实现什么",
+    "submitButton": "预约免费校园参观或1天试课",
+    "submitting": "预约中...",
+    "formSuccess": "谢谢！您的免费试课已成功预约。我们将很快与您联系确认详情。",
+    "formError": "抱歉，预约试课时出错。请重试或直接联系我们。",
+    "formNote": "带*的字段为必填项。我们将在24小时内与您联系确认预约。",
+    "thankYouTitle": "预约已确认！",
+    "thankYouSubtitle": "您的免费试课已成功预约。",
+    "bookingDetails": "预约详情",
+    "nextStepsTitle": "接下来是什么？",
+    "nextStep1Title": "确认电话",
+    "nextStep1Description": "我们将在24小时内与您联系确认预约详情。",
+    "nextStep2Title": "为试课做准备",
+    "nextStep2Description": "当天请穿着舒适的运动服并携带水瓶。",
+    "nextStep3Title": "参加试课",
+    "nextStep3Description": "在您预定的时间访问我们的ABM校园。",
+    "contactInfoTitle": "需要帮助？",
+    "contactInfoDescription": "如果您有任何问题，请随时联系我们。",
+    "backToHome": "返回首页",
+    "exploreCourses": "探索其他课程"
+  },
+  "timetable": {
+    "title": "课程表",
+    "subtitle": "规划您的学习时间表",
+    "pageTitle": "课程表",
+    "importantInfo": "重要信息",
+    "selfPacedLearning": "所有学生必须根据课程完成5-6小时的自主学习。",
+    "schedule": "上午：每周2.5天，晚上：每周3天。",
+    "subjectToChange": "此课程表可能会有所变动。",
+    "studyHours": "*15-24小时的面授学习加上5-6小时的自主学习，具体取决于课程。",
+    "qualification": "资格",
+    "intake": "入学/课程",
+    "monday": "周一",
+    "tuesday": "周二",
+    "wednesday": "周三",
+    "thursday": "周四",
+    "friday": "周五",
+    "tutorial": "辅导课",
+    "note": "备注",
+    "noteDescription": "请联系我们获取最新的课程表信息，因为时间表可能会根据招生和运营要求而变化。"
+  },
+  "nav": {
+    "internationalStudent": "您是国际学生吗？",
+    "downloadGuide": "下载ABM课程指南2026",
+    "currentStudents": "在校学生",
+    "agentPortal": "代理门户",
+    "findCourse": "查找课程",
+    "searchPlaceholder": "在这里搜索...",
+    "noResults": "未找到结果。",
+    "enrolNow": "立即报名",
+    "menu": {
+      "courses": "课程",
+      "shortCourses": "定制课程",
+      "studyWithUs": "与我们一起学习",
+      "contact": "联系我们"
+    },
+    "subMenu": {
+      "studyTourPrograms": "游学项目",
+      "cookery": "烹饪",
+      "hospitality": "酒店管理",
+      "fitnessAndSport": "健身与运动",
+      "business": "商业",
+      "projectAndProgram": "项目与计划",
+      "humanResource": "人力资源",
+      "health": "健康与保健",
+      "cookingAndBaking": "烹饪与烘焙",
+      "onlineCourses": "在线课程",
+      "baristaSampleCourse": "咖啡师体验课程",
+      "baristaOnlineCourse": "咖啡师在线课程"
+    },
+    "studyWithUs": {
+      "studyTourPrograms": "游学项目",
+      "studentInsights": "学员感言",
+      "academicCalendar": "学术日历",
+      "feesAndPayment": "费用与付款",
+      "entryRequirements": "入学要求",
+      "getUSI": "获取USI",
+      "enrolNow": "立即报名",
+      "higherEducationPathway": "高等教育通道",
+      "studentAccommodation": "学生住宿"
+    }
+  },
+  "cookeryAndHospitality": {
+    "title": "开启您的烹饪与酒店管理职业生涯",
+    "description": "通过四级厨房管理证书获得真正的商业厨房经验。学习高级烹饪技能、领导力和主管培训，在澳大利亚建立您的厨师职业生涯。",
+    "streams": "方向",
+    "kitchenManagementStream": "厨房管理方向",
+    "foodAndBeverageStream": "餐饮服务方向",
+    "streamDescription": "此方向适合希望将烹饪技能和学习提升到更高级水平的学生。",
+    "specialisedShortCourses": "专业短期课程",
+    "shortCourse": "一日课程",
+    "eliteCookingClass": "精英烹饪课程系列",
+    "foodSafetySupervisor": "新南威尔士州食品安全主管证书 (FSS)"
+  },
+  "common": {
+    "findOutMore": "了解更多"
+  },
+  "currentStudents": {
+    "title": "学生信息",
+    "welcome": "欢迎来到在校学生页面！",
+    "description": "在这里您将找到支持您在ABM学习的重要信息、资源和更新",
+    "moodleTitle": "需要登录Moodle吗？",
+    "moodleLogin": "MOODLE登录",
+    "studentPortalTitle": "需要下载表格吗？",
+    "studentPortal": "学生门户",
+    "meta": {
+      "title": "ABM在校学生",
+      "description": "ABM Further Education的学生课程表、实习信息、政策、表格和学术支持。"
+    }
+  },
+  "feeSchedule": {
+    "title": "2026年费用表",
+    "bannerTitle": "2026年费用表",
+    "bannerSubtitle": "ABM Further Education完整费用信息",
+    "promotionTitle": "限时优惠！",
+    "promotionDescription": "不要错过这个激动人心的机会！点击下面的按钮下载我们庆祝新校园和课程推出的限时优惠。发现专为您设计的独家折扣和优惠！",
+    "downloadButton": "下载优惠详情",
+    "paymentTitle": "付款选项",
+    "paymentDescription": "从2022年8月起，我们的学生和代理可以通过PayPal或信用卡在线付款（信用卡/借记卡付款附加费2%）",
+    "contactText": "如有疑问，请联系我们的财务团队：",
+    "otherFeesTitle": "其他费用",
+    "enrolmentFee": "注册费",
+    "materialFee": "材料费",
+    "rplFee": "RPL费用",
+    "creditTransferFee": "学分转换费",
+    "changeSessionFee": "更换课时费",
+    "changeCourseFee": "更换课程费",
+    "reassessmentFee": "重新评估/缺席费*",
+    "latePaymentFee": "逾期付款费",
+    "withdrawalFee": "退学申请费",
+    "defermentFee": "延期费",
+    "lateSubmissionFee": "逾期提交费",
+    "theoryCatchupFee": "理论补课费（厨房管理课程）",
+    "practicalCatchupFee": "实践补课费（厨房管理课程）",
+    "repeatUnitFee": "重修单元费（厨房管理课程）",
+    "enrolmentFeeAmount": "$250（不可退还）",
+    "materialFeeAmount": "$50每学期（不包括：厨房管理和酒店管理课程 – 见上文）",
+    "rplFeeAmount": "$300每单元（不可退还）",
+    "creditTransferFeeAmount": "$500（不可退还）",
+    "changeSessionFeeAmount": "$200",
+    "changeCourseFeeAmount": "$200",
+    "reassessmentFeeAmount": "$300每单元（不可退还）",
+    "latePaymentFeeAmount": "$200（不可退还）",
+    "withdrawalFeeAmount": "$300（不可退还）",
+    "defermentFeeAmount": "$200",
+    "lateSubmissionFeeAmount": "$50每单元",
+    "theoryCatchupFeeAmount": "$100每单元",
+    "practicalCatchupFeeAmount": "$250每单元",
+    "repeatUnitTheoryAmount": "$250每单元（理论）",
+    "repeatUnitPracticalAmount": "$350每单元（理论和实践单元）",
+    "nonRefundableNote": "* 除非另有说明，不可退还费用适用于所有列出的收费"
+  },
+  "usi": {
+    "title": "获取USI",
+    "bannerTitle": "获取USI",
+    "bannerSubtitle": "唯一学生标识符 - 您进入职业教育的钥匙",
+    "whatIsUSITitle": "什么是USI？",
+    "whatIsUSIDescription": "USI（唯一学生标识符）是由10个数字和字母组成的参考号码，让您可以访问您的USI账户，并将显示在您的培训记录和成绩上。它是免费且易于创建的，将伴随您一生。",
+    "usiBenefit1": "在线访问您的培训记录和成绩",
+    "usiBenefit2": "获得您的资格证书或成绩证明",
+    "usiBenefit3": "跟踪您在不同培训机构的进度",
+    "usiBenefit4": "确保您的培训成就被正确记录",
+    "whoNeedsUSITitle": "谁需要USI？",
+    "whoNeedsUSIDescription": "如果您在澳大利亚学习国家认可的培训，您需要USI。这包括：",
+    "needUSI1": "学习国家认可VET课程的学生",
+    "needUSI2": "学习国家认可高等教育课程的学生",
+    "needUSI3": "学习国家认可学徒制或实习制的学生",
+    "needUSI4": "学习国家认可短期课程的学生",
+    "howToGetUSITitle": "如何获取USI",
+    "howToGetUSIDescription": "您可以在线或通过电话创建您的USI。在线方式是最快最简单的方法。",
+    "onlineMethodTitle": "在线方式",
+    "onlineStep1": "访问USI网站 www.usi.gov.au",
+    "onlineStep2": "点击\"创建USI\"",
+    "onlineStep3": "输入您的个人信息和身份证明文件",
+    "onlineStep4": "您的USI将立即创建",
+    "createUSIButton": "在线创建USI",
+    "phoneMethodTitle": "电话方式",
+    "phoneMethodDescription": "如果您无法在线创建USI，可以致电USI办公室：",
+    "phoneNumber": "1300 857 536",
+    "phoneHours": "周一至周五，上午8:00至下午6:00（澳大利亚东部标准时间）",
+    "requiorangeDocumentsTitle": "所需文件",
+    "requiorangeDocumentsDescription": "要创建您的USI，您需要提供以下身份证明之一：",
+    "requiredDocumentsTitle": "所需文件",
+    "requiredDocumentsDescription": "要创建您的USI，您需要提供以下身份证明之一：",
+    "primaryDocumentsTitle": "主要文件",
+    "primaryDoc1": "澳大利亚护照",
+    "primaryDoc2": "澳大利亚出生证明",
+    "primaryDoc3": "澳大利亚公民证书",
+    "primaryDoc4": "澳大利亚驾照",
+    "secondaryDocumentsTitle": "次要文件",
+    "secondaryDoc1": "Medicare卡",
+    "secondaryDoc2": "澳大利亚签证",
+    "secondaryDoc3": "澳大利亚学生证",
+    "secondaryDoc4": "澳大利亚工作证",
+    "importantInfoTitle": "重要信息",
+    "importantInfo1": "您只需要创建一次USI - 它将伴随您一生",
+    "importantInfo2": "保管好您的USI - 不要与他人分享",
+    "importantInfo3": "您可以随时在线访问您的USI账户",
+    "importantInfo4": "如果您忘记了USI，可以在线或通过电话找回",
+    "importantInfo5": "您的USI是在澳大利亚进行所有国家认可培训所必需的",
+    "needHelpTitle": "需要帮助？",
+    "needHelpDescription": "如果您需要创建USI的帮助或有任何问题，我们随时为您服务：",
+    "contactABMTitle": "联系ABM",
+    "contactABMDescription": "我们的学生服务团队可以帮助您完成USI创建过程并回答您的任何问题。",
+    "contactABMButton": "联系ABM",
+    "usiHelpTitle": "USI帮助",
+    "usiHelpDescription": "如需技术支持或有关USI账户的问题，请访问官方USI帮助页面。",
+    "usiHelpButton": "USI帮助"
+  },
+  "courseEntryRequirements": {
+    "metaTitle": "课程入学要求 - ABM Further Education",
+    "metaDescription": "了解ABM课程的入学要求，包括学术要求、英语语言要求和申请流程。",
+    "bannerTitle": "课程入学要求",
+    "bannerSubtitle": "关于报读ABM课程您需要了解的一切",
+    "introTitle": "ABM课程入学要求",
+    "introDescription": "为确保最佳的学习体验和成果，ABM对所有课程都有特定的入学要求。这些要求帮助我们保持高教育标准，并确保学生为学习做好充分准备。",
+    "generalRequirementsTitle": "一般要求",
+    "ageRequirementTitle": "年龄要求",
+    "ageRequirementDescription": "学生在课程开始时必须年满18岁。",
+    "englishRequirementTitle": "英语语言能力",
+    "englishRequirementDescription": "所有学生必须证明其英语语言能力，以确保能够成功完成学业。这适用于国内和国际学生。",
+    "academicRequirementsTitle": "学术要求",
+    "certificateIIITitle": "三级证书课程",
+    "certificateIIIRequirement1": "完成10年级或同等学历",
+    "certificateIIIRequirement2": "基本的读写和计算能力",
+    "certificateIIIRequirement3": "能够独立工作和团队合作",
+    "certificateIVTitle": "四级证书课程",
+    "certificateIVRequirement1": "完成12年级或同等学历",
+    "certificateIVRequirement2": "相关领域的三级证书（推荐）",
+    "certificateIVRequirement3": "较强的沟通和解决问题的能力",
+    "diplomaTitle": "文凭课程",
+    "diplomaRequirement1": "完成12年级或同等学历",
+    "diplomaRequirement2": "相关领域的四级证书（推荐）",
+    "diplomaRequirement3": "展示领导潜力",
+    "advancedDiplomaTitle": "高级文凭课程",
+    "advancedDiplomaRequirement1": "相关领域的文凭",
+    "advancedDiplomaRequirement2": "至少2年相关工作经验",
+    "advancedDiplomaRequirement3": "良好的学术背景",
+    "englishLanguageTitle": "英语入学要求",
+    "acceptedTestsTitle": "接受的英语测试",
+    "acceptedTest1": "雅思学术类：总分5.5（各项不低于5.0）",
+    "acceptedTest2": "托福iBT：总分46（各项不低于10）",
+    "acceptedTest3": "PTE学术：总分42（各项不低于36）",
+    "acceptedTest4": "剑桥英语：B2 First (FCE) - C级",
+    "acceptedTest5": "OET：各项C级",
+    "exemptionsTitle": "英语语言豁免",
+    "exemption1": "来自澳大利亚、新西兰、英国、美国、加拿大或爱尔兰的英语母语者",
+    "exemption2": "在中学或高等教育阶段完成至少2年英语全日制学习的学生",
+    "exemption3": "持有英语授课机构以往资格证书的学生",
+    "englishEntryRequirementsTitle": "英语入学要求",
+    "englishEntryRequirementsDescription": "雅思*成绩5.5，各项不低于5.0（测试成绩不超过2年）。英语语言能力也可以通过以下任何一项的书面证据来证明：",
+    "englishEvidence1": "在英语国家接受5年教育；或",
+    "englishEvidence2": "在澳大利亚RTO完成至少6个月的四级证书课程；或",
+    "englishEvidence3": "成功完成ABM英语分班测试",
+    "englishEvidence4": "成功完成我们ELICOS合作伙伴的英语课程，出口水平相当于雅思总分5.5",
+    "pteRequirementsTitle": "PTE要求",
+    "pteRequirementsDescription": "PTE成绩45.4（雅思5.5）或更高，各项不低于（听力 – 42.7，阅读 – 47.9，口语 – 51，写作 – 42.2）",
+    "pteTableTitle": "PTE各项相当于雅思5.5",
+    "pteListening": "PTE-A 听力",
+    "pteReading": "PTE-A 阅读",
+    "pteSpeaking": "PTE-A 口语",
+    "pteWriting": "PTE-A 写作",
+    "pteListeningScore": "42.7",
+    "pteReadingScore": "47.9",
+    "pteSpeakingScore": "51",
+    "pteWritingScore": "42.2",
+    "competencyInEnglishTitle": "英语能力",
+    "competencyDescription": "如果以下情况之一适用，您不需要在签证申请中提供英语测试成绩证明：",
+    "competency1": "您作为主要课程注册全日制学校学习，包括中学交换项目、研究生研究课程、独立的海外学生英语强化课程(ELICOS)以及外交事务或国防部资助的学生。",
+    "competency2": "您在以下一个或多个国家完成了至少五年的学习：澳大利亚、英国、美国、加拿大、新西兰、南非或爱尔兰共和国。",
+    "competency3": "您是英国、美国、加拿大、新西兰或爱尔兰共和国的公民并持有该国护照。",
+    "competency4": "在申请学生签证前的两年内，您在澳大利亚以英语完成了高中毕业证书或澳大利亚资格框架四级证书或更高级别课程的大部分内容，同时持有学生签证。",
+    "englishNote": "*请注意，PTE和托福等其他英语语言测试也可以接受。学生需要提供其成绩以确认其相当于雅思5.5。",
+    "elicosPathwayPartnersTitle": "ELICOS合作伙伴",
+    "elicosPartners": {
+      "ctic": {
+        "name": "CTIC English",
+        "url": "http://ctic.com.au/",
+        "courses": "• EAP出口水平Credit\n• 雅思备考出口水平C级\n• Real English、General English、Cambridge出口水平B2"
+      },
+      "elc": {
+        "name": "ELC",
+        "url": "http://www.elc.edu.au/english",
+        "courses": "• 学术英语：至少10周学术英语，成功通过EAP 1\n• 剑桥英语：至少完成10-12周的Cambridge B2 First课程（至少C级）\n• 雅思备考：至少10周雅思备考，预测成绩5.5"
+      },
+      "elsis": {
+        "name": "ELSIS",
+        "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
+        "courses": "• 完成General English中高级水平\n• 完成EAP 1"
+      },
+      "englishUnlimited": {
+        "name": "English Unlimited",
+        "url": "https://eu.edu.au/",
+        "courses": "• General English（日常英语教学法 – 中高级水平）\n• EAP（B级B+）"
+      },
+      "greenwich": {
+        "name": "Greenwich College",
+        "url": "https://www.greenwichcollege.edu.au/your-campus/sydney",
+        "courses": "• General English（中高级水平）至少8周\n• 雅思备考出口分数5.5-7.0+\n• 剑桥备考PET、FCE、CAE出口分数5.5+\n• 商务英语（Cambridge Linguaskill Business）出口分数5.5\n• 职业英语(EVS)（通过）\n• EAP出口水平通过"
+      },
+      "ilsc": {
+        "name": "ILSC Language Schools",
+        "url": "http://ilsc.com",
+        "courses": "• General English出口水平相当于雅思5.5（各项不低于5）或更高。\n• 学术英语出口水平相当于雅思5.5（各项不低于5）或更高。\n• 雅思备考出口水平相当于雅思5.5（各项不低于5）或更高。\n• 剑桥FCE备考和剑桥CAE备考出口水平相当于雅思5.5（各项不低于5）或更高。"
+      },
+      "inus": {
+        "name": "INUS",
+        "url": "https://www.inus.edu.au/",
+        "courses": "• 完成General English或EAP [中高级水平]，出口水平相当于雅思5.5或更高。\n• 完成EAP Advanced [高级水平]。"
+      },
+      "lalingua": {
+        "name": "LA LINGUA",
+        "url": "https://www.lalingua.com/",
+        "courses": "• 雅思备考出口水平相当于雅思5.5"
+      },
+      "navitas": {
+        "name": "NAVITAS English",
+        "url": "https://www.navitasenglish.edu.au/",
+        "courses": "• Academic English 2：60%通过，各项技能不低于55%\n• 雅思备考：成功完成10周\n• 剑桥备考 – B2 First：成功完成10或12周\n• General English：成功完成10周中高级"
+      },
+      "scic": {
+        "name": "Sunshine Coast International College",
+        "url": "https://scic.nsw.edu.au/",
+        "courses": "• 学术英语(EAP3)：EAP 3证书（中高级：CEFR = B2）\n• General English：成功完成中高级或更高（CEFR=B2）"
+      },
+      "uec": {
+        "name": "Universal English College (UEC)",
+        "url": "https://uec.edu.au/",
+        "courses": "• General English中高级出口水平\n• 雅思备考出口水平相当于雅思5.5\n• 学术英语课程出口水平相当于雅思5.5"
+      }
+    },
+    "additionalRequirementsTitle": "其他要求",
+    "healthRequirementsTitle": "健康与安全要求",
+    "healthRequirementsDescription": "某些课程可能有特定的健康和安全要求，特别是实践部分。",
+    "healthRequirement1": "实践活动的医疗许可",
+    "healthRequirement2": "疫苗接种记录（如需要）",
+    "healthRequirement3": "体力要求高的课程的体能评估",
+    "workingWithChildrenTitle": "儿童工作检查",
+    "workingWithChildrenDescription": "涉及与儿童或弱势群体工作的课程学生可能需要儿童工作检查。",
+    "wwcRequirement1": "有效的儿童工作检查许可",
+    "wwcRequirement2": "背景调查许可",
+    "applicationProcessTitle": "申请流程",
+    "step1Title": "第一步：课程选择",
+    "step1Description": "选择您的课程并检查入学要求。",
+    "step2Title": "第二步：文件准备",
+    "step2Description": "收集所需文件和成绩单。",
+    "step3Title": "第三步：提交申请",
+    "step3Description": "提交您的申请及所有文件。",
+    "step4Title": "第四步：评估与录取",
+    "step4Description": "收到评估结果和录取通知。",
+    "courseRequirementsTableTitle": "具体课程入学要求",
+    "courseRequirementsTableDescription": "以下是ABM各课程的具体入学要求：",
+    "needHelpTitle": "申请需要帮助？",
+    "needHelpDescription": "我们友好的招生团队随时帮助您完成申请流程。\n联系我们获取个性化帮助。",
+    "contactUsButton": "联系我们",
+    "callUsButton": "致电我们",
+    "courses": {
+      "kitchenManagement": {
+        "code": "SIT40521 四级厨房管理证书",
+        "requirement": "学生必须完成相当于10年级的学历"
+      },
+      "hospitalityDiploma": {
+        "code": "SIT50422 酒店管理文凭",
+        "requirement": "学生必须完成相当于12年级的学历"
+      },
+      "hospitalityAdvancedDiploma": {
+        "code": "SIT60322 酒店管理高级文凭",
+        "requirement": "学生必须完成相当于12年级的学历"
+      },
+      "fitnessCertIII": {
+        "code": "SIS30321 三级健身证书",
+        "requirement": "学生必须完成相当于10年级的学历"
+      },
+      "fitnessCertIIIFast": {
+        "code": "SIS30321 三级健身证书（快速班）",
+        "requirement": "您能够参加健身活动。"
+      },
+      "fitnessCertIV": {
+        "code": "SIS40221 四级健身证书",
+        "requirement": "已完成以下单元：\n• HLTAID011 提供急救（或取代此单元的单元）\n• HLTWHS001 参与工作场所健康与安全\n• SISFFIT032 完成运动前筛查和服务指导\n• SISFFIT033 完成客户体能评估\n• SISFFIT035 计划团体锻炼课程\n• SISFFIT036 指导团体锻炼课程\n• SISFFIT040 为个人客户开发和指导健身房锻炼计划\n• SISFFIT047 运用解剖学和生理学知识支持安全有效的锻炼\n• SISFFIT052 提供健康饮食信息\n\n学生必须完成相当于12年级的学历"
+      },
+      "fitnessCertIVFast": {
+        "code": "SIS40221 四级健身证书（快速班）",
+        "requirement": "已完成以下单元：\n• HLTAID011 提供急救（或取代此单元的单元）\n• HLTWHS001 参与工作场所健康与安全\n• SISFFIT032 完成运动前筛查和服务指导\n• SISFFIT033 完成客户体能评估\n• SISFFIT035 计划团体锻炼课程\n• SISFFIT036 指导团体锻炼课程\n• SISFFIT040 为个人客户开发和指导健身房锻炼计划\n• SISFFIT047 运用解剖学和生理学知识支持安全有效的锻炼\n• SISFFIT052 提供健康饮食信息"
+      },
+      "sportDiploma": {
+        "code": "SIS50321 体育文凭（教练）",
+        "requirement": "参加课程入学面试以确定课程适合性和学生需求。"
+      },
+      "businessCertIV": {
+        "code": "BSB40120 四级商业证书",
+        "requirement": "学生必须完成相当于10年级的学历"
+      },
+      "businessDiploma": {
+        "code": "BSB50120 商业文凭",
+        "requirement": "学生必须完成相当于12年级的学历"
+      },
+      "businessAdvancedDiploma": {
+        "code": "BSB60120 商业高级文凭",
+        "requirement": "学生必须完成BSB培训包的文凭级别课程（AQF 5级）或高级文凭级别课程（AQF 6级）。"
+      },
+      "hrCertIV": {
+        "code": "BSB40420 四级人力资源管理证书",
+        "requirement": "学生必须完成相当于10年级的学历"
+      },
+      "hrDiploma": {
+        "code": "BSB50320 人力资源管理文凭",
+        "requirement": "已完成以下单元：\n• BSBHRM411 管理绩效发展流程\n• BSBHRM412 支持员工和劳资关系\n• BSBHRM415 协调招聘和入职\n• BSBHRM417 支持人力资源职能和流程\n\n等效能力是这些单元的前身，已被映射为等效。"
+      },
+      "hrAdvancedDiploma": {
+        "code": "BSB60320 人力资源管理高级文凭",
+        "requirement": "已完成以下资格之一：BSB50320人力资源管理文凭、BSB50618人力资源管理文凭（或被取代的等效版本）。"
+      },
+      "projectCertIV": {
+        "code": "BSB40920 四级项目管理实践证书",
+        "requirement": "学生必须完成相当于10年级的学历"
+      },
+      "projectDiploma": {
+        "code": "BSB50820 项目管理文凭",
+        "requirement": "学生必须完成相当于12年级的学历"
+      },
+      "projectAdvancedDiploma": {
+        "code": "BSB60720 计划管理高级文凭",
+        "requirement": "已完成以下资格之一：BSB50820项目管理文凭、BSB51415项目管理文凭（或被取代的等效版本）。"
+      },
+      "graduateDiploma": {
+        "code": "BSB80120 管理学研究生文凭（学习）",
+        "requirement": "学生必须完成高级文凭级别课程（AQF 6级）或更高。"
+      },
+      "healthServicesAssistance": {
+        "code": "HLT33115 三级健康服务助理证书",
+        "requirement": "学生在课程开始时必须年满18岁。\n雅思5.5或同等水平，如果学生通过ABM EPT测试达到雅思4.5或同等水平，可报名Plus护理英语课程。\n学生必须完成相当于10年级的学历"
+      }
+    }
+  },
+  "higherEducationPathway": {
+    "title": "高等教育通道",
+    "bannerTitle": "希望在ABM课程后继续深造？",
+    "bannerSubtitle": "在ABM Further Education完成四级证书、文凭或高级文凭后，您可以迈出下一步，继续更高层次的学习。",
+    "pathwayTitle": "通往高等教育的通道",
+    "pathwayDescription": "ABM与澳大利亚信誉良好的高等教育机构签有通道协议，包括南十字星大学(SCU)。这意味着您可能有资格获得学士学位的学分，帮助您节省时间和金钱。",
+    "exploreOptions": "如果您正在考虑进一步学习并希望升级您的资格，请通过ABM的学术通道探索您的选择。",
+    "hotelSchoolTitle": "悉尼酒店学校 / 南十字星大学",
+    "hotelSchoolProgram": "酒店管理商业学士",
+    "certificateIVKitchen": "四级厨房管理证书 SIT40521",
+    "certificateIVKitchenCredit": "授予学分：4个单元，共24个单元中（48学分，6个月或课程的16%）",
+    "diplomaHospitality": "酒店管理文凭 SIT50416/SIT50422",
+    "diplomaHospitalityCredit": "授予学分：8个单元，共24个单元中（96学分，1年或课程的33%）– 4个非指定选修单元",
+    "advancedDiplomaHospitality": "酒店管理高级文凭 SIT60316/SIT60322",
+    "advancedDiplomaHospitalityCredit": "授予学分：12个单元，共24个单元中（144学分，1.5年或课程的50%）– 3个非指定选修单元；9个指定单元",
+    "ubssTitle": "UBSS悉尼环球商学院",
+    "ubssProgram": "商业学士和工商管理硕士",
+    "ubssBachelorTitle": "通往UBSS商业学士（共24门课程）",
+    "diplomaBusiness": "商业文凭：6门课程",
+    "advancedDiplomaBusiness": "商业高级文凭：9门课程",
+    "diplomaHR": "人力资源管理文凭：5门课程",
+    "advancedDiplomaHR": "人力资源管理高级文凭：7门课程",
+    "diplomaHospitalityUBSS": "酒店管理文凭：4门课程",
+    "advancedDiplomaHospitalityUBSS": "酒店管理高级文凭：5门课程",
+    "ubssMasterTitle": "通往UBSS工商管理硕士（共16门课程）",
+    "graduateDiplomaManagement": "管理学研究生文凭（学习）：8门课程",
+    "benefitsTitle": "高等教育通道的优势",
+    "saveTimeTitle": "节省时间",
+    "saveTimeDescription": "获得现有资格的学分，更快完成学位",
+    "saveMoneyTitle": "节省金钱",
+    "saveMoneyDescription": "通过获得已完成单元的学分降低学费",
+    "careerAdvancementTitle": "职业发展",
+    "careerAdvancementDescription": "通过更高的资格提升您的职业前景",
+    "readyToStartTitle": "准备好迈出下一步了吗？",
+    "readyToStartDescription": "联系我们获取有关高等教育通道的详细信息以及如何开始。",
+    "contactUs": "联系我们",
+    "enrolNow": "立即报名"
+  },
+  "news": {
+    "bannerTitle": "最新新闻",
+    "intro": "了解ABM的最新新闻。",
+    "searchPlaceholder": "搜索新闻...",
+    "sortBy": "排序方式：",
+    "newest": "最新",
+    "oldest": "最早",
+    "readMore": "阅读更多",
+    "noResults": "未找到新闻。"
+  },
+  "checkout": {
+    "title": "课程注册",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "电子邮件",
+    "phone": "电话",
+    "preferredDate": "首选日期（如果您想以团体形式报名）",
+    "otherInquiries": "其他咨询",
+    "howDidYouHear": "您是如何了解到这门课程的？",
+    "agent": "代理",
+    "socialMedia": "社交媒体",
+    "friend": "朋友",
+    "searchPortal": "搜索门户",
+    "abmWebsite": "ABM网站",
+    "referrerName": "如果您是由代理或我们的学生推荐的，请提供他们的姓名。",
+    "promotionCode": "优惠码",
+    "submit": "继续付款",
+    "back": "返回",
+    "required": "必填字段",
+    "enterFirstName": "请输入您的名字。",
+    "enterEmail": "请输入您的电子邮件。",
+    "invalidEmail": "无效的电子邮件地址。",
+    "success": "正在转到付款..."
+  },
+  "paymentSuccess": {
+    "title": "付款完成！",
+    "subtitle": "您的课程注册已成功完成。",
+    "registrationInfo": "注册信息",
+    "course": "课程",
+    "date": "日期",
+    "type": "类型",
+    "email": "电子邮件",
+    "amountPaid": "已付金额",
+    "emailNotification": "确认邮件将很快发送。课程开始前将提供额外说明。",
+    "viewOtherCourses": "查看其他课程",
+    "contactUs": "联系我们",
+    "errorOccurred": "发生错误",
+    "sessionNotFound": "未找到付款会话ID。",
+    "fetchError": "无法获取付款信息。",
+    "verificationError": "验证付款信息时发生错误。",
+    "backToCourses": "返回课程",
+    "verifyingPayment": "正在验证付款信息..."
+  },
+  "newsletter": {
+    "title": "订阅通讯",
+    "desc": "立即订阅，永不错过更新！",
+    "placeholder": "输入您的电子邮件",
+    "button": "订阅"
+  },
+  "studentInsights": {
+    "bannerTitle": "学生体验一瞥",
+    "testimonialTitle": "学生感言",
+    "testimonialDescription": "了解我们的学生对在ABM学习体验的看法",
+    "testimonialImageAlt": "学生感言 {number}",
+    "clickToView": "点击查看"
+  },
+  "shortCourses": {
+    "exploreOtherShortCourses": "探索我们的其他短期课程",
+    "exploreOtherShortCoursesDesc": "发现更多令人兴奋的烹饪体验，通过我们多样化的短期课程提升您的技能。"
+  },
+  "fullCourses": "所有课程",
+  "fastTrack": "快速班",
+  "fitnessAndSports": "健身与运动",
+  "projectAndProgram": "项目与计划",
+  "hrManagement": "人力资源管理",
+  "fitnessPage": {
+    "metadata": {
+      "title": "健身与运动课程 | ABM Further Education",
+      "description": "在ABM Further Education将您对健身的热情转化为职业。探索我们为国际学生和国内快速班设计的健身和运动课程。"
+    },
+    "bannerTitle": "健身与运动",
+    "heading": "将您对健身的热情\n转化为职业",
+    "description": "ABM的健身课程为您在澳大利亚不断发展的健身行业做好职业准备。获得领导团体课程、设计个性化训练计划以及在健身房、户外场所或在线工作的技能。无论您是刚起步还是提升专业知识，我们灵活的课程都能让您为成功做好准备。",
+    "forInternational": "国际学生",
+    "forDomestic": "国内（快速班）",
+    "cert3": "三级健身证书",
+    "cert4": "四级健身证书",
+    "diploma": "体育文凭（教练）",
+    "cert3Fast": "三级健身证书（快速班）",
+    "cert4Fast": "四级健身证书（快速班）"
+  },
+  "healthPage": {
+    "metadata": {
+      "title": "健康与保健课程 | ABM Further Education",
+      "description": "即使没有护理经验，您也可以在澳大利亚的医院和护理机构作为护理助理(AIN)工作和学习。即使对于英语初学者也容易入门，有丰富的实践培训和就业机会。这个热门项目对持有打工度假签证和学生签证的参与者开放。"
+    },
+    "bannerTitle": "健康与保健",
+    "heading": "在澳大利亚\n学习并工作成为护理助理",
+    "description": "通过ABM的护理支持职业通道，迈出医疗保健职业生涯的第一步。这个综合项目专为国际学生或医疗保健行业新人设计，希望成为医院和老年护理机构的熟练支持工作者。",
+    "nursingSupport": "护理支持职业通道",
+    "cert3Health": "HLT33115 三级健康服务助理证书",
+    "whyChoose": "为什么选择三级健康服务助理证书？",
+    "realHealthcare": "真实的医疗环境",
+    "realHealthcareDesc": "在真实的医疗环境中完成80小时的工作实习",
+    "workPlacement": "工作实习支持",
+    "workPlacementDesc": "全面支持包括协议、监督和灵活的时间安排",
+    "recognised": "国家认可",
+    "recognisedDesc": "获得国家认可的资格，开启职业机会",
+    "careerOpportunities": "职业机会",
+    "ain": "护理助理 (AIN)",
+    "healthServicesAssistant": "健康服务助理",
+    "personalCareAssistant": "个人护理助理",
+    "hospitalOrderly": "医院勤杂工",
+    "patientSupport": "患者支持助理",
+    "supportWorker": "支持工作者",
+    "careWorker": "护理工作者"
+  },
+  "shortCoursesPage": {
+    "heading": "通过ABM的新定制课程发现您的热情！",
+    "description": "ABM提供定制的短期课程和一日课程，以私人团体形式进行。根据每个团体的需求量身定制，我们的课程非常适合学校、大学和酒店管理爱好者。我们已与众多高中和大学成功合作，创造引人入胜的动手学习体验。",
+    "heading2": "ABM定制课程",
+    "calendarHeading": "课程日历",
+    "calendarDescription": "按月浏览我们的短期课程，找到适合您的完美日期"
+  },
+  "footer": {
+    "home": "首页",
+    "courses": "课程",
+    "customPrograms": "定制课程",
+    "shortCourses": "短期课程",
+    "studyWithUs": "与我们一起学习",
+    "currentStudents": "在校学生",
+    "contact": "联系我们",
+    "cookeryAndHospitality": "烹饪与酒店管理",
+    "fitnessAndSports": "健身与运动",
+    "business": "商业",
+    "projectAndProgram": "项目与计划",
+    "humanResources": "人力资源",
+    "healthAndWellness": "健康",
+    "baristaCourse": "咖啡师课程",
+    "classicFrenchPastriesCourse": "经典法式糕点课程",
+    "cocktail": "鸡尾酒调制和调酒课程",
+    "wineCourse": "葡萄酒课程",
+    "sourdoughAndFocacciaCourse": "酸面包和佛卡夏课程",
+    "fineDiningDessertPlating": "精致餐饮甜点摆盘",
+    "classicFrenchCakesCourse": "经典法式蛋糕课程",
+    "frenchPetitFourCourse": "法式小点心课程（马卡龙）",
+    "veganAndVegetarianCourse": "素食课程",
+    "chocolateClassXmas": "巧克力课程 - 圣诞节",
+    "agent": "代理",
+    "agentPortal": "代理门户",
+    "agentApplication": "代理申请",
+    "agentList": "代理列表",
+    "abmPoliciesAndProcedures": "ABM政策与程序",
+    "studyTourPrograms": "游学项目"
+  },
+  "shortCoursesMenu": {
+    "hospitality": "酒店管理",
+    "cookingAndBaking": "烹饪与烘焙",
+    "onlineCourses": "在线课程",
+    "barista": "咖啡师课程",
+    "wine": "葡萄酒课程",
+    "fineDessert": "精致餐饮甜点摆盘课程",
+    "cocktail": "鸡尾酒调制和调酒课程",
+    "foodSafety": "新南威尔士州食品安全主管证书",
+    "rsa": "负责任服务酒精 (RSA)",
+    "frenchCakes": "经典法式蛋糕课程",
+    "sourdough": "酸面包和佛卡夏课程",
+    "frenchPastries": "经典法式糕点课程",
+    "petitFour": "法式小点心课程（马卡龙）",
+    "vegan": "素食课程",
+    "chocolate": "巧克力课程 – 圣诞节",
+    "htmlIntro": "HTML、CSS和基础网页设计入门",
+    "portfolioWebsite": "高级课程：构建作品集网站",
+    "baristaSampleCourse": "咖啡师体验课程",
+    "baristaOnlineCourse": "咖啡师在线课程",
+    "studyTourPrograms": "游学项目"
+  },
+  "gallery": {
+    "title": "校园画廊"
+  },
+  "courseInformation": {
+    "title": "课程信息",
+    "overview": "概述"
+  },
+  "courseDetail": {
+    "title": "课程详情"
+  },
+  "units": {
+    "title": "单元"
+  },
+  "hrPage": {
+    "metadata": {
+      "title": "人力资源管理课程 | ABM Further Education",
+      "description": "在ABM Further Education建立有价值的人力资源职业。从四级证书到高级文凭，培养当今不断变化的工作场所所需的基本HR技能。"
+    },
+    "bannerTitle": "人力资源管理",
+    "heading": "建立有价值的人力资源职业",
+    "description": "ABM的人力资源管理课程为您在各个层级的HR岗位做好准备——从入门级专员到战略HR领导者。通过根据您的目标量身定制的灵活课程，获得招聘、冲突解决、薪资和劳动力规划方面的技能。无论您是从四级证书开始还是进阶到高级文凭，ABM都为您提供在当今不断变化的工作场所蓬勃发展所需的知识和经验。",
+    "projectHeading": "人力资源课程",
+    "cert4": "四级人力资源管理证书",
+    "diploma": "人力资源管理文凭",
+    "advDiploma": "人力资源管理高级文凭"
+  },
+  "projectProgram": {
+    "bannerTitle": "项目与计划",
+    "bannerContent": "",
+    "leadProjectsTitle": "领导有影响力的项目",
+    "leadProjectsDescription": "ABM的项目和计划管理课程为您提供在建筑、技术和企业等行业领导成功项目的技能。从四级证书的基础角色到高级文凭的高级领导角色，我们灵活的课程涵盖项目规划、风险管理和利益相关者参与。无论您是刚起步还是追求高级角色，ABM都能帮助您建立将想法变为现实的专业知识。",
+    "coursesTitle": "项目与计划课程",
+    "certIVTitle": "四级项目管理实践证书",
+    "diplomaTitle": "项目管理文凭",
+    "advDiplomaTitle": "计划管理高级文凭"
+  },
+  "academicCalendar": {
+    "term1Intake1": "第一学期入学1",
+    "term1Intake2": "第一学期入学2",
+    "holiday1": "假期1",
+    "term2Intake1": "第二学期入学1",
+    "term2Intake2": "第二学期入学2",
+    "holiday2": "假期2",
+    "term3Intake1": "第三学期入学1",
+    "term3Intake2": "第三学期入学2",
+    "holiday3": "假期3",
+    "term4Intake1": "第四学期入学1",
+    "term4Intake2": "第四学期入学2",
+    "christmasHoliday": "圣诞假期"
+  },
+  "trainers": {
+    "title": "我们的培训师",
+    "subtitle": "认识我们行业领先的专业人士",
+    "heading": "认识我们的专家培训师",
+    "description": "向在各自领域拥有多年经验的行业专业人士学习。我们的培训师致力于为您提供成功所需的知识和技能。",
+    "readyToLearn": "准备好向最优秀的人学习了吗？",
+    "contactDescription": "联系我们，了解更多关于我们课程的信息，以及我们的专家培训师如何帮助您实现目标。",
+    "contactUs": "联系我们",
+    "categories": {
+      "cookery": "烹饪与酒店管理",
+      "business": "商业与管理",
+      "fitness": "健身与运动",
+      "hr": "人力资源",
+      "project": "项目管理",
+      "health": "健康与保健"
+    }
+  },
+  "hsaPage": {
+    "metadata": {
+      "title": "三级健康服务助理证书",
+      "description": "HLT33115三级健康服务助理证书课程，成为澳大利亚的护理助理。初学者友好，在医院和老年护理机构进行80小时的实践培训。获得国家认可的资格，推进您的医疗保健职业生涯。"
+    },
+    "courseDuration": {
+      "title": "课程时长",
+      "items": {
+        "qualificationDuration": "资格时长：16周",
+        "workPlacement": "工作实习：在真实医疗环境中80小时",
+        "noHoliday": "无假期休息"
+      }
+    },
+    "entryRequirements": {
+      "title": "入学要求",
+      "items": {
+        "basic": "年龄：18岁以上，英语：雅思5.5或同等水平",
+        "lowerEnglishOption": "如果学生通过ABM EPT测试达到雅思4.5或同等水平，可报名Plus护理英语课程。"
+      }
+    },
+    "workPlacement": {
+      "title": "工作实习信息",
+      "items": {
+        "hours": "在医院和老年护理机构进行80小时的监督工作实习",
+        "applyLearning": "有机会在真实医疗环境中应用课堂学习",
+        "confidence": "在与专业人士一起工作时建立信心并获得动手经验",
+        "support": "ABM员工提供实习安排协助"
+      }
+    },
+    "industryPartners": {
+      "title": "主要行业合作伙伴",
+      "items": {
+        "partners": "私立医院、医疗中心、老年护理中心"
+      }
+    },
+    "courseBenefits": {
+      "title": "课程优势",
+      "items": {
+        "fundamentalSkills": "获得认证后在澳大利亚医院和护理机构工作的基本技能",
+        "practicalExperience": "通过80小时的动手培训获得实践经验",
+        "medicalEnglish": "提升医学英语沟通技能",
+        "beginnerFriendly": "即使对初学者也易于学习的设计",
+        "careerAdvancement": "可用于未来职业发展（护理学位/高级资格）"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": {
+        "q1": {
+          "question": "护理助理课程费用是多少？",
+          "answer": "请参阅我们的官方价目表获取最新的学费信息。"
+        },
+        "q2": {
+          "question": "哪种签证允许我报名？",
+          "answer": "该课程适合持有打工度假签证或任何允许您在没有入学确认书(CoE)的情况下学习16周的签证类型的学生。我们不提供签证建议。如果您不确定，请检查您的签证条件或咨询注册移民代理。"
+        },
+        "q3": {
+          "question": "临床培训的实习和支持如何？",
+          "answer": "ABM提供80小时的工作实习作为课程的一部分，通过我们信任的行业合作伙伴安排。完成后，我们还为符合条件的毕业生提供有薪就业机会，支持您顺利过渡到医疗保健劳动力。"
+        },
+        "q4": {
+          "question": "我能用这个资格找到工作吗？",
+          "answer": "是的，我们的毕业生经常在私立医院、医疗中心、老年护理中心获得职位。"
+        },
+        "q5": {
+          "question": "如果我的英语技能不够怎么办？",
+          "answer": "最低入学要求是雅思5.5或同等水平。如果您目前持有雅思4.5或同等水平，您可以报名带有Plus护理英语的课程，该课程提供针对医疗保健环境定制的额外语言支持。如果您没有英语测试成绩，可以通过ABM英语分班测试评估您的英语水平。"
+        }
+      }
+    }
+  }
+}

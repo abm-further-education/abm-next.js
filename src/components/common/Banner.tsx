@@ -100,7 +100,7 @@ function Banner({
                 <h1
                   className={cn(
                     `text-white text-4xl md:text-6xl font-bold drop-shadow-lg max-w-1000`,
-                    isNeedContactBtn ? 'pb-50' : 'pb-0'
+                    isNeedContactBtn ? 'pb-50' : 'pb-0',
                   )}
                 >
                   {slide.title}
@@ -121,7 +121,7 @@ function Banner({
                 <Link
                   target={slide.linkButton.target || '_blank'}
                   href={slide.linkButton.href}
-                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
+                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
                 >
                   {slide.linkButton.text}
                 </Link>
@@ -129,7 +129,7 @@ function Banner({
                 <Link
                   target="_blank"
                   href="/files/ABM_Brochure_2026_final_web.pdf"
-                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
+                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
                 >
                   ABM Course Guide 2026
                 </Link>

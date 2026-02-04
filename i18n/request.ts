@@ -6,7 +6,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   if (
     !locale ||
-    !routing.locales.includes(locale as 'en' | 'kr' | 'sp' | 'pt' | 'jp')
+    !routing.locales.includes(
+      locale as 'en' | 'kr' | 'sp' | 'pt' | 'jp' | 'tl' | 'zh' | 'id'
+    )
   ) {
     locale = routing.defaultLocale;
   }

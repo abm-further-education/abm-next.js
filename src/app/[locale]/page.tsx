@@ -75,39 +75,37 @@ export default async function Home({
           slides={[
             {
               imgPath: '/home/HSA_2.png',
-              title: 'Start Your Career in Health Service Assistance',
-              content: `Fast-track your growth in 16 weeks - Enrol now for January 2026!`,
+              title: t('HomePage.banners.hsa.title'),
+              content: t('HomePage.banners.hsa.content'),
               linkButton: {
                 href: 'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
-                text: 'Enrol Here',
+                text: t('HomePage.banners.hsa.button'),
               },
             },
             {
               imgPath:
                 'https://www.youtube.com/embed/NrGhzWgTS_I?si=Q9ce1AIuWGfMLgyW',
-              title: 'Start Your Fitness Journey',
-              content: `January intake is open now. Spots are limited.\nIt’s a solid starting point if you want to work as a fitness trainer.`,
+              title: t('HomePage.banners.fitness.title'),
+              content: t('HomePage.banners.fitness.content'),
             },
             {
               imgPath: '/courses/project_banner_1.png',
-              title: 'Your Career Starts Here',
-              content:
-                'Learn to ensure that the right people are in the right jobs and create a better workplace for everyone.',
+              title: t('HomePage.banners.career.title'),
+              content: t('HomePage.banners.career.content'),
             },
             {
               imgPath:
                 'https://www.youtube.com/embed/FOWrWhWZPb8?si=YYieNS7QfEQ0kgrx',
-              title: 'Your Career Starts Here',
-              content: '',
+              title: t('HomePage.banners.video.title'),
+              content: t('HomePage.banners.video.content'),
             },
             {
               imgPath: '/promotion_3.png',
-              title: 'Get a Free 1-Day Trial Now',
-              content:
-                'Book a Free Tour of Our Campus, Gym & Kitchen, or Enjoy a Fitness & HSA 1-Day Trial.',
+              title: t('HomePage.banners.trial.title'),
+              content: t('HomePage.banners.trial.content'),
               linkButton: {
                 href: '/promotion',
-                text: 'Try It Now',
+                text: t('HomePage.banners.trial.button'),
               },
             },
           ]}
@@ -193,9 +191,9 @@ export default async function Home({
               <Link href="/courses">
                 <div className="w-300 h-full xl:w-300 bg-primary-bk text-white flex-col text-lg flex items-center justify-center hover:bg-primary transition-all">
                   <h2 className="font-bold">
-                    Looking for All Courses?
+                    {t('HomePage.lookingForAllCourses')}
                     <br />
-                    <span className="text-white">Click here!</span>
+                    <span className="text-white">{t('HomePage.clickHere')}</span>
                   </h2>
                 </div>
               </Link>

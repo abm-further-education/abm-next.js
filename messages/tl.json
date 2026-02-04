@@ -1,0 +1,967 @@
+{
+  "HomePage": {
+    "description": "Mag-aral ng nationally accredited na mga kurso sa Business, Hospitality(Food Safety, RSA), Cookery, Fitness at Health sa ABM Further Education sa Sydney. Hands-on na pagsasanay at industry placement.",
+    "bannerContent": "Kung Saan Nagtatagpo ang Hilig at Perpeksyon sa Pagluluto. Isang Hindi Malilimutang Karanasan",
+    "coursesTitle": "Mga Kurso sa ABM",
+    "coursesDescription": "Nagbibigay kami ng mataas na kalidad na edukasyon sa isang makabago at suportadong kapaligiran, tinitiyak ang tagumpay ng mga estudyante sa pamamagitan ng mga eksperto na guro at mga oportunidad sa trabaho sa buong Australia.",
+    "testimonialTitle": "Testimonya",
+    "testimonialDescription": "Saan mo nakikita ang iyong sarili na masayang nagtatrabaho sa malapit na hinaharap?",
+    "banners": {
+      "hsa": {
+        "title": "Simulan ang Iyong Karera sa Health Service Assistance",
+        "content": "Pabilisin ang iyong paglago sa loob ng 16 linggo - Mag-enroll na ngayon para sa Pebrero 2026!",
+        "button": "Mag-enroll Dito"
+      },
+      "fitness": {
+        "title": "Simulan ang Iyong Fitness Journey",
+        "content": "Bukas na ang January intake. Limitado ang mga slot.\nIto ay isang magandang simula kung gusto mong magtrabaho bilang fitness trainer."
+      },
+      "career": {
+        "title": "Dito Nagsisimula ang Iyong Karera",
+        "content": "Matutong tiyakin na ang tamang mga tao ay nasa tamang trabaho at lumikha ng mas magandang lugar ng trabaho para sa lahat."
+      },
+      "video": {
+        "title": "Dito Nagsisimula ang Iyong Karera",
+        "content": ""
+      },
+      "trial": {
+        "title": "Kumuha ng Libreng 1-Araw na Trial Ngayon",
+        "content": "Mag-book ng Libreng Tour sa Aming Campus, Gym at Kitchen, o Mag-enjoy ng Fitness at HSA 1-Araw na Trial.",
+        "button": "Subukan Ngayon"
+      }
+    },
+    "lookingForAllCourses": "Naghahanap ng Lahat ng Kurso?",
+    "clickHere": "Pindutin dito!"
+  },
+  "contact": {
+    "title": "Makipag-ugnayan sa Amin",
+    "getInTouch": "Makipag-ugnayan sa amin",
+    "address": "242 Castlereagh Street Sydney NSW 2000 Australia",
+    "phone": "+61 (02) 9160 4507",
+    "whatsapp": "(WhatsApp) + 61 482 796 010",
+    "email": "info@abm.edu.au",
+    "emailPlaceholder": "Email",
+    "enquiryType": "Ano ang iyong Uri ng Pagtatanong?",
+    "selectEnquiryType": "Pumili ng Uri ng Pagtatanong",
+    "generalEnquiry": "Pangkalahatang Pagtatanong",
+    "bookCampusTour": "Mag-book ng Campus Tour",
+    "becomeStudent": "Maging Estudyante",
+    "becomeAgent": "Maging Ahente",
+    "firstName": "Unang Pangalan",
+    "lastName": "Apelyido",
+    "phonePlaceholder": "Telepono",
+    "nationality": "Nasyonalidad",
+    "message": "Mensahe",
+    "sendMessage": "Magpadala ng Mensahe",
+    "successMessage": "Naipadala na ang iyong pagtatanong. Salamat!",
+    "errorMessage": "Hindi naipadala. Pakisubukan muli mamaya.",
+    "sending": "Ipinapadala...",
+    "validation": {
+      "firstNameRequired": "Kinakailangan ang unang pangalan",
+      "firstNameMinLength": "Dapat ay hindi bababa sa 2 karakter ang unang pangalan",
+      "lastNameRequired": "Kinakailangan ang apelyido",
+      "lastNameMinLength": "Dapat ay hindi bababa sa 2 karakter ang apelyido",
+      "emailRequired": "Kinakailangan ang email",
+      "emailInvalid": "Hindi wastong email address"
+    },
+    "preferredDate": "Gustong Petsa",
+    "weekdaysOnly": "Weekdays lamang (Lunes hanggang Biyernes)",
+    "selectDate": "Pumili ng petsa",
+    "oneDayTrial": "1-Araw na Libreng Pagsubok",
+    "courseTypeLabel": "Uri ng Kurso",
+    "selectCourseType": "Pumili ng uri ng kurso",
+    "fitness": "Fitness",
+    "hsa": "Health Services Assistance (HSA)",
+    "hsaTrialDays": "Ang HSA trial sessions ay available lamang sa Huwebes at Biyernes.",
+    "hsaTrialTime": "Ang trial class ay nagsisimula sa 10:00 AM"
+  },
+  "courses": {
+    "title": "Mga Kurso | Business, Hospitality at Health Courses | ABM Further Education",
+    "description": "Food Safety, RSA at Business, Hospitality, Cookery, Fitness, Sport at Health courses mula Certificate III hanggang Advanced Diploma level."
+  },
+  "studyWithUs": {
+    "description": "Bakit mag-aral sa ABM: praktikal na klase, industry trainers, work placement at malakas na suporta sa estudyante sa Sydney.",
+    "studyTourPrograms": "Mga Study Tour Program",
+    "studentInsights": "Mga Testimonya",
+    "academicCalendar": "Akademikong Kalendaryo",
+    "feesAndPayment": "Bayarin at Pagbabayad",
+    "entryRequirements": "Mga Kinakailangan sa Pagpasok",
+    "getUSI": "Kumuha ng USI",
+    "enrolNow": "Mag-enroll Ngayon",
+    "timetable": "Iskedyul ng Klase",
+    "higherEducationPathway": "Higher Education Pathway",
+    "policiesAndProcedures": "Mga Patakaran at Pamamaraan",
+    "trainers": "Mga Trainer",
+    "studentAccommodation": "Tirahan ng Estudyante",
+    "title": "Mag-aral sa Amin",
+    "welcome": "Maligayang Pagdating sa ABM Further Education!",
+    "mission": "Ang aming misyon ay magbigay ng mataas na kalidad, praktikal na edukasyon na naghahanda sa mga estudyante para sa matagumpay na karera. Sa ABM, matututo ka mula sa mga eksperyensyadong lider ng industriya na nakatuon sa iyong paglago. Sa suportadong kapaligiran at tunay na pagsasanay, tinitiyak namin na makakuha ka ng mga kasanayan at kumpiyansa upang umunlad sa iyong hinaharap na karera.",
+    "why": "Bakit mag-aral sa ABM Further Education?",
+    "whyContent": "Ang ABM Further Education ay isang bagong tatag na vocational education provider sa Australia, na nag-aalok ng nationally recognised courses na pinangungunahan ng mga eksperyensyadong propesyonal sa industriya. Nakatuon kami sa pagbibigay sa mga estudyante ng praktikal na kasanayan para sa kanilang mga hinaharap na karera at aktibong nagtatayo ng mga partnership sa industriya upang matiyak na ang aming mga graduate ay handa sa trabaho at naaayon sa kasalukuyang pangangailangan ng workforce.",
+    "highlights": {
+      "primeLocation": {
+        "title": "Magandang lokasyon",
+        "desc": "Nasa gitna ng Sydney ang ABM! Maaari kang pumunta doon sa pamamagitan ng tren, light rail o bus, at maraming trabaho sa lugar."
+      },
+      "modernKitchen": {
+        "title": "Makabagong kusina at state of the art campus na nangunguna sa industriya",
+        "desc": "Gusto namin ang iyong tagumpay, kaya bagong-bago ang aming campus na may pinaka-makabagong kusina at pinakabagong teknolohiya. Ang mga estudyante ay may libreng access sa break room, wifi, mga computer, photocopier, scanner, phone charging station, at kitchenette!"
+      },
+      "trainers": {
+        "title": "Mga trainer na nangunguna sa industriya",
+        "desc": "Matuto mula sa mga propesyonal na may mga taon ng karanasan sa kanilang industriya!"
+      },
+      "workPlacement": {
+        "title": "Suporta sa work placement",
+        "desc": "Nasa gitna ng Sydney ang ABM! Maaari kang pumunta doon sa pamamagitan ng tren, light rail o bus, at maraming trabaho sa lugar."
+      },
+      "serviceTeam": {
+        "title": "Multilingual na student service team",
+        "desc": "Gusto namin ang iyong tagumpay, kaya bagong-bago ang aming campus na may pinaka-makabagong kusina at pinakabagong teknolohiya. Ang mga estudyante ay may libreng access sa break room, wifi, mga computer, photocopier, scanner, phone charging station, at kitchenette!"
+      },
+      "partnerships": {
+        "title": "Mga Partnership sa Industriya",
+        "desc": "Matuto mula sa mga propesyonal na may mga taon ng karanasan sa kanilang industriya!"
+      }
+    }
+  },
+  "promotion": {
+    "title": "1-Araw na Libreng Pagsubok at Libreng Campus Tour",
+    "description": "Maranasan ang aming Fitness program o alamin ang aming Health Services Assistance (HSA) course sa pamamagitan ng libreng 1-araw na trial session — at sumali sa guided tour ng aming campus, gym, at kitchen facilities. Tuklasin ang iyong potensyal, makilala ang aming mga eksperto na trainer, at tingnan kung paano sumusuporta ang aming holistic na kapaligiran sa iyong mga layunin sa karera at wellness.",
+    "trialTitle": "Ano ang Makukuha Mo",
+    "fitnessCategory": "Fitness",
+    "hsaCategory": "Health Services Assistance (HSA)",
+    "benefit1": "Impormasyon ng kurso",
+    "benefit2": "Iskedyul ng klase",
+    "benefit3": "Impormasyon sa work placement at job placement",
+    "benefit4": "Gabay sa career pathway",
+    "hsaBenefit1": "Impormasyon ng kurso",
+    "hsaBenefit2": "Iskedyul ng klase",
+    "hsaBenefit3": "Impormasyon sa work placement at job placement",
+    "hsaBenefit4": "Gabay sa career pathway",
+    "whatToExpect": "Ano ang Inaasahan",
+    "expectation1": "Guided tour ng aming campus at gym facilities",
+    "expectation2": "Personal na gabay mula sa aming certified fitness professionals",
+    "hsaExpectation1": "Guided tour ng aming campus, kasama ang dedicated practical room para sa mga AIN student",
+    "hsaExpectation2": "Impormasyon tungkol sa mga work placement provider",
+    "hsaExpectation3": "Pangkalahatang-ideya ng istruktura at kurikulum ng kurso",
+    "galleryTitle": "Aming Campus at Pagsasanay",
+    "ctaTitle": "Handa ka na bang Magsimula ng Iyong Fitness o Healthcare Career Journey?",
+    "ctaDescription": "Mag-book ng iyong libreng trial ngayon at gawin ang unang hakbang tungo sa pagkamit ng iyong mga fitness goals o pagtuklas ng karera sa healthcare sa gabay ng mga eksperto ng ABM.",
+    "formTitle": "Mag-book ng Iyong Libreng Campus Tour o 1-Araw na Pagsubok",
+    "typeLabel": "Uri ng Pagbisita",
+    "selectType": "Pumili ng uri ng pagbisita",
+    "campusTour": "Campus Tour",
+    "oneDayTrial": "1-Araw na Libreng Pagsubok",
+    "courseTypeLabel": "Uri ng Kurso",
+    "selectCourseType": "Pumili ng uri ng kurso",
+    "fitness": "Fitness",
+    "hsa": "Health Services Assistance (HSA)",
+    "dateLabel": "Gustong Petsa",
+    "selectDate": "Pumili ng petsa",
+    "weekdaysOnly": "Paalala: Hindi available ang mga weekend. Weekdays lamang ang maaaring piliin.",
+    "hsaTrialDays": "Ang HSA trial sessions ay available lamang sa Huwebes at Biyernes.",
+    "hsaTrialTime": "Ang trial class ay nagsisimula sa 10:00 AM",
+    "nameLabel": "Buong Pangalan",
+    "namePlaceholder": "Ilagay ang iyong buong pangalan",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Ilagay ang iyong email address",
+    "phoneLabel": "Numero ng Telepono",
+    "phonePlaceholder": "Ilagay ang iyong numero ng telepono",
+    "howDidYouFindUsLabel": "Paano mo kami nahanap?",
+    "selectOption": "Pumili ng opsyon",
+    "socialMedia": "Social Media",
+    "googleSearch": "Google Search",
+    "friendRecommendation": "Rekomendasyon ng Kaibigan",
+    "advertisement": "Advertisement",
+    "other": "Iba pa",
+    "goalLabel": "Ano ang iyong fitness goal?",
+    "goalPlaceholder": "Sabihin sa amin ang iyong mga fitness goals at kung ano ang gusto mong makamit",
+    "submitButton": "Mag-book ng Libreng Campus Tour o 1-Araw na Pagsubok",
+    "submitting": "Nagbu-book...",
+    "formSuccess": "Salamat! Matagumpay na nai-book ang iyong libreng trial. Makikipag-ugnayan kami sa iyo sa lalong madaling panahon upang kumpirmahin ang mga detalye.",
+    "formError": "Paumanhin, nagkaroon ng error sa pag-book ng iyong trial. Pakisubukan muli o direktang makipag-ugnayan sa amin.",
+    "formNote": "Ang mga field na may * ay kinakailangan. Makikipag-ugnayan kami sa iyo sa loob ng 24 oras upang kumpirmahin ang iyong booking.",
+    "thankYouTitle": "Nakumpirma ang Booking!",
+    "thankYouSubtitle": "Matagumpay na nai-book ang iyong libreng trial.",
+    "bookingDetails": "Mga Detalye ng Booking",
+    "nextStepsTitle": "Ano ang Susunod?",
+    "nextStep1Title": "Confirmation Call",
+    "nextStep1Description": "Makikipag-ugnayan kami sa iyo sa loob ng 24 oras upang kumpirmahin ang mga detalye ng iyong booking.",
+    "nextStep2Title": "Maghanda para sa Iyong Trial",
+    "nextStep2Description": "Mangyaring magdala ng komportableng workout clothes at water bottle sa araw na iyon.",
+    "nextStep3Title": "Dumalo sa Iyong Trial",
+    "nextStep3Description": "Bisitahin ang aming ABM campus sa iyong nakaiskedyul na oras.",
+    "contactInfoTitle": "Kailangan ng Tulong?",
+    "contactInfoDescription": "Kung may mga katanungan ka, huwag mag-atubiling makipag-ugnayan sa amin anumang oras.",
+    "backToHome": "Bumalik sa Home",
+    "exploreCourses": "Tingnan ang Iba pang Kurso"
+  },
+  "timetable": {
+    "title": "Iskedyul ng Klase",
+    "subtitle": "Planuhin ang Iyong Iskedyul ng Pag-aaral",
+    "pageTitle": "Iskedyul ng Klase",
+    "importantInfo": "Mahalagang Impormasyon",
+    "selfPacedLearning": "Lahat ng estudyante ay dapat kumpletuhin ang 5 – 6 oras ng self-paced learning depende sa kurso.",
+    "schedule": "Umaga: 2.5 araw sa isang linggo, Gabi: 3 araw sa isang linggo.",
+    "subjectToChange": "Ang iskedyul na ito ay maaaring magbago.",
+    "studyHours": "*15-24 oras ng face-to-face study kasama ang 5-6 oras ng self-paced learning depende sa kurso.",
+    "qualification": "Kwalipikasyon",
+    "intake": "Intake / Kurso",
+    "monday": "LUN",
+    "tuesday": "MAR",
+    "wednesday": "MIY",
+    "thursday": "HUW",
+    "friday": "BIY",
+    "tutorial": "Tutorial",
+    "note": "Paalala",
+    "noteDescription": "Mangyaring makipag-ugnayan sa amin para sa pinakabagong impormasyon ng iskedyul dahil maaaring magbago ang mga iskedyul batay sa enrollment at operational requirements."
+  },
+  "nav": {
+    "internationalStudent": "Ikaw ba ay International Student?",
+    "downloadGuide": "I-download ang ABM Course Guide 2026",
+    "currentStudents": "Kasalukuyang Estudyante",
+    "agentPortal": "Agent Portal",
+    "findCourse": "Maghanap ng kurso",
+    "searchPlaceholder": "Maghanap Dito...",
+    "noResults": "Walang nahanap na resulta.",
+    "enrolNow": "Mag-enroll Ngayon",
+    "menu": {
+      "courses": "Mga Kurso",
+      "shortCourses": "Custom Programs",
+      "studyWithUs": "Mag-aral sa Amin",
+      "contact": "Makipag-ugnayan"
+    },
+    "subMenu": {
+      "studyTourPrograms": "Mga Study Tour Program",
+      "cookery": "Pagluluto",
+      "hospitality": "Hospitality",
+      "fitnessAndSport": "Fitness at Sport",
+      "business": "Business",
+      "projectAndProgram": "Project at Program",
+      "humanResource": "Human Resource",
+      "health": "Kalusugan at Wellness",
+      "cookingAndBaking": "Pagluluto at Pagbe-bake",
+      "onlineCourses": "Mga Online Course",
+      "baristaSampleCourse": "Barista Sample Course",
+      "baristaOnlineCourse": "Barista Online Course"
+    },
+    "studyWithUs": {
+      "studyTourPrograms": "Mga Study Tour Program",
+      "studentInsights": "Mga Testimonya",
+      "academicCalendar": "Akademikong Kalendaryo",
+      "feesAndPayment": "Bayarin at Pagbabayad",
+      "entryRequirements": "Mga Kinakailangan sa Pagpasok",
+      "getUSI": "Kumuha ng USI",
+      "enrolNow": "Mag-enroll Ngayon",
+      "higherEducationPathway": "Higher Education Pathway",
+      "studentAccommodation": "Tirahan ng Estudyante"
+    }
+  },
+  "cookeryAndHospitality": {
+    "title": "Simulan ang Iyong Karera sa Cookery at Hospitality",
+    "description": "Magkaroon ng tunay na karanasan sa commercial kitchen sa Certificate IV in Kitchen Management. Matuto ng mga advanced na kasanayan sa pagluluto, pamumuno, at supervisory training upang itayo ang iyong karera bilang chef sa Australia.",
+    "streams": "Mga Stream",
+    "kitchenManagementStream": "Kitchen Management Stream",
+    "foodAndBeverageStream": "Food and Beverage Stream",
+    "streamDescription": "Ang stream na ito ay para sa mga estudyanteng nais palawakin ang kanilang mga kasanayan at pag-aaral sa pagluluto sa mas advanced na antas.",
+    "specialisedShortCourses": "Mga espesyal na maikling kurso",
+    "shortCourse": "One Day Class",
+    "eliteCookingClass": "Elite Cooking Class Series",
+    "foodSafetySupervisor": "NSW Food Safety Supervisor Certificate (FSS)"
+  },
+  "common": {
+    "findOutMore": "ALAMIN PA"
+  },
+  "currentStudents": {
+    "title": "Impormasyon ng Estudyante",
+    "welcome": "Maligayang pagdating sa pahina ng Kasalukuyang Estudyante!",
+    "description": "Dito makikita mo ang mahahalagang impormasyon, resources, at updates upang suportahan ang iyong pag-aaral sa ABM",
+    "moodleTitle": "Kailangan mo bang mag-login sa Moodle?",
+    "moodleLogin": "MOODLE LOGIN",
+    "studentPortalTitle": "Kailangan mo bang mag-download ng mga form?",
+    "studentPortal": "STUDENT PORTAL",
+    "meta": {
+      "title": "ABM Kasalukuyang Estudyante",
+      "description": "Mga iskedyul ng estudyante, impormasyon sa placement, mga patakaran, form at academic support sa ABM Further Education."
+    }
+  },
+  "feeSchedule": {
+    "title": "Iskedyul ng Bayarin 2026",
+    "bannerTitle": "Iskedyul ng Bayarin 2026",
+    "bannerSubtitle": "Kumpletong impormasyon ng bayarin para sa ABM Further Education",
+    "promotionTitle": "Limited-Time Promotion!",
+    "promotionDescription": "Huwag palampasin ang kapana-panabik na pagkakataong ito! I-click ang button sa ibaba upang i-download ang aming limited-time-only promotion na ipinagdiriwang ang paglulunsad ng aming bagong campus at mga kurso. Tuklasin ang mga eksklusibong diskwento at alok na idinisenyo para sa iyo!",
+    "downloadButton": "I-download ang Promotion Details",
+    "paymentTitle": "Mga Opsyon sa Pagbabayad",
+    "paymentDescription": "Mula Agosto 2022, ang aming mga estudyante at ahente ay maaaring magbayad sa pamamagitan ng PayPal o Credit card online (Credit/Debit Card Payment Surcharge 2%)",
+    "contactText": "Para sa mga katanungan, mangyaring makipag-ugnayan sa aming Accounts Team sa:",
+    "otherFeesTitle": "Iba pang Bayarin",
+    "enrolmentFee": "Enrolment Fee",
+    "materialFee": "Material Fee",
+    "rplFee": "RPL Fee",
+    "creditTransferFee": "Credit Transfer Fee",
+    "changeSessionFee": "Change of Session Fee",
+    "changeCourseFee": "Change of Course Fee",
+    "reassessmentFee": "Re-assessment/No show Fee*",
+    "latePaymentFee": "Late Payment fee",
+    "withdrawalFee": "Withdrawal Application Fee",
+    "defermentFee": "Deferment Fee",
+    "lateSubmissionFee": "Late Submission Fee",
+    "theoryCatchupFee": "Theory Catch up Class (Kitchen Management course)",
+    "practicalCatchupFee": "Practical Catch up Class (Kitchen Management course)",
+    "repeatUnitFee": "Repeat of Unit (Kitchen Management course)",
+    "enrolmentFeeAmount": "$250 (Hindi Maibabalik)",
+    "materialFeeAmount": "$50 Bawat term (hindi kasama: Kitchen management at hospitality management courses – Tingnan sa itaas)",
+    "rplFeeAmount": "$300 bawat unit (Hindi Maibabalik)",
+    "creditTransferFeeAmount": "$500 (Hindi Maibabalik)",
+    "changeSessionFeeAmount": "$200",
+    "changeCourseFeeAmount": "$200",
+    "reassessmentFeeAmount": "$300 bawat unit (Hindi Maibabalik)",
+    "latePaymentFeeAmount": "$200 (Hindi Maibabalik)",
+    "withdrawalFeeAmount": "$300 (Hindi Maibabalik)",
+    "defermentFeeAmount": "$200",
+    "lateSubmissionFeeAmount": "$50 bawat unit",
+    "theoryCatchupFeeAmount": "$100 bawat unit",
+    "practicalCatchupFeeAmount": "$250 bawat unit",
+    "repeatUnitTheoryAmount": "$250 bawat unit (Teorya)",
+    "repeatUnitPracticalAmount": "$350 bawat unit (Teorya at praktikal na unit)",
+    "nonRefundableNote": "* Ang mga hindi maibabalik na bayarin ay naaangkop sa lahat ng nakalista na singil maliban kung iba ang nakasaad"
+  },
+  "usi": {
+    "title": "Kumuha ng USI",
+    "bannerTitle": "Kumuha ng USI",
+    "bannerSubtitle": "Unique Student Identifier - Ang Iyong Susi sa Vocational Education",
+    "whatIsUSITitle": "Ano ang USI?",
+    "whatIsUSIDescription": "Ang USI (Unique Student Identifier) ay isang reference number na binubuo ng 10 numero at letra na nagbibigay sa iyo ng access sa iyong USI account at lalabas sa iyong training record at resulta. Ito ay libre at madaling gawin at mananatili sa iyo habambuhay.",
+    "usiBenefit1": "I-access ang iyong training records at resulta online",
+    "usiBenefit2": "Tanggapin ang iyong qualification o statement of attainment",
+    "usiBenefit3": "Subaybayan ang iyong progreso sa iba't ibang training providers",
+    "usiBenefit4": "Tiyakin na ang iyong mga training achievements ay maayos na naitala",
+    "whoNeedsUSITitle": "Sino ang nangangailangan ng USI?",
+    "whoNeedsUSIDescription": "Kailangan mo ng USI kung nag-aaral ka ng nationally recognised training sa Australia. Kasama dito ang:",
+    "needUSI1": "Mga estudyanteng nag-aaral ng nationally recognised VET course",
+    "needUSI2": "Mga estudyanteng nag-aaral ng nationally recognised higher education course",
+    "needUSI3": "Mga estudyanteng nag-aaral ng nationally recognised apprenticeship o traineeship",
+    "needUSI4": "Mga estudyanteng nag-aaral ng nationally recognised short course",
+    "howToGetUSITitle": "Paano kumuha ng USI",
+    "howToGetUSIDescription": "Maaari kang lumikha ng iyong USI online o sa pamamagitan ng telepono. Ang online method ang pinakamabilis at pinakamadaling paraan.",
+    "onlineMethodTitle": "Online Method",
+    "onlineStep1": "Bisitahin ang USI website sa www.usi.gov.au",
+    "onlineStep2": "I-click ang 'Create USI'",
+    "onlineStep3": "Ilagay ang iyong personal na detalye at identification documents",
+    "onlineStep4": "Agad na malilikha ang iyong USI",
+    "createUSIButton": "Lumikha ng USI Online",
+    "phoneMethodTitle": "Phone Method",
+    "phoneMethodDescription": "Kung hindi mo malikha ang iyong USI online, maaari kang tumawag sa USI Office:",
+    "phoneNumber": "1300 857 536",
+    "phoneHours": "Lunes hanggang Biyernes, 8:00am hanggang 6:00pm (AEST)",
+    "requiorangeDocumentsTitle": "Mga Kinakailangang Dokumento",
+    "requiorangeDocumentsDescription": "Upang lumikha ng iyong USI, kailangan mong magbigay ng isa sa mga sumusunod na uri ng pagkakakilanlan:",
+    "requiredDocumentsTitle": "Mga Kinakailangang Dokumento",
+    "requiredDocumentsDescription": "Upang lumikha ng iyong USI, kailangan mong magbigay ng isa sa mga sumusunod na uri ng pagkakakilanlan:",
+    "primaryDocumentsTitle": "Pangunahing Dokumento",
+    "primaryDoc1": "Australian Passport",
+    "primaryDoc2": "Australian Birth Certificate",
+    "primaryDoc3": "Australian Citizenship Certificate",
+    "primaryDoc4": "Australian Driver Licence",
+    "secondaryDocumentsTitle": "Pangalawang Dokumento",
+    "secondaryDoc1": "Medicare Card",
+    "secondaryDoc2": "Australian Visa",
+    "secondaryDoc3": "Australian Student ID",
+    "secondaryDoc4": "Australian Work ID",
+    "importantInfoTitle": "Mahalagang Impormasyon",
+    "importantInfo1": "Isang beses mo lang kailangang lumikha ng USI - mananatili ito sa iyo habambuhay",
+    "importantInfo2": "Panatilihing ligtas at secure ang iyong USI - huwag ibahagi sa iba",
+    "importantInfo3": "Maaari mong i-access ang iyong USI account online anumang oras",
+    "importantInfo4": "Kung nakalimutan mo ang iyong USI, maaari mo itong makuha online o sa pamamagitan ng telepono",
+    "importantInfo5": "Ang iyong USI ay kinakailangan para sa lahat ng nationally recognised training sa Australia",
+    "needHelpTitle": "Kailangan ng Tulong?",
+    "needHelpDescription": "Kung kailangan mo ng tulong sa paggawa ng iyong USI o may anumang katanungan, narito kami upang tumulong:",
+    "contactABMTitle": "Makipag-ugnayan sa ABM",
+    "contactABMDescription": "Ang aming student services team ay maaaring tumulong sa iyo sa proseso ng paggawa ng USI at sagutin ang anumang katanungan mo.",
+    "contactABMButton": "Makipag-ugnayan sa ABM",
+    "usiHelpTitle": "USI Help",
+    "usiHelpDescription": "Para sa technical support o mga katanungan tungkol sa iyong USI account, bisitahin ang opisyal na USI help page.",
+    "usiHelpButton": "USI Help"
+  },
+  "courseEntryRequirements": {
+    "metaTitle": "Mga Kinakailangan sa Pagpasok sa Kurso - ABM Further Education",
+    "metaDescription": "Alamin ang mga kinakailangan sa pagpasok para sa mga kurso ng ABM kasama ang mga akademikong kinakailangan, English language requirements, at proseso ng aplikasyon.",
+    "bannerTitle": "Mga Kinakailangan sa Pagpasok sa Kurso",
+    "bannerSubtitle": "Lahat ng kailangan mong malaman tungkol sa pag-enroll sa mga kurso ng ABM",
+    "introTitle": "Mga Kinakailangan sa Pagpasok para sa mga Kurso ng ABM",
+    "introDescription": "Upang matiyak ang pinakamahusay na karanasan sa pag-aaral at mga resulta, ang ABM ay may mga tiyak na kinakailangan sa pagpasok para sa lahat ng aming mga kurso. Ang mga kinakailangang ito ay tumutulong sa amin na mapanatili ang mataas na pamantayan ng edukasyon at matiyak na ang mga estudyante ay handa sa kanilang pag-aaral.",
+    "generalRequirementsTitle": "Pangkalahatang Kinakailangan",
+    "ageRequirementTitle": "Kinakailangan sa Edad",
+    "ageRequirementDescription": "Ang mga estudyante ay dapat ay hindi bababa sa 18 taong gulang sa panahon ng pagsisimula ng kurso.",
+    "englishRequirementTitle": "Kasanayan sa Wikang Ingles",
+    "englishRequirementDescription": "Lahat ng estudyante ay dapat magpakita ng kasanayan sa wikang Ingles upang matiyak na matagumpay nilang makumpleto ang kanilang pag-aaral. Ito ay naaangkop sa parehong domestic at international students.",
+    "academicRequirementsTitle": "Mga Akademikong Kinakailangan",
+    "certificateIIITitle": "Mga Certificate III Course",
+    "certificateIIIRequirement1": "Nakumpleto ang Year 10 o katumbas",
+    "certificateIIIRequirement2": "Pangunahing kasanayan sa literacy at numeracy",
+    "certificateIIIRequirement3": "Kakayahang magtrabaho nang mag-isa at sa mga team",
+    "certificateIVTitle": "Mga Certificate IV Course",
+    "certificateIVRequirement1": "Nakumpleto ang Year 12 o katumbas",
+    "certificateIVRequirement2": "Certificate III sa kaugnay na larangan (inirerekomenda)",
+    "certificateIVRequirement3": "Malakas na kasanayan sa komunikasyon at paglutas ng problema",
+    "diplomaTitle": "Mga Diploma Course",
+    "diplomaRequirement1": "Nakumpleto ang Year 12 o katumbas",
+    "diplomaRequirement2": "Certificate IV sa kaugnay na larangan (inirerekomenda)",
+    "diplomaRequirement3": "Naipakitang potensyal sa pamumuno",
+    "advancedDiplomaTitle": "Mga Advanced Diploma Course",
+    "advancedDiplomaRequirement1": "Diploma sa kaugnay na larangan",
+    "advancedDiplomaRequirement2": "Hindi bababa sa 2 taon ng kaugnay na karanasan sa trabaho",
+    "advancedDiplomaRequirement3": "Malakas na akademikong background",
+    "englishLanguageTitle": "Mga Kinakailangan sa Pagpasok para sa Ingles",
+    "acceptedTestsTitle": "Mga Tinatanggap na English Test",
+    "acceptedTest1": "IELTS Academic: Overall 5.5 (walang band na mas mababa sa 5.0)",
+    "acceptedTest2": "TOEFL iBT: Overall 46 (walang band na mas mababa sa 10)",
+    "acceptedTest3": "PTE Academic: Overall 42 (walang band na mas mababa sa 36)",
+    "acceptedTest4": "Cambridge English: B2 First (FCE) - Grade C",
+    "acceptedTest5": "OET: Grade C sa lahat ng band",
+    "exemptionsTitle": "Mga Exemption sa English Language",
+    "exemption1": "Native English speakers mula sa Australia, New Zealand, UK, USA, Canada, o Ireland",
+    "exemption2": "Mga estudyanteng nakatapos ng hindi bababa sa 2 taon ng full-time study sa Ingles sa secondary o tertiary level",
+    "exemption3": "Mga estudyanteng may mga nakaraang kwalipikasyon mula sa mga English-speaking institution",
+    "englishEntryRequirementsTitle": "Mga Kinakailangan sa Pagpasok para sa Ingles",
+    "englishEntryRequirementsDescription": "Magkaroon ng IELTS* score na 5.5 na walang band na mas mababa sa 5.0 (ang mga resulta ng test ay dapat hindi hihigit sa 2 taon ang edad). Ang kasanayan sa wikang Ingles ay maaari ring ipakita sa pamamagitan ng dokumentadong ebidensya ng alinman sa mga sumusunod:",
+    "englishEvidence1": "Nag-aral ng 5 taon sa isang English-speaking country; o",
+    "englishEvidence2": "Nakumpleto ang hindi bababa sa 6 buwan ng Certificate IV level course sa isang Australian RTO; o",
+    "englishEvidence3": "Matagumpay na nakumpleto ang ABM English Placement Test",
+    "englishEvidence4": "Matagumpay na nakumpleto ang English course na may exit level na katumbas ng IELTS overall 5.5 mula sa isa sa aming ELICOS Pathway partners",
+    "pteRequirementsTitle": "Para sa PTE",
+    "pteRequirementsDescription": "Magkaroon ng PTE score na 45.4 (IELTS 5.5) o mas mataas na walang band na mas mababa sa (Listening – 42.7, Reading – 47.9, Speaking – 51, Writing – 42.2)",
+    "pteTableTitle": "PTE na katumbas ng 5.5 IELTS bawat band",
+    "pteListening": "PTE -A Listening",
+    "pteReading": "PTE – A Reading",
+    "pteSpeaking": "PTE – A Speaking",
+    "pteWriting": "PTE – A Writing",
+    "pteListeningScore": "42.7",
+    "pteReadingScore": "47.9",
+    "pteSpeakingScore": "51",
+    "pteWritingScore": "42.2",
+    "competencyInEnglishTitle": "Kasanayan sa Ingles",
+    "competencyDescription": "Kung isa sa mga sumusunod ang naaangkop, hindi mo na kailangang magbigay ng ebidensya ng English test score sa iyong visa application:",
+    "competency1": "Ikaw ay naka-enroll sa full-time school studies bilang pangunahing kurso kasama ang secondary exchange programme, postgraduate research course, standalone English Language Intensive Course for Overseas Students (ELICOS), at Foreign Affairs o Defence sponsored students.",
+    "competency2": "Nakumpleto mo ang hindi bababa sa limang taon ng pag-aaral sa isa o higit pa sa mga sumusunod na bansa: Australia, UK, USA, Canada, New Zealand, South Africa, o Republic of Ireland.",
+    "competency3": "Ikaw ay mamamayan at may hawak na pasaporte mula sa UK, USA, Canada, NZ o Republic of Ireland.",
+    "competency4": "Sa dalawang taon bago mag-apply para sa student visa, nakumpleto mo, sa Australia at sa wikang Ingles, alinman sa Senior Secondary Certificate of Education o isang malaking bahagi ng kurso na humahantong sa kwalipikasyon mula sa Australian Qualifications Framework sa Certificate IV o mas mataas na antas, habang may hawak kang student visa.",
+    "englishNote": "*Tandaan na ang ibang English language tests gaya ng PTE at TOEFL ay maaaring tanggapin. Ang mga estudyante ay kinakailangang magbigay ng kanilang mga resulta upang makumpirma na ang mga ito ay katumbas ng IELTS 5.5.",
+    "elicosPathwayPartnersTitle": "Mga ELICOS Pathway Partner",
+    "elicosPartners": {
+      "ctic": {
+        "name": "CTIC English",
+        "url": "http://ctic.com.au/",
+        "courses": "• EAP na may exit level Credit\n• IELTS Preparation na may exit level Grade C\n• Real English, General English, Cambridge na may exit level B2"
+      },
+      "elc": {
+        "name": "ELC",
+        "url": "http://www.elc.edu.au/english",
+        "courses": "• English for Academic Purposes: Min. 10 linggo ng Academic English na may matagumpay na exit results ng EAP 1\n• Cambridge English: Min. complete course (10-12 linggo) ng Cambridge B2 First (Min grade C)\n• IELTS Preparation: Min. 10 linggo ng IELTS Preparation na may matagumpay na predicted results ng 5.5"
+      },
+      "elsis": {
+        "name": "ELSIS",
+        "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
+        "courses": "• Nakumpleto ang General English Upper Intermediate level\n• Nakumpleto ang EAP 1"
+      },
+      "englishUnlimited": {
+        "name": "English Unlimited",
+        "url": "https://eu.edu.au/",
+        "courses": "• General English (Everyday English teaching method – Upper intermediate level)\n• EAP (B+ mula sa level B)"
+      },
+      "greenwich": {
+        "name": "Greenwich College",
+        "url": "https://www.greenwichcollege.edu.au/your-campus/sydney",
+        "courses": "• General English (Upper intermediate level) na may minimum 8 linggo\n• IELTS Preparation na may exit score 5.5-7.0+\n• Cambridge Preparation PET, FCE, CAE na may exit score 5.5 +\n• English for Business (Cambridge Linguaskill Business) na may exit score 5.5\n• English for Vocational Studies (EVS) (Pass)\n• EAP na may exit level Pass"
+      },
+      "ilsc": {
+        "name": "ILSC Language Schools",
+        "url": "http://ilsc.com",
+        "courses": "• General English na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas.\n• English for Academic Purposes na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas.\n• IELTS Preparation na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas.\n• Cambridge FCE Preparation at Cambridge CAE Preparation na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas."
+      },
+      "inus": {
+        "name": "INUS",
+        "url": "https://www.inus.edu.au/",
+        "courses": "• Nakumpleto ang General English o EAP [Upper Intermediate level] na may exit level equivalency ng IELTS 5.5 o mas mataas.\n• Nakumpleto ang EAP Advanced [Advanced level]."
+      },
+      "lalingua": {
+        "name": "LA LINGUA",
+        "url": "https://www.lalingua.com/",
+        "courses": "• IELTS Preparation na may exit level na katumbas ng IELTS 5.5"
+      },
+      "navitas": {
+        "name": "NAVITAS English",
+        "url": "https://www.navitasenglish.edu.au/",
+        "courses": "• Academic English 2: 60% pass na walang sub skill na mas mababa sa 55%\n• IELTS Preparation: Matagumpay na nakumpleto ang 10 linggo\n• Cambridge Preparation – B2 First : Matagumpay na nakumpleto ang 10 o 12 linggo\n• General English: Matagumpay na nakumpleto ang 10 linggo ng Upper Intermediate"
+      },
+      "scic": {
+        "name": "Sunshine Coast International College",
+        "url": "https://scic.nsw.edu.au/",
+        "courses": "• English for Academic Purposes (EAP3): EAP 3 certificate (Upper Intermediate: CEFR = B2)\n• General English: Matagumpay na nakumpleto ang Upper Intermediate o mas mataas (CEFR=B2)"
+      },
+      "uec": {
+        "name": "Universal English College (UEC)",
+        "url": "https://uec.edu.au/",
+        "courses": "• General English na may Upper Intermediate exit level\n• IELTS Preparation na may exit level na katumbas ng IELTS 5.5\n• Academic English Program na may exit level na katumbas ng IELTS 5.5"
+      }
+    },
+    "additionalRequirementsTitle": "Karagdagang Kinakailangan",
+    "healthRequirementsTitle": "Mga Kinakailangan sa Kalusugan at Kaligtasan",
+    "healthRequirementsDescription": "Ang ilang kurso ay maaaring may mga tiyak na kinakailangan sa kalusugan at kaligtasan, lalo na para sa mga praktikal na bahagi.",
+    "healthRequirement1": "Medical clearance para sa mga praktikal na aktibidad",
+    "healthRequirement2": "Mga rekord ng bakuna (kung kinakailangan)",
+    "healthRequirement3": "Fitness assessment para sa mga kurso na physically demanding",
+    "workingWithChildrenTitle": "Working with Children Check",
+    "workingWithChildrenDescription": "Ang mga estudyante sa mga kurso na may kinalaman sa trabaho sa mga bata o vulnerable people ay maaaring mangailangan ng Working with Children Check.",
+    "wwcRequirement1": "Valid Working with Children Check clearance",
+    "wwcRequirement2": "Background check clearance",
+    "applicationProcessTitle": "Proseso ng Aplikasyon",
+    "step1Title": "Hakbang 1: Pagpili ng Kurso",
+    "step1Description": "Piliin ang iyong kurso at suriin ang mga kinakailangan sa pagpasok.",
+    "step2Title": "Hakbang 2: Paghahanda ng Dokumento",
+    "step2Description": "Ipunin ang mga kinakailangang dokumento at transcript.",
+    "step3Title": "Hakbang 3: Pagsusumite ng Aplikasyon",
+    "step3Description": "Isumite ang iyong aplikasyon kasama ang lahat ng dokumento.",
+    "step4Title": "Hakbang 4: Pagsusuri at Alok",
+    "step4Description": "Tanggapin ang mga resulta ng pagsusuri at alok ng enrollment.",
+    "courseRequirementsTableTitle": "Mga Tiyak na Kinakailangan sa Pagpasok ng Kurso",
+    "courseRequirementsTableDescription": "Nasa ibaba ang mga tiyak na kinakailangan sa pagpasok para sa bawat kurso na inaalok sa ABM:",
+    "needHelpTitle": "Kailangan ng Tulong sa Iyong Aplikasyon?",
+    "needHelpDescription": "Ang aming friendly na admissions team ay narito upang tulungan ka sa proseso ng aplikasyon.\nMakipag-ugnayan sa amin para sa personalized na tulong.",
+    "contactUsButton": "Makipag-ugnayan sa Amin",
+    "callUsButton": "Tawagan Kami",
+    "courses": {
+      "kitchenManagement": {
+        "code": "SIT40521 Certificate IV in Kitchen Management",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10"
+      },
+      "hospitalityDiploma": {
+        "code": "SIT50422 Diploma of Hospitality Management",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 12"
+      },
+      "hospitalityAdvancedDiploma": {
+        "code": "SIT60322 Advanced Diploma of Hospitality Management",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 12"
+      },
+      "fitnessCertIII": {
+        "code": "SIS30321 Certificate III in Fitness",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10"
+      },
+      "fitnessCertIIIFast": {
+        "code": "SIS30321 Certificate III in Fitness (Fast Track)",
+        "requirement": "Ikaw ay kayang lumahok sa mga fitness activities."
+      },
+      "fitnessCertIV": {
+        "code": "SIS40221 Certificate IV in Fitness",
+        "requirement": "Nakumpleto ang mga sumusunod na unit:\n• HLTAID011 Provide First Aid (o unit na pumalit sa unit na ito)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information\n\nDapat nakumpleto ng estudyante ang katumbas ng Year 12"
+      },
+      "fitnessCertIVFast": {
+        "code": "SIS40221 Certificate IV in Fitness (Fast Track)",
+        "requirement": "Nakumpleto ang mga sumusunod na unit:\n• HLTAID011 Provide First Aid (o unit na pumalit sa unit na ito)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information"
+      },
+      "sportDiploma": {
+        "code": "SIS50321 Diploma of Sport (Coaching)",
+        "requirement": "Lumahok sa course entry interview upang matukoy ang pagiging angkop para sa kurso at mga pangangailangan ng estudyante."
+      },
+      "businessCertIV": {
+        "code": "BSB40120 Certificate IV in Business",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10"
+      },
+      "businessDiploma": {
+        "code": "BSB50120 Diploma of Business",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 12"
+      },
+      "businessAdvancedDiploma": {
+        "code": "BSB60120 Advanced Diploma of Business",
+        "requirement": "Ang mga estudyante ay dapat nakumpleto ang Diploma level course (AQF Level 5) o Advanced Diploma level course (AQF Level 6) mula sa BSB training package."
+      },
+      "hrCertIV": {
+        "code": "BSB40420 Certificate IV in Human Resource Management",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10"
+      },
+      "hrDiploma": {
+        "code": "BSB50320 Diploma of Human Resource Management",
+        "requirement": "Nakumpleto ang mga sumusunod na unit:\n• BSBHRM411 Administer performance development processes\n• BSBHRM412 Support employee and industrial relations\n• BSBHRM415 Coordinate recruitment and onboarding\n• BSBHRM417 Support human resource functions and processes\n\nAng katumbas na competencies ay mga predecessor sa mga unit na ito, na nai-map bilang katumbas."
+      },
+      "hrAdvancedDiploma": {
+        "code": "BSB60320 Advance Diploma of Human Resource Management",
+        "requirement": "Nakumpleto ang isa sa mga sumusunod na kwalipikasyon: BSB50320 Diploma of Human Resource Management, BSB50618 Diploma of Human Resources Management (o superseded equivalent version)."
+      },
+      "projectCertIV": {
+        "code": "BSB40920 Certificate IV in Project Management Practice",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10"
+      },
+      "projectDiploma": {
+        "code": "BSB50820 Diploma of Project Management",
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 12"
+      },
+      "projectAdvancedDiploma": {
+        "code": "BSB60720 Advance Diploma of Program Management",
+        "requirement": "Nakumpleto ang isa sa mga sumusunod na kwalipikasyon: BSB50820 Diploma of Project Management, BSB51415 Diploma of Project Management (o superseded equivalent version)."
+      },
+      "graduateDiploma": {
+        "code": "BSB80120 Graduate Diploma of Management (Learning)",
+        "requirement": "Ang mga estudyante ay dapat nakumpleto ang Advanced Diploma level course (AQF Level 6) o mas mataas."
+      },
+      "healthServicesAssistance": {
+        "code": "HLT33115 Certificate III in Health Services Assistance",
+        "requirement": "Ang mga estudyante ay dapat ay hindi bababa sa 18 taong gulang sa panahon ng pagsisimula ng kurso.\nIELTS 5.5 o katumbas, kung ang estudyante ay may IELTS 4.5 o katumbas sa pamamagitan ng ABM EPT, mag-enroll na may Plus Nursing English.\nDapat nakumpleto ng estudyante ang katumbas ng Year 10"
+      }
+    }
+  },
+  "higherEducationPathway": {
+    "title": "Higher Education Pathway",
+    "bannerTitle": "Naghahanap ng Pag-unlad Pagkatapos ng Iyong ABM Course?",
+    "bannerSubtitle": "Pagkatapos makumpleto ang iyong Certificate IV, Diploma, o Advanced Diploma sa ABM Further Education, maaari mong gawin ang susunod na hakbang at ipagpatuloy ang iyong pag-aaral sa mas mataas na antas.",
+    "pathwayTitle": "Pathway sa Higher Education",
+    "pathwayDescription": "Ang ABM ay may mga pathway agreement sa mga mapagkakatiwalaang higher education providers sa Australia, kabilang ang Southern Cross University (SCU). Ibig sabihin nito ay maaari kang maging eligible para sa credit patungo sa Bachelor's degree, na tumutulong sa iyo na makatipid ng parehong oras at pera.",
+    "exploreOptions": "Kung isinasaalang-alang mo ang karagdagang pag-aaral at nais i-upgrade ang iyong kwalipikasyon, tuklasin ang iyong mga opsyon sa pamamagitan ng mga academic pathway ng ABM.",
+    "hotelSchoolTitle": "The Hotel School Sydney / Southern Cross University",
+    "hotelSchoolProgram": "Bachelor of Business in Hotel Management",
+    "certificateIVKitchen": "Certificate IV in Kitchen Management SIT40521",
+    "certificateIVKitchenCredit": "Credit na ibinigay: 4 units, sa kabuuang 24 (48 CP, 6 buwan o 16% ng kurso)",
+    "diplomaHospitality": "Diploma of Hospitality Management SIT50416/SIT50422",
+    "diplomaHospitalityCredit": "Credit na ibinigay: 8 units, sa kabuuang 24 (96 CP, 1 taon o 33% ng kurso) – 4 unspecified elective units",
+    "advancedDiplomaHospitality": "Advanced Diploma of Hospitality Management SIT60316/SIT60322",
+    "advancedDiplomaHospitalityCredit": "Credit na ibinigay: 12 units, sa kabuuang 24 (144 CP, 1.5 taon o 50% ng kurso) – 3 unspecified elective units; 9 specified units",
+    "ubssTitle": "UBSS Universal Business School Sydney",
+    "ubssProgram": "Bachelor of Business at Master of Business Administration",
+    "ubssBachelorTitle": "Patungo sa UBSS Bachelor of Business (24 na subjects sa kabuuan)",
+    "diplomaBusiness": "Diploma of Business: 6 na subjects",
+    "advancedDiplomaBusiness": "Advanced Diploma of Business: 9 na subjects",
+    "diplomaHR": "Diploma of Human Resource Management: 5 na subjects",
+    "advancedDiplomaHR": "Advanced Diploma of Human Resource Management: 7 na subjects",
+    "diplomaHospitalityUBSS": "Diploma of Hospitality Management: 4 na subjects",
+    "advancedDiplomaHospitalityUBSS": "Advanced Diploma of Hospitality Management: 5 na subjects",
+    "ubssMasterTitle": "Patungo sa UBSS Master of Business Administration (16 na subjects sa kabuuan)",
+    "graduateDiplomaManagement": "Graduate Diploma of Management (Learning): 8 na subjects",
+    "benefitsTitle": "Mga Benepisyo ng Higher Education Pathways",
+    "saveTimeTitle": "Makatipid ng Oras",
+    "saveTimeDescription": "Makakuha ng credit para sa iyong mga kasalukuyang kwalipikasyon at matapos ang iyong degree nang mas mabilis",
+    "saveMoneyTitle": "Makatipid ng Pera",
+    "saveMoneyDescription": "Bawasan ang mga gastos sa tuition sa pamamagitan ng pagtanggap ng credit para sa mga nakumpletong unit",
+    "careerAdvancementTitle": "Pag-unlad sa Karera",
+    "careerAdvancementDescription": "Palakasin ang iyong mga prospect sa karera sa pamamagitan ng mas mataas na kwalipikasyon",
+    "readyToStartTitle": "Handa ka na bang Gawin ang Susunod na Hakbang?",
+    "readyToStartDescription": "Makipag-ugnayan sa amin para sa detalyadong impormasyon tungkol sa aming higher education pathways at kung paano magsimula.",
+    "contactUs": "Makipag-ugnayan sa Amin",
+    "enrolNow": "Mag-enroll Ngayon"
+  },
+  "news": {
+    "bannerTitle": "Pinakabagong Balita",
+    "intro": "Tuklasin ang pinakabagong balita mula sa ABM.",
+    "searchPlaceholder": "Maghanap ng balita...",
+    "sortBy": "Ayusin ayon sa:",
+    "newest": "Pinakabago",
+    "oldest": "Pinakaluma",
+    "readMore": "Magbasa Pa",
+    "noResults": "Walang nahanap na balita."
+  },
+  "checkout": {
+    "title": "Pagpaparehistro sa Kurso",
+    "firstName": "Unang Pangalan",
+    "lastName": "Apelyido",
+    "email": "Email",
+    "phone": "Telepono",
+    "preferredDate": "Gustong petsa (kung gusto mong mag-enroll bilang grupo)",
+    "otherInquiries": "Iba pang mga katanungan",
+    "howDidYouHear": "Paano mo nalaman ang kursong ito?",
+    "agent": "Ahente",
+    "socialMedia": "Social Media",
+    "friend": "Kaibigan",
+    "searchPortal": "Search Portal",
+    "abmWebsite": "ABM Website",
+    "referrerName": "Kung ikaw ay ni-refer ng ahente o isa sa aming mga estudyante, mangyaring ibigay ang kanilang pangalan.",
+    "promotionCode": "Promotion code",
+    "submit": "Magpatuloy sa Pagbabayad",
+    "back": "Bumalik",
+    "required": "Kinakailangang field",
+    "enterFirstName": "Mangyaring ilagay ang iyong unang pangalan.",
+    "enterEmail": "Mangyaring ilagay ang iyong email.",
+    "invalidEmail": "Hindi wastong email address.",
+    "success": "Nagpapatuloy sa pagbabayad..."
+  },
+  "paymentSuccess": {
+    "title": "Nakumpleto ang Pagbabayad!",
+    "subtitle": "Matagumpay na nakumpleto ang iyong pagpaparehistro sa kurso.",
+    "registrationInfo": "Impormasyon ng Pagpaparehistro",
+    "course": "Kurso",
+    "date": "Petsa",
+    "type": "Uri",
+    "email": "Email",
+    "amountPaid": "Halagang Binayaran",
+    "emailNotification": "Ipapadala ang confirmation email sa lalong madaling panahon. Magbibigay ng karagdagang mga tagubilin bago magsimula ang kurso.",
+    "viewOtherCourses": "Tingnan ang Iba pang Kurso",
+    "contactUs": "Makipag-ugnayan sa Amin",
+    "errorOccurred": "May Naganap na Error",
+    "sessionNotFound": "Hindi nahanap ang payment session ID.",
+    "fetchError": "Hindi nakuha ang impormasyon ng pagbabayad.",
+    "verificationError": "May naganap na error habang iniverify ang impormasyon ng pagbabayad.",
+    "backToCourses": "Bumalik sa Mga Kurso",
+    "verifyingPayment": "Iniverify ang impormasyon ng pagbabayad..."
+  },
+  "newsletter": {
+    "title": "Mag-subscribe sa Newsletter",
+    "desc": "Mag-subscribe ngayon at huwag palampasin ang update!",
+    "placeholder": "Ilagay ang iyong email",
+    "button": "Mag-subscribe"
+  },
+  "studentInsights": {
+    "bannerTitle": "Sulyap sa mga Karanasan ng Estudyante",
+    "testimonialTitle": "Mga Testimonya ng Estudyante",
+    "testimonialDescription": "Tuklasin kung ano ang masasabi ng aming mga estudyante tungkol sa kanilang karanasan sa ABM",
+    "testimonialImageAlt": "Testimonya ng estudyante {number}",
+    "clickToView": "I-click upang tingnan"
+  },
+  "shortCourses": {
+    "exploreOtherShortCourses": "Tuklasin ang Iba Naming Maikling Kurso",
+    "exploreOtherShortCoursesDesc": "Tuklasin ang mas maraming kapana-panabik na culinary experiences at palakasin ang iyong mga kasanayan sa aming magkakaibang hanay ng mga maikling kurso."
+  },
+  "fullCourses": "Lahat ng Kurso",
+  "fastTrack": "Fast Track",
+  "fitnessAndSports": "Fitness at Sports",
+  "projectAndProgram": "Project at Program",
+  "hrManagement": "HR Management",
+  "fitnessPage": {
+    "metadata": {
+      "title": "Fitness at Sports Courses | ABM Further Education",
+      "description": "Gawing karera ang iyong hilig sa fitness sa ABM Further Education. Tuklasin ang aming mga fitness at sports courses na idinisenyo para sa parehong international students at domestic fast-track options."
+    },
+    "bannerTitle": "Fitness at Sports",
+    "heading": "Gawing Karera ang Iyong Hilig\nsa Fitness",
+    "description": "Ang mga fitness courses ng ABM ay naghahanda sa iyo para sa karera sa lumalagong fitness industry ng Australia. Makuha ang mga kasanayan upang mamuno sa mga group classes, magdisenyo ng personalized na training programs, at magtrabaho sa mga gym, outdoor settings, o online. Kung nagsisimula ka pa lamang o nagpapalawak ng iyong expertise, ang aming mga flexible programs ay naghahanda sa iyo para sa tagumpay.",
+    "forInternational": "Para sa International Students",
+    "forDomestic": "Para sa Domestic (Fast Track)",
+    "cert3": "Certificate III in Fitness",
+    "cert4": "Certificate IV in Fitness",
+    "diploma": "Diploma in Sport (Coaching)",
+    "cert3Fast": "Certificate III in Fitness (Fast Track)",
+    "cert4Fast": "Certificate IV in Fitness (Fast Track)"
+  },
+  "healthPage": {
+    "metadata": {
+      "title": "Health at Wellness Courses | ABM Further Education",
+      "description": "Kahit walang nursing experience, maaari kang magtrabaho at matuto bilang Assistant in Nursing (AIN) sa mga hospital at care facilities sa Australia. Madaling magsimula kahit para sa mga baguhan sa Ingles, na may maraming pagkakataon para sa praktikal na pagsasanay at pagtatrabaho. Ang sikat na program na ito ay available sa mga kalahok na may Working Holiday at Student visas."
+    },
+    "bannerTitle": "Health at Wellness",
+    "heading": "Mag-aral at Magtrabaho\nbilang Nursing Assistant sa Australia",
+    "description": "Gawin ang iyong unang hakbang patungo sa isang rewarding na karera sa healthcare sa ABM's Nursing Support Career Pathway. Ang komprehensibong program na ito ay idinisenyo para sa mga international students o mga bagong pumapasok sa health sector na nais maging skilled support workers sa mga hospital at aged care facilities.",
+    "nursingSupport": "Nursing Support Career Pathway",
+    "cert3Health": "HLT33115 Certificate III in Health Services Assistance",
+    "whyChoose": "Bakit Piliin ang Certificate III in Health Services Assistance?",
+    "realHealthcare": "Tunay na Healthcare Settings",
+    "realHealthcareDesc": "Kumpletuhin ang 80 oras ng work placement sa tunay na healthcare environments",
+    "workPlacement": "Suporta sa Work Placement",
+    "workPlacementDesc": "Komprehensibong suporta kasama ang mga kasunduan, supervision, at flexible scheduling",
+    "recognised": "Nationally Recognised",
+    "recognisedDesc": "Makuha ang nationally recognised qualification na nagbubukas ng mga oportunidad sa karera",
+    "careerOpportunities": "Mga Oportunidad sa Karera",
+    "ain": "Assistant in Nursing (AIN)",
+    "healthServicesAssistant": "Health Services Assistant",
+    "personalCareAssistant": "Personal Care Assistant",
+    "hospitalOrderly": "Hospital Orderly",
+    "patientSupport": "Patient Support Assistant",
+    "supportWorker": "Support Worker",
+    "careWorker": "Care Worker"
+  },
+  "shortCoursesPage": {
+    "heading": "Tuklasin ang Iyong Hilig sa Bagong Custom Programs ng ABM!",
+    "description": "Ang ABM ay nag-aalok ng customized short-term courses at one-day programs na ibinibigay sa private group format. Iniaakma sa pangangailangan ng bawat grupo, ang aming mga program ay ideal para sa mga paaralan, unibersidad, at mga mahilig sa hospitality. Matagumpay kaming nakipagtulungan sa maraming high schools at unibersidad, na lumilikha ng engaging at hands-on learning experiences.",
+    "heading2": "ABM Custom Programs",
+    "calendarHeading": "Kalendaryo ng Kurso",
+    "calendarDescription": "I-browse ang aming mga maikling kurso ayon sa buwan at hanapin ang perpektong petsa para sa iyo"
+  },
+  "footer": {
+    "home": "Home",
+    "courses": "Mga Kurso",
+    "customPrograms": "Custom Programs",
+    "shortCourses": "Maikling Kurso",
+    "studyWithUs": "Mag-aral sa Amin",
+    "currentStudents": "Kasalukuyang Estudyante",
+    "contact": "Makipag-ugnayan",
+    "cookeryAndHospitality": "Cookery at Hospitality",
+    "fitnessAndSports": "Fitness at Sports",
+    "business": "Business",
+    "projectAndProgram": "Project at Program",
+    "humanResources": "Human Resources",
+    "healthAndWellness": "Health",
+    "baristaCourse": "Barista Course",
+    "classicFrenchPastriesCourse": "Classic French Pastries Course",
+    "cocktail": "Cocktail-Making at Mixology Course",
+    "wineCourse": "Wine Course",
+    "sourdoughAndFocacciaCourse": "Sourdough at Focaccia Course",
+    "fineDiningDessertPlating": "Fine Dining Dessert Plating",
+    "classicFrenchCakesCourse": "Classic French Cakes Course",
+    "frenchPetitFourCourse": "French Petit Four Course (Macaroon)",
+    "veganAndVegetarianCourse": "Vegan at Vegetarian Course",
+    "chocolateClassXmas": "Chocolate Class - Xmas",
+    "agent": "Ahente",
+    "agentPortal": "Agent Portal",
+    "agentApplication": "Agent Application",
+    "agentList": "Agent List",
+    "abmPoliciesAndProcedures": "ABM Policies at Procedures",
+    "studyTourPrograms": "Mga Study Tour Program"
+  },
+  "shortCoursesMenu": {
+    "hospitality": "Hospitality",
+    "cookingAndBaking": "Pagluluto at Pagbe-bake",
+    "onlineCourses": "Mga Online Course",
+    "barista": "Barista Course",
+    "wine": "Wine Course",
+    "fineDessert": "Fine Dining Dessert Plating Course",
+    "cocktail": "Cocktail-Making at Mixology Course",
+    "foodSafety": "NSW Food Safety Supervisor Certificate",
+    "rsa": "Responsible Service of Alcohol (RSA)",
+    "frenchCakes": "Classic French Cakes Course",
+    "sourdough": "Sourdough at Focaccia Course",
+    "frenchPastries": "Classic French Pastries Course",
+    "petitFour": "French Petit Four Course (Macaroon)",
+    "vegan": "Vegan at Vegetarian Course",
+    "chocolate": "Chocolate Class – Xmas",
+    "htmlIntro": "Introduction to HTML, CSS, at Basic Web Design",
+    "portfolioWebsite": "Advanced Course: Building a Portfolio Website",
+    "baristaSampleCourse": "Barista Sample Course",
+    "baristaOnlineCourse": "Barista Online Course",
+    "studyTourPrograms": "Mga Study Tour Program"
+  },
+  "gallery": {
+    "title": "Campus Gallery"
+  },
+  "courseInformation": {
+    "title": "Impormasyon ng Kurso",
+    "overview": "Pangkalahatang-ideya"
+  },
+  "courseDetail": {
+    "title": "Detalye ng Kurso"
+  },
+  "units": {
+    "title": "Mga Unit"
+  },
+  "hrPage": {
+    "metadata": {
+      "title": "Human Resource Management Courses | ABM Further Education",
+      "description": "Magtatag ng rewarding na karera sa human resources sa ABM Further Education. Mula Certificate IV hanggang Advanced Diploma, bumuo ng mga mahahalagang HR skills para sa nagbabagong workplace ngayon."
+    },
+    "bannerTitle": "Human Resource Management",
+    "heading": "Magtatag ng Rewarding na Karera sa Human Resources",
+    "description": "Ang mga Human Resource Management courses ng ABM ay naghahanda sa iyo para sa mga HR roles sa bawat antas—mula sa entry-level officers hanggang strategic HR leaders. Makuha ang mga kasanayan sa recruitment, conflict resolution, payroll, at workforce planning sa pamamagitan ng mga flexible courses na iniaakma sa iyong mga layunin. Kung nagsisimula ka sa Certificate IV o umuunlad sa Advanced Diploma, binibigyan ka ng ABM ng kaalaman at karanasan upang umunlad sa nagbabagong workplace ngayon.",
+    "projectHeading": "Mga Human Resource Course",
+    "cert4": "Certificate IV in Human Resource Management",
+    "diploma": "Diploma of Human Resource Management",
+    "advDiploma": "Advanced Diploma of Human Resource Management"
+  },
+  "projectProgram": {
+    "bannerTitle": "Project at Program",
+    "bannerContent": "",
+    "leadProjectsTitle": "Mamuno ng mga Project na May Epekto",
+    "leadProjectsDescription": "Ang mga Project at Program Management courses ng ABM ay nagbibigay sa iyo ng mga kasanayan upang mamuno ng mga matagumpay na project sa iba't ibang industriya tulad ng construction, tech, at corporate sectors. Mula sa foundational roles sa Certificate IV hanggang senior leadership sa Advanced Diploma, ang aming mga flexible courses ay sumasaklaw sa project planning, risk management, at stakeholder engagement. Kung nagsisimula ka pa lamang o naghahangad ng mga advanced roles, tinutulungan ka ng ABM na bumuo ng expertise upang gawing tunay na mga resulta ang mga ideya.",
+    "coursesTitle": "Mga Project at Program Course",
+    "certIVTitle": "Certificate IV in Project Management Practice",
+    "diplomaTitle": "Diploma of Project Management",
+    "advDiplomaTitle": "Advanced Diploma of Program Management"
+  },
+  "academicCalendar": {
+    "term1Intake1": "Term 1 Intake 1",
+    "term1Intake2": "Term 1 Intake 2",
+    "holiday1": "Holiday 1",
+    "term2Intake1": "Term 2 Intake 1",
+    "term2Intake2": "Term 2 Intake 2",
+    "holiday2": "Holiday 2",
+    "term3Intake1": "Term 3 Intake 1",
+    "term3Intake2": "Term 3 Intake 2",
+    "holiday3": "Holiday 3",
+    "term4Intake1": "Term 4 Intake 1",
+    "term4Intake2": "Term 4 Intake 2",
+    "christmasHoliday": "Christmas Holiday"
+  },
+  "trainers": {
+    "title": "Aming mga Trainer",
+    "subtitle": "Makilala ang aming mga propesyonal na nangunguna sa industriya",
+    "heading": "Makilala ang Aming mga Eksperto na Trainer",
+    "description": "Matuto mula sa mga propesyonal sa industriya na may mga taon ng karanasan sa kani-kanilang mga larangan. Ang aming mga trainer ay nakatuon sa pagbibigay sa iyo ng kaalaman at kasanayan na kailangan para sa tagumpay.",
+    "readyToLearn": "Handa ka na bang Matuto mula sa Pinakamahusay?",
+    "contactDescription": "Makipag-ugnayan sa amin upang matuto pa tungkol sa aming mga kurso at kung paano matutulungan ka ng aming mga eksperto na trainer na makamit ang iyong mga layunin.",
+    "contactUs": "Makipag-ugnayan sa Amin",
+    "categories": {
+      "cookery": "Cookery at Hospitality",
+      "business": "Business at Management",
+      "fitness": "Fitness at Sports",
+      "hr": "Human Resources",
+      "project": "Project Management",
+      "health": "Health at Wellness"
+    }
+  },
+  "hsaPage": {
+    "metadata": {
+      "title": "Certificate III in Health Services Assistance",
+      "description": "HLT33115 Certificate III in Health Services Assistance course upang maging nursing assistant sa Australia. Beginner-friendly na may 80 oras ng praktikal na pagsasanay sa mga hospital at aged care facilities. Makuha ang nationally recognised qualification at isulong ang iyong healthcare career."
+    },
+    "courseDuration": {
+      "title": "Tagal ng Kurso",
+      "items": {
+        "qualificationDuration": "Tagal ng kwalipikasyon: 16 linggo",
+        "workPlacement": "Work Placement: 80 oras sa tunay na healthcare settings",
+        "noHoliday": "Walang holiday breaks"
+      }
+    },
+    "entryRequirements": {
+      "title": "Mga Kinakailangan sa Pagpasok",
+      "items": {
+        "basic": "Edad: 18 taon pataas, Ingles: IELTS 5.5 o katumbas",
+        "lowerEnglishOption": "Kung ang estudyante ay may IELTS 4.5 o katumbas sa pamamagitan ng ABM EPT, mag-enroll na may Plus Nursing English."
+      }
+    },
+    "workPlacement": {
+      "title": "Impormasyon sa Work Placement",
+      "items": {
+        "hours": "80 oras ng supervised work placement sa mga hospital at aged care facilities",
+        "applyLearning": "Oportunidad na i-apply ang classroom learning sa tunay na healthcare environments",
+        "confidence": "Bumuo ng kumpiyansa at makakuha ng hands-on experience sa pagtrabaho kasama ang mga propesyonal",
+        "support": "Placement assistance na ibinibigay ng ABM staff"
+      }
+    },
+    "industryPartners": {
+      "title": "Mga Pangunahing Industry Partner",
+      "items": {
+        "partners": "Private Hospitals, Medical Centres, Aged Care Centres"
+      }
+    },
+    "courseBenefits": {
+      "title": "Mga Benepisyo ng Kurso",
+      "items": {
+        "fundamentalSkills": "Makakuha ng mga pangunahing kasanayan upang magtrabaho sa mga Australian hospital at care facilities pagkatapos ng certification",
+        "practicalExperience": "Makakuha ng praktikal na karanasan sa pamamagitan ng 80 oras ng hands-on training",
+        "medicalEnglish": "Palakasin ang mga kasanayan sa komunikasyon sa medical English",
+        "beginnerFriendly": "Disenyo ng pag-aaral na accessible kahit para sa mga baguhan",
+        "careerAdvancement": "Maaaring gamitin para sa hinaharap na pag-unlad sa karera (nursing degree/advanced qualifications)"
+      }
+    },
+    "faq": {
+      "title": "Mga Madalas Itanong",
+      "items": {
+        "q1": {
+          "question": "Magkano ang nursing assistant course?",
+          "answer": "Mangyaring tingnan ang aming opisyal na pricelist para sa pinakabagong impormasyon sa tuition."
+        },
+        "q2": {
+          "question": "Aling visa ang pinapayagan akong mag-enroll?",
+          "answer": "Ang kursong ito ay angkop para sa mga estudyante na may Working Holiday Visa o anumang uri ng visa na nagpapahintulot sa iyo na mag-aral ng 16 linggo nang walang Confirmation of Enrolment (CoE). Hindi kami nagbibigay ng visa advice. Mangyaring suriin ang iyong mga kondisyon ng visa o kumonsulta sa registered migration agent kung hindi ka sigurado."
+        },
+        "q3": {
+          "question": "Kumusta ang placement at support para sa clinical training?",
+          "answer": "Nagbibigay ang ABM ng 80 oras ng work placement bilang bahagi ng kurso, na inayos sa pamamagitan ng aming mga pinagkakatiwalaang industry partners. Pagkatapos makumpleto, nag-aalok din kami ng mga paid employment opportunities para sa mga eligible graduates, na sumusuporta sa iyong maayos na paglipat sa healthcare workforce."
+        },
+        "q4": {
+          "question": "Maaari ba akong makahanap ng trabaho gamit ang kwalipikasyong ito?",
+          "answer": "Oo, ang aming mga graduate ay madalas na makakuha ng mga posisyon sa Private Hospitals, Medical Centres, Aged Care Centres."
+        },
+        "q5": {
+          "question": "Paano kung hindi sapat ang aking mga kasanayan sa Ingles?",
+          "answer": "Ang minimum na kinakailangan sa pagpasok ay IELTS 5.5 o katumbas. Kung kasalukuyan kang may IELTS 4.5 o katumbas, maaari kang mag-enroll sa kurso na may Plus Nursing English, na nagbibigay ng karagdagang language support na iniaakma sa healthcare settings. Kung wala kang resulta ng English test, maaaring ma-assess ang iyong kasanayan sa Ingles sa pamamagitan ng ABM English Placement Test."
+        }
+      }
+    }
+  }
+}

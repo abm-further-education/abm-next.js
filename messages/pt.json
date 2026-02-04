@@ -5,7 +5,33 @@
     "coursesTitle": "Cursos ABM",
     "coursesDescription": "Oferecemos educação de alta qualidade em um ambiente inovador e de apoio, garantindo o sucesso dos alunos com ensino especializado e oportunidades de experiência de trabalho em toda a Austrália.",
     "testimonialTitle": "Depoimentos",
-    "testimonialDescription": "Onde você se vê trabalhando feliz em um futuro próximo?"
+    "testimonialDescription": "Onde você se vê trabalhando feliz em um futuro próximo?",
+    "banners": {
+      "hsa": {
+        "title": "Comece Sua Carreira em Assistência de Serviços de Saúde",
+        "content": "Acelere seu crescimento em 16 semanas - Inscreva-se agora para fevereiro de 2026!",
+        "button": "Inscreva-se Aqui"
+      },
+      "fitness": {
+        "title": "Comece Sua Jornada de Fitness",
+        "content": "A admissão de janeiro está aberta agora. Vagas são limitadas.\nÉ um ponto de partida sólido se você quer trabalhar como instrutor de fitness."
+      },
+      "career": {
+        "title": "Sua Carreira Começa Aqui",
+        "content": "Aprenda a garantir que as pessoas certas estejam nos empregos certos e crie um ambiente de trabalho melhor para todos."
+      },
+      "video": {
+        "title": "Sua Carreira Começa Aqui",
+        "content": ""
+      },
+      "trial": {
+        "title": "Obtenha um Teste Gratuito de 1 Dia Agora",
+        "content": "Reserve um Tour Gratuito pelo Nosso Campus, Academia e Cozinha, ou Aproveite um Teste de 1 Dia de Fitness e HSA.",
+        "button": "Experimente Agora"
+      }
+    },
+    "lookingForAllCourses": "Procurando Todos os Cursos?",
+    "clickHere": "Clique aqui!"
   },
   "contact": {
     "title": "Fale Conosco",

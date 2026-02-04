@@ -5,7 +5,33 @@
     "coursesTitle": "ABM Courses",
     "coursesDescription": "We provide high-quality education in an innovative and supportive environment, ensuring student success with expert teaching and work experience opportunities across Australia.",
     "testimonialTitle": "Testimonial",
-    "testimonialDescription": "Where do you see yourself happily working in nearest future?"
+    "testimonialDescription": "Where do you see yourself happily working in nearest future?",
+    "banners": {
+      "hsa": {
+        "title": "Start Your Career in Health Service Assistance",
+        "content": "Fast-track your growth in 16 weeks - Enrol now for February 2026!",
+        "button": "Enrol Here"
+      },
+      "fitness": {
+        "title": "Start Your Fitness Journey",
+        "content": "January intake is open now. Spots are limited.\nIt's a solid starting point if you want to work as a fitness trainer."
+      },
+      "career": {
+        "title": "Your Career Starts Here",
+        "content": "Learn to ensure that the right people are in the right jobs and create a better workplace for everyone."
+      },
+      "video": {
+        "title": "Your Career Starts Here",
+        "content": ""
+      },
+      "trial": {
+        "title": "Get a Free 1-Day Trial Now",
+        "content": "Book a Free Tour of Our Campus, Gym & Kitchen, or Enjoy a Fitness & HSA 1-Day Trial.",
+        "button": "Try It Now"
+      }
+    },
+    "lookingForAllCourses": "Looking for All Courses?",
+    "clickHere": "Click here!"
   },
   "contact": {
     "title": "Contact Us",
