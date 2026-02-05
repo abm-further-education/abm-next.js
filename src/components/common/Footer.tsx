@@ -40,134 +40,146 @@ function Footer() {
           <li>ABN 37 623 414 817</li>
         </ul>
       </div>
-      <div className="flex flex-wrap gap-20">
-        <div>
-          <ul>
-            <li className="font-bold">{t('home')}</li>
-            <li>
-              <Link href="/courses">{t('courses')} </Link>
-            </li>
-            <li>
-              <Link href="/study-with-us">{t('studyWithUs')}</Link>
-            </li>
-            <li>
-              <Link href="/current-students">{t('currentStudents')}</Link>
-            </li>
-            <li>
-              <Link href="/contact">{t('contact')}</Link>
-            </li>
-          </ul>
+      <div>
+        <div className="flex items-center gap-20 mb-20 flex-wrap">
+          <Image src="/NRT.png" alt="Logo" width={120} height={120} />
+          <Image src="/velg-logo.png" alt="Logo" width={120} height={120} />
         </div>
-        <div>
-          <ul>
-            <li className="font-bold">{t('courses')}</li>
-            <li>
-              <Link href="/cookery-and-hospitality-courses">
-                {t('cookeryAndHospitality')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/fitness-instructor-personal-trainer-courses">
-                {t('fitnessAndSports')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/business-and-management-courses">
-                {t('business')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/project-and-program-management-courses">
-                {t('projectAndProgram')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/human-resources-courses">{t('humanResources')}</Link>
-            </li>
-            <li>
-              <Link href="/health-and-wellness-courses">
-                {t('healthAndWellness')}
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li className="font-bold mt-20 md:mt-0">{t('customPrograms')}</li>
-            <li>
-              <Link href="/custom-programs/barista">{t('baristaCourse')}</Link>
-            </li>
-            <li>
-              <Link href="/custom-programs/pastries">
-                {t('classicFrenchPastriesCourse')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/custom-programs/wine">{t('wineCourse')}</Link>
-            </li>
-            <li>
-              <Link href="/custom-programs/focaccia">
-                {t('sourdoughAndFocacciaCourse')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/custom-programs/dessert">
-                {t('fineDiningDessertPlating')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/custom-programs/mixology">{t('cocktail')}</Link>
-            </li>
-            <li>
-              <Link href="/custom-programs">
-                {t('classicFrenchCakesCourse')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/custom-programs">{t('frenchPetitFourCourse')}</Link>
-            </li>
-            <li>
-              <Link href="/custom-programs">
-                {t('veganAndVegetarianCourse')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/custom-programs" target="_blank">
-                {t('chocolateClassXmas')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/abm-study-tour-programs">
-                {t('studyTourPrograms')}
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li className="font-bold mt-20 md:mt-0">{t('agent')}</li>
-            <li>
-              <Link
-                href="https://www.jotform.com/app/abm-further-education/abm-agents"
-                target="_blank"
-              >
-                {t('agentPortal')}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://abm.rtomanager.com.au/Publics/PublicsPages/AgentListByCountry.aspx"
-                target="_blank"
-              >
-                {t('agentList')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/abm-policies-procedures-and-forms" target="_blank">
-                {t('abmPoliciesAndProcedures')}
-              </Link>
-            </li>
-          </ul>
+        <div className="flex flex-wrap gap-20">
+          <div>
+            <ul>
+              <li className="font-bold">{t('home')}</li>
+              <li>
+                <Link href="/courses">{t('courses')} </Link>
+              </li>
+              <li>
+                <Link href="/study-with-us">{t('studyWithUs')}</Link>
+              </li>
+              <li>
+                <Link href="/current-students">{t('currentStudents')}</Link>
+              </li>
+              <li>
+                <Link href="/contact">{t('contact')}</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li className="font-bold">{t('courses')}</li>
+              <li>
+                <Link href="/cookery-and-hospitality-courses">
+                  {t('cookeryAndHospitality')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/fitness-instructor-personal-trainer-courses">
+                  {t('fitnessAndSports')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/business-and-management-courses">
+                  {t('business')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/project-and-program-management-courses">
+                  {t('projectAndProgram')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/human-resources-courses">
+                  {t('humanResources')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/health-and-wellness-courses">
+                  {t('healthAndWellness')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li className="font-bold mt-20 md:mt-0">{t('customPrograms')}</li>
+              <li>
+                <Link href="/custom-programs/barista">
+                  {t('baristaCourse')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom-programs/pastries">
+                  {t('classicFrenchPastriesCourse')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom-programs/wine">{t('wineCourse')}</Link>
+              </li>
+              <li>
+                <Link href="/custom-programs/focaccia">
+                  {t('sourdoughAndFocacciaCourse')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom-programs/dessert">
+                  {t('fineDiningDessertPlating')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom-programs/mixology">{t('cocktail')}</Link>
+              </li>
+              <li>
+                <Link href="/custom-programs">
+                  {t('classicFrenchCakesCourse')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom-programs">
+                  {t('frenchPetitFourCourse')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom-programs">
+                  {t('veganAndVegetarianCourse')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/custom-programs" target="_blank">
+                  {t('chocolateClassXmas')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/abm-study-tour-programs">
+                  {t('studyTourPrograms')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li className="font-bold mt-20 md:mt-0">{t('agent')}</li>
+              <li>
+                <Link
+                  href="https://www.jotform.com/app/abm-further-education/abm-agents"
+                  target="_blank"
+                >
+                  {t('agentPortal')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://abm.rtomanager.com.au/Publics/PublicsPages/AgentListByCountry.aspx"
+                  target="_blank"
+                >
+                  {t('agentList')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/abm-policies-procedures-and-forms" target="_blank">
+                  {t('abmPoliciesAndProcedures')}
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
