@@ -6,9 +6,8 @@ import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
-import getCourseDetailsData from '@/lib/courseDetails';
-import getCourseInformationData from '@/lib/courseInformation';
-import React, { use } from 'react';
+import React from 'react';
+import type { CourseDetailInfo, CourseInformationInfo } from '@/types/course';
 
 const menuItems = ['Course Information', 'Course Detail', 'Units'];
 
@@ -35,15 +34,18 @@ const mappingCourseImage: { [key: string]: string } = {
 };
 
 interface FitnessDetailClientProps {
-  params: Promise<{ id: string; locale: string }>;
+  id: string;
+  locale: string;
+  courseDetails: CourseDetailInfo | null;
+  courseInformation: CourseInformationInfo | null;
 }
 
 export default function FitnessDetailClient({
-  params,
+  id,
+  locale,
+  courseDetails,
+  courseInformation,
 }: FitnessDetailClientProps) {
-  const { id, locale } = use(params);
-  const courseDetails = getCourseDetailsData(locale);
-  const courseInformationData = getCourseInformationData(locale);
 
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
@@ -57,7 +59,7 @@ export default function FitnessDetailClient({
           {
             imgPath:
               mappingCourseImage[id] || '/courses/fitness/ABM_Fitness_Photos_13.jpg',
-            title: `${courseInformationData[id]?.courseCode} ${mappingCourseTitle[id]}`,
+            title: `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
             content: '',
           },
         ]}
@@ -68,10 +70,10 @@ export default function FitnessDetailClient({
       <CourseDetailMenu menuItems={menuItems} />
 
       <section id={getSectionId('Course Information')}>
-        <CourseInformation id={id} />
+        <CourseInformation id={id} initialData={courseInformation} />
       </section>
       <section id={getSectionId('Course Detail')}>
-        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
+        <CourseDetail courseInfo={courseDetails || {}} courseId={id} />
       </section>
       {/* Units Section */}
       <section

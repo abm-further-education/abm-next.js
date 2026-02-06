@@ -238,7 +238,12 @@ function CourseInformationContent({
   );
 }
 
-function CourseInformation({ id }: { id: string }) {
+interface CourseInformationWrapperProps {
+  id: string;
+  initialData?: CourseInformationInfo | null;
+}
+
+function CourseInformation({ id, initialData }: CourseInformationWrapperProps) {
   const params = useParams();
   let locale = 'en';
   if (params?.locale) {
@@ -248,8 +253,9 @@ function CourseInformation({ id }: { id: string }) {
       locale = params.locale;
     }
   }
-  const courseInformationData = getCourseInformationData(locale);
-  const courseInfo = courseInformationData[id] || {};
+  
+  // Use initialData if provided, otherwise fallback to static data
+  const courseInfo = initialData || getCourseInformationData(locale)[id] || {};
 
   // 특정 코스들에 대해 "More information"과 "Enrol Now" 버튼을 숨김
   const hideButtonsForCourses = [

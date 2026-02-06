@@ -4,14 +4,13 @@ import Banner from '@/components/common/Banner';
 import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import Units from '@/domains/courses/components/Units';
-import CourseInformation from '@/domains/courses/components/CourseInformation';
+import CourseInformationComponent from '@/domains/courses/components/CourseInformation';
 import IndustryPlacement from '@/domains/courses/contents/cookery/IndustryPlacement';
 import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/IndustryPlacementHospitality';
-import getCourseDetailsData from '@/lib/courseDetails';
-import React, { use } from 'react';
+import React from 'react';
 import Gallery from '@/components/common/Gallery';
-import getCourseInformationData from '@/lib/courseInformation';
 import { cn } from '@/lib';
+import type { CourseDetailInfo, CourseInformationInfo } from '@/types/course';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
@@ -54,15 +53,18 @@ const menuItems = {
 };
 
 interface CookeryDetailClientProps {
-  params: Promise<{ id: string; locale: string }>;
+  id: string;
+  locale: string;
+  courseDetails: CourseDetailInfo | null;
+  courseInformation: CourseInformationInfo | null;
 }
 
 export default function CookeryDetailClient({
-  params,
+  id,
+  locale,
+  courseDetails,
+  courseInformation,
 }: CookeryDetailClientProps) {
-  const { id, locale } = use(params);
-  const courseDetails = getCourseDetailsData(locale);
-  const courseInformationData = getCourseInformationData(locale);
 
   // Industry Placement 페이지인지 확인
   const isIndustryPlacement = id === 'industry-placement-work-placement';
@@ -128,7 +130,7 @@ export default function CookeryDetailClient({
         slides={[
           {
             imgPath: mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
-            title: `${courseInformationData[id]?.courseCode} ${mappingCourseTitle[id]}`,
+            title: `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
             content: '',
           },
         ]}
@@ -142,13 +144,13 @@ export default function CookeryDetailClient({
 
       {/* Course Information Section */}
       <section id={getSectionId('Course Information')}>
-        <CourseInformation id={id} />
+        <CourseInformationComponent id={id} initialData={courseInformation} />
       </section>
 
       {/* Course Detail Section */}
       <section id={getSectionId('Course Detail')}>
         {/* Course Detail Section */}
-        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
+        <CourseDetail courseInfo={courseDetails || {}} courseId={id} />
       </section>
 
       {/* Units Section */}

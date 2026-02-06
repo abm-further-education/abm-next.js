@@ -1,31 +1,13 @@
-export interface CourseData {
-  id: string;
-  title: string;
-  description: string;
-  category:
-    | 'cookery'
-    | 'hospitality'
-    | 'fitness'
-    | 'business'
-    | 'project'
-    | 'hr'
-    | 'health'
-    | 'short-course-hospitality'
-    | 'short-course-cooking'
-    | 'short-course-online';
-  type: 'full-course' | 'short-course' | 'fast-track';
-  level?:
-    | 'certificate-iii'
-    | 'certificate-iv'
-    | 'diploma'
-    | 'advanced-diploma'
-    | 'graduate-diploma';
-  duration: string;
-  price?: number;
-  image: string;
-  link: string;
-  tags: string[];
-}
+// Re-export types from the centralized types file
+export type {
+  CourseData,
+  CourseCategory,
+  CourseType,
+  CourseLevel,
+} from '@/types/course';
+
+// Import the type for internal use
+import type { CourseData } from '@/types/course';
 
 import { courseData as courseDataEn } from './courseData.en';
 import { courseData as courseDataKr } from './courseData.kr';

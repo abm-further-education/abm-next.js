@@ -6,9 +6,8 @@ import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
-import getCourseDetailsData from '@/lib/courseDetails';
-import getCourseInformationData from '@/lib/courseInformation';
-import React, { use } from 'react';
+import React from 'react';
+import type { CourseDetailInfo, CourseInformationInfo } from '@/types/course';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'bsb40420-certificate-iv-in-human-resource-management':
@@ -30,13 +29,18 @@ const mappingCourseImage: { [key: string]: string } = {
 const menuItems = ['Course Information', 'Course Detail', 'Units'];
 
 interface HRDetailClientProps {
-  params: Promise<{ id: string; locale: string }>;
+  id: string;
+  locale: string;
+  courseDetails: CourseDetailInfo | null;
+  courseInformation: CourseInformationInfo | null;
 }
 
-export default function HRDetailClient({ params }: HRDetailClientProps) {
-  const { id, locale } = use(params);
-  const courseDetails = getCourseDetailsData(locale);
-  const courseInformationData = getCourseInformationData(locale);
+export default function HRDetailClient({
+  id,
+  locale,
+  courseDetails,
+  courseInformation,
+}: HRDetailClientProps) {
 
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
@@ -49,7 +53,7 @@ export default function HRDetailClient({ params }: HRDetailClientProps) {
         slides={[
           {
             imgPath: mappingCourseImage[id] || '/courses/hr/hr_1.png',
-            title: `${courseInformationData[id]?.courseCode} ${mappingCourseTitle[id]}`,
+            title: `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
             content: '',
           },
         ]}
@@ -59,12 +63,12 @@ export default function HRDetailClient({ params }: HRDetailClientProps) {
       />
       <CourseDetailMenu menuItems={menuItems} />
       <section id={getSectionId('Course Information')}>
-        <CourseInformation id={id} />
+        <CourseInformation id={id} initialData={courseInformation} />
       </section>
 
       {/* Course Detail Section */}
       <section id={getSectionId('Course Detail')}>
-        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
+        <CourseDetail courseInfo={courseDetails || {}} courseId={id} />
       </section>
 
       {/* Units Section */}

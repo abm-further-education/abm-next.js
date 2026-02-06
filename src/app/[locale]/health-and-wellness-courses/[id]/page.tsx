@@ -5,7 +5,7 @@ import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
 import { cn } from '@/lib';
-import getCourseDetailsData from '@/lib/courseDetails';
+import { getCourseDetails, getCourseInfo } from '@/lib/course-db';
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
@@ -44,7 +44,10 @@ export default async function Page({
   params: Promise<{ id: string; locale: string }>;
 }) {
   const { id, locale } = await params;
-  const courseDetails = getCourseDetailsData(locale);
+  
+  // Fetch course data from database (with fallback to static files)
+  const courseDetails = await getCourseDetails(id, locale);
+  const courseInformation = await getCourseInfo(id, locale);
 
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
@@ -68,11 +71,11 @@ export default async function Page({
       <CourseDetailMenu menuItems={menuItems} />
 
       <section id={getSectionId('Course Information')}>
-        <CourseInformation id={id} />
+        <CourseInformation id={id} initialData={courseInformation} />
       </section>
       <section id={getSectionId('Course Detail')}>
         {/* Course Detail Section */}
-        <CourseDetail courseInfo={courseDetails[id] || {}} courseId={id} />
+        <CourseDetail courseInfo={courseDetails || {}} courseId={id} />
       </section>
       {/* Units Section */}
       <section

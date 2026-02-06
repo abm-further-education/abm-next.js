@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate:courses": "ts-node --project scripts/tsconfig.json scripts/migrate-course-data.ts",
+    "migrate:courses:dry": "ts-node --project scripts/tsconfig.json scripts/migrate-course-data.ts --dry-run --verbose"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.934.0",

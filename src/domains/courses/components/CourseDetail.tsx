@@ -5,34 +5,21 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import DiplomaHM from '../contents/cookery/DiplomaHM';
 import CertIIIHSA from '../contents/health/CertIIIHSA';
+import type {
+  TableData,
+  LinkData,
+  DescriptionItem,
+  CourseDetailItem,
+  CourseDetailInfo,
+} from '@/types/course';
+
+// Re-export for backward compatibility
+export type { TableData, LinkData, DescriptionItem, CourseDetailItem, CourseDetailInfo };
 
 // Helper component to render text with bold parsing
 const BoldText: React.FC<{ children: string }> = ({ children }) => {
   return <>{parseBoldText(children)}</>;
 };
-
-export interface TableData {
-  type: 'table';
-  headers: string[];
-  rows: string[][];
-}
-
-export interface LinkData {
-  type: 'link';
-  text: string;
-  url: string;
-}
-
-export type DescriptionItem = string | TableData | LinkData;
-
-export interface CourseDetailItem {
-  title: string;
-  description: string | string[] | DescriptionItem[];
-}
-
-export interface CourseDetailInfo {
-  [key: string]: CourseDetailItem;
-}
 
 interface CourseDetailProps {
   courseInfo: CourseDetailInfo;
