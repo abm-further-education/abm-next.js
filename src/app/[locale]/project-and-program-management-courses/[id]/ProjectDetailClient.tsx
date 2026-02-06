@@ -38,7 +38,6 @@ interface ProjectDetailClientProps {
 
 export default function ProjectDetailClient({
   id,
-  locale,
   courseDetails,
   courseInformation,
 }: ProjectDetailClientProps) {

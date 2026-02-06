@@ -42,7 +42,6 @@ interface FitnessDetailClientProps {
 
 export default function FitnessDetailClient({
   id,
-  locale,
   courseDetails,
   courseInformation,
 }: FitnessDetailClientProps) {

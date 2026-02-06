@@ -35,7 +35,6 @@ interface BusinessDetailClientProps {
 
 export default function BusinessDetailClient({
   id,
-  locale,
   courseDetails,
   courseInformation,
 }: BusinessDetailClientProps) {

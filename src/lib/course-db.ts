@@ -9,10 +9,6 @@ import type {
   ShortCourseData,
   DbCourse,
   DbCourseTranslation,
-  DbCourseDetail,
-  DbCourseInformation,
-  DbShortCourse,
-  DbShortCourseTranslation,
   DbShortCourseDate,
   DescriptionItem,
 } from '@/types/course';

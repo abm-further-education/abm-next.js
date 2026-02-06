@@ -37,7 +37,6 @@ interface HRDetailClientProps {
 
 export default function HRDetailClient({
   id,
-  locale,
   courseDetails,
   courseInformation,
 }: HRDetailClientProps) {

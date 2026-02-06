@@ -16,7 +16,7 @@ interface CoursesClientProps {
   initialCourseData: CourseData[];
 }
 
-export default function CoursesClient({ locale, initialCourseData }: CoursesClientProps) {
+export default function CoursesClient({ initialCourseData }: CoursesClientProps) {
   const courseData = initialCourseData;
 
   // Filter states

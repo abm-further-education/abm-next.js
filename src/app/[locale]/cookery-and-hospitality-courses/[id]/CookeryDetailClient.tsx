@@ -61,7 +61,6 @@ interface CookeryDetailClientProps {
 
 export default function CookeryDetailClient({
   id,
-  locale,
   courseDetails,
   courseInformation,
 }: CookeryDetailClientProps) {
