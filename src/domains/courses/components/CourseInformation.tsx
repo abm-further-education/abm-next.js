@@ -6,8 +6,9 @@ import Link from 'next/link';
 import getCourseInformationData from '@/lib/courseInformation';
 import { cn } from '@/lib/utils';
 import Button from '@/components/common/Button';
-
 import { useParams } from 'next/navigation';
+import { useEditMode } from '@/contexts/EditModeContext';
+import CourseInformationEditable from './CourseInformationEditable';
 import {
   Bolt,
   ChevronRightIcon,
@@ -245,6 +246,7 @@ interface CourseInformationWrapperProps {
 
 function CourseInformation({ id, initialData }: CourseInformationWrapperProps) {
   const params = useParams();
+  const editMode = useEditMode();
   let locale = 'en';
   if (params?.locale) {
     if (Array.isArray(params.locale)) {
@@ -253,11 +255,9 @@ function CourseInformation({ id, initialData }: CourseInformationWrapperProps) {
       locale = params.locale;
     }
   }
-  
-  // Use initialData if provided, otherwise fallback to static data
+
   const courseInfo = initialData || getCourseInformationData(locale)[id] || {};
 
-  // 특정 코스들에 대해 "More information"과 "Enrol Now" 버튼을 숨김
   const hideButtonsForCourses = [
     'industry-placement-work-placement',
     'industry-placement-hospitality-management',
@@ -267,6 +267,17 @@ function CourseInformation({ id, initialData }: CourseInformationWrapperProps) {
   ];
 
   const shouldHideButtons = hideButtonsForCourses.includes(id);
+
+  if (editMode?.isEditMode) {
+    return (
+      <CourseInformationEditable
+        courseId={id}
+        locale={locale}
+        courseInfo={courseInfo}
+        hideButtons={shouldHideButtons}
+      />
+    );
+  }
 
   return (
     <CourseInformationContent

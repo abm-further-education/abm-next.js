@@ -68,6 +68,7 @@ NEXT_PUBLIC_USE_COURSE_DATABASE=true
 - 코스 상세 페이지가 정상 작동하는지
 - 다국어 전환이 정상 작동하는지
 - 숏코스 페이지가 정상 작동하는지
+- **FSS / RSA 페이지** (`/cookery-and-hospitality-courses/fss`, `/cookery-and-hospitality-courses/rsa`)가 DB에서 데이터를 읽고 Edit Mode에서 수정 가능한지
 
 ## 롤백
 

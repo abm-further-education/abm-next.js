@@ -10,9 +10,18 @@ import { ChevronUpIcon } from 'lucide-react';
 import getShortCourseData from '@/lib/shortCourseData';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { useEditMode } from '@/contexts/EditModeContext';
+import type { ShortCourseData } from '@/lib/shortCourseData/shortCourseData.en';
+import ShortCourseEditable from './ShortCourseEditable';
 
-function RSA() {
+interface RSAProps {
+  data: ShortCourseData;
+  courseId: string;
+}
+
+function RSA({ data: dataProp, courseId }: RSAProps) {
   const params = useParams();
+  const editMode = useEditMode();
   let locale = 'en';
   if (params?.locale) {
     if (Array.isArray(params.locale)) {
@@ -21,8 +30,18 @@ function RSA() {
       locale = params.locale;
     }
   }
-  const shortCourseData = getShortCourseData(locale);
-  const rsaData = shortCourseData.rsa;
+  const fallbackData = getShortCourseData(locale).rsa;
+  const rsaData = dataProp ?? fallbackData;
+
+  if (editMode?.isEditMode && courseId) {
+    return (
+      <ShortCourseEditable
+        courseId={courseId}
+        locale={locale}
+        data={rsaData}
+      />
+    );
+  }
 
   return (
     <div className="container max-w-[1400px] mx-auto px-20 py-40 md:px-80">

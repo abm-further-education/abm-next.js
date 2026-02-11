@@ -1,6 +1,8 @@
 import React from 'react';
 import RSA from '@/domains/courses/contents/cookery/RSA';
 import Banner from '@/components/common/Banner';
+import { getShortCourseById } from '@/lib/course-db';
+import getShortCourseData from '@/lib/shortCourseData';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,7 +11,16 @@ export const metadata: Metadata = {
     'Learn about Responsible Service of Alcohol (RSA) certification at ABM Further Education. Get detailed information about RSA training and certification requirements in NSW.',
 };
 
-export default async function RSAPage() {
+export default async function RSAPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const normalizedLocale = locale || 'en';
+  const data = await getShortCourseById('rsa', normalizedLocale);
+  const fallbackData = getShortCourseData(normalizedLocale).rsa;
+
   return (
     <div>
       <Banner
@@ -24,7 +35,7 @@ export default async function RSAPage() {
           <div className="bg-neutral-900/50 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <RSA />
+      <RSA data={data ?? fallbackData} courseId="rsa" />
     </div>
   );
 }

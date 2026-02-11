@@ -12,7 +12,6 @@ import {
 } from '@/lib/courseData';
 
 interface CoursesClientProps {
-  locale: string;
   initialCourseData: CourseData[];
 }
 

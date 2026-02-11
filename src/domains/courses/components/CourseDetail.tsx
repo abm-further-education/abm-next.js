@@ -1,10 +1,15 @@
+'use client';
+
 import React from 'react';
 import { cn, parseBoldText } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import { useEditMode } from '@/contexts/EditModeContext';
 import DiplomaHM from '../contents/cookery/DiplomaHM';
 import CertIIIHSA from '../contents/health/CertIIIHSA';
+import CourseDetailEditable from './CourseDetailEditable';
 import type {
   TableData,
   LinkData,
@@ -176,6 +181,22 @@ function renderDescription(
 
 function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
   const t = useTranslations('courseDetail');
+  const editMode = useEditMode();
+  const params = useParams();
+  let locale = 'en';
+  if (params?.locale) {
+    locale = Array.isArray(params.locale) ? params.locale[0] : params.locale;
+  }
+
+  if (editMode?.isEditMode && courseId) {
+    return (
+      <CourseDetailEditable
+        courseId={courseId}
+        locale={locale}
+        courseInfo={courseInfo}
+      />
+    );
+  }
 
   const matchStudyPlan = {
     'sit40521-certificate-iv-in-kitchen-management':

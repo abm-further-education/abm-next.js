@@ -27,7 +27,7 @@ export default async function Page({ params }: PageProps) {
         </div>
       </FadeIn>
 
-      <CoursesClient locale={locale} initialCourseData={courseData} />
+      <CoursesClient initialCourseData={courseData} />
     </div>
   );
 }

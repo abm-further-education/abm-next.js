@@ -16,6 +16,7 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { GoogleReviewsBadge } from '@/components/common/GoogleReviewToast';
 import AdminUserInfo from '@/components/admin/AdminUserInfo';
+import { EditModeProvider } from '@/contexts/EditModeContext';
 
 const inter = Inter({ variable: '--font-inter', subsets: ['latin'] });
 const montserrat = Montserrat({
@@ -98,12 +99,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Analytics />
 
         <NextIntlClientProvider messages={messages}>
-          <Nav />
-          <TopButton />
-          <main>{children}</main>
-          <Footer />
-          <GoogleReviewsBadge fixed align="left" width={260} />
-          <AdminUserInfo />
+          <EditModeProvider>
+            <Nav />
+            <TopButton />
+            <main>{children}</main>
+            <Footer />
+            <GoogleReviewsBadge fixed align="left" width={260} />
+            <AdminUserInfo />
+          </EditModeProvider>
         </NextIntlClientProvider>
 
         <script src="https://static.elfsight.com/platform/platform.js" async />

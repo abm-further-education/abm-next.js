@@ -9,6 +9,10 @@ import type {
   ShortCourseData,
   DbCourse,
   DbCourseTranslation,
+  DbCourseDetail,
+  DbCourseInformation,
+  DbShortCourse,
+  DbShortCourseTranslation,
   DbShortCourseDate,
   DescriptionItem,
 } from '@/types/course';
@@ -79,6 +83,17 @@ function isValidLocale(locale: string): locale is Locale {
 
 function normalizeLocale(locale: string): Locale {
   return isValidLocale(locale) ? locale : DEFAULT_LOCALE;
+}
+
+// Resolve URL slug (e.g. sit40521-certificate-iv-in-kitchen-management) to DB course_id (e.g. kitchen-management)
+export function resolveCourseId(slugOrId: string): string {
+  const courses = getStaticCourseData('en');
+  for (const c of courses) {
+    const linkParts = c.link.split('/').filter(Boolean);
+    const linkSlug = linkParts[linkParts.length - 1];
+    if (linkSlug === slugOrId || c.id === slugOrId) return c.id;
+  }
+  return slugOrId; // fallback: use as-is
 }
 
 // =====================================================
@@ -213,17 +228,18 @@ export async function getCourseDetails(
 
   try {
     const client = await getAuthenticatedSupabase();
+    const dbCourseId = resolveCourseId(courseId);
 
     const { data: details, error } = await client
       .from('course_details')
       .select('*')
-      .eq('course_id', courseId)
+      .eq('course_id', dbCourseId)
       .eq('locale', normalizedLocale)
       .order('display_order', { ascending: true });
 
     if (error || !details || details.length === 0) {
       const allDetails = getCourseDetailsData(normalizedLocale);
-      return allDetails[courseId] || null;
+      return allDetails[courseId] || allDetails[dbCourseId] || null;
     }
 
     // Transform to CourseDetailInfo format
@@ -307,17 +323,18 @@ export async function getCourseInfo(
 
   try {
     const client = await getAuthenticatedSupabase();
+    const dbCourseId = resolveCourseId(courseId);
 
     const { data: info, error } = await client
       .from('course_information')
       .select('*')
-      .eq('course_id', courseId)
+      .eq('course_id', dbCourseId)
       .eq('locale', normalizedLocale)
       .single();
 
     if (error || !info) {
       const allInfo = getCourseInformationData(normalizedLocale);
-      return allInfo[courseId] || null;
+      return allInfo[courseId] || allInfo[dbCourseId] || null;
     }
 
     // Transform to CourseInformationInfo format
@@ -518,7 +535,435 @@ export async function getShortCourseById(
 }
 
 // =====================================================
-// Admin CRUD Functions
+// Admin Functions (list all, get full data)
+// =====================================================
+
+async function getAdminClient() {
+  const client = await getAuthenticatedSupabase();
+  const { data: { user }, error: userError } = await client.auth.getUser();
+  if (userError || !user || user.user_metadata?.isAdmin !== true) {
+    throw new Error('Administrator privileges are required.');
+  }
+  return supabaseAdmin || client;
+}
+
+/**
+ * Get all courses for admin (including inactive)
+ */
+export async function getAdminCourseList(): Promise<
+  Array<DbCourse & { translations: DbCourseTranslation[] }>
+> {
+  const client = await getAdminClient();
+
+  const { data: courses, error } = await client
+    .from('courses_new')
+    .select('*')
+    .order('display_order', { ascending: true });
+
+  if (error) throw new Error(`Failed to fetch courses: ${error.message}`);
+  if (!courses || courses.length === 0) return [];
+
+  const { data: translations, error: trError } = await client
+    .from('course_translations')
+    .select('*');
+
+  if (trError) return courses.map((c) => ({ ...c, translations: [] }));
+
+  const trByCourse = (translations || []).reduce(
+    (acc: Record<string, DbCourseTranslation[]>, t) => {
+      if (!acc[t.course_id]) acc[t.course_id] = [];
+      acc[t.course_id].push(t);
+      return acc;
+    },
+    {}
+  );
+
+  return courses.map((c) => ({
+    ...c,
+    translations: trByCourse[c.id] || [],
+  }));
+}
+
+/**
+ * Get full course data for admin edit (all locales)
+ */
+export async function getAdminCourseById(courseId: string): Promise<{
+  course: DbCourse;
+  translations: DbCourseTranslation[];
+  details: DbCourseDetail[];
+  information: DbCourseInformation[];
+} | null> {
+  const client = await getAdminClient();
+
+  const { data: course, error: courseError } = await client
+    .from('courses_new')
+    .select('*')
+    .eq('id', courseId)
+    .single();
+
+  if (courseError || !course) return null;
+
+  const [trRes, detailsRes, infoRes] = await Promise.all([
+    client.from('course_translations').select('*').eq('course_id', courseId),
+    client.from('course_details').select('*').eq('course_id', courseId).order('display_order'),
+    client.from('course_information').select('*').eq('course_id', courseId),
+  ]);
+
+  return {
+    course,
+    translations: trRes.data || [],
+    details: detailsRes.data || [],
+    information: infoRes.data || [],
+  };
+}
+
+/**
+ * Upsert course translation (admin only)
+ */
+export async function upsertCourseTranslation(
+  courseId: string,
+  locale: Locale,
+  data: { title: string; description: string }
+): Promise<DbCourseTranslation> {
+  const client = await getAdminClient();
+
+  const { data: row, error } = await client
+    .from('course_translations')
+    .upsert(
+      { course_id: courseId, locale, title: data.title, description: data.description },
+      { onConflict: 'course_id,locale' }
+    )
+    .select()
+    .single();
+
+  if (error) throw new Error(`Failed to upsert translation: ${error.message}`);
+  return row;
+}
+
+/**
+ * Upsert course detail section (admin only)
+ */
+export async function upsertCourseDetail(
+  courseId: string,
+  locale: Locale,
+  sectionKey: string,
+  data: { title: string; description: unknown; displayOrder?: number }
+): Promise<DbCourseDetail> {
+  const client = await getAdminClient();
+
+  const payload = {
+    course_id: courseId,
+    locale,
+    section_key: sectionKey,
+    title: data.title,
+    description: data.description,
+    display_order: data.displayOrder ?? 0,
+  };
+
+  const { data: row, error } = await client
+    .from('course_details')
+    .upsert(payload, { onConflict: 'course_id,locale,section_key' })
+    .select()
+    .single();
+
+  if (error) throw new Error(`Failed to upsert course detail: ${error.message}`);
+  return row;
+}
+
+/**
+ * Delete course detail section (admin only)
+ */
+export async function deleteCourseDetail(
+  courseId: string,
+  locale: Locale,
+  sectionKey: string
+): Promise<void> {
+  const client = await getAdminClient();
+
+  const { error } = await client
+    .from('course_details')
+    .delete()
+    .eq('course_id', courseId)
+    .eq('locale', locale)
+    .eq('section_key', sectionKey);
+
+  if (error) throw new Error(`Failed to delete course detail: ${error.message}`);
+}
+
+/**
+ * Upsert course information (admin only)
+ */
+export async function upsertCourseInfo(
+  courseId: string,
+  locale: Locale,
+  data: Partial<{
+    course_code: string;
+    cricos_code: string;
+    description: string;
+    duration: string;
+    entry_requirement: unknown;
+    delivery_mode: unknown;
+    delivery_site: unknown;
+    additional_info: unknown;
+    starting_dates: unknown;
+    tables: unknown;
+    partners: unknown;
+  }>
+): Promise<DbCourseInformation> {
+  const client = await getAdminClient();
+
+  const payload = {
+    course_id: courseId,
+    locale,
+    ...data,
+  };
+
+  const { data: row, error } = await client
+    .from('course_information')
+    .upsert(payload, { onConflict: 'course_id,locale' })
+    .select()
+    .single();
+
+  if (error) throw new Error(`Failed to upsert course information: ${error.message}`);
+  return row;
+}
+
+// =====================================================
+// Admin Short Course Functions
+// =====================================================
+
+/**
+ * Get all short courses for admin
+ */
+export async function getAdminShortCourseList(): Promise<
+  Array<DbShortCourse & { translations: DbShortCourseTranslation[]; dates: DbShortCourseDate[] }>
+> {
+  const client = await getAdminClient();
+
+  const { data: courses, error } = await client
+    .from('short_courses')
+    .select('*')
+    .order('display_order', { ascending: true });
+
+  if (error) throw new Error(`Failed to fetch short courses: ${error.message}`);
+  if (!courses || courses.length === 0) return [];
+
+  const [trRes, datesRes] = await Promise.all([
+    client.from('short_course_translations').select('*'),
+    client.from('short_course_dates').select('*'),
+  ]);
+
+  const trByCourse = (trRes.data || []).reduce(
+    (acc: Record<string, DbShortCourseTranslation[]>, t) => {
+      if (!acc[t.short_course_id]) acc[t.short_course_id] = [];
+      acc[t.short_course_id].push(t);
+      return acc;
+    },
+    {}
+  );
+  const datesByCourse = (datesRes.data || []).reduce(
+    (acc: Record<string, DbShortCourseDate[]>, d) => {
+      if (!acc[d.short_course_id]) acc[d.short_course_id] = [];
+      acc[d.short_course_id].push(d);
+      return acc;
+    },
+    {}
+  );
+
+  return courses.map((c) => ({
+    ...c,
+    translations: trByCourse[c.id] || [],
+    dates: (datesByCourse[c.id] || []).sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    ),
+  }));
+}
+
+/**
+ * Get full short course for admin edit
+ */
+export async function getAdminShortCourseById(shortCourseId: string): Promise<{
+  course: DbShortCourse;
+  translations: DbShortCourseTranslation[];
+  dates: DbShortCourseDate[];
+} | null> {
+  const client = await getAdminClient();
+
+  const { data: course, error: courseError } = await client
+    .from('short_courses')
+    .select('*')
+    .eq('id', shortCourseId)
+    .single();
+
+  if (courseError || !course) return null;
+
+  const [trRes, datesRes] = await Promise.all([
+    client.from('short_course_translations').select('*').eq('short_course_id', shortCourseId),
+    client.from('short_course_dates').select('*').eq('short_course_id', shortCourseId),
+  ]);
+
+  return {
+    course,
+    translations: trRes.data || [],
+    dates: (datesRes.data || []).sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    ),
+  };
+}
+
+/**
+ * Create short course (admin only)
+ */
+export async function createShortCourse(
+  courseData: Omit<DbShortCourse, 'created_at' | 'updated_at'>,
+  translations: Array<Omit<DbShortCourseTranslation, 'id' | 'created_at' | 'updated_at'>>
+): Promise<DbShortCourse> {
+  const client = await getAdminClient();
+
+  const { data: course, error: courseError } = await client
+    .from('short_courses')
+    .insert([courseData])
+    .select()
+    .single();
+
+  if (courseError) throw new Error(`Failed to create short course: ${courseError.message}`);
+
+  const toInsert = translations.map((t) => ({ ...t, short_course_id: course.id }));
+  const { error: trError } = await client.from('short_course_translations').insert(toInsert);
+
+  if (trError) {
+    await client.from('short_courses').delete().eq('id', course.id);
+    throw new Error(`Failed to create translations: ${trError.message}`);
+  }
+
+  return course;
+}
+
+/**
+ * Update short course (admin only)
+ */
+export async function updateShortCourse(
+  shortCourseId: string,
+  courseData: Partial<DbShortCourse>
+): Promise<DbShortCourse> {
+  const client = await getAdminClient();
+
+  const { data: course, error } = await client
+    .from('short_courses')
+    .update(courseData)
+    .eq('id', shortCourseId)
+    .select()
+    .single();
+
+  if (error) throw new Error(`Failed to update short course: ${error.message}`);
+  return course;
+}
+
+/**
+ * Delete short course (admin only)
+ */
+export async function deleteShortCourse(shortCourseId: string): Promise<void> {
+  const client = await getAdminClient();
+
+  const { error } = await client.from('short_courses').delete().eq('id', shortCourseId);
+  if (error) throw new Error(`Failed to delete short course: ${error.message}`);
+}
+
+/**
+ * Upsert short course translation (admin only)
+ */
+export async function upsertShortCourseTranslation(
+  shortCourseId: string,
+  locale: Locale,
+  data: { title: string; description: string; content?: Record<string, unknown> }
+): Promise<DbShortCourseTranslation> {
+  const client = await getAdminClient();
+
+  const { data: row, error } = await client
+    .from('short_course_translations')
+    .upsert(
+      {
+        short_course_id: shortCourseId,
+        locale,
+        title: data.title,
+        description: data.description,
+        content: data.content || {},
+      },
+      { onConflict: 'short_course_id,locale' }
+    )
+    .select()
+    .single();
+
+  if (error) throw new Error(`Failed to upsert short course translation: ${error.message}`);
+  return row;
+}
+
+/**
+ * Upsert short course date (admin only)
+ */
+export async function upsertShortCourseDate(
+  shortCourseId: string,
+  data: { date: string; display_date: string; time: string; available?: boolean }
+): Promise<DbShortCourseDate> {
+  const client = await getAdminClient();
+
+  const { data: existing } = await client
+    .from('short_course_dates')
+    .select('id')
+    .eq('short_course_id', shortCourseId)
+    .eq('date', data.date)
+    .maybeSingle();
+
+  const payload = {
+    short_course_id: shortCourseId,
+    date: data.date,
+    display_date: data.display_date,
+    time: data.time,
+    available: data.available ?? true,
+  };
+
+  let row;
+  if (existing) {
+    const { data: updated, error } = await client
+      .from('short_course_dates')
+      .update(payload)
+      .eq('id', existing.id)
+      .select()
+      .single();
+    if (error) throw new Error(`Failed to update short course date: ${error.message}`);
+    row = updated;
+  } else {
+    const { data: inserted, error } = await client
+      .from('short_course_dates')
+      .insert([payload])
+      .select()
+      .single();
+    if (error) throw new Error(`Failed to insert short course date: ${error.message}`);
+    row = inserted;
+  }
+  return row;
+}
+
+/**
+ * Delete short course date (admin only)
+ */
+export async function deleteShortCourseDate(
+  shortCourseId: string,
+  dateId: string
+): Promise<void> {
+  const client = await getAdminClient();
+
+  const { error } = await client
+    .from('short_course_dates')
+    .delete()
+    .eq('id', dateId)
+    .eq('short_course_id', shortCourseId);
+
+  if (error) throw new Error(`Failed to delete short course date: ${error.message}`);
+}
+
+// =====================================================
+// Admin CRUD Functions (Full Courses)
 // =====================================================
 
 /**

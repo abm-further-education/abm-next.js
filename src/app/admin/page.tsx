@@ -57,6 +57,17 @@ export default async function AdminPage() {
               </p>
             </Link>
             <Link
+              href="/admin/courses"
+              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <h3 className="font-semibold text-gray-800 mb-2">
+                Course Management
+              </h3>
+              <p className="text-sm text-gray-600">
+                Manage courses, translations, details & short courses
+              </p>
+            </Link>
+            <Link
               href="/admin/testimonials"
               className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >

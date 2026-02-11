@@ -12,9 +12,18 @@ import { ChevronUpIcon } from 'lucide-react';
 import getShortCourseData from '@/lib/shortCourseData';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { useEditMode } from '@/contexts/EditModeContext';
+import type { ShortCourseData } from '@/lib/shortCourseData/shortCourseData.en';
+import ShortCourseEditable from './ShortCourseEditable';
 
-function FSS() {
+interface FSSProps {
+  data: ShortCourseData;
+  courseId: string;
+}
+
+function FSS({ data: dataProp, courseId }: FSSProps) {
   const params = useParams();
+  const editMode = useEditMode();
   let locale = 'en';
   if (params?.locale) {
     if (Array.isArray(params.locale)) {
@@ -23,8 +32,18 @@ function FSS() {
       locale = params.locale;
     }
   }
-  const shortCourseData = getShortCourseData(locale);
-  const fssData = shortCourseData.fss;
+  const fallbackData = getShortCourseData(locale).fss;
+  const fssData = dataProp ?? fallbackData;
+
+  if (editMode?.isEditMode && courseId) {
+    return (
+      <ShortCourseEditable
+        courseId={courseId}
+        locale={locale}
+        data={fssData}
+      />
+    );
+  }
 
   return (
     <div className="container max-w-[1400px] mx-auto px-20 py-40 md:px-80">
@@ -138,6 +157,7 @@ function FSS() {
               <ul className="list-disc pl-5 space-y-1">
                 <li>20 February 2026</li>
                 <li>13th March 2026</li>
+                <li>17th March 2026</li>
               </ul>
             </div>
             <div className="flex flex-col gap-10 mt-20 bg-orange-100 p-10 md: w-600">
@@ -186,7 +206,7 @@ function FSS() {
                 {fssData.keyUnits.map(
                   (
                     unit: { code: string; title: string; description: string },
-                    rIdx: number
+                    rIdx: number,
                   ): JSX.Element => (
                     <tr key={rIdx} className="bg-white hover:bg-gray-50">
                       <td className="px-4 py-2 border-b border-gray-200 font-medium">
@@ -196,7 +216,7 @@ function FSS() {
                         {unit.description}
                       </td>
                     </tr>
-                  )
+                  ),
                 )}
               </tbody>
             </table>
@@ -223,7 +243,7 @@ function FSS() {
                 {fssData.activities.map(
                   (
                     activity: { occasion: string; description: string },
-                    rIdx: number
+                    rIdx: number,
                   ): JSX.Element => (
                     <tr key={rIdx} className="bg-white hover:bg-gray-50">
                       <td className="px-4 py-2 border-b border-gray-200 font-medium">
@@ -233,7 +253,7 @@ function FSS() {
                         {activity.description}
                       </td>
                     </tr>
-                  )
+                  ),
                 )}
               </tbody>
             </table>
@@ -262,7 +282,7 @@ function FSS() {
                   {(fssData.faq1?.answerList || fssData.whoNeedsFSS)?.map(
                     (item: string, idx: number) => (
                       <li key={idx}>{item}</li>
-                    )
+                    ),
                   )}
                 </ul>
               </DisclosurePanel>
