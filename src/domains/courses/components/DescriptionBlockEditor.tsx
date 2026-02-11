@@ -12,14 +12,17 @@ function toItems(val: unknown): DescriptionItem[] {
     if (val.length === 0) return [];
     const first = val[0];
     if (typeof first === 'string') return val as string[];
-    if (first && typeof first === 'object' && 'type' in first) return val as DescriptionItem[];
+    if (first && typeof first === 'object' && 'type' in first)
+      return val as DescriptionItem[];
     return [];
   }
   return [];
 }
 
 function isTableData(v: DescriptionItem): v is TableData {
-  return typeof v === 'object' && v !== null && (v as TableData).type === 'table';
+  return (
+    typeof v === 'object' && v !== null && (v as TableData).type === 'table'
+  );
 }
 
 function isLinkData(v: DescriptionItem): v is LinkData {
@@ -49,8 +52,13 @@ export default function DescriptionBlockEditor({
 
   const addItem = (type: 'text' | 'link' | 'table') => {
     if (type === 'text') onChange([...items, '']);
-    if (type === 'link') onChange([...items, { type: 'link', text: '', url: '' }]);
-    if (type === 'table') onChange([...items, { type: 'table', headers: ['', ''], rows: [['', '']] }]);
+    if (type === 'link')
+      onChange([...items, { type: 'link', text: '', url: '' }]);
+    if (type === 'table')
+      onChange([
+        ...items,
+        { type: 'table', headers: ['', ''], rows: [['', '']] },
+      ]);
   };
 
   const moveItem = (from: number, to: number) => {
@@ -70,7 +78,11 @@ export default function DescriptionBlockEditor({
           onUpdate={(v) => updateItem(index, v)}
           onRemove={() => removeItem(index)}
           onMoveUp={index > 0 ? () => moveItem(index, index - 1) : undefined}
-          onMoveDown={index < items.length - 1 ? () => moveItem(index, index + 1) : undefined}
+          onMoveDown={
+            index < items.length - 1
+              ? () => moveItem(index, index + 1)
+              : undefined
+          }
           disabled={disabled}
         />
       ))}
@@ -81,21 +93,21 @@ export default function DescriptionBlockEditor({
             onClick={() => addItem('text')}
             className="flex items-center gap-1 px-3 py-1.5 text-sm border border-amber-300 rounded hover:bg-amber-50"
           >
-            <Type className="w-4 h-4" /> 텍스트 추가
+            <Type className="w-4 h-4" /> Add text
           </button>
           <button
             type="button"
             onClick={() => addItem('link')}
             className="flex items-center gap-1 px-3 py-1.5 text-sm border border-amber-300 rounded hover:bg-amber-50"
           >
-            <Link2 className="w-4 h-4" /> 링크 추가
+            <Link2 className="w-4 h-4" /> Add link
           </button>
           <button
             type="button"
             onClick={() => addItem('table')}
             className="flex items-center gap-1 px-3 py-1.5 text-sm border border-amber-300 rounded hover:bg-amber-50"
           >
-            <Table2 className="w-4 h-4" /> 표 추가
+            <Table2 className="w-4 h-4" /> Add table
           </button>
         </div>
       )}
@@ -124,7 +136,7 @@ function BlockCard({
     return (
       <div className="border border-gray-200 rounded-lg bg-gray-50/50 overflow-hidden">
         <BlockHeader
-          label="텍스트"
+          label="text"
           icon={<Type className="w-4 h-4" />}
           onRemove={onRemove}
           onMoveUp={onMoveUp}
@@ -165,12 +177,14 @@ function BlockCard({
         {!collapsed && (
           <div className="p-3 space-y-2">
             <div>
-              <label className="block text-xs text-gray-600 mb-0.5">링크 텍스트</label>
+              <label className="block text-xs text-gray-600 mb-0.5">
+                link text
+              </label>
               <input
                 type="text"
                 value={item.text}
                 onChange={(e) => onUpdate({ ...item, text: e.target.value })}
-                placeholder="표시할 텍스트"
+                placeholder="display text"
                 className="w-full px-2 py-1 border rounded text-sm"
                 disabled={disabled}
               />
@@ -239,19 +253,35 @@ function BlockHeader({
       {!disabled && (
         <>
           {onMoveUp && (
-            <button type="button" onClick={onMoveUp} className="p-1 text-gray-500 hover:bg-gray-100 rounded">
+            <button
+              type="button"
+              onClick={onMoveUp}
+              className="p-1 text-gray-500 hover:bg-gray-100 rounded"
+            >
               ↑
             </button>
           )}
           {onMoveDown && (
-            <button type="button" onClick={onMoveDown} className="p-1 text-gray-500 hover:bg-gray-100 rounded">
+            <button
+              type="button"
+              onClick={onMoveDown}
+              className="p-1 text-gray-500 hover:bg-gray-100 rounded"
+            >
               ↓
             </button>
           )}
-          <button type="button" onClick={onToggleCollapsed} className="p-1 text-gray-500 hover:bg-gray-100 rounded text-xs">
-            {collapsed ? '펼치기' : '접기'}
+          <button
+            type="button"
+            onClick={onToggleCollapsed}
+            className="p-1 text-gray-500 hover:bg-gray-100 rounded text-xs"
+          >
+            {collapsed ? 'Expand' : 'Collapse'}
           </button>
-          <button type="button" onClick={onRemove} className="p-1 text-red-500 hover:bg-red-50 rounded">
+          <button
+            type="button"
+            onClick={onRemove}
+            className="p-1 text-red-500 hover:bg-red-50 rounded"
+          >
             <Trash2 className="w-4 h-4" />
           </button>
         </>
@@ -290,13 +320,15 @@ function TableBlockEditor({
   const removeHeader = (colIndex: number) => {
     if (data.headers.length <= 1) return;
     const nextHeaders = data.headers.filter((_, i) => i !== colIndex);
-    const nextRows = data.rows.map((row) => row.filter((_, i) => i !== colIndex));
+    const nextRows = data.rows.map((row) =>
+      row.filter((_, i) => i !== colIndex),
+    );
     onUpdate({ ...data, headers: nextHeaders, rows: nextRows });
   };
 
   const updateCell = (rowIndex: number, colIndex: number, value: string) => {
     const next = data.rows.map((r, i) =>
-      i === rowIndex ? r.map((c, j) => (j === colIndex ? value : c)) : r
+      i === rowIndex ? r.map((c, j) => (j === colIndex ? value : c)) : r,
     );
     onUpdate({ ...data, rows: next });
   };
@@ -329,7 +361,10 @@ function TableBlockEditor({
             <thead>
               <tr>
                 {data.headers.map((h, i) => (
-                  <th key={i} className="border border-gray-300 p-1 bg-gray-100">
+                  <th
+                    key={i}
+                    className="border border-gray-300 p-1 bg-gray-100"
+                  >
                     <input
                       type="text"
                       value={h}
@@ -351,7 +386,11 @@ function TableBlockEditor({
                 ))}
                 {!disabled && (
                   <th className="border border-gray-300 p-1 w-8">
-                    <button type="button" onClick={addHeader} className="text-green-600 hover:underline text-sm">
+                    <button
+                      type="button"
+                      onClick={addHeader}
+                      className="text-green-600 hover:underline text-sm"
+                    >
                       +
                     </button>
                   </th>
@@ -360,7 +399,10 @@ function TableBlockEditor({
             </thead>
             <tbody>
               {data.rows.map((row, ri) => (
-                <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <tr
+                  key={ri}
+                  className={ri % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
+                >
                   {row.map((cell, ci) => (
                     <td key={ci} className="border border-gray-300 p-1">
                       <input

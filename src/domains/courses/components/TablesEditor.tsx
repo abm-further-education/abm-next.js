@@ -42,7 +42,9 @@ export default function TablesEditor({
         >
           <div className="flex items-center gap-2 px-3 py-2 bg-white/80 border-b border-gray-200">
             <Table2 className="w-4 h-4" />
-            <span className="text-sm font-medium text-gray-700">표 {index + 1}</span>
+            <span className="text-sm font-medium text-gray-700">
+              표 {index + 1}
+            </span>
             <div className="flex-1" />
             {!disabled && (
               <button
@@ -69,7 +71,7 @@ export default function TablesEditor({
           onClick={addTable}
           className="flex items-center gap-1 px-3 py-1.5 text-sm border border-emerald-300 rounded hover:bg-emerald-50"
         >
-          <Plus className="w-4 h-4" /> 표 추가
+          <Plus className="w-4 h-4" /> Add table
         </button>
       )}
     </div>
@@ -92,24 +94,33 @@ function SimpleTableEditor({
   };
 
   const addHeader = () =>
-    onChange({ ...table, headers: [...table.headers, ''], rows: table.rows.map((r) => [...r, '']) });
+    onChange({
+      ...table,
+      headers: [...table.headers, ''],
+      rows: table.rows.map((r) => [...r, '']),
+    });
 
   const removeHeader = (colIndex: number) => {
     if (table.headers.length <= 1) return;
     const nextHeaders = table.headers.filter((_, i) => i !== colIndex);
-    const nextRows = table.rows.map((row) => row.filter((_, i) => i !== colIndex));
+    const nextRows = table.rows.map((row) =>
+      row.filter((_, i) => i !== colIndex),
+    );
     onChange({ ...table, headers: nextHeaders, rows: nextRows });
   };
 
   const updateCell = (rowIndex: number, colIndex: number, value: string) => {
     const next = table.rows.map((r, i) =>
-      i === rowIndex ? r.map((c, j) => (j === colIndex ? value : c)) : r
+      i === rowIndex ? r.map((c, j) => (j === colIndex ? value : c)) : r,
     );
     onChange({ ...table, rows: next });
   };
 
   const addRow = () =>
-    onChange({ ...table, rows: [...table.rows, Array(table.headers.length).fill('')] });
+    onChange({
+      ...table,
+      rows: [...table.rows, Array(table.headers.length).fill('')],
+    });
 
   const removeRow = (rowIndex: number) => {
     if (table.rows.length <= 1) return;
@@ -144,7 +155,11 @@ function SimpleTableEditor({
             ))}
             {!disabled && (
               <th className="border border-gray-300 p-1 w-8">
-                <button type="button" onClick={addHeader} className="text-green-600 hover:underline text-sm">
+                <button
+                  type="button"
+                  onClick={addHeader}
+                  className="text-green-600 hover:underline text-sm"
+                >
                   +
                 </button>
               </th>

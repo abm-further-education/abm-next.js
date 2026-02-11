@@ -216,7 +216,7 @@ function SectionEditor({
         />
         <div>
           <label className="block text-sm text-gray-600 mb-1">Description</label>
-          <p className="text-xs text-gray-500 mb-1">텍스트, 링크, 표를 블록으로 추가·편집</p>
+          <p className="text-xs text-gray-500 mb-1">Add and edit text, links, and tables as blocks</p>
           <DescriptionBlockEditor
             items={editItems}
             onChange={setEditItems}

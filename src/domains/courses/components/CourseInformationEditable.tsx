@@ -270,7 +270,7 @@ export default function CourseInformationEditable({
 
           <div>
             <label className="block text-sm text-gray-600">Entry Requirement</label>
-            <p className="text-xs text-gray-500 mb-1">한 줄 또는 여러 줄 (줄마다 불릿)</p>
+            <p className="text-xs text-gray-500 mb-1">One line or multiple lines (each line as a bullet)</p>
             <textarea
               value={entryRequirement}
               onChange={(e) => setEntryRequirement(e.target.value)}
@@ -281,7 +281,7 @@ export default function CourseInformationEditable({
 
           <div>
             <label className="block text-sm text-gray-600">Delivery Mode</label>
-            <p className="text-xs text-gray-500 mb-1">첫 줄: 제목, 둘째 줄: 모드 (예: Face to Face)</p>
+            <p className="text-xs text-gray-500 mb-1">Line 1: Title, Line 2: Mode (e.g. Face to Face)</p>
             <textarea
               value={deliveryMode}
               onChange={(e) => setDeliveryMode(e.target.value)}
@@ -292,7 +292,7 @@ export default function CourseInformationEditable({
 
           <div>
             <label className="block text-sm text-gray-600">Delivery Site</label>
-            <p className="text-xs text-gray-500 mb-1">첫 줄: 제목, 다음 줄부터: • 장소명: 주소</p>
+            <p className="text-xs text-gray-500 mb-1">Line 1: Title, then: • Location name: Address</p>
             <textarea
               value={deliverySite}
               onChange={(e) => setDeliverySite(e.target.value)}
@@ -303,7 +303,7 @@ export default function CourseInformationEditable({
 
           <div>
             <label className="block text-sm text-gray-600">Additional Info</label>
-            <p className="text-xs text-gray-500 mb-1">1줄: 설명, 2줄: 링크 텍스트, 3줄: URL</p>
+            <p className="text-xs text-gray-500 mb-1">Line 1: Description, Line 2: Link text, Line 3: URL</p>
             <textarea
               value={additionalInfo}
               onChange={(e) => setAdditionalInfo(e.target.value)}
@@ -314,7 +314,7 @@ export default function CourseInformationEditable({
 
           <div>
             <label className="block text-sm text-gray-600">Starting Dates</label>
-            <p className="text-xs text-gray-500 mb-1">각 블록: 제목 줄 + 날짜들 (쉼표 구분). 블록은 빈 줄로 구분</p>
+            <p className="text-xs text-gray-500 mb-1">Each block: Title line + dates (comma-separated). Separate blocks with blank lines</p>
             <textarea
               value={startingDates}
               onChange={(e) => setStartingDates(e.target.value)}
@@ -325,13 +325,13 @@ export default function CourseInformationEditable({
 
           <div>
             <label className="block text-sm text-gray-600">Tables</label>
-            <p className="text-xs text-gray-500 mb-1">표를 추가하고 셀을 직접 편집</p>
+            <p className="text-xs text-gray-500 mb-1">Add tables and edit cells directly</p>
             <TablesEditor tables={tables} onChange={setTables} />
           </div>
 
           <div>
             <label className="block text-sm text-gray-600">Partners</label>
-            <p className="text-xs text-gray-500 mb-1">한 줄에 하나: 이름: 설명</p>
+            <p className="text-xs text-gray-500 mb-1">One per line: Name: Description</p>
             <textarea
               value={partners}
               onChange={(e) => setPartners(e.target.value)}
