@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useEditMode } from '@/contexts/EditModeContext';
 import DiplomaHM from '../contents/cookery/DiplomaHM';
-import CertIIIHSA from '../contents/health/CertIIIHSA';
+import CertIIIHSA, { type FaqItem } from '../contents/health/CertIIIHSA';
 import CourseDetailEditable from './CourseDetailEditable';
 import type {
   TableData,
@@ -51,8 +51,19 @@ function isLinkData(value: any): value is LinkData {
 
 // description을 렌더링하는 함수
 function renderDescription(
-  description: string | string[] | DescriptionItem[]
+  description: string | string[] | DescriptionItem[] | FaqItem[]
 ): React.ReactNode {
+  // FaqItem[]는 CertIIIHSA에서 별도 렌더링 (여기서는 사용하지 않음)
+  if (
+    isArray(description) &&
+    description.length > 0 &&
+    typeof description[0] === 'object' &&
+    description[0] != null &&
+    'question' in description[0] &&
+    'answer' in description[0]
+  ) {
+    return null;
+  }
   if (isArray(description)) {
     // 배열의 첫 번째 요소를 확인하여 타입을 결정
     const firstItem = description[0];
@@ -244,9 +255,10 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
       )
     : [];
 
-  // courseStructure가 아닌 섹션들
+  // courseStructure가 아닌 섹션들 (faq는 HSA 전용으로 CertIIIHSA에서 렌더링)
   const otherSections = Object.entries(courseInfo).filter(
-    ([key]) => !key.startsWith('courseStructure')
+    ([key]) =>
+      !key.startsWith('courseStructure') && key !== 'faq'
   );
 
   return (
@@ -257,7 +269,24 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
           <DiplomaHM />
         ) : courseId ===
           'hlt33115-certificate-iii-in-health-services-assistance' ? (
-          <CertIIIHSA />
+          <CertIIIHSA
+            faqItems={
+              (() => {
+                const d = courseInfo.faq?.description;
+                if (!Array.isArray(d)) return undefined;
+                const ok = d.every(
+                  (v) =>
+                    v != null &&
+                    typeof v === 'object' &&
+                    'question' in v &&
+                    'answer' in v &&
+                    typeof (v as FaqItem).question === 'string' &&
+                    typeof (v as FaqItem).answer === 'string'
+                );
+                return ok && d.length > 0 ? (d as unknown as FaqItem[]) : undefined;
+              })()
+            }
+          />
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-40">
             {courseId !==
@@ -292,10 +321,10 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
               </div>
             )}
             <div>
-              {/* courseStructure가 있는 경우 courseStructure를 제외한 나머지 섹션들만 표시 */}
+              {/* courseStructure가 있는 경우 courseStructure를 제외한 나머지 섹션들만 표시 (faq는 HSA 전용) */}
               {(hasCourseStructure
                 ? otherSections
-                : Object.entries(courseInfo)
+                : Object.entries(courseInfo).filter(([k]) => k !== 'faq')
               ).map(([sectionKey, sectionData]) => (
                 <div key={sectionKey} className="mb-14">
                   <h3 className={titleStyle}>{sectionData.title}</h3>

@@ -1021,5 +1021,35 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'For more information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
       ].join('\n'),
     },
+    faq: {
+      title: 'Frequently Asked Questions',
+      description: [
+        {
+          question: 'How much does the nursing assistant course cost?',
+          answer:
+            'Please refer to our official pricelist for the most up-to-date tuition information.',
+        },
+        {
+          question: 'Which visa allows me to enrol?',
+          answer:
+            'This course is suitable for students on a Working Holiday Visa or any visa type that allows you to study for 16 weeks without a Confirmation of Enrolment (CoE). We do not provide visa advice. Please check your visa conditions or consult a registered migration agent if you are unsure.',
+        },
+        {
+          question: 'What about placement and support for clinical training?',
+          answer:
+            'ABM provides 80 hours of work placement as part of the course, arranged through our trusted industry partners. Upon completion, we also offer paid employment opportunities for eligible graduates, supporting your smooth transition into the healthcare workforce.',
+        },
+        {
+          question: 'Can I find employment with this qualification?',
+          answer:
+            'Yes, our graduates often secure roles in Private Hospitals, Medical Centres, Aged Care Centres.',
+        },
+        {
+          question: 'What if my English skills are insufficient?',
+          answer:
+            'The minimum entry requirement is IELTS 5.5 or equivalent. If you currently hold IELTS 4.5 or equivalent, you can enrol in the course with Plus Nursing English, which provides additional language support tailored to healthcare settings. If you do not have an English test result, you may have your English proficiency assessed through the ABM English Placement Test.',
+        },
+      ],
+    },
   },
 };

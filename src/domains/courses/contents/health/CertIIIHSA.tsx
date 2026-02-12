@@ -9,16 +9,17 @@ import {
   DisclosurePanel,
 } from '@headlessui/react';
 import { ChevronUpIcon } from 'lucide-react';
+import type { FaqItem } from '@/types/course';
 
-const faqItems = [
-  { key: 'q1' },
-  { key: 'q2' },
-  { key: 'q3' },
-  { key: 'q4' },
-  { key: 'q5' },
-];
+export type { FaqItem };
 
-function CertIIIHSA() {
+const FALLBACK_FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5'] as const;
+
+interface CertIIIHSAProps {
+  faqItems?: FaqItem[];
+}
+
+function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
   const t = useTranslations('hsaPage');
   return (
     <div>
@@ -160,18 +161,22 @@ function CertIIIHSA() {
           {t('faq.title')}
         </h3>
 
-        {faqItems.map((item, index) => (
+        {(faqItemsFromDb && faqItemsFromDb.length > 0
+          ? faqItemsFromDb
+          : FALLBACK_FAQ_KEYS.map((key) => ({
+              question: t(`faq.items.${key}.question`),
+              answer: t(`faq.items.${key}.answer`),
+            }))
+        ).map((item, index) => (
           <Disclosure
-            key={item.key}
+            key={index}
             as="div"
             className={index > 0 ? 'mt-4' : ''}
           >
             {({ open }) => (
               <>
                 <DisclosureButton className="flex w-full justify-between items-center bg-primary px-16 py-9 text-left text-sm font-medium text-white hover:bg-black cursor-pointer transition font-montserrat">
-                  <span className="text-lg">
-                    {t(`faq.items.${item.key}.question`)}
-                  </span>
+                  <span className="text-lg">{item.question}</span>
                   <ChevronUpIcon
                     className={`h-24 w-24 transform transition-transform duration-200 ${
                       open ? 'rotate-180' : ''
@@ -179,7 +184,7 @@ function CertIIIHSA() {
                   />
                 </DisclosureButton>
                 <DisclosurePanel className="px-16 pt-4 pb-2 text-sm text-gray-700">
-                  <p>{t(`faq.items.${item.key}.answer`)}</p>
+                  <p>{item.answer}</p>
                 </DisclosurePanel>
               </>
             )}

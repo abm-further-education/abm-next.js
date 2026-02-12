@@ -868,5 +868,15 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Para sa higit pang impormasyon, mangyaring makipag-ugnayan sa ABM sa pamamagitan ng pag-email sa info@abm.edu.au o tumawag sa +61 (02) 9160 4507.',
       ].join('\n'),
     },
+    faq: {
+      title: 'Mga Madalas Itanong',
+      description: [
+        { question: 'Magkano ang kursong nursing assistant?', answer: 'Mangyaring sumangguni sa aming opisyal na pricelist para sa pinakabagong impormasyon sa tuition.' },
+        { question: 'Aling visa ang nagpapahintulot sa akin na mag-enroll?', answer: 'Ang kursong ito ay angkop para sa mga estudyante sa Working Holiday Visa o anumang uri ng visa na nagpapahintulot sa iyo na mag-aral ng 16 linggo nang walang Confirmation of Enrolment (CoE). Hindi kami nagbibigay ng payo sa visa. Mangyaring suriin ang iyong mga kondisyon sa visa o kumonsulta sa rehistradong migration agent kung hindi ka sigurado.' },
+        { question: 'Paano ang placement at suporta para sa clinical training?', answer: 'Nagbibigay ang ABM ng 80 oras ng work placement bilang bahagi ng kursong, inaayos sa pamamagitan ng aming mapagkakatiwalaang industry partners. Pagkatapos makumpleto, nag-aalok din kami ng mga oportunidad sa paid employment para sa mga eligible na graduate, sinusuportahan ang iyong maayos na paglipat sa healthcare workforce.' },
+        { question: 'Makakahanap ba ako ng trabaho sa qualification na ito?', answer: 'Oo, ang aming mga graduate ay madalas na nakakakuha ng mga tungkulin sa Private Hospitals, Medical Centres, Aged Care Centres.' },
+        { question: 'Ano kung hindi sapat ang aking mga kasanayan sa Ingles?', answer: 'Ang minimum na entry requirement ay IELTS 5.5 o katumbas. Kung kasalukuyan mong hawak ang IELTS 4.5 o katumbas, maaari kang mag-enroll sa kurso sa Plus Nursing English, na nagbibigay ng karagdagang suporta sa wika na nakahanay sa healthcare settings. Kung wala kang resulta ng English test, maaari mong suriin ang iyong proficiency sa Ingles sa pamamagitan ng ABM English Placement Test.' },
+      ],
+    },
   },
 };

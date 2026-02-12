@@ -863,5 +863,15 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Untuk informasi lebih lanjut, silakan hubungi ABM dengan mengirim email ke info@abm.edu.au atau hubungi kami di +61 (02) 9160 4507.',
       ].join('\n'),
     },
+    faq: {
+      title: 'Pertanyaan yang Sering Diajukan',
+      description: [
+        { question: 'Berapa biaya kursus asisten keperawatan?', answer: 'Silakan merujuk ke daftar harga resmi kami untuk informasi biaya kuliah terbaru.' },
+        { question: 'Visa mana yang memungkinkan saya mendaftar?', answer: 'Kursus ini cocok untuk siswa dengan Working Holiday Visa atau jenis visa apa pun yang memungkinkan Anda belajar selama 16 minggu tanpa Confirmation of Enrolment (CoE). Kami tidak memberikan saran visa. Silakan periksa kondisi visa Anda atau konsultasikan dengan agen migrasi terdaftar jika Anda tidak yakin.' },
+        { question: 'Bagaimana dengan penempatan dan dukungan untuk pelatihan klinis?', answer: 'ABM menyediakan 80 jam penempatan kerja sebagai bagian dari kursus, diatur melalui mitra industri tepercaya kami. Setelah selesai, kami juga menawarkan peluang pekerjaan berbayar untuk lulusan yang memenuhi syarat, mendukung transisi Anda yang mulus ke tenaga kerja kesehatan.' },
+        { question: 'Bisakah saya mencari pekerjaan dengan kualifikasi ini?', answer: 'Ya, lulusan kami sering mendapatkan peran di Rumah Sakit Swasta, Pusat Medis, Pusat Perawatan Lansia.' },
+        { question: 'Bagaimana jika kemampuan Bahasa Inggris saya tidak cukup?', answer: 'Persyaratan masuk minimum adalah IELTS 5.5 atau setara. Jika Anda saat ini memiliki IELTS 4.5 atau setara, Anda dapat mendaftar kursus dengan Plus Nursing English, yang menyediakan dukungan bahasa tambahan yang disesuaikan dengan lingkungan kesehatan. Jika Anda tidak memiliki hasil tes Bahasa Inggris, Anda dapat dinilai kemahiran Bahasa Inggris Anda melalui Tes Penempatan Bahasa Inggris ABM.' },
+      ],
+    },
   },
 };

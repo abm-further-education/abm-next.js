@@ -1068,5 +1068,15 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
         'Para mais informações, entre em contato com a ABM enviando um e-mail para info@abm.edu.au ou ligue para +61 (02) 9160 4507.',
       ].join('\n'),
     },
+    faq: {
+      title: 'Perguntas Frequentes',
+      description: [
+        { question: 'Quanto custa o curso de assistente de enfermagem?', answer: 'Consulte nossa lista de preços oficial para obter as informações mais atualizadas sobre mensalidades.' },
+        { question: 'Qual visto me permite me matricular?', answer: 'Este curso é adequado para estudantes com visto de Working Holiday ou qualquer tipo de visto que permita estudar por 16 semanas sem uma Confirmação de Matrícula (CoE). Não fornecemos orientação sobre vistos. Verifique as condições do seu visto ou consulte um agente de migração registrado se tiver dúvidas.' },
+        { question: 'E quanto ao estágio e suporte para treinamento clínico?', answer: 'A ABM fornece 80 horas de estágio como parte do curso, organizado através de nossos parceiros confiáveis do setor. Após a conclusão, também oferecemos oportunidades de emprego remunerado para graduados elegíveis, apoiando sua transição suave para a força de trabalho em saúde.' },
+        { question: 'Posso conseguir emprego com esta qualificação?', answer: 'Sim, nossos graduados frequentemente garantem funções em hospitais privados, centros médicos e centros de cuidados para idosos.' },
+        { question: 'E se minhas habilidades em inglês forem insuficientes?', answer: 'O requisito mínimo de entrada é IELTS 5.5 ou equivalente. Se você atualmente tem IELTS 4.5 ou equivalente, pode se matricular no curso com Plus Nursing English, que fornece suporte adicional de idioma voltado para ambientes de saúde. Se você não tem resultado de teste de inglês, pode ter sua proficiência avaliada através do Teste de Colocação em Inglês da ABM.' },
+      ],
+    },
   },
 };

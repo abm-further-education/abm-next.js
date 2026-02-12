@@ -77,6 +77,11 @@ export interface LinkData {
 
 export type DescriptionItem = string | TableData | LinkData;
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 // Course details (sections like duration, job roles, etc.)
 export interface DbCourseDetail {
   id: string;
@@ -243,10 +248,10 @@ export interface CourseWithTranslation extends DbCourse {
 }
 
 // Course detail item (for UI components)
-// Note: description can be string, string[], or DescriptionItem[] to match the CourseDetail component
+// Note: description can be string, string[], DescriptionItem[], or FaqItem[] (for faq section)
 export interface CourseDetailItem {
   title: string;
-  description: string | string[] | DescriptionItem[];
+  description: string | string[] | DescriptionItem[] | FaqItem[];
 }
 
 // Course details map (keyed by section)
