@@ -18,6 +18,7 @@ import {
   cookeryMenu,
   currentStudentsMenu,
   fitnessMenu,
+  healthMenu,
   hospitalityMenu,
   hrMenu,
   projectMenu,
@@ -197,6 +198,10 @@ function MobileNav() {
                             <DisclosureContainer
                               title={t('subMenu.humanResource')}
                               list={hrMenu}
+                            />
+                            <DisclosureContainer
+                              title={t('subMenu.health')}
+                              list={healthMenu}
                             />
                           </motion.div>
                         </DisclosurePanel>
