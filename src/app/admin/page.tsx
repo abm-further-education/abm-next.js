@@ -77,6 +77,17 @@ export default async function AdminPage() {
               <p className="text-sm text-gray-600">Manage testimonials</p>
             </Link>
             <Link
+              href="/admin/academic-calendar"
+              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <h3 className="font-semibold text-gray-800 mb-2">
+                Academic Calendar
+              </h3>
+              <p className="text-sm text-gray-600">
+                Manage term dates and holidays
+              </p>
+            </Link>
+            <Link
               href="/admin/testimonials/migrate"
               className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >

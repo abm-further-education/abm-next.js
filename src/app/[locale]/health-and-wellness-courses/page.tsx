@@ -72,6 +72,12 @@ function HealthPage() {
             link="/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance"
             className="w-300 md:w-530"
           />
+          <Card
+            imgPath="/courses/health/health_1.png"
+            title={t('industryPlacement')}
+            link="/health-and-wellness-courses/industry-placement-health-services-assistance"
+            className="w-300 md:w-530"
+          />
         </div>
       </FadeIn>
       <FadeIn>

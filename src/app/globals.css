@@ -90,3 +90,73 @@ a:hover {
     display: table-header-group !important;
   }
 }
+
+/* Academic Calendar Styles*/
+
+.academic-calendar-wrapper .rbc-calendar {
+  font-family: var(--font-geist-sans), sans-serif;
+}
+.academic-calendar-wrapper .rbc-toolbar {
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  align-items: flex-center;
+  justify-content: center;
+  display: flex;
+}
+.academic-calendar-wrapper .rbc-toolbar button {
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-color: #d1d5db;
+  color: #374151;
+  font-size: 0.875rem;
+}
+.academic-calendar-wrapper .rbc-toolbar button:hover {
+  background-color: #f3f4f6;
+}
+/* .academic-calendar-wrapper .rbc-toolbar button.rbc-active {
+  background-color: #121415;
+  color: white;
+  border-color: #121415;
+} */
+
+.academic-calendar-wrapper .rbc-header {
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+}
+.academic-calendar-wrapper .rbc-month-view {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border-color: #e5e7eb;
+}
+.academic-calendar-wrapper .rbc-day-bg + .rbc-day-bg,
+.academic-calendar-wrapper .rbc-month-row + .rbc-month-row {
+  border-color: #e5e7eb;
+}
+.academic-calendar-wrapper .rbc-off-range-bg {
+  background-color: #f9fafb;
+}
+.academic-calendar-wrapper .rbc-today {
+  background-color: #fff7ed;
+}
+.academic-calendar-wrapper .rbc-event {
+  cursor: pointer;
+}
+.academic-calendar-wrapper .rbc-show-more {
+  color: #ef7511;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+@media (max-width: 640px) {
+  .academic-calendar-wrapper .rbc-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .academic-calendar-wrapper .rbc-toolbar-label {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+}

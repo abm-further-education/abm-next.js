@@ -1,89 +1,108 @@
+export const dynamic = 'force-dynamic';
+
 import Banner from '@/components/common/Banner';
-import { getTranslations } from 'next-intl/server';
+import AcademicCalendar from '@/components/academic-calendar/AcademicCalendar';
+import { getAcademicEvents } from '@/lib/academic-calendar-db';
+import type { AcademicEvent } from '@/lib/academic-calendar-db';
 
-type Term = {
-  label: string;
-  date: string;
-};
-
-type YearCalendar = {
-  year: number;
-  terms: Term[];
-};
-
-const calendars: YearCalendar[] = [
-  {
-    year: 2026,
-    terms: [
-      { label: 'Term 1 Intake 1', date: '05 Jan – 08 Feb' },
-      { label: 'Term 1 Intake 2', date: '09 Feb – 15 Mar' },
-      { label: 'Holiday 1', date: '16 Mar – 05 Apr' },
-      { label: 'Term 2 Intake 1', date: '06 Apr – 10 May' },
-      { label: 'Term 2 Intake 2', date: '11 May – 14 Jun' },
-      { label: 'Holiday 2', date: '15 Jun – 05 Jul' },
-      { label: 'Term 3 Intake 1', date: '06 Jul – 09 Aug' },
-      { label: 'Term 3 Intake 2', date: '10 Aug – 13 Sep' },
-      { label: 'Holiday 3', date: '14 Sep – 04 Oct' },
-      { label: 'Term 4 Intake 1', date: '05 Oct – 08 Nov' },
-      { label: 'Term 4 Intake 2', date: '09 Nov – 13 Dec' },
-      { label: 'Christmas Holiday', date: '14 Dec – 08 Jan 2027' },
-    ],
-  },
-  {
-    year: 2027,
-    terms: [
-      { label: 'Term 1 Intake 1', date: '11 Jan – 14 Feb' },
-      { label: 'Term 1 Intake 2', date: '15 Feb – 21 Mar' },
-      { label: 'Holiday 1', date: '22 Mar – 11 Apr' },
-      { label: 'Term 2 Intake 1', date: '12 Apr – 16 May' },
-      { label: 'Term 2 Intake 2', date: '17 May – 20 Jun' },
-      { label: 'Holiday 2', date: '21 Jun – 11 Jul' },
-      { label: 'Term 3 Intake 1', date: '12 Jul – 15 Aug' },
-      { label: 'Term 3 Intake 2', date: '16 Aug – 19 Sep' },
-      { label: 'Holiday 3', date: '20 Sep – 10 Oct' },
-      { label: 'Term 4 Intake 1', date: '11 Oct – 14 Nov' },
-      { label: 'Term 4 Intake 2', date: '15 Nov – 19 Dec' },
-      { label: 'Christmas Holiday', date: '20 Dec – 09 Jan 2028' },
-    ],
-  },
-  {
-    year: 2028,
-    terms: [
-      { label: 'Term 1 Intake 1', date: '10 Jan – 13 Feb' },
-      { label: 'Term 1 Intake 2', date: '14 Feb – 19 Mar' },
-      { label: 'Holiday 1', date: '20 Mar – 09 Apr' },
-      { label: 'Term 2 Intake 1', date: '10 Apr – 14 May' },
-      { label: 'Term 2 Intake 2', date: '15 May – 18 Jun' },
-      { label: 'Holiday 2', date: '19 Jun – 09 Jul' },
-      { label: 'Term 3 Intake 1', date: '10 Jul – 13 Aug' },
-      { label: 'Term 3 Intake 2', date: '14 Aug – 17 Sep' },
-      { label: 'Holiday 3', date: '18 Sep – 08 Oct' },
-      { label: 'Term 4 Intake 1', date: '09 Oct – 12 Nov' },
-      { label: 'Term 4 Intake 2', date: '13 Nov – 17 Dec' },
-      { label: 'Christmas Holiday', date: '18 Dec – 07 Jan 2029' },
-    ],
-  },
+// Fallback hardcoded data (used if DB is empty or unavailable)
+const fallbackEvents: Omit<AcademicEvent, 'id' | 'created_at' | 'updated_at'>[] = [
+  // 2026
+  { title: 'Term 1 Intake 1', start_date: '2026-01-05', end_date: '2026-02-08', event_type: 'term', color: null, description: null },
+  { title: 'Term 1 Intake 2', start_date: '2026-02-09', end_date: '2026-03-15', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 1', start_date: '2026-03-16', end_date: '2026-04-05', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 2 Intake 1', start_date: '2026-04-06', end_date: '2026-05-10', event_type: 'term', color: null, description: null },
+  { title: 'Term 2 Intake 2', start_date: '2026-05-11', end_date: '2026-06-14', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 2', start_date: '2026-06-15', end_date: '2026-07-05', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 3 Intake 1', start_date: '2026-07-06', end_date: '2026-08-09', event_type: 'term', color: null, description: null },
+  { title: 'Term 3 Intake 2', start_date: '2026-08-10', end_date: '2026-09-13', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 3', start_date: '2026-09-14', end_date: '2026-10-04', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 4 Intake 1', start_date: '2026-10-05', end_date: '2026-11-08', event_type: 'term', color: null, description: null },
+  { title: 'Term 4 Intake 2', start_date: '2026-11-09', end_date: '2026-12-13', event_type: 'term', color: null, description: null },
+  { title: 'Christmas Holiday', start_date: '2026-12-14', end_date: '2027-01-08', event_type: 'holiday', color: null, description: null },
+  // 2027
+  { title: 'Term 1 Intake 1', start_date: '2027-01-11', end_date: '2027-02-14', event_type: 'term', color: null, description: null },
+  { title: 'Term 1 Intake 2', start_date: '2027-02-15', end_date: '2027-03-21', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 1', start_date: '2027-03-22', end_date: '2027-04-11', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 2 Intake 1', start_date: '2027-04-12', end_date: '2027-05-16', event_type: 'term', color: null, description: null },
+  { title: 'Term 2 Intake 2', start_date: '2027-05-17', end_date: '2027-06-20', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 2', start_date: '2027-06-21', end_date: '2027-07-11', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 3 Intake 1', start_date: '2027-07-12', end_date: '2027-08-15', event_type: 'term', color: null, description: null },
+  { title: 'Term 3 Intake 2', start_date: '2027-08-16', end_date: '2027-09-19', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 3', start_date: '2027-09-20', end_date: '2027-10-10', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 4 Intake 1', start_date: '2027-10-11', end_date: '2027-11-14', event_type: 'term', color: null, description: null },
+  { title: 'Term 4 Intake 2', start_date: '2027-11-15', end_date: '2027-12-19', event_type: 'term', color: null, description: null },
+  { title: 'Christmas Holiday', start_date: '2027-12-20', end_date: '2028-01-09', event_type: 'holiday', color: null, description: null },
+  // 2028
+  { title: 'Term 1 Intake 1', start_date: '2028-01-10', end_date: '2028-02-13', event_type: 'term', color: null, description: null },
+  { title: 'Term 1 Intake 2', start_date: '2028-02-14', end_date: '2028-03-19', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 1', start_date: '2028-03-20', end_date: '2028-04-09', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 2 Intake 1', start_date: '2028-04-10', end_date: '2028-05-14', event_type: 'term', color: null, description: null },
+  { title: 'Term 2 Intake 2', start_date: '2028-05-15', end_date: '2028-06-18', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 2', start_date: '2028-06-19', end_date: '2028-07-09', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 3 Intake 1', start_date: '2028-07-10', end_date: '2028-08-13', event_type: 'term', color: null, description: null },
+  { title: 'Term 3 Intake 2', start_date: '2028-08-14', end_date: '2028-09-17', event_type: 'term', color: null, description: null },
+  { title: 'Holiday 3', start_date: '2028-09-18', end_date: '2028-10-08', event_type: 'holiday', color: null, description: null },
+  { title: 'Term 4 Intake 1', start_date: '2028-10-09', end_date: '2028-11-12', event_type: 'term', color: null, description: null },
+  { title: 'Term 4 Intake 2', start_date: '2028-11-13', end_date: '2028-12-17', event_type: 'term', color: null, description: null },
+  { title: 'Christmas Holiday', start_date: '2028-12-18', end_date: '2029-01-07', event_type: 'holiday', color: null, description: null },
 ];
 
-export default async function AcademicCalendar() {
-  const t = await getTranslations('academicCalendar');
-  // Helper to map label to translation key
-  const labelToKey: Record<string, string> = {
-    'Term 1 Intake 1': 'term1Intake1',
-    'Term 1 Intake 2': 'term1Intake2',
-    'Holiday 1': 'holiday1',
-    'Term 2 Intake 1': 'term2Intake1',
-    'Term 2 Intake 2': 'term2Intake2',
-    'Holiday 2': 'holiday2',
-    'Term 3 Intake 1': 'term3Intake1',
-    'Term 3 Intake 2': 'term3Intake2',
-    'Holiday 3': 'holiday3',
-    'Term 4 Intake 1': 'term4Intake1',
-    'Term 4 Intake 2': 'term4Intake2',
-    'Christmas Holiday': 'christmasHoliday',
+export default async function AcademicCalendarPage() {
+  // Try to fetch from database, fallback to hardcoded data
+  let events: AcademicEvent[];
+  try {
+    const dbEvents = await getAcademicEvents();
+    if (dbEvents.length > 0) {
+      events = dbEvents;
+    } else {
+      // DB is empty, use fallback with generated IDs
+      events = fallbackEvents.map((e, i) => ({
+        ...e,
+        id: `fallback-${i}`,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      }));
+    }
+  } catch {
+    // DB error, use fallback
+    events = fallbackEvents.map((e, i) => ({
+      ...e,
+      id: `fallback-${i}`,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    }));
+  }
+
+  // Also prepare a table view grouped by year
+  const eventsByYear: Record<number, AcademicEvent[]> = {};
+  for (const event of events) {
+    const year = new Date(event.start_date).getFullYear();
+    if (!eventsByYear[year]) {
+      eventsByYear[year] = [];
+    }
+    eventsByYear[year].push(event);
+  }
+  const years = Object.keys(eventsByYear)
+    .map(Number)
+    .sort((a, b) => a - b);
+
+  const formatDateRange = (start: string, end: string) => {
+    const s = new Date(start + 'T00:00:00');
+    const e = new Date(end + 'T00:00:00');
+    const opts: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short' };
+    const startStr = s.toLocaleDateString('en-AU', opts);
+    const endStr = e.toLocaleDateString('en-AU', opts);
+    const endYear = e.getFullYear();
+    const startYear = s.getFullYear();
+    if (endYear !== startYear) {
+      return `${startStr} – ${endStr} ${endYear}`;
+    }
+    return `${startStr} – ${endStr}`;
   };
+
   return (
-    <section className="">
+    <section>
       <Banner
         slides={[
           {
@@ -96,29 +115,47 @@ export default async function AcademicCalendar() {
           <div className="bg-neutral-900/70 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <h2 className="text-3xl md:text-4xl font-bold mb-30 font-[family-name:var(--font-montserrat)] text-center mt-40">
+
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 font-[family-name:var(--font-montserrat)] text-center mt-40">
         Academic Calendar
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-32 px-16 max-w-7xl mx-auto">
-        {calendars.map((calendar) => (
-          <div key={calendar.year} className="bg-white p-14">
-            <h3 className="text-2xl font-semibold mb-8 text-primary">
-              {calendar.year}
-            </h3>
-            <table className="w-full text-sm">
-              <tbody>
-                {calendar.terms.map((term, i) => (
-                  <tr key={i} className="border-b border-gray-100 py-6">
-                    <td className="py-3 pr-4 font-medium text-gray-700">
-                      {t(labelToKey[term.label])}
-                    </td>
-                    <td className="py-1 text-gray-500">{term.date}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ))}
+
+      {/* Calendar View */}
+      <div className="max-w-6xl mx-auto px-4 md:px-8 mb-16">
+        <AcademicCalendar events={events} />
+      </div>
+
+      {/* Table View (summary by year) */}
+      <div className="max-w-7xl mx-auto px-4 md:px-16 pb-32">
+        <h3 className="text-2xl font-bold text-center mb-8 font-[family-name:var(--font-montserrat)]">
+          Term Dates Overview
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {years.map((year) => (
+            <div key={year} className="bg-white p-6 rounded-lg shadow">
+              <h4 className="text-2xl font-semibold mb-4 text-[#ef7511]">
+                {year}
+              </h4>
+              <table className="w-full text-sm">
+                <tbody>
+                  {eventsByYear[year].map((event) => (
+                    <tr
+                      key={event.id}
+                      className="border-b border-gray-100"
+                    >
+                      <td className="py-3 pr-4 font-medium text-gray-700">
+                        {event.title}
+                      </td>
+                      <td className="py-3 text-gray-500">
+                        {formatDateRange(event.start_date, event.end_date)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

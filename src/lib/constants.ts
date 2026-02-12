@@ -105,6 +105,10 @@ export const healthMenu = [
     title: 'Certificate III in Health Services Assistance',
     href: '/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance',
   },
+  {
+    title: 'Industry Placement',
+    href: '/health-and-wellness-courses/industry-placement-health-services-assistance',
+  },
 ];
 
 export const shortCourseMenu = [
@@ -397,6 +401,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
           {
             title: 'Certificate III in Health Services Assistance',
             href: '/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance',
+          },
+          {
+            title: 'Industry Placement',
+            href: '/health-and-wellness-courses/industry-placement-health-services-assistance',
           },
         ],
       },

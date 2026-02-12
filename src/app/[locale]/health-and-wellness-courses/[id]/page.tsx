@@ -3,6 +3,7 @@ import Gallery from '@/components/common/Gallery';
 import CourseDetail from '@/domains/courses/components/CourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
+import IndustryPlacementHSA from '@/domains/courses/contents/health/IndustryPlacementHSA';
 import Units from '@/domains/courses/components/Units';
 import { cn } from '@/lib';
 import { getCourseDetails, getCourseInfo } from '@/lib/course-db';
@@ -15,10 +16,13 @@ const menuItems = ['Course Information', 'Course Detail', 'Units'];
 const mappingCourseTitle: { [key: string]: string } = {
   'hlt33115-certificate-iii-in-health-services-assistance':
     'HLT33115 Certificate III in Health Services Assistance',
+  'industry-placement-health-services-assistance': 'Industry Placement',
 };
 
 const mappingCourseImage: { [key: string]: string } = {
   'hlt33115-certificate-iii-in-health-services-assistance': '/home/HSA.png',
+  'industry-placement-health-services-assistance':
+    '/courses/health/health_2.png',
 };
 
 export async function generateMetadata({
@@ -26,7 +30,17 @@ export async function generateMetadata({
 }: {
   params: Promise<{ id: string; locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
+  const { id, locale } = await params;
+
+  if (id === 'industry-placement-health-services-assistance') {
+    return {
+      title:
+        'Industry Placement - Health Services Assistance | ABM Further Education',
+      description:
+        'Complete 80 hours of mandatory industry placement for Certificate III in Health Services Assistance. Learn about required documents including immunisation records, police checks, and NDIS Worker Check.',
+    };
+  }
+
   const t = await getTranslations({
     locale,
     namespace: 'hsaPage',
@@ -44,7 +58,33 @@ export default async function Page({
   params: Promise<{ id: string; locale: string }>;
 }) {
   const { id, locale } = await params;
-  
+
+  // Industry Placement page
+  const isIndustryPlacement =
+    id === 'industry-placement-health-services-assistance';
+
+  if (isIndustryPlacement) {
+    return (
+      <div className="pb-40">
+        <Banner
+          slides={[
+            {
+              imgPath: mappingCourseImage[id] || '/courses/health/health_1.png',
+              title: mappingCourseTitle[id],
+              content: '',
+            },
+          ]}
+          dimmed={
+            <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
+          }
+        />
+        <div className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
+          <IndustryPlacementHSA />
+        </div>
+      </div>
+    );
+  }
+
   // Fetch course data from database (with fallback to static files)
   const courseDetails = await getCourseDetails(id, locale);
   const courseInformation = await getCourseInfo(id, locale);
@@ -82,7 +122,7 @@ export default async function Page({
         id={getSectionId('Units')}
         className={cn(
           'max-w-[1600px] mx-auto px-20 md:px-80 py-40 gap-40',
-          'grid grid-cols-1 lg:grid-cols-2'
+          'grid grid-cols-1 lg:grid-cols-2',
         )}
       >
         <Units id={id} />
