@@ -55,7 +55,7 @@ async function Page() {
           <div className="w-full md:w-1/3 p-8 text-center">
             <h2 className="text-xl font-semibold mb-18">{t('moodleTitle')}</h2>
             <Link
-              href="https://moodle.abm.edu.au/moodle/login/index.php"
+              href="https://moodle.abm.edu.au/login/index.php"
               className="inline-block w-full bg-black text-white font-medium py-12 hover:bg-black/80 transition"
             >
               {t('moodleLogin')}

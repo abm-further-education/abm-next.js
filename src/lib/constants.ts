@@ -234,7 +234,7 @@ export const studyWithUsMenu = [
 export const currentStudentsMenu = [
   {
     title: 'Moodle Login',
-    href: 'https://moodle.abm.edu.au/moodle/login/index.php',
+    href: 'https://moodle.abm.edu.au/login/index.php',
   },
   {
     title: 'Student Portal',
