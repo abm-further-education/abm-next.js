@@ -43,7 +43,7 @@ export default function TablesEditor({
           <div className="flex items-center gap-2 px-3 py-2 bg-white/80 border-b border-gray-200">
             <Table2 className="w-4 h-4" />
             <span className="text-sm font-medium text-gray-700">
-              표 {index + 1}
+              Table {index + 1}
             </span>
             <div className="flex-1" />
             {!disabled && (
@@ -138,7 +138,7 @@ function SimpleTableEditor({
                   type="text"
                   value={h}
                   onChange={(e) => updateHeader(i, e.target.value)}
-                  placeholder={`헤더 ${i + 1}`}
+                  placeholder={`Header ${i + 1}`}
                   className="w-full min-w-[80px] px-1 py-0.5 text-sm"
                   disabled={disabled}
                 />
@@ -201,7 +201,7 @@ function SimpleTableEditor({
           onClick={addRow}
           className="mt-2 px-2 py-1 text-sm border border-emerald-300 rounded hover:bg-emerald-50"
         >
-          + 행 추가
+          + Add row
         </button>
       )}
     </div>
