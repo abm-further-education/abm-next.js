@@ -23,7 +23,9 @@ const LOCALES: { code: Locale; label: string }[] = [
   { code: 'id', label: 'Indonesian' },
 ];
 
-function toPayload(items: DescriptionItem[]): string | string[] | DescriptionItem[] {
+function toPayload(
+  items: DescriptionItem[],
+): string | string[] | DescriptionItem[] {
   if (items.length === 0) return '';
   if (items.length === 1 && typeof items[0] === 'string') return items[0];
   const allStrings = items.every((v) => typeof v === 'string');
@@ -233,7 +235,6 @@ export default function CourseEditDetails({
           <FaqSectionCard
             key={d.id}
             detail={d}
-            displayOrder={idx}
             saving={saving === d.section_key}
             onSave={(title, faqItems) =>
               handleSaveFaq(d.section_key, title, faqItems, idx)
@@ -244,7 +245,6 @@ export default function CourseEditDetails({
           <SectionCard
             key={d.id}
             detail={d}
-            displayOrder={idx}
             saving={saving === d.section_key}
             onSave={(title, items) =>
               handleSave(d.section_key, title, items, idx)
@@ -258,8 +258,7 @@ export default function CourseEditDetails({
       {adding ? (
         <div className="border rounded p-4 space-y-3 bg-gray-50">
           <h4 className="text-sm font-medium text-gray-700">
-            Add section —{' '}
-            {LOCALES.find((l) => l.code === activeLocale)?.label}
+            Add section — {LOCALES.find((l) => l.code === activeLocale)?.label}
           </h4>
           <div className="grid grid-cols-2 gap-3">
             <div>
@@ -307,9 +306,7 @@ export default function CourseEditDetails({
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-600 mb-1">
-              Content
-            </label>
+            <label className="block text-sm text-gray-600 mb-1">Content</label>
             {newSection.contentType === 'faq' ? (
               <FaqEditor
                 items={newSection.faqItems}
@@ -359,13 +356,11 @@ export default function CourseEditDetails({
 
 function SectionCard({
   detail,
-  displayOrder,
   saving,
   onSave,
   onDelete,
 }: {
   detail: DbCourseDetail;
-  displayOrder: number;
   saving: boolean;
   onSave: (title: string, items: DescriptionItem[]) => void;
   onDelete: () => void;
@@ -389,7 +384,11 @@ function SectionCard({
           </span>
           <span className="font-medium text-sm truncate">{detail.title}</span>
           <span className="text-xs text-gray-400">
-            ({Array.isArray(detail.description) ? `${(detail.description as unknown[]).length} items` : 'text'})
+            (
+            {Array.isArray(detail.description)
+              ? `${(detail.description as unknown[]).length} items`
+              : 'text'}
+            )
           </span>
         </div>
         <div className="flex items-center gap-2 shrink-0">
@@ -420,9 +419,7 @@ function SectionCard({
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-600 mb-1">
-              Content
-            </label>
+            <label className="block text-sm text-gray-600 mb-1">Content</label>
             <DescriptionBlockEditor
               items={editItems}
               onChange={setEditItems}
@@ -447,13 +444,11 @@ function SectionCard({
 
 function FaqSectionCard({
   detail,
-  displayOrder,
   saving,
   onSave,
   onDelete,
 }: {
   detail: DbCourseDetail;
-  displayOrder: number;
   saving: boolean;
   onSave: (title: string, faqItems: FaqItem[]) => void;
   onDelete: () => void;
