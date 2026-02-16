@@ -2,6 +2,79 @@ import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { getAdminSession } from '@/lib/auth';
 import LogoutButton from './LogoutButton';
+import {
+  Users,
+  Newspaper,
+  GraduationCap,
+  MessageSquareQuote,
+  CalendarDays,
+  FileText,
+  ArrowRight,
+  Home,
+} from 'lucide-react';
+
+const menuItems = [
+  {
+    href: '/users',
+    icon: Users,
+    title: 'User List',
+    description: 'View and manage user list',
+    color: 'bg-blue-500',
+    lightColor: 'bg-blue-50',
+    hoverColor: 'hover:border-blue-300',
+    textColor: 'text-blue-600',
+  },
+  {
+    href: '/admin/news',
+    icon: Newspaper,
+    title: 'News Management',
+    description: 'Write and manage newsletters',
+    color: 'bg-emerald-500',
+    lightColor: 'bg-emerald-50',
+    hoverColor: 'hover:border-emerald-300',
+    textColor: 'text-emerald-600',
+  },
+  {
+    href: '/admin/courses',
+    icon: GraduationCap,
+    title: 'Course Management',
+    description: 'Manage courses, translations, details & short courses',
+    color: 'bg-violet-500',
+    lightColor: 'bg-violet-50',
+    hoverColor: 'hover:border-violet-300',
+    textColor: 'text-violet-600',
+  },
+  {
+    href: '/admin/testimonials',
+    icon: MessageSquareQuote,
+    title: 'Testimonials Management',
+    description: 'Manage testimonials',
+    color: 'bg-amber-500',
+    lightColor: 'bg-amber-50',
+    hoverColor: 'hover:border-amber-300',
+    textColor: 'text-amber-600',
+  },
+  {
+    href: '/admin/academic-calendar',
+    icon: CalendarDays,
+    title: 'Academic Calendar',
+    description: 'Manage term dates and holidays',
+    color: 'bg-rose-500',
+    lightColor: 'bg-rose-50',
+    hoverColor: 'hover:border-rose-300',
+    textColor: 'text-rose-600',
+  },
+  {
+    href: '/admin/policies',
+    icon: FileText,
+    title: 'Policies & Procedures',
+    description: 'Manage policy documents and forms',
+    color: 'bg-cyan-500',
+    lightColor: 'bg-cyan-50',
+    hoverColor: 'hover:border-cyan-300',
+    textColor: 'text-cyan-600',
+  },
+];
 
 export default async function AdminPage() {
   const session = await getAdminSession();
@@ -11,93 +84,69 @@ export default async function AdminPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg p-6 mb-8">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                Admin Dashboard
-              </h1>
-              <p className="text-gray-600">Welcome, {session.user.email}</p>
-            </div>
-            <div className="flex gap-3 items-center">
-              <Link
-                href="/"
-                className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
-              >
-                ← Back to Website
-              </Link>
-              <LogoutButton />
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="mx-auto">
+          {/* Header */}
+          <div className="p-6 mb-8">
+            <div className="flex justify-between items-center">
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900 mb-1">
+                  Admin Dashboard
+                </h1>
+                <p className="text-gray-500 text-sm">
+                  Welcome, {session.user.email}
+                </p>
+              </div>
+              <div className="flex gap-10 items-center">
+                <Link
+                  href="/"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 bg-gray-100 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all text-sm font-medium"
+                >
+                  <Home className="w-16 h-16" />
+                  Back to Website
+                </Link>
+                <LogoutButton />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4">
-            Management Menu
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link
-              href="/users"
-              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <h3 className="font-semibold text-gray-800 mb-2">User List</h3>
-              <p className="text-sm text-gray-600">View and manage user list</p>
-            </Link>
-            <Link
-              href="/admin/news"
-              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <h3 className="font-semibold text-gray-800 mb-2">
-                News Management
-              </h3>
-              <p className="text-sm text-gray-600">
-                Write and manage newsletters
-              </p>
-            </Link>
-            <Link
-              href="/admin/courses"
-              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <h3 className="font-semibold text-gray-800 mb-2">
-                Course Management
-              </h3>
-              <p className="text-sm text-gray-600">
-                Manage courses, translations, details & short courses
-              </p>
-            </Link>
-            <Link
-              href="/admin/testimonials"
-              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <h3 className="font-semibold text-gray-800 mb-2">
-                Testimonials Management
-              </h3>
-              <p className="text-sm text-gray-600">Manage testimonials</p>
-            </Link>
-            <Link
-              href="/admin/academic-calendar"
-              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <h3 className="font-semibold text-gray-800 mb-2">
-                Academic Calendar
-              </h3>
-              <p className="text-sm text-gray-600">
-                Manage term dates and holidays
-              </p>
-            </Link>
-            <Link
-              href="/admin/testimonials/migrate"
-              className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <h3 className="font-semibold text-gray-800 mb-2">
-                Migrate Testimonials
-              </h3>
-              <p className="text-sm text-gray-600">
-                Migrate testimonials to database
-              </p>
-            </Link>
+          {/* Menu Grid */}
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold text-gray-700 mb-4 px-1">
+              Management Menu
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {menuItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`group relative flex flex-col p-5 bg-white rounded-xl border-2 border-gray-100 ${item.hoverColor} hover:shadow-md transition-all duration-200`}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div
+                        className={`flex-shrink-0 w-24 h-24 ${item.color} rounded-lg flex items-center justify-center shadow-sm`}
+                      >
+                        <Icon className="w-16 h-16 text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-gray-900 text-sm mb-1 group-hover:text-gray-700">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="absolute top-5 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ArrowRight className={`w-4 h-4 ${item.textColor}`} />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -32,11 +32,34 @@ export function parseBoldText(text: string): React.ReactNode[] {
           return React.createElement(
             'strong',
             { key: `${brIndex}-${index}` },
-            boldText
+            boldText,
           );
         }
         return part;
       });
     })
     .flat();
+}
+
+export function getCourseStyle(course: string): { bg: string; text: string } {
+  const c = course.toLowerCase();
+  if (c.includes('cookery') || c.includes('hospitality')) {
+    return { bg: 'bg-orange-50', text: 'text-orange-700' };
+  }
+  if (c.includes('fitness')) {
+    return { bg: 'bg-red-50', text: 'text-red-700' };
+  }
+  if (
+    c.includes('business') ||
+    c.includes('project') ||
+    c.includes('hr') ||
+    c.includes('human resource') ||
+    c.includes('management')
+  ) {
+    return { bg: 'bg-blue-50', text: 'text-blue-700' };
+  }
+  if (c.includes('health')) {
+    return { bg: 'bg-green-50', text: 'text-green-700' };
+  }
+  return { bg: 'bg-gray-50', text: 'text-gray-700' };
 }

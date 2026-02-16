@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { getAdminSession } from '@/lib/auth';
 import MigrateTestimonialsForm from '../migrate/MigrateTestimonialsForm';
 import { testimonials, fitnessTestimonials } from '@/lib/testimonial';
+import AdminBackButton from '@/components/admin/AdminBackButton';
 
 export default async function MigrateTestimonialsPage() {
   const session = await getAdminSession();
@@ -16,6 +17,9 @@ export default async function MigrateTestimonialsPage() {
     <div className="min-h-screen mt-140">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
+          <div className="mb-4">
+            <AdminBackButton href="/admin/testimonials" label="Testimonials" />
+          </div>
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
               Migrate Testimonials Data to Supabase

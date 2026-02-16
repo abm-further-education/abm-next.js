@@ -2,6 +2,7 @@ import {
   S3Client,
   PutObjectCommand,
   GetObjectCommand,
+  DeleteObjectCommand,
 } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
@@ -130,6 +131,98 @@ export function generateUniqueFileName(originalFileName: string): string {
   const randomString = Math.random().toString(36).substring(2, 15);
   const extension = originalFileName.split('.').pop() || 'jpg';
   return `${timestamp}-${randomString}.${extension}`;
+}
+
+/**
+ * 파일을 R2에 업로드합니다 (이미지 외 PDF 등 모든 파일 지원)
+ * @param file - 업로드할 파일 (File 또는 Buffer)
+ * @param fileName - 저장할 파일명
+ * @param directory - 저장할 디렉토리 (기본값: 'policies')
+ * @param contentType - Content-Type (기본값: 'application/octet-stream')
+ * @returns 업로드된 파일의 URL 경로
+ */
+export async function uploadFileToR2(
+  file: File | Buffer,
+  fileName: string,
+  directory: string = 'policies',
+  contentType?: string
+): Promise<string> {
+  const bucketName = process.env.R2_BUCKET;
+
+  if (!bucketName) {
+    throw new Error('R2_BUCKET 환경 변수가 설정되지 않았습니다.');
+  }
+
+  const key = `${directory}/${fileName}`;
+
+  let buffer: Buffer;
+  if (file instanceof File) {
+    const arrayBuffer = await file.arrayBuffer();
+    buffer = Buffer.from(arrayBuffer);
+  } else {
+    buffer = file;
+  }
+
+  const resolvedContentType =
+    contentType || (file instanceof File ? file.type : 'application/octet-stream');
+
+  try {
+    const command = new PutObjectCommand({
+      Bucket: bucketName,
+      Key: key,
+      Body: buffer,
+      ContentType: resolvedContentType,
+    });
+
+    await s3Client.send(command);
+
+    const publicUrl = process.env.R2_PUBLIC_URL
+      ? `${process.env.R2_PUBLIC_URL}/${key}`
+      : key;
+
+    return publicUrl;
+  } catch (error) {
+    console.error('R2 파일 업로드 오류:', error);
+    throw new Error(
+      `파일 업로드 실패: ${
+        error instanceof Error ? error.message : '알 수 없는 오류'
+      }`
+    );
+  }
+}
+
+/**
+ * R2에서 파일을 삭제합니다
+ * @param fileKey - 삭제할 파일의 R2 key (예: 'policies/filename.pdf')
+ */
+export async function deleteFileFromR2(fileKey: string): Promise<void> {
+  const bucketName = process.env.R2_BUCKET;
+
+  if (!bucketName) {
+    throw new Error('R2_BUCKET 환경 변수가 설정되지 않았습니다.');
+  }
+
+  // R2_PUBLIC_URL이 포함된 전체 URL인 경우 키만 추출
+  let key = fileKey;
+  if (process.env.R2_PUBLIC_URL && fileKey.startsWith(process.env.R2_PUBLIC_URL)) {
+    key = fileKey.replace(`${process.env.R2_PUBLIC_URL}/`, '');
+  }
+
+  try {
+    const command = new DeleteObjectCommand({
+      Bucket: bucketName,
+      Key: key,
+    });
+
+    await s3Client.send(command);
+  } catch (error) {
+    console.error('R2 파일 삭제 오류:', error);
+    throw new Error(
+      `파일 삭제 실패: ${
+        error instanceof Error ? error.message : '알 수 없는 오류'
+      }`
+    );
+  }
 }
 
 /**

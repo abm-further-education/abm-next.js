@@ -6,6 +6,7 @@ import { getAdminSession } from '@/lib/auth';
 import { getAcademicEvents } from '@/lib/academic-calendar-db';
 import DeleteEventButton from './DeleteEventButton';
 import SeedButton from './SeedButton';
+import AdminBackButton from '@/components/admin/AdminBackButton';
 
 export default async function AdminAcademicCalendarPage() {
   const session = await getAdminSession();
@@ -38,6 +39,9 @@ export default async function AdminAcademicCalendarPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-4">
+          <AdminBackButton />
+        </div>
         <div className="flex justify-between items-center mb-6">
           <div>
             <h1 className="text-3xl font-bold text-gray-800">
@@ -48,12 +52,6 @@ export default async function AdminAcademicCalendarPage() {
             </p>
           </div>
           <div className="flex gap-3">
-            <Link
-              href="/admin"
-              className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
-            >
-              &larr; Dashboard
-            </Link>
             <SeedButton hasEvents={events.length > 0} />
             <Link
               href="/admin/academic-calendar/new"

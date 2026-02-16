@@ -4,6 +4,7 @@ import { getAdminSession } from '@/lib/auth';
 import { getAdminShortCourseList } from '@/lib/course-db';
 import { PlusIcon } from 'lucide-react';
 import DeleteShortCourseButton from '@/components/admin/DeleteShortCourseButton';
+import AdminBackButton from '@/components/admin/AdminBackButton';
 
 export default async function ShortCoursesAdminPage() {
   const session = await getAdminSession();
@@ -14,6 +15,9 @@ export default async function ShortCoursesAdminPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-4">
+          <AdminBackButton href="/admin/courses" label="Courses" />
+        </div>
         <div className="bg-white rounded-lg p-6 mb-8">
           <div className="flex justify-between items-center">
             <div>
@@ -23,12 +27,6 @@ export default async function ShortCoursesAdminPage() {
               <p className="text-gray-600">Manage short courses (FSS, RSA, etc.)</p>
             </div>
             <div className="flex gap-3">
-              <Link
-                href="/admin/courses"
-                className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700"
-              >
-                ← Back to Courses
-              </Link>
               <Link
                 href="/admin/courses/short-courses/new"
                 className="px-4 py-2 bg-primary-bk text-white rounded-md hover:bg-primary flex items-center"

@@ -2,7 +2,9 @@ import { redirect } from 'next/navigation';
 import { getAdminSession } from '@/lib/auth';
 import { getTestimonials } from '@/lib/testimonial-db';
 import Link from 'next/link';
-import { PlusIcon } from 'lucide-react';
+import { PencilIcon, PlusIcon } from 'lucide-react';
+import { getCourseStyle } from '@/lib';
+import AdminBackButton from '@/components/admin/AdminBackButton';
 
 export default async function TestimonialsListPage() {
   const session = await getAdminSession();
@@ -16,6 +18,9 @@ export default async function TestimonialsListPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-4">
+          <AdminBackButton />
+        </div>
         <div className="bg-white rounded-lg p-6 mb-8">
           <div className="flex justify-between items-center">
             <div>
@@ -26,7 +31,7 @@ export default async function TestimonialsListPage() {
             </div>
             <Link
               href="/admin/testimonials/new"
-              className="px-4 py-2 bg-primary-bk text-white rounded-md hover:bg-white transition-colors flex items-center"
+              className="px-4 py-2 bg-primary-bk text-white rounded-md transition-colors flex items-center"
             >
               <PlusIcon className="w-14 h-14 mr-2" />
               Add Testimonial
@@ -70,7 +75,9 @@ export default async function TestimonialsListPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                        <span
+                          className={`p-4 inline-flex text-xs leading-5 font-semibold rounded-full ${getCourseStyle(testimonial.course).bg} ${getCourseStyle(testimonial.course).text}`}
+                        >
                           {testimonial.course}
                         </span>
                       </td>
@@ -94,8 +101,9 @@ export default async function TestimonialsListPage() {
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                         <Link
                           href={`/admin/testimonials/${testimonial.id}/edit`}
-                          className="text-blue-600 hover:text-blue-900 mr-4"
+                          className="mr-4 flex items-center gap-4"
                         >
+                          <PencilIcon className="w-16 h-16" />
                           Edit
                         </Link>
                       </td>
@@ -110,4 +118,3 @@ export default async function TestimonialsListPage() {
     </div>
   );
 }
-

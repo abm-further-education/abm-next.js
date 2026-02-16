@@ -1,10 +1,10 @@
 export const dynamic = 'force-dynamic';
 
 import { redirect, notFound } from 'next/navigation';
-import Link from 'next/link';
 import { getAdminSession } from '@/lib/auth';
 import { getAcademicEventById } from '@/lib/academic-calendar-db';
 import AcademicEventForm from '@/components/admin/AcademicEventForm';
+import AdminBackButton from '@/components/admin/AdminBackButton';
 
 interface EditAcademicEventPageProps {
   params: Promise<{ id: string }>;
@@ -28,13 +28,10 @@ export default async function EditAcademicEventPage({
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
+        <div className="mb-4">
+          <AdminBackButton href="/admin/academic-calendar" label="Academic Calendar" />
+        </div>
         <div className="mb-6">
-          <Link
-            href="/admin/academic-calendar"
-            className="text-orange-600 hover:text-orange-800 text-sm font-medium"
-          >
-            &larr; Back to Academic Calendar
-          </Link>
           <h1 className="text-3xl font-bold text-gray-800 mt-2">
             Edit Event: {event.title}
           </h1>

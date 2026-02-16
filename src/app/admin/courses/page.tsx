@@ -4,6 +4,7 @@ import { getAdminSession } from '@/lib/auth';
 import { getAdminCourseList } from '@/lib/course-db';
 import { PlusIcon, CalendarIcon } from 'lucide-react';
 import DeleteCourseButton from '@/components/admin/DeleteCourseButton';
+import AdminBackButton from '@/components/admin/AdminBackButton';
 
 export default async function CoursesAdminPage() {
   const session = await getAdminSession();
@@ -15,6 +16,9 @@ export default async function CoursesAdminPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-4">
+          <AdminBackButton />
+        </div>
         <div className="bg-white rounded-lg p-6 mb-8">
           <div className="flex justify-between items-center">
             <div>
