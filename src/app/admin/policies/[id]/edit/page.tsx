@@ -43,7 +43,7 @@ export default async function EditPolicyDocumentPage({
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="bg-white p-6">
           <PolicyDocumentForm
             mode="edit"
             initialData={document}

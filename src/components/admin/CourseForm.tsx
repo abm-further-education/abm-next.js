@@ -33,6 +33,7 @@ export default function CourseForm({ mode, course }: CourseFormProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'basic' | 'translations'>('basic');
+  const [activeLocale, setActiveLocale] = useState<LocaleCode>('en');
   const [id, setId] = useState(course?.id || '');
   const [category, setCategory] = useState(course?.category || 'cookery');
   const [type, setType] = useState(course?.type || 'full-course');
@@ -255,10 +256,40 @@ export default function CourseForm({ mode, course }: CourseFormProps) {
       )}
 
       {activeTab === 'translations' && (
-        <div className="space-y-6">
-          {LOCALES.map((loc) => (
-            <div key={loc.code} className="border rounded-lg p-4">
-              <h3 className="font-medium mb-3">{loc.label} ({loc.code})</h3>
+        <div className="space-y-4">
+          {/* Locale sub-tabs */}
+          <div className="flex gap-1 border-b overflow-x-auto">
+            {LOCALES.map((loc) => {
+              const hasContent = !!(translations[loc.code].title || translations[loc.code].description);
+              const isActive = activeLocale === loc.code;
+              return (
+                <button
+                  key={loc.code}
+                  type="button"
+                  onClick={() => setActiveLocale(loc.code)}
+                  className={`relative px-3 py-2 text-sm whitespace-nowrap transition-colors ${
+                    isActive
+                      ? 'border-b-2 border-primary-bk font-medium text-gray-900'
+                      : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  {loc.label}
+                  {hasContent && (
+                    <span
+                      className={`ml-1.5 inline-block w-1.5 h-1.5 rounded-full ${
+                        isActive ? 'bg-gray-800' : 'bg-green-500'
+                      }`}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Active locale form */}
+          {(() => {
+            const loc = LOCALES.find((l) => l.code === activeLocale)!;
+            return (
               <div className="space-y-3">
                 <div>
                   <label className="block text-sm text-gray-600 mb-1">Title</label>
@@ -272,6 +303,7 @@ export default function CourseForm({ mode, course }: CourseFormProps) {
                       }))
                     }
                     className="w-full px-4 py-2 border rounded-md"
+                    placeholder={`Title in ${loc.label}`}
                   />
                 </div>
                 <div>
@@ -286,11 +318,12 @@ export default function CourseForm({ mode, course }: CourseFormProps) {
                     }
                     rows={4}
                     className="w-full px-4 py-2 border rounded-md"
+                    placeholder={`Description in ${loc.label}`}
                   />
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })()}
         </div>
       )}
 

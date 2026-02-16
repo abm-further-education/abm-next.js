@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { AlignJustify, ChevronDown, ChevronUp, X } from 'lucide-react';
-import { useParams } from 'next/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import {
   Disclosure,
@@ -25,11 +24,11 @@ import {
   shortCourseMenu,
   studyWithUsMenu,
 } from '@/lib';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 function MobileNav() {
   const t = useTranslations('nav');
-  const params = useParams();
+  const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -344,7 +343,7 @@ function MobileNav() {
             <li>
               <Link
                 onClick={toggleMenu}
-                href={`/${params.locale}/contact`}
+                href={`/${locale}/contact`}
                 className="block p-3 hover:underline"
               >
                 {t('menu.contact')}

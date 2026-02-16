@@ -3,8 +3,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { useParams, useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 import MobileNav from './MobileNav';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ChevronRight } from 'lucide-react';
@@ -32,7 +32,7 @@ const allMenus = [
 ];
 
 function Nav() {
-  const params = useParams();
+  const locale = useLocale();
   // const pathname = usePathname();
   const t = useTranslations('nav');
   const tStudy = useTranslations('studyWithUs');
@@ -66,7 +66,7 @@ function Nav() {
           .filter((item) => {
             // localeOnly가 지정된 경우 현재 locale과 일치하는지 확인
             if (item.localeOnly) {
-              return params.locale === item.localeOnly;
+              return locale === item.localeOnly;
             }
             return true;
           })
@@ -156,7 +156,7 @@ function Nav() {
         '/courses/',
         '/'
       );
-      router.push(`/${params.locale}${cleanHref}`);
+      router.push(`/${locale}${cleanHref}`);
       setSearch('');
       setResults([]);
       setHighlightedIndex(-1);
@@ -190,7 +190,7 @@ function Nav() {
           onMouseEnter={() => setSubMenu('')}
         >
           <div className="hidden lg:flex gap-20">
-            <Link href={`/${params.locale}/current-students`}>
+            <Link href={`/${locale}/current-students`}>
               {t('currentStudents')}
             </Link>
             <Link
@@ -309,7 +309,7 @@ function Nav() {
                         onMouseEnter={() => setHighlightedIndex(idx)}
                         onClick={() => {
                           const cleanHref = menu.href.replace('/courses/', '/');
-                          handleResultClick(`/${params.locale}${cleanHref}`);
+                          handleResultClick(`/${locale}${cleanHref}`);
                         }}
                       >
                         {menu.title}
@@ -340,7 +340,7 @@ function Nav() {
                           href={
                             menu.href.startsWith('http')
                               ? menu.href
-                              : `/${params.locale}/${menu.href}`
+                              : `/${locale}/${menu.href}`
                           }
                           target={
                             menu.href.startsWith('http') ? '_blank' : undefined
@@ -373,7 +373,7 @@ function Nav() {
                                   {li.title}
                                 </Link>
                               ) : (
-                                <Link href={`/${params.locale}/${li.href}`}>
+                                <Link href={`/${locale}/${li.href}`}>
                                   {li.title}
                                 </Link>
                               )}
@@ -415,7 +415,7 @@ function Nav() {
                 href={
                   item.href.startsWith('http')
                     ? item.href
-                    : `/${params.locale}/${item.href}`
+                    : `/${locale}/${item.href}`
                 }
                 target={item.href.startsWith('http') ? '_blank' : undefined}
                 rel={

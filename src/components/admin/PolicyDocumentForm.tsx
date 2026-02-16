@@ -32,12 +32,12 @@ export default function PolicyDocumentForm({
 
   const [title, setTitle] = useState(initialData?.title || '');
   const [description, setDescription] = useState(
-    initialData?.description || ''
+    initialData?.description || '',
   );
   const [filename, setFilename] = useState(initialData?.filename || '');
   const [fileUrl, setFileUrl] = useState(initialData?.file_url || '');
   const [displayOrder, setDisplayOrder] = useState(
-    initialData?.display_order || 0
+    initialData?.display_order || 0,
   );
   const [isActive, setIsActive] = useState(initialData?.is_active ?? true);
 
@@ -105,14 +105,14 @@ export default function PolicyDocumentForm({
         toast.success(
           mode === 'create'
             ? 'Policy document created successfully.'
-            : 'Policy document updated successfully.'
+            : 'Policy document updated successfully.',
         );
         router.push('/admin/policies');
         router.refresh();
       }
     } catch (error) {
       toast.error(
-        error instanceof Error ? error.message : 'An error occurred.'
+        error instanceof Error ? error.message : 'An error occurred.',
       );
     } finally {
       setLoading(false);
@@ -123,7 +123,7 @@ export default function PolicyDocumentForm({
     if (!onDelete) return;
 
     const confirmed = window.confirm(
-      'Are you sure you want to delete this policy document? This action cannot be undone.'
+      'Are you sure you want to delete this policy document? This action cannot be undone.',
     );
     if (!confirmed) return;
 
@@ -136,9 +136,7 @@ export default function PolicyDocumentForm({
         router.refresh();
       }
     } catch (error) {
-      toast.error(
-        error instanceof Error ? error.message : 'Failed to delete.'
-      );
+      toast.error(error instanceof Error ? error.message : 'Failed to delete.');
     } finally {
       setLoading(false);
     }
@@ -183,7 +181,7 @@ export default function PolicyDocumentForm({
 
         {fileUrl ? (
           <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-md">
-            <FileText className="w-8 h-8 text-green-600 flex-shrink-0" />
+            <FileText className="w-16 h-16 text-green-600 flex-shrink-0" />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-green-800 truncate">
                 {filename}
@@ -274,9 +272,12 @@ export default function PolicyDocumentForm({
           id="is_active"
           checked={isActive}
           onChange={(e) => setIsActive(e.target.checked)}
-          className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+          className="w-16 h-16 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
         />
-        <label htmlFor="is_active" className="text-sm font-medium text-gray-700">
+        <label
+          htmlFor="is_active"
+          className="text-sm font-medium text-gray-700"
+        >
           Active (visible on the public page)
         </label>
       </div>
@@ -292,8 +293,8 @@ export default function PolicyDocumentForm({
             {loading
               ? 'Saving...'
               : mode === 'create'
-              ? 'Create Document'
-              : 'Update Document'}
+                ? 'Create Document'
+                : 'Update Document'}
           </button>
           <button
             type="button"

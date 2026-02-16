@@ -10,12 +10,16 @@ interface DeleteCourseButtonProps {
   courseTitle: string;
 }
 
-export default function DeleteCourseButton({ courseId, courseTitle }: DeleteCourseButtonProps) {
+export default function DeleteCourseButton({
+  courseId,
+  courseTitle,
+}: DeleteCourseButtonProps) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleDelete = async () => {
-    if (!confirm(`Delete course "${courseTitle}"? This cannot be undone.`)) return;
+    if (!confirm(`Delete course "${courseTitle}"? This cannot be undone.`))
+      return;
     setLoading(true);
     try {
       await deleteCourseAction(courseId);
@@ -36,7 +40,7 @@ export default function DeleteCourseButton({ courseId, courseTitle }: DeleteCour
       disabled={loading}
       className="text-red-600 hover:text-red-800 hover:underline text-sm disabled:opacity-50"
     >
-      {loading ? 'Deleting...' : 'Delete'}
+      {loading ? 'Deleting the course...' : 'Delete the course'}
     </button>
   );
 }

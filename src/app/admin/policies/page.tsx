@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import { getAdminSession } from '@/lib/auth';
 import { getAllPolicyDocuments } from '@/lib/policy-documents-db';
 import Link from 'next/link';
-import { PlusIcon, FileText } from 'lucide-react';
+import { PlusIcon, FileText, PencilIcon } from 'lucide-react';
 import DeletePolicyButton from './DeletePolicyButton';
 import AdminBackButton from '@/components/admin/AdminBackButton';
 
@@ -59,9 +59,6 @@ export default async function PoliciesListPage() {
                 <thead className="bg-gray-50">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Order
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Title
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -81,9 +78,6 @@ export default async function PoliciesListPage() {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {documents.map((doc) => (
                     <tr key={doc.id}>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {doc.display_order}
-                      </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="text-sm font-medium text-gray-900">
                           {doc.title}
@@ -96,7 +90,7 @@ export default async function PoliciesListPage() {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center gap-2">
-                          <FileText className="w-4 h-4 text-red-500 flex-shrink-0" />
+                          <FileText className="w-16 h-16 text-neutral-600 flex-shrink-0" />
                           <span className="text-sm text-gray-600 truncate max-w-[200px]">
                             {doc.filename}
                           </span>
@@ -104,7 +98,7 @@ export default async function PoliciesListPage() {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
-                          className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                          className={`p-4 inline-flex text-xs leading-5 font-semibold rounded-full ${
                             doc.is_active
                               ? 'bg-green-100 text-green-800'
                               : 'bg-gray-100 text-gray-800'
@@ -117,11 +111,12 @@ export default async function PoliciesListPage() {
                         {new Date(doc.updated_at).toLocaleDateString()}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-8">
                           <Link
                             href={`/admin/policies/${doc.id}/edit`}
-                            className="text-blue-600 hover:text-blue-900"
+                            className="flex items-center gap-2"
                           >
+                            <PencilIcon className="w-16 h-16" />
                             Edit
                           </Link>
                           <DeletePolicyButton

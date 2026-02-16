@@ -2,9 +2,10 @@ import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { getAdminSession } from '@/lib/auth';
 import { getAdminCourseList } from '@/lib/course-db';
-import { PlusIcon, CalendarIcon } from 'lucide-react';
+import { PlusIcon, CalendarIcon, PencilIcon } from 'lucide-react';
 import DeleteCourseButton from '@/components/admin/DeleteCourseButton';
 import AdminBackButton from '@/components/admin/AdminBackButton';
+import { getCourseStyle } from '@/lib';
 
 export default async function CoursesAdminPage() {
   const session = await getAdminSession();
@@ -80,7 +81,9 @@ export default async function CoursesAdminPage() {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {fullCourses.map((course) => {
-                    const enTr = course.translations.find((t) => t.locale === 'en');
+                    const enTr = course.translations.find(
+                      (t) => t.locale === 'en',
+                    );
                     return (
                       <tr key={course.id}>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
@@ -90,25 +93,30 @@ export default async function CoursesAdminPage() {
                           {enTr?.title || '-'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <span className="px-2 py-1 text-xs rounded-full bg-gray-100">
+                          <span
+                            className={`px-2 py-1 text-xs rounded-full bg-gray-100 ${getCourseStyle(course.category).bg} ${getCourseStyle(course.category).text}`}
+                          >
                             {course.category}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <span
-                            className={`px-2 py-1 text-xs rounded-full ${
-                              course.is_active ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-600'
+                            className={`px-4 py-2 text-xs rounded-full ${
+                              course.is_active
+                                ? 'bg-green-100 text-green-800'
+                                : 'bg-gray-100 text-gray-600'
                             }`}
                           >
                             {course.is_active ? 'Active' : 'Inactive'}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="flex gap-3">
+                          <div className="flex gap-8">
                             <Link
                               href={`/admin/courses/${course.id}/edit`}
-                              className="text-blue-600 hover:text-blue-900"
+                              className="flex items-center gap-2 text-sm"
                             >
+                              <PencilIcon className="w-16 h-16" />
                               Edit
                             </Link>
                             <DeleteCourseButton

@@ -26,29 +26,17 @@ export default function CourseEditInformation({
   courseId,
   information,
 }: CourseEditInformationProps) {
-  const [editingLocale, setEditingLocale] = useState<Locale | null>(null);
+  const [activeLocale, setActiveLocale] = useState<Locale>('en');
+  const [saving, setSaving] = useState(false);
+
   const infoByLocale = information.reduce((acc, i) => {
     acc[i.locale] = i;
     return acc;
   }, {} as Record<Locale, DbCourseInformation>);
 
-  const [form, setForm] = useState({
-    course_code: '',
-    cricos_code: '',
-    description: '',
-    duration: '',
-    entry_requirement: '',
-    delivery_mode: '',
-    delivery_site: '',
-    additional_info: '',
-    starting_dates: '',
-    tables: '',
-    partners: '',
-  });
-
-  const openEdit = (locale: Locale) => {
+  const buildForm = (locale: Locale) => {
     const info = infoByLocale[locale];
-    setForm({
+    return {
       course_code: info?.course_code || '',
       cricos_code: info?.cricos_code || '',
       description: info?.description || '',
@@ -70,12 +58,18 @@ export default function CourseEditInformation({
         : '',
       tables: info?.tables ? JSON.stringify(info.tables, null, 2) : '',
       partners: info?.partners ? JSON.stringify(info.partners, null, 2) : '',
-    });
-    setEditingLocale(locale);
+    };
+  };
+
+  const [form, setForm] = useState(() => buildForm('en'));
+
+  const switchLocale = (locale: Locale) => {
+    setActiveLocale(locale);
+    setForm(buildForm(locale));
   };
 
   const handleSave = async () => {
-    if (!editingLocale) return;
+    setSaving(true);
     try {
       const formData = new FormData();
       formData.append('course_code', form.course_code);
@@ -90,156 +84,161 @@ export default function CourseEditInformation({
       formData.append('tables', form.tables || '');
       formData.append('partners', form.partners || '');
 
-      await upsertCourseInfoAction(courseId, editingLocale, formData);
+      await upsertCourseInfoAction(courseId, activeLocale, formData);
       toast.success('Information saved');
-      setEditingLocale(null);
       window.location.reload();
     } catch (err) {
       toast.error(err instanceof Error ? err.message : 'Failed');
+    } finally {
+      setSaving(false);
     }
   };
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap gap-2">
-        {LOCALES.map((loc) => (
-          <button
-            key={loc.code}
-            type="button"
-            onClick={() => openEdit(loc.code)}
-            className={`px-3 py-1 rounded text-sm ${
-              infoByLocale[loc.code]
-                ? 'bg-green-100 text-green-800'
-                : 'bg-gray-100 text-gray-600'
-            }`}
-          >
-            {loc.label} {infoByLocale[loc.code] ? '✓' : '+'}
-          </button>
-        ))}
+      {/* Locale Tabs */}
+      <div className="flex gap-1 border-b overflow-x-auto">
+        {LOCALES.map((loc) => {
+          const hasData = !!infoByLocale[loc.code];
+          const isActive = activeLocale === loc.code;
+          return (
+            <button
+              key={loc.code}
+              type="button"
+              onClick={() => switchLocale(loc.code)}
+              className={`relative px-3 py-2 text-sm whitespace-nowrap transition-colors ${
+                isActive
+                  ? 'border-b-2 border-primary-bk font-medium text-gray-900'
+                  : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+              }`}
+            >
+              {loc.label}
+              {hasData && (
+                <span
+                  className={`ml-1.5 inline-block w-1.5 h-1.5 rounded-full ${
+                    isActive ? 'bg-gray-800' : 'bg-green-500'
+                  }`}
+                />
+              )}
+            </button>
+          );
+        })}
       </div>
 
-      {editingLocale && (
-        <div className="border rounded p-4 space-y-3">
-          <h3 className="font-medium">{LOCALES.find((l) => l.code === editingLocale)?.label}</h3>
-          <div className="grid grid-cols-2 gap-2">
-            <div>
-              <label className="block text-sm text-gray-600">Course Code</label>
-              <input
-                type="text"
-                value={form.course_code}
-                onChange={(e) => setForm((f) => ({ ...f, course_code: e.target.value }))}
-                className="w-full px-2 py-1 border rounded"
-              />
-            </div>
-            <div>
-              <label className="block text-sm text-gray-600">CRICOS Code</label>
-              <input
-                type="text"
-                value={form.cricos_code}
-                onChange={(e) => setForm((f) => ({ ...f, cricos_code: e.target.value }))}
-                className="w-full px-2 py-1 border rounded"
-              />
-            </div>
-          </div>
+      {/* Form for active locale */}
+      <div className="space-y-3">
+        <div className="grid grid-cols-2 gap-2">
           <div>
-            <label className="block text-sm text-gray-600">Description</label>
-            <textarea
-              value={form.description}
-              onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
-              rows={4}
-              className="w-full px-2 py-1 border rounded"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600">Duration</label>
+            <label className="block text-sm text-gray-600">Course Code</label>
             <input
               type="text"
-              value={form.duration}
-              onChange={(e) => setForm((f) => ({ ...f, duration: e.target.value }))}
+              value={form.course_code}
+              onChange={(e) => setForm((f) => ({ ...f, course_code: e.target.value }))}
               className="w-full px-2 py-1 border rounded"
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-600">Entry Requirement (JSON)</label>
-            <textarea
-              value={form.entry_requirement}
-              onChange={(e) => setForm((f) => ({ ...f, entry_requirement: e.target.value }))}
-              rows={3}
-              className="w-full px-2 py-1 border rounded font-mono text-sm"
+            <label className="block text-sm text-gray-600">CRICOS Code</label>
+            <input
+              type="text"
+              value={form.cricos_code}
+              onChange={(e) => setForm((f) => ({ ...f, cricos_code: e.target.value }))}
+              className="w-full px-2 py-1 border rounded"
             />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600">Delivery Mode (JSON)</label>
-            <textarea
-              value={form.delivery_mode}
-              onChange={(e) => setForm((f) => ({ ...f, delivery_mode: e.target.value }))}
-              rows={2}
-              className="w-full px-2 py-1 border rounded font-mono text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600">Delivery Site (JSON)</label>
-            <textarea
-              value={form.delivery_site}
-              onChange={(e) => setForm((f) => ({ ...f, delivery_site: e.target.value }))}
-              rows={4}
-              className="w-full px-2 py-1 border rounded font-mono text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600">Additional Info (JSON)</label>
-            <textarea
-              value={form.additional_info}
-              onChange={(e) => setForm((f) => ({ ...f, additional_info: e.target.value }))}
-              rows={2}
-              className="w-full px-2 py-1 border rounded font-mono text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600">Starting Dates (JSON)</label>
-            <textarea
-              value={form.starting_dates}
-              onChange={(e) => setForm((f) => ({ ...f, starting_dates: e.target.value }))}
-              rows={6}
-              className="w-full px-2 py-1 border rounded font-mono text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600">Tables (JSON)</label>
-            <textarea
-              value={form.tables}
-              onChange={(e) => setForm((f) => ({ ...f, tables: e.target.value }))}
-              rows={4}
-              className="w-full px-2 py-1 border rounded font-mono text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600">Partners (JSON)</label>
-            <textarea
-              value={form.partners}
-              onChange={(e) => setForm((f) => ({ ...f, partners: e.target.value }))}
-              rows={4}
-              className="w-full px-2 py-1 border rounded font-mono text-sm"
-            />
-          </div>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={handleSave}
-              className="px-4 py-2 bg-blue-600 text-white rounded"
-            >
-              Save
-            </button>
-            <button
-              type="button"
-              onClick={() => setEditingLocale(null)}
-              className="px-4 py-2 bg-gray-300 rounded"
-            >
-              Cancel
-            </button>
           </div>
         </div>
-      )}
+        <div>
+          <label className="block text-sm text-gray-600">Description</label>
+          <textarea
+            value={form.description}
+            onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))}
+            rows={4}
+            className="w-full px-2 py-1 border rounded"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Duration</label>
+          <input
+            type="text"
+            value={form.duration}
+            onChange={(e) => setForm((f) => ({ ...f, duration: e.target.value }))}
+            className="w-full px-2 py-1 border rounded"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Entry Requirement (JSON)</label>
+          <textarea
+            value={form.entry_requirement}
+            onChange={(e) => setForm((f) => ({ ...f, entry_requirement: e.target.value }))}
+            rows={3}
+            className="w-full px-2 py-1 border rounded font-mono text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Delivery Mode (JSON)</label>
+          <textarea
+            value={form.delivery_mode}
+            onChange={(e) => setForm((f) => ({ ...f, delivery_mode: e.target.value }))}
+            rows={2}
+            className="w-full px-2 py-1 border rounded font-mono text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Delivery Site (JSON)</label>
+          <textarea
+            value={form.delivery_site}
+            onChange={(e) => setForm((f) => ({ ...f, delivery_site: e.target.value }))}
+            rows={4}
+            className="w-full px-2 py-1 border rounded font-mono text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Additional Info (JSON)</label>
+          <textarea
+            value={form.additional_info}
+            onChange={(e) => setForm((f) => ({ ...f, additional_info: e.target.value }))}
+            rows={2}
+            className="w-full px-2 py-1 border rounded font-mono text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Starting Dates (JSON)</label>
+          <textarea
+            value={form.starting_dates}
+            onChange={(e) => setForm((f) => ({ ...f, starting_dates: e.target.value }))}
+            rows={6}
+            className="w-full px-2 py-1 border rounded font-mono text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Tables (JSON)</label>
+          <textarea
+            value={form.tables}
+            onChange={(e) => setForm((f) => ({ ...f, tables: e.target.value }))}
+            rows={4}
+            className="w-full px-2 py-1 border rounded font-mono text-sm"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-gray-600">Partners (JSON)</label>
+          <textarea
+            value={form.partners}
+            onChange={(e) => setForm((f) => ({ ...f, partners: e.target.value }))}
+            rows={4}
+            className="w-full px-2 py-1 border rounded font-mono text-sm"
+          />
+        </div>
+        <div className="flex gap-2 pt-2">
+          <button
+            type="button"
+            onClick={handleSave}
+            disabled={saving}
+            className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+          >
+            {saving ? 'Saving...' : 'Save'}
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
