@@ -25,7 +25,7 @@ export default function AcademicEventForm({
   const [startDate, setStartDate] = useState(event?.start_date || '');
   const [endDate, setEndDate] = useState(event?.end_date || '');
   const [eventType, setEventType] = useState<'term' | 'holiday' | 'event'>(
-    event?.event_type || 'term'
+    event?.event_type || 'term',
   );
   const [color, setColor] = useState(event?.color || '');
   const [description, setDescription] = useState(event?.description || '');
@@ -56,7 +56,7 @@ export default function AcademicEventForm({
     } catch (error) {
       console.error('Form submit error:', error);
       toast.error(
-        error instanceof Error ? error.message : 'An error occurred.'
+        error instanceof Error ? error.message : 'An error occurred.',
       );
     } finally {
       setLoading(false);
@@ -131,12 +131,14 @@ export default function AcademicEventForm({
         <select
           id="event_type"
           value={eventType}
-          onChange={(e) => setEventType(e.target.value as 'term' | 'holiday' | 'event')}
+          onChange={(e) =>
+            setEventType(e.target.value as 'term' | 'holiday' | 'event')
+          }
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
         >
           <option value="term">Term</option>
           <option value="holiday">Holiday</option>
-          <option value="event">School Event</option>
+          <option value="event">Event</option>
         </select>
       </div>
 
@@ -152,7 +154,14 @@ export default function AcademicEventForm({
           <input
             id="color"
             type="color"
-            value={color || (eventType === 'term' ? '#ef7511' : eventType === 'event' ? '#3b82f6' : '#6b7280')}
+            value={
+              color ||
+              (eventType === 'term'
+                ? '#ef7511'
+                : eventType === 'event'
+                  ? '#3b82f6'
+                  : '#6b7280')
+            }
             onChange={(e) => setColor(e.target.value)}
             className="w-12 h-10 p-1 border border-gray-300 rounded-md cursor-pointer"
           />
@@ -160,7 +169,13 @@ export default function AcademicEventForm({
             type="text"
             value={color}
             onChange={(e) => setColor(e.target.value)}
-            placeholder={eventType === 'term' ? '#ef7511' : eventType === 'event' ? '#3b82f6' : '#6b7280'}
+            placeholder={
+              eventType === 'term'
+                ? '#ef7511'
+                : eventType === 'event'
+                  ? '#3b82f6'
+                  : '#6b7280'
+            }
             className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
           {color && (
@@ -174,7 +189,8 @@ export default function AcademicEventForm({
           )}
         </div>
         <p className="mt-1 text-xs text-gray-500">
-          Default: Terms use orange (#ef7511), Holidays use gray (#6b7280), School Events use blue (#3b82f6)
+          Default: Terms use orange (#ef7511), Holidays use gray (#6b7280),
+          Events use blue (#3b82f6)
         </p>
       </div>
 

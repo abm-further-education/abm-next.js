@@ -208,7 +208,7 @@ export default function AcademicCalendar({ events }: AcademicCalendarProps) {
                     {selectedEvent.eventType === 'term'
                       ? 'Term'
                       : selectedEvent.eventType === 'event'
-                        ? 'School Event'
+                        ? 'Event'
                         : 'Holiday'}
                   </span>
                 </p>

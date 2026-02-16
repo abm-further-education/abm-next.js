@@ -123,7 +123,7 @@ export default async function AdminAcademicCalendarPage() {
                               {event.event_type === 'term'
                                 ? 'Term'
                                 : event.event_type === 'event'
-                                  ? 'School Event'
+                                  ? 'Event'
                                   : 'Holiday'}
                             </span>
                           </td>
