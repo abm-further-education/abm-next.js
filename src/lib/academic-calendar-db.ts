@@ -7,7 +7,7 @@ export interface AcademicEvent {
   title: string;
   start_date: string;
   end_date: string;
-  event_type: 'term' | 'holiday';
+  event_type: 'term' | 'holiday' | 'event';
   color?: string | null;
   description?: string | null;
   created_at: string;

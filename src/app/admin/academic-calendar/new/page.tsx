@@ -12,17 +12,20 @@ export default async function NewAcademicEventPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="mx-auto px-4 py-8">
+      <div className="max-w-5xl mx-auto">
         <div className="mb-4">
-          <AdminBackButton href="/admin/academic-calendar" label="Academic Calendar" />
+          <AdminBackButton
+            href="/admin/academic-calendar"
+            label="Academic Calendar"
+          />
         </div>
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-800 mt-2">
             Create New Event
           </h1>
         </div>
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-white rounded-lg p-6">
           <AcademicEventForm mode="create" />
         </div>
       </div>

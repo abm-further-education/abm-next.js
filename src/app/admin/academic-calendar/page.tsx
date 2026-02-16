@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { getAdminSession } from '@/lib/auth';
 import { getAcademicEvents } from '@/lib/academic-calendar-db';
 import DeleteEventButton from './DeleteEventButton';
-import SeedButton from './SeedButton';
+
 import AdminBackButton from '@/components/admin/AdminBackButton';
+import { PencilIcon } from 'lucide-react';
 
 export default async function AdminAcademicCalendarPage() {
   const session = await getAdminSession();
@@ -47,15 +48,13 @@ export default async function AdminAcademicCalendarPage() {
             <h1 className="text-3xl font-bold text-gray-800">
               Academic Calendar Management
             </h1>
-            <p className="text-gray-600 mt-1">
-              Manage term dates and holidays
-            </p>
+            <p className="text-gray-600 mt-1">Manage term dates and holidays</p>
           </div>
           <div className="flex gap-3">
-            <SeedButton hasEvents={events.length > 0} />
+            {/* <SeedButton hasEvents={events.length > 0} /> */}
             <Link
               href="/admin/academic-calendar/new"
-              className="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
+              className="px-8 py-4 bg-primary-bk text-white transition-colors"
             >
               + New Event
             </Link>
@@ -100,7 +99,7 @@ export default async function AdminAcademicCalendarPage() {
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Color
                         </th>
-                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Actions
                         </th>
                       </tr>
@@ -116,10 +115,16 @@ export default async function AdminAcademicCalendarPage() {
                               className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                                 event.event_type === 'term'
                                   ? 'bg-orange-100 text-orange-800'
-                                  : 'bg-green-100 text-green-800'
+                                  : event.event_type === 'event'
+                                    ? 'bg-blue-100 text-blue-800'
+                                    : 'bg-green-100 text-green-800'
                               }`}
                             >
-                              {event.event_type === 'term' ? 'Term' : 'Holiday'}
+                              {event.event_type === 'term'
+                                ? 'Term'
+                                : event.event_type === 'event'
+                                  ? 'School Event'
+                                  : 'Holiday'}
                             </span>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -145,11 +150,12 @@ export default async function AdminAcademicCalendarPage() {
                               </span>
                             )}
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-right text-sm space-x-2">
+                          <td className="px-6 py-4 whitespace-nowrap text-right text-sm flex items-center gap-x-6">
                             <Link
                               href={`/admin/academic-calendar/${event.id}/edit`}
-                              className="text-orange-600 hover:text-orange-800 font-medium"
+                              className="font-medium flex items-center gap-x-2"
                             >
+                              <PencilIcon className="w-16 h-16" />
                               Edit
                             </Link>
                             <DeleteEventButton

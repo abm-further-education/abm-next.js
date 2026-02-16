@@ -31,7 +31,7 @@ export async function createEventAction(formData: FormData) {
       title,
       start_date,
       end_date,
-      event_type: event_type as 'term' | 'holiday',
+      event_type: event_type as 'term' | 'holiday' | 'event',
       color: color || null,
       description: description || null,
     });
@@ -61,7 +61,7 @@ export async function updateEventAction(id: string, formData: FormData) {
       title,
       start_date,
       end_date,
-      event_type: event_type as 'term' | 'holiday',
+      event_type: event_type as 'term' | 'holiday' | 'event',
       color: color || null,
       description: description || null,
     });
@@ -99,7 +99,7 @@ export async function seedAcademicEventsAction() {
     title: string;
     start_date: string;
     end_date: string;
-    event_type: 'term' | 'holiday';
+    event_type: 'term' | 'holiday' | 'event';
     color: string | null;
     description: string | null;
   }[] = [

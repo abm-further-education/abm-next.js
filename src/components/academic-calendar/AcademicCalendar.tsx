@@ -27,7 +27,7 @@ const localizer = dateFnsLocalizer({
 
 interface CalendarEvent extends RBCEvent {
   id: string;
-  eventType: 'term' | 'holiday';
+  eventType: 'term' | 'holiday' | 'event';
   color?: string | null;
   description?: string | null;
 }
@@ -39,6 +39,7 @@ interface AcademicCalendarProps {
 // Default colors
 const TERM_COLOR = '#ef7511';
 const HOLIDAY_COLOR = '#22c55e';
+const EVENT_COLOR = '#3b82f6';
 
 export default function AcademicCalendar({ events }: AcademicCalendarProps) {
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(
@@ -74,7 +75,11 @@ export default function AcademicCalendar({ events }: AcademicCalendarProps) {
   const eventStyleGetter = useCallback((event: CalendarEvent) => {
     const bgColor =
       event.color ||
-      (event.eventType === 'holiday' ? HOLIDAY_COLOR : TERM_COLOR);
+      (event.eventType === 'holiday'
+        ? HOLIDAY_COLOR
+        : event.eventType === 'event'
+          ? EVENT_COLOR
+          : TERM_COLOR);
 
     return {
       style: {
@@ -120,6 +125,13 @@ export default function AcademicCalendar({ events }: AcademicCalendarProps) {
           />
           <span className="text-sm text-gray-600">Holiday</span>
         </div>
+        <div className="flex items-center gap-2">
+          <div
+            className="w-4 h-4 rounded"
+            style={{ backgroundColor: EVENT_COLOR }}
+          />
+          <span className="text-sm text-gray-600">School Event</span>
+        </div>
       </div>
 
       {/* Calendar */}
@@ -163,7 +175,9 @@ export default function AcademicCalendar({ events }: AcademicCalendarProps) {
                       selectedEvent.color ||
                       (selectedEvent.eventType === 'holiday'
                         ? HOLIDAY_COLOR
-                        : TERM_COLOR),
+                        : selectedEvent.eventType === 'event'
+                          ? EVENT_COLOR
+                          : TERM_COLOR),
                   }}
                 />
                 <h3 className="text-lg font-semibold text-gray-900">
@@ -186,10 +200,16 @@ export default function AcademicCalendar({ events }: AcademicCalendarProps) {
                     className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                       selectedEvent.eventType === 'term'
                         ? 'bg-orange-100 text-orange-800'
-                        : 'bg-green-100 text-green-800'
+                        : selectedEvent.eventType === 'event'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-green-100 text-green-800'
                     }`}
                   >
-                    {selectedEvent.eventType === 'term' ? 'Term' : 'Holiday'}
+                    {selectedEvent.eventType === 'term'
+                      ? 'Term'
+                      : selectedEvent.eventType === 'event'
+                        ? 'School Event'
+                        : 'Holiday'}
                   </span>
                 </p>
               </div>
