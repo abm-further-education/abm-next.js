@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import { getAdminSession } from '@/lib/auth';
 import { getNewsList } from '@/lib/news-db';
 import Link from 'next/link';
-import { PlusIcon } from 'lucide-react';
+import { PencilIcon, PlusIcon } from 'lucide-react';
 import AdminBackButton from '@/components/admin/AdminBackButton';
 
 export default async function NewsListPage() {
@@ -74,7 +74,7 @@ export default async function NewsListPage() {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">
+                        <span className="p-6 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">
                           {news.category}
                         </span>
                       </td>
@@ -83,7 +83,7 @@ export default async function NewsListPage() {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
-                          className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                          className={`p-6 inline-flex text-xs leading-5 font-semibold rounded-full ${
                             news.published
                               ? 'bg-green-100 text-green-800'
                               : 'bg-gray-100 text-gray-800'
@@ -95,8 +95,9 @@ export default async function NewsListPage() {
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                         <Link
                           href={`/admin/news/${news.id}/edit`}
-                          className="text-blue-600 hover:text-blue-900 mr-4"
+                          className="flex items-center gap-x-2"
                         >
+                          <PencilIcon className="w-16 h-16" />
                           Edit
                         </Link>
                       </td>
