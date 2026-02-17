@@ -334,9 +334,15 @@ export async function createEntryRequirementPage(
   }
 
   for (const course of courses) {
+    const enCourseTrans = course.translations['en'] || Object.values(course.translations)[0] || { course_code: '', requirement: '' };
     const { data: courseData, error: courseError } = await insertClient
       .from('entry_requirement_courses')
-      .insert([{ page_id: pageData.id, display_order: course.display_order }])
+      .insert([{
+        page_id: pageData.id,
+        course_code: enCourseTrans.course_code,
+        requirement: enCourseTrans.requirement,
+        display_order: course.display_order,
+      }])
       .select()
       .single();
     if (courseError) throw new Error(`Failed to create course: ${courseError.message}`);
@@ -353,9 +359,16 @@ export async function createEntryRequirementPage(
   }
 
   for (const partner of partners) {
+    const enPartnerTrans = partner.translations['en'] || Object.values(partner.translations)[0] || { partner_name: '', courses: '' };
     const { data: partnerData, error: partnerError } = await insertClient
       .from('entry_requirement_elicos_partners')
-      .insert([{ page_id: pageData.id, partner_url: partner.partner_url, display_order: partner.display_order }])
+      .insert([{
+        page_id: pageData.id,
+        partner_url: partner.partner_url,
+        partner_name: enPartnerTrans.partner_name,
+        courses: enPartnerTrans.courses,
+        display_order: partner.display_order,
+      }])
       .select()
       .single();
     if (partnerError) throw new Error(`Failed to create partner: ${partnerError.message}`);
@@ -409,9 +422,15 @@ export async function updateEntryRequirementPage(
 
   await updateClient.from('entry_requirement_courses').delete().eq('page_id', id);
   for (const course of courses) {
+    const enCourseTrans = course.translations['en'] || Object.values(course.translations)[0] || { course_code: '', requirement: '' };
     const { data: courseData, error: courseError } = await updateClient
       .from('entry_requirement_courses')
-      .insert([{ page_id: id, display_order: course.display_order }])
+      .insert([{
+        page_id: id,
+        course_code: enCourseTrans.course_code,
+        requirement: enCourseTrans.requirement,
+        display_order: course.display_order,
+      }])
       .select()
       .single();
     if (courseError) throw new Error(`Failed to create course: ${courseError.message}`);
@@ -429,9 +448,16 @@ export async function updateEntryRequirementPage(
 
   await updateClient.from('entry_requirement_elicos_partners').delete().eq('page_id', id);
   for (const partner of partners) {
+    const enPartnerTrans = partner.translations['en'] || Object.values(partner.translations)[0] || { partner_name: '', courses: '' };
     const { data: partnerData, error: partnerError } = await updateClient
       .from('entry_requirement_elicos_partners')
-      .insert([{ page_id: id, partner_url: partner.partner_url, display_order: partner.display_order }])
+      .insert([{
+        page_id: id,
+        partner_url: partner.partner_url,
+        partner_name: enPartnerTrans.partner_name,
+        courses: enPartnerTrans.courses,
+        display_order: partner.display_order,
+      }])
       .select()
       .single();
     if (partnerError) throw new Error(`Failed to create partner: ${partnerError.message}`);
@@ -575,9 +601,15 @@ export async function seedEntryRequirementFromMessages(existingPageId?: string):
   for (let i = 0; i < courseKeys.length; i++) {
     const key = courseKeys[i];
 
+    const enCourse = enCourses[key];
     const { data: courseData, error: courseError } = await client
       .from('entry_requirement_courses')
-      .insert([{ page_id: pageId, display_order: i }])
+      .insert([{
+        page_id: pageId,
+        course_code: enCourse?.code || '',
+        requirement: enCourse?.requirement || '',
+        display_order: i,
+      }])
       .select()
       .single();
 
@@ -615,7 +647,13 @@ export async function seedEntryRequirementFromMessages(existingPageId?: string):
 
     const { data: partnerData, error: partnerError } = await client
       .from('entry_requirement_elicos_partners')
-      .insert([{ page_id: pageId, partner_url: enPartner?.url || '', display_order: i }])
+      .insert([{
+        page_id: pageId,
+        partner_url: enPartner?.url || '',
+        partner_name: enPartner?.name || '',
+        courses: enPartner?.courses || '',
+        display_order: i,
+      }])
       .select()
       .single();
 

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 import {
   createEntryRequirementAction,
   updateEntryRequirementAction,
@@ -281,15 +282,17 @@ export default function EntryRequirementForm({
 
       if (initialData) {
         await updateEntryRequirementAction(initialData.id, formData);
+        toast.success('Entry requirement updated successfully.');
       } else {
         await createEntryRequirementAction(formData);
+        toast.success('Entry requirement created successfully.');
       }
 
       router.push('/admin/entry-requirements');
       router.refresh();
     } catch (error) {
       console.error('Error saving entry requirement:', error);
-      alert('Failed to save. Please try again.');
+      toast.error('Failed to save. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
