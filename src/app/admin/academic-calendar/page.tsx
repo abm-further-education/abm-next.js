@@ -46,7 +46,7 @@ export default async function AdminAcademicCalendarPage() {
         <div className="flex justify-between items-center mb-6">
           <div>
             <h1 className="text-3xl font-bold text-gray-800">
-              Academic Calendar Management
+              ABM Calendar Management
             </h1>
             <p className="text-gray-600 mt-1">Manage term dates and holidays</p>
           </div>

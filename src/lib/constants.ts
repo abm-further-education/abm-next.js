@@ -190,7 +190,7 @@ export const studyWithUsMenu = [
     href: '/abm-student-insights',
   },
   {
-    title: 'Academic Calendar',
+    title: 'ABM Calendar',
     href: '/academic-calendar',
   },
   // {

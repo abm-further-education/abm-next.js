@@ -59,7 +59,7 @@ const menuItems = [
   {
     href: '/admin/academic-calendar',
     icon: CalendarDays,
-    title: 'Academic Calendar',
+    title: 'ABM Calendar',
     description: 'Manage term dates and holidays',
     color: 'bg-rose-500',
     lightColor: 'bg-rose-50',

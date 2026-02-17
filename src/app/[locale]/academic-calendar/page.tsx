@@ -362,7 +362,7 @@ export default async function AcademicCalendarPage() {
         slides={[
           {
             imgPath: '/academic_calendar.png',
-            title: 'Academic Calendar',
+            title: 'ABM Calendar',
             content: '',
           },
         ]}

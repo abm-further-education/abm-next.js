@@ -29,7 +29,10 @@ export default async function EditAcademicEventPage({
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <div className="mb-4">
-          <AdminBackButton href="/admin/academic-calendar" label="Academic Calendar" />
+          <AdminBackButton
+            href="/admin/academic-calendar"
+            label="ABM Calendar"
+          />
         </div>
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-800 mt-2">

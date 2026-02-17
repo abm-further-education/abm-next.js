@@ -17,7 +17,7 @@ export default async function NewAcademicEventPage() {
         <div className="mb-4">
           <AdminBackButton
             href="/admin/academic-calendar"
-            label="Academic Calendar"
+            label="ABM Calendar"
           />
         </div>
         <div className="mb-6">
