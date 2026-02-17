@@ -9,6 +9,7 @@ import {
   MessageSquareQuote,
   CalendarDays,
   FileText,
+  DollarSign,
   ArrowRight,
   Home,
 } from 'lucide-react';
@@ -73,6 +74,16 @@ const menuItems = [
     lightColor: 'bg-cyan-50',
     hoverColor: 'hover:border-cyan-300',
     textColor: 'text-cyan-600',
+  },
+  {
+    href: '/admin/fee-schedule',
+    icon: DollarSign,
+    title: 'Fee Schedule',
+    description: 'Manage fee schedules, pricing and payment info',
+    color: 'bg-orange-500',
+    lightColor: 'bg-orange-50',
+    hoverColor: 'hover:border-orange-300',
+    textColor: 'text-orange-600',
   },
 ];
 
