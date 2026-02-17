@@ -14,14 +14,19 @@ export default async function Page() {
   const bannerTitle = data?.banner_title || t('bannerTitle');
   const bannerSubtitle = data?.banner_subtitle || t('bannerSubtitle');
   const promotionTitle = data?.promotion_title || t('promotionTitle');
-  const promotionDescription = data?.promotion_description || t('promotionDescription');
+  const promotionDescription =
+    data?.promotion_description || t('promotionDescription');
   const downloadButtonText = data?.download_button_text || t('downloadButton');
   const paymentTitle = data?.payment_title || t('paymentTitle');
-  const paymentDescription = data?.payment_description || t('paymentDescription');
+  const paymentDescription =
+    data?.payment_description || t('paymentDescription');
   const contactText = data?.contact_text || t('contactText');
   const contactEmail = data?.contact_email || 'accounts@abm.edu.au';
-  const instalmentLink = data?.instalment_link || 'https://abm.edu.au/news/fb413fe6-ca75-495b-9bfe-de5ceff255c8';
-  const instalmentLinkText = data?.instalment_link_text || 'View Direct Debit Instalment Plan Details';
+  const instalmentLink =
+    data?.instalment_link ||
+    'https://abm.edu.au/news/fb413fe6-ca75-495b-9bfe-de5ceff255c8';
+  const instalmentLinkText =
+    data?.instalment_link_text || 'View Direct Debit Instalment Plan Details';
   const otherFeesTitle = data?.other_fees_title || t('otherFeesTitle');
   const nonRefundableNote = data?.non_refundable_note || t('nonRefundableNote');
   const fees = data?.fee_schedule_fees || [];
@@ -115,9 +120,7 @@ export default async function Page() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-600 mt-10">
-            {nonRefundableNote}
-          </p>
+          <p className="text-sm text-gray-600 mt-10">{nonRefundableNote}</p>
         </div>
       </div>
     </section>

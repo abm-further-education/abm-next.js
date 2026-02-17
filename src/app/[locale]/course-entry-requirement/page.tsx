@@ -4,7 +4,11 @@ import { cn } from '@/lib/utils';
 import Banner from '@/components/common/Banner';
 import { ChevronRightIcon } from 'lucide-react';
 import Link from 'next/link';
-import { getActiveEntryRequirementPage, EntryRequirementCourseWithTranslation, EntryRequirementElicosPartnerWithTranslation } from '@/lib/entry-requirement-db';
+import {
+  getActiveEntryRequirementPage,
+  EntryRequirementCourseWithTranslation,
+  EntryRequirementElicosPartnerWithTranslation,
+} from '@/lib/entry-requirement-db';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('courseEntryRequirements');
@@ -31,7 +35,11 @@ export default async function CourseEntryRequirementsPage() {
   const introDescription = tr?.intro_description || t('introDescription');
   const generalRequirementsTitle =
     tr?.general_requirements_title || t('generalRequirementsTitle');
-  const generalCards = (tr?.general_cards as Array<{ icon?: string; title: string; description: string }>) || [
+  const generalCards = (tr?.general_cards as Array<{
+    icon?: string;
+    title: string;
+    description: string;
+  }>) || [
     {
       title: t('ageRequirementTitle'),
       description: t('ageRequirementDescription'),
@@ -56,17 +64,18 @@ export default async function CourseEntryRequirementsPage() {
     t('englishEvidence3'),
   ];
   const pteTitle = tr?.pte_title || t('pteRequirementsTitle');
-  const pteDescription =
-    tr?.pte_description || t('pteRequirementsDescription');
+  const pteDescription = tr?.pte_description || t('pteRequirementsDescription');
   const pteTableNote = tr?.pte_table_note || t('pteTableTitle');
-  const pteScores = (tr?.pte_scores as Array<{ skill: string; minimum_score: string }>) || [
+  const pteScores = (tr?.pte_scores as Array<{
+    skill: string;
+    minimum_score: string;
+  }>) || [
     { skill: t('pteListening'), minimum_score: t('pteListeningScore') },
     { skill: t('pteReading'), minimum_score: t('pteReadingScore') },
     { skill: t('pteSpeaking'), minimum_score: t('pteSpeakingScore') },
     { skill: t('pteWriting'), minimum_score: t('pteWritingScore') },
   ];
-  const competencyTitle =
-    tr?.competency_title || t('competencyInEnglishTitle');
+  const competencyTitle = tr?.competency_title || t('competencyInEnglishTitle');
   const competencyDescription =
     tr?.competency_description || t('competencyDescription');
   const competencyItems = (tr?.competency_items as string[]) || [
@@ -80,7 +89,11 @@ export default async function CourseEntryRequirementsPage() {
   const elicosPartners = data?.elicos_partners || [];
   const applicationProcessTitle =
     tr?.application_process_title || t('applicationProcessTitle');
-  const applicationSteps = (tr?.application_steps as Array<{ step?: string; title: string; description: string }>) || [
+  const applicationSteps = (tr?.application_steps as Array<{
+    step?: string;
+    title: string;
+    description: string;
+  }>) || [
     { title: t('step1Title'), description: t('step1Description') },
     { title: t('step2Title'), description: t('step2Description') },
     { title: t('step3Title'), description: t('step3Description') },
@@ -161,16 +174,18 @@ export default async function CourseEntryRequirementsPage() {
                 </thead>
                 <tbody>
                   {courses.length > 0 ? (
-                    courses.map((course: EntryRequirementCourseWithTranslation) => (
-                      <tr key={course.id}>
-                        <td className="border border-gray-300 px-20 py-10 bg-gray-50 font-semibold">
-                          {course.course_code}
-                        </td>
-                        <td className="border border-gray-300 px-20 py-10 whitespace-pre-line">
-                          {course.requirement}
-                        </td>
-                      </tr>
-                    ))
+                    courses.map(
+                      (course: EntryRequirementCourseWithTranslation) => (
+                        <tr key={course.id}>
+                          <td className="border border-gray-300 px-20 py-10 bg-gray-50 font-semibold">
+                            {course.course_code}
+                          </td>
+                          <td className="border border-gray-300 px-20 py-10 whitespace-pre-line">
+                            {course.requirement}
+                          </td>
+                        </tr>
+                      ),
+                    )
                   ) : (
                     <tr>
                       <td className="border border-gray-300 px-20 py-10 bg-gray-50 font-semibold">
@@ -264,26 +279,30 @@ export default async function CourseEntryRequirementsPage() {
                   <div className="overflow-x-auto">
                     <table className="w-full border-collapse border border-gray-300">
                       <tbody>
-                        {elicosPartners.map((partner: EntryRequirementElicosPartnerWithTranslation) => (
-                          <tr
-                            key={partner.id}
-                            className="border-b border-gray-300"
-                          >
-                            <td className="border-r border-gray-300 px-20 py-15 w-1/4 bg-gray-50">
-                              <Link
-                                href={partner.partner_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-semibold text-primary hover:text-primary/80 transition-colors"
-                              >
-                                {partner.partner_name}
-                              </Link>
-                            </td>
-                            <td className="px-20 py-15 whitespace-pre-line text-gray-600">
-                              {partner.courses}
-                            </td>
-                          </tr>
-                        ))}
+                        {elicosPartners.map(
+                          (
+                            partner: EntryRequirementElicosPartnerWithTranslation,
+                          ) => (
+                            <tr
+                              key={partner.id}
+                              className="border-b border-gray-300"
+                            >
+                              <td className="border-r border-gray-300 px-20 py-15 w-1/4 bg-gray-50">
+                                <Link
+                                  href={partner.partner_url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="font-semibold text-primary hover:text-primary/80 transition-colors"
+                                >
+                                  {partner.partner_name}
+                                </Link>
+                              </td>
+                              <td className="px-20 py-15 whitespace-pre-line text-gray-600">
+                                {partner.courses}
+                              </td>
+                            </tr>
+                          ),
+                        )}
                       </tbody>
                     </table>
                   </div>

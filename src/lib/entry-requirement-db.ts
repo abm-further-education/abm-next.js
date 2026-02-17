@@ -1,6 +1,8 @@
 import { supabase, supabaseAdmin } from './supabase';
 import { createClient } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
+import fs from 'fs';
+import path from 'path';
 
 export const SUPPORTED_LOCALES = ['en', 'kr', 'sp', 'pt', 'jp', 'tl', 'zh', 'id'] as const;
 
@@ -463,4 +465,181 @@ export async function deleteEntryRequirementPage(id: string): Promise<void> {
   const deleteClient = supabaseAdmin || client;
   const { error } = await deleteClient.from('entry_requirement_pages').delete().eq('id', id);
   if (error) throw new Error(`Failed to delete entry requirement page: ${error.message}`);
+}
+
+/**
+ * Seed entry requirement page from /messages JSON files.
+ * Creates a new page or updates existing one with all locale translations,
+ * courses, and ELICOS partners from the message files.
+ */
+export async function seedEntryRequirementFromMessages(existingPageId?: string): Promise<string> {
+  const client = supabaseAdmin || supabase;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const messagesByLocale: Record<string, Record<string, any>> = {};
+  for (const locale of SUPPORTED_LOCALES) {
+    const filePath = path.join(process.cwd(), 'messages', `${locale}.json`);
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const messages = JSON.parse(fileContent);
+    messagesByLocale[locale] = messages.courseEntryRequirements || {};
+  }
+
+  const enMsg = messagesByLocale['en'];
+
+  let pageId = existingPageId;
+
+  if (!pageId) {
+    const { data, error } = await client
+      .from('entry_requirement_pages')
+      .insert([{
+        is_active: true,
+        banner_image: '/entry_requirement.png',
+        contact_button_link: '/contact',
+      }])
+      .select()
+      .single();
+    if (error) throw new Error(`Failed to create page: ${error.message}`);
+    pageId = data.id;
+  }
+
+  // Upsert page translations for each locale
+  for (const locale of SUPPORTED_LOCALES) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const msg = messagesByLocale[locale] as Record<string, any>;
+    if (!msg) continue;
+
+    const translationData = {
+      page_id: pageId,
+      locale,
+      meta_title: msg.metaTitle || '',
+      meta_description: msg.metaDescription || '',
+      banner_title: msg.bannerTitle || '',
+      banner_subtitle: msg.bannerSubtitle || '',
+      intro_title: msg.introTitle || '',
+      intro_description: msg.introDescription || '',
+      general_requirements_title: msg.generalRequirementsTitle || '',
+      general_cards: [
+        { icon: '', title: msg.ageRequirementTitle || '', description: msg.ageRequirementDescription || '' },
+        { icon: '', title: msg.englishRequirementTitle || '', description: msg.englishRequirementDescription || '' },
+      ],
+      course_table_title: msg.courseRequirementsTableTitle || '',
+      course_table_description: msg.courseRequirementsTableDescription || '',
+      english_entry_title: msg.englishEntryRequirementsTitle || '',
+      english_entry_description: msg.englishEntryRequirementsDescription || '',
+      english_evidence_items: [
+        msg.englishEvidence1, msg.englishEvidence2, msg.englishEvidence3, msg.englishEvidence4,
+      ].filter(Boolean),
+      pte_title: msg.pteRequirementsTitle || '',
+      pte_description: msg.pteRequirementsDescription || '',
+      pte_table_note: msg.pteTableTitle || '',
+      pte_scores: [
+        { skill: msg.pteListening || '', minimum_score: msg.pteListeningScore || '' },
+        { skill: msg.pteReading || '', minimum_score: msg.pteReadingScore || '' },
+        { skill: msg.pteSpeaking || '', minimum_score: msg.pteSpeakingScore || '' },
+        { skill: msg.pteWriting || '', minimum_score: msg.pteWritingScore || '' },
+      ],
+      competency_title: msg.competencyInEnglishTitle || '',
+      competency_description: msg.competencyDescription || '',
+      competency_items: [
+        msg.competency1, msg.competency2, msg.competency3, msg.competency4,
+      ].filter(Boolean),
+      english_note: msg.englishNote || '',
+      elicos_title: msg.elicosPathwayPartnersTitle || '',
+      application_process_title: msg.applicationProcessTitle || '',
+      application_steps: [
+        { step: '1', title: msg.step1Title || '', description: msg.step1Description || '' },
+        { step: '2', title: msg.step2Title || '', description: msg.step2Description || '' },
+        { step: '3', title: msg.step3Title || '', description: msg.step3Description || '' },
+        { step: '4', title: msg.step4Title || '', description: msg.step4Description || '' },
+      ],
+      contact_title: msg.needHelpTitle || '',
+      contact_description: msg.needHelpDescription || '',
+      contact_button_text: msg.contactUsButton || '',
+    };
+
+    const { error } = await client
+      .from('entry_requirement_page_translations')
+      .upsert(translationData, { onConflict: 'page_id,locale' });
+
+    if (error) {
+      console.error(`Failed to upsert translation for ${locale}:`, error);
+    }
+  }
+
+  // Recreate courses
+  await client.from('entry_requirement_courses').delete().eq('page_id', pageId);
+
+  const enCourses = (enMsg.courses || {}) as Record<string, { code: string; requirement: string }>;
+  const courseKeys = Object.keys(enCourses);
+
+  for (let i = 0; i < courseKeys.length; i++) {
+    const key = courseKeys[i];
+
+    const { data: courseData, error: courseError } = await client
+      .from('entry_requirement_courses')
+      .insert([{ page_id: pageId, display_order: i }])
+      .select()
+      .single();
+
+    if (courseError) {
+      console.error(`Failed to create course ${key}:`, courseError);
+      continue;
+    }
+
+    const courseTransRows = SUPPORTED_LOCALES.map(locale => {
+      const msg = messagesByLocale[locale];
+      const course = (msg?.courses || {})[key] as { code?: string; requirement?: string } | undefined;
+      return {
+        course_id: courseData.id,
+        locale,
+        course_code: course?.code || enCourses[key]?.code || '',
+        requirement: course?.requirement || enCourses[key]?.requirement || '',
+      };
+    });
+
+    const { error } = await client.from('entry_requirement_course_translations').insert(courseTransRows);
+    if (error) {
+      console.error(`Failed to create course translations for ${key}:`, error);
+    }
+  }
+
+  // Recreate ELICOS partners
+  await client.from('entry_requirement_elicos_partners').delete().eq('page_id', pageId);
+
+  const enPartners = (enMsg.elicosPartners || {}) as Record<string, { name: string; url: string; courses: string }>;
+  const partnerKeys = Object.keys(enPartners);
+
+  for (let i = 0; i < partnerKeys.length; i++) {
+    const key = partnerKeys[i];
+    const enPartner = enPartners[key];
+
+    const { data: partnerData, error: partnerError } = await client
+      .from('entry_requirement_elicos_partners')
+      .insert([{ page_id: pageId, partner_url: enPartner?.url || '', display_order: i }])
+      .select()
+      .single();
+
+    if (partnerError) {
+      console.error(`Failed to create partner ${key}:`, partnerError);
+      continue;
+    }
+
+    const partnerTransRows = SUPPORTED_LOCALES.map(locale => {
+      const msg = messagesByLocale[locale];
+      const partner = (msg?.elicosPartners || {})[key] as { name?: string; courses?: string } | undefined;
+      return {
+        partner_id: partnerData.id,
+        locale,
+        partner_name: partner?.name || enPartner?.name || '',
+        courses: partner?.courses || enPartner?.courses || '',
+      };
+    });
+
+    const { error } = await client.from('entry_requirement_elicos_partner_translations').insert(partnerTransRows);
+    if (error) {
+      console.error(`Failed to create partner translations for ${key}:`, error);
+    }
+  }
+
+  return pageId!;
 }

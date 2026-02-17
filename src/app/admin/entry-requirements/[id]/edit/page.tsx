@@ -26,7 +26,7 @@ export default async function EditEntryRequirementPage({ params }: PageProps) {
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <div className="mb-4">
-          <AdminBackButton href="/admin/entry-requirements" label="Back to Entry Requirements" />
+          <AdminBackButton href="/admin" label="Back to Dashboard" />
         </div>
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">
