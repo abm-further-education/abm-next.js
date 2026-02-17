@@ -10,6 +10,7 @@ import {
   CalendarDays,
   FileText,
   DollarSign,
+  BookOpen,
   ArrowRight,
   Home,
 } from 'lucide-react';
@@ -84,6 +85,16 @@ const menuItems = [
     lightColor: 'bg-orange-50',
     hoverColor: 'hover:border-orange-300',
     textColor: 'text-orange-600',
+  },
+  {
+    href: '/admin/entry-requirements',
+    icon: BookOpen,
+    title: 'Entry Requirements',
+    description: 'Manage course entry requirements and ELICOS partners',
+    color: 'bg-teal-500',
+    lightColor: 'bg-teal-50',
+    hoverColor: 'hover:border-teal-300',
+    textColor: 'text-teal-600',
   },
 ];
 
