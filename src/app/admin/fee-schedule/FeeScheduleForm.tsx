@@ -5,51 +5,125 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { Plus, Trash2 } from 'lucide-react';
 import { createFeeScheduleAction, updateFeeScheduleAction } from './actions';
-import type { FeeSchedulePageWithFees } from '@/lib/fee-schedule-db';
+import type {
+  FeeSchedulePageWithAllTranslations,
+  FeeSchedulePageTranslation,
+  FeeScheduleFeeTranslation,
+} from '@/lib/fee-schedule-db';
+
+const LOCALES = ['en', 'kr', 'sp', 'pt', 'jp', 'tl', 'zh', 'id'] as const;
+const LOCALE_LABELS: Record<string, string> = {
+  en: 'English',
+  kr: '한국어',
+  sp: 'Español',
+  pt: 'Português',
+  jp: '日本語',
+  tl: 'Filipino',
+  zh: '中文',
+  id: 'Bahasa',
+};
+
+type PageTransFields = Omit<FeeSchedulePageTranslation, 'id' | 'page_id' | 'locale' | 'created_at' | 'updated_at'>;
+
+const emptyPageTrans: PageTransFields = {
+  page_title: '',
+  banner_title: '',
+  banner_subtitle: '',
+  promotion_title: '',
+  promotion_description: '',
+  download_button_text: '',
+  payment_title: '',
+  payment_description: '',
+  contact_text: '',
+  instalment_link_text: '',
+  other_fees_title: '',
+  non_refundable_note: '',
+};
 
 interface FeeItem {
-  fee_name: string;
-  fee_amount: string;
   display_order: number;
+  translations: Record<string, { fee_name: string; fee_amount: string }>;
 }
 
 interface FeeScheduleFormProps {
-  initialData?: FeeSchedulePageWithFees;
+  initialData?: FeeSchedulePageWithAllTranslations;
 }
 
 export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
+  const [activeLocale, setActiveLocale] = useState<string>('en');
 
+  // Structural (non-translatable) fields
   const [year, setYear] = useState(initialData?.year || new Date().getFullYear());
   const [isActive, setIsActive] = useState(initialData?.is_active ?? true);
-  const [pageTitle, setPageTitle] = useState(initialData?.page_title || '');
   const [bannerImage, setBannerImage] = useState(initialData?.banner_image || '/fees.png');
-  const [bannerTitle, setBannerTitle] = useState(initialData?.banner_title || '');
-  const [bannerSubtitle, setBannerSubtitle] = useState(initialData?.banner_subtitle || '');
-  const [promotionTitle, setPromotionTitle] = useState(initialData?.promotion_title || '');
-  const [promotionDescription, setPromotionDescription] = useState(initialData?.promotion_description || '');
-  const [downloadButtonText, setDownloadButtonText] = useState(initialData?.download_button_text || '');
-  const [paymentTitle, setPaymentTitle] = useState(initialData?.payment_title || '');
-  const [paymentDescription, setPaymentDescription] = useState(initialData?.payment_description || '');
-  const [contactText, setContactText] = useState(initialData?.contact_text || '');
   const [contactEmail, setContactEmail] = useState(initialData?.contact_email || '');
   const [instalmentLink, setInstalmentLink] = useState(initialData?.instalment_link || '');
-  const [instalmentLinkText, setInstalmentLinkText] = useState(initialData?.instalment_link_text || '');
-  const [otherFeesTitle, setOtherFeesTitle] = useState(initialData?.other_fees_title || '');
-  const [nonRefundableNote, setNonRefundableNote] = useState(initialData?.non_refundable_note || '');
 
-  const [fees, setFees] = useState<FeeItem[]>(
-    initialData?.fee_schedule_fees?.map((f) => ({
-      fee_name: f.fee_name,
-      fee_amount: f.fee_amount,
-      display_order: f.display_order,
-    })) || [{ fee_name: '', fee_amount: '', display_order: 1 }]
-  );
+  // Build page translations map
+  const buildPageTransMap = (): Record<string, PageTransFields> => {
+    const map: Record<string, PageTransFields> = {};
+    for (const locale of LOCALES) {
+      const existing = initialData?.fee_schedule_page_translations?.find(
+        (t) => t.locale === locale
+      );
+      if (existing) {
+        const { id: _id, page_id: _pid, locale: _l, created_at: _ca, updated_at: _ua, ...rest } = existing;
+        void _id; void _pid; void _l; void _ca; void _ua;
+        map[locale] = rest;
+      } else {
+        map[locale] = { ...emptyPageTrans };
+      }
+    }
+    return map;
+  };
 
+  // Build fees from initial data
+  const buildFeesFromInitial = (): FeeItem[] => {
+    if (!initialData?.fee_schedule_fees) return [];
+    return initialData.fee_schedule_fees.map((fee) => {
+      const translations: Record<string, { fee_name: string; fee_amount: string }> = {};
+      for (const locale of LOCALES) {
+        const existing = fee.fee_schedule_fee_translations?.find(
+          (t: FeeScheduleFeeTranslation) => t.locale === locale
+        );
+        translations[locale] = {
+          fee_name: existing?.fee_name || fee.fee_name || '',
+          fee_amount: existing?.fee_amount || fee.fee_amount || '',
+        };
+      }
+      return { display_order: fee.display_order, translations };
+    });
+  };
+
+  const [pageTransMap, setPageTransMap] = useState<Record<string, PageTransFields>>(buildPageTransMap);
+  const [fees, setFees] = useState<FeeItem[]>(() => {
+    const initial = buildFeesFromInitial();
+    if (initial.length > 0) return initial;
+    const translations: Record<string, { fee_name: string; fee_amount: string }> = {};
+    for (const locale of LOCALES) {
+      translations[locale] = { fee_name: '', fee_amount: '' };
+    }
+    return [{ display_order: 0, translations }];
+  });
+
+  const updatePageTransField = (locale: string, field: keyof PageTransFields, value: string) => {
+    setPageTransMap((prev) => ({
+      ...prev,
+      [locale]: { ...prev[locale], [field]: value },
+    }));
+  };
+
+  const currentTrans = pageTransMap[activeLocale] || emptyPageTrans;
+
+  // Fee helpers
   const addFee = () => {
-    const maxOrder = fees.length > 0 ? Math.max(...fees.map((f) => f.display_order)) : 0;
-    setFees([...fees, { fee_name: '', fee_amount: '', display_order: maxOrder + 1 }]);
+    const translations: Record<string, { fee_name: string; fee_amount: string }> = {};
+    for (const locale of LOCALES) {
+      translations[locale] = { fee_name: '', fee_amount: '' };
+    }
+    setFees([...fees, { display_order: fees.length, translations }]);
   };
 
   const removeFee = (index: number) => {
@@ -57,10 +131,21 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
     setFees(fees.filter((_, i) => i !== index));
   };
 
-  const updateFee = (index: number, field: keyof FeeItem, value: string | number) => {
-    const updated = [...fees];
-    updated[index] = { ...updated[index], [field]: value };
-    setFees(updated);
+  const updateFeeTranslation = (
+    fi: number,
+    locale: string,
+    field: 'fee_name' | 'fee_amount',
+    value: string
+  ) => {
+    const newFees = [...fees];
+    newFees[fi] = {
+      ...newFees[fi],
+      translations: {
+        ...newFees[fi].translations,
+        [locale]: { ...newFees[fi].translations[locale], [field]: value },
+      },
+    };
+    setFees(newFees);
   };
 
   const moveFee = (index: number, direction: 'up' | 'down') => {
@@ -71,11 +156,8 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
       return;
     const updated = [...fees];
     const swapIndex = direction === 'up' ? index - 1 : index + 1;
-    const tempOrder = updated[index].display_order;
-    updated[index].display_order = updated[swapIndex].display_order;
-    updated[swapIndex].display_order = tempOrder;
     [updated[index], updated[swapIndex]] = [updated[swapIndex], updated[index]];
-    setFees(updated);
+    setFees(updated.map((f, i) => ({ ...f, display_order: i })));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -86,22 +168,14 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
       const formData = new FormData();
       formData.set('year', year.toString());
       formData.set('is_active', isActive.toString());
-      formData.set('page_title', pageTitle);
       formData.set('banner_image', bannerImage);
-      formData.set('banner_title', bannerTitle);
-      formData.set('banner_subtitle', bannerSubtitle);
-      formData.set('promotion_title', promotionTitle);
-      formData.set('promotion_description', promotionDescription);
-      formData.set('download_button_text', downloadButtonText);
-      formData.set('payment_title', paymentTitle);
-      formData.set('payment_description', paymentDescription);
-      formData.set('contact_text', contactText);
       formData.set('contact_email', contactEmail);
       formData.set('instalment_link', instalmentLink);
-      formData.set('instalment_link_text', instalmentLinkText);
-      formData.set('other_fees_title', otherFeesTitle);
-      formData.set('non_refundable_note', nonRefundableNote);
-      formData.set('fees', JSON.stringify(fees));
+      formData.set('page_translations', JSON.stringify(pageTransMap));
+      formData.set(
+        'fees',
+        JSON.stringify(fees.map((f, i) => ({ display_order: i, translations: f.translations })))
+      );
 
       if (initialData) {
         await updateFeeScheduleAction(initialData.id, formData);
@@ -111,7 +185,6 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
         toast.success('Fee schedule created successfully.');
       }
 
-      router.push('/admin/fee-schedule');
       router.refresh();
     } catch (error) {
       toast.error(
@@ -124,9 +197,29 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      {/* Basic Settings */}
-      <div className="bg-white rounded-lg p-6 shadow-sm">
-        <h2 className="text-lg font-semibold mb-4 text-gray-800">Basic Settings</h2>
+      {/* Locale Tabs */}
+      <div className="border-b border-gray-200">
+        <nav className="-mb-px flex space-x-4 overflow-x-auto" aria-label="Locale tabs">
+          {LOCALES.map((locale) => (
+            <button
+              key={locale}
+              type="button"
+              onClick={() => setActiveLocale(locale)}
+              className={`whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm transition-colors ${
+                activeLocale === locale
+                  ? 'border-blue-500 text-blue-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+              }`}
+            >
+              {LOCALE_LABELS[locale]}
+            </button>
+          ))}
+        </nav>
+      </div>
+
+      {/* Page Settings (non-translatable) */}
+      <div className="bg-white rounded-lg shadow p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-gray-800">Page Settings</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Year</label>
@@ -139,14 +232,13 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Page Title</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Banner Image Path</label>
             <input
               type="text"
-              value={pageTitle}
-              onChange={(e) => setPageTitle(e.target.value)}
+              value={bannerImage}
+              onChange={(e) => setBannerImage(e.target.value)}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Fee Schedule 2026"
-              required
+              placeholder="/fees.png"
             />
           </div>
           <div className="flex items-end">
@@ -161,158 +253,134 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
             </label>
           </div>
         </div>
-      </div>
-
-      {/* Banner Section */}
-      <div className="bg-white rounded-lg p-6 shadow-sm">
-        <h2 className="text-lg font-semibold mb-4 text-gray-800">Banner</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Banner Image Path</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Contact Email</label>
             <input
-              type="text"
-              value={bannerImage}
-              onChange={(e) => setBannerImage(e.target.value)}
+              type="email"
+              value={contactEmail}
+              onChange={(e) => setContactEmail(e.target.value)}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="/fees.png"
+              placeholder="accounts@abm.edu.au"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Banner Title</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Instalment Plan Link</label>
             <input
-              type="text"
-              value={bannerTitle}
-              onChange={(e) => setBannerTitle(e.target.value)}
+              type="url"
+              value={instalmentLink}
+              onChange={(e) => setInstalmentLink(e.target.value)}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Fee Schedule 2026"
-            />
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Banner Subtitle</label>
-            <input
-              type="text"
-              value={bannerSubtitle}
-              onChange={(e) => setBannerSubtitle(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Complete fee information for ABM Further Education"
+              placeholder="https://..."
             />
           </div>
         </div>
       </div>
 
-      {/* Promotion Section */}
-      <div className="bg-white rounded-lg p-6 shadow-sm">
-        <h2 className="text-lg font-semibold mb-4 text-gray-800">Promotion Section</h2>
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Promotion Title</label>
+      {/* Banner & Title — per locale */}
+      <div className="bg-white rounded-lg shadow p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-gray-800">
+          Banner & Title — {LOCALE_LABELS[activeLocale]}
+        </h2>
+        {([
+          { label: 'Page Title', field: 'page_title' as keyof PageTransFields },
+          { label: 'Banner Title', field: 'banner_title' as keyof PageTransFields },
+          { label: 'Banner Subtitle', field: 'banner_subtitle' as keyof PageTransFields },
+        ] as const).map(({ label, field }) => (
+          <div key={field}>
+            <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
             <input
               type="text"
-              value={promotionTitle}
-              onChange={(e) => setPromotionTitle(e.target.value)}
+              value={(currentTrans[field] as string) || ''}
+              onChange={(e) => updatePageTransField(activeLocale, field, e.target.value)}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Limited-Time Promotion!"
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Promotion Description</label>
-            <textarea
-              value={promotionDescription}
-              onChange={(e) => setPromotionDescription(e.target.value)}
-              rows={3}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Promotion description..."
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Download Button Text</label>
-            <input
-              type="text"
-              value={downloadButtonText}
-              onChange={(e) => setDownloadButtonText(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Download Promotion Details"
-            />
-          </div>
+        ))}
+      </div>
+
+      {/* Promotion Section — per locale */}
+      <div className="bg-white rounded-lg shadow p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-gray-800">
+          Promotion Section — {LOCALE_LABELS[activeLocale]}
+        </h2>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Promotion Title</label>
+          <input
+            type="text"
+            value={currentTrans.promotion_title || ''}
+            onChange={(e) => updatePageTransField(activeLocale, 'promotion_title', e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Promotion Description</label>
+          <textarea
+            value={currentTrans.promotion_description || ''}
+            onChange={(e) => updatePageTransField(activeLocale, 'promotion_description', e.target.value)}
+            rows={3}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Download Button Text</label>
+          <input
+            type="text"
+            value={currentTrans.download_button_text || ''}
+            onChange={(e) => updatePageTransField(activeLocale, 'download_button_text', e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
         </div>
       </div>
 
-      {/* Payment Section */}
-      <div className="bg-white rounded-lg p-6 shadow-sm">
-        <h2 className="text-lg font-semibold mb-4 text-gray-800">Payment Section</h2>
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Payment Title</label>
-            <input
-              type="text"
-              value={paymentTitle}
-              onChange={(e) => setPaymentTitle(e.target.value)}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Payment Options"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Payment Description</label>
-            <textarea
-              value={paymentDescription}
-              onChange={(e) => setPaymentDescription(e.target.value)}
-              rows={3}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Payment description..."
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Contact Text</label>
-              <input
-                type="text"
-                value={contactText}
-                onChange={(e) => setContactText(e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="For enquiries, please contact..."
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Contact Email</label>
-              <input
-                type="email"
-                value={contactEmail}
-                onChange={(e) => setContactEmail(e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="accounts@abm.edu.au"
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Instalment Plan Link</label>
-              <input
-                type="url"
-                value={instalmentLink}
-                onChange={(e) => setInstalmentLink(e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="https://..."
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Instalment Link Text</label>
-              <input
-                type="text"
-                value={instalmentLinkText}
-                onChange={(e) => setInstalmentLinkText(e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="View Direct Debit Instalment Plan Details"
-              />
-            </div>
-          </div>
+      {/* Payment Section — per locale */}
+      <div className="bg-white rounded-lg shadow p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-gray-800">
+          Payment Section — {LOCALE_LABELS[activeLocale]}
+        </h2>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Payment Title</label>
+          <input
+            type="text"
+            value={currentTrans.payment_title || ''}
+            onChange={(e) => updatePageTransField(activeLocale, 'payment_title', e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Payment Description</label>
+          <textarea
+            value={currentTrans.payment_description || ''}
+            onChange={(e) => updatePageTransField(activeLocale, 'payment_description', e.target.value)}
+            rows={3}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Contact Text</label>
+          <input
+            type="text"
+            value={currentTrans.contact_text || ''}
+            onChange={(e) => updatePageTransField(activeLocale, 'contact_text', e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Instalment Link Text</label>
+          <input
+            type="text"
+            value={currentTrans.instalment_link_text || ''}
+            onChange={(e) => updatePageTransField(activeLocale, 'instalment_link_text', e.target.value)}
+            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
         </div>
       </div>
 
-      {/* Fee Items */}
-      <div className="bg-white rounded-lg p-6 shadow-sm">
-        <div className="flex justify-between items-center mb-4">
+      {/* Fee Items — per locale */}
+      <div className="bg-white rounded-lg shadow p-6 space-y-4">
+        <div className="flex justify-between items-center">
           <h2 className="text-lg font-semibold text-gray-800">
-            {otherFeesTitle || 'Other Fees'}
+            Fee Items — {LOCALE_LABELS[activeLocale]}
           </h2>
           <button
             type="button"
@@ -322,13 +390,14 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
             <Plus className="w-4 h-4" /> Add Fee
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Section Title</label>
             <input
               type="text"
-              value={otherFeesTitle}
-              onChange={(e) => setOtherFeesTitle(e.target.value)}
+              value={currentTrans.other_fees_title || ''}
+              onChange={(e) => updatePageTransField(activeLocale, 'other_fees_title', e.target.value)}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Other Fees"
             />
@@ -337,8 +406,8 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
             <label className="block text-sm font-medium text-gray-700 mb-1">Note</label>
             <input
               type="text"
-              value={nonRefundableNote}
-              onChange={(e) => setNonRefundableNote(e.target.value)}
+              value={currentTrans.non_refundable_note || ''}
+              onChange={(e) => updatePageTransField(activeLocale, 'non_refundable_note', e.target.value)}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="* Non-refundable fees apply..."
             />
@@ -357,64 +426,67 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
-              {fees.map((fee, index) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-3 py-2 text-gray-500">{index + 1}</td>
-                  <td className="px-3 py-2">
-                    <input
-                      type="text"
-                      value={fee.fee_name}
-                      onChange={(e) => updateFee(index, 'fee_name', e.target.value)}
-                      className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="Fee name"
-                      required
-                    />
-                  </td>
-                  <td className="px-3 py-2">
-                    <input
-                      type="text"
-                      value={fee.fee_amount}
-                      onChange={(e) => updateFee(index, 'fee_amount', e.target.value)}
-                      className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="$000"
-                      required
-                    />
-                  </td>
-                  <td className="px-3 py-2 text-center">
-                    <div className="flex items-center justify-center gap-1">
+              {fees.map((fee, index) => {
+                const ft = fee.translations[activeLocale] || { fee_name: '', fee_amount: '' };
+                return (
+                  <tr key={index} className="hover:bg-gray-50">
+                    <td className="px-3 py-2 text-gray-500">{index + 1}</td>
+                    <td className="px-3 py-2">
+                      <input
+                        type="text"
+                        value={ft.fee_name}
+                        onChange={(e) => updateFeeTranslation(index, activeLocale, 'fee_name', e.target.value)}
+                        className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Fee name"
+                        required={activeLocale === 'en'}
+                      />
+                    </td>
+                    <td className="px-3 py-2">
+                      <input
+                        type="text"
+                        value={ft.fee_amount}
+                        onChange={(e) => updateFeeTranslation(index, activeLocale, 'fee_amount', e.target.value)}
+                        className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="$000"
+                        required={activeLocale === 'en'}
+                      />
+                    </td>
+                    <td className="px-3 py-2 text-center">
+                      <div className="flex items-center justify-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => moveFee(index, 'up')}
+                          disabled={index === 0}
+                          className="p-1 text-gray-400 hover:text-gray-600 disabled:opacity-30"
+                        >
+                          &#9650;
+                        </button>
+                        <span className="text-xs text-gray-500 w-6 text-center">
+                          {index + 1}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => moveFee(index, 'down')}
+                          disabled={index === fees.length - 1}
+                          className="p-1 text-gray-400 hover:text-gray-600 disabled:opacity-30"
+                        >
+                          &#9660;
+                        </button>
+                      </div>
+                    </td>
+                    <td className="px-3 py-2 text-center">
                       <button
                         type="button"
-                        onClick={() => moveFee(index, 'up')}
-                        disabled={index === 0}
-                        className="p-1 text-gray-400 hover:text-gray-600 disabled:opacity-30"
+                        onClick={() => removeFee(index)}
+                        disabled={fees.length <= 1}
+                        className="p-1 text-red-400 hover:text-red-600 disabled:opacity-30"
                       >
-                        &#9650;
+                        <Trash2 className="w-4 h-4" />
                       </button>
-                      <span className="text-xs text-gray-500 w-6 text-center">
-                        {fee.display_order}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => moveFee(index, 'down')}
-                        disabled={index === fees.length - 1}
-                        className="p-1 text-gray-400 hover:text-gray-600 disabled:opacity-30"
-                      >
-                        &#9660;
-                      </button>
-                    </div>
-                  </td>
-                  <td className="px-3 py-2 text-center">
-                    <button
-                      type="button"
-                      onClick={() => removeFee(index)}
-                      disabled={fees.length <= 1}
-                      className="p-1 text-red-400 hover:text-red-600 disabled:opacity-30"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -424,7 +496,7 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
       <div className="flex justify-end gap-3">
         <button
           type="button"
-          onClick={() => router.push('/admin/fee-schedule')}
+          onClick={() => router.push('/admin')}
           className="px-6 py-2.5 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
         >
           Cancel

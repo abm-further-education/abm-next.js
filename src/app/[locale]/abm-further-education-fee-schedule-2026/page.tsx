@@ -5,31 +5,35 @@ import DownloadButton from '@/components/common/DownloadButton';
 import { getActiveFeeSchedulePage } from '@/lib/fee-schedule-db';
 import { getTranslations } from 'next-intl/server';
 
-export default async function Page() {
-  const t = await getTranslations('feeSchedule');
-  const data = await getActiveFeeSchedulePage();
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
 
-  const pageTitle = data?.page_title || t('title');
+export default async function Page({ params }: PageProps) {
+  const { locale } = await params;
+  const t = await getTranslations('feeSchedule');
+  const data = await getActiveFeeSchedulePage(locale);
+
+  const translation = data?.translation;
+  const pageTitle = translation?.page_title || data?.page_title || t('title');
   const bannerImage = data?.banner_image || '/fees.png';
-  const bannerTitle = data?.banner_title || t('bannerTitle');
-  const bannerSubtitle = data?.banner_subtitle || t('bannerSubtitle');
-  const promotionTitle = data?.promotion_title || t('promotionTitle');
-  const promotionDescription =
-    data?.promotion_description || t('promotionDescription');
-  const downloadButtonText = data?.download_button_text || t('downloadButton');
-  const paymentTitle = data?.payment_title || t('paymentTitle');
-  const paymentDescription =
-    data?.payment_description || t('paymentDescription');
-  const contactText = data?.contact_text || t('contactText');
+  const bannerTitle = translation?.banner_title || data?.banner_title || t('bannerTitle');
+  const bannerSubtitle = translation?.banner_subtitle || data?.banner_subtitle || t('bannerSubtitle');
+  const promotionTitle = translation?.promotion_title || data?.promotion_title || t('promotionTitle');
+  const promotionDescription = translation?.promotion_description || data?.promotion_description || t('promotionDescription');
+  const downloadButtonText = translation?.download_button_text || data?.download_button_text || t('downloadButton');
+  const paymentTitle = translation?.payment_title || data?.payment_title || t('paymentTitle');
+  const paymentDescription = translation?.payment_description || data?.payment_description || t('paymentDescription');
+  const contactText = translation?.contact_text || data?.contact_text || t('contactText');
   const contactEmail = data?.contact_email || 'accounts@abm.edu.au';
   const instalmentLink =
     data?.instalment_link ||
     'https://abm.edu.au/news/fb413fe6-ca75-495b-9bfe-de5ceff255c8';
   const instalmentLinkText =
-    data?.instalment_link_text || 'View Direct Debit Instalment Plan Details';
-  const otherFeesTitle = data?.other_fees_title || t('otherFeesTitle');
-  const nonRefundableNote = data?.non_refundable_note || t('nonRefundableNote');
-  const fees = data?.fee_schedule_fees || [];
+    translation?.instalment_link_text || data?.instalment_link_text || 'View Direct Debit Instalment Plan Details';
+  const otherFeesTitle = translation?.other_fees_title || data?.other_fees_title || t('otherFeesTitle');
+  const nonRefundableNote = translation?.non_refundable_note || data?.non_refundable_note || t('nonRefundableNote');
+  const fees = data?.fees || [];
 
   return (
     <section>
