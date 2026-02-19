@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
@@ -31,6 +31,8 @@ const allMenus = [
   ...shortCourseMenu,
 ];
 
+const DEFAULT_BROCHURE_URL = '/files/ABM_Brochure_2026_final_web.pdf';
+
 function Nav() {
   const locale = useLocale();
   // const pathname = usePathname();
@@ -43,6 +45,18 @@ function Nav() {
   const [results, setResults] = useState<{ title: string; href: string }[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const router = useRouter();
+  const [brochureUrl, setBrochureUrl] = useState(DEFAULT_BROCHURE_URL);
+
+  useEffect(() => {
+    fetch('/api/site-settings?key=brochure_url')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.brochure_url) {
+          setBrochureUrl(data.brochure_url);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   // 특정 페이지에서 배경색을 항상 black으로 설정할 페이지들
   // const isSpecialPage =
@@ -178,7 +192,7 @@ function Nav() {
             {t('internationalStudent')}
           </div>
           <Link
-            href="/files/ABM_Brochure_2026_final_web.pdf"
+            href={brochureUrl}
             target="_blank"
             className="text-primary font-semibold underline ml-10"
           >
@@ -440,7 +454,7 @@ function Nav() {
             </Link>
           </div>
         </header>
-        <MobileNav />
+        <MobileNav brochureUrl={brochureUrl} />
       </div>
     </>
   );

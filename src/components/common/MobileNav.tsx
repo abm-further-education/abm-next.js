@@ -26,7 +26,7 @@ import {
 } from '@/lib';
 import { useTranslations, useLocale } from 'next-intl';
 
-function MobileNav() {
+function MobileNav({ brochureUrl }: { brochureUrl?: string }) {
   const t = useTranslations('nav');
   const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -361,7 +361,7 @@ function MobileNav() {
             <li>
               <Link
                 target="_blank"
-                href="/files/ABM_Brochure_2026_final_web.pdf"
+                href={brochureUrl || '/files/ABM_Brochure_2026_final_web.pdf'}
                 className="block p-3 hover:underline"
               >
                 {t('downloadGuide')}

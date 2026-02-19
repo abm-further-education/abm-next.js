@@ -13,6 +13,7 @@ import {
   BookOpen,
   ArrowRight,
   Home,
+  Settings,
 } from 'lucide-react';
 
 const menuItems = [
@@ -95,6 +96,16 @@ const menuItems = [
     lightColor: 'bg-teal-50',
     hoverColor: 'hover:border-teal-300',
     textColor: 'text-teal-600',
+  },
+  {
+    href: '/admin/site-settings',
+    icon: Settings,
+    title: 'Site Settings',
+    description: 'Manage brochure links, navigation, and common website settings',
+    color: 'bg-gray-500',
+    lightColor: 'bg-gray-50',
+    hoverColor: 'hover:border-gray-300',
+    textColor: 'text-gray-600',
   },
 ];
 
