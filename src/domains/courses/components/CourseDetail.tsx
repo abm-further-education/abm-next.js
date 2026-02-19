@@ -248,7 +248,7 @@ const businessProgress: ProgressRow[] = [
     {
       code: 'BSB60120',
       title: 'Advanced Diploma of Business',
-      duration: '52 weeks',
+      duration: '78 weeks',
       color: 'bg-[#364662]',
     },
     {
