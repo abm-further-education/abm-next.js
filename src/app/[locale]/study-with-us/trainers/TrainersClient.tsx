@@ -4,15 +4,19 @@ import React from 'react';
 import Banner from '@/components/common/Banner';
 import FadeIn from '@/components/common/FadeIn';
 import TrainerCard from '@/components/trainers/TrainerCard';
-import { trainers } from '@/lib/trainerData';
+import TrainersEditable from '@/components/trainers/TrainersEditable';
 import { useTranslations } from 'next-intl';
+import { useEditMode } from '@/contexts/EditModeContext';
 import Link from 'next/link';
+import type { DbTrainer } from '@/lib/trainer-db';
 
-export default function TrainersClient() {
+interface TrainersClientProps {
+  trainers: DbTrainer[];
+}
+
+export default function TrainersClient({ trainers }: TrainersClientProps) {
   const t = useTranslations('trainers');
-
-  // Get all trainers for display
-  const allTrainers = trainers;
+  const editMode = useEditMode();
 
   return (
     <div className="font-[family-name:var(--font-montserrat)]">
@@ -41,17 +45,21 @@ export default function TrainersClient() {
           </div>
         </FadeIn>
 
-        <div className="space-y-16">
-          <FadeIn>
-            <div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
-                {allTrainers.map((trainer) => (
-                  <TrainerCard key={trainer.id} trainer={trainer} />
-                ))}
+        {editMode?.isEditMode ? (
+          <TrainersEditable trainers={trainers} />
+        ) : (
+          <div className="space-y-16">
+            <FadeIn>
+              <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
+                  {trainers.map((trainer) => (
+                    <TrainerCard key={trainer.id} trainer={trainer} />
+                  ))}
+                </div>
               </div>
-            </div>
-          </FadeIn>
-        </div>
+            </FadeIn>
+          </div>
+        )}
 
         <FadeIn>
           <div className="text-center mt-16 pt-40 border-t border-gray-200">

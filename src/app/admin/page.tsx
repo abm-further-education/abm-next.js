@@ -14,6 +14,7 @@ import {
   ArrowRight,
   Home,
   Settings,
+  UserCheck,
 } from 'lucide-react';
 
 const menuItems = [
@@ -96,6 +97,16 @@ const menuItems = [
     lightColor: 'bg-teal-50',
     hoverColor: 'hover:border-teal-300',
     textColor: 'text-teal-600',
+  },
+  {
+    href: '/admin/trainers',
+    icon: UserCheck,
+    title: 'Trainers Management',
+    description: 'Manage trainer profiles, categories and contact info',
+    color: 'bg-indigo-500',
+    lightColor: 'bg-indigo-50',
+    hoverColor: 'hover:border-indigo-300',
+    textColor: 'text-indigo-600',
   },
   {
     href: '/admin/site-settings',

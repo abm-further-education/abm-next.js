@@ -39,15 +39,15 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
             <div
               className={cn(
                 'text-xs md:text-sm font-semibold mb-2',
-                index + startIndex > 0 && 'pl-35 md:pl-50',
+                index + startIndex > 0 && 'pl-25 md:pl-50',
               )}
             >
               {course.code || ''}
             </div>
             <div
               className={cn(
-                'text-sm md:text-base font-bold max-w-210 mb-2 leading-tight',
-                index + startIndex > 0 && 'pl-35 md:pl-50 pr-10',
+                'text-xs md:text-base font-bold max-w-120 md:max-w-210 mb-2 leading-tight ',
+                index + startIndex > 0 && 'pl-25 md:pl-50 pr-10',
               )}
             >
               {course.title}
@@ -55,7 +55,7 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
             <div
               className={cn(
                 'text-xs md:text-sm absolute bottom-10',
-                index + startIndex > 0 && 'pl-35 md:pl-50',
+                index + startIndex > 0 && 'pl-25 md:pl-50',
               )}
             >
               {course.duration || ''}

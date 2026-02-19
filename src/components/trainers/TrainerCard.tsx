@@ -3,19 +3,19 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Trainer, courseCategories } from '@/lib/trainerData';
+import { courseCategories } from '@/lib/trainerData';
 import { Mail } from 'lucide-react';
+import type { DbTrainer } from '@/lib/trainer-db';
 
 interface TrainerCardProps {
-  trainer: Trainer;
+  trainer: DbTrainer;
 }
 
 export default function TrainerCard({ trainer }: TrainerCardProps) {
-  // Get category info
   const categoryInfo = courseCategories.find(
-    (cat) => cat.value === trainer.courseCategory
+    (cat) => cat.value === trainer.course_category
   );
-  const categoryLabel = categoryInfo?.label || trainer.courseCategory;
+  const categoryLabel = categoryInfo?.label || trainer.course_category;
   const categoryHref = categoryInfo?.href || '#';
 
   return (
@@ -46,7 +46,6 @@ export default function TrainerCard({ trainer }: TrainerCardProps) {
             </Link>
           </div>
 
-          {/* Category label */}
           <div className="pt-2 border-t border-gray-100">
             <Link
               href={categoryHref}
