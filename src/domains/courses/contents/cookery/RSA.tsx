@@ -35,11 +35,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
 
   if (editMode?.isEditMode && courseId) {
     return (
-      <ShortCourseEditable
-        courseId={courseId}
-        locale={locale}
-        data={rsaData}
-      />
+      <ShortCourseEditable courseId={courseId} locale={locale} data={rsaData} />
     );
   }
 
@@ -105,8 +101,23 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
               </ul>
             </div>
 
-            <div className="font-bold text-2xl mt-20 text-primary">
-              ${rsaData.price || 189}
+            <div className="flex flex-col gap-10 mt-20 bg-orange-100 p-10 md: w-600">
+              <span className="font-semibold">Special Offer:</span>
+              <p className="text-gray-700">
+                Use code <strong>RSAabmnew02</strong> at checkout for a{' '}
+                <span className="bg-orange-100 text-primary font-semibold">
+                  discount
+                </span>
+              </p>
+            </div>
+
+            <div className="flex items-center gap-x-10 mt-20">
+              <span className="font-bold text-2xl text-primary">$189</span>
+
+              <span className="text-gray-800 text-xl line-through">
+                ${rsaData.price || 189}
+              </span>
+              <span>(When you use the code)</span>
             </div>
           </div>
           <Link
@@ -286,7 +297,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                         {rsaData.faq4.answer.map(
                           (item: string, idx: number) => (
                             <li key={idx}>{item}</li>
-                          )
+                          ),
                         )}
                       </ul>
                     ) : (
@@ -318,7 +329,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                         {rsaData.faq5.answer.map(
                           (item: string, idx: number) => (
                             <li key={idx}>{item}</li>
-                          )
+                          ),
                         )}
                       </ul>
                     ) : (
