@@ -118,7 +118,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '107907A',
     description:
       'This qualification reflects the role of individuals who apply highly specialised management knowledge and skills to lead and influence change in complex and dynamic management environments.\n\nIndividuals at this level use cognitive and communication skills to identify, analyse, synthesise and act on information from a variety of sources, and transfer knowledge and skills to others.\n\nThey apply creative, conceptual and analytical skills to formulate and evaluate complex ideas or initiate change. They demonstrate self-directed application of knowledge and skills, with substantial personal responsibility and autonomy in complex situations.',
-    duration: '52 weeks',
+    duration: '104 weeks',
     entryRequirement:
       'Students must have completed Advanced Diploma level course (AQF Level 6) or higher.',
     deliveryMode: {
