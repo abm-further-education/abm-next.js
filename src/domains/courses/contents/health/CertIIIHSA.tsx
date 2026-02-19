@@ -56,18 +56,20 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
                 {
                   title: 'English for Healthcare Communication',
                   duration: '12 weeks',
+                  color: 'bg-neutral-500',
                 },
                 {
                   code: 'HLT33115',
                   title: 'Certificate III in Health Services Assistance',
                   duration: '16 weeks',
+                  color: 'bg-primary',
                 },
                 {
                   title: 'Placement',
                   duration: '80 hours',
+                  color: 'bg-neutral-500',
                 },
               ]}
-              activeIndex={1}
             /> */}
             <span className="text-sm text-primary">
               {t('entryRequirements.items.lowerEnglishOption')}

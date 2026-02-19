@@ -31,19 +31,21 @@ function DiplomaHM() {
                   code: 'SIT40521',
                   title: 'Certificate IV in Kitchen Management',
                   duration: '78 weeks',
+                  color: 'bg-neutral-500',
                 },
                 {
                   code: 'SIT50422',
                   title: 'Diploma of Hospitality Management',
                   duration: '26 weeks',
+                  color: 'bg-primary',
                 },
                 {
                   code: 'SIT60322',
                   title: 'Advanced Diploma of Hospitality Management',
                   duration: '26 weeks',
+                  color: 'bg-neutral-500',
                 },
               ]}
-              activeIndex={1}
             />
 
             {/* Course Description */}
@@ -97,14 +99,15 @@ function DiplomaHM() {
                   code: 'SIT50422',
                   title: 'Diploma of Hospitality Management',
                   duration: '78 weeks',
+                  color: 'bg-primary',
                 },
                 {
                   code: 'SIT60322',
                   title: 'Advanced Diploma of Hospitality Management',
                   duration: '26 weeks',
+                  color: 'bg-neutral-500',
                 },
               ]}
-              activeIndex={0}
               startIndex={1}
             />
 

@@ -38,7 +38,6 @@ export default function BusinessDetailClient({
   courseDetails,
   courseInformation,
 }: BusinessDetailClientProps) {
-
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
     return menuItem.toLowerCase().replace(/\s+/g, '-');
@@ -49,8 +48,10 @@ export default function BusinessDetailClient({
       <Banner
         slides={[
           {
-            imgPath: mappingCourseImage[id] || '/courses/business/business_1.jpg',
-            title: `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
+            imgPath:
+              mappingCourseImage[id] || '/courses/business/business_1.jpg',
+            title:
+              `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
             content: '',
           },
         ]}

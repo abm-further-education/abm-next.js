@@ -33,7 +33,7 @@ export default async function CoursesAdminPage() {
             <div className="flex gap-3">
               <Link
                 href="/admin/courses/new"
-                className="px-4 py-2 bg-primary-bk text-white rounded-md hover:bg-primary transition-colors flex items-center"
+                className="px-4 py-2 bg-primary-bk text-white rounded-md transition-colors flex items-center"
               >
                 <PlusIcon className="w-14 h-14 mr-2" />
                 Add Full Course

@@ -3,7 +3,6 @@
 import React from 'react';
 import { cn, parseBoldText } from '@/lib/utils';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useEditMode } from '@/contexts/EditModeContext';
@@ -17,9 +16,16 @@ import type {
   CourseDetailItem,
   CourseDetailInfo,
 } from '@/types/course';
+import CourseProgress from '@/components/common/CourseProgress';
 
 // Re-export for backward compatibility
-export type { TableData, LinkData, DescriptionItem, CourseDetailItem, CourseDetailInfo };
+export type {
+  TableData,
+  LinkData,
+  DescriptionItem,
+  CourseDetailItem,
+  CourseDetailInfo,
+};
 
 // Helper component to render text with bold parsing
 const BoldText: React.FC<{ children: string }> = ({ children }) => {
@@ -51,7 +57,7 @@ function isLinkData(value: any): value is LinkData {
 
 // description을 렌더링하는 함수
 function renderDescription(
-  description: string | string[] | DescriptionItem[] | FaqItem[]
+  description: string | string[] | DescriptionItem[] | FaqItem[],
 ): React.ReactNode {
   // FaqItem[]는 CertIIIHSA에서 별도 렌더링 (여기서는 사용하지 않음)
   if (
@@ -104,7 +110,7 @@ function renderDescription(
                               key={headerIndex}
                               className={cn(
                                 'px-4 py-2 border border-gray-300 font-semibold text-left',
-                                headerIndex === 0 ? 'w-120' : ''
+                                headerIndex === 0 ? 'w-120' : '',
                               )}
                               colSpan={isSecondHeaderWithMerge ? 2 : 1}
                             >
@@ -190,6 +196,269 @@ function renderDescription(
   );
 }
 
+type ProgressRow = {
+  code?: string;
+  title: string;
+  duration?: string;
+  color?: string;
+}[];
+
+const businessProgress: ProgressRow[] = [
+  [
+    {
+      code: 'BSB40120',
+      title: 'Certificate IV in Business',
+      duration: '52 weeks',
+      color: 'bg-[#2F4385]',
+    },
+    {
+      code: 'BSB50120',
+      title: 'Diploma of Business',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+  ],
+  [
+    {
+      code: 'BSB40120',
+      title: 'Certificate IV in Business',
+      duration: '52 weeks',
+      color: 'bg-[#2F4385]',
+    },
+    {
+      code: 'BSB50120',
+      title: 'Diploma of Business',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+    {
+      code: 'BSB60120',
+      title: 'Advanced Diploma of Business',
+      duration: '78 weeks',
+      color: 'bg-[#364662]',
+    },
+  ],
+  [
+    {
+      code: 'BSB50120',
+      title: 'Diploma of Business',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+    {
+      code: 'BSB60120',
+      title: 'Advanced Diploma of Business',
+      duration: '52 weeks',
+      color: 'bg-[#364662]',
+    },
+    {
+      code: 'BSB80120',
+      title: 'Graduate Diploma of Management (Learning)',
+      duration: '104 weeks',
+      color: 'bg-[#282A2B]',
+    },
+  ],
+];
+
+const pmProgress: ProgressRow[] = [
+  [
+    {
+      code: 'BSB40920',
+      title: 'Certificate IV in Project Management Practice',
+      duration: '52 weeks',
+      color: 'bg-[#2F4385]',
+    },
+    {
+      code: 'BSB50820',
+      title: 'Diploma of Project Management Practice',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+  ],
+  [
+    {
+      code: 'BSB40920',
+      title: 'Certificate IV in Project Management Practice',
+      duration: '52 weeks',
+      color: 'bg-[#2F4385]',
+    },
+    {
+      code: 'BSB50820',
+      title: 'Diploma of Project Management Practice',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+    {
+      code: 'BSB60720',
+      title: 'Advanced Diploma of Program Management',
+      duration: '78 weeks',
+      color: 'bg-[#364662]',
+    },
+  ],
+  [
+    {
+      code: 'BSB50820',
+      title: 'Diploma of Project Management Practice',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+    {
+      code: 'BSB60720',
+      title: 'Advanced Diploma of Program Management',
+      duration: '78 weeks',
+      color: 'bg-[#364662]',
+    },
+  ],
+];
+
+const hrProgress: ProgressRow[] = [
+  [
+    {
+      code: 'BSB40420',
+      title: 'Certificate IV in Human Resource Management',
+      duration: '52 weeks',
+      color: 'bg-[#2F4385]',
+    },
+    {
+      code: 'BSB50320',
+      title: 'Diploma of Human Resource Management',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+  ],
+  [
+    {
+      code: 'BSB40420',
+      title: 'Certificate IV in Human Resource Management',
+      duration: '52 weeks',
+      color: 'bg-[#2F4385]',
+    },
+    {
+      code: 'BSB50320',
+      title: 'Diploma of Human Resource Management',
+      duration: '52 weeks',
+      color: 'bg-[#1D234B]',
+    },
+    {
+      code: 'BSB60320',
+      title: 'Advanced Diploma of Human Resource Management',
+      duration: '78 weeks',
+      color: 'bg-[#364662]',
+    },
+  ],
+];
+
+const fitnessProgress: ProgressRow[] = [
+  [
+    {
+      code: 'SIS30321',
+      title: 'Certificate III in Fitness',
+      duration: '52 weeks',
+      color: 'bg-[#BD0622]',
+    },
+    {
+      code: 'SIS40221',
+      title: 'Certificate IV in Fitness',
+      duration: '52 weeks',
+      color: 'bg-[#982D3A]',
+    },
+    {
+      code: 'SIS50321',
+      title: 'Diploma of Sport',
+      duration: '52 weeks',
+      color: 'bg-[#965F67]',
+    },
+  ],
+  [
+    {
+      code: '',
+      title: 'Certificate III in Fitness (Fast Track)',
+      duration: '12 weeks',
+      color: 'bg-[#BD0622]',
+    },
+    {
+      code: '',
+      title: 'Certificate IV in Fitness (Fast Track)',
+      duration: '12 weeks',
+      color: 'bg-[#982D3A]',
+    },
+  ],
+];
+
+const fitnessFastTrackProgress: ProgressRow[] = [
+  [
+    {
+      code: '',
+      title: 'Certificate III in Fitness (Fast Track)',
+      duration: '12 weeks',
+      color: 'bg-[#BD0622]',
+    },
+    {
+      code: '',
+      title: 'Certificate IV in Fitness (Fast Track)',
+      duration: '12 weeks',
+      color: 'bg-[#982D3A]',
+    },
+  ],
+];
+
+const kmProgress: ProgressRow[] = [
+  [
+    {
+      code: 'SIT40521',
+      title: 'Certificate IV in Kitchen Management',
+      duration: '78 weeks',
+      color: 'bg-primary',
+    },
+    {
+      code: 'SIT50422',
+      title: 'Diploma of Hospitality Management',
+      duration: '26 weeks',
+      color: 'bg-[#89694D]',
+    },
+  ],
+  [
+    {
+      code: 'SIT40521',
+      title: 'Certificate IV in Kitchen Management',
+      duration: '78 weeks',
+      color: 'bg-primary',
+    },
+    {
+      code: 'SIT50422',
+      title: 'Diploma of Hospitality Management',
+      duration: '26 weeks',
+      color: 'bg-[#89694D]',
+    },
+    {
+      code: 'SIT60322',
+      title: 'Advanced Diploma of Hospitality Management',
+      duration: '26 weeks',
+      color: 'bg-neutral-400',
+    },
+  ],
+];
+
+const courseProgressMap: Record<string, ProgressRow[]> = {
+  'bsb40120-certificate-iv-in-business': businessProgress,
+  'bsb50120-diploma-of-business': businessProgress,
+  'bsb60120-advanced-diploma-of-business': businessProgress,
+  'bsb80120-graduate-diploma-of-management': businessProgress,
+  'bsb40920-certificate-iv-in-project-management-practice': pmProgress,
+  'bsb50820-diploma-of-project-management-practice': pmProgress,
+  'bsb60720-advanced-diploma-of-program-management': pmProgress,
+  'bsb40420-certificate-iv-in-human-resource-management': hrProgress,
+  'bsb50320-diploma-of-human-resource-management': hrProgress,
+  'bsb60220-advanced-diploma-of-human-resource-management': hrProgress,
+  'bsb60320-advanced-diploma-of-human-resource-management': hrProgress,
+  'sis30321-certificate-iii-in-fitness': fitnessProgress,
+  'sis40221-certificate-iv-in-fitness': fitnessProgress,
+  'sis50321-diploma-of-sport': fitnessProgress,
+  'certificate-iii-in-fitness-fast-track': fitnessFastTrackProgress,
+  'certificate-iv-in-fitness-fast-track': fitnessFastTrackProgress,
+  'sit40521-certificate-iv-in-kitchen-management': kmProgress,
+};
+
 function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
   const t = useTranslations('courseDetail');
   const editMode = useEditMode();
@@ -209,38 +478,7 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
     );
   }
 
-  const matchStudyPlan = {
-    'sit40521-certificate-iv-in-kitchen-management':
-      '/courses/study_plan/KM.png',
-    'sit50422-diploma-of-hospitality-management': '/courses/study_plan/HM.png',
-    'advanced-diploma-of-hospitality-management': '/courses/study_plan/HM.png',
-    'sis30321-certificate-iii-in-fitness': '/courses/study_plan/Fitness.png',
-    'sis40221-certificate-iv-in-fitness': '/courses/study_plan/Fitness.png',
-    'sis50321-diploma-of-sport': '/courses/study_plan/Fitness.png',
-    'certificate-iii-in-fitness-fast-track':
-      '/courses/study_plan/fitness_fast_track.png',
-    'certificate-iv-in-fitness-fast-track':
-      '/courses/study_plan/fitness_fast_track.png',
-    'bsb40120-certificate-iv-in-business': '/courses/study_plan/Business.png',
-    'bsb50120-diploma-of-business': '/courses/study_plan/Business.png',
-    'bsb60120-advanced-diploma-of-business': '/courses/study_plan/Business.png',
-    'bsb80120-graduate-diploma-of-management':
-      '/courses/study_plan/Business.png',
-    'bsb40920-certificate-iv-in-project-management-practice':
-      '/courses/study_plan/PM.png',
-    'bsb50820-diploma-of-project-management-practice':
-      '/courses/study_plan/PM.png',
-    'bsb60720-advanced-diploma-of-program-management':
-      '/courses/study_plan/PM.png',
-    'bsb40420-certificate-iv-in-human-resource-management':
-      '/courses/study_plan/HR.png',
-    'bsb50320-diploma-of-human-resource-management':
-      '/courses/study_plan/HR.png',
-    'bsb60220-advanced-diploma-of-human-resource-management':
-      '/courses/study_plan/HR.png',
-    'bsb60320-advanced-diploma-of-human-resource-management':
-      '/courses/study_plan/HR.png',
-  };
+  const progressRows = courseId ? courseProgressMap[courseId] : undefined;
 
   // courseStructure가 있는 코스들 (hospitality 코스들)
   const hasCourseStructure =
@@ -251,14 +489,13 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
   // courseStructure 섹션들을 찾기
   const courseStructureSections = hasCourseStructure
     ? Object.entries(courseInfo).filter(([key]) =>
-        key.startsWith('courseStructure')
+        key.startsWith('courseStructure'),
       )
     : [];
 
   // courseStructure가 아닌 섹션들 (faq는 HSA 전용으로 CertIIIHSA에서 렌더링)
   const otherSections = Object.entries(courseInfo).filter(
-    ([key]) =>
-      !key.startsWith('courseStructure') && key !== 'faq'
+    ([key]) => !key.startsWith('courseStructure') && key !== 'faq',
   );
 
   return (
@@ -270,40 +507,35 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
         ) : courseId ===
           'hlt33115-certificate-iii-in-health-services-assistance' ? (
           <CertIIIHSA
-            faqItems={
-              (() => {
-                const d = courseInfo.faq?.description;
-                if (!Array.isArray(d)) return undefined;
-                const ok = d.every(
-                  (v) =>
-                    v != null &&
-                    typeof v === 'object' &&
-                    'question' in v &&
-                    'answer' in v &&
-                    typeof (v as FaqItem).question === 'string' &&
-                    typeof (v as FaqItem).answer === 'string'
-                );
-                return ok && d.length > 0 ? (d as unknown as FaqItem[]) : undefined;
-              })()
-            }
+            faqItems={(() => {
+              const d = courseInfo.faq?.description;
+              if (!Array.isArray(d)) return undefined;
+              const ok = d.every(
+                (v) =>
+                  v != null &&
+                  typeof v === 'object' &&
+                  'question' in v &&
+                  'answer' in v &&
+                  typeof (v as FaqItem).question === 'string' &&
+                  typeof (v as FaqItem).answer === 'string',
+              );
+              return ok && d.length > 0
+                ? (d as unknown as FaqItem[])
+                : undefined;
+            })()}
           />
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-40">
             {courseId !==
               'hlt33115-certificate-iii-in-health-services-assistance' && (
               <div className="mb-30">
-                <div className="mt-15">
-                  <Image
-                    src={
-                      matchStudyPlan[courseId as keyof typeof matchStudyPlan]
-                    }
-                    alt="Study Plan"
-                    width={800}
-                    height={600}
-                    quality={100}
-                    className="w-full max-w-800 h-auto rounded-lg mb-30"
-                  />
-                </div>
+                {progressRows && (
+                  <div className="mt-15">
+                    {progressRows.map((row, index) => (
+                      <CourseProgress key={index} courses={row} />
+                    ))}
+                  </div>
+                )}
 
                 {/* courseStructure가 있는 경우 이미지 아래에 courseStructure 섹션들을 배치 */}
                 {hasCourseStructure && courseStructureSections.length > 0 && (
@@ -314,7 +546,7 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
                           <h3 className={titleStyle}>{sectionData.title}</h3>
                           {renderDescription(sectionData.description)}
                         </div>
-                      )
+                      ),
                     )}
                   </div>
                 )}
