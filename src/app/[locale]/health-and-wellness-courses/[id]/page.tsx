@@ -6,7 +6,7 @@ import CourseInformation from '@/domains/courses/components/CourseInformation';
 import IndustryPlacementHSA from '@/domains/courses/contents/health/IndustryPlacementHSA';
 import Units from '@/domains/courses/components/Units';
 import { cn } from '@/lib';
-import { getCourseDetails, getCourseInfo } from '@/lib/course-db';
+import { getCourseDetails, getCourseInfo, getCourseUnits } from '@/lib/course-db';
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
@@ -85,9 +85,11 @@ export default async function Page({
     );
   }
 
-  // Fetch course data from database (with fallback to static files)
-  const courseDetails = await getCourseDetails(id, locale);
-  const courseInformation = await getCourseInfo(id, locale);
+  const [courseDetails, courseInformation, courseUnits] = await Promise.all([
+    getCourseDetails(id, locale),
+    getCourseInfo(id, locale),
+    getCourseUnits(id),
+  ]);
 
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
@@ -125,7 +127,7 @@ export default async function Page({
           'grid grid-cols-1 lg:grid-cols-2',
         )}
       >
-        <Units id={id} />
+        <Units id={id} data={courseUnits} />
         <Gallery
           showTitle={false}
           breakpointColumns={{

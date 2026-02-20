@@ -113,21 +113,21 @@ export default function AcademicCalendar({ events }: AcademicCalendarProps) {
       <div className="flex flex-wrap gap-4 mb-6 justify-end">
         <div className="flex items-center gap-2">
           <div
-            className="w-4 h-4 rounded"
+            className="w-16 h-16 rounded"
             style={{ backgroundColor: TERM_COLOR }}
           />
           <span className="text-sm text-gray-600">Term</span>
         </div>
         <div className="flex items-center gap-2">
           <div
-            className="w-4 h-4 rounded"
+            className="w-16 h-16 rounded"
             style={{ backgroundColor: HOLIDAY_COLOR }}
           />
           <span className="text-sm text-gray-600">Holiday</span>
         </div>
         <div className="flex items-center gap-2">
           <div
-            className="w-4 h-4 rounded"
+            className="w-16 h-16 rounded"
             style={{ backgroundColor: EVENT_COLOR }}
           />
           <span className="text-sm text-gray-600">School Event</span>
@@ -169,7 +169,7 @@ export default function AcademicCalendar({ events }: AcademicCalendarProps) {
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
                 <div
-                  className="w-4 h-4 rounded"
+                  className="w-16 h-16 rounded"
                   style={{
                     backgroundColor:
                       selectedEvent.color ||

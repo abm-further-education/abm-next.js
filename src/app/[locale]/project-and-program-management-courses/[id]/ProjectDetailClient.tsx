@@ -7,7 +7,7 @@ import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
 import React from 'react';
-import type { CourseDetailInfo, CourseInformationInfo } from '@/types/course';
+import type { CourseDetailInfo, CourseInformationInfo, CourseUnitGroup } from '@/types/course';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'bsb40920-certificate-iv-in-project-management-practice':
@@ -34,12 +34,14 @@ interface ProjectDetailClientProps {
   locale: string;
   courseDetails: CourseDetailInfo | null;
   courseInformation: CourseInformationInfo | null;
+  courseUnits?: CourseUnitGroup[] | null;
 }
 
 export default function ProjectDetailClient({
   id,
   courseDetails,
   courseInformation,
+  courseUnits,
 }: ProjectDetailClientProps) {
 
   // 섹션 ID를 생성하는 함수
@@ -77,7 +79,7 @@ export default function ProjectDetailClient({
         id={getSectionId('Units')}
         className="max-w-[1600px] mx-auto px-20 md:px-80 py-40 grid grid-cols-1 lg:grid-cols-2 gap-40"
       >
-        <Units id={id} />
+        <Units id={id} data={courseUnits} />
         <Gallery
           showTitle={false}
           breakpointColumns={{

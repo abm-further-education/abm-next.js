@@ -112,7 +112,8 @@ const menuItems = [
     href: '/admin/site-settings',
     icon: Settings,
     title: 'Site Settings',
-    description: 'Manage brochure links, navigation, and common website settings',
+    description:
+      'Manage brochure links, navigation, and common website settings',
     color: 'bg-gray-500',
     lightColor: 'bg-gray-50',
     hoverColor: 'hover:border-gray-300',
@@ -185,7 +186,7 @@ export default async function AdminPage() {
                       </div>
                     </div>
                     <div className="absolute top-5 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ArrowRight className={`w-4 h-4 ${item.textColor}`} />
+                      <ArrowRight className={`w-16 h-16 ${item.textColor}`} />
                     </div>
                   </Link>
                 );

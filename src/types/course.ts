@@ -237,6 +237,32 @@ export interface DbShortCourseTranslation {
   updated_at: string;
 }
 
+// Course unit item (single row in units table)
+export interface CourseUnitItem {
+  no: number;
+  code: string;
+  title: string;
+  type: string;
+}
+
+// Course unit group (may have multiple groups per course, e.g. hospitality)
+export interface CourseUnitGroup {
+  groupTitle: string;
+  groupIndex: number;
+  units: CourseUnitItem[];
+}
+
+// DB row for course_units table
+export interface DbCourseUnit {
+  id: string;
+  course_id: string;
+  group_index: number;
+  group_title: string;
+  units: CourseUnitItem[];
+  created_at: string;
+  updated_at: string;
+}
+
 // =====================================================
 // Combined/Joined Types (for frontend use)
 // =====================================================

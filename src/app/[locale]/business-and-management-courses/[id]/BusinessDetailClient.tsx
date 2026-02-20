@@ -7,7 +7,7 @@ import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
 import React from 'react';
-import type { CourseDetailInfo, CourseInformationInfo } from '@/types/course';
+import type { CourseDetailInfo, CourseInformationInfo, CourseUnitGroup } from '@/types/course';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'bsb40120-certificate-iv-in-business': 'Certificate IV in Business',
@@ -31,12 +31,14 @@ interface BusinessDetailClientProps {
   locale: string;
   courseDetails: CourseDetailInfo | null;
   courseInformation: CourseInformationInfo | null;
+  courseUnits?: CourseUnitGroup[] | null;
 }
 
 export default function BusinessDetailClient({
   id,
   courseDetails,
   courseInformation,
+  courseUnits,
 }: BusinessDetailClientProps) {
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
@@ -76,7 +78,7 @@ export default function BusinessDetailClient({
         id={getSectionId('Units')}
         className="max-w-[1600px] mx-auto px-20 md:px-80 py-40 grid grid-cols-1 lg:grid-cols-2 gap-40"
       >
-        <Units id={id} />
+        <Units id={id} data={courseUnits} />
         <Gallery
           showTitle={false}
           breakpointColumns={{

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Plus, Trash2, Table2 } from 'lucide-react';
+import { Plus, Trash2, Table2, X } from 'lucide-react';
 
 export interface SimpleTable {
   headers: string[];
@@ -41,7 +41,7 @@ export default function TablesEditor({
           className="border border-emerald-200 rounded-lg bg-emerald-50/30 overflow-hidden"
         >
           <div className="flex items-center gap-2 px-3 py-2 bg-white/80 border-b border-gray-200">
-            <Table2 className="w-4 h-4" />
+            <Table2 className="w-16 h-16" />
             <span className="text-sm font-medium text-gray-700">
               Table {index + 1}
             </span>
@@ -52,7 +52,7 @@ export default function TablesEditor({
                 onClick={() => removeTable(index)}
                 className="p-1 text-red-500 hover:bg-red-50 rounded"
               >
-                <Trash2 className="w-4 h-4" />
+                <Trash2 className="w-16 h-16" />
               </button>
             )}
           </div>
@@ -69,9 +69,9 @@ export default function TablesEditor({
         <button
           type="button"
           onClick={addTable}
-          className="flex items-center gap-1 px-3 py-1.5 text-sm border border-emerald-300 rounded hover:bg-emerald-50"
+          className="flex items-center gap-1 px-3 py-1.5 text-sm border border-emerald-300 rounded bg-emerald-100 hover:bg-emerald-200"
         >
-          <Plus className="w-4 h-4" /> Add table
+          <Plus className="w-16 h-16" /> Add table
         </button>
       )}
     </div>
@@ -134,23 +134,25 @@ function SimpleTableEditor({
           <tr>
             {table.headers.map((h, i) => (
               <th key={i} className="border border-gray-300 p-1 bg-gray-100">
-                <input
-                  type="text"
-                  value={h}
-                  onChange={(e) => updateHeader(i, e.target.value)}
-                  placeholder={`Header ${i + 1}`}
-                  className="w-full min-w-[80px] px-1 py-0.5 text-sm"
-                  disabled={disabled}
-                />
-                {!disabled && table.headers.length > 1 && (
-                  <button
-                    type="button"
-                    onClick={() => removeHeader(i)}
-                    className="ml-1 text-red-500 text-xs hover:underline"
-                  >
-                    ×
-                  </button>
-                )}
+                <div className="flex items-center gap-1">
+                  <input
+                    type="text"
+                    value={h}
+                    onChange={(e) => updateHeader(i, e.target.value)}
+                    placeholder={`Header ${i + 1}`}
+                    className="w-full min-w-[80px] px-1 py-0.5 text-sm"
+                    disabled={disabled}
+                  />
+                  {!disabled && table.headers.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => removeHeader(i)}
+                      className="ml-1 text-red-500 hover:underline hover:bg-red-50 rounded"
+                    >
+                      <X className="w-16 h-16" />
+                    </button>
+                  )}
+                </div>
               </th>
             ))}
             {!disabled && (

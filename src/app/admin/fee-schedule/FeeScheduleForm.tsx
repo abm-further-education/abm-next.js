@@ -23,7 +23,10 @@ const LOCALE_LABELS: Record<string, string> = {
   id: 'Bahasa',
 };
 
-type PageTransFields = Omit<FeeSchedulePageTranslation, 'id' | 'page_id' | 'locale' | 'created_at' | 'updated_at'>;
+type PageTransFields = Omit<
+  FeeSchedulePageTranslation,
+  'id' | 'page_id' | 'locale' | 'created_at' | 'updated_at'
+>;
 
 const emptyPageTrans: PageTransFields = {
   page_title: '',
@@ -55,22 +58,41 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
   const [activeLocale, setActiveLocale] = useState<string>('en');
 
   // Structural (non-translatable) fields
-  const [year, setYear] = useState(initialData?.year || new Date().getFullYear());
+  const [year, setYear] = useState(
+    initialData?.year || new Date().getFullYear(),
+  );
   const [isActive, setIsActive] = useState(initialData?.is_active ?? true);
-  const [bannerImage, setBannerImage] = useState(initialData?.banner_image || '/fees.png');
-  const [contactEmail, setContactEmail] = useState(initialData?.contact_email || '');
-  const [instalmentLink, setInstalmentLink] = useState(initialData?.instalment_link || '');
+  const [bannerImage, setBannerImage] = useState(
+    initialData?.banner_image || '/fees.png',
+  );
+  const [contactEmail, setContactEmail] = useState(
+    initialData?.contact_email || '',
+  );
+  const [instalmentLink, setInstalmentLink] = useState(
+    initialData?.instalment_link || '',
+  );
 
   // Build page translations map
   const buildPageTransMap = (): Record<string, PageTransFields> => {
     const map: Record<string, PageTransFields> = {};
     for (const locale of LOCALES) {
       const existing = initialData?.fee_schedule_page_translations?.find(
-        (t) => t.locale === locale
+        (t) => t.locale === locale,
       );
       if (existing) {
-        const { id: _id, page_id: _pid, locale: _l, created_at: _ca, updated_at: _ua, ...rest } = existing;
-        void _id; void _pid; void _l; void _ca; void _ua;
+        const {
+          id: _id,
+          page_id: _pid,
+          locale: _l,
+          created_at: _ca,
+          updated_at: _ua,
+          ...rest
+        } = existing;
+        void _id;
+        void _pid;
+        void _l;
+        void _ca;
+        void _ua;
         map[locale] = rest;
       } else {
         map[locale] = { ...emptyPageTrans };
@@ -83,10 +105,13 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
   const buildFeesFromInitial = (): FeeItem[] => {
     if (!initialData?.fee_schedule_fees) return [];
     return initialData.fee_schedule_fees.map((fee) => {
-      const translations: Record<string, { fee_name: string; fee_amount: string }> = {};
+      const translations: Record<
+        string,
+        { fee_name: string; fee_amount: string }
+      > = {};
       for (const locale of LOCALES) {
         const existing = fee.fee_schedule_fee_translations?.find(
-          (t: FeeScheduleFeeTranslation) => t.locale === locale
+          (t: FeeScheduleFeeTranslation) => t.locale === locale,
         );
         translations[locale] = {
           fee_name: existing?.fee_name || fee.fee_name || '',
@@ -97,18 +122,26 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
     });
   };
 
-  const [pageTransMap, setPageTransMap] = useState<Record<string, PageTransFields>>(buildPageTransMap);
+  const [pageTransMap, setPageTransMap] =
+    useState<Record<string, PageTransFields>>(buildPageTransMap);
   const [fees, setFees] = useState<FeeItem[]>(() => {
     const initial = buildFeesFromInitial();
     if (initial.length > 0) return initial;
-    const translations: Record<string, { fee_name: string; fee_amount: string }> = {};
+    const translations: Record<
+      string,
+      { fee_name: string; fee_amount: string }
+    > = {};
     for (const locale of LOCALES) {
       translations[locale] = { fee_name: '', fee_amount: '' };
     }
     return [{ display_order: 0, translations }];
   });
 
-  const updatePageTransField = (locale: string, field: keyof PageTransFields, value: string) => {
+  const updatePageTransField = (
+    locale: string,
+    field: keyof PageTransFields,
+    value: string,
+  ) => {
     setPageTransMap((prev) => ({
       ...prev,
       [locale]: { ...prev[locale], [field]: value },
@@ -119,7 +152,10 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
 
   // Fee helpers
   const addFee = () => {
-    const translations: Record<string, { fee_name: string; fee_amount: string }> = {};
+    const translations: Record<
+      string,
+      { fee_name: string; fee_amount: string }
+    > = {};
     for (const locale of LOCALES) {
       translations[locale] = { fee_name: '', fee_amount: '' };
     }
@@ -135,7 +171,7 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
     fi: number,
     locale: string,
     field: 'fee_name' | 'fee_amount',
-    value: string
+    value: string,
   ) => {
     const newFees = [...fees];
     newFees[fi] = {
@@ -174,7 +210,12 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
       formData.set('page_translations', JSON.stringify(pageTransMap));
       formData.set(
         'fees',
-        JSON.stringify(fees.map((f, i) => ({ display_order: i, translations: f.translations })))
+        JSON.stringify(
+          fees.map((f, i) => ({
+            display_order: i,
+            translations: f.translations,
+          })),
+        ),
       );
 
       if (initialData) {
@@ -188,7 +229,7 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
       router.refresh();
     } catch (error) {
       toast.error(
-        error instanceof Error ? error.message : 'Failed to save fee schedule.'
+        error instanceof Error ? error.message : 'Failed to save fee schedule.',
       );
     } finally {
       setSaving(false);
@@ -199,7 +240,10 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* Locale Tabs */}
       <div className="border-b border-gray-200">
-        <nav className="-mb-px flex space-x-4 overflow-x-auto" aria-label="Locale tabs">
+        <nav
+          className="-mb-px flex space-x-4 overflow-x-auto"
+          aria-label="Locale tabs"
+        >
           {LOCALES.map((locale) => (
             <button
               key={locale}
@@ -222,7 +266,9 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
         <h2 className="text-lg font-semibold text-gray-800">Page Settings</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Year</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Year
+            </label>
             <input
               type="number"
               value={year}
@@ -232,7 +278,9 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Banner Image Path</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Banner Image Path
+            </label>
             <input
               type="text"
               value={bannerImage}
@@ -247,7 +295,7 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
                 type="checkbox"
                 checked={isActive}
                 onChange={(e) => setIsActive(e.target.checked)}
-                className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                className="w-16 h-16 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm font-medium text-gray-700">Active</span>
             </label>
@@ -255,7 +303,9 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Contact Email</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Contact Email
+            </label>
             <input
               type="email"
               value={contactEmail}
@@ -265,7 +315,9 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Instalment Plan Link</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Instalment Plan Link
+            </label>
             <input
               type="url"
               value={instalmentLink}
@@ -282,17 +334,32 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
         <h2 className="text-lg font-semibold text-gray-800">
           Banner & Title — {LOCALE_LABELS[activeLocale]}
         </h2>
-        {([
-          { label: 'Page Title', field: 'page_title' as keyof PageTransFields },
-          { label: 'Banner Title', field: 'banner_title' as keyof PageTransFields },
-          { label: 'Banner Subtitle', field: 'banner_subtitle' as keyof PageTransFields },
-        ] as const).map(({ label, field }) => (
+        {(
+          [
+            {
+              label: 'Page Title',
+              field: 'page_title' as keyof PageTransFields,
+            },
+            {
+              label: 'Banner Title',
+              field: 'banner_title' as keyof PageTransFields,
+            },
+            {
+              label: 'Banner Subtitle',
+              field: 'banner_subtitle' as keyof PageTransFields,
+            },
+          ] as const
+        ).map(({ label, field }) => (
           <div key={field}>
-            <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              {label}
+            </label>
             <input
               type="text"
               value={(currentTrans[field] as string) || ''}
-              onChange={(e) => updatePageTransField(activeLocale, field, e.target.value)}
+              onChange={(e) =>
+                updatePageTransField(activeLocale, field, e.target.value)
+              }
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -305,29 +372,53 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
           Promotion Section — {LOCALE_LABELS[activeLocale]}
         </h2>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Promotion Title</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Promotion Title
+          </label>
           <input
             type="text"
             value={currentTrans.promotion_title || ''}
-            onChange={(e) => updatePageTransField(activeLocale, 'promotion_title', e.target.value)}
+            onChange={(e) =>
+              updatePageTransField(
+                activeLocale,
+                'promotion_title',
+                e.target.value,
+              )
+            }
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Promotion Description</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Promotion Description
+          </label>
           <textarea
             value={currentTrans.promotion_description || ''}
-            onChange={(e) => updatePageTransField(activeLocale, 'promotion_description', e.target.value)}
+            onChange={(e) =>
+              updatePageTransField(
+                activeLocale,
+                'promotion_description',
+                e.target.value,
+              )
+            }
             rows={3}
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Download Button Text</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Download Button Text
+          </label>
           <input
             type="text"
             value={currentTrans.download_button_text || ''}
-            onChange={(e) => updatePageTransField(activeLocale, 'download_button_text', e.target.value)}
+            onChange={(e) =>
+              updatePageTransField(
+                activeLocale,
+                'download_button_text',
+                e.target.value,
+              )
+            }
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
@@ -339,38 +430,66 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
           Payment Section — {LOCALE_LABELS[activeLocale]}
         </h2>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Payment Title</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Payment Title
+          </label>
           <input
             type="text"
             value={currentTrans.payment_title || ''}
-            onChange={(e) => updatePageTransField(activeLocale, 'payment_title', e.target.value)}
+            onChange={(e) =>
+              updatePageTransField(
+                activeLocale,
+                'payment_title',
+                e.target.value,
+              )
+            }
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Payment Description</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Payment Description
+          </label>
           <textarea
             value={currentTrans.payment_description || ''}
-            onChange={(e) => updatePageTransField(activeLocale, 'payment_description', e.target.value)}
+            onChange={(e) =>
+              updatePageTransField(
+                activeLocale,
+                'payment_description',
+                e.target.value,
+              )
+            }
             rows={3}
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Contact Text</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Contact Text
+          </label>
           <input
             type="text"
             value={currentTrans.contact_text || ''}
-            onChange={(e) => updatePageTransField(activeLocale, 'contact_text', e.target.value)}
+            onChange={(e) =>
+              updatePageTransField(activeLocale, 'contact_text', e.target.value)
+            }
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Instalment Link Text</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Instalment Link Text
+          </label>
           <input
             type="text"
             value={currentTrans.instalment_link_text || ''}
-            onChange={(e) => updatePageTransField(activeLocale, 'instalment_link_text', e.target.value)}
+            onChange={(e) =>
+              updatePageTransField(
+                activeLocale,
+                'instalment_link_text',
+                e.target.value,
+              )
+            }
             className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
@@ -387,27 +506,43 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
             onClick={addFee}
             className="flex items-center gap-1 px-3 py-1.5 text-sm bg-blue-50 text-blue-600 border border-blue-200 rounded-md hover:bg-blue-100 transition-colors"
           >
-            <Plus className="w-4 h-4" /> Add Fee
+            <Plus className="w-16 h-16" /> Add Fee
           </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Section Title</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Section Title
+            </label>
             <input
               type="text"
               value={currentTrans.other_fees_title || ''}
-              onChange={(e) => updatePageTransField(activeLocale, 'other_fees_title', e.target.value)}
+              onChange={(e) =>
+                updatePageTransField(
+                  activeLocale,
+                  'other_fees_title',
+                  e.target.value,
+                )
+              }
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Other Fees"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Note</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Note
+            </label>
             <input
               type="text"
               value={currentTrans.non_refundable_note || ''}
-              onChange={(e) => updatePageTransField(activeLocale, 'non_refundable_note', e.target.value)}
+              onChange={(e) =>
+                updatePageTransField(
+                  activeLocale,
+                  'non_refundable_note',
+                  e.target.value,
+                )
+              }
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="* Non-refundable fees apply..."
             />
@@ -418,16 +553,29 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
           <table className="w-full border border-gray-200 rounded-md text-sm">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-3 py-2 text-left font-medium text-gray-600 w-10">#</th>
-                <th className="px-3 py-2 text-left font-medium text-gray-600">Fee Name</th>
-                <th className="px-3 py-2 text-left font-medium text-gray-600">Fee Amount</th>
-                <th className="px-3 py-2 text-center font-medium text-gray-600 w-28">Order</th>
-                <th className="px-3 py-2 text-center font-medium text-gray-600 w-16">Actions</th>
+                <th className="px-3 py-2 text-left font-medium text-gray-600 w-10">
+                  #
+                </th>
+                <th className="px-3 py-2 text-left font-medium text-gray-600">
+                  Fee Name
+                </th>
+                <th className="px-3 py-2 text-left font-medium text-gray-600">
+                  Fee Amount
+                </th>
+                <th className="px-3 py-2 text-center font-medium text-gray-600 w-28">
+                  Order
+                </th>
+                <th className="px-3 py-2 text-center font-medium text-gray-600 w-16">
+                  Actions
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
               {fees.map((fee, index) => {
-                const ft = fee.translations[activeLocale] || { fee_name: '', fee_amount: '' };
+                const ft = fee.translations[activeLocale] || {
+                  fee_name: '',
+                  fee_amount: '',
+                };
                 return (
                   <tr key={index} className="hover:bg-gray-50">
                     <td className="px-3 py-2 text-gray-500">{index + 1}</td>
@@ -435,7 +583,14 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
                       <input
                         type="text"
                         value={ft.fee_name}
-                        onChange={(e) => updateFeeTranslation(index, activeLocale, 'fee_name', e.target.value)}
+                        onChange={(e) =>
+                          updateFeeTranslation(
+                            index,
+                            activeLocale,
+                            'fee_name',
+                            e.target.value,
+                          )
+                        }
                         className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Fee name"
                         required={activeLocale === 'en'}
@@ -445,7 +600,14 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
                       <input
                         type="text"
                         value={ft.fee_amount}
-                        onChange={(e) => updateFeeTranslation(index, activeLocale, 'fee_amount', e.target.value)}
+                        onChange={(e) =>
+                          updateFeeTranslation(
+                            index,
+                            activeLocale,
+                            'fee_amount',
+                            e.target.value,
+                          )
+                        }
                         className="w-full border border-gray-300 rounded px-2 py-1.5 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="$000"
                         required={activeLocale === 'en'}
@@ -481,7 +643,7 @@ export default function FeeScheduleForm({ initialData }: FeeScheduleFormProps) {
                         disabled={fees.length <= 1}
                         className="p-1 text-red-400 hover:text-red-600 disabled:opacity-30"
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Trash2 className="w-16 h-16" />
                       </button>
                     </td>
                   </tr>

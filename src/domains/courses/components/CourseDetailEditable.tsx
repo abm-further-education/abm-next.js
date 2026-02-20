@@ -2,7 +2,10 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { upsertCourseDetailAction, deleteCourseDetailAction } from '@/app/admin/courses/actions';
+import {
+  upsertCourseDetailAction,
+  deleteCourseDetailAction,
+} from '@/app/admin/courses/actions';
 import { toast } from 'react-toastify';
 import { useEditMode } from '@/contexts/EditModeContext';
 import DescriptionBlockEditor, { toItems } from './DescriptionBlockEditor';
@@ -15,7 +18,9 @@ interface CourseDetailEditableProps {
   courseInfo: CourseDetailInfo;
 }
 
-function toPayload(items: DescriptionItem[]): string | string[] | DescriptionItem[] {
+function toPayload(
+  items: DescriptionItem[],
+): string | string[] | DescriptionItem[] {
   if (items.length === 0) return '';
   if (items.length === 1 && typeof items[0] === 'string') return items[0];
   const allStrings = items.every((v) => typeof v === 'string');
@@ -31,7 +36,7 @@ function toFaqItems(description: unknown): FaqItem[] {
         v != null &&
         typeof v === 'object' &&
         typeof (v as FaqItem).question === 'string' &&
-        typeof (v as FaqItem).answer === 'string'
+        typeof (v as FaqItem).answer === 'string',
     )
     .map((v) => ({ question: v.question, answer: v.answer }));
 }
@@ -45,11 +50,21 @@ export default function CourseDetailEditable({
   const editMode = useEditMode();
   const [saving, setSaving] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
-  const [newSection, setNewSection] = useState({ key: '', title: '', items: ['' as DescriptionItem] });
+  const [newSection, setNewSection] = useState({
+    key: '',
+    title: '',
+    items: ['' as DescriptionItem],
+  });
 
-  const sections = Object.entries(courseInfo);
+  const sections = Object.entries(courseInfo).filter(
+    ([key]) => !key.startsWith('courseStructure'),
+  );
 
-  const handleSave = async (sectionKey: string, title: string, items: DescriptionItem[]) => {
+  const handleSave = async (
+    sectionKey: string,
+    title: string,
+    items: DescriptionItem[],
+  ) => {
     setSaving(sectionKey);
     try {
       const payload = toPayload(items);
@@ -61,7 +76,7 @@ export default function CourseDetailEditable({
         sectionKey,
         title,
         descriptionPayload,
-        sections.findIndex(([k]) => k === sectionKey)
+        sections.findIndex(([k]) => k === sectionKey),
       );
       toast.success(`Saved ${sectionKey}`);
       editMode?.refreshData?.();
@@ -88,7 +103,7 @@ export default function CourseDetailEditable({
         newSection.key.trim(),
         newSection.title,
         descriptionPayload,
-        sections.length
+        sections.length,
       );
       toast.success('Section added');
       setNewSection({ key: '', title: '', items: ['' as DescriptionItem] });
@@ -115,7 +130,7 @@ export default function CourseDetailEditable({
   const handleSaveFaq = async (
     sectionKey: string,
     title: string,
-    faqItems: FaqItem[]
+    faqItems: FaqItem[],
   ) => {
     setSaving(sectionKey);
     try {
@@ -126,7 +141,7 @@ export default function CourseDetailEditable({
         sectionKey,
         title,
         descriptionPayload,
-        sections.findIndex(([k]) => k === sectionKey)
+        sections.findIndex(([k]) => k === sectionKey),
       );
       toast.success(`Saved ${sectionKey}`);
       editMode?.refreshData?.();
@@ -140,7 +155,9 @@ export default function CourseDetailEditable({
   return (
     <section className="py-20 bg-amber-50/50">
       <div className="max-w-[1600px] mx-auto px-20 py-5 md:px-80">
-        <h1 className="text-2xl md:text-3xl font-bold mb-10">{t('title')} (Editable)</h1>
+        <h1 className="text-2xl md:text-3xl font-bold mb-10">
+          {t('title')} (Editable)
+        </h1>
 
         <div className="space-y-6">
           {sections.map(([sectionKey, sectionData]) =>
@@ -169,7 +186,7 @@ export default function CourseDetailEditable({
                 onDelete={() => handleDelete(sectionKey)}
                 saving={saving === sectionKey}
               />
-            )
+            ),
           )}
 
           {adding ? (
@@ -178,18 +195,24 @@ export default function CourseDetailEditable({
                 type="text"
                 placeholder="Section key (e.g. courseDuration)"
                 value={newSection.key}
-                onChange={(e) => setNewSection((s) => ({ ...s, key: e.target.value }))}
+                onChange={(e) =>
+                  setNewSection((s) => ({ ...s, key: e.target.value }))
+                }
                 className="w-full px-2 py-1 border rounded"
               />
               <input
                 type="text"
                 placeholder="Title"
                 value={newSection.title}
-                onChange={(e) => setNewSection((s) => ({ ...s, title: e.target.value }))}
+                onChange={(e) =>
+                  setNewSection((s) => ({ ...s, title: e.target.value }))
+                }
                 className="w-full px-2 py-1 border rounded"
               />
               <div>
-                <label className="block text-sm text-gray-600 mb-1">Description</label>
+                <label className="block text-sm text-gray-600 mb-1">
+                  Description
+                </label>
                 <DescriptionBlockEditor
                   items={newSection.items}
                   onChange={(items) => setNewSection((s) => ({ ...s, items }))}
@@ -217,7 +240,7 @@ export default function CourseDetailEditable({
             <button
               type="button"
               onClick={() => setAdding(true)}
-              className="px-4 py-2 border border-dashed border-amber-400 rounded text-amber-700"
+              className="px-4 py-2 border border-dashed border-blue-400 rounded text-blue-700 bg-blue-50 hover:bg-blue-100"
             >
               + Add Section
             </button>
@@ -267,8 +290,12 @@ function SectionEditor({
           className="w-full px-2 py-1 border rounded"
         />
         <div>
-          <label className="block text-sm text-gray-600 mb-1">Description</label>
-          <p className="text-xs text-gray-500 mb-1">Add and edit text, links, and tables as blocks</p>
+          <label className="block text-sm text-gray-600 mb-1">
+            Description
+          </label>
+          <p className="text-xs text-gray-500 mb-1">
+            Add and edit text, links, and tables as blocks
+          </p>
           <DescriptionBlockEditor
             items={editItems}
             onChange={setEditItems}
@@ -305,10 +332,14 @@ function FaqSectionEditor({
 }) {
   const [editTitle, setEditTitle] = useState(title);
   const [editItems, setEditItems] = useState<FaqItem[]>(
-    faqItems.length > 0 ? faqItems : [{ question: '', answer: '' }]
+    faqItems.length > 0 ? faqItems : [{ question: '', answer: '' }],
   );
 
-  const updateItem = (index: number, field: 'question' | 'answer', value: string) => {
+  const updateItem = (
+    index: number,
+    field: 'question' | 'answer',
+    value: string,
+  ) => {
     const next = [...editItems];
     next[index] = { ...next[index], [field]: value };
     setEditItems(next);
@@ -345,7 +376,9 @@ function FaqSectionEditor({
         />
         <div>
           <label className="block text-sm text-gray-600 mb-1">FAQ items</label>
-          <p className="text-xs text-gray-500 mb-1">Question and answer pairs</p>
+          <p className="text-xs text-gray-500 mb-1">
+            Question and answer pairs
+          </p>
           <div className="space-y-3">
             {editItems.map((item, index) => (
               <div
@@ -356,7 +389,9 @@ function FaqSectionEditor({
                   type="text"
                   placeholder="Question"
                   value={item.question}
-                  onChange={(e) => updateItem(index, 'question', e.target.value)}
+                  onChange={(e) =>
+                    updateItem(index, 'question', e.target.value)
+                  }
                   className="w-full px-2 py-1 border rounded text-sm"
                 />
                 <textarea

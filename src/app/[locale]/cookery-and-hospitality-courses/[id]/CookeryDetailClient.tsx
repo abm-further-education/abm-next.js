@@ -10,7 +10,7 @@ import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/Ind
 import React from 'react';
 import Gallery from '@/components/common/Gallery';
 import { cn } from '@/lib';
-import type { CourseDetailInfo, CourseInformationInfo } from '@/types/course';
+import type { CourseDetailInfo, CourseInformationInfo, CourseUnitGroup } from '@/types/course';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
@@ -57,12 +57,14 @@ interface CookeryDetailClientProps {
   locale: string;
   courseDetails: CourseDetailInfo | null;
   courseInformation: CourseInformationInfo | null;
+  courseUnits?: CourseUnitGroup[] | null;
 }
 
 export default function CookeryDetailClient({
   id,
   courseDetails,
   courseInformation,
+  courseUnits,
 }: CookeryDetailClientProps) {
 
   // Industry Placement 페이지인지 확인
@@ -160,7 +162,7 @@ export default function CookeryDetailClient({
           'grid grid-cols-1 lg:grid-cols-2'
         )}
       >
-        <Units id={id} />
+        <Units id={id} data={courseUnits} />
         <Gallery
           showTitle={false}
           breakpointColumns={{

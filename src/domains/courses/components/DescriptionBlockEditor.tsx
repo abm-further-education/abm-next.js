@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Trash2, GripVertical, Link2, Table2, Type } from 'lucide-react';
+import { Trash2, GripVertical, Link2, Table2, Type, X } from 'lucide-react';
 import type { DescriptionItem, TableData, LinkData } from '@/types/course';
 
 // Normalize description to DescriptionItem[]
@@ -91,23 +91,23 @@ export default function DescriptionBlockEditor({
           <button
             type="button"
             onClick={() => addItem('text')}
-            className="flex items-center gap-1 px-3 py-1.5 text-sm border border-amber-300 rounded hover:bg-amber-50"
+            className="flex items-center gap-1 px-3 py-1.5 text-sm border border-emerald-300 rounded bg-emerald-100 hover:bg-emerald-200"
           >
-            <Type className="w-4 h-4" /> Add text
+            <Type className="w-16 h-16" /> Add text
           </button>
           <button
             type="button"
             onClick={() => addItem('link')}
-            className="flex items-center gap-1 px-3 py-1.5 text-sm border border-amber-300 rounded hover:bg-amber-50"
+            className="flex items-center gap-1 px-3 py-1.5 text-sm border border-emerald-300 rounded bg-emerald-100 hover:bg-emerald-200"
           >
-            <Link2 className="w-4 h-4" /> Add link
+            <Link2 className="w-16 h-16" /> Add link
           </button>
           <button
             type="button"
             onClick={() => addItem('table')}
-            className="flex items-center gap-1 px-3 py-1.5 text-sm border border-amber-300 rounded hover:bg-amber-50"
+            className="flex items-center gap-1 px-3 py-1.5 text-sm border border-emerald-300 rounded bg-emerald-100 hover:bg-emerald-200"
           >
-            <Table2 className="w-4 h-4" /> Add table
+            <Table2 className="w-16 h-16" /> Add table
           </button>
         </div>
       )}
@@ -136,8 +136,8 @@ function BlockCard({
     return (
       <div className="border border-gray-200 rounded-lg bg-gray-50/50 overflow-hidden">
         <BlockHeader
-          label="text"
-          icon={<Type className="w-4 h-4" />}
+          label="Text"
+          icon={<Type className="w-16 h-16" />}
           onRemove={onRemove}
           onMoveUp={onMoveUp}
           onMoveDown={onMoveDown}
@@ -151,7 +151,7 @@ function BlockCard({
               value={item}
               onChange={(e) => onUpdate(e.target.value)}
               rows={3}
-              placeholder="내용 입력..."
+              placeholder="Enter content..."
               className="w-full px-2 py-1 border rounded text-sm"
               disabled={disabled}
             />
@@ -165,8 +165,8 @@ function BlockCard({
     return (
       <div className="border border-blue-200 rounded-lg bg-blue-50/30 overflow-hidden">
         <BlockHeader
-          label="링크"
-          icon={<Link2 className="w-4 h-4" />}
+          label="Link"
+          icon={<Link2 className="w-16 h-16" />}
           onRemove={onRemove}
           onMoveUp={onMoveUp}
           onMoveDown={onMoveDown}
@@ -245,7 +245,7 @@ function BlockHeader({
 }) {
   return (
     <div className="flex items-center gap-2 px-3 py-2 bg-white/80 border-b border-gray-200">
-      <GripVertical className="w-4 h-4 text-gray-400" />
+      <GripVertical className="w-16 h-16 text-gray-400" />
       <span className="flex items-center gap-1.5 text-sm font-medium text-gray-700">
         {icon} {label}
       </span>
@@ -282,7 +282,7 @@ function BlockHeader({
             onClick={onRemove}
             className="p-1 text-red-500 hover:bg-red-50 rounded"
           >
-            <Trash2 className="w-4 h-4" />
+            <Trash2 className="w-16 h-16" />
           </button>
         </>
       )}
@@ -346,8 +346,8 @@ function TableBlockEditor({
   return (
     <div className="border border-emerald-200 rounded-lg bg-emerald-50/30 overflow-hidden">
       <BlockHeader
-        label="표"
-        icon={<Table2 className="w-4 h-4" />}
+        label="Table"
+        icon={<Table2 className="w-16 h-16" />}
         onRemove={onRemove}
         onMoveUp={onMoveUp}
         onMoveDown={onMoveDown}
@@ -365,27 +365,29 @@ function TableBlockEditor({
                     key={i}
                     className="border border-gray-300 p-1 bg-gray-100"
                   >
-                    <input
-                      type="text"
-                      value={h}
-                      onChange={(e) => updateHeader(i, e.target.value)}
-                      placeholder={`헤더 ${i + 1}`}
-                      className="w-full min-w-[80px] px-1 py-0.5 text-sm"
-                      disabled={disabled}
-                    />
-                    {!disabled && data.headers.length > 1 && (
-                      <button
-                        type="button"
-                        onClick={() => removeHeader(i)}
-                        className="ml-1 text-red-500 text-xs hover:underline"
-                      >
-                        ×
-                      </button>
-                    )}
+                    <div className="flex items-center gap-1">
+                      <input
+                        type="text"
+                        value={h}
+                        onChange={(e) => updateHeader(i, e.target.value)}
+                        placeholder={`Header ${i + 1}`}
+                        className="w-full min-w-[80px] px-4 py-4 text-sm"
+                        disabled={disabled}
+                      />
+                      {!disabled && data.headers.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={() => removeHeader(i)}
+                          className="ml-1 text-red-500 hover:underline"
+                        >
+                          <X className="w-16 h-16" />
+                        </button>
+                      )}
+                    </div>
                   </th>
                 ))}
                 {!disabled && (
-                  <th className="border border-gray-300 p-1 w-8">
+                  <th className="border border-gray-300 p-4 w-8">
                     <button
                       type="button"
                       onClick={addHeader}
@@ -409,13 +411,13 @@ function TableBlockEditor({
                         type="text"
                         value={cell}
                         onChange={(e) => updateCell(ri, ci, e.target.value)}
-                        className="w-full min-w-[80px] px-1 py-0.5 text-sm"
+                        className="w-full min-w-[80px] px-4 py-4 text-sm"
                         disabled={disabled}
                       />
                     </td>
                   ))}
                   {!disabled && (
-                    <td className="border border-gray-300 p-1 w-8">
+                    <td className="border border-gray-300 p-4 w-8">
                       <button
                         type="button"
                         onClick={() => removeRow(ri)}
@@ -433,9 +435,9 @@ function TableBlockEditor({
             <button
               type="button"
               onClick={addRow}
-              className="mt-2 px-2 py-1 text-sm border border-emerald-300 rounded hover:bg-emerald-50"
+              className="mt-2 px-4 py-4 text-sm border border-emerald-300 rounded bg-emerald-100 hover:bg-emerald-200"
             >
-              + 행 추가
+              + Add row
             </button>
           )}
         </div>

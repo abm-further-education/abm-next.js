@@ -1,6 +1,7 @@
 'use server';
 
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
 import { getAdminSession } from '@/lib/auth';
 import {
   createCourse,
@@ -17,8 +18,10 @@ import {
   upsertShortCourseTranslation,
   upsertShortCourseDate,
   deleteShortCourseDate,
+  upsertCourseUnitGroup,
+  deleteCourseUnitGroup,
 } from '@/lib/course-db';
-import type { Locale, CourseCategory, CourseType, CourseLevel } from '@/types/course';
+import type { Locale, CourseCategory, CourseType, CourseLevel, CourseUnitItem } from '@/types/course';
 
 // =====================================================
 // Full Course Actions
@@ -143,6 +146,7 @@ export async function upsertCourseTranslationAction(
   const session = await getAdminSession();
   if (!session) redirect('/admin/login');
   await upsertCourseTranslation(courseId, locale, { title, description });
+  revalidatePath('/', 'layout');
   return { success: true };
 }
 
@@ -164,6 +168,7 @@ export async function upsertCourseDetailAction(
     description = descriptionJson;
   }
   await upsertCourseDetail(dbCourseId, locale, sectionKey, { title, description, displayOrder });
+  revalidatePath('/', 'layout');
   return { success: true };
 }
 
@@ -176,6 +181,7 @@ export async function deleteCourseDetailAction(
   if (!session) redirect('/admin/login');
   const dbCourseId = resolveCourseId(courseId);
   await deleteCourseDetail(dbCourseId, locale, sectionKey);
+  revalidatePath('/', 'layout');
   return { success: true };
 }
 
@@ -211,6 +217,7 @@ export async function upsertCourseInfoAction(
     partners: parseJson(formData.get('partners') as string),
   });
 
+  revalidatePath('/', 'layout');
   return { success: true };
 }
 
@@ -377,5 +384,41 @@ export async function deleteShortCourseDateAction(shortCourseId: string, dateId:
   const session = await getAdminSession();
   if (!session) redirect('/admin/login');
   await deleteShortCourseDate(shortCourseId, dateId);
+  return { success: true };
+}
+
+// =====================================================
+// Course Units Actions
+// =====================================================
+
+export async function upsertCourseUnitsAction(
+  courseId: string,
+  groupIndex: number,
+  groupTitle: string,
+  unitsJson: string
+) {
+  const session = await getAdminSession();
+  if (!session) redirect('/admin/login');
+  const dbCourseId = resolveCourseId(courseId);
+  let units: CourseUnitItem[];
+  try {
+    units = JSON.parse(unitsJson);
+  } catch {
+    throw new Error('Invalid units JSON');
+  }
+  await upsertCourseUnitGroup(dbCourseId, groupIndex, groupTitle, units);
+  revalidatePath('/', 'layout');
+  return { success: true };
+}
+
+export async function deleteCourseUnitGroupAction(
+  courseId: string,
+  groupIndex: number
+) {
+  const session = await getAdminSession();
+  if (!session) redirect('/admin/login');
+  const dbCourseId = resolveCourseId(courseId);
+  await deleteCourseUnitGroup(dbCourseId, groupIndex);
+  revalidatePath('/', 'layout');
   return { success: true };
 }

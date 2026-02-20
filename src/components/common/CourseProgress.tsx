@@ -10,14 +10,16 @@ interface CourseProgressItem {
 interface CourseProgressProps {
   courses: CourseProgressItem[];
   startIndex?: number;
+  description?: string;
 }
 
 const CourseProgress: React.FC<CourseProgressProps> = ({
   courses,
   startIndex = 0,
+  description,
 }) => {
   return (
-    <div className="flex mb-12">
+    <div className="mb-12">
       <div className="flex items-center space-x-2">
         {courses.map((course, index) => (
           <div
@@ -63,6 +65,9 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
           </div>
         ))}
       </div>
+      {description && (
+        <p className="text-base text-neutral-700 mt-4">{description}</p>
+      )}
     </div>
   );
 };

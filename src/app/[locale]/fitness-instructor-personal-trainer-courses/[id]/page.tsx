@@ -1,5 +1,5 @@
 import FitnessDetailClient from './FitnessDetailClient';
-import { getCourseDetails, getCourseInfo } from '@/lib/course-db';
+import { getCourseDetails, getCourseInfo, getCourseUnits } from '@/lib/course-db';
 
 export { generateMetadata } from './metadata';
 
@@ -10,8 +10,11 @@ export default async function FitnessDetailPage({
 }) {
   const { id, locale } = await params;
   
-  const courseDetails = await getCourseDetails(id, locale);
-  const courseInformation = await getCourseInfo(id, locale);
+  const [courseDetails, courseInformation, courseUnits] = await Promise.all([
+    getCourseDetails(id, locale),
+    getCourseInfo(id, locale),
+    getCourseUnits(id),
+  ]);
   
   return (
     <FitnessDetailClient 
@@ -19,6 +22,7 @@ export default async function FitnessDetailPage({
       locale={locale}
       courseDetails={courseDetails}
       courseInformation={courseInformation}
+      courseUnits={courseUnits}
     />
   );
 }

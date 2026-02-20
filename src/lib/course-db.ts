@@ -15,6 +15,8 @@ import type {
   DbShortCourseTranslation,
   DbShortCourseDate,
   DescriptionItem,
+  CourseUnitGroup,
+  CourseUnitItem,
 } from '@/types/course';
 
 // Import static data as fallback
@@ -1087,6 +1089,177 @@ export async function deleteCourse(courseId: string): Promise<void> {
   if (error) {
     throw new Error(`Failed to delete course: ${error.message}`);
   }
+}
+
+// =====================================================
+// Course Units Functions
+// =====================================================
+
+import {
+  ADVANCED_BUSINESS_UNITS,
+  ADVANCED_HR_UNITS,
+  ADVANCED_PROJECT_UNITS,
+  CERTIII_FITNESS_UNITS,
+  CERTIV_BUSINESS_UNITS,
+  CERTIV_FITNESS_FAST_UNITS,
+  CERTIV_FITNESS_UNITS,
+  CERTIV_HR_UNITS,
+  CERTIV_PROJECT_UNITS,
+  DIPLOMA_BUSINESS_UNITS,
+  DIPLOMA_HR_UNITS,
+  DIPLOMA_PROJECT_UNITS,
+  DIPLOMA_SPORT_UNITS,
+  GRADUATE_MANAGEMENT_UNITS,
+  HEALTH_SERVICES_ASSISTANCE_UNITS,
+  HM_UNITS_1,
+  HM_UNITS_2,
+  KM_UNITS,
+} from '@/lib/units';
+
+const staticCourseUnitsMap: {
+  [key: string]: CourseUnitGroup[];
+} = {
+  'sit40521-certificate-iv-in-kitchen-management': [
+    { groupTitle: '', groupIndex: 0, units: KM_UNITS as CourseUnitItem[] },
+  ],
+  'sit50422-diploma-of-hospitality-management': [
+    { groupTitle: 'Standalone Food & Beverage Stream', groupIndex: 0, units: HM_UNITS_1 as CourseUnitItem[] },
+    { groupTitle: 'Packaged with Kitchen Management Course', groupIndex: 1, units: HM_UNITS_2 as CourseUnitItem[] },
+  ],
+  'sis40221-certificate-iv-in-fitness': [
+    { groupTitle: '', groupIndex: 0, units: CERTIV_FITNESS_UNITS as CourseUnitItem[] },
+  ],
+  'sis30321-certificate-iii-in-fitness': [
+    { groupTitle: '', groupIndex: 0, units: CERTIII_FITNESS_UNITS as CourseUnitItem[] },
+  ],
+  'certificate-iv-in-fitness-fast-track': [
+    { groupTitle: '', groupIndex: 0, units: CERTIV_FITNESS_UNITS as CourseUnitItem[] },
+  ],
+  'sis50321-diploma-of-sport': [
+    { groupTitle: '', groupIndex: 0, units: DIPLOMA_SPORT_UNITS as CourseUnitItem[] },
+  ],
+  'certificate-iii-in-fitness-fast-track': [
+    { groupTitle: '', groupIndex: 0, units: CERTIV_FITNESS_FAST_UNITS as CourseUnitItem[] },
+  ],
+  'bsb40120-certificate-iv-in-business': [
+    { groupTitle: '', groupIndex: 0, units: CERTIV_BUSINESS_UNITS as CourseUnitItem[] },
+  ],
+  'bsb50120-diploma-of-business': [
+    { groupTitle: '', groupIndex: 0, units: DIPLOMA_BUSINESS_UNITS as CourseUnitItem[] },
+  ],
+  'bsb60120-advanced-diploma-of-business': [
+    { groupTitle: '', groupIndex: 0, units: ADVANCED_BUSINESS_UNITS as CourseUnitItem[] },
+  ],
+  'bsb80120-graduate-diploma-of-management': [
+    { groupTitle: '', groupIndex: 0, units: GRADUATE_MANAGEMENT_UNITS as CourseUnitItem[] },
+  ],
+  'bsb40920-certificate-iv-in-project-management-practice': [
+    { groupTitle: '', groupIndex: 0, units: CERTIV_PROJECT_UNITS as CourseUnitItem[] },
+  ],
+  'bsb50820-diploma-of-project-management-practice': [
+    { groupTitle: '', groupIndex: 0, units: DIPLOMA_PROJECT_UNITS as CourseUnitItem[] },
+  ],
+  'bsb60720-advanced-diploma-of-program-management': [
+    { groupTitle: '', groupIndex: 0, units: ADVANCED_PROJECT_UNITS as CourseUnitItem[] },
+  ],
+  'bsb40420-certificate-iv-in-human-resource-management': [
+    { groupTitle: '', groupIndex: 0, units: CERTIV_HR_UNITS as CourseUnitItem[] },
+  ],
+  'bsb50320-diploma-of-human-resource-management': [
+    { groupTitle: '', groupIndex: 0, units: DIPLOMA_HR_UNITS as CourseUnitItem[] },
+  ],
+  'bsb60320-advanced-diploma-of-human-resource-management': [
+    { groupTitle: '', groupIndex: 0, units: ADVANCED_HR_UNITS as CourseUnitItem[] },
+  ],
+  'hlt33115-certificate-iii-in-health-services-assistance': [
+    { groupTitle: '', groupIndex: 0, units: HEALTH_SERVICES_ASSISTANCE_UNITS as CourseUnitItem[] },
+  ],
+};
+
+function getStaticCourseUnits(courseId: string): CourseUnitGroup[] | null {
+  return staticCourseUnitsMap[courseId] || null;
+}
+
+/**
+ * Get course units for a specific course (units are language-independent)
+ */
+export async function getCourseUnits(
+  courseId: string
+): Promise<CourseUnitGroup[] | null> {
+  if (!USE_DATABASE) {
+    return getStaticCourseUnits(courseId);
+  }
+
+  try {
+    const client = await getAuthenticatedSupabase();
+    const dbCourseId = resolveCourseId(courseId);
+
+    const { data: rows, error } = await client
+      .from('course_units')
+      .select('*')
+      .eq('course_id', dbCourseId)
+      .order('group_index', { ascending: true });
+
+    if (error || !rows || rows.length === 0) {
+      return getStaticCourseUnits(courseId) || getStaticCourseUnits(dbCourseId);
+    }
+
+    return rows.map((row) => ({
+      groupTitle: row.group_title || '',
+      groupIndex: row.group_index,
+      units: (row.units || []) as CourseUnitItem[],
+    }));
+  } catch (error) {
+    console.error('Error in getCourseUnits:', error);
+    return getStaticCourseUnits(courseId);
+  }
+}
+
+/**
+ * Upsert a course unit group (admin only)
+ */
+export async function upsertCourseUnitGroup(
+  courseId: string,
+  groupIndex: number,
+  groupTitle: string,
+  units: CourseUnitItem[]
+): Promise<void> {
+  const client = await getAdminClient();
+
+  const { error } = await client
+    .from('course_units')
+    .upsert(
+      {
+        course_id: courseId,
+        group_index: groupIndex,
+        group_title: groupTitle,
+        units,
+      },
+      { onConflict: 'course_id,group_index' }
+    );
+
+  if (error) {
+    console.error('Supabase upsert course_units error:', JSON.stringify(error));
+    throw new Error(`Failed to upsert course units: ${error.message || error.code || JSON.stringify(error)}`);
+  }
+}
+
+/**
+ * Delete a course unit group (admin only)
+ */
+export async function deleteCourseUnitGroup(
+  courseId: string,
+  groupIndex: number
+): Promise<void> {
+  const client = await getAdminClient();
+
+  const { error } = await client
+    .from('course_units')
+    .delete()
+    .eq('course_id', courseId)
+    .eq('group_index', groupIndex);
+
+  if (error) throw new Error(`Failed to delete course unit group: ${error.message}`);
 }
 
 // =====================================================

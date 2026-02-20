@@ -3,19 +3,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
-import { Plus, Trash2, Upload, FileText, ExternalLink } from 'lucide-react';
-import {
-  createSiteSettingAction,
-  updateSiteSettingAction,
-  deleteSiteSettingAction,
-} from './actions';
+import { Trash2, Upload, FileText, ExternalLink } from 'lucide-react';
+import { updateSiteSettingAction, deleteSiteSettingAction } from './actions';
 import type { SiteSetting } from '@/lib/site-settings-db';
-
-const VALUE_TYPES = [
-  { value: 'text', label: 'Text' },
-  { value: 'url', label: 'URL' },
-  { value: 'file', label: 'File (R2)' },
-];
 
 const CATEGORIES = [
   { value: 'general', label: 'General' },
@@ -35,24 +25,14 @@ export default function SiteSettingsForm({
   const [settings, setSettings] = useState<SiteSetting[]>(initialSettings);
   const [saving, setSaving] = useState<string | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
-  const [showNewForm, setShowNewForm] = useState(false);
   const [uploading, setUploading] = useState<string | null>(null);
   const [previewing, setPreviewing] = useState<string | null>(null);
-
-  const [newSetting, setNewSetting] = useState({
-    key: '',
-    value: '',
-    label: '',
-    description: '',
-    category: 'general',
-    value_type: 'text',
-  });
 
   const handlePreview = async (settingId: string, r2Key: string) => {
     setPreviewing(settingId);
     try {
       const res = await fetch(
-        `/api/r2/get-url?key=${encodeURIComponent(r2Key)}`
+        `/api/r2/get-url?key=${encodeURIComponent(r2Key)}`,
       );
       const data = await res.json();
       if (data.url) {
@@ -122,43 +102,6 @@ export default function SiteSettingsForm({
     } catch (error) {
       toast.error(
         error instanceof Error ? error.message : 'Failed to save setting',
-      );
-    } finally {
-      setSaving(null);
-    }
-  };
-
-  const handleCreate = async () => {
-    if (!newSetting.key || !newSetting.label) {
-      toast.error('Key and Label are required.');
-      return;
-    }
-
-    setSaving('new');
-    try {
-      const formData = new FormData();
-      formData.set('key', newSetting.key);
-      formData.set('value', newSetting.value);
-      formData.set('label', newSetting.label);
-      formData.set('description', newSetting.description);
-      formData.set('category', newSetting.category);
-      formData.set('value_type', newSetting.value_type);
-
-      await createSiteSettingAction(formData);
-      toast.success('New setting created successfully.');
-      setShowNewForm(false);
-      setNewSetting({
-        key: '',
-        value: '',
-        label: '',
-        description: '',
-        category: 'general',
-        value_type: 'text',
-      });
-      router.refresh();
-    } catch (error) {
-      toast.error(
-        error instanceof Error ? error.message : 'Failed to create setting',
       );
     } finally {
       setSaving(null);
@@ -317,7 +260,7 @@ export default function SiteSettingsForm({
                           rel="noopener noreferrer"
                           className="text-blue-600 hover:text-blue-800"
                         >
-                          <ExternalLink className="w-4 h-4" />
+                          <ExternalLink className="w-16 h-16" />
                         </a>
                       )}
                     </div>
@@ -358,158 +301,11 @@ export default function SiteSettingsForm({
         </div>
       ))}
 
-      {settings.length === 0 && !showNewForm && (
+      {settings.length === 0 && (
         <div className="bg-white rounded-lg shadow p-8 text-center text-gray-500">
-          No site settings found. Click &quot;Add New Setting&quot; to create
-          one.
+          No site settings found.
         </div>
       )}
-
-      {showNewForm && (
-        <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">
-            Add New Setting
-          </h2>
-          <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Key *
-                </label>
-                <input
-                  type="text"
-                  value={newSetting.key}
-                  onChange={(e) =>
-                    setNewSetting({
-                      ...newSetting,
-                      key: e.target.value
-                        .toLowerCase()
-                        .replace(/[^a-z0-9_]/g, '_'),
-                    })
-                  }
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono"
-                  placeholder="e.g., brochure_url"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Label *
-                </label>
-                <input
-                  type="text"
-                  value={newSetting.label}
-                  onChange={(e) =>
-                    setNewSetting({ ...newSetting, label: e.target.value })
-                  }
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="e.g., International Student Guide PDF"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Description
-              </label>
-              <input
-                type="text"
-                value={newSetting.description}
-                onChange={(e) =>
-                  setNewSetting({
-                    ...newSetting,
-                    description: e.target.value,
-                  })
-                }
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="What this setting is used for"
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Category
-                </label>
-                <select
-                  value={newSetting.category}
-                  onChange={(e) =>
-                    setNewSetting({ ...newSetting, category: e.target.value })
-                  }
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  {CATEGORIES.map((cat) => (
-                    <option key={cat.value} value={cat.value}>
-                      {cat.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Value Type
-                </label>
-                <select
-                  value={newSetting.value_type}
-                  onChange={(e) =>
-                    setNewSetting({
-                      ...newSetting,
-                      value_type: e.target.value,
-                    })
-                  }
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  {VALUE_TYPES.map((vt) => (
-                    <option key={vt.value} value={vt.value}>
-                      {vt.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Value
-              </label>
-              <input
-                type="text"
-                value={newSetting.value}
-                onChange={(e) =>
-                  setNewSetting({ ...newSetting, value: e.target.value })
-                }
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Setting value"
-              />
-            </div>
-            <div className="flex items-center justify-end gap-3">
-              <button
-                type="button"
-                onClick={() => setShowNewForm(false)}
-                className="px-4 py-2 text-sm border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                onClick={handleCreate}
-                disabled={saving === 'new'}
-                className="px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50"
-              >
-                {saving === 'new' ? 'Creating...' : 'Create Setting'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="flex justify-end">
-        <button
-          type="button"
-          onClick={() => setShowNewForm(true)}
-          disabled={showNewForm}
-          className="flex items-center gap-2 px-4 py-2.5 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors disabled:opacity-50 text-sm font-medium"
-        >
-          <Plus className="w-4 h-4" />
-          Add New Setting
-        </button>
-      </div>
     </div>
   );
 }

@@ -457,6 +457,7 @@ const courseProgressMap: Record<string, ProgressRow[]> = {
   'certificate-iii-in-fitness-fast-track': fitnessFastTrackProgress,
   'certificate-iv-in-fitness-fast-track': fitnessFastTrackProgress,
   'sit40521-certificate-iv-in-kitchen-management': kmProgress,
+  'advanced-diploma-of-hospitality-management': kmProgress,
 };
 
 function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
@@ -480,21 +481,8 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
 
   const progressRows = courseId ? courseProgressMap[courseId] : undefined;
 
-  // courseStructure가 있는 코스들 (hospitality 코스들)
-  const hasCourseStructure =
-    courseId &&
-    (courseId === 'sit50422-diploma-of-hospitality-management' ||
-      courseId === 'advanced-diploma-of-hospitality-management');
-
-  // courseStructure 섹션들을 찾기
-  const courseStructureSections = hasCourseStructure
-    ? Object.entries(courseInfo).filter(([key]) =>
-        key.startsWith('courseStructure'),
-      )
-    : [];
-
-  // courseStructure가 아닌 섹션들 (faq는 HSA 전용으로 CertIIIHSA에서 렌더링)
-  const otherSections = Object.entries(courseInfo).filter(
+  // courseStructure 키는 Units로 이관되었으므로 제외, faq는 HSA 전용
+  const sections = Object.entries(courseInfo).filter(
     ([key]) => !key.startsWith('courseStructure') && key !== 'faq',
   );
 
@@ -536,28 +524,10 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
                     ))}
                   </div>
                 )}
-
-                {/* courseStructure가 있는 경우 이미지 아래에 courseStructure 섹션들을 배치 */}
-                {hasCourseStructure && courseStructureSections.length > 0 && (
-                  <div className="mt-8 mb-30">
-                    {courseStructureSections.map(
-                      ([sectionKey, sectionData]) => (
-                        <div key={sectionKey} className="mb-14">
-                          <h3 className={titleStyle}>{sectionData.title}</h3>
-                          {renderDescription(sectionData.description)}
-                        </div>
-                      ),
-                    )}
-                  </div>
-                )}
               </div>
             )}
             <div>
-              {/* courseStructure가 있는 경우 courseStructure를 제외한 나머지 섹션들만 표시 (faq는 HSA 전용) */}
-              {(hasCourseStructure
-                ? otherSections
-                : Object.entries(courseInfo).filter(([k]) => k !== 'faq')
-              ).map(([sectionKey, sectionData]) => (
+              {sections.map(([sectionKey, sectionData]) => (
                 <div key={sectionKey} className="mb-14">
                   <h3 className={titleStyle}>{sectionData.title}</h3>
                   {renderDescription(sectionData.description)}
