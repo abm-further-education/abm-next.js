@@ -25,7 +25,7 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
           <div
             key={course.code || course.title}
             className={cn(
-              'p-8 md:p-12 md:w-[50%] h-150 relative text-white',
+              'p-8 md:p-12 md:w-[50%] h-150 relative text-white max-w-240',
               course.color || 'bg-neutral-500',
               index > 0 && 'ml-[-20px] md:ml-[-30px]',
               (!course.code || !course.duration) &&
