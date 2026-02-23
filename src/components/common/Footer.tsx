@@ -42,8 +42,9 @@ function Footer() {
       </div>
       <div>
         <div className="flex items-center gap-20 mb-20 flex-wrap">
-          <Image src="/NRT.png" alt="Logo" width={120} height={120} />
-          <Image src="/velg-logo.png" alt="Logo" width={120} height={120} />
+          <Image src="/NRT.png" alt="nrt" width={120} height={120} />
+          <Image src="/velg-logo.png" alt="velg" width={120} height={120} />
+          <Image src="/nsw_rsa.jpg" alt="rsa" width={170} height={120} />
         </div>
         <div className="flex flex-wrap gap-20">
           <div>
