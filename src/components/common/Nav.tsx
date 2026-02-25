@@ -31,7 +31,7 @@ const allMenus = [
   ...shortCourseMenu,
 ];
 
-const DEFAULT_BROCHURE_URL = '/common/ABM_Brochure_2026_final_web_f.pdf';
+const DEFAULT_BROCHURE_URL = 'common/ABM_Brochure_2026_final_web_f.pdf';
 
 function Nav() {
   const locale = useLocale();
