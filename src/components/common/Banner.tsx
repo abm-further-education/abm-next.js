@@ -128,7 +128,7 @@ function Banner({
               ) : (
                 <Link
                   target="_blank"
-                  href="/files/ABM_Brochure_2026_final_web.pdf"
+                  href="https://abm-nextjs-images.b83f3e0bd05202c38186975efb748fa7.r2.cloudflarestorage.com/common/ABM_Brochure_2026_final_web_f.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=6a04feab5820fa078460b702f753983b%2F20260225%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260225T061224Z&X-Amz-Expires=3600&X-Amz-Signature=bd85174a8b665fb9887a7cc669f10a3993769b8c83cc007e3e9381f85052c29e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
                   className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
                 >
                   ABM Course Guide 2026
