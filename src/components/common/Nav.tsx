@@ -31,7 +31,7 @@ const allMenus = [
   ...shortCourseMenu,
 ];
 
-const DEFAULT_BROCHURE_URL = '/files/ABM_Brochure_2026_final_web.pdf';
+const DEFAULT_BROCHURE_URL = '/files/ABM_Brochure_2026_final_web_f.pdf';
 
 function Nav() {
   const locale = useLocale();
@@ -46,6 +46,84 @@ function Nav() {
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const router = useRouter();
   const [brochureUrl, setBrochureUrl] = useState(DEFAULT_BROCHURE_URL);
+
+  const resolveBrochureKey = (url: string) => {
+    if (!url || url.startsWith('/') || url.startsWith('./')) {
+      return null;
+    }
+
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      return url;
+    }
+
+    try {
+      const parsed = new URL(url);
+      const isSignedUrl = parsed.searchParams.has('X-Amz-Algorithm');
+
+      if (!isSignedUrl) {
+        return null;
+      }
+
+      const pathSegments = parsed.pathname.split('/').filter(Boolean);
+      if (pathSegments.length === 0) {
+        return null;
+      }
+
+      // For S3-compatible signed URLs, first segment can be the bucket name.
+      return parsed.hostname.includes('r2.cloudflarestorage.com') &&
+        pathSegments.length > 1
+        ? pathSegments.slice(1).join('/')
+        : pathSegments.join('/');
+    } catch {
+      return null;
+    }
+  };
+
+  const openBrochure = async () => {
+    const openedWindow = window.open('', '_blank');
+    if (openedWindow) {
+      openedWindow.document.title = 'Loading...';
+    }
+
+    try {
+      const key = resolveBrochureKey(brochureUrl);
+      if (!key) {
+        if (openedWindow) {
+          openedWindow.location.href = brochureUrl;
+        } else {
+          window.open(brochureUrl, '_blank');
+        }
+        return;
+      }
+
+      const response = await fetch(`/api/r2/get-url?key=${encodeURIComponent(key)}`);
+      const data = await response.json();
+      const refreshedUrl = data?.url;
+
+      if (!response.ok || !refreshedUrl) {
+        throw new Error('Failed to refresh brochure URL');
+      }
+
+      if (openedWindow) {
+        openedWindow.location.href = refreshedUrl;
+      } else {
+        window.open(refreshedUrl, '_blank');
+      }
+    } catch {
+      if (openedWindow) {
+        openedWindow.location.href = brochureUrl;
+      } else {
+        window.open(brochureUrl, '_blank');
+      }
+    }
+  };
+
+  const handleDownloadGuideClick = async (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+  ) => {
+    e.preventDefault();
+    await openBrochure();
+  };
 
   useEffect(() => {
     fetch('/api/site-settings?key=brochure_url')
@@ -153,7 +231,7 @@ function Nav() {
       return;
     }
     const filtered = allMenus.filter((menu) =>
-      menu.title.toLowerCase().includes(value.toLowerCase())
+      menu.title.toLowerCase().includes(value.toLowerCase()),
     );
     setResults(filtered as { title: string; href: string }[]);
     setHighlightedIndex(filtered.length > 0 ? 0 : -1);
@@ -168,7 +246,7 @@ function Nav() {
     } else if (e.key === 'Enter' && highlightedIndex >= 0) {
       const cleanHref = results[highlightedIndex].href.replace(
         '/courses/',
-        '/'
+        '/',
       );
       router.push(`/${locale}${cleanHref}`);
       setSearch('');
@@ -194,6 +272,8 @@ function Nav() {
           <Link
             href={brochureUrl}
             target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleDownloadGuideClick}
             className="text-primary font-semibold underline ml-10"
           >
             {t('downloadGuide')}
@@ -292,14 +372,14 @@ function Nav() {
         <div
           className={cn(
             'bg-black shadow-md ',
-            'fixed top-56 md:top-55 w-full h-76 z-[800] transition-all duration-500'
+            'fixed top-56 md:top-55 w-full h-76 z-[800] transition-all duration-500',
           )}
         >
           {subMenu && (
             <div
               onMouseLeave={() => setSubMenu('')}
               className={cn(
-                'absolute z-[999] w-full top-76 text-white flex flex-col md:flex-row items-center justify-between md:gap-40 md:px-80 md:py-20 bg-[#171717]'
+                'absolute z-[999] w-full top-76 text-white flex flex-col md:flex-row items-center justify-between md:gap-40 md:px-80 md:py-20 bg-[#171717]',
               )}
             >
               <div className="text-white font-[family-name:var(--font-montserrat)]">
@@ -342,7 +422,7 @@ function Nav() {
                   ['Courses', '과정', 'Cursos'].includes(subMenu)
                     ? 'grid-cols-3'
                     : 'grid-cols-2',
-                  'grid gap-x-40 gap-y-26'
+                  'grid gap-x-40 gap-y-26',
                 )}
               >
                 {menuList
@@ -403,7 +483,7 @@ function Nav() {
         </div>
         <header
           className={cn(
-            `hidden fixed top-55 z-[900] lg:flex items-center justify-between px-16 md:px-80 text-white w-full transition-all duration-500`
+            `hidden fixed top-55 z-[900] lg:flex items-center justify-between px-16 md:px-80 text-white w-full transition-all duration-500`,
           )}
         >
           <Link href="/" className="">
@@ -439,7 +519,7 @@ function Nav() {
                 }
                 className={cn(
                   subMenu === item.title ? 'bg-[#171717] text-primary' : '',
-                  'cursor-pointer hover:bg-[#171717] transition-all py-26 px-28'
+                  'cursor-pointer hover:bg-[#171717] transition-all py-26 px-28',
                 )}
               >
                 {item.title}
@@ -454,7 +534,10 @@ function Nav() {
             </Link>
           </div>
         </header>
-        <MobileNav brochureUrl={brochureUrl} />
+        <MobileNav
+          brochureUrl={brochureUrl}
+          onDownloadGuideClick={handleDownloadGuideClick}
+        />
       </div>
     </>
   );
