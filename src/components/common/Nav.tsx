@@ -31,7 +31,7 @@ const allMenus = [
   ...shortCourseMenu,
 ];
 
-const DEFAULT_BROCHURE_URL = '/files/ABM_Brochure_2026_final_web_f.pdf';
+const DEFAULT_BROCHURE_URL = '/common/ABM_Brochure_2026_final_web_f.pdf';
 
 function Nav() {
   const locale = useLocale();
@@ -47,35 +47,24 @@ function Nav() {
   const router = useRouter();
   const [brochureUrl, setBrochureUrl] = useState(DEFAULT_BROCHURE_URL);
 
-  const resolveBrochureKey = (url: string) => {
+  const resolveBrochureSource = (url: string) => {
     if (!url || url.startsWith('/') || url.startsWith('./')) {
-      return null;
+      return { type: 'direct' as const, value: url };
     }
 
     if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      return url;
+      return { type: 'key' as const, value: url };
     }
 
     try {
       const parsed = new URL(url);
       const isSignedUrl = parsed.searchParams.has('X-Amz-Algorithm');
-
-      if (!isSignedUrl) {
-        return null;
+      if (isSignedUrl) {
+        return { type: 'signed-url' as const, value: url };
       }
-
-      const pathSegments = parsed.pathname.split('/').filter(Boolean);
-      if (pathSegments.length === 0) {
-        return null;
-      }
-
-      // For S3-compatible signed URLs, first segment can be the bucket name.
-      return parsed.hostname.includes('r2.cloudflarestorage.com') &&
-        pathSegments.length > 1
-        ? pathSegments.slice(1).join('/')
-        : pathSegments.join('/');
+      return { type: 'direct' as const, value: url };
     } catch {
-      return null;
+      return { type: 'direct' as const, value: url };
     }
   };
 
@@ -86,8 +75,8 @@ function Nav() {
     }
 
     try {
-      const key = resolveBrochureKey(brochureUrl);
-      if (!key) {
+      const source = resolveBrochureSource(brochureUrl);
+      if (source.type === 'direct') {
         if (openedWindow) {
           openedWindow.location.href = brochureUrl;
         } else {
@@ -96,7 +85,11 @@ function Nav() {
         return;
       }
 
-      const response = await fetch(`/api/r2/get-url?key=${encodeURIComponent(key)}`);
+      const query =
+        source.type === 'key'
+          ? `key=${encodeURIComponent(source.value)}`
+          : `url=${encodeURIComponent(source.value)}`;
+      const response = await fetch(`/api/r2/get-url?${query}`);
       const data = await response.json();
       const refreshedUrl = data?.url;
 

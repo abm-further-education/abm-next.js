@@ -15,10 +15,11 @@ export async function GET(req: NextRequest) {
   try {
     const searchParams = req.nextUrl.searchParams;
     const key = searchParams.get('key');
+    const sourceUrl = searchParams.get('url');
 
-    if (!key) {
+    if (!key && !sourceUrl) {
       return NextResponse.json(
-        { error: 'key parameter is required' },
+        { error: 'key or url parameter is required' },
         { status: 400 }
       );
     }
@@ -31,16 +32,47 @@ export async function GET(req: NextRequest) {
       );
     }
 
+    let resolvedKey = key || '';
+
+    if (!resolvedKey && sourceUrl) {
+      const parsed = new URL(sourceUrl);
+      const pathSegments = parsed.pathname.split('/').filter(Boolean);
+
+      if (pathSegments.length === 0) {
+        return NextResponse.json(
+          { error: 'Could not resolve key from url' },
+          { status: 400 }
+        );
+      }
+
+      if (
+        parsed.hostname.includes('r2.cloudflarestorage.com') &&
+        pathSegments[0] === bucketName &&
+        pathSegments.length > 1
+      ) {
+        resolvedKey = pathSegments.slice(1).join('/');
+      } else {
+        resolvedKey = pathSegments.join('/');
+      }
+    }
+
+    if (!resolvedKey) {
+      return NextResponse.json(
+        { error: 'Could not resolve key from input' },
+        { status: 400 }
+      );
+    }
+
     // R2_PUBLIC_URL이 설정되어 있으면 직접 URL 반환
     if (process.env.R2_PUBLIC_URL) {
-      const publicUrl = `${process.env.R2_PUBLIC_URL}/${key}`;
+      const publicUrl = `${process.env.R2_PUBLIC_URL}/${resolvedKey}`;
       return NextResponse.json({ url: publicUrl });
     }
 
     // Presigned URL 생성 (1시간 유효)
     const command = new GetObjectCommand({
       Bucket: bucketName,
-      Key: key,
+      Key: resolvedKey,
     });
 
     const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
