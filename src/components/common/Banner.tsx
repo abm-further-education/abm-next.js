@@ -12,6 +12,8 @@ import 'swiper/css/autoplay';
 import FadeInBottomToTop from './FadeInBottomToTop';
 import MiniTestimonialWrapper from './MiniTestimonialWrapper';
 
+const DEFAULT_BROCHURE_URL = 'common/ABM_Brochure_2026_final_web_f.pdf';
+
 type Props = {
   slides: {
     imgPath: string;
@@ -35,6 +37,19 @@ function Banner({
   isNeedContactBtn,
   autoplayDelay = 4000,
 }: Props) {
+  const [brochureUrl, setBrochureUrl] = React.useState(DEFAULT_BROCHURE_URL);
+
+  React.useEffect(() => {
+    fetch('/api/site-settings?key=brochure_url')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.brochure_url) {
+          setBrochureUrl(data.brochure_url);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   const isVideo = (path: string) => {
     return path?.match(/\.(mp4|webm|ogg)$/i) || path.includes('youtube');
   };
@@ -51,6 +66,77 @@ function Banner({
     // https://www.youtube.com/embed/VIDEO_ID?si=... 형식에서 VIDEO_ID 추출
     const match = url.match(/youtube\.com\/embed\/([^?&]+)/);
     return match ? match[1] : null;
+  };
+
+  const resolveBrochureSource = (url: string) => {
+    if (!url || url.startsWith('/') || url.startsWith('./')) {
+      return { type: 'direct' as const, value: url };
+    }
+
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      return { type: 'key' as const, value: url };
+    }
+
+    try {
+      const parsed = new URL(url);
+      const isSignedUrl = parsed.searchParams.has('X-Amz-Algorithm');
+      if (isSignedUrl) {
+        return { type: 'signed-url' as const, value: url };
+      }
+      return { type: 'direct' as const, value: url };
+    } catch {
+      return { type: 'direct' as const, value: url };
+    }
+  };
+
+  const openBrochure = async () => {
+    const openedWindow = window.open('', '_blank');
+    if (openedWindow) {
+      openedWindow.document.title = 'Loading...';
+    }
+
+    try {
+      const source = resolveBrochureSource(brochureUrl);
+      if (source.type === 'direct') {
+        if (openedWindow) {
+          openedWindow.location.href = brochureUrl;
+        } else {
+          window.open(brochureUrl, '_blank');
+        }
+        return;
+      }
+
+      const query =
+        source.type === 'key'
+          ? `key=${encodeURIComponent(source.value)}`
+          : `url=${encodeURIComponent(source.value)}`;
+      const response = await fetch(`/api/r2/get-url?${query}`);
+      const data = await response.json();
+      const refreshedUrl = data?.url;
+
+      if (!response.ok || !refreshedUrl) {
+        throw new Error('Failed to refresh brochure URL');
+      }
+
+      if (openedWindow) {
+        openedWindow.location.href = refreshedUrl;
+      } else {
+        window.open(refreshedUrl, '_blank');
+      }
+    } catch {
+      if (openedWindow) {
+        openedWindow.location.href = brochureUrl;
+      } else {
+        window.open(brochureUrl, '_blank');
+      }
+    }
+  };
+
+  const handleBrochureClick = async (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+  ) => {
+    e.preventDefault();
+    await openBrochure();
   };
 
   return (
@@ -128,7 +214,9 @@ function Banner({
               ) : (
                 <Link
                   target="_blank"
-                  href="https://abm-nextjs-images.b83f3e0bd05202c38186975efb748fa7.r2.cloudflarestorage.com/common/ABM_Brochure_2026_final_web_f.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=6a04feab5820fa078460b702f753983b%2F20260225%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260225T061224Z&X-Amz-Expires=3600&X-Amz-Signature=bd85174a8b665fb9887a7cc669f10a3993769b8c83cc007e3e9381f85052c29e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+                  href={brochureUrl}
+                  rel="noopener noreferrer"
+                  onClick={handleBrochureClick}
                   className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
                 >
                   ABM Course Guide 2026
