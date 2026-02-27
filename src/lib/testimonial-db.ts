@@ -61,7 +61,7 @@ async function getAuthenticatedSupabase() {
  * @returns Testimonial 배열
  */
 export async function getTestimonials(
-  course?: 'cookery&hospitality' | 'fitness'
+  course?: string
 ): Promise<Testimonial[]> {
   // 환경 변수 확인
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -121,7 +121,7 @@ export async function getTestimonials(
  * @returns 이미지 경로 배열
  */
 export async function getTestimonialImages(
-  course?: 'cookery&hospitality' | 'fitness',
+  course?: string,
   limit?: number
 ): Promise<string[]> {
   const testimonials = await getTestimonials(course);

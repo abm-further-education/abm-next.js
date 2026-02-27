@@ -57,7 +57,7 @@ export default function StudentInsightsClient({
           },
         ]}
         dimmed={
-          <div className="bg-neutral-900/40 w-full h-screen md:h-700 absolute z-10" />
+          <div className="bg-neutral-900/40 w-full h-screen md:h-900 absolute z-10" />
         }
       />
 

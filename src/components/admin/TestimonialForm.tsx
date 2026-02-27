@@ -7,7 +7,10 @@ import {
   createTestimonialAction,
   updateTestimonialAction,
 } from '@/app/admin/testimonials/actions';
+import { courseCategories } from '@/lib/trainerData';
 import type { Testimonial } from '@/lib/testimonial-types';
+import type { CourseCategory } from '@/lib/testimonial-types';
+import ImageDropZone from '@/components/common/ImageDropZone';
 
 interface TestimonialFormProps {
   mode: 'create' | 'edit';
@@ -28,9 +31,7 @@ export default function TestimonialForm({
   const [imagePath, setImagePath] = useState('');
   const [message, setMessage] = useState('');
   const [rating, setRating] = useState<number | ''>('');
-  const [course, setCourse] = useState<'cookery&hospitality' | 'fitness'>(
-    'cookery&hospitality'
-  );
+  const [course, setCourse] = useState<CourseCategory>('cookery');
 
   // Edit 모드일 때 초기값 설정
   useEffect(() => {
@@ -39,7 +40,9 @@ export default function TestimonialForm({
       setImagePath(testimonial.image);
       setMessage(testimonial.message || '');
       setRating(testimonial.rating || '');
-      setCourse(testimonial.course);
+      setCourse(
+        testimonial.course === 'cookery&hospitality' ? 'cookery' : testimonial.course
+      );
       // 기존 이미지 경로를 미리보기로 설정
       setImagePreview(testimonial.image);
     }
@@ -109,16 +112,7 @@ export default function TestimonialForm({
     }
   }
 
-  async function handleImageChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    // 이미지 파일인지 확인
-    if (!file.type.startsWith('image/')) {
-      setError('Only image files can be uploaded.');
-      return;
-    }
-
+  async function handleFileSelect(file: File) {
     setError('');
 
     // 미리보기 생성
@@ -132,7 +126,6 @@ export default function TestimonialForm({
     try {
       await handleImageUpload(file);
     } catch (err) {
-      // 에러는 handleImageUpload에서 이미 처리됨
       console.error('Image upload failed:', err);
     }
   }
@@ -208,19 +201,20 @@ export default function TestimonialForm({
           htmlFor="course"
           className="block text-sm font-medium text-gray-700 mb-2"
         >
-          Course *
+          Course Category *
         </label>
         <select
           id="course"
           value={course}
-          onChange={(e) =>
-            setCourse(e.target.value as 'cookery&hospitality' | 'fitness')
-          }
+          onChange={(e) => setCourse(e.target.value as CourseCategory)}
           required
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="cookery&hospitality">Cookery & Hospitality</option>
-          <option value="fitness">Fitness</option>
+          {courseCategories.map((cat) => (
+            <option key={cat.value} value={cat.value}>
+              {cat.label}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -233,35 +227,17 @@ export default function TestimonialForm({
         </label>
         {isCreateMode ? (
           <>
-            <input
+            <ImageDropZone
               id="image"
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              required={!imagePath}
-              disabled={uploading}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              onFileChange={handleFileSelect}
+              previewUrl={imagePreview}
+              uploading={uploading}
+              disabled={false}
             />
-            {uploading && (
-              <p className="mt-2 text-sm text-blue-600">Uploading image...</p>
-            )}
-            {imagePreview && (
-              <div className="mt-4">
-                <div className="relative max-w-md h-auto">
-                  <Image
-                    src={imagePreview}
-                    alt="Preview"
-                    width={400}
-                    height={300}
-                    className="rounded-md border border-gray-300"
-                  />
-                </div>
-                {imagePath && (
-                  <p className="mt-2 text-sm text-green-600">
-                    Upload complete: {imagePath}
-                  </p>
-                )}
-              </div>
+            {imagePath && (
+              <p className="mt-2 text-sm text-green-600">
+                Upload complete: {imagePath}
+              </p>
             )}
           </>
         ) : (
@@ -287,17 +263,13 @@ export default function TestimonialForm({
               >
                 Or upload a new image
               </label>
-              <input
+              <ImageDropZone
                 id="image-file"
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange}
-                disabled={uploading}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                onFileChange={handleFileSelect}
+                previewUrl={imagePreview}
+                uploading={uploading}
+                disabled={false}
               />
-              {uploading && (
-                <p className="mt-2 text-sm text-blue-600">Uploading image...</p>
-              )}
             </div>
             {imagePreview && (
               <div className="mt-4">

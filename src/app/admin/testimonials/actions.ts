@@ -5,6 +5,7 @@ import {
   updateTestimonial,
   deleteTestimonial,
 } from '@/lib/testimonial-db';
+import type { CourseCategory } from '@/lib/testimonial-types';
 import { getAdminSession } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import { testimonials, fitnessTestimonials } from '@/lib/testimonial';
@@ -19,7 +20,7 @@ export async function createTestimonialAction(formData: FormData) {
   const image = formData.get('image') as string;
   const message = formData.get('message') as string;
   const rating = formData.get('rating') as string;
-  const course = formData.get('course') as 'cookery&hospitality' | 'fitness';
+  const course = formData.get('course') as CourseCategory | 'cookery&hospitality';
 
   if (!name || !image || !course) {
     throw new Error('Required fields are missing.');
@@ -51,7 +52,7 @@ export async function updateTestimonialAction(id: string, formData: FormData) {
   const image = formData.get('image') as string;
   const message = formData.get('message') as string;
   const rating = formData.get('rating') as string;
-  const course = formData.get('course') as 'cookery&hospitality' | 'fitness';
+  const course = formData.get('course') as CourseCategory | 'cookery&hospitality';
 
   try {
     const testimonial = await updateTestimonial(id, {

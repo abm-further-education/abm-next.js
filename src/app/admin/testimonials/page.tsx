@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { getAdminSession } from '@/lib/auth';
 import { getTestimonials } from '@/lib/testimonial-db';
+import { courseCategories } from '@/lib/trainerData';
 import Link from 'next/link';
 import { PencilIcon, PlusIcon } from 'lucide-react';
 import { getCourseStyle } from '@/lib';
@@ -67,20 +68,27 @@ export default async function TestimonialsListPage() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {testimonials.map((testimonial) => (
-                    <tr key={testimonial.id}>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm font-medium text-gray-900">
-                          {testimonial.name}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <span
-                          className={`p-4 inline-flex text-xs leading-5 font-semibold rounded-full ${getCourseStyle(testimonial.course).bg} ${getCourseStyle(testimonial.course).text}`}
-                        >
-                          {testimonial.course}
-                        </span>
-                      </td>
+                  {testimonials.map((testimonial) => {
+                    const cat = courseCategories.find(
+                      (c) =>
+                        c.value === testimonial.course ||
+                        (testimonial.course === 'cookery&hospitality' &&
+                          c.value === 'cookery'),
+                    );
+                    return (
+                      <tr key={testimonial.id}>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm font-medium text-gray-900">
+                            {testimonial.name}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <span
+                            className={`p-8 inline-flex text-xs leading-5 font-semibold rounded-full ${getCourseStyle(testimonial.course).bg} ${getCourseStyle(testimonial.course).text}`}
+                          >
+                            {cat?.label || testimonial.course}
+                          </span>
+                        </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {testimonial.rating ? (
                           <div className="flex items-center">
@@ -108,7 +116,8 @@ export default async function TestimonialsListPage() {
                         </Link>
                       </td>
                     </tr>
-                  ))}
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
