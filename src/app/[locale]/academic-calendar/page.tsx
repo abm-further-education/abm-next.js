@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 
 import Banner from '@/components/common/Banner';
-import AcademicCalendar from '@/components/academic-calendar/AcademicCalendar';
+// import AcademicCalendar from '@/components/academic-calendar/AcademicCalendar';
 import { getAcademicEvents } from '@/lib/academic-calendar-db';
 import type { AcademicEvent } from '@/lib/academic-calendar-db';
 
