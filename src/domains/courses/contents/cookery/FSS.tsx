@@ -151,9 +151,10 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
             <div className="flex flex-col gap-10">
               <span className="font-semibold">Course Date:</span>
               <ul className="list-disc pl-5 space-y-1">
-                <li>20 February 2026</li>
                 <li>13th March 2026</li>
                 <li>17th April 2026</li>
+                <li>22nd May 2026</li>
+                <li>19th June 2026</li>
               </ul>
             </div>
             <div className="flex flex-col gap-10 mt-20 bg-orange-100 p-10 md: w-600">
