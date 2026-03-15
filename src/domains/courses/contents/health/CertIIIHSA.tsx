@@ -116,7 +116,7 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
             <div className="absolute inset-0 bg-black/60"></div>
 
             <h2 className="text-lg md:text-xl absolute bottom-20 font-bold text-primary">
-              Key Benefits & Work Placement info
+              Key Benefits & Work Placement information
             </h2>
           </div>
           <div className="p-20">
@@ -153,6 +153,16 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
                 <li>{t('courseBenefits.items.careerAdvancement')}</li>
               </ul>
             </div>
+            <div className="text-gray-600 mb-8">
+              <h3 className="text-base font-bold mb-8 font-montserrat">
+                Required documents:
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+                <li>National Police Check</li>
+                <li>Working With Children Check</li>
+                <li>Vaccination Record</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -170,11 +180,7 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
               answer: t(`faq.items.${key}.answer`),
             }))
         ).map((item, index) => (
-          <Disclosure
-            key={index}
-            as="div"
-            className={index > 0 ? 'mt-4' : ''}
-          >
+          <Disclosure key={index} as="div" className={index > 0 ? 'mt-4' : ''}>
             {({ open }) => (
               <>
                 <DisclosureButton className="flex w-full justify-between items-center bg-primary px-16 py-9 text-left text-sm font-medium text-white hover:bg-black cursor-pointer transition font-montserrat">

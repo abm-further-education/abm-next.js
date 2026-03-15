@@ -160,7 +160,13 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         displayDate: '28 November 2025',
         time: '2:00 PM – 6:00 PM',
       },
+      {
+        date: '2026-03-27',
+        displayDate: '27 March 2026',
+        time: '4:30 PM – 8:30 PM',
+      },
     ],
+    maxParticipants: '4',
     location:
       'ABM Main Campus (242 Castlereagh Street Sydney NSW 2000 Australia)',
     price: 150,

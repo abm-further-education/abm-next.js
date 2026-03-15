@@ -6,7 +6,7 @@ import ImageSlider from '@/components/shortCourses/ImageSlider';
 import NotifyMeModal from '@/components/common/NotifyMeModal';
 import getShortCourseData from '@/lib/shortCourseData';
 
-import React, { use, useEffect, useState } from 'react';
+import React, { use, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 const titleMatch: { [key: string]: string } = {
@@ -45,6 +45,7 @@ function Page({
   const { slug, locale } = use(params);
   const courseData = getShortCourseData(locale)[slug];
   const router = useRouter();
+  const isBarista = slug === 'barista';
 
   React.useEffect(() => {
     if (!courseData) {
@@ -53,6 +54,23 @@ function Page({
   }, [courseData, locale, router]);
 
   const [isNotifyModalOpen, setIsNotifyModalOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState('');
+
+  const availableDates = useMemo(() => {
+    if (isBarista) {
+      return [
+        {
+          date: '2026-03-27',
+          displayDate: '27 March',
+          time: '4:30 pm - 8:30 pm',
+        },
+      ];
+    }
+    if (!courseData?.dates) return [];
+    return courseData.dates.filter(
+      (d: { available?: boolean }) => d.available !== false,
+    );
+  }, [courseData?.dates, isBarista]);
 
   // 동적으로 페이지 타이틀 설정
   useEffect(() => {
@@ -62,7 +80,13 @@ function Page({
 
   // Enquiry 버튼 클릭 처리 함수
   const handleEnquiry = () => {
-    // contact 페이지로 이동
+    if (isBarista) {
+      if (!selectedDate) return;
+      router.push(
+        `/${locale}/custom-programs/${slug}/checkout?date=${encodeURIComponent(selectedDate)}`,
+      );
+      return;
+    }
     router.push(`/${locale}/contact`);
   };
 
@@ -180,65 +204,74 @@ function Page({
               </div>
             )} */}
 
-            {/* Course Date Selection */}
+            {/* Course Date Selection / Enquiry */}
             <div className="w-full max-w-sm mt-20">
-              {/* <label
-                htmlFor="course-date"
-                className="block mb-2 text-sm font-medium text-gray-700"
-              >
-                {courseData.selectDateLabel || 'Course Date (Face to Face)'}
-              </label> */}
-              <div className="flex gap-2">
-                {/* <select
-                  id="course-date"
-                  name="course-date"
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  className="flex-1 px-8 py-12 border border-gray-300  shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm"
-                  disabled={availableDates.length === 0}
-                >
-                  {availableDates.length === 0 ? (
-                    <option value="" disabled className="">
-                      Not Available at the moment.
-                    </option>
-                  ) : (
-                    [
-                      <option value="" key="select">
-                        {courseData.selectDateOptionLabel || 'Select a date'}
-                      </option>,
-                      ...availableDates.map(
-                        (date: {
-                          date: string;
-                          displayDate: string;
-                          time: string;
-                        }) => (
-                          <option key={date.date} value={date.date}>
-                            {date.displayDate} • {date.time}
-                          </option>
-                        )
-                      ),
-                    ]
-                  )}
-                </select> */}
-                {/* {availableDates.length === 0 && (
-                  <Button
-                    className="bg-orange-600 text-white px-4 py-2 text-sm whitespace-nowrap flex items-center gap-2"
-                    onClick={() => setIsNotifyModalOpen(true)}
+              {slug === 'barista' ? (
+                <>
+                  <label
+                    htmlFor="course-date"
+                    className="block mb-2 text-sm font-medium text-gray-700"
                   >
-                    <Bell size={16} />
-                    Notify Me
+                    {courseData.selectDateLabel || 'Course Date (Face to Face)'}
+                  </label>
+                  <div className="flex gap-2">
+                    <select
+                      id="course-date"
+                      name="course-date"
+                      value={selectedDate}
+                      onChange={(e) => setSelectedDate(e.target.value)}
+                      className="flex-1 px-8 py-12 border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-sm"
+                      disabled={availableDates.length === 0}
+                    >
+                      {availableDates.length === 0 ? (
+                        <option value="" disabled>
+                          Not Available at the moment.
+                        </option>
+                      ) : (
+                        [
+                          <option value="" key="select">
+                            {courseData.selectDateOptionLabel ||
+                              'Select a date'}
+                          </option>,
+                          ...availableDates.map(
+                            (date: {
+                              date: string;
+                              displayDate: string;
+                              time: string;
+                            }) => (
+                              <option
+                                key={date.date}
+                                value={`${date.displayDate} ${date.time}`}
+                              >
+                                {date.displayDate} • {date.time}
+                              </option>
+                            ),
+                          ),
+                        ]
+                      )}
+                    </select>
+                  </div>
+                  <Button
+                    className="bg-black text-white w-full mt-20 hover:bg-primary"
+                    onClick={handleEnquiry}
+                    disabled={!selectedDate}
+                  >
+                    Enrol Now
                   </Button>
-                )} */}
-              </div>
-              <div className="font-bold text-2xl mt-20 text-primary">
-                Private group bookings only
-              </div>
-              <Button
-                className="bg-black text-white w-full mt-20 hover:bg-primary"
-                onClick={handleEnquiry}
-              >
-                Enquire Now
-              </Button>
+                </>
+              ) : (
+                <>
+                  <div className="font-bold text-2xl mt-20 text-primary">
+                    Private group bookings only
+                  </div>
+                  <Button
+                    className="bg-black text-white w-full mt-20 hover:bg-primary"
+                    onClick={handleEnquiry}
+                  >
+                    Enquire Now
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -275,7 +308,7 @@ function Page({
                       <span className="text-orange-600 font-bold">•</span>
                       <span>{item}</span>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>
@@ -304,7 +337,7 @@ function Page({
                       <span className="text-orange-600 font-bold">✓</span>
                       <span>{item}</span>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>
@@ -331,7 +364,7 @@ function Page({
                       <span className="text-orange-600 font-bold">✔</span>
                       <span>{item}</span>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>
@@ -350,7 +383,7 @@ function Page({
                       <span className="text-orange-600 font-bold">✅</span>
                       <span>{item}</span>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>

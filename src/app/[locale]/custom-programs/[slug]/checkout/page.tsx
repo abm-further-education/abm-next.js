@@ -44,7 +44,7 @@ export default function CheckoutPage() {
   const [loading, setLoading] = useState(false);
   const [discount, setDiscount] = useState(0);
   const [discountType, setDiscountType] = useState<'percentage' | 'fixed'>(
-    'percentage'
+    'percentage',
   );
   const [appliedPromo, setAppliedPromo] = useState('');
 
@@ -63,6 +63,7 @@ export default function CheckoutPage() {
     ABM3A25: { discount: 10, label: '$10 OFF', type: 'fixed' },
     ABM4A25: { discount: 20, label: '$20 OFF', type: 'fixed' },
     NMABMSS: { discount: 0.2, label: '20% OFF', type: 'percentage' },
+    ABMTEST100: { discount: 1, label: '100% OFF', type: 'percentage' },
   };
 
   // 프로모션 코드 적용 함수
@@ -114,7 +115,7 @@ export default function CheckoutPage() {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
