@@ -50,9 +50,7 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
   const [location, setLocation] = useState(data?.course.location || '');
   const [price, setPrice] = useState(data?.course.price?.toString() || '');
   const [duration, setDuration] = useState(data?.course.duration || '');
-  const [maxParticipants, setMaxParticipants] = useState(
-    data?.course.max_participants || '',
-  );
+  const [maxParticipants] = useState(data?.course.max_participants || '');
   const [isActive, setIsActive] = useState(data?.course.is_active ?? true);
   const [displayOrder, setDisplayOrder] = useState(
     data?.course.display_order?.toString() || '0',
