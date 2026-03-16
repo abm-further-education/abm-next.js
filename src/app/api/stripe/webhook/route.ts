@@ -3,6 +3,7 @@ import { getServerStripe } from '@/lib/stripe';
 
 import nodemailer from 'nodemailer';
 import { supabaseServer } from '@/lib/supabase-server';
+import { getShortCourseCapacityStatus } from '@/lib/short-course-capacity';
 import Stripe from 'stripe';
 
 export const runtime = 'nodejs';
@@ -112,6 +113,13 @@ async function saveBookingToDatabase(
     const paymentAmount = session.amount_total ? session.amount_total / 100 : 0; // Stripe는 센트 단위
     const paymentStatus = session.payment_status;
     const stripeSessionId = session.id;
+
+    if (courseSlug && selectedDate) {
+      const capacity = await getShortCourseCapacityStatus(courseSlug, selectedDate);
+      if (capacity.isFull) {
+        throw new Error('Short course is full. Booking was not saved.');
+      }
+    }
 
     const { data, error } = await supabaseServer.from('shortCourse').insert({
       first_name: firstName || '',

@@ -133,11 +133,20 @@ export default function CheckoutPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: form.firstName,
+          firstName: form.firstName,
+          lastName: form.lastName,
           email: form.email,
+          phone: form.phone,
+          preferredDate: form.preferredDate,
+          otherInquiries: form.otherInquiries,
+          howDidYouHear: form.howDidYouHear,
+          referrerName: form.referrerName,
           promotionCode: form.promotionCode,
           courseName: courseData?.title,
           courseSlug: slug,
           selectedDate,
+          selectedType,
+          courseLocation: courseData?.location,
           finalPrice:
             discount > 0 && discountedPrice !== undefined
               ? discountedPrice

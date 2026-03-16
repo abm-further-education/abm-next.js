@@ -134,12 +134,12 @@ function Page({
                 </p>
                 <p>{courseData.time || courseData.duration}</p>
               </div>
-              {courseData.maxParticipants && (
+              {/* {courseData.maxParticipants && (
                 <div className="flex gap-10">
                   <p className="font-semibold">Max Participants:</p>
                   <p>{courseData.maxParticipants}</p>
                 </div>
-              )}
+              )} */}
 
               <div className="flex flex-col">
                 <p className="font-semibold">

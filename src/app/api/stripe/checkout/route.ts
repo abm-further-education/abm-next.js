@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerStripe } from '@/lib/stripe';
 import getShortCourseData from '@/lib/shortCourseData';
+import { getShortCourseCapacityStatus } from '@/lib/short-course-capacity';
 
 export async function POST(request: NextRequest) {
   try {
@@ -31,6 +32,17 @@ export async function POST(request: NextRequest) {
 
     if (!courseData) {
       return NextResponse.json({ error: 'Course not found' }, { status: 404 });
+    }
+
+    if (courseSlug && selectedDate) {
+      const capacity = await getShortCourseCapacityStatus(courseSlug, selectedDate);
+
+      if (capacity.isFull) {
+        return NextResponse.json(
+          { error: 'This class is already full. Please choose another date.' },
+          { status: 409 }
+        );
+      }
     }
 
     // Stripe Checkout Session 생성

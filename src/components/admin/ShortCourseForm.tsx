@@ -9,7 +9,11 @@ import {
   upsertShortCourseDateAction,
   deleteShortCourseDateAction,
 } from '@/app/admin/courses/actions';
-import type { DbShortCourse, DbShortCourseTranslation, DbShortCourseDate } from '@/types/course';
+import type {
+  DbShortCourse,
+  DbShortCourseTranslation,
+  DbShortCourseDate,
+} from '@/types/course';
 
 const LOCALES = [
   { code: 'en', label: 'English' },
@@ -36,28 +40,30 @@ interface ShortCourseFormProps {
 export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState<'basic' | 'translations' | 'dates'>('basic');
+  const [activeTab, setActiveTab] = useState<
+    'basic' | 'translations' | 'dates'
+  >('basic');
   const [id, setId] = useState(data?.course.id || '');
   const [imagesStr, setImagesStr] = useState(
-    data?.course.images?.join(', ') || ''
+    data?.course.images?.join(', ') || '',
   );
   const [location, setLocation] = useState(data?.course.location || '');
   const [price, setPrice] = useState(data?.course.price?.toString() || '');
   const [duration, setDuration] = useState(data?.course.duration || '');
   const [maxParticipants, setMaxParticipants] = useState(
-    data?.course.max_participants || ''
+    data?.course.max_participants || '',
   );
   const [isActive, setIsActive] = useState(data?.course.is_active ?? true);
   const [displayOrder, setDisplayOrder] = useState(
-    data?.course.display_order?.toString() || '0'
+    data?.course.display_order?.toString() || '0',
   );
   const [translations, setTranslations] = useState<
-    Record<
-      LocaleCode,
-      { title: string; description: string; content: string }
-    >
+    Record<LocaleCode, { title: string; description: string; content: string }>
   >(() => {
-    const init: Record<string, { title: string; description: string; content: string }> = {};
+    const init: Record<
+      string,
+      { title: string; description: string; content: string }
+    > = {};
     for (const loc of LOCALES) {
       const tr = data?.translations?.find((t) => t.locale === loc.code);
       init[loc.code] = {
@@ -93,9 +99,18 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
       formData.append('is_active', isActive.toString());
       formData.append('display_order', displayOrder);
       for (const loc of LOCALES) {
-        formData.append(`translation_${loc.code}_title`, translations[loc.code].title);
-        formData.append(`translation_${loc.code}_description`, translations[loc.code].description);
-        formData.append(`translation_${loc.code}_content`, translations[loc.code].content);
+        formData.append(
+          `translation_${loc.code}_title`,
+          translations[loc.code].title,
+        );
+        formData.append(
+          `translation_${loc.code}_description`,
+          translations[loc.code].description,
+        );
+        formData.append(
+          `translation_${loc.code}_content`,
+          translations[loc.code].content,
+        );
       }
 
       if (mode === 'create') {
@@ -122,7 +137,7 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
         newDate.date,
         newDate.displayDate,
         newDate.time,
-        newDate.available
+        newDate.available,
       );
       toast.success('Date added');
       setNewDate({ date: '', displayDate: '', time: '', available: true });
@@ -174,7 +189,9 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
       {activeTab === 'basic' && (
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Course ID *</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Course ID *
+            </label>
             <input
               type="text"
               value={id}
@@ -202,7 +219,9 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Location *</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Location *
+              </label>
               <input
                 type="text"
                 value={location}
@@ -212,7 +231,9 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Price *</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Price *
+              </label>
               <input
                 type="number"
                 value={price}
@@ -224,7 +245,9 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Duration *</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Duration *
+              </label>
               <input
                 type="text"
                 value={duration}
@@ -234,7 +257,7 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
                 placeholder="e.g. 1 day"
               />
             </div>
-            <div>
+            {/* <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Max Participants</label>
               <input
                 type="text"
@@ -242,10 +265,12 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
                 onChange={(e) => setMaxParticipants(e.target.value)}
                 className="w-full px-4 py-2 border rounded-md"
               />
-            </div>
+            </div> */}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Display Order</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Display Order
+            </label>
             <input
               type="number"
               value={displayOrder}
@@ -270,30 +295,42 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
         <div className="space-y-6">
           {LOCALES.map((loc) => (
             <div key={loc.code} className="border rounded-lg p-4">
-              <h3 className="font-medium mb-3">{loc.label} ({loc.code})</h3>
+              <h3 className="font-medium mb-3">
+                {loc.label} ({loc.code})
+              </h3>
               <div className="space-y-3">
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">Title</label>
+                  <label className="block text-sm text-gray-600 mb-1">
+                    Title
+                  </label>
                   <input
                     type="text"
                     value={translations[loc.code].title}
                     onChange={(e) =>
                       setTranslations((prev) => ({
                         ...prev,
-                        [loc.code]: { ...prev[loc.code], title: e.target.value },
+                        [loc.code]: {
+                          ...prev[loc.code],
+                          title: e.target.value,
+                        },
                       }))
                     }
                     className="w-full px-4 py-2 border rounded-md"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">Description</label>
+                  <label className="block text-sm text-gray-600 mb-1">
+                    Description
+                  </label>
                   <textarea
                     value={translations[loc.code].description}
                     onChange={(e) =>
                       setTranslations((prev) => ({
                         ...prev,
-                        [loc.code]: { ...prev[loc.code], description: e.target.value },
+                        [loc.code]: {
+                          ...prev[loc.code],
+                          description: e.target.value,
+                        },
                       }))
                     }
                     rows={3}
@@ -301,13 +338,18 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 mb-1">Content (JSON)</label>
+                  <label className="block text-sm text-gray-600 mb-1">
+                    Content (JSON)
+                  </label>
                   <textarea
                     value={translations[loc.code].content}
                     onChange={(e) =>
                       setTranslations((prev) => ({
                         ...prev,
-                        [loc.code]: { ...prev[loc.code], content: e.target.value },
+                        [loc.code]: {
+                          ...prev[loc.code],
+                          content: e.target.value,
+                        },
                       }))
                     }
                     rows={8}
@@ -328,20 +370,26 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
               <input
                 type="date"
                 value={newDate.date}
-                onChange={(e) => setNewDate((d) => ({ ...d, date: e.target.value }))}
+                onChange={(e) =>
+                  setNewDate((d) => ({ ...d, date: e.target.value }))
+                }
                 className="px-2 py-1 border rounded"
               />
               <input
                 type="text"
                 value={newDate.displayDate}
-                onChange={(e) => setNewDate((d) => ({ ...d, displayDate: e.target.value }))}
+                onChange={(e) =>
+                  setNewDate((d) => ({ ...d, displayDate: e.target.value }))
+                }
                 placeholder="Display (e.g. Sat 15 Mar)"
                 className="px-2 py-1 border rounded"
               />
               <input
                 type="text"
                 value={newDate.time}
-                onChange={(e) => setNewDate((d) => ({ ...d, time: e.target.value }))}
+                onChange={(e) =>
+                  setNewDate((d) => ({ ...d, time: e.target.value }))
+                }
                 placeholder="Time (e.g. 9:00 AM)"
                 className="px-2 py-1 border rounded"
               />
@@ -350,9 +398,13 @@ export default function ShortCourseForm({ mode, data }: ShortCourseFormProps) {
                   type="checkbox"
                   id="available"
                   checked={newDate.available}
-                  onChange={(e) => setNewDate((d) => ({ ...d, available: e.target.checked }))}
+                  onChange={(e) =>
+                    setNewDate((d) => ({ ...d, available: e.target.checked }))
+                  }
                 />
-                <label htmlFor="available" className="ml-1 text-sm">Available</label>
+                <label htmlFor="available" className="ml-1 text-sm">
+                  Available
+                </label>
               </div>
             </div>
             <button

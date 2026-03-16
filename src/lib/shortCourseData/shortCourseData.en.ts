@@ -88,7 +88,7 @@ export interface ShortCourseData {
 export const shortCourseData: { [key: string]: ShortCourseData } = {
   barista: {
     title: 'One-Day Barista Class ☕️',
-    description: `Calling all coffee lovers! Want to learn how to make the perfect espresso, froth silky milk, and create stunning latte art in just one day? Join our Coffee Lovers One-Day Barista Class and discover the secrets behind crafting café-quality coffee. Whether you're a beginner or simply want to improve your skills, this hands-on class is perfect for you! Only 6 spots per class!`,
+    description: `Calling all coffee lovers! Want to learn how to make the perfect espresso, froth silky milk, and create stunning latte art in just one day? Join our Coffee Lovers One-Day Barista Class and discover the secrets behind crafting café-quality coffee. Whether you're a beginner or simply want to improve your skills, this hands-on class is perfect for you!`,
     images: [
       '/short-course/barista_1.jpg',
       '/short-course/barista/barista_course_1.jpg',
