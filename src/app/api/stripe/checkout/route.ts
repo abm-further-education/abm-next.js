@@ -35,14 +35,16 @@ export async function POST(request: NextRequest) {
     }
 
     if (courseSlug && selectedDate) {
-      const capacity = await getShortCourseCapacityStatus(courseSlug, selectedDate);
+      try {
+        const capacity = await getShortCourseCapacityStatus(courseSlug, selectedDate);
 
-      if (capacity.isFull) {
-        return NextResponse.json(
-          { error: 'This class is already full. Please choose another date.' },
-          { status: 409 }
-        );
-      }
+        if (capacity.capacityCheckAvailable && capacity.isFull) {
+          return NextResponse.json(
+            { error: 'This class is already full. Please choose another date.' },
+            { status: 409 }
+          );
+        }
+      } catch {}
     }
 
     // Stripe Checkout Session 생성

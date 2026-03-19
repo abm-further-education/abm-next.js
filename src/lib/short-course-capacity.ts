@@ -1,9 +1,11 @@
 import { supabaseServer } from '@/lib/supabase-server';
+import type { PostgrestError } from '@supabase/supabase-js';
 
 type CapacityStatus = {
   maxParticipants: number | null;
   enrolledCount: number;
   isFull: boolean;
+  capacityCheckAvailable: boolean;
 };
 
 function parseMaxParticipants(value: string | null): number | null {
@@ -13,12 +15,26 @@ function parseMaxParticipants(value: string | null): number | null {
   return parsed;
 }
 
+function formatPostgrestError(error: PostgrestError | null): string {
+  if (!error) return 'unknown error';
+  const core = [error.code, error.message, error.details, error.hint]
+    .filter(Boolean)
+    .join(' | ');
+  const raw = JSON.stringify(error);
+  return [core, raw].filter(Boolean).join(' || ');
+}
+
 export async function getShortCourseCapacityStatus(
   courseSlug: string,
   selectedDate: string
 ): Promise<CapacityStatus> {
   if (!supabaseServer) {
-    throw new Error('Supabase server client not available');
+    return {
+      maxParticipants: null,
+      enrolledCount: 0,
+      isFull: false,
+      capacityCheckAvailable: false,
+    };
   }
 
   const normalizedSlug = courseSlug.trim().toLowerCase();
@@ -31,27 +47,66 @@ export async function getShortCourseCapacityStatus(
     .maybeSingle();
 
   if (courseError) {
-    throw new Error(`Failed to read short course: ${courseError.message}`);
+    return {
+      maxParticipants: null,
+      enrolledCount: 0,
+      isFull: false,
+      capacityCheckAvailable: false,
+    };
   }
 
   const maxParticipants = parseMaxParticipants(courseRow?.max_participants ?? null);
 
-  const { count, error: countError } = await supabaseServer
+  const paidCountQuery = supabaseServer
     .from('shortCourse')
     .select('*', { count: 'exact', head: true })
     .eq('course_slug', normalizedSlug)
     .eq('selected_date', normalizedDate)
     .eq('payment_status', 'paid');
 
-  if (countError) {
-    throw new Error(`Failed to count enrolments: ${countError.message}`);
+  const { count: paidCount, error: paidCountError } = await paidCountQuery;
+
+  if (!paidCountError) {
+    const enrolledCount = paidCount ?? 0;
+    return {
+      maxParticipants,
+      enrolledCount,
+      isFull: maxParticipants !== null && enrolledCount >= maxParticipants,
+      capacityCheckAvailable: true,
+    };
   }
 
-  const enrolledCount = count ?? 0;
+  // Backward-compatible fallback for environments where payment_status
+  // column does not exist yet in public.shortCourse.
+  const fallbackCountQuery = supabaseServer
+    .from('shortCourse')
+    .select('*', { count: 'exact', head: true })
+    .eq('course_slug', normalizedSlug)
+    .eq('selected_date', normalizedDate);
+
+  const { count: fallbackCount, error: fallbackCountError } =
+    await fallbackCountQuery;
+
+  if (fallbackCountError) {
+    console.warn(
+      `Capacity check disabled due to schema mismatch: primary=${formatPostgrestError(
+        paidCountError
+      )}; fallback=${formatPostgrestError(fallbackCountError)}`
+    );
+    return {
+      maxParticipants,
+      enrolledCount: 0,
+      isFull: false,
+      capacityCheckAvailable: false,
+    };
+  }
+
+  const enrolledCount = fallbackCount ?? 0;
 
   return {
     maxParticipants,
     enrolledCount,
     isFull: maxParticipants !== null && enrolledCount >= maxParticipants,
+    capacityCheckAvailable: true,
   };
 }

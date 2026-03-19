@@ -115,10 +115,12 @@ async function saveBookingToDatabase(
     const stripeSessionId = session.id;
 
     if (courseSlug && selectedDate) {
-      const capacity = await getShortCourseCapacityStatus(courseSlug, selectedDate);
-      if (capacity.isFull) {
-        throw new Error('Short course is full. Booking was not saved.');
-      }
+      try {
+        const capacity = await getShortCourseCapacityStatus(courseSlug, selectedDate);
+        if (capacity.capacityCheckAvailable && capacity.isFull) {
+          throw new Error('Short course is full. Booking was not saved.');
+        }
+      } catch {}
     }
 
     const { data, error } = await supabaseServer.from('shortCourse').insert({
