@@ -29,45 +29,68 @@ function IndustryPlacementHospitality() {
     ));
   };
 
+  const placementSchedule = [
+    {
+      term: 'Term 1 - Term 4',
+      content: 'Theory + Practical Classes',
+    },
+    {
+      term: 'Term 5',
+      content: '(SITHIND008)Work effectively in hospitality service',
+      bullets: [
+        'Week 1 – 10: 150 hours - 1 day/week Face to Face class + 3 days/week Work Placement (5 hours x 3 shifts)',
+      ],
+    },
+    {
+      term: 'Term6',
+      content: 'SITHIND008Work effectively in hospitality service',
+      bullets: [
+        'Week 1 – 9: 1 day/week Face to Face class + 3 days per week Work Placement (5 hours x 3 shifts)',
+        'Week 10: Theory + Practical Class',
+      ],
+    },
+  ];
+
   return (
     <div>
       <h2 className="text-xl font-bold mb-20">
         {renderTextWithLineBreaks(courseInfo?.description?.split('\n')[0])}
       </h2>
       <p>{renderTextWithLineBreaks(courseInfo?.description)}</p>
-      {/* Render tables if present */}
-      {courseInfo?.tables?.map((table, tIdx) => (
-        <div className="overflow-x-auto my-20" key={tIdx}>
-          <table className="min-w-full table-fixed border border-gray-300 shadow-md rounded-lg overflow-hidden">
-            <thead className="bg-gray-100">
-              <tr>
-                {table.headers.map((header, hIdx) => (
-                  <th
-                    key={hIdx}
-                    className="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b border-gray-300"
-                  >
-                    {header}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="bg-white">
-              {table.rows.map((row, rIdx) => (
-                <tr key={rIdx} className="hover:bg-gray-50">
-                  {row.map((cell, cIdx) => (
-                    <td
-                      key={cIdx}
-                      className="px-4 py-3 text-sm text-gray-800 border-b border-gray-200"
-                    >
-                      {renderTextWithLineBreaks(cell)}
-                    </td>
+
+      <p className="my-20 text-sm text-gray-800 leading-relaxed">
+        The course now includes 285 hours of mandatory work placement,
+        providing students with extensive hands-on industry experience.
+        <br />
+        Students can work additional hours during placement terms in compliance
+        with their student visa conditions.
+      </p>
+
+      <div className="flex flex-col gap-4 my-20">
+        {placementSchedule.map((item, idx) => (
+          <div
+            key={idx}
+            className="flex items-stretch rounded-lg overflow-hidden shadow-sm"
+          >
+            <div className="flex flex-col items-center justify-center bg-[#C07A3A] text-white px-6 py-4 min-w-[180px] text-center">
+              <span className="font-bold italic text-base">{item.term}</span>
+            </div>
+            <div className="flex-1 bg-[#F0DCC4] px-6 py-4 flex flex-col justify-center">
+              <p className="font-bold text-gray-900 text-sm">{item.content}</p>
+              {item.bullets && (
+                <ul className="list-disc list-inside mt-1">
+                  {item.bullets.map((b, bIdx) => (
+                    <li key={bIdx} className="text-sm text-gray-800">
+                      {b}
+                    </li>
                   ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
       <p className="my-20">
         {renderTextWithLineBreaks(courseInfo?.additionalInfo?.description)}
       </p>
