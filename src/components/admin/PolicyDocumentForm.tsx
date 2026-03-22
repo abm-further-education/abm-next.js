@@ -3,7 +3,21 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
-import { Upload, FileText, Trash2 } from 'lucide-react';
+import {
+  Upload,
+  FileText,
+  Trash2,
+  Copy,
+  Check,
+  ExternalLink,
+  History,
+} from 'lucide-react';
+
+export interface PolicyArchiveListItem {
+  id: string;
+  filename: string;
+  archived_at: string;
+}
 
 interface PolicyDocumentFormProps {
   mode: 'create' | 'edit';
@@ -16,6 +30,9 @@ interface PolicyDocumentFormProps {
     display_order: number;
     is_active: boolean;
   };
+  /** Public site origin e.g. https://www.example.com — for copyable stable links */
+  publicSiteOrigin?: string;
+  policyArchives?: PolicyArchiveListItem[];
   onSubmit: (formData: FormData) => Promise<{ success: boolean }>;
   onDelete?: () => Promise<{ success: boolean }>;
 }
@@ -23,12 +40,15 @@ interface PolicyDocumentFormProps {
 export default function PolicyDocumentForm({
   mode,
   initialData,
+  publicSiteOrigin,
+  policyArchives = [],
   onSubmit,
   onDelete,
 }: PolicyDocumentFormProps) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   const [title, setTitle] = useState(initialData?.title || '');
   const [description, setDescription] = useState(
@@ -119,6 +139,20 @@ export default function PolicyDocumentForm({
     }
   };
 
+  const siteBaseForCopy = () =>
+    publicSiteOrigin ||
+    (typeof window !== 'undefined' ? window.location.origin : '');
+
+  const copyText = async (label: string, text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedKey(label);
+      setTimeout(() => setCopiedKey(null), 2000);
+    } catch {
+      window.prompt('Copy this link:', text);
+    }
+  };
+
   const handleDelete = async () => {
     if (!onDelete) return;
 
@@ -178,6 +212,14 @@ export default function PolicyDocumentForm({
         <label className="block text-sm font-medium text-gray-700 mb-1">
           PDF File <span className="text-red-500">*</span>
         </label>
+        {mode === 'edit' && (
+          <p className="text-xs text-gray-600 mb-2 leading-relaxed">
+            This is the <span className="font-medium">current</span> file visitors
+            see after you save. If you use <span className="font-medium">Replace</span>{' '}
+            and then <span className="font-medium">Update Document</span>, today&apos;s
+            file is kept as a previous version in the list below.
+          </p>
+        )}
 
         {fileUrl ? (
           <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-md">
@@ -219,6 +261,78 @@ export default function PolicyDocumentForm({
         )}
       </div>
 
+      {/* Previous versions (same document — edit only) */}
+      {mode === 'edit' && initialData?.id && (
+        <div className="rounded-md border border-amber-200 bg-amber-50/90 p-4 space-y-3">
+          <div className="flex items-center gap-2">
+            <History className="w-5 h-5 text-amber-800 flex-shrink-0" />
+            <h3 className="text-sm font-semibold text-amber-950">
+              Previous versions of this policy
+            </h3>
+          </div>
+          <p className="text-xs text-amber-900/85 leading-relaxed">
+            Each row is an older PDF that was replaced by a newer upload. Open or
+            copy the link to share that exact file; it stays available but is not
+            listed on the public policies page.
+          </p>
+          {policyArchives.length === 0 ? (
+            <p className="text-sm text-amber-900/75 bg-white/60 border border-amber-100 rounded px-3 py-2">
+              No previous versions yet. They appear here after you replace the
+              PDF and save.
+            </p>
+          ) : (
+            <ul className="space-y-2">
+              {policyArchives.map((row) => {
+                const path = `/api/policy-documents/${initialData.id}/archive/${row.id}/file`;
+                const fullUrl = `${siteBaseForCopy()}${path}`;
+                return (
+                  <li
+                    key={row.id}
+                    className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm bg-white border border-amber-100 rounded-md p-3"
+                  >
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium text-gray-900 truncate">
+                        {row.filename}
+                      </p>
+                      <p className="text-xs text-gray-600 mt-0.5">
+                        Replaced{' '}
+                        {new Date(row.archived_at).toLocaleString(undefined, {
+                          dateStyle: 'medium',
+                          timeStyle: 'short',
+                        })}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 shrink-0">
+                      <button
+                        type="button"
+                        onClick={() => copyText(row.id, fullUrl)}
+                        className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs bg-gray-800 text-white rounded-md hover:bg-gray-900"
+                      >
+                        {copiedKey === row.id ? (
+                          <Check size={14} />
+                        ) : (
+                          <Copy size={14} />
+                        )}
+                        Copy link
+                      </button>
+                      <a
+                        href={path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs text-amber-900 border border-amber-300 rounded-md hover:bg-amber-100"
+                      >
+                        <ExternalLink size={14} />
+                        Open PDF
+                      </a>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
+      )}
+
       {/* File URL (manual input) */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -246,6 +360,51 @@ export default function PolicyDocumentForm({
           placeholder="e.g. International-student-handbook-V23.2.pdf"
         />
       </div>
+
+      {/* Stable public link for current file (edit) */}
+      {mode === 'edit' && initialData?.id && (
+        <div className="rounded-md border border-blue-200 bg-blue-50/80 p-4 space-y-3">
+          <h3 className="text-sm font-semibold text-blue-900">
+            Share link for the current PDF
+          </h3>
+          <p className="text-xs text-blue-900/85 leading-relaxed">
+            This address always points at the <span className="font-medium">latest</span>{' '}
+            saved file. Prefer it over raw storage URLs (they expire).
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            <code className="text-xs bg-white px-2 py-1 rounded border border-blue-100 break-all max-w-full">
+              {(publicSiteOrigin || '(your site)') +
+                `/api/policy-documents/${initialData.id}/file`}
+            </code>
+            <button
+              type="button"
+              onClick={() =>
+                copyText(
+                  'current',
+                  `${siteBaseForCopy()}/api/policy-documents/${initialData.id}/file`
+                )
+              }
+              className="inline-flex items-center gap-1 px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              {copiedKey === 'current' ? (
+                <Check size={14} />
+              ) : (
+                <Copy size={14} />
+              )}
+              Copy link
+            </button>
+            <a
+              href={`/api/policy-documents/${initialData.id}/file`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-blue-700 hover:underline"
+            >
+              <ExternalLink size={14} />
+              Test
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* Display Order */}
       <div>

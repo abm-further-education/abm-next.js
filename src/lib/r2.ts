@@ -192,6 +192,60 @@ export async function uploadFileToR2(
 }
 
 /**
+ * DB 또는 업로드 응답에 저장된 경로를 R2 object key로 정규화합니다.
+ * (공개 URL, presigned URL, 상대 경로 모두 처리)
+ */
+export function filePathToR2Key(filePath: string): string {
+  if (!filePath || typeof filePath !== 'string') {
+    return filePath;
+  }
+
+  const withoutQuery = filePath.split('?')[0].trim();
+  const publicBase = process.env.R2_PUBLIC_URL?.replace(/\/$/, '');
+
+  if (
+    publicBase &&
+    (withoutQuery.startsWith(`${publicBase}/`) || withoutQuery === publicBase)
+  ) {
+    return withoutQuery.slice(publicBase.length + 1);
+  }
+
+  if (withoutQuery.startsWith('http://') || withoutQuery.startsWith('https://')) {
+    try {
+      const pathname = new URL(withoutQuery).pathname.replace(/^\//, '');
+      return pathname;
+    } catch {
+      return filePath.split('?')[0].replace(/^\//, '');
+    }
+  }
+
+  return withoutQuery.replace(/^\//, '');
+}
+
+/**
+ * R2 object key에 대한 시간 제한 다운로드 URL (리다이렉트용)
+ */
+export async function getR2DownloadSignedUrl(
+  objectKey: string,
+  expiresInSeconds: number = 3600
+): Promise<string> {
+  const bucketName = process.env.R2_BUCKET;
+
+  if (!bucketName) {
+    throw new Error('R2_BUCKET 환경 변수가 설정되지 않았습니다.');
+  }
+
+  const key = filePathToR2Key(objectKey);
+
+  const command = new GetObjectCommand({
+    Bucket: bucketName,
+    Key: key,
+  });
+
+  return getSignedUrl(s3Client, command, { expiresIn: expiresInSeconds });
+}
+
+/**
  * R2에서 파일을 삭제합니다
  * @param fileKey - 삭제할 파일의 R2 key (예: 'policies/filename.pdf')
  */
@@ -202,11 +256,7 @@ export async function deleteFileFromR2(fileKey: string): Promise<void> {
     throw new Error('R2_BUCKET 환경 변수가 설정되지 않았습니다.');
   }
 
-  // R2_PUBLIC_URL이 포함된 전체 URL인 경우 키만 추출
-  let key = fileKey;
-  if (process.env.R2_PUBLIC_URL && fileKey.startsWith(process.env.R2_PUBLIC_URL)) {
-    key = fileKey.replace(`${process.env.R2_PUBLIC_URL}/`, '');
-  }
+  const key = filePathToR2Key(fileKey);
 
   try {
     const command = new DeleteObjectCommand({
@@ -264,7 +314,7 @@ export async function getR2ImageUrl(imagePath: string): Promise<string> {
   try {
     const command = new GetObjectCommand({
       Bucket: bucketName,
-      Key: imagePath,
+      Key: filePathToR2Key(imagePath),
     });
 
     const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 }); // 1시간 유효

@@ -4,6 +4,8 @@ import {
   createPolicyDocument,
   updatePolicyDocument,
   deletePolicyDocument,
+  getPolicyDocumentById,
+  insertPolicyDocumentArchive,
 } from '@/lib/policy-documents-db';
 import { deleteFileFromR2 } from '@/lib/r2';
 import { getAdminSession } from '@/lib/auth';
@@ -64,6 +66,17 @@ export async function updatePolicyDocumentAction(
   }
 
   try {
+    const existing = await getPolicyDocumentById(id);
+    const prevUrl = existing?.file_url?.trim() ?? '';
+    const nextUrl = file_url.trim();
+    if (existing && prevUrl !== nextUrl) {
+      await insertPolicyDocumentArchive(
+        id,
+        existing.file_url,
+        existing.filename
+      );
+    }
+
     const doc = await updatePolicyDocument(id, {
       title,
       description: description || null,

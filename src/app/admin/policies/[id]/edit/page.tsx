@@ -1,6 +1,10 @@
 import { redirect, notFound } from 'next/navigation';
+import { headers } from 'next/headers';
 import { getAdminSession } from '@/lib/auth';
-import { getPolicyDocumentById } from '@/lib/policy-documents-db';
+import {
+  getPolicyDocumentById,
+  getArchivesByPolicyDocumentId,
+} from '@/lib/policy-documents-db';
 import PolicyDocumentForm from '@/components/admin/PolicyDocumentForm';
 import {
   updatePolicyDocumentAction,
@@ -28,6 +32,13 @@ export default async function EditPolicyDocumentPage({
     notFound();
   }
 
+  const policyArchives = await getArchivesByPolicyDocumentId(id);
+
+  const h = await headers();
+  const host = h.get('x-forwarded-host') ?? h.get('host') ?? '';
+  const proto = h.get('x-forwarded-proto') ?? 'http';
+  const publicSiteOrigin = host ? `${proto}://${host}` : '';
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-3xl mx-auto">
@@ -47,6 +58,8 @@ export default async function EditPolicyDocumentPage({
           <PolicyDocumentForm
             mode="edit"
             initialData={document}
+            publicSiteOrigin={publicSiteOrigin || undefined}
+            policyArchives={policyArchives}
             onSubmit={async (formData: FormData) => {
               'use server';
               return updatePolicyDocumentAction(id, formData);

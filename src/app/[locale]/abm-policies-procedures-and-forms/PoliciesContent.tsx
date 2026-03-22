@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { Download } from 'lucide-react';
+import React, { useState } from 'react';
+import { Download, Copy, Check } from 'lucide-react';
 import FadeIn from '@/components/common/FadeIn';
 import Link from 'next/link';
 
@@ -15,9 +15,43 @@ interface PolicyDocument {
 
 interface PoliciesContentProps {
   documents: PolicyDocument[];
+  /** Logged-in admin: show copyable stable PDF links */
+  showAdminCopyLinks?: boolean;
 }
 
-export default function PoliciesContent({ documents }: PoliciesContentProps) {
+function CopyStableLinkButton({ absoluteUrl }: { absoluteUrl: string }) {
+  const [done, setDone] = useState(false);
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(absoluteUrl);
+      setDone(true);
+      setTimeout(() => setDone(false), 2000);
+    } catch {
+      window.prompt('Copy this link:', absoluteUrl);
+    }
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={copy}
+      className="inline-flex items-center gap-6 px-12 py-6 text-xs font-medium bg-gray-800 text-white hover:bg-gray-900 transition-colors"
+      title="Copy permanent link (recommended for email)"
+    >
+      {done ? <Check size={14} /> : <Copy size={14} />}
+      {done ? 'Copied' : 'Copy link'}
+    </button>
+  );
+}
+
+export default function PoliciesContent({
+  documents,
+  showAdminCopyLinks,
+}: PoliciesContentProps) {
+  const origin =
+    typeof window !== 'undefined' ? window.location.origin : '';
+
   const handleViewPdf = (fileUrl: string, title: string) => {
     if (fileUrl) {
       window.open(fileUrl, '_blank');
@@ -75,15 +109,23 @@ export default function PoliciesContent({ documents }: PoliciesContentProps) {
                       )}
                     </div>
 
-                    <button
-                      onClick={() =>
-                        handleViewPdf(document.file_url, document.title)
-                      }
-                      className="flex items-center gap-10 px-20 py-12 bg-primary text-white hover:bg-primary/90 transition-colors text-sm font-medium"
-                    >
-                      <Download size={16} />
-                      View PDF
-                    </button>
+                    <div className="flex flex-col items-stretch sm:items-end gap-10">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          handleViewPdf(document.file_url, document.title)
+                        }
+                        className="flex items-center justify-center gap-10 px-20 py-12 bg-primary text-white hover:bg-primary/90 transition-colors text-sm font-medium"
+                      >
+                        <Download size={16} />
+                        View PDF
+                      </button>
+                      {showAdminCopyLinks && origin && (
+                        <CopyStableLinkButton
+                          absoluteUrl={`${origin}${document.file_url}`}
+                        />
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>

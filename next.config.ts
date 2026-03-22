@@ -32,9 +32,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    serverComponentsExternalPackages: ['@supabase/supabase-js'],
-  },
+  serverExternalPackages: ['@supabase/supabase-js'],
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.externals = config.externals || [];
