@@ -93,6 +93,7 @@
     "policiesAndProcedures": "Políticas e Procedimentos",
     "trainers": "Instrutores",
     "studentAccommodation": "Acomodação Estudantil",
+    "internationalStudentNationalityMix": "Mix de nacionalidades de estudantes internacionais",
     "title": "Estude Conosco",
     "welcome": "Bem-vindo à ABM Further Education!",
     "mission": "Nossa missão é fornecer educação prática e de alta qualidade que prepare os alunos para carreiras de sucesso. Na ABM, você aprenderá com líderes experientes do setor dedicados ao seu crescimento. Com um ambiente de apoio e treinamento prático, garantimos que você adquira as habilidades e a confiança para prosperar na sua carreira futura.",
@@ -196,6 +197,37 @@
     "contactInfoDescription": "Se tiver qualquer dúvida, entre em contato conosco a qualquer momento.",
     "backToHome": "Voltar ao Início",
     "exploreCourses": "Explorar Outros Cursos"
+  },
+  "openDay": {
+    "metadata": {
+      "title": "ABM Open Day 2026",
+      "description": "Join us on Thursday 16 April 2026 at ABM Further Education Sydney. Campus tours, meet trainers, course info, enrolment help, food & lucky draw. Register now — limited spots."
+    },
+    "bannerTitle": "OPEN DAY 2026",
+    "bannerContent": "Enrol on the day & save!! Real classes. Real experience.",
+    "bannerCta": "Register now",
+    "intro": "Thinking about your next course? Come and see it in person!",
+    "eventTitle": "ABM Open Day 2026",
+    "dateLine": "🗓 Thursday, 16 April",
+    "timeLine": "⏰ 2:30 PM – 4:30 PM",
+    "locationLine": "📍 ABM Further Education campus: 242 Castlereagh street Sydney",
+    "highlightsTitle": "What to expect",
+    "highlights": [
+      "✔ Campus tours (gym, kitchen, hospitality labs)",
+      "✔ Meet trainers & student support team",
+      "✔ Course info & enrolment help",
+      "✔ Food, desserts & drinks",
+      "✔ Lucky draw"
+    ],
+    "offerTitle": "🎁 Open Day Offer",
+    "offerBody": "$500 scholarship (applied over 2 terms)",
+    "registerTitle": "Register now – limited spots",
+    "registerUrlLabel": "Online registration",
+    "qrCaption": "Scan the QR code to register.",
+    "hashtags": "#abm #abmfurthereducation #culinary #Hospitality #fitness",
+    "registerButton": "Register for Open Day",
+    "ctaTitle": "See you on campus",
+    "ctaDescription": "Spaces are limited. Secure your spot and experience ABM in person."
   },
   "timetable": {
     "title": "Grade de Horários",

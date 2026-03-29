@@ -5,6 +5,10 @@ import { useRouter, useParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/common/Button';
 import getShortCourseData from '@/lib/shortCourseData';
+import {
+  CHECKOUT_PROMO_CODES,
+  evaluateCheckoutPromotion,
+} from '@/lib/checkout-promo-codes';
 import { useSearchParams } from 'next/navigation';
 import { getStripe } from '@/lib/stripe';
 import Image from 'next/image';
@@ -48,38 +52,25 @@ export default function CheckoutPage() {
   );
   const [appliedPromo, setAppliedPromo] = useState('');
 
-  // 프로모션 코드 목록 - 퍼센트 할인과 고정 금액 할인 모두 지원
-  const promoCodes: {
-    [code: string]: {
-      discount: number;
-      label: string;
-      type: 'percentage' | 'fixed';
-    };
-  } = {
-    ASC10: { discount: 0.1, label: '10% OFF', type: 'percentage' },
-    ASC20: { discount: 0.2, label: '20% OFF', type: 'percentage' },
-    ELSISABM2025AUG: { discount: 1, label: '100% OFF', type: 'percentage' },
-    ELICOS15: { discount: 15, label: '$15 OFF', type: 'fixed' },
-    ABM3A25: { discount: 10, label: '$10 OFF', type: 'fixed' },
-    ABM4A25: { discount: 20, label: '$20 OFF', type: 'fixed' },
-    NMABMSS: { discount: 0.2, label: '20% OFF', type: 'percentage' },
-    ABMTEST100: { discount: 1, label: '100% OFF', type: 'percentage' },
-  };
-
   // 프로모션 코드 적용 함수
   const applyPromotion = () => {
-    const code = form.promotionCode.trim().toUpperCase();
-    if (promoCodes[code]) {
-      setDiscount(promoCodes[code].discount);
-      setDiscountType(promoCodes[code].type);
-      setAppliedPromo(code);
-      setErrors((prev) => ({ ...prev, promotionCode: '' }));
-    } else if (code === '') {
+    if (courseData?.price === undefined) {
+      setDiscount(0);
+      setDiscountType('percentage');
+      setAppliedPromo('');
+      return;
+    }
+    const result = evaluateCheckoutPromotion(
+      form.promotionCode,
+      slug,
+      courseData.price
+    );
+    if (result.kind === 'empty') {
       setDiscount(0);
       setDiscountType('percentage');
       setAppliedPromo('');
       setErrors((prev) => ({ ...prev, promotionCode: '' }));
-    } else {
+    } else if (result.kind === 'invalid') {
       setDiscount(0);
       setDiscountType('percentage');
       setAppliedPromo('');
@@ -87,6 +78,19 @@ export default function CheckoutPage() {
         ...prev,
         promotionCode: 'Invalid promotion code.',
       }));
+    } else if (result.kind === 'wrong_course') {
+      setDiscount(0);
+      setDiscountType('percentage');
+      setAppliedPromo('');
+      setErrors((prev) => ({
+        ...prev,
+        promotionCode: result.message,
+      }));
+    } else {
+      setDiscount(result.discount);
+      setDiscountType(result.discountType);
+      setAppliedPromo(result.code);
+      setErrors((prev) => ({ ...prev, promotionCode: '' }));
     }
   };
 
@@ -94,7 +98,7 @@ export default function CheckoutPage() {
   React.useEffect(() => {
     applyPromotion();
     // eslint-disable-next-line
-  }, [form.promotionCode]);
+  }, [form.promotionCode, slug, courseData?.price]);
 
   // 할인 적용된 가격 계산
   const discountedPrice = courseData?.price
@@ -109,6 +113,19 @@ export default function CheckoutPage() {
     if (!form.email.trim()) newErrors.email = t('enterEmail');
     else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email))
       newErrors.email = t('invalidEmail');
+    if (courseData?.price !== undefined) {
+      const promo = evaluateCheckoutPromotion(
+        form.promotionCode,
+        slug,
+        courseData.price
+      );
+      if (promo.kind === 'invalid') {
+        newErrors.promotionCode = 'Invalid promotion code.';
+      }
+      if (promo.kind === 'wrong_course') {
+        newErrors.promotionCode = promo.message;
+      }
+    }
     return newErrors;
   };
 
@@ -240,7 +257,7 @@ export default function CheckoutPage() {
                   ${discountedPrice}
                 </span>
                 <span className="ml-2 text-xs text-green-700">
-                  ({promoCodes[appliedPromo]?.label})
+                  ({CHECKOUT_PROMO_CODES[appliedPromo]?.label})
                 </span>
               </>
             ) : (

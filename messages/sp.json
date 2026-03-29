@@ -91,6 +91,7 @@
     "policiesAndProcedures": "Políticas y Procedimientos",
     "trainers": "Formadores",
     "studentAccommodation": "Alojamiento Estudiantil",
+    "internationalStudentNationalityMix": "Mezcla de nacionalidades de estudiantes internacionales",
     "title": "Estudia con Nosotros",
     "timetable": "Horario",
     "welcome": "¡Bienvenido a ABM Further Education!",
@@ -196,6 +197,37 @@
     "contactInfoDescription": "Si tienes alguna pregunta, no dudes en contactarnos en cualquier momento.",
     "backToHome": "Volver al Inicio",
     "exploreCourses": "Explorar Otros Cursos"
+  },
+  "openDay": {
+    "metadata": {
+      "title": "ABM Open Day 2026",
+      "description": "Join us on Thursday 16 April 2026 at ABM Further Education Sydney. Campus tours, meet trainers, course info, enrolment help, food & lucky draw. Register now — limited spots."
+    },
+    "bannerTitle": "OPEN DAY 2026",
+    "bannerContent": "Enrol on the day & save!! Real classes. Real experience.",
+    "bannerCta": "Register now",
+    "intro": "Thinking about your next course? Come and see it in person!",
+    "eventTitle": "ABM Open Day 2026",
+    "dateLine": "🗓 Thursday, 16 April",
+    "timeLine": "⏰ 2:30 PM – 4:30 PM",
+    "locationLine": "📍 ABM Further Education campus: 242 Castlereagh street Sydney",
+    "highlightsTitle": "What to expect",
+    "highlights": [
+      "✔ Campus tours (gym, kitchen, hospitality labs)",
+      "✔ Meet trainers & student support team",
+      "✔ Course info & enrolment help",
+      "✔ Food, desserts & drinks",
+      "✔ Lucky draw"
+    ],
+    "offerTitle": "🎁 Open Day Offer",
+    "offerBody": "$500 scholarship (applied over 2 terms)",
+    "registerTitle": "Register now – limited spots",
+    "registerUrlLabel": "Online registration",
+    "qrCaption": "Scan the QR code to register.",
+    "hashtags": "#abm #abmfurthereducation #culinary #Hospitality #fitness",
+    "registerButton": "Register for Open Day",
+    "ctaTitle": "See you on campus",
+    "ctaDescription": "Spaces are limited. Secure your spot and experience ABM in person."
   },
   "timetable": {
     "title": "Horario",

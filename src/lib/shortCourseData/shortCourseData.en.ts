@@ -681,6 +681,21 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         displayDate: '25th March 2026',
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
+      {
+        date: '2026-04-29',
+        displayDate: '29th April 2026',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+      },
+      {
+        date: '2026-05-27',
+        displayDate: '27th May 2026',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+      },
+      {
+        date: '2026-07-01',
+        displayDate: '1st July 2026',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+      },
     ],
     location: 'ABM Campus',
     price: 189,
@@ -730,7 +745,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     howToEnrol: [
       '1. Choose a course date and book online.',
       '2. Receive confirmation and pre-class details via email.',
-      '3. Arrive by 8:50am for a 9:00am start.',
+      '3. Arrive by 8:50am for a 9:00am start. If you arrive more than 15 minutes late, you will not be permitted to attend.',
     ],
     whyTrainWithABM:
       'Although NSW standardises RSA content, ABM provides exceptional trainers, strong industry connections, and a supportive, efficient student experience.',

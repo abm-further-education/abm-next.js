@@ -93,6 +93,7 @@
     "policiesAndProcedures": "各種規程",
     "trainers": "講師紹介",
     "studentAccommodation": "学生宿泊施設",
+    "internationalStudentNationalityMix": "留学生の国籍構成",
     "title": "ABMで学ぶ",
     "welcome": "ABM Further Educationへようこそ！",
     "mission": "ABMの使命は、実践的で質の高い教育を通じて、学生を成功するキャリアへ導くことです。経験豊富な業界リーダーから学び、支援的な環境と実践的トレーニングで、将来に必要なスキルと自信を身につけます。",
@@ -196,6 +197,37 @@
     "contactInfoDescription": "不明点があればいつでもご連絡ください。",
     "backToHome": "ホームへ戻る",
     "exploreCourses": "他のコースを見る"
+  },
+  "openDay": {
+    "metadata": {
+      "title": "ABM Open Day 2026",
+      "description": "Join us on Thursday 16 April 2026 at ABM Further Education Sydney. Campus tours, meet trainers, course info, enrolment help, food & lucky draw. Register now — limited spots."
+    },
+    "bannerTitle": "OPEN DAY 2026",
+    "bannerContent": "Enrol on the day & save!! Real classes. Real experience.",
+    "bannerCta": "Register now",
+    "intro": "Thinking about your next course? Come and see it in person!",
+    "eventTitle": "ABM Open Day 2026",
+    "dateLine": "🗓 Thursday, 16 April",
+    "timeLine": "⏰ 2:30 PM – 4:30 PM",
+    "locationLine": "📍 ABM Further Education campus: 242 Castlereagh street Sydney",
+    "highlightsTitle": "What to expect",
+    "highlights": [
+      "✔ Campus tours (gym, kitchen, hospitality labs)",
+      "✔ Meet trainers & student support team",
+      "✔ Course info & enrolment help",
+      "✔ Food, desserts & drinks",
+      "✔ Lucky draw"
+    ],
+    "offerTitle": "🎁 Open Day Offer",
+    "offerBody": "$500 scholarship (applied over 2 terms)",
+    "registerTitle": "Register now – limited spots",
+    "registerUrlLabel": "Online registration",
+    "qrCaption": "Scan the QR code to register.",
+    "hashtags": "#abm #abmfurthereducation #culinary #Hospitality #fitness",
+    "registerButton": "Register for Open Day",
+    "ctaTitle": "See you on campus",
+    "ctaDescription": "Spaces are limited. Secure your spot and experience ABM in person."
   },
   "timetable": {
     "title": "時間割",

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getServerStripe } from '@/lib/stripe';
 import getShortCourseData from '@/lib/shortCourseData';
 import { getShortCourseCapacityStatus } from '@/lib/short-course-capacity';
+import { evaluateCheckoutPromotion } from '@/lib/checkout-promo-codes';
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,7 +25,6 @@ export async function POST(request: NextRequest) {
       courseLocation,
       finalPrice,
       totalPriceWithSurcharge,
-      appliedPromo,
     } = body;
 
     // 코스 데이터 가져오기
@@ -32,6 +32,45 @@ export async function POST(request: NextRequest) {
 
     if (!courseData) {
       return NextResponse.json({ error: 'Course not found' }, { status: 404 });
+    }
+
+    const basePrice = courseData.price;
+    const promoEval = evaluateCheckoutPromotion(
+      typeof promotionCode === 'string' ? promotionCode : '',
+      courseSlug,
+      basePrice
+    );
+
+    if (promoEval.kind === 'invalid') {
+      return NextResponse.json(
+        { error: 'Invalid promotion code.' },
+        { status: 400 }
+      );
+    }
+    if (promoEval.kind === 'wrong_course') {
+      return NextResponse.json({ error: promoEval.message }, { status: 400 });
+    }
+
+    const serverDiscountedPrice =
+      promoEval.kind === 'applied' ? promoEval.discountedPrice : basePrice;
+    const expectedTotalWithSurcharge = (serverDiscountedPrice * 1.0193).toFixed(
+      2
+    );
+    const expectedTotalNum = parseFloat(expectedTotalWithSurcharge);
+
+    const clientTotalNum =
+      totalPriceWithSurcharge !== undefined
+        ? parseFloat(String(totalPriceWithSurcharge))
+        : (finalPrice !== undefined ? Number(finalPrice) : basePrice) * 1.0193;
+
+    if (
+      Number.isNaN(clientTotalNum) ||
+      Math.abs(clientTotalNum - expectedTotalNum) > 0.05
+    ) {
+      return NextResponse.json(
+        { error: 'Invalid price. Please refresh the page and try again.' },
+        { status: 400 }
+      );
     }
 
     if (courseSlug && selectedDate) {
@@ -60,12 +99,7 @@ export async function POST(request: NextRequest) {
               name: courseName || courseData.title,
               description: courseData.description || '',
             },
-            unit_amount:
-              (totalPriceWithSurcharge !== undefined
-                ? parseFloat(totalPriceWithSurcharge)
-                : finalPrice !== undefined
-                ? finalPrice
-                : courseData.price) * 100, // Stripe는 센트 단위
+            unit_amount: Math.round(expectedTotalNum * 100), // Stripe는 센트 단위
           },
           quantity: 1,
         },
@@ -92,13 +126,8 @@ export async function POST(request: NextRequest) {
         selectedDate: selectedDate || '',
         selectedType: selectedType || '',
         courseLocation: courseLocation || courseData.location || '',
-        surcharge: totalPriceWithSurcharge
-          ? (
-              parseFloat(totalPriceWithSurcharge) -
-              (finalPrice !== undefined ? finalPrice : courseData.price)
-            ).toFixed(2)
-          : '0',
-        ...(appliedPromo && { appliedPromo }),
+        surcharge: (expectedTotalNum - serverDiscountedPrice).toFixed(2),
+        ...(promoEval.kind === 'applied' && { appliedPromo: promoEval.code }),
       },
       customer_creation: 'always',
       billing_address_collection: 'required',

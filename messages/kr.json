@@ -93,6 +93,7 @@
     "policiesAndProcedures": "정책 및 절차",
     "trainers": "강사진",
     "studentAccommodation": "학생 숙소",
+    "internationalStudentNationalityMix": "국제학생 국적 구성",
     "title": "ABM과 함께 공부하기",
     "welcome": "ABM Further Education에 오신 것을 환영합니다!",
     "mission": "저희의 미션은 학생들이 성공적인 커리어를 쌓을 수 있도록 실무 중심의 고품질 교육을 제공하는 것입니다. ABM에서는 업계 경험이 풍부한 전문가들로부터 배울 수 있으며, 학생의 성장을 위해 헌신합니다. 실무 중심의 환경과 지원을 통해 여러분이 미래에 자신감을 갖고 성장할 수 있도록 돕습니다.",
@@ -196,6 +197,37 @@
     "contactInfoDescription": "궁금한 점이 있으시면 언제든지 연락주세요.",
     "backToHome": "홈으로 돌아가기",
     "exploreCourses": "다른 과정 둘러보기"
+  },
+  "openDay": {
+    "metadata": {
+      "title": "ABM Open Day 2026",
+      "description": "Join us on Thursday 16 April 2026 at ABM Further Education Sydney. Campus tours, meet trainers, course info, enrolment help, food & lucky draw. Register now — limited spots."
+    },
+    "bannerTitle": "OPEN DAY 2026",
+    "bannerContent": "Enrol on the day & save!! Real classes. Real experience.",
+    "bannerCta": "Register now",
+    "intro": "Thinking about your next course? Come and see it in person!",
+    "eventTitle": "ABM Open Day 2026",
+    "dateLine": "🗓 Thursday, 16 April",
+    "timeLine": "⏰ 2:30 PM – 4:30 PM",
+    "locationLine": "📍 ABM Further Education campus: 242 Castlereagh street Sydney",
+    "highlightsTitle": "What to expect",
+    "highlights": [
+      "✔ Campus tours (gym, kitchen, hospitality labs)",
+      "✔ Meet trainers & student support team",
+      "✔ Course info & enrolment help",
+      "✔ Food, desserts & drinks",
+      "✔ Lucky draw"
+    ],
+    "offerTitle": "🎁 Open Day Offer",
+    "offerBody": "$500 scholarship (applied over 2 terms)",
+    "registerTitle": "Register now – limited spots",
+    "registerUrlLabel": "Online registration",
+    "qrCaption": "Scan the QR code to register.",
+    "hashtags": "#abm #abmfurthereducation #culinary #Hospitality #fitness",
+    "registerButton": "Register for Open Day",
+    "ctaTitle": "See you on campus",
+    "ctaDescription": "Spaces are limited. Secure your spot and experience ABM in person."
   },
   "timetable": {
     "title": "시간표",

@@ -64,6 +64,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
             <p className="font-semibold">{rsaData.timeLabel || 'Time:'}</p>
             <p>{rsaData.time || '9:00am - 5:00pm'}</p>
           </div>
+
           <div className="flex gap-10 mb-10">
             <p className="font-semibold">
               {rsaData.addressLabel || 'Address:'}
@@ -89,19 +90,19 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
             </div>
           )}
 
-          <div className="w-full max-w-sm mt-20">
-            <div className="flex flex-col gap-10">
-              <span className="font-semibold">Course Date:</span>
+          {rsaData.dates && rsaData.dates.length > 0 && (
+            <div className="flex flex-col mb-10">
+              <p className="font-semibold">Course Date:</p>
               <ul className="list-disc pl-5 space-y-1">
-                {rsaData.dates?.map((dateOption, index) => (
-                  <li key={index}>
-                    {dateOption.displayDate} - {dateOption.time}
-                  </li>
+                {rsaData.dates.map((dateOption, index) => (
+                  <li key={index}>{dateOption.displayDate}</li>
                 ))}
               </ul>
             </div>
+          )}
 
-            <div className="flex flex-col gap-10 mt-20 bg-orange-100 p-10 md: w-600">
+          <div className="w-full max-w-sm mt-20">
+            <div className="flex flex-col gap-10 bg-orange-100 p-10 md: w-600">
               <span className="font-semibold">Special Offer:</span>
               <p className="text-gray-700">
                 Use code <strong>RSAabmnew02</strong> at checkout for a{' '}
@@ -191,7 +192,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
       {rsaData.howToEnrol && (
         <>
           <h3 className="mt-20 font-bold text-xl">How to Enrol</h3>
-          <ul className="list-disc pl-5 space-y-1 mt-10">
+          <ul className="space-y-1 mt-10">
             {rsaData.howToEnrol.map((item: string, idx: number) => (
               <li key={idx}>{item}</li>
             ))}

@@ -612,6 +612,21 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         displayDate: '2026년 3월 25일',
         time: '9:00am - 4:30pm (점심시간 30분 포함)',
       },
+      {
+        date: '2026-04-29',
+        displayDate: '2026년 4월 29일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
+      },
+      {
+        date: '2026-05-27',
+        displayDate: '2026년 5월 27일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
+      },
+      {
+        date: '2026-07-01',
+        displayDate: '2026년 7월 1일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
+      },
     ],
     location: 'ABM 캠퍼스',
     price: 189,

@@ -603,6 +603,21 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
         displayDate: '25 de março de 2026',
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
+      {
+        date: '2026-04-29',
+        displayDate: '29 de abril de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+      },
+      {
+        date: '2026-05-27',
+        displayDate: '27 de maio de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+      },
+      {
+        date: '2026-07-01',
+        displayDate: '1 de julho de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+      },
     ],
     location: 'Campus ABM',
     price: 189,

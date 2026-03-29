@@ -295,6 +295,16 @@ function MobileNav({
                                 key={item.href}
                                 className="ml-10 text-base block hover:underline"
                                 href={item.href}
+                                target={
+                                  item.href.startsWith('http')
+                                    ? '_blank'
+                                    : undefined
+                                }
+                                rel={
+                                  item.href.startsWith('http')
+                                    ? 'noopener noreferrer'
+                                    : undefined
+                                }
                               >
                                 {item.title}
                               </Link>

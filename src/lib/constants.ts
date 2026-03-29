@@ -233,6 +233,10 @@ export const studyWithUsMenu = [
     title: 'Student Accommodation',
     href: '/student-accommodation',
   },
+  {
+    title: 'International Student Nationality Mix',
+    href: 'https://view.monday.com/4553861953-ab1f874b24e939eebd870084d034ba79?r=use1&is_sharable_link=true',
+  },
 ];
 
 export const currentStudentsMenu = [
@@ -578,6 +582,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
           {
             title: 'studentAccommodation',
             href: '/student-accommodation',
+          },
+          {
+            title: 'internationalStudentNationalityMix',
+            href: 'https://view.monday.com/4553861953-ab1f874b24e939eebd870084d034ba79?r=use1&is_sharable_link=true',
           },
         ],
       },

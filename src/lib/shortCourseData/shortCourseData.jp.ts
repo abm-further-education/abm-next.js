@@ -601,7 +601,22 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
     dates: [
       {
         date: '2026-03-25',
-        displayDate: '25th March 2026',
+        displayDate: '2026年3月25日',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+      },
+      {
+        date: '2026-04-29',
+        displayDate: '2026年4月29日',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+      },
+      {
+        date: '2026-05-27',
+        displayDate: '2026年5月27日',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+      },
+      {
+        date: '2026-07-01',
+        displayDate: '2026年7月1日',
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
       },
     ],
