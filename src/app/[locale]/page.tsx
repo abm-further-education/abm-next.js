@@ -3,6 +3,7 @@ import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
 import NewsLetter from '@/domains/main/components/NewsLetter';
 import TestimonialWrapper from '@/domains/main/components/TestimonialWrapper';
+import { OPEN_DAY_REGISTRATION_FORM_URL } from '@/domains/open-day/constants';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
@@ -73,6 +74,15 @@ export default async function Home({
       <main className="">
         <Banner
           slides={[
+            {
+              imgPath: '/open-day-banner_2.png',
+              title: t('openDay.bannerTitle'),
+              content: t('openDay.bannerContent'),
+              linkButton: {
+                href: '/open-day',
+                text: t('openDay.bannerCta'),
+              },
+            },
             {
               imgPath: '/home/HSA_2.png',
               title: t('HomePage.banners.hsa.title'),
@@ -193,7 +203,9 @@ export default async function Home({
                   <h2 className="font-bold">
                     {t('HomePage.lookingForAllCourses')}
                     <br />
-                    <span className="text-white">{t('HomePage.clickHere')}</span>
+                    <span className="text-white">
+                      {t('HomePage.clickHere')}
+                    </span>
                   </h2>
                 </div>
               </Link>
