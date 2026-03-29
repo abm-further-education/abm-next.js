@@ -3,7 +3,6 @@ import Card from '@/components/common/Card';
 import FadeIn from '@/components/common/FadeIn';
 import NewsLetter from '@/domains/main/components/NewsLetter';
 import TestimonialWrapper from '@/domains/main/components/TestimonialWrapper';
-import { OPEN_DAY_REGISTRATION_FORM_URL } from '@/domains/open-day/constants';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
