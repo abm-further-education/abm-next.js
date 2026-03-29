@@ -4,7 +4,7 @@ export const cookeryMenu = [
     href: '/cookery-and-hospitality-courses/sit40521-certificate-iv-in-kitchen-management',
   },
   {
-    title: '⇢ Industry Placement',
+    title: '⇢ Industry Placement (Kitchen Management)',
     href: '/cookery-and-hospitality-courses/industry-placement-work-placement',
   },
   {
@@ -23,7 +23,7 @@ export const hospitalityMenu = [
     href: '/cookery-and-hospitality-courses/advanced-diploma-of-hospitality-management',
   },
   {
-    title: '⇢ Industry Placement',
+    title: '⇢ Industry Placement (Hospitality Management)',
     href: '/cookery-and-hospitality-courses/industry-placement-hospitality-management',
   },
   {
@@ -110,7 +110,7 @@ export const healthMenu = [
     href: '/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance',
   },
   {
-    title: '⇢ Industry Placement',
+    title: '⇢ Industry Placement (Health Services Assistance)',
     href: '/health-and-wellness-courses/industry-placement-health-services-assistance',
   },
 ];
@@ -283,7 +283,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/cookery-and-hospitality-courses/sit40521-certificate-iv-in-kitchen-management',
           },
           {
-            title: '⇢ Industry Placement',
+            title: '⇢ Industry Placement (Kitchen Management)',
             href: '/cookery-and-hospitality-courses/industry-placement-work-placement',
           },
           {
@@ -411,7 +411,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance',
           },
           {
-            title: '⇢ Industry Placement',
+            title: '⇢ Industry Placement (Health Services Assistance)',
             href: '/health-and-wellness-courses/industry-placement-health-services-assistance',
           },
         ],

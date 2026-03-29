@@ -74,6 +74,12 @@ function DiplomaHM() {
                 </li>
               </ul>
             </div>
+            {/* <div className="text-gray-600 mb-8">
+              <h3 className="text-base font-bold mb-8">Work Placement</h3>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+                <li>285 hours</li>
+              </ul>
+            </div> */}
           </div>
         </div>
 
