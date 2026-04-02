@@ -683,7 +683,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       },
       {
         date: '2026-04-29',
-        displayDate: '29th April 2026',
+        displayDate: '30th April 2026',
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
       {
