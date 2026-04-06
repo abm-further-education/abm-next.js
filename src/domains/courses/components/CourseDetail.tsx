@@ -490,8 +490,9 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
     <section className="py-20 bg-gray-50">
       <div className="max-w-[1600px] mx-auto px-20 py-5 md:px-80">
         <h1 className="text-2xl md:text-3xl font-bold mb-10">{t('title')}</h1>
-        {courseId === 'sit50422-diploma-of-hospitality-management' ? (
-          <DiplomaHM />
+        {courseId === 'sit50422-diploma-of-hospitality-management' ||
+        courseId === 'advanced-diploma-of-hospitality-management' ? (
+          <DiplomaHM sections={sections} courseId={courseId} />
         ) : courseId ===
           'hlt33115-certificate-iii-in-health-services-assistance' ? (
           <CertIIIHSA
