@@ -177,12 +177,16 @@ export const shortCourseMenu = [
     href: 'https://online.abm.edu.au/',
     items: [
       {
-        title: 'Introduction to HTML, CSS, and Basic Web Design',
-        href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
+        title: 'Certificate III in Fitness (Fast Track)',
+        href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
       },
       {
-        title: 'Advanced Course: Building a Portfolio Website',
-        href: 'https://www.openlearning.com/abm-further-education/courses/advanced-course-building-a-portfolio-website/?cl=1',
+        title: 'Certificate IV in Fitness (Fast Track)',
+        href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
+      },
+      {
+        title: 'Barista Online Course',
+        href: 'https://online.abm.edu.au/en/courses/ccff3f2c-1c2c-4fc3-a322-fee0338cbf39',
       },
     ],
   },
@@ -268,6 +272,28 @@ export interface MenuSection {
     items: MenuItem[];
   }[];
 }
+
+/** Courses → Online Courses (desktop nav, mobile courses menu). */
+export const onlineCoursesNavItems: MenuItem[] = [
+  {
+    title: 'Certificate III in Fitness (Fast Track)',
+    href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
+  },
+  {
+    title: 'Certificate IV in Fitness (Fast Track)',
+    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
+  },
+  {
+    title: 'Barista Online Course',
+    href: 'https://online.abm.edu.au/en/courses/ccff3f2c-1c2c-4fc3-a322-fee0338cbf39',
+  },
+  {
+    titleKey: 'baristaSampleCourse',
+    title: 'Barista Sample Course',
+    href: 'https://online.abm.edu.au/courses/441285e0-35ec-4863-a31b-15014febb51f',
+    localeOnly: 'kr',
+  },
+];
 
 export const MENU_STRUCTURE: MenuSection[] = [
   {
@@ -419,30 +445,7 @@ export const MENU_STRUCTURE: MenuSection[] = [
       {
         titleKey: 'subMenu.onlineCourses',
         href: 'https://online.abm.edu.au',
-        items: [
-          {
-            titleKey: 'baristaSampleCourse',
-            title: 'Barista Sample Course',
-            href: 'https://online.abm.edu.au/courses/441285e0-35ec-4863-a31b-15014febb51f',
-            localeOnly: 'kr',
-          },
-          {
-            titleKey: 'baristaOnlineCourse',
-            title: 'Barista Online Course',
-            href: 'https://online.abm.edu.au/courses/ccff3f2c-1c2c-4fc3-a322-fee0338cbf39',
-            localeOnly: 'kr',
-          },
-          {
-            titleKey: 'htmlIntro',
-            title: 'Introduction to HTML, CSS, and Basic Web Design',
-            href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
-          },
-          {
-            titleKey: 'portfolioWebsite',
-            title: 'Advanced Course: Building a Portfolio Website',
-            href: 'https://www.openlearning.com/abm-further-education/courses/introduction-to-html-css-and-basic-web-design/?cl=1',
-          },
-        ],
+        items: onlineCoursesNavItems,
       },
     ],
   },

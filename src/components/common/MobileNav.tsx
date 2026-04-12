@@ -20,6 +20,7 @@ import {
   healthMenu,
   hospitalityMenu,
   hrMenu,
+  onlineCoursesNavItems,
   projectMenu,
   shortCourseMenu,
   studyWithUsMenu,
@@ -99,16 +100,21 @@ function MobileNav({
                     }}
                     className="origin-top ml-10 flex flex-col gap-y-16 mt-10"
                   >
-                    {list.map((item) => (
-                      <Link
-                        onClick={toggleMenu}
-                        key={item.href}
-                        className="ml-10 text-base block hover:underline"
-                        href={item.href}
-                      >
-                        {item.title}
-                      </Link>
-                    ))}
+                    {list.map((item) => {
+                      const isExternal = item.href.startsWith('http');
+                      return (
+                        <Link
+                          onClick={toggleMenu}
+                          key={item.href}
+                          className="ml-10 text-base block hover:underline"
+                          href={item.href}
+                          target={isExternal ? '_blank' : undefined}
+                          rel={isExternal ? 'noopener noreferrer' : undefined}
+                        >
+                          {item.title}
+                        </Link>
+                      );
+                    })}
                   </motion.div>
                 </DisclosurePanel>
               )}
@@ -193,6 +199,19 @@ function MobileNav({
                             <DisclosureContainer
                               title={t('subMenu.fitnessAndSport')}
                               list={fitnessMenu}
+                            />
+                            <DisclosureContainer
+                              title={t('subMenu.onlineCourses')}
+                              list={onlineCoursesNavItems
+                                .filter(
+                                  (item) =>
+                                    !item.localeOnly ||
+                                    item.localeOnly === locale,
+                                )
+                                .map((item) => ({
+                                  title: item.title,
+                                  href: item.href,
+                                }))}
                             />
                             <DisclosureContainer
                               title={t('subMenu.business')}
