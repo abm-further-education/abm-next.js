@@ -677,9 +677,9 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     images: ['/rsa_banner.png'],
     dates: [
       {
-        date: '2026-03-25',
-        displayDate: '25th March 2026',
-        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+        date: '2026-04-23',
+        displayDate: '23rd April 2026',
+        time: '4:30pm - 8:30pm (includes a 30-minute lunch break)',
       },
       {
         date: '2026-04-29',
