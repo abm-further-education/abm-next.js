@@ -97,7 +97,15 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                 {[...rsaData.dates]
                   .sort((a, b) => a.date.localeCompare(b.date))
                   .map((dateOption) => (
-                    <li key={dateOption.date}>{dateOption.displayDate}</li>
+                    <li key={dateOption.date}>
+                      {dateOption.displayDate}
+                      {dateOption.time ? (
+                        <span className="text-gray-700">
+                          {' '}
+                          — {dateOption.time}
+                        </span>
+                      ) : null}
+                    </li>
                   ))}
               </ul>
             </div>
@@ -117,9 +125,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
             <div className="flex items-center gap-x-10 mt-20">
               <span className="font-bold text-2xl text-primary">$189</span>
 
-              <span className="text-gray-800 text-xl line-through">
-                ${rsaData.price || 189}
-              </span>
+              <span className="text-gray-800 text-xl line-through">$210</span>
               <span>(When you use the code)</span>
             </div>
           </div>
