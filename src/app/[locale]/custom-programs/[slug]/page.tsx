@@ -60,8 +60,8 @@ function Page({
     if (isBarista) {
       return [
         {
-          date: '2026-03-27',
-          displayDate: '27 March',
+          date: '2026-04-23',
+          displayDate: '23 April',
           time: '4:30 pm - 8:30 pm',
         },
       ];

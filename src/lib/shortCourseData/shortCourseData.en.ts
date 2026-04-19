@@ -165,6 +165,11 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         displayDate: '27 March 2026',
         time: '4:30 PM – 8:30 PM',
       },
+      {
+        date: '2026-04-23',
+        displayDate: '23 April 2026',
+        time: '4:30 PM – 8:30 PM',
+      },
     ],
     maxParticipants: '4',
     location:
@@ -676,11 +681,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     description: ``,
     images: ['/rsa_banner.png'],
     dates: [
-      {
-        date: '2026-04-23',
-        displayDate: '23rd April 2026',
-        time: '4:30pm - 8:30pm',
-      },
       {
         date: '2026-04-29',
         displayDate: '30th April 2026',

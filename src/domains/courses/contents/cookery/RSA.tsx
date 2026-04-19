@@ -97,15 +97,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                 {[...rsaData.dates]
                   .sort((a, b) => a.date.localeCompare(b.date))
                   .map((dateOption) => (
-                    <li key={dateOption.date}>
-                      {dateOption.displayDate}
-                      {dateOption.time ? (
-                        <span className="text-gray-700">
-                          {' '}
-                          — {dateOption.time}
-                        </span>
-                      ) : null}
-                    </li>
+                    <li key={dateOption.date}>{dateOption.displayDate}</li>
                   ))}
               </ul>
             </div>
