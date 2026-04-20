@@ -7,7 +7,7 @@
  *   npx ts-node scripts/migrate-course-data.ts
  * 
  * Or with environment variables:
- *   SUPABASE_URL=... SUPABASE_SERVICE_KEY=... npx ts-node scripts/migrate-course-data.ts
+ *   SUPABASE_URL=... SUPABASE_SECRET_KEY=... npx ts-node scripts/migrate-course-data.ts
  * 
  * Options:
  *   --dry-run    Preview changes without actually inserting data
@@ -149,11 +149,11 @@ function verbose(message: string) {
 
 async function createSupabaseClient(): Promise<SupabaseClient> {
   const supabaseUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const supabaseKey = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const supabaseKey = process.env.SUPABASE_SECRET_KEY;
 
   if (!supabaseUrl || !supabaseKey) {
     throw new Error(
-      'Missing Supabase credentials. Set SUPABASE_URL and SUPABASE_SERVICE_KEY environment variables.'
+      'Missing Supabase credentials. Set SUPABASE_URL and SUPABASE_SECRET_KEY environment variables.'
     );
   }
 

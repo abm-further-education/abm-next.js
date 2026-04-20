@@ -29,7 +29,7 @@ export const supabase = createClient(
 
 // Optional: Only include service role client if you really need admin operations
 // For most applications, you can delete this and use RLS policies instead
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabaseServiceKey = process.env.SUPABASE_SECRET_KEY;
 
 export const supabaseAdmin = supabaseServiceKey
   ? createClient(

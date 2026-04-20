@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
 
       // 조건부로 필요한 env만 검사
       try {
-        requireEnv(['SUPABASE_SERVICE_ROLE_KEY']); // DB 저장할 때만
+        requireEnv(['SUPABASE_SECRET_KEY']); // DB 저장할 때만
         await saveBookingToDatabase(metadata, {
           id: session.id!,
           amount_total: session.amount_total,
