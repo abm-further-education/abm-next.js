@@ -582,7 +582,7 @@
         "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10"
       },
       "fitnessCertIIIFast": {
-        "code": "SIS30321 Certificate III in Fitness (Fast Track)",
+        "code": "SIS30321 Certificate III in Fitness (Online)",
         "requirement": "Anda dapat berpartisipasi dalam aktivitas kebugaran."
       },
       "fitnessCertIV": {
@@ -590,7 +590,7 @@
         "requirement": "Telah menyelesaikan unit berikut:\n• HLTAID011 Provide First Aid (atau unit yang menggantikan unit ini)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information\n\nSiswa harus telah menyelesaikan setara dengan Year 12"
       },
       "fitnessCertIVFast": {
-        "code": "SIS40221 Certificate IV in Fitness (Fast Track)",
+        "code": "SIS40221 Certificate IV in Fitness (Online)",
         "requirement": "Telah menyelesaikan unit berikut:\n• HLTAID011 Provide First Aid (atau unit yang menggantikan unit ini)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information"
       },
       "sportDiploma": {
@@ -752,25 +752,25 @@
     "exploreOtherShortCoursesDesc": "Temukan lebih banyak pengalaman kuliner yang menarik dan tingkatkan keterampilan Anda dengan berbagai macam kursus singkat kami."
   },
   "fullCourses": "Semua Kursus",
-  "fastTrack": "Fast Track",
+  "fastTrack": "Daring",
   "fitnessAndSports": "Kebugaran & Olahraga",
   "projectAndProgram": "Proyek & Program",
   "hrManagement": "Manajemen SDM",
   "fitnessPage": {
     "metadata": {
       "title": "Kursus Kebugaran & Olahraga | ABM Further Education",
-      "description": "Ubah hasrat Anda untuk kebugaran menjadi karir di ABM Further Education. Jelajahi kursus kebugaran dan olahraga kami yang dirancang untuk siswa internasional dan opsi fast-track domestik."
+      "description": "Ubah hasrat Anda untuk kebugaran menjadi karir di ABM Further Education. Jelajahi kursus kebugaran dan olahraga kami yang dirancang untuk siswa internasional dan opsi daring domestik."
     },
     "bannerTitle": "Kebugaran & Olahraga",
     "heading": "Ubah Hasrat Anda untuk\nKebugaran Menjadi Karir",
     "description": "Kursus kebugaran ABM mempersiapkan Anda untuk karir di industri kebugaran Australia yang berkembang. Dapatkan keterampilan untuk memimpin kelas grup, merancang program pelatihan yang dipersonalisasi, dan bekerja di gym, pengaturan outdoor, atau online. Baik Anda baru memulai atau meningkatkan keahlian Anda, program fleksibel kami menyiapkan Anda untuk sukses.",
     "forInternational": "Untuk Siswa Internasional",
-    "forDomestic": "Untuk Domestik (Fast Track)",
+    "forDomestic": "Kursus Kebugaran Online",
     "cert3": "Certificate III in Fitness",
     "cert4": "Certificate IV in Fitness",
     "diploma": "Diploma in Sport (Coaching)",
-    "cert3Fast": "Certificate III in Fitness (Fast Track)",
-    "cert4Fast": "Certificate IV in Fitness (Fast Track)"
+    "cert3Fast": "Certificate III in Fitness (Online)",
+    "cert4Fast": "Certificate IV in Fitness (Online)"
   },
   "healthPage": {
     "metadata": {

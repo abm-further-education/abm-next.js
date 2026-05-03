@@ -59,20 +59,41 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Kualifikasi ini diberikan selama 78 minggu yang terdiri dari:\nEnam (6) term masing-masing 10 minggu (total 60 minggu) periode pengajaran.\nJeda libur sebanyak 18 minggu (sesuai jadwal)',
     },
     courseStructure1: {
-      title: 'Struktur Kursus – Paket dengan Certificate IV in Kitchen Management',
+      title:
+        'Struktur Kursus – Paket dengan Certificate IV in Kitchen Management',
       description: [
         {
           type: 'table' as const,
           headers: ['Jumlah unit', 'Kode', 'Judul', 'Core/Elective'],
           rows: [
             ['1', 'SITXFIN010', 'Prepare and monitor budgets', 'Core'],
-            ['2', 'SITXWHS006', 'Identify hazards, assess and control safety risks', ''],
+            [
+              '2',
+              'SITXWHS006',
+              'Identify hazards, assess and control safety risks',
+              '',
+            ],
             ['3', 'SITXINV008', 'Control stock', 'Group C'],
-            ['4', 'SITXMGT005', 'Establish and conduct business relationships', 'Core'],
-            ['5', 'SITXGLC002', 'Identify and manage legal risks and comply with law', 'Core'],
+            [
+              '4',
+              'SITXMGT005',
+              'Establish and conduct business relationships',
+              'Core',
+            ],
+            [
+              '5',
+              'SITXGLC002',
+              'Identify and manage legal risks and comply with law',
+              'Core',
+            ],
             ['6', 'SITXCCS015', 'Enhance customer service experiences', 'Core'],
             ['7', 'SITXCCS010', 'Provide visitor information', 'Group C'],
-            ['8', 'SITXCCS016', 'Develop and manage quality customer service practices', 'Core'],
+            [
+              '8',
+              'SITXCCS016',
+              'Develop and manage quality customer service practices',
+              'Core',
+            ],
           ],
         },
       ],
@@ -85,31 +106,96 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           headers: ['Jumlah unit', 'Kode', 'Judul', 'Core/Elective'],
           rows: [
             ['1', 'SITXCCS015', 'Enhance customer service experiences', 'Core'],
-            ['2', 'SITXCCS016', 'Develop and manage quality customer service practices', 'Core'],
+            [
+              '2',
+              'SITXCCS016',
+              'Develop and manage quality customer service practices',
+              'Core',
+            ],
             ['3', 'SITXCOM010', 'Manage conflict', 'Core'],
             ['4', 'SITXFIN009', 'Manage finances within a budget', 'Core'],
             ['5', 'SITXFIN010', 'Prepare and monitor budgets', 'Core'],
-            ['6', 'SITXGLC002', 'Identify and manage legal risks and comply with law', 'Core'],
+            [
+              '6',
+              'SITXGLC002',
+              'Identify and manage legal risks and comply with law',
+              'Core',
+            ],
             ['7', 'SITXHRM008', 'Roster staff', 'Core'],
             ['8', 'SITXHRM009', 'Lead and manage people', 'Core'],
             ['9', 'SITXMGT004', 'Monitor work operations', 'Core'],
-            ['10', 'SITXMGT005', 'Establish and conduct business relationships', 'Core'],
-            ['11', 'SITXWHS007', 'Implement and monitor work health and safety practices', 'Core'],
-            ['12', 'SITXFSA005', 'Use hygienic practices for food safety', 'Group A'],
-            ['13', 'SITHIND008', 'Work effectively in the Hospitality service', 'Group B'],
+            [
+              '10',
+              'SITXMGT005',
+              'Establish and conduct business relationships',
+              'Core',
+            ],
+            [
+              '11',
+              'SITXWHS007',
+              'Implement and monitor work health and safety practices',
+              'Core',
+            ],
+            [
+              '12',
+              'SITXFSA005',
+              'Use hygienic practices for food safety',
+              'Group A',
+            ],
+            [
+              '13',
+              'SITHIND008',
+              'Work effectively in the Hospitality service',
+              'Group B',
+            ],
             ['14', 'SITXHRM010', 'Recruit, select and induct staff', 'Group D'],
             ['15', 'SITHFAB030*', 'Prepare and serve cocktails', 'Group C'],
             ['16', 'SITXINV008', 'Control stock', 'Group C'],
-            ['17', 'SITHKOP014', 'Plan catering for events or functions', 'Group C'],
+            [
+              '17',
+              'SITHKOP014',
+              'Plan catering for events or functions',
+              'Group C',
+            ],
             ['18', 'BSBCMM411', 'Make presentations', 'Group D'],
-            ['19', 'BSBSUS511', 'Develop workplace policies and procedures for sustainability', 'Group D'],
+            [
+              '19',
+              'BSBSUS511',
+              'Develop workplace policies and procedures for sustainability',
+              'Group D',
+            ],
             ['20', 'BSBTWK501', 'Lead diversity and inclusion', 'Group D'],
-            ['21', 'SITHFAB021', 'Provide responsible service of alcohol', 'Group C'],
+            [
+              '21',
+              'SITHFAB021',
+              'Provide responsible service of alcohol',
+              'Group C',
+            ],
             ['22', 'SITHFAB023', 'Operate a bar', 'Group C'],
-            ['23', 'SITXFSA006', 'Participate in safe food handling practices', 'Group C'],
-            ['24', 'SITXFSA008*', 'Develop and implement a food safety program', 'Group C'],
-            ['25', 'SITHFAB025', 'Prepare and serve espresso coffee', 'Group C'],
-            ['26', 'SITHIND006', 'Source and use information on the hospitality industry', 'Group C'],
+            [
+              '23',
+              'SITXFSA006',
+              'Participate in safe food handling practices',
+              'Group C',
+            ],
+            [
+              '24',
+              'SITXFSA008*',
+              'Develop and implement a food safety program',
+              'Group C',
+            ],
+            [
+              '25',
+              'SITHFAB025',
+              'Prepare and serve espresso coffee',
+              'Group C',
+            ],
+            [
+              '26',
+              'SITHIND006',
+              'Source and use information on the hospitality industry',
+              'Group C',
+            ],
             ['27', 'SITXCCS010', 'Provide visitor information', 'Group C'],
             ['28', 'SITXCCS012', 'Provide lost and found services', 'Group C'],
           ],
@@ -127,8 +213,16 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           type: 'table' as const,
           headers: ['Term', 'Nomor Minggu', 'Jam'],
           rows: [
-            ['Term 5', 'Minggu 1-10 SITHIND008 Work effectively in the hospitality service – 30 shift @ 5 jam dari total 57 shift', '150'],
-            ['Term 6', 'Minggu 1-9 SITHIND008 Work effectively in the hospitality service – 27 shift @ 5 jam dari total 57 shift', '135'],
+            [
+              'Term 5',
+              'Minggu 1-10 SITHIND008 Work effectively in the hospitality service – 30 shift @ 5 jam dari total 57 shift',
+              '150',
+            ],
+            [
+              'Term 6',
+              'Minggu 1-9 SITHIND008 Work effectively in the hospitality service – 27 shift @ 5 jam dari total 57 shift',
+              '135',
+            ],
             ['', 'TOTAL Jam Minimum', '285'],
           ],
         },
@@ -180,7 +274,8 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Advanced Diploma of Hospitality Management ditawarkan selama 24 bulan, setara dengan 104 minggu, termasuk 24 minggu libur. Ini akan dibagi menjadi delapan term 10 minggu.',
     },
     courseStructure1: {
-      title: 'Struktur Kursus – Paket dengan Certificate IV in Kitchen Management & Diploma of Hospitality Management',
+      title:
+        'Struktur Kursus – Paket dengan Certificate IV in Kitchen Management & Diploma of Hospitality Management',
       description: [
         'Mahasiswa yang telah menyelesaikan kedua kualifikasi di ABM Further Education memenuhi syarat untuk 25 Transfer Kredit',
         '• SIT40521 Certificate IV in Kitchen Management',
@@ -199,10 +294,25 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
             ['2', 'BSBOPS601', 'Develop and implement business plans', 'Core'],
             ['3', 'SITXFIN011', 'Manage physical assets', 'Core'],
             ['4', 'SITXHRM012', 'Monitor staff performance', 'Core'],
-            ['5', 'SITXMPR014', 'Develop and implement marketing strategies', 'Core'],
-            ['6', 'SITXWHS008', 'Establish and maintain a work health and safety system', 'Core'],
+            [
+              '5',
+              'SITXMPR014',
+              'Develop and implement marketing strategies',
+              'Core',
+            ],
+            [
+              '6',
+              'SITXWHS008',
+              'Establish and maintain a work health and safety system',
+              'Core',
+            ],
             ['7', 'SITHFAB027', 'Serve food and beverage', 'Group C'],
-            ['8', 'SITHFAB024', 'Prepare and serve non-alcoholic beverages', 'Group C'],
+            [
+              '8',
+              'SITHFAB024',
+              'Prepare and serve non-alcoholic beverages',
+              'Group C',
+            ],
           ],
         },
         '**Mahasiswa yang telah menyelesaikan SIT50422 di ABM further education memenuhi syarat untuk 25 credit Transfer, dan dapat menyelesaikan kursus dalam dua term (26 minggu).**',
@@ -271,7 +381,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['Instruktur Gym', 'Instruktur Fitness Grup', 'Instruktur Fitness'],
+      description: [
+        'Instruktur Gym',
+        'Instruktur Fitness Grup',
+        'Instruktur Fitness',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan',
@@ -335,11 +449,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Silakan baca Buku Panduan Mahasiswa sebelum pendaftaran karena berisi informasi berharga tentang ABM. Untuk informasi lebih lanjut, silakan hubungi ABM dengan mengirim email ke info@abm.edu.au atau hubungi kami di +61 (02) 9160 4507.',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseDuration: {
       title: 'Durasi Kursus',
       description:
-        'Certificate III in Fitness (Fast Track) ditawarkan selama 3 bulan, setara dengan 12 minggu, termasuk pengalaman kerja dan keanggotaan gym 1 tahun.',
+        'Certificate III in Fitness (Online) ditawarkan selama 3 bulan, setara dengan 12 minggu, termasuk pengalaman kerja dan keanggotaan gym 1 tahun.',
     },
     studentSupport: {
       title: 'Dukungan Mahasiswa',
@@ -353,7 +467,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['Instruktur Gym', 'Instruktur Fitness Grup', 'Instruktur Fitness'],
+      description: [
+        'Instruktur Gym',
+        'Instruktur Fitness Grup',
+        'Instruktur Fitness',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan',
@@ -372,11 +490,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Silakan baca Buku Panduan Mahasiswa sebelum pendaftaran karena berisi informasi berharga tentang ABM. Untuk informasi lebih lanjut, silakan hubungi ABM dengan mengirim email ke info@abm.edu.au atau hubungi kami di +61 (02) 9160 4507.',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseDuration: {
       title: 'Durasi Kursus',
       description:
-        'Certificate IV in Fitness (Fast Track) ditawarkan selama 3 bulan, setara dengan 12 minggu, termasuk pengalaman kerja dan keanggotaan gym 1 tahun.',
+        'Certificate IV in Fitness (Online) ditawarkan selama 3 bulan, setara dengan 12 minggu, termasuk pengalaman kerja dan keanggotaan gym 1 tahun.',
     },
     studentSupport: {
       title: 'Dukungan Mahasiswa',
@@ -535,7 +653,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['Senior Administrator', 'Senior Executive', 'Executive Manager / Director'],
+      description: [
+        'Senior Administrator',
+        'Senior Executive',
+        'Executive Manager / Director',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan / peluang karier',
@@ -601,7 +723,12 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['Contract Officer', 'Project Administrator', 'Quality Officer', 'Pemilik Usaha Kecil'],
+      description: [
+        'Contract Officer',
+        'Project Administrator',
+        'Quality Officer',
+        'Pemilik Usaha Kecil',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan / peluang karier',
@@ -638,7 +765,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['Project Officer', 'Project Coordinator', 'Project Manager'],
+      description: [
+        'Project Officer',
+        'Project Coordinator',
+        'Project Manager',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan / peluang karier',
@@ -675,7 +806,12 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['Program Manager', 'Senior Project Manager', 'Program Leader', 'Program Coordinator'],
+      description: [
+        'Program Manager',
+        'Senior Project Manager',
+        'Program Leader',
+        'Program Coordinator',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan / peluang karier',
@@ -707,7 +843,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['HR Assistant', 'Recruitment Consultant', 'Workplace Health and Safety Officer'],
+      description: [
+        'HR Assistant',
+        'Recruitment Consultant',
+        'Workplace Health and Safety Officer',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan / peluang karier',
@@ -744,7 +884,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Peran Pekerjaan',
-      description: ['Human Resources Manager', 'Human Resources Officer', 'Recruitment Consultant'],
+      description: [
+        'Human Resources Manager',
+        'Human Resources Officer',
+        'Recruitment Consultant',
+      ],
     },
     pathways: {
       title: 'Jalur studi lanjutan / peluang karier',
@@ -866,11 +1010,32 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     faq: {
       title: 'Pertanyaan yang Sering Diajukan',
       description: [
-        { question: 'Berapa biaya kursus asisten keperawatan?', answer: 'Silakan merujuk ke daftar harga resmi kami untuk informasi biaya kuliah terbaru.' },
-        { question: 'Visa mana yang memungkinkan saya mendaftar?', answer: 'Kursus ini cocok untuk siswa dengan Working Holiday Visa atau jenis visa apa pun yang memungkinkan Anda belajar selama 16 minggu tanpa Confirmation of Enrolment (CoE). Kami tidak memberikan saran visa. Silakan periksa kondisi visa Anda atau konsultasikan dengan agen migrasi terdaftar jika Anda tidak yakin.' },
-        { question: 'Bagaimana dengan penempatan dan dukungan untuk pelatihan klinis?', answer: 'ABM menyediakan 80 jam penempatan kerja sebagai bagian dari kursus, diatur melalui mitra industri tepercaya kami. Setelah selesai, kami juga menawarkan peluang pekerjaan berbayar untuk lulusan yang memenuhi syarat, mendukung transisi Anda yang mulus ke tenaga kerja kesehatan.' },
-        { question: 'Bisakah saya mencari pekerjaan dengan kualifikasi ini?', answer: 'Ya, lulusan kami sering mendapatkan peran di Rumah Sakit Swasta, Pusat Medis, Pusat Perawatan Lansia.' },
-        { question: 'Bagaimana jika kemampuan Bahasa Inggris saya tidak cukup?', answer: 'Persyaratan masuk minimum adalah IELTS 5.5 atau setara. Jika Anda saat ini memiliki IELTS 4.5 atau setara, Anda dapat mendaftar kursus dengan Plus Nursing English, yang menyediakan dukungan bahasa tambahan yang disesuaikan dengan lingkungan kesehatan. Jika Anda tidak memiliki hasil tes Bahasa Inggris, Anda dapat dinilai kemahiran Bahasa Inggris Anda melalui Tes Penempatan Bahasa Inggris ABM.' },
+        {
+          question: 'Berapa biaya kursus asisten keperawatan?',
+          answer:
+            'Silakan merujuk ke daftar harga resmi kami untuk informasi biaya kuliah terbaru.',
+        },
+        {
+          question: 'Visa mana yang memungkinkan saya mendaftar?',
+          answer:
+            'Kursus ini cocok untuk siswa dengan Working Holiday Visa atau jenis visa apa pun yang memungkinkan Anda belajar selama 16 minggu tanpa Confirmation of Enrolment (CoE). Kami tidak memberikan saran visa. Silakan periksa kondisi visa Anda atau konsultasikan dengan agen migrasi terdaftar jika Anda tidak yakin.',
+        },
+        {
+          question:
+            'Bagaimana dengan penempatan dan dukungan untuk pelatihan klinis?',
+          answer:
+            'ABM menyediakan 80 jam penempatan kerja sebagai bagian dari kursus, diatur melalui mitra industri tepercaya kami. Setelah selesai, kami juga menawarkan peluang pekerjaan berbayar untuk lulusan yang memenuhi syarat, mendukung transisi Anda yang mulus ke tenaga kerja kesehatan.',
+        },
+        {
+          question: 'Bisakah saya mencari pekerjaan dengan kualifikasi ini?',
+          answer:
+            'Ya, lulusan kami sering mendapatkan peran di Rumah Sakit Swasta, Pusat Medis, Pusat Perawatan Lansia.',
+        },
+        {
+          question: 'Bagaimana jika kemampuan Bahasa Inggris saya tidak cukup?',
+          answer:
+            'Persyaratan masuk minimum adalah IELTS 5.5 atau setara. Jika Anda saat ini memiliki IELTS 4.5 atau setara, Anda dapat mendaftar kursus dengan Plus Nursing English, yang menyediakan dukungan bahasa tambahan yang disesuaikan dengan lingkungan kesehatan. Jika Anda tidak memiliki hasil tes Bahasa Inggris, Anda dapat dinilai kemahiran Bahasa Inggris Anda melalui Tes Penempatan Bahasa Inggris ABM.',
+        },
       ],
     },
   },

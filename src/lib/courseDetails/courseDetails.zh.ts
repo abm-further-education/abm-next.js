@@ -335,11 +335,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         '请在入学前阅读学生手册，因为其中包含有关ABM的重要信息。如需更多信息，请发送电子邮件至info@abm.edu.au或致电+61 (02) 9160 4507联系ABM。',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseDuration: {
       title: '课程时长',
       description:
-        'Certificate III in Fitness（快速班）课程为期3个月，共12周，包括工作经验和1年健身房会员资格。',
+        'Certificate III in Fitness（在线）课程为期3个月，共12周，包括工作经验和1年健身房会员资格。',
     },
     studentSupport: {
       title: '学生支持',
@@ -372,11 +372,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         '请在入学前阅读学生手册，因为其中包含有关ABM的重要信息。如需更多信息，请发送电子邮件至info@abm.edu.au或致电+61 (02) 9160 4507联系ABM。',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseDuration: {
       title: '课程时长',
       description:
-        'Certificate IV in Fitness（快速班）课程为期3个月，共12周，包括工作经验和1年健身房会员资格。',
+        'Certificate IV in Fitness（在线）课程为期3个月，共12周，包括工作经验和1年健身房会员资格。',
     },
     studentSupport: {
       title: '学生支持',

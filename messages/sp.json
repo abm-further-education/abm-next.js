@@ -584,7 +584,7 @@
         "requirement": "El estudiante debe haber completado el equivalente al Año 10"
       },
       "fitnessCertIIIFast": {
-        "code": "SIS30321 Certificado III en Fitness (Vía Rápida)",
+        "code": "SIS30321 Certificado III en Fitness (Online)",
         "requirement": "Debes ser capaz de participar en actividades de fitness."
       },
       "fitnessCertIV": {
@@ -592,7 +592,7 @@
         "requirement": "Haber completado las siguientes unidades: HLTAID011 Proporcionar Primeros Auxilios (o una unidad que reemplace esta unidad), HLTWHS001 Participar en salud y seguridad en el lugar de trabajo, SISFFIT032 Completar evaluación previa al ejercicio y orientación de servicio, SISFFIT033 Completar evaluaciones de fitness del cliente, SISFFIT035 Planificar sesiones de ejercicio grupal, SISFFIT036 Instruir sesiones de ejercicio grupal, SISFFIT040 Desarrollar e instruir programas de ejercicio basados en gimnasio para clientes individuales, SISFFIT047 Usar conocimiento de anatomía y fisiología para apoyar ejercicio seguro y efectivo, SISFFIT052 Proporcionar información sobre alimentación saludable. El estudiante debe haber completado el equivalente al Año 12"
       },
       "fitnessCertIVFast": {
-        "code": "SIS40221 Certificado IV en Fitness (Vía Rápida)",
+        "code": "SIS40221 Certificado IV en Fitness (Online)",
         "requirement": "Haber completado las siguientes unidades: HLTAID011 Proporcionar Primeros Auxilios (o una unidad que reemplace esta unidad), HLTWHS001 Participar en salud y seguridad en el lugar de trabajo, SISFFIT032 Completar evaluación previa al ejercicio y orientación de servicio, SISFFIT033 Completar evaluaciones de fitness del cliente, SISFFIT035 Planificar sesiones de ejercicio grupal, SISFFIT036 Instruir sesiones de ejercicio grupal, SISFFIT040 Desarrollar e instruir programas de ejercicio basados en gimnasio para clientes individuales, SISFFIT047 Usar conocimiento de anatomía y fisiología para apoyar ejercicio seguro y efectivo, SISFFIT052 Proporcionar información sobre alimentación saludable"
       },
       "sportDiploma": {
@@ -754,7 +754,7 @@
     "exploreOtherShortCoursesDesc": "Descubre más experiencias culinarias emocionantes y mejora tus habilidades con nuestra diversa gama de cursos cortos."
   },
   "fullCourses": "Cursos Completos",
-  "fastTrack": "Estudios Acelerados",
+  "fastTrack": "Online",
   "footer": {
     "home": "Inicio",
     "courses": "Cursos",
@@ -815,18 +815,18 @@
   "fitnessPage": {
     "metadata": {
       "title": "Cursos de Fitness y Deportes | ABM Further Education",
-      "description": "Convierte tu pasión por el fitness en una carrera con ABM Further Education. Descubre nuestros cursos de fitness y deportes diseñados tanto para estudiantes internacionales como para opciones aceleradas nacionales."
+      "description": "Convierte tu pasión por el fitness en una carrera con ABM Further Education. Descubre nuestros cursos de fitness y deportes diseñados tanto para estudiantes internacionales como para opciones online nacionales."
     },
     "bannerTitle": "Fitness y Deportes",
     "heading": "Convierte tu Pasión por el Fitness en una Carrera",
     "description": "Los cursos de fitness de ABM te preparan para una carrera en la creciente industria del fitness en Australia. Adquiere las habilidades necesarias para liderar clases grupales, diseñar programas de entrenamiento personalizados y trabajar en gimnasios, al aire libre o en línea. Ya sea que estés comenzando o buscando perfeccionar tu experiencia, nuestros programas flexibles te preparan para el éxito.",
     "forInternational": "Para Estudiantes Internacionales",
-    "forDomestic": "Para Estudiantes Domesticos (Modo Acelerado)",
+    "forDomestic": "Cursos de Fitness Online",
     "cert3": "Certificado III en Fitness",
     "cert4": "Certificado IV en Fitness",
     "diploma": "Diploma en Deporte (Entrenamiento)",
-    "cert3Fast": "Certificado III en Fitness (Vía Rápida)",
-    "cert4Fast": "Certificado IV en Fitness (Vía Rápida)"
+    "cert3Fast": "Certificado III en Fitness (Online)",
+    "cert4Fast": "Certificado IV en Fitness (Online)"
   },
   "shortCoursesPage": {
     "heading": "¡Descubre tu pasión con los nuevos Programas Personalizados de ABM!",

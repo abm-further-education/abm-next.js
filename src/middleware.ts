@@ -7,6 +7,20 @@ const intlMiddleware = createMiddleware(routing);
 export default async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  /** Legacy fitness URLs → canonical *-online slugs */
+  const fitnessSlugRedirects: Record<string, string> = {
+    'certificate-iii-in-fitness-fast-track': 'certificate-iii-in-fitness-online',
+    'certificate-iv-in-fitness-fast-track': 'certificate-iv-in-fitness-online',
+  };
+  for (const [fromSlug, toSlug] of Object.entries(fitnessSlugRedirects)) {
+    const needle = `/fitness-instructor-personal-trainer-courses/${fromSlug}`;
+    if (pathname.includes(needle)) {
+      const url = request.nextUrl.clone();
+      url.pathname = pathname.replace(fromSlug, toSlug);
+      return NextResponse.redirect(url, 308);
+    }
+  }
+
   // 어드민 라우트는 next-intl 미들웨어를 건너뛰고 직접 처리
   if (pathname.startsWith('/admin')) {
     // 어드민 라우트 보호 (로그인 페이지 제외)

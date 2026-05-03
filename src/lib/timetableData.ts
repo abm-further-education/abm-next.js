@@ -205,10 +205,10 @@ export const timetableDataByCategory = {
     },
 
     {
-      qualification: 'Certificate III & IV in Fitness (Fast Track - Domestic)',
+      qualification: 'Certificate III & IV in Fitness (Online - Domestic)',
       code: 'SIS30321',
       intake:
-        '[SIS30321] Certificate III & IV in Fitness (Fast Track - Domestic)',
+        '[SIS30321] Certificate III & IV in Fitness (Online - Domestic)',
       tue: '1:00 pm',
       wed: '9:00 am',
       thu: '9:00 am',

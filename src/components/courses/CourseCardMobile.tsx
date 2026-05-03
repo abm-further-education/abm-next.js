@@ -112,11 +112,16 @@ export default function CourseCardMobile({ course }: CourseCardMobileProps) {
               </div>
             )}
             {(course.type === 'full-course' ||
-              course.type === 'fast-track') && (
+              course.type === 'fast-track' ||
+              course.type === 'online') && (
               <div className="flex items-center gap-1">
                 <Award size={12} className="text-gray-400" />
                 <span>
-                  {course.type === 'full-course' ? 'Full Course' : 'Fast Track'}
+                  {course.type === 'full-course'
+                    ? 'Full Course'
+                    : course.type === 'online'
+                      ? 'Online'
+                      : 'Fast Track'}
                 </span>
               </div>
             )}

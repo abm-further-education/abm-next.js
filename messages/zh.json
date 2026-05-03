@@ -582,7 +582,7 @@
         "requirement": "学生必须完成相当于10年级的学历"
       },
       "fitnessCertIIIFast": {
-        "code": "SIS30321 三级健身证书（快速班）",
+        "code": "SIS30321 三级健身证书（在线）",
         "requirement": "您能够参加健身活动。"
       },
       "fitnessCertIV": {
@@ -590,7 +590,7 @@
         "requirement": "已完成以下单元：\n• HLTAID011 提供急救（或取代此单元的单元）\n• HLTWHS001 参与工作场所健康与安全\n• SISFFIT032 完成运动前筛查和服务指导\n• SISFFIT033 完成客户体能评估\n• SISFFIT035 计划团体锻炼课程\n• SISFFIT036 指导团体锻炼课程\n• SISFFIT040 为个人客户开发和指导健身房锻炼计划\n• SISFFIT047 运用解剖学和生理学知识支持安全有效的锻炼\n• SISFFIT052 提供健康饮食信息\n\n学生必须完成相当于12年级的学历"
       },
       "fitnessCertIVFast": {
-        "code": "SIS40221 四级健身证书（快速班）",
+        "code": "SIS40221 四级健身证书（在线）",
         "requirement": "已完成以下单元：\n• HLTAID011 提供急救（或取代此单元的单元）\n• HLTWHS001 参与工作场所健康与安全\n• SISFFIT032 完成运动前筛查和服务指导\n• SISFFIT033 完成客户体能评估\n• SISFFIT035 计划团体锻炼课程\n• SISFFIT036 指导团体锻炼课程\n• SISFFIT040 为个人客户开发和指导健身房锻炼计划\n• SISFFIT047 运用解剖学和生理学知识支持安全有效的锻炼\n• SISFFIT052 提供健康饮食信息"
       },
       "sportDiploma": {
@@ -752,25 +752,25 @@
     "exploreOtherShortCoursesDesc": "发现更多令人兴奋的烹饪体验，通过我们多样化的短期课程提升您的技能。"
   },
   "fullCourses": "所有课程",
-  "fastTrack": "快速班",
+  "fastTrack": "在线",
   "fitnessAndSports": "健身与运动",
   "projectAndProgram": "项目与计划",
   "hrManagement": "人力资源管理",
   "fitnessPage": {
     "metadata": {
       "title": "健身与运动课程 | ABM Further Education",
-      "description": "在ABM Further Education将您对健身的热情转化为职业。探索我们为国际学生和国内快速班设计的健身和运动课程。"
+      "description": "在ABM Further Education将您对健身的热情转化为职业。探索我们为国际学生和国内在线课程设计的健身和运动课程。"
     },
     "bannerTitle": "健身与运动",
     "heading": "将您对健身的热情\n转化为职业",
     "description": "ABM的健身课程为您在澳大利亚不断发展的健身行业做好职业准备。获得领导团体课程、设计个性化训练计划以及在健身房、户外场所或在线工作的技能。无论您是刚起步还是提升专业知识，我们灵活的课程都能让您为成功做好准备。",
     "forInternational": "国际学生",
-    "forDomestic": "国内（快速班）",
+    "forDomestic": "健身在线课程",
     "cert3": "三级健身证书",
     "cert4": "四级健身证书",
     "diploma": "体育文凭（教练）",
-    "cert3Fast": "三级健身证书（快速班）",
-    "cert4Fast": "四级健身证书（快速班）"
+    "cert3Fast": "三级健身证书（在线）",
+    "cert4Fast": "四级健身证书（在线）"
   },
   "healthPage": {
     "metadata": {

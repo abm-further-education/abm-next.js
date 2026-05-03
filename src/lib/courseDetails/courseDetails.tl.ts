@@ -67,13 +67,33 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           headers: ['Bilang ng units', 'Code', 'Pamagat', 'Core/Elective'],
           rows: [
             ['1', 'SITXFIN010', 'Prepare and monitor budgets', 'Core'],
-            ['2', 'SITXWHS006', 'Identify hazards, assess and control safety risks', ''],
+            [
+              '2',
+              'SITXWHS006',
+              'Identify hazards, assess and control safety risks',
+              '',
+            ],
             ['3', 'SITXINV008', 'Control stock', 'Group C'],
-            ['4', 'SITXMGT005', 'Establish and conduct business relationships', 'Core'],
-            ['5', 'SITXGLC002', 'Identify and manage legal risks and comply with law', 'Core'],
+            [
+              '4',
+              'SITXMGT005',
+              'Establish and conduct business relationships',
+              'Core',
+            ],
+            [
+              '5',
+              'SITXGLC002',
+              'Identify and manage legal risks and comply with law',
+              'Core',
+            ],
             ['6', 'SITXCCS015', 'Enhance customer service experiences', 'Core'],
             ['7', 'SITXCCS010', 'Provide visitor information', 'Group C'],
-            ['8', 'SITXCCS016', 'Develop and manage quality customer service practices', 'Core'],
+            [
+              '8',
+              'SITXCCS016',
+              'Develop and manage quality customer service practices',
+              'Core',
+            ],
           ],
         },
       ],
@@ -86,31 +106,96 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           headers: ['Bilang ng units', 'Code', 'Pamagat', 'Core/Elective'],
           rows: [
             ['1', 'SITXCCS015', 'Enhance customer service experiences', 'Core'],
-            ['2', 'SITXCCS016', 'Develop and manage quality customer service practices', 'Core'],
+            [
+              '2',
+              'SITXCCS016',
+              'Develop and manage quality customer service practices',
+              'Core',
+            ],
             ['3', 'SITXCOM010', 'Manage conflict', 'Core'],
             ['4', 'SITXFIN009', 'Manage finances within a budget', 'Core'],
             ['5', 'SITXFIN010', 'Prepare and monitor budgets', 'Core'],
-            ['6', 'SITXGLC002', 'Identify and manage legal risks and comply with law', 'Core'],
+            [
+              '6',
+              'SITXGLC002',
+              'Identify and manage legal risks and comply with law',
+              'Core',
+            ],
             ['7', 'SITXHRM008', 'Roster staff', 'Core'],
             ['8', 'SITXHRM009', 'Lead and manage people', 'Core'],
             ['9', 'SITXMGT004', 'Monitor work operations', 'Core'],
-            ['10', 'SITXMGT005', 'Establish and conduct business relationships', 'Core'],
-            ['11', 'SITXWHS007', 'Implement and monitor work health and safety practices', 'Core'],
-            ['12', 'SITXFSA005', 'Use hygienic practices for food safety', 'Group A'],
-            ['13', 'SITHIND008', 'Work effectively in the Hospitality service', 'Group B'],
+            [
+              '10',
+              'SITXMGT005',
+              'Establish and conduct business relationships',
+              'Core',
+            ],
+            [
+              '11',
+              'SITXWHS007',
+              'Implement and monitor work health and safety practices',
+              'Core',
+            ],
+            [
+              '12',
+              'SITXFSA005',
+              'Use hygienic practices for food safety',
+              'Group A',
+            ],
+            [
+              '13',
+              'SITHIND008',
+              'Work effectively in the Hospitality service',
+              'Group B',
+            ],
             ['14', 'SITXHRM010', 'Recruit, select and induct staff', 'Group D'],
             ['15', 'SITHFAB030*', 'Prepare and serve cocktails', 'Group C'],
             ['16', 'SITXINV008', 'Control stock', 'Group C'],
-            ['17', 'SITHKOP014', 'Plan catering for events or functions', 'Group C'],
+            [
+              '17',
+              'SITHKOP014',
+              'Plan catering for events or functions',
+              'Group C',
+            ],
             ['18', 'BSBCMM411', 'Make presentations', 'Group D'],
-            ['19', 'BSBSUS511', 'Develop workplace policies and procedures for sustainability', 'Group D'],
+            [
+              '19',
+              'BSBSUS511',
+              'Develop workplace policies and procedures for sustainability',
+              'Group D',
+            ],
             ['20', 'BSBTWK501', 'Lead diversity and inclusion', 'Group D'],
-            ['21', 'SITHFAB021', 'Provide responsible service of alcohol', 'Group C'],
+            [
+              '21',
+              'SITHFAB021',
+              'Provide responsible service of alcohol',
+              'Group C',
+            ],
             ['22', 'SITHFAB023', 'Operate a bar', 'Group C'],
-            ['23', 'SITXFSA006', 'Participate in safe food handling practices', 'Group C'],
-            ['24', 'SITXFSA008*', 'Develop and implement a food safety program', 'Group C'],
-            ['25', 'SITHFAB025', 'Prepare and serve espresso coffee', 'Group C'],
-            ['26', 'SITHIND006', 'Source and use information on the hospitality industry', 'Group C'],
+            [
+              '23',
+              'SITXFSA006',
+              'Participate in safe food handling practices',
+              'Group C',
+            ],
+            [
+              '24',
+              'SITXFSA008*',
+              'Develop and implement a food safety program',
+              'Group C',
+            ],
+            [
+              '25',
+              'SITHFAB025',
+              'Prepare and serve espresso coffee',
+              'Group C',
+            ],
+            [
+              '26',
+              'SITHIND006',
+              'Source and use information on the hospitality industry',
+              'Group C',
+            ],
             ['27', 'SITXCCS010', 'Provide visitor information', 'Group C'],
             ['28', 'SITXCCS012', 'Provide lost and found services', 'Group C'],
           ],
@@ -128,8 +213,16 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           type: 'table' as const,
           headers: ['Term', 'Bilang ng Linggo', 'Oras'],
           rows: [
-            ['Term 5', 'Linggo 1-10 SITHIND008 Work effectively in the hospitality service – 30 shift sa 5 oras mula sa kabuuang 57 shift', '150'],
-            ['Term 6', 'Linggo 1-9 SITHIND008 Work effectively in the hospitality service – 27 shift sa 5 oras mula sa kabuuang 57 shift', '135'],
+            [
+              'Term 5',
+              'Linggo 1-10 SITHIND008 Work effectively in the hospitality service – 30 shift sa 5 oras mula sa kabuuang 57 shift',
+              '150',
+            ],
+            [
+              'Term 6',
+              'Linggo 1-9 SITHIND008 Work effectively in the hospitality service – 27 shift sa 5 oras mula sa kabuuang 57 shift',
+              '135',
+            ],
             ['', 'KABUUANG Minimum na oras', '285'],
           ],
         },
@@ -181,7 +274,8 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Ang Advanced Diploma of Hospitality Management ay inaalok sa loob ng 24 buwan, katumbas ng 104 linggo, kasama ang 24 linggo ng bakasyon. Ito ay hahatiin sa walong 10-linggong term.',
     },
     courseStructure1: {
-      title: 'Istruktura ng Kurso – Kasama ang Certificate IV in Kitchen Management at Diploma of Hospitality Management',
+      title:
+        'Istruktura ng Kurso – Kasama ang Certificate IV in Kitchen Management at Diploma of Hospitality Management',
       description: [
         'Ang mga estudyanteng nakumpleto ang parehong kwalipikasyon sa ABM Further Education ay karapat-dapat para sa 25 Credit Transfer',
         '• SIT40521 Certificate IV in Kitchen Management',
@@ -190,7 +284,8 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       ],
     },
     courseStructure2: {
-      title: 'Istruktura ng Kurso – Kasama ang Diploma of Hospitality Management',
+      title:
+        'Istruktura ng Kurso – Kasama ang Diploma of Hospitality Management',
       description: [
         {
           type: 'table' as const,
@@ -200,10 +295,25 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
             ['2', 'BSBOPS601', 'Develop and implement business plans', 'Core'],
             ['3', 'SITXFIN011', 'Manage physical assets', 'Core'],
             ['4', 'SITXHRM012', 'Monitor staff performance', 'Core'],
-            ['5', 'SITXMPR014', 'Develop and implement marketing strategies', 'Core'],
-            ['6', 'SITXWHS008', 'Establish and maintain a work health and safety system', 'Core'],
+            [
+              '5',
+              'SITXMPR014',
+              'Develop and implement marketing strategies',
+              'Core',
+            ],
+            [
+              '6',
+              'SITXWHS008',
+              'Establish and maintain a work health and safety system',
+              'Core',
+            ],
             ['7', 'SITHFAB027', 'Serve food and beverage', 'Group C'],
-            ['8', 'SITHFAB024', 'Prepare and serve non-alcoholic beverages', 'Group C'],
+            [
+              '8',
+              'SITHFAB024',
+              'Prepare and serve non-alcoholic beverages',
+              'Group C',
+            ],
           ],
         },
         '**Ang mga estudyanteng nakumpleto ang SIT50422 sa ABM further education ay karapat-dapat para sa 25 credit Transfer, at maaaring makumpleto ang kurso sa dalawang term (26 linggo).**',
@@ -244,7 +354,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Mga Landas sa Karagdagang Pag-aaral / Mga Oportunidad sa Karera',
       description: [
         'Ang mga potensyal na opsyon sa pagtatrabaho ay sa anumang sektor ng hospitality industry bilang departmental o small business manager. Tingnan din ang mga posibleng job title roles na ipinahiwatig sa paglalarawan ng kwalipikasyon.',
-        '\nAng mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba\'t ibang Higher Education qualifications.',
+        "\nAng mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba't ibang Higher Education qualifications.",
       ],
     },
     additionalInfo: {
@@ -331,7 +441,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
           text: 'SIS50321 Diploma of Sport',
           url: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
         },
-        'SIS50122 Diploma of Sport, Aquatics and Recreation Management, SIS50421 Diploma of Outdoor Leadership o magpatuloy ng kanilang edukasyon sa iba\'t ibang Higher Education qualifications.',
+        "SIS50122 Diploma of Sport, Aquatics and Recreation Management, SIS50421 Diploma of Outdoor Leadership o magpatuloy ng kanilang edukasyon sa iba't ibang Higher Education qualifications.",
       ],
     },
     additionalInfo: {
@@ -340,11 +450,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Mangyaring basahin ang Student Handbook bago mag-enroll dahil naglalaman ito ng mahalagang impormasyon tungkol sa ABM. Para sa higit pang impormasyon, mangyaring makipag-ugnayan sa ABM sa pamamagitan ng pag-email sa info@abm.edu.au o tumawag sa +61 (02) 9160 4507.',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseDuration: {
       title: 'Tagal ng Kurso',
       description:
-        'Ang Certificate III in Fitness (Fast Track) ay inaalok sa loob ng 3 buwan, katumbas ng 12 linggo, kasama ang work experience at 1 taon gym membership.',
+        'Ang Certificate III in Fitness (Online) ay inaalok sa loob ng 3 buwan, katumbas ng 12 linggo, kasama ang work experience at 1 taon gym membership.',
     },
     studentSupport: {
       title: 'Suporta sa Estudyante',
@@ -358,7 +468,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Mga Trabaho',
-      description: ['Gym Instructor', 'Group Fitness Instructor', 'Fitness Instructor'],
+      description: [
+        'Gym Instructor',
+        'Group Fitness Instructor',
+        'Fitness Instructor',
+      ],
     },
     pathways: {
       title: 'Landas sa karagdagang pag-aaral',
@@ -377,11 +491,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Mangyaring basahin ang Student Handbook bago mag-enroll dahil naglalaman ito ng mahalagang impormasyon tungkol sa ABM. Para sa higit pang impormasyon, mangyaring makipag-ugnayan sa ABM sa pamamagitan ng pag-email sa info@abm.edu.au o tumawag sa +61 (02) 9160 4507.',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseDuration: {
       title: 'Tagal ng Kurso',
       description:
-        'Ang Certificate IV in Fitness (Fast Track) ay inaalok sa loob ng 3 buwan, katumbas ng 12 linggo, kasama ang work experience at 1 taon gym membership.',
+        'Ang Certificate IV in Fitness (Online) ay inaalok sa loob ng 3 buwan, katumbas ng 12 linggo, kasama ang work experience at 1 taon gym membership.',
     },
     studentSupport: {
       title: 'Suporta sa Estudyante',
@@ -518,7 +632,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Landas sa karagdagang pag-aaral',
       description: [
-        'Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba\'t ibang Higher Education qualifications.',
+        "Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba't ibang Higher Education qualifications.",
       ],
     },
   },
@@ -540,12 +654,16 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Mga Trabaho',
-      description: ['Senior Administrator', 'Senior Executive', 'Executive Manager / Director'],
+      description: [
+        'Senior Administrator',
+        'Senior Executive',
+        'Executive Manager / Director',
+      ],
     },
     pathways: {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
       description: [
-        'Ang mga potensyal na opsyon sa pagtatrabaho ay bilang manager sa iba\'t ibang larangan ng industriya.',
+        "Ang mga potensyal na opsyon sa pagtatrabaho ay bilang manager sa iba't ibang larangan ng industriya.",
         'Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa BSB80120 Graduate Diploma of Management (Learning), pati na rin ang mga higher education qualifications sa business o management.',
       ],
     },
@@ -578,8 +696,8 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     pathways: {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
       description: [
-        'Ang mga potensyal na opsyon sa pagtatrabaho ay bilang Leader o Manager sa mga organisasyon kung saan ginagamit ang pag-aaral upang bumuo ng organisational capability sa iba\'t ibang larangan ng industriya.',
-        'Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba\'t ibang higher education qualifications sa organisational learning at development.',
+        "Ang mga potensyal na opsyon sa pagtatrabaho ay bilang Leader o Manager sa mga organisasyon kung saan ginagamit ang pag-aaral upang bumuo ng organisational capability sa iba't ibang larangan ng industriya.",
+        "Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba't ibang higher education qualifications sa organisational learning at development.",
       ],
     },
     additionalInfo: {
@@ -606,7 +724,12 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Mga Trabaho',
-      description: ['Contract Officer', 'Project Administrator', 'Quality Officer', 'Small Business Owner'],
+      description: [
+        'Contract Officer',
+        'Project Administrator',
+        'Quality Officer',
+        'Small Business Owner',
+      ],
     },
     pathways: {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
@@ -643,7 +766,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Mga Trabaho',
-      description: ['Project Officer', 'Project Coordinator', 'Project Manager'],
+      description: [
+        'Project Officer',
+        'Project Coordinator',
+        'Project Manager',
+      ],
     },
     pathways: {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
@@ -680,12 +807,17 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Mga Trabaho',
-      description: ['Program Manager', 'Senior Project Manager', 'Program Leader', 'Program Coordinator'],
+      description: [
+        'Program Manager',
+        'Senior Project Manager',
+        'Program Leader',
+        'Program Coordinator',
+      ],
     },
     pathways: {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
       description: [
-        'Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba\'t ibang Higher Education qualifications.',
+        "Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba't ibang Higher Education qualifications.",
       ],
     },
     additionalInfo: {
@@ -712,7 +844,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Mga Trabaho',
-      description: ['HR Assistant', 'Recruitment Consultant', 'Workplace Health and Safety Officer'],
+      description: [
+        'HR Assistant',
+        'Recruitment Consultant',
+        'Workplace Health and Safety Officer',
+      ],
     },
     pathways: {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
@@ -749,7 +885,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     },
     jobRoles: {
       title: 'Mga Trabaho',
-      description: ['Human Resources Manager', 'Human Resources Officer', 'Recruitment Consultant'],
+      description: [
+        'Human Resources Manager',
+        'Human Resources Officer',
+        'Recruitment Consultant',
+      ],
     },
     pathways: {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
@@ -871,11 +1011,31 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     faq: {
       title: 'Mga Madalas Itanong',
       description: [
-        { question: 'Magkano ang kursong nursing assistant?', answer: 'Mangyaring sumangguni sa aming opisyal na pricelist para sa pinakabagong impormasyon sa tuition.' },
-        { question: 'Aling visa ang nagpapahintulot sa akin na mag-enroll?', answer: 'Ang kursong ito ay angkop para sa mga estudyante sa Working Holiday Visa o anumang uri ng visa na nagpapahintulot sa iyo na mag-aral ng 16 linggo nang walang Confirmation of Enrolment (CoE). Hindi kami nagbibigay ng payo sa visa. Mangyaring suriin ang iyong mga kondisyon sa visa o kumonsulta sa rehistradong migration agent kung hindi ka sigurado.' },
-        { question: 'Paano ang placement at suporta para sa clinical training?', answer: 'Nagbibigay ang ABM ng 80 oras ng work placement bilang bahagi ng kursong, inaayos sa pamamagitan ng aming mapagkakatiwalaang industry partners. Pagkatapos makumpleto, nag-aalok din kami ng mga oportunidad sa paid employment para sa mga eligible na graduate, sinusuportahan ang iyong maayos na paglipat sa healthcare workforce.' },
-        { question: 'Makakahanap ba ako ng trabaho sa qualification na ito?', answer: 'Oo, ang aming mga graduate ay madalas na nakakakuha ng mga tungkulin sa Private Hospitals, Medical Centres, Aged Care Centres.' },
-        { question: 'Ano kung hindi sapat ang aking mga kasanayan sa Ingles?', answer: 'Ang minimum na entry requirement ay IELTS 5.5 o katumbas. Kung kasalukuyan mong hawak ang IELTS 4.5 o katumbas, maaari kang mag-enroll sa kurso sa Plus Nursing English, na nagbibigay ng karagdagang suporta sa wika na nakahanay sa healthcare settings. Kung wala kang resulta ng English test, maaari mong suriin ang iyong proficiency sa Ingles sa pamamagitan ng ABM English Placement Test.' },
+        {
+          question: 'Magkano ang kursong nursing assistant?',
+          answer:
+            'Mangyaring sumangguni sa aming opisyal na pricelist para sa pinakabagong impormasyon sa tuition.',
+        },
+        {
+          question: 'Aling visa ang nagpapahintulot sa akin na mag-enroll?',
+          answer:
+            'Ang kursong ito ay angkop para sa mga estudyante sa Working Holiday Visa o anumang uri ng visa na nagpapahintulot sa iyo na mag-aral ng 16 linggo nang walang Confirmation of Enrolment (CoE). Hindi kami nagbibigay ng payo sa visa. Mangyaring suriin ang iyong mga kondisyon sa visa o kumonsulta sa rehistradong migration agent kung hindi ka sigurado.',
+        },
+        {
+          question: 'Paano ang placement at suporta para sa clinical training?',
+          answer:
+            'Nagbibigay ang ABM ng 80 oras ng work placement bilang bahagi ng kursong, inaayos sa pamamagitan ng aming mapagkakatiwalaang industry partners. Pagkatapos makumpleto, nag-aalok din kami ng mga oportunidad sa paid employment para sa mga eligible na graduate, sinusuportahan ang iyong maayos na paglipat sa healthcare workforce.',
+        },
+        {
+          question: 'Makakahanap ba ako ng trabaho sa qualification na ito?',
+          answer:
+            'Oo, ang aming mga graduate ay madalas na nakakakuha ng mga tungkulin sa Private Hospitals, Medical Centres, Aged Care Centres.',
+        },
+        {
+          question: 'Ano kung hindi sapat ang aking mga kasanayan sa Ingles?',
+          answer:
+            'Ang minimum na entry requirement ay IELTS 5.5 o katumbas. Kung kasalukuyan mong hawak ang IELTS 4.5 o katumbas, maaari kang mag-enroll sa kurso sa Plus Nursing English, na nagbibigay ng karagdagang suporta sa wika na nakahanay sa healthcare settings. Kung wala kang resulta ng English test, maaari mong suriin ang iyong proficiency sa Ingles sa pamamagitan ng ABM English Placement Test.',
+        },
       ],
     },
   },

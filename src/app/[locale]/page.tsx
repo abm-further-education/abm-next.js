@@ -134,7 +134,7 @@ export default async function Home({
           <Card
             imgPath="/courses/fitness/ABM_Fitness_Photos_10.jpg"
             title={t('fastTrack')}
-            link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track"
+            link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online"
             className="w-full md:w-300 h-200 xl:w-400"
           />
           <Card

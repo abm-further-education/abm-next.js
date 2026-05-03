@@ -736,7 +736,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIS50321?distanceFilter=25',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseCode: 'SIS30321',
     description:
       'Mulai Karir Anda sebagai Instruktur Kebugaran\n\nSIS30321 Certificate III in Fitness dirancang untuk mereka yang ingin menjadi Group Exercise Instructor atau Gym Instructor.\n\nDi Mana Kualifikasi Ini Dapat Membawa Anda?\nKursus ini menyediakan jalur langsung ke pekerjaan di:\n– Pusat Kebugaran & Gym\n– Pusat Rekreasi & Komunitas\n– Klub Kesehatan & Kebugaran',
@@ -744,18 +744,15 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     entryRequirement: 'Anda dapat berpartisipasi dalam aktivitas kebugaran.',
     deliveryMode: {
       title: 'Mode Pengiriman',
-      mode: 'Tatap Muka',
+      mode: 'Daring',
     },
     deliverySite: {
-      title: 'Lokasi Pengiriman:',
+      title: 'Penyampaian:',
       locations: [
         {
-          type: 'Kampus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Praktik',
-          address: 'Gymnasium Pribadi untuk pelatihan dan penilaian praktis',
+          type: 'Sepenuhnya daring',
+          address:
+            'Teori dan tugas kursus secara daring. Pelatihan praktis dan penilaian dilaksanakan di fasilitas yang disetujui sesuai pengaturan.',
         },
       ],
     },
@@ -764,7 +761,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'Peraturan & Standar\nKeterampilan yang diperoleh dalam kualifikasi ini harus diterapkan sesuai dengan undang-undang Commonwealth dan Negara Bagian/Teritori, standar industri Australia, dan kode praktik.\n\nAmbil langkah pertama menuju karir yang memuaskan di kebugaran hari ini!\n\n* Tanggal pendaftaran akan dipublikasikan pada April 2026.',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseCode: 'SIS40221',
     description:
       'Mulai Karir Anda sebagai Instruktur Kebugaran\n\nSIS40221 Certificate IV in Fitness dirancang untuk mereka yang ingin menjadi Personal Trainer dan Fitness Instructor (Advanced).\n\nDi Mana Kualifikasi Ini Dapat Membawa Anda?\nKursus ini menyediakan jalur langsung ke pekerjaan di:\n– Pusat Kebugaran & Gym\n– Pusat Rekreasi & Komunitas\n– Klub Kesehatan & Kebugaran',
@@ -783,18 +780,15 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     ],
     deliveryMode: {
       title: 'Mode Pengiriman',
-      mode: 'Tatap Muka',
+      mode: 'Daring',
     },
     deliverySite: {
-      title: 'Lokasi Pengiriman:',
+      title: 'Penyampaian:',
       locations: [
         {
-          type: 'Kampus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Praktik',
-          address: 'Gymnasium Pribadi untuk pelatihan dan penilaian praktis',
+          type: 'Sepenuhnya daring',
+          address:
+            'Teori dan tugas kursus secara daring. Pelatihan praktis dan penilaian dilaksanakan di fasilitas yang disetujui sesuai pengaturan.',
         },
       ],
     },

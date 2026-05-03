@@ -779,24 +779,21 @@ export const courseInformationData_sp: {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIS50321?distanceFilter=25',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseCode: 'SIS30321',
     description:
-      '¡Comienza tu carrera como instructor de fitness!\n\nEl Certificado III y IV en Fitness está diseñado para quienes desean ser instructores de grupo o de gimnasio. Aprenderás a planificar y dictar sesiones grupales y a crear programas personalizados de gimnasio.\n\nTrabajarás en entornos estructurados y supervisados como gimnasios, centros de fitness y centros comunitarios. Como instructor, usarás tu criterio y seguirás las políticas y procedimientos de la organización.\n\nEsta titulación te permite trabajar en:\n– Gimnasios y centros de fitness\n– Centros recreativos y comunitarios\n– Clubes de salud y bienestar',
+      '¡Comienza tu carrera como instructor de fitness!\n\nEl Certificado III en Fitness (en línea) está diseñado para quienes desean ser instructores de grupo o de gimnasio. Aprenderás a planificar y dictar sesiones grupales y a crear programas personalizados de gimnasio.\n\nTrabajarás en entornos estructurados y supervisados como gimnasios, centros de fitness y centros comunitarios. Como instructor, usarás tu criterio y seguirás las políticas y procedimientos de la organización.\n\nEsta titulación te permite trabajar en:\n– Gimnasios y centros de fitness\n– Centros recreativos y comunitarios\n– Clubes de salud y bienestar',
     deliveryMode: {
       title: 'Modalidad de entrega',
-      mode: 'Presencial',
+      mode: 'En línea',
     },
     deliverySite: {
-      title: 'Lugar de entrega:',
+      title: 'Entrega:',
       locations: [
         {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Prácticas',
-          address: 'Gimnasio privado para prácticas y evaluación',
+          type: 'Totalmente en línea',
+          address:
+            'Teoría y tareas en línea. La formación práctica y las evaluaciones se realizan en instalaciones homologadas según lo acordado.',
         },
       ],
     },
@@ -824,10 +821,10 @@ export const courseInformationData_sp: {
         'Regulaciones y estándares\nLas habilidades adquiridas deben aplicarse según la legislación australiana y los estándares del sector.\n\n¡Da el primer paso hacia una carrera gratificante en fitness!',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseCode: 'SIS40221',
     description:
-      '¡Comienza tu carrera como instructor de fitness!\n\nEl Certificado III y IV en Fitness está diseñado para quienes desean ser instructores de grupo o de gimnasio. Aprenderás a planificar y dictar sesiones grupales y a crear programas personalizados de gimnasio.\n\nTrabajarás en entornos estructurados y supervisados como gimnasios, centros de fitness y centros comunitarios. Como instructor, usarás tu criterio y seguirás las políticas y procedimientos de la organización.\n\nEsta titulación te permite trabajar en:\n– Gimnasios y centros de fitness\n– Centros recreativos y comunitarios\n– Clubes de salud y bienestar',
+      '¡Comienza tu carrera como instructor de fitness!\n\nEl Certificado IV en Fitness (en línea) está diseñado para quienes desean ser entrenadores personales e instructores avanzados. Aprenderás a planificar y dictar sesiones grupales y a crear programas personalizados de gimnasio.\n\nTrabajarás en entornos estructurados y supervisados como gimnasios, centros de fitness y centros comunitarios. Como instructor, usarás tu criterio y seguirás las políticas y procedimientos de la organización.\n\nEsta titulación te permite trabajar en:\n– Gimnasios y centros de fitness\n– Centros recreativos y comunitarios\n– Clubes de salud y bienestar',
     entryRequirement: [
       'Haber completado las siguientes unidades:',
       '• HLTAID011 Provide First Aid (o una unidad que sustituya esta unidad)',
@@ -842,18 +839,15 @@ export const courseInformationData_sp: {
     ],
     deliveryMode: {
       title: 'Modalidad de entrega',
-      mode: 'Presencial',
+      mode: 'En línea',
     },
     deliverySite: {
-      title: 'Lugar de entrega:',
+      title: 'Entrega:',
       locations: [
         {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Prácticas',
-          address: 'Gimnasio privado para prácticas y evaluación',
+          type: 'Totalmente en línea',
+          address:
+            'Teoría y tareas en línea. La formación práctica y las evaluaciones se realizan en instalaciones homologadas según lo acordado.',
         },
       ],
     },

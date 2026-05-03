@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { Image, Loader2 } from 'lucide-react';
+import NextImage from 'next/image';
+import { Image as ImageIcon, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export interface ImageDropZoneProps {
@@ -153,10 +154,16 @@ export default function ImageDropZone({
         ) : previewUrl ? (
           <div className="flex flex-col items-center gap-2 w-full">
             <div className="relative w-32 h-32 rounded-md overflow-hidden border border-sky-200 bg-white">
-              <img
+              <NextImage
                 src={previewUrl}
-                alt="Preview"
-                className="w-full h-full object-cover"
+                alt="Uploaded image preview"
+                fill
+                sizes="128px"
+                className="object-cover"
+                unoptimized={
+                  previewUrl.startsWith('blob:') ||
+                  previewUrl.startsWith('data:')
+                }
               />
             </div>
             <p className="text-sm text-sky-600">
@@ -166,7 +173,11 @@ export default function ImageDropZone({
         ) : (
           <>
             <div className="mb-3 flex items-center justify-center">
-              <Image className="w-14 h-14 text-sky-400" strokeWidth={1.5} />
+              <ImageIcon
+                className="w-14 h-14 text-sky-400"
+                strokeWidth={1.5}
+                aria-hidden
+              />
             </div>
             <p className="text-sm text-gray-600 text-center">
               Drop your image here, or{' '}

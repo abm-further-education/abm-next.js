@@ -760,26 +760,24 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIS50321?distanceFilter=25',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseCode: 'SIS30321',
     description:
-      'Start Your Career as a Fitness Instructor\n\nThe SIS30321 Certificate III in Fitness is designed for those looking to become Group Exercise Instructors or Gym Instructors. This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
-    duration: '12 weeks or 24 weeks',
+      'Start Your Career in Fitness\n\nTake control of your study and start building a career in the fitness industry. This course is designed for students who want to study at their own pace while gaining practical, job-ready skills.',
+    duration: '3–12 months (fast-track available)',
+    durationNote: 'Re-enrolment required after 12 months if not completed',
     entryRequirement: 'You are able to participate in fitness activities.',
     deliveryMode: {
       title: 'Delivery mode',
-      mode: 'Face to Face',
+      mode: 'Online',
     },
     deliverySite: {
-      title: 'Delivery site:',
+      title: 'Delivery:',
       locations: [
         {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Practical',
-          address: 'Private Gymnasium for practical training and assessment',
+          type: 'Fully online',
+          address:
+            'Theory and coursework are delivered online. Practical training and assessments are completed at approved facilities as arranged.',
         },
       ],
     },
@@ -802,16 +800,17 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     //     ],
     //   },
     // ],
-    additionalInfo: {
-      description:
-        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\n* The enrollment date will be published in April 2026.',
-    },
+    // additionalInfo: {
+    //   description:
+    //     'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!',
+    // },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseCode: 'SIS40221',
     description:
-      'Start Your Career as a Fitness Instructor\n\nThe SIS40221 Certificate IV in Fitness is designed for those looking to become Personal Trainer and Fitness Instructor (Advanced). This qualification equips you with the skills to plan and deliver group exercise sessions and create gym-based programmes for individuals, where personalised instruction and ongoing client monitoring are limited.\n\nYou will work in structured and supervised environments, such as fitness centres, gyms, and community leisure facilities. As a fitness instructor, you will use discretion and judgement when delivering exercise sessions and interacting with clients, following established organisational policies and procedures.\n\nWhere Can This Qualification Take You?\nThis course provides a direct pathway to employment in:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
-    duration: '12 weeks or 24 weeks',
+      'Become a Qualified Personal Trainer\n\nTake the next step in your fitness career and develop the skills to work as a Personal Trainer. This course focuses on real client training, program design, and professional practice.',
+    duration: '3–12 months (fast-track available)',
+    durationNote: 'Re-enrolment required after 12 months if not completed',
     entryRequirement: [
       'Have complete the following units:',
       '• HLTAID011 Provide First Aid (or a unit that supersedes this unit)',
@@ -826,18 +825,15 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     ],
     deliveryMode: {
       title: 'Delivery mode',
-      mode: 'Face to Face',
+      mode: 'Online',
     },
     deliverySite: {
-      title: 'Delivery site:',
+      title: 'Delivery:',
       locations: [
         {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Practical',
-          address: 'Private Gymnasium for practical training and assessment',
+          type: 'Fully online',
+          address:
+            'Theory and coursework are delivered online. Practical training and assessments are completed at approved facilities as arranged.',
         },
       ],
     },
@@ -860,10 +856,10 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     //     ],
     //   },
     // ],
-    additionalInfo: {
-      description:
-        'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!\n\nSee the flexible payment options here!\n\n* The enrollment date will be published in April 2026.',
-    },
+    // additionalInfo: {
+    //   description:
+    //     'Regulations & Standards\nThe skills gained in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian industry standards, and codes of practice.\n\nTake the first step towards a rewarding career in fitness today!',
+    // },
   },
   'hlt33115-certificate-iii-in-health-services-assistance': {
     courseCode: 'HLT33115',

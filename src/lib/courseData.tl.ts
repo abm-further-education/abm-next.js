@@ -55,7 +55,8 @@ export const courseData: CourseData[] = [
   {
     id: 'hospitality-advanced-diploma',
     title: 'Advanced Diploma of Hospitality Management',
-    description: 'Advanced na kasanayan sa pamamahala at pamumuno sa hospitality.',
+    description:
+      'Advanced na kasanayan sa pamamahala at pamumuno sa hospitality.',
     category: 'hospitality',
     type: 'full-course',
     level: 'advanced-diploma',
@@ -90,28 +91,30 @@ export const courseData: CourseData[] = [
     tags: ['fitness', 'personal-training', 'certificate-iv', 'advanced'],
   },
   {
-    id: 'fitness-cert-iii-fast-track',
-    title: 'Certificate III in Fitness (Fast Track)',
-    description: 'Pinabilis na programa ng pagsasanay sa sports coaching.',
+    id: 'fitness-cert-iii-online',
+    title: 'Certificate III in Fitness (Online)',
+    description:
+      'Pambansang kinikilalang kwalipikasyon bilang fitness instructor, buong online.',
     category: 'fitness',
-    type: 'fast-track',
+    type: 'online',
     level: 'certificate-iii',
     duration: '12 linggo / 24 linggo',
     image: '/courses/fitness/ABM_Fitness_Photos_11.jpg',
-    link: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
-    tags: ['sport', 'coaching', 'fast-track', 'certificate-iii'],
+    link: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
+    tags: ['sport', 'coaching', 'online', 'certificate-iii'],
   },
   {
-    id: 'fitness-cert-iv-fast-track',
-    title: 'Certificate IV in Fitness (Fast Track)',
-    description: 'Advanced na programa ng sports coaching at development.',
+    id: 'fitness-cert-iv-online',
+    title: 'Certificate IV in Fitness (Online)',
+    description:
+      'Pambansang kinikilalang personal trainer qualification, buong online.',
     category: 'fitness',
-    type: 'fast-track',
+    type: 'online',
     level: 'certificate-iv',
     duration: '12 linggo / 24 linggo',
     image: '/courses/fitness/ABM_Fitness_Photos_9.jpg',
-    link: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
-    tags: ['sport', 'coaching', 'fast-track', 'certificate-iv', 'advanced'],
+    link: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
+    tags: ['sport', 'coaching', 'online', 'certificate-iv', 'advanced'],
   },
   {
     id: 'sport-diploma',
@@ -141,7 +144,8 @@ export const courseData: CourseData[] = [
   {
     id: 'business-diploma',
     title: 'Diploma of Business',
-    description: 'Komprehensibong kasanayan sa pamamahala at pamumuno sa negosyo.',
+    description:
+      'Komprehensibong kasanayan sa pamamahala at pamumuno sa negosyo.',
     category: 'business',
     type: 'full-course',
     level: 'diploma',
@@ -153,7 +157,8 @@ export const courseData: CourseData[] = [
   {
     id: 'business-advanced-diploma',
     title: 'Advanced Diploma of Business',
-    description: 'Advanced na kasanayan sa estratehiya at pamamahala ng negosyo.',
+    description:
+      'Advanced na kasanayan sa estratehiya at pamamahala ng negosyo.',
     category: 'business',
     type: 'full-course',
     level: 'advanced-diploma',
@@ -165,7 +170,8 @@ export const courseData: CourseData[] = [
   {
     id: 'business-graduate-diploma',
     title: 'Graduate Diploma of Management (Learning)',
-    description: 'Kasanayan sa pamamahala at pamumuno sa antas ng postgraduate.',
+    description:
+      'Kasanayan sa pamamahala at pamumuno sa antas ng postgraduate.',
     category: 'business',
     type: 'full-course',
     level: 'graduate-diploma',
@@ -179,7 +185,8 @@ export const courseData: CourseData[] = [
   {
     id: 'project-cert-iv',
     title: 'Certificate IV in Project Management Practice',
-    description: 'Pangunahing kasanayan at metodolohiya sa pamamahala ng proyekto.',
+    description:
+      'Pangunahing kasanayan at metodolohiya sa pamamahala ng proyekto.',
     category: 'project',
     type: 'full-course',
     level: 'certificate-iv',
@@ -191,7 +198,8 @@ export const courseData: CourseData[] = [
   {
     id: 'project-diploma',
     title: 'Diploma of Project Management',
-    description: 'Komprehensibong kasanayan sa pamamahala at pamumuno ng proyekto.',
+    description:
+      'Komprehensibong kasanayan sa pamamahala at pamumuno ng proyekto.',
     category: 'project',
     type: 'full-course',
     level: 'diploma',
@@ -203,7 +211,8 @@ export const courseData: CourseData[] = [
   {
     id: 'project-advanced-diploma',
     title: 'Advanced Diploma of Program Management',
-    description: 'Advanced na kasanayan sa pamamahala ng proyekto at estratehikong pagpaplano.',
+    description:
+      'Advanced na kasanayan sa pamamahala ng proyekto at estratehikong pagpaplano.',
     category: 'project',
     type: 'full-course',
     level: 'advanced-diploma',
@@ -217,7 +226,8 @@ export const courseData: CourseData[] = [
   {
     id: 'hr-certificate-iv',
     title: 'Certificate IV in Human Resource Management',
-    description: 'Bumuo ng mga kasanayan sa HR para sa mga entry-level na posisyon.',
+    description:
+      'Bumuo ng mga kasanayan sa HR para sa mga entry-level na posisyon.',
     category: 'hr',
     type: 'full-course',
     level: 'certificate-iv',
@@ -241,7 +251,8 @@ export const courseData: CourseData[] = [
   {
     id: 'hr-advanced-diploma',
     title: 'Advanced Diploma of Human Resource Management',
-    description: 'Senior na kasanayan sa pamumuno at estratehikong pamamahala ng HR.',
+    description:
+      'Senior na kasanayan sa pamumuno at estratehikong pamamahala ng HR.',
     category: 'hr',
     type: 'full-course',
     level: 'advanced-diploma',

@@ -55,7 +55,8 @@ export const courseData: CourseData[] = [
   {
     id: 'hospitality-advanced-diploma',
     title: 'Advanced Diploma of Hospitality Management',
-    description: 'Keterampilan manajemen dan kepemimpinan perhotelan tingkat lanjut.',
+    description:
+      'Keterampilan manajemen dan kepemimpinan perhotelan tingkat lanjut.',
     category: 'hospitality',
     type: 'full-course',
     level: 'advanced-diploma',
@@ -80,7 +81,8 @@ export const courseData: CourseData[] = [
   {
     id: 'fitness-cert-iv',
     title: 'Certificate IV in Fitness',
-    description: 'Keterampilan pelatihan dan instruksi kebugaran tingkat lanjut.',
+    description:
+      'Keterampilan pelatihan dan instruksi kebugaran tingkat lanjut.',
     category: 'fitness',
     type: 'full-course',
     level: 'certificate-iv',
@@ -90,33 +92,36 @@ export const courseData: CourseData[] = [
     tags: ['fitness', 'personal-training', 'certificate-iv', 'advanced'],
   },
   {
-    id: 'fitness-cert-iii-fast-track',
-    title: 'Certificate III in Fitness (Fast Track)',
-    description: 'Program pelatihan coaching olahraga yang dipercepat.',
+    id: 'fitness-cert-iii-online',
+    title: 'Certificate III in Fitness (Online)',
+    description:
+      'Kualifikasi instruktur kebugaran diakui secara nasional, sepenuhnya daring.',
     category: 'fitness',
-    type: 'fast-track',
+    type: 'online',
     level: 'certificate-iii',
     duration: '12 minggu / 24 minggu',
     image: '/courses/fitness/ABM_Fitness_Photos_11.jpg',
-    link: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
-    tags: ['sport', 'coaching', 'fast-track', 'certificate-iii'],
+    link: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
+    tags: ['sport', 'coaching', 'online', 'certificate-iii'],
   },
   {
-    id: 'fitness-cert-iv-fast-track',
-    title: 'Certificate IV in Fitness (Fast Track)',
-    description: 'Program coaching dan pengembangan olahraga tingkat lanjut.',
+    id: 'fitness-cert-iv-online',
+    title: 'Certificate IV in Fitness (Online)',
+    description:
+      'Kualifikasi pelatih pribadi diakui secara nasional, sepenuhnya daring.',
     category: 'fitness',
-    type: 'fast-track',
+    type: 'online',
     level: 'certificate-iv',
     duration: '12 minggu / 24 minggu',
     image: '/courses/fitness/ABM_Fitness_Photos_9.jpg',
-    link: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
-    tags: ['sport', 'coaching', 'fast-track', 'certificate-iv', 'advanced'],
+    link: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
+    tags: ['sport', 'coaching', 'online', 'certificate-iv', 'advanced'],
   },
   {
     id: 'sport-diploma',
     title: 'Diploma of Sport',
-    description: 'Program coaching dan pengembangan olahraga yang komprehensif.',
+    description:
+      'Program coaching dan pengembangan olahraga yang komprehensif.',
     category: 'fitness',
     type: 'full-course',
     level: 'diploma',
@@ -141,7 +146,8 @@ export const courseData: CourseData[] = [
   {
     id: 'business-diploma',
     title: 'Diploma of Business',
-    description: 'Keterampilan manajemen dan kepemimpinan bisnis yang komprehensif.',
+    description:
+      'Keterampilan manajemen dan kepemimpinan bisnis yang komprehensif.',
     category: 'business',
     type: 'full-course',
     level: 'diploma',
@@ -165,7 +171,8 @@ export const courseData: CourseData[] = [
   {
     id: 'business-graduate-diploma',
     title: 'Graduate Diploma of Management (Learning)',
-    description: 'Keterampilan manajemen dan kepemimpinan tingkat pascasarjana.',
+    description:
+      'Keterampilan manajemen dan kepemimpinan tingkat pascasarjana.',
     category: 'business',
     type: 'full-course',
     level: 'graduate-diploma',
@@ -191,7 +198,8 @@ export const courseData: CourseData[] = [
   {
     id: 'project-diploma',
     title: 'Diploma of Project Management',
-    description: 'Keterampilan manajemen dan kepemimpinan proyek yang komprehensif.',
+    description:
+      'Keterampilan manajemen dan kepemimpinan proyek yang komprehensif.',
     category: 'project',
     type: 'full-course',
     level: 'diploma',
@@ -203,7 +211,8 @@ export const courseData: CourseData[] = [
   {
     id: 'project-advanced-diploma',
     title: 'Advanced Diploma of Program Management',
-    description: 'Keterampilan manajemen proyek dan perencanaan strategis tingkat lanjut.',
+    description:
+      'Keterampilan manajemen proyek dan perencanaan strategis tingkat lanjut.',
     category: 'project',
     type: 'full-course',
     level: 'advanced-diploma',

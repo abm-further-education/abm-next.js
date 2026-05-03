@@ -582,7 +582,7 @@
         "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10"
       },
       "fitnessCertIIIFast": {
-        "code": "SIS30321 Certificate III in Fitness (Fast Track)",
+        "code": "SIS30321 Certificate III in Fitness (Online)",
         "requirement": "Ikaw ay kayang lumahok sa mga fitness activities."
       },
       "fitnessCertIV": {
@@ -590,7 +590,7 @@
         "requirement": "Nakumpleto ang mga sumusunod na unit:\n• HLTAID011 Provide First Aid (o unit na pumalit sa unit na ito)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information\n\nDapat nakumpleto ng estudyante ang katumbas ng Year 12"
       },
       "fitnessCertIVFast": {
-        "code": "SIS40221 Certificate IV in Fitness (Fast Track)",
+        "code": "SIS40221 Certificate IV in Fitness (Online)",
         "requirement": "Nakumpleto ang mga sumusunod na unit:\n• HLTAID011 Provide First Aid (o unit na pumalit sa unit na ito)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information"
       },
       "sportDiploma": {
@@ -752,25 +752,25 @@
     "exploreOtherShortCoursesDesc": "Tuklasin ang mas maraming kapana-panabik na culinary experiences at palakasin ang iyong mga kasanayan sa aming magkakaibang hanay ng mga maikling kurso."
   },
   "fullCourses": "Lahat ng Kurso",
-  "fastTrack": "Fast Track",
+  "fastTrack": "Online",
   "fitnessAndSports": "Fitness at Sports",
   "projectAndProgram": "Project at Program",
   "hrManagement": "HR Management",
   "fitnessPage": {
     "metadata": {
       "title": "Fitness at Sports Courses | ABM Further Education",
-      "description": "Gawing karera ang iyong hilig sa fitness sa ABM Further Education. Tuklasin ang aming mga fitness at sports courses na idinisenyo para sa parehong international students at domestic fast-track options."
+      "description": "Gawing karera ang iyong hilig sa fitness sa ABM Further Education. Tuklasin ang aming mga fitness at sports courses na idinisenyo para sa parehong international students at domestic online options."
     },
     "bannerTitle": "Fitness at Sports",
     "heading": "Gawing Karera ang Iyong Hilig\nsa Fitness",
     "description": "Ang mga fitness courses ng ABM ay naghahanda sa iyo para sa karera sa lumalagong fitness industry ng Australia. Makuha ang mga kasanayan upang mamuno sa mga group classes, magdisenyo ng personalized na training programs, at magtrabaho sa mga gym, outdoor settings, o online. Kung nagsisimula ka pa lamang o nagpapalawak ng iyong expertise, ang aming mga flexible programs ay naghahanda sa iyo para sa tagumpay.",
     "forInternational": "Para sa International Students",
-    "forDomestic": "Para sa Domestic (Fast Track)",
+    "forDomestic": "Mga Online Fitness Course",
     "cert3": "Certificate III in Fitness",
     "cert4": "Certificate IV in Fitness",
     "diploma": "Diploma in Sport (Coaching)",
-    "cert3Fast": "Certificate III in Fitness (Fast Track)",
-    "cert4Fast": "Certificate IV in Fitness (Fast Track)"
+    "cert3Fast": "Certificate III in Fitness (Online)",
+    "cert4Fast": "Certificate IV in Fitness (Online)"
   },
   "healthPage": {
     "metadata": {

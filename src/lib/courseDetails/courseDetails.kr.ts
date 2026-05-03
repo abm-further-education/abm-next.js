@@ -1517,7 +1517,7 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
         '등록 전 학생 안내서를 반드시 읽어보시기 바랍니다. 추가 문의는 info@abm.edu.au로 이메일 또는 +61 (02) 9160 4507로 전화해 주세요.',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseDuration: {
       title: '과정 기간',
       description:

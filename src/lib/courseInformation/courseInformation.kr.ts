@@ -729,24 +729,21 @@ export const courseInformationData_kr: {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIS50321?distanceFilter=25',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseCode: 'SIS30321',
     description:
-      '피트니스 강사로서의 커리어를 시작하세요!\n\nSIS30321 피트니스 수료증 III & SIS40221 피트니스 수료증 IV 과정은 그룹 운동 강사 또는 헬스장 강사를 목표로 하는 분들을 위해 설계되었습니다. 이 코스는 그룹 운동 세션을 기획·진행하고, 개인 맞춤형 헬스장 프로그램을 설계하는 데 필요한 기술을 갖추게 해줍니다.\n\n학생들은 피트니스 센터, 헬스장, 커뮤니티 레저 시설 등 구조화되고 감독이 이루어지는 환경에서 일하게 됩니다. 강사로서 재량과 판단력을 발휘해 수업을 진행하고, 조직의 정책과 절차를 따릅니다.\n\n이 코스는 다음과 같은 분야로의 취업 경로를 제공합니다:\n– 피트니스 센터 & 헬스장\n– 레저 & 커뮤니티 센터\n– 건강 & 웰니스 클럽',
+      '피트니스 강사로서의 커리어를 시작하세요!\n\nSIS30321 피트니스 수료증 III (온라인) 과정은 그룹 운동 강사 또는 헬스장 강사를 목표로 하는 분들을 위해 설계되었습니다. 이 코스는 그룹 운동 세션을 기획·진행하고, 개인 맞춤형 헬스장 프로그램을 설계하는 데 필요한 기술을 갖추게 해줍니다.\n\n학생들은 피트니스 센터, 헬스장, 커뮤니티 레저 시설 등 구조화되고 감독이 이루어지는 환경에서 일하게 됩니다. 강사로서 재량과 판단력을 발휘해 수업을 진행하고, 조직의 정책과 절차를 따릅니다.\n\n이 코스는 다음과 같은 분야로의 취업 경로를 제공합니다:\n– 피트니스 센터 & 헬스장\n– 레저 & 커뮤니티 센터\n– 건강 & 웰니스 클럽',
     deliveryMode: {
       title: '교육 방식',
-      mode: '대면 수업',
+      mode: '온라인',
     },
     deliverySite: {
-      title: '교육 장소:',
+      title: '제공 방식:',
       locations: [
         {
-          type: 'ABM Main Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: '실습',
-          address: 'Private Gymnasium for practical training and assessment',
+          type: '전 과정 온라인',
+          address:
+            '이론 및 과제는 온라인으로 진행합니다. 실기 교육 및 평가는 협의된 승인 시설에서 진행됩니다.',
         },
       ],
     },
@@ -774,10 +771,10 @@ export const courseInformationData_kr: {
         '규정 및 표준\n이 코스에서 습득한 기술은 연방 및 주/준주 법률, 호주 산업 표준, 실무 지침에 따라 적용되어야 합니다.\n\n지금 바로 피트니스 커리어의 첫걸음을 내딛어 보세요!',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseCode: 'SIS40221',
     description:
-      '피트니스 강사로서의 커리어를 시작하세요!\n\nSIS30321 피트니스 수료증 III & SIS40221 피트니스 수료증 IV 과정은 그룹 운동 강사 또는 헬스장 강사를 목표로 하는 분들을 위해 설계되었습니다. 이 코스는 그룹 운동 세션을 기획·진행하고, 개인 맞춤형 헬스장 프로그램을 설계하는 데 필요한 기술을 갖추게 해줍니다.\n\n학생들은 피트니스 센터, 헬스장, 커뮤니티 레저 시설 등 구조화되고 감독이 이루어지는 환경에서 일하게 됩니다. 강사로서 재량과 판단력을 발휘해 수업을 진행하고, 조직의 정책과 절차를 따릅니다.\n\n이 코스는 다음과 같은 분야로의 취업 경로를 제공합니다:\n– 피트니스 센터 & 헬스장\n– 레저 & 커뮤니티 센터\n– 건강 & 웰니스 클럽',
+      '피트니스 강사로서의 커리어를 시작하세요!\n\nSIS40221 피트니스 수료증 IV (온라인) 과정은 퍼스널 트레이너 및 상급 피트니스 강사를 목표로 하는 분들을 위해 설계되었습니다. 이 코스는 그룹 운동 세션을 기획·진행하고, 개인 맞춤형 헬스장 프로그램을 설계하는 데 필요한 기술을 갖추게 해줍니다.\n\n학생들은 피트니스 센터, 헬스장, 커뮤니티 레저 시설 등 구조화되고 감독이 이루어지는 환경에서 일하게 됩니다. 강사로서 재량과 판단력을 발휘해 수업을 진행하고, 조직의 정책과 절차를 따릅니다.\n\n이 코스는 다음과 같은 분야로의 취업 경로를 제공합니다:\n– 피트니스 센터 & 헬스장\n– 레저 & 커뮤니티 센터\n– 건강 & 웰니스 클럽',
     entryRequirement: [
       '다음 유닛을 이수해야 합니다:',
       '• HLTAID011 Provide First Aid (또는 이 유닛을 대체하는 유닛)',
@@ -792,18 +789,15 @@ export const courseInformationData_kr: {
     ],
     deliveryMode: {
       title: '교육 방식',
-      mode: '대면 수업',
+      mode: '온라인',
     },
     deliverySite: {
-      title: '교육 장소:',
+      title: '제공 방식:',
       locations: [
         {
-          type: 'ABM Main Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: '실습',
-          address: 'Private Gymnasium for practical training and assessment',
+          type: '전 과정 온라인',
+          address:
+            '이론 및 과제는 온라인으로 진행합니다. 실기 교육 및 평가는 협의된 승인 시설에서 진행됩니다.',
         },
       ],
     },

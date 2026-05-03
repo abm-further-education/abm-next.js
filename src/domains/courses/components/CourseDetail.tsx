@@ -1,14 +1,16 @@
 'use client';
 
 import React from 'react';
-import { cn, parseBoldText } from '@/lib/utils';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useEditMode } from '@/contexts/EditModeContext';
 import DiplomaHM from '../contents/cookery/DiplomaHM';
 import CertIIIHSA, { type FaqItem } from '../contents/health/CertIIIHSA';
 import CourseDetailEditable from './CourseDetailEditable';
+import {
+  renderCourseDetailDescription,
+  titleStyle,
+} from './courseDetailRender';
 import type {
   TableData,
   LinkData,
@@ -27,173 +29,11 @@ export type {
   CourseDetailInfo,
 };
 
-// Helper component to render text with bold parsing
-const BoldText: React.FC<{ children: string }> = ({ children }) => {
-  return <>{parseBoldText(children)}</>;
-};
+export { titleStyle, paragraphStyle } from './courseDetailRender';
 
 interface CourseDetailProps {
   courseInfo: CourseDetailInfo;
   courseId?: string;
-}
-
-// 배열인지 확인하는 함수
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isArray(value: any): value is any[] {
-  return Array.isArray(value);
-}
-
-// 테이블 데이터인지 확인하는 함수
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isTableData(value: any): value is TableData {
-  return typeof value === 'object' && value.type === 'table';
-}
-
-// 링크 데이터인지 확인하는 함수
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isLinkData(value: any): value is LinkData {
-  return typeof value === 'object' && value.type === 'link';
-}
-
-// description을 렌더링하는 함수
-function renderDescription(
-  description: string | string[] | DescriptionItem[] | FaqItem[],
-): React.ReactNode {
-  // FaqItem[]는 CertIIIHSA에서 별도 렌더링 (여기서는 사용하지 않음)
-  if (
-    isArray(description) &&
-    description.length > 0 &&
-    typeof description[0] === 'object' &&
-    description[0] != null &&
-    'question' in description[0] &&
-    'answer' in description[0]
-  ) {
-    return null;
-  }
-  if (isArray(description)) {
-    // 배열의 첫 번째 요소를 확인하여 타입을 결정
-    const firstItem = description[0];
-
-    // DescriptionItem[] 배열인 경우 (문자열과 테이블 혼합)
-    if (
-      description.length > 0 &&
-      (typeof firstItem === 'string' ||
-        isTableData(firstItem) ||
-        isLinkData(firstItem))
-    ) {
-      return (
-        <div>
-          {description.map((item, index) => {
-            // 각 아이템의 타입을 다시 확인
-            if (isTableData(item)) {
-              return (
-                <div key={`table-${index}`} className="overflow-x-auto mt-4">
-                  <table className="w-full border border-gray-300 text-sm">
-                    <thead className="bg-gray-100">
-                      <tr>
-                        {item.headers.map((header, headerIndex) => {
-                          // 첫 번째 헤더가 빈 문자열이고 두 번째 헤더가 있는 경우 두 번째 헤더에 colspan=2 적용
-                          if (
-                            headerIndex === 0 &&
-                            header === '' &&
-                            item.headers[1]
-                          ) {
-                            return null;
-                          }
-                          const isSecondHeaderWithMerge =
-                            headerIndex === 1 &&
-                            item.headers[0] === '' &&
-                            item.headers[1];
-
-                          return (
-                            <th
-                              key={headerIndex}
-                              className={cn(
-                                'px-4 py-2 border border-gray-300 font-semibold text-left',
-                                headerIndex === 0 ? 'w-120' : '',
-                              )}
-                              colSpan={isSecondHeaderWithMerge ? 2 : 1}
-                            >
-                              {header}
-                            </th>
-                          );
-                        })}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {item.rows.map((row, rowIndex) => (
-                        <tr
-                          key={rowIndex}
-                          className={
-                            rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                          }
-                        >
-                          {row.map((cell, cellIndex) => {
-                            // 첫 번째 셀이 빈 문자열이고 두 번째 셀이 있는 경우 첫 번째 셀을 숨김
-                            if (cellIndex === 0 && cell === '' && row[1]) {
-                              return null;
-                            }
-
-                            const isSecondCellWithMerge =
-                              cellIndex === 1 && row[0] === '' && row[1];
-
-                            return (
-                              <td
-                                key={cellIndex}
-                                className="px-4 py-2 border border-gray-300"
-                                colSpan={isSecondCellWithMerge ? 2 : 1}
-                              >
-                                <BoldText>{cell}</BoldText>
-                              </td>
-                            );
-                          })}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              );
-            } else if (isLinkData(item)) {
-              return (
-                <Link
-                  key={`link-${index}`}
-                  href={item.url}
-                  className="text-blue-600 hover:text-blue-800 underline text-sm"
-                >
-                  {item.text}
-                </Link>
-              );
-            } else if (typeof item === 'string') {
-              return (
-                <p key={`text-${index}`} className={paragraphStyle}>
-                  <BoldText>{item}</BoldText>
-                </p>
-              );
-            }
-            return null;
-          })}
-        </div>
-      );
-    }
-
-    // string[] 배열인 경우 (기존 리스트 형태)
-    return (
-      <ul>
-        {(description as string[]).map((item, index) => (
-          <li key={index} className={paragraphStyle}>
-            • <BoldText>{item}</BoldText>
-          </li>
-        ))}
-      </ul>
-    );
-  }
-
-  // 단일 문자열인 경우
-  return (
-    <p className={paragraphStyle}>
-      <BoldText>{description as string}</BoldText>
-    </p>
-  );
 }
 
 type ProgressRow = {
@@ -372,30 +212,13 @@ const fitnessProgress: ProgressRow[] = [
   [
     {
       code: '',
-      title: 'Certificate III in Fitness (Fast Track)',
+      title: 'Certificate III in Fitness (Online)',
       duration: '12 weeks',
       color: 'bg-[#BD0622]',
     },
     {
       code: '',
-      title: 'Certificate IV in Fitness (Fast Track)',
-      duration: '12 weeks',
-      color: 'bg-[#982D3A]',
-    },
-  ],
-];
-
-const fitnessFastTrackProgress: ProgressRow[] = [
-  [
-    {
-      code: '',
-      title: 'Certificate III in Fitness (Fast Track)',
-      duration: '12 weeks',
-      color: 'bg-[#BD0622]',
-    },
-    {
-      code: '',
-      title: 'Certificate IV in Fitness (Fast Track)',
+      title: 'Certificate IV in Fitness (Online)',
       duration: '12 weeks',
       color: 'bg-[#982D3A]',
     },
@@ -454,8 +277,6 @@ const courseProgressMap: Record<string, ProgressRow[]> = {
   'sis30321-certificate-iii-in-fitness': fitnessProgress,
   'sis40221-certificate-iv-in-fitness': fitnessProgress,
   'sis50321-diploma-of-sport': fitnessProgress,
-  'certificate-iii-in-fitness-fast-track': fitnessFastTrackProgress,
-  'certificate-iv-in-fitness-fast-track': fitnessFastTrackProgress,
   'sit40521-certificate-iv-in-kitchen-management': kmProgress,
   'advanced-diploma-of-hospitality-management': kmProgress,
 };
@@ -531,7 +352,7 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
               {sections.map(([sectionKey, sectionData]) => (
                 <div key={sectionKey} className="mb-14">
                   <h3 className={titleStyle}>{sectionData.title}</h3>
-                  {renderDescription(sectionData.description)}
+                  {renderCourseDetailDescription(sectionData.description)}
                 </div>
               ))}
             </div>
@@ -543,7 +364,3 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
 }
 
 export default CourseDetail;
-
-export const titleStyle = 'text-base font-bold';
-
-export const paragraphStyle = 'text-neutral-700 text-sm whitespace-pre-wrap';

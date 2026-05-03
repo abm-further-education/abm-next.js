@@ -751,7 +751,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIS50321?distanceFilter=25',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseCode: 'SIS30321',
     description:
       'Simulan ang Iyong Karera bilang Fitness Instructor\n\nAng SIS30321 Certificate III in Fitness ay idinisenyo para sa mga naghahanap na maging Group Exercise Instructor o Gym Instructor. Binibigyan ka ng kwalipikasyong ito ng mga kasanayan upang magplano at maghatid ng mga group exercise session at lumikha ng mga gym-based programme para sa mga indibidwal.\n\nMagtatrabaho ka sa mga structured at supervised na kapaligiran, tulad ng fitness centre, gym, at community leisure facilities.\n\nSaan Ka Maaaring Dalhin ng Kwalipikasyong Ito?\nAng kursong ito ay nagbibigay ng direktang landas sa pagtatrabaho sa:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
@@ -759,19 +759,15 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     entryRequirement: 'Maaari kang lumahok sa mga fitness activities.',
     deliveryMode: {
       title: 'Paraan ng Paghahatid',
-      mode: 'Harapan',
+      mode: 'Online',
     },
     deliverySite: {
-      title: 'Lugar ng Paghahatid:',
+      title: 'Paghahatid:',
       locations: [
         {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Praktikal',
+          type: 'Ganap na online',
           address:
-            'Pribadong Gymnasium para sa praktikal na pagsasanay at pagtatasa',
+            'Teorya at coursework online. Ang praktikal na pagsasanay at pagtatasa ay sa aprubadong pasilidad ayon sa arrangement.',
         },
       ],
     },
@@ -780,7 +776,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'Mga Regulasyon at Pamantayan\nAng mga kasanayan na nakuha sa kwalipikasyong ito ay dapat i-apply alinsunod sa Commonwealth at State/Territory legislation, Australian industry standards, at codes of practice.\n\nGawin ang unang hakbang patungo sa isang rewarding na karera sa fitness ngayon!\n\n* Ang petsa ng enrollment ay ila-publish sa Abril 2026.',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseCode: 'SIS40221',
     description:
       'Simulan ang Iyong Karera bilang Fitness Instructor\n\nAng SIS40221 Certificate IV in Fitness ay idinisenyo para sa mga naghahanap na maging Personal Trainer at Fitness Instructor (Advanced). Binibigyan ka ng kwalipikasyong ito ng mga kasanayan upang magplano at maghatid ng mga group exercise session at lumikha ng mga gym-based programme para sa mga indibidwal.\n\nSaan Ka Maaaring Dalhin ng Kwalipikasyong Ito?\nAng kursong ito ay nagbibigay ng direktang landas sa pagtatrabaho sa:\n– Fitness Centres & Gyms\n– Leisure & Community Centres\n– Health & Wellness Clubs',
@@ -799,19 +795,15 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     ],
     deliveryMode: {
       title: 'Paraan ng Paghahatid',
-      mode: 'Harapan',
+      mode: 'Online',
     },
     deliverySite: {
-      title: 'Lugar ng Paghahatid:',
+      title: 'Paghahatid:',
       locations: [
         {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Praktikal',
+          type: 'Ganap na online',
           address:
-            'Pribadong Gymnasium para sa praktikal na pagsasanay at pagtatasa',
+            'Teorya at coursework online. Ang praktikal na pagsasanay at pagtatasa ay sa aprubadong pasilidad ayon sa arrangement.',
         },
       ],
     },

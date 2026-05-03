@@ -487,11 +487,11 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
     },
   },
 
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseDuration: {
       title: '受講期間',
       description:
-        '「Certificate III in Fitness（短期集中）」は総期間3か月（12週間）で、実務経験と1年間のジム会員権を含みます。',
+        '「Certificate III in Fitness（オンライン）」は総期間3か月（12週間）で、実務経験と1年間のジム会員権を含みます。',
     },
     studentSupport: {
       title: '学生サポート',
@@ -529,11 +529,11 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
     },
   },
 
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseDuration: {
       title: '受講期間',
       description:
-        '「Certificate IV in Fitness（短期集中）」は総期間3か月（12週間）で、実務経験と1年間のジム会員権を含みます。',
+        '「Certificate IV in Fitness（オンライン）」は総期間3か月（12週間）で、実務経験と1年間のジム会員権を含みます。',
     },
     studentSupport: {
       title: '学生サポート',

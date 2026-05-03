@@ -603,7 +603,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
         'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre ABM. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseDuration: {
       title: 'Duración del Curso',
       description:
@@ -643,7 +643,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
         'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre ABM. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseDuration: {
       title: 'Duración del Curso',
       description:

@@ -582,7 +582,7 @@
         "requirement": "Student must have completed an equivalent of Year 10"
       },
       "fitnessCertIIIFast": {
-        "code": "SIS30321 Certificate III in Fitness (Fast Track)",
+        "code": "SIS30321 Certificate III in Fitness (Online)",
         "requirement": "You are able to participate in fitness activities."
       },
       "fitnessCertIV": {
@@ -590,7 +590,7 @@
         "requirement": "Have complete the following units:\n• HLTAID011 Provide First Aid (or a unit that supersedes this unit)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information\n\nStudent must have completed an equivalent of Year 12"
       },
       "fitnessCertIVFast": {
-        "code": "SIS40221 Certificate IV in Fitness (Fast Track)",
+        "code": "SIS40221 Certificate IV in Fitness (Online)",
         "requirement": "Have complete the following units:\n• HLTAID011 Provide First Aid (or a unit that supersedes this unit)\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 Complete pre-exercise screening and service orientation\n• SISFFIT033 Complete client fitness assessments\n• SISFFIT035 Plan group exercise sessions\n• SISFFIT036 Instruct group exercise sessions\n• SISFFIT040 Develop and instruct gym-based exercise programs for individual clients\n• SISFFIT047 Use anatomy and physiology knowledge to support safe and effective exercise\n• SISFFIT052 Provide healthy eating information"
       },
       "sportDiploma": {
@@ -752,25 +752,25 @@
     "exploreOtherShortCoursesDesc": "Discover more exciting culinary experiences and enhance your skills with our diverse range of short courses."
   },
   "fullCourses": "All Courses",
-  "fastTrack": "Fast Track",
+  "fastTrack": "Online",
   "fitnessAndSports": "Fitness & Sports",
   "projectAndProgram": "Project & Program",
   "hrManagement": "HR Management",
   "fitnessPage": {
     "metadata": {
       "title": "Fitness & Sports Courses | ABM Further Education",
-      "description": "Turn your passion for fitness into a career with ABM Further Education. Explore our fitness and sports courses designed for both international students and domestic fast-track options."
+      "description": "Turn your passion for fitness into a career with ABM Further Education. Explore our fitness and sports courses designed for both international students and domestic online options."
     },
     "bannerTitle": "Fitness & Sports",
     "heading": "Turn Your Passion for\nFitness into a Career",
     "description": "ABM's fitness courses prepare you for a career in Australia's growing fitness industry. Gain the skills to lead group classes, design personalised training programs, and work in gyms, outdoor settings, or online. Whether starting out or advancing your expertise, our flexible programs set you up for success.",
     "forInternational": "For International Students",
-    "forDomestic": "For Domestic (Fast Track)",
+    "forDomestic": "Online Fitness Courses",
     "cert3": "Certificate III in Fitness",
     "cert4": "Certificate IV in Fitness",
     "diploma": "Diploma in Sport (Coaching)",
-    "cert3Fast": "Certificate III in Fitness (Fast Track)",
-    "cert4Fast": "Certificate IV in Fitness (Fast Track)"
+    "cert3Fast": "Certificate III in Fitness (Online)",
+    "cert4Fast": "Certificate IV in Fitness (Online)"
   },
   "healthPage": {
     "metadata": {

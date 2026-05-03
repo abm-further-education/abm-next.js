@@ -461,90 +461,275 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
-    courseDuration: {
-      title: 'Course Duration',
-      description:
-        'The Certificate III in Fitness (Fast Track) is offered over 3 months, equating to 12 weeks, including work experience and 1 year gym membership.',
-    },
-    studentSupport: {
-      title: 'Student Support',
+  'certificate-iii-in-fitness-online': {
+    startYourCareer: {
+      title: 'Start Your Career in Fitness',
       description: [
-        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
-        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
-        '• Additional costs or limitations are communicated before enrolment.',
-        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
-        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
+        'Take control of your study and start building a career in the fitness industry. This course is designed for students who want to study at their own pace while gaining practical, job-ready skills.',
       ],
     },
-    jobRoles: {
-      title: 'Job roles',
+    whyStudy: {
+      title: 'Why Study This Course',
       description: [
-        'Gym Instructor',
-        'Group Fitness Instructor',
-        'Fitness Instructor',
+        '• Flexible learning – study when it suits you',
+        '• Follow your interest in fitness and health',
+        '• Build skills to work in real gym environments',
       ],
     },
-    pathways: {
-      title: 'Pathway to further study',
+    duration: {
+      title: 'Duration',
       description: [
-        'Students who complete this course may wish to continue their education in the fitness industry with qualifications such as the:',
+        '3–12 months (fast-track available)',
+        'Re-enrolment required after 12 months if not completed',
+      ],
+    },
+    howYoullStudy: {
+      title: 'How You’ll Study',
+      description: [
+        'All learning is delivered through ABM’s online platform (Moodle):',
         {
           type: 'link',
-          text: 'SIS50321 Diploma of Sport',
-          url: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
+          text: 'https://moodle.abm.edu.au/login/index.php',
+          url: 'https://moodle.abm.edu.au/login/index.php',
+        },
+        '\n**You will have access to:**',
+        '• Learning modules, videos, and presentations',
+        '• Assessments and quizzes',
+        '• Downloadable resources',
+        '• Ongoing student support',
+        '\nYou can progress at your own pace, with support available throughout your study.',
+      ],
+    },
+    learningStructure: {
+      title: 'Learning Structure',
+      description: [
+        'The course is delivered in 4 stages, building your skills step by step:',
+        {
+          type: 'table' as const,
+          headers: ['Stage', 'Focus area', 'What you’ll learn'],
+          rows: [
+            [
+              'Stage 1',
+              'Industry Foundations',
+              'Workplace expectations, safety, and fitness industry knowledge',
+            ],
+            [
+              'Stage 2',
+              'Safe Practice & Communication',
+              'Anatomy basics, risk management, and working with clients',
+            ],
+            [
+              'Stage 3',
+              'Client Training Skills',
+              'Fitness assessments and gym-based program delivery',
+            ],
+            [
+              'Stage 4',
+              'Group Training & Service',
+              'Group exercise sessions, customer service, and first aid',
+            ],
+          ],
         },
       ],
     },
-    additionalInfo: {
-      title: 'Additional Information',
-      description:
-        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    practicalExperience: {
+      title: 'Practical Experience',
+      description: [
+        'Work experience is a mandatory component of this course.',
+        '• 32 hours of work placement',
+        '• Completed in a gym or fitness facility',
+        '• Supervised by a qualified Personal Trainer',
+        'ABM provides guidance to help you organise and complete your placement.',
+      ],
+    },
+    assessment: {
+      title: 'Assessment',
+      description: [
+        '**You will complete:**',
+        {
+          type: 'table' as const,
+          headers: ['Component', 'Details'],
+          rows: [
+            ['Written assessments', 'Submitted online through Moodle'],
+            ['Practical demonstrations', 'Video submissions'],
+            ['Practical videos', '12 in total'],
+            ['Observation meetings', '1 per stage (online)'],
+          ],
+        },
+        '\n**You will also attend:**',
+        '• 4 stage induction sessions (trainer guidance at each stage)',
+      ],
+    },
+    courseOutcome: {
+      title: 'Course Outcome',
+      description: [
+        'By completing this course, you will be able to:',
+        '• Work as a Gym Instructor',
+        '• Deliver group fitness sessions',
+        '• Support clients safely and professionally',
+      ],
+    },
+    importantInfo: {
+      title: 'Important Information',
+      description: [
+        {
+          type: 'table' as const,
+          headers: ['Requirement', 'Notes'],
+          rows: [
+            [
+              'First Aid',
+              'A valid First Aid certificate is required — obtained through an external provider',
+            ],
+            ['Practical videos', 'Must be completed in a gym environment'],
+            [
+              'No gym access?',
+              'Students without gym access can book sessions with an assessor (additional cost)',
+            ],
+          ],
+        },
+      ],
+    },
+    yourNextStep: {
+      title: 'Your Next Step',
+      description: [
+        'This course gives you the foundation to enter the fitness industry with practical skills and confidence.',
+        '\n**Start now and take the first step into your fitness career.**',
+      ],
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
-    courseDuration: {
-      title: 'Course Duration',
-      description:
-        'The Certificate IV in Fitness (Fast Track) is offered over 3 months, equating to 12 weeks, including work experience and 1 year gym membership.',
-    },
-    studentSupport: {
-      title: 'Student Support',
+  'certificate-iv-in-fitness-online': {
+    becomeQualifiedPT: {
+      title: 'Become a Qualified Personal Trainer',
       description: [
-        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
-        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
-        '• Additional costs or limitations are communicated before enrolment.',
-        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
-        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
+        'Take the next step in your fitness career and develop the skills to work as a Personal Trainer. This course focuses on real client training, program design, and professional practice.',
       ],
     },
-    jobRoles: {
-      title: 'Job roles',
+    whyStudy: {
+      title: 'Why Study This Course',
       description: [
-        'Personal Trainer',
-        'Fitness Instructor (Advanced)',
-        'Outdoor Trainer',
-        'Corporate or Workplace Trainer',
-        'Online Personal Trainer',
-        'Fitness Studio Owner/Manager',
+        '• Flexible, self-paced learning',
+        '• Build real personal training skills',
+        '• Work towards becoming a qualified Personal Trainer',
       ],
     },
-    pathways: {
-      title: 'Pathway to further study',
+    duration: {
+      title: 'Duration',
       description: [
-        'Students who complete this course may wish to continue their education in the fitness industry with qualifications such as the:',
-
+        '3–12 months (fast-track available)',
+        'Re-enrolment required after 12 months if not completed',
+      ],
+    },
+    howYoullStudy: {
+      title: 'How You’ll Study',
+      description: [
+        'Delivered through ABM’s online platform (Moodle):',
         {
           type: 'link',
-          text: 'SIS50321 Diploma of Sport',
-          url: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
+          text: 'https://moodle.abm.edu.au/login/index.php',
+          url: 'https://moodle.abm.edu.au/login/index.php',
+        },
+        '\n**You will access:**',
+        '• Interactive learning modules',
+        '• Instructional videos and resources',
+        '• Assessments and trainer support',
+        '\nYou can study around your schedule while staying supported throughout the course.',
+      ],
+    },
+    learningStructure: {
+      title: 'Learning Structure',
+      description: [
+        'The course is delivered across 4 stages:',
+        {
+          type: 'table' as const,
+          headers: ['Stage', 'Focus area', 'What you’ll learn'],
+          rows: [
+            [
+              'Stage 1',
+              'Personal Training Foundations',
+              'Program design, client relationships, and business basics',
+            ],
+            [
+              'Stage 2',
+              'Specialised Training',
+              'Training for different client groups and exercise science',
+            ],
+            [
+              'Stage 3',
+              'Strength & Conditioning',
+              'Advanced training techniques and behaviour change',
+            ],
+            [
+              'Stage 4',
+              'Advanced Practice',
+              'Online training delivery, movement assessment, and leadership',
+            ],
+          ],
         },
       ],
     },
-    additionalInfo: {
-      title: 'Additional Information',
-      description:
-        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+    practicalExperience: {
+      title: 'Practical Experience',
+      description: [
+        'Work experience is required to ensure real industry readiness:',
+        '• 30 hours of placement',
+        '• Deliver 2 personal training sessions to a client over 4 weeks',
+        '• Supervised by a qualified Personal Trainer',
+        'ABM will support you throughout the placement process',
+      ],
+    },
+    assessment: {
+      title: 'Assessment',
+      description: [
+        '**You will complete:**',
+        {
+          type: 'table' as const,
+          headers: ['Component', 'Details'],
+          rows: [
+            ['Written assessments', 'Submitted online through Moodle'],
+            ['Practical video submissions', 'Demonstrate skills'],
+            ['Practical videos', '12 in total'],
+            ['Observation meetings', '1 per stage (online)'],
+          ],
+        },
+        '\n**You will also attend:**',
+        '• 4 stage induction sessions with your trainer',
+      ],
+    },
+    courseOutcome: {
+      title: 'Course Outcome',
+      description: [
+        'After completing this course, you will be able to:',
+        '• Work as a Personal Trainer',
+        '• Design and deliver individual training programs',
+        '• Train a range of clients confidently',
+        '• Apply professional and practical fitness knowledge',
+      ],
+    },
+    importantInfo: {
+      title: 'Important Information',
+      description: [
+        {
+          type: 'table' as const,
+          headers: ['Topic', 'Details'],
+          rows: [
+            ['Practical videos', 'Must be completed in a gym environment'],
+            [
+              'No gym access',
+              'Students without gym access can arrange sessions with an assessor (additional cost)',
+            ],
+          ],
+        },
+        '\n**Centrelink Assistance**',
+        'You may be eligible for financial assistance (Youth Allowance, Austudy, Abstudy).',
+        'Contact Centrelink on **13 24 90** and quote ABM reference number **SY112**.',
+      ],
+    },
+    yourNextStep: {
+      title: 'Your Next Step',
+      description: [
+        'This course is designed to move you from basic fitness knowledge to real client training.',
+        '\n**Take the step, build your skills, and start working as a Personal Trainer.**',
+      ],
     },
   },
   'bsb40120-certificate-iv-in-business': {

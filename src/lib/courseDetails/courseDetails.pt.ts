@@ -493,11 +493,11 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
     },
   },
 
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseDuration: {
       title: 'Duração do Curso',
       description:
-        'O Certificate III em Fitness (Rota Rápida) é oferecido em 3 meses, totalizando 12 semanas, incluindo experiência prática e 1 ano de associação na academia.',
+        'O Certificate III em Fitness (Online) é oferecido em 3 meses, totalizando 12 semanas, incluindo experiência prática e 1 ano de associação na academia.',
     },
     studentSupport: {
       title: 'Apoio ao Estudante',
@@ -535,11 +535,11 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
     },
   },
 
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseDuration: {
       title: 'Duração do Curso',
       description:
-        'O Certificate IV em Fitness (Rota Rápida) é oferecido em 3 meses, totalizando 12 semanas, incluindo experiência prática e 1 ano de associação na academia.',
+        'O Certificate IV em Fitness (Online) é oferecido em 3 meses, totalizando 12 semanas, incluindo experiência prática e 1 ano de associação na academia.',
     },
     studentSupport: {
       title: 'Apoio ao Estudante',

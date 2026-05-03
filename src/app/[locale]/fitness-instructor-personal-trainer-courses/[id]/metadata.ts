@@ -54,35 +54,32 @@ const courseMetadata: {
       'Australia',
     ],
   },
-  'certificate-iii-in-fitness-fast-track': {
-    title: 'Certificate III in Fitness (Fast Track)',
+  'certificate-iii-in-fitness-online': {
+    title: 'Certificate III in Fitness (Online)',
     description:
-      'Accelerated fitness instructor program. Complete your Certificate III in Fitness qualification in a condensed timeframe with our intensive fast track course.',
+      'Start your career in fitness online with SIS30321: flexible study on Moodle, 32 hours placement in a real gym, and job-ready skills as a Gym Instructor and group fitness coach.',
     image: '/courses/fitness/ABM_Fitness_Photos_11.jpg',
     keywords: [
       'certificate III',
       'fitness',
-      'fast track',
-      'accelerated',
+      'online',
+      'online study',
       'gym instructor',
-      'intensive course',
-      'Sydney',
+      'group fitness',
       'Australia',
     ],
   },
-  'certificate-iv-in-fitness-fast-track': {
-    title: 'Certificate IV in Fitness (Fast Track)',
+  'certificate-iv-in-fitness-online': {
+    title: 'Certificate IV in Fitness (Online)',
     description:
-      'Accelerated personal trainer program. Complete your Certificate IV in Fitness qualification in a condensed timeframe with our intensive fast track course.',
+      'SIS40221 online: become a qualified Personal Trainer with real client training, 30h placement, and flexible study on Moodle at ABM Further Education.',
     image: '/courses/fitness/ABM_Fitness_Photos_9.jpg',
     keywords: [
       'certificate IV',
       'fitness',
-      'fast track',
-      'accelerated',
+      'online',
       'personal trainer',
-      'intensive course',
-      'Sydney',
+      'online study',
       'Australia',
     ],
   },

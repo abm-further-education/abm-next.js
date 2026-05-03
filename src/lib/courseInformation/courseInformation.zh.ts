@@ -688,7 +688,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIS50321?distanceFilter=25',
     },
   },
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseCode: 'SIS30321',
     description:
       '开启您的健身教练职业生涯\n\nSIS30321健身三级证书专为那些希望成为团体运动教练或健身房教练的人设计。该资格证书为您提供计划和提供团体运动课程以及为个人创建健身房计划的技能。\n\n您将在结构化和受监督的环境中工作，如健身中心、健身房和社区休闲设施。\n\n这个资格证书可以带您去哪里？\n本课程提供直接就业途径：\n– 健身中心和健身房\n– 休闲和社区中心\n– 健康与保健俱乐部',
@@ -696,18 +696,14 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     entryRequirement: '您能够参加健身活动。',
     deliveryMode: {
       title: '授课方式',
-      mode: '面授',
+      mode: '在线',
     },
     deliverySite: {
-      title: '授课地点：',
+      title: '授课方式：',
       locations: [
         {
-          type: 'ABM校区',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: '实践',
-          address: '私人健身房用于实践培训和评估',
+          type: '全程在线',
+          address: '理论及课程作业在线完成。实践培训与评估在约定的认可场地进行。',
         },
       ],
     },
@@ -716,7 +712,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         '法规与标准\n该资格证书中获得的技能必须根据联邦和州/领地立法、澳大利亚行业标准和行业规范进行应用。\n\n今天就迈出健身职业的第一步！\n\n* 入学日期将于2026年4月公布。',
     },
   },
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseCode: 'SIS40221',
     description:
       '开启您的健身教练职业生涯\n\nSIS40221健身四级证书专为那些希望成为私人教练和高级健身教练的人设计。该资格证书为您提供计划和提供团体运动课程以及为个人创建健身房计划的技能。\n\n这个资格证书可以带您去哪里？\n本课程提供直接就业途径：\n– 健身中心和健身房\n– 休闲和社区中心\n– 健康与保健俱乐部',
@@ -735,18 +731,14 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     ],
     deliveryMode: {
       title: '授课方式',
-      mode: '面授',
+      mode: '在线',
     },
     deliverySite: {
-      title: '授课地点：',
+      title: '授课方式：',
       locations: [
         {
-          type: 'ABM校区',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: '实践',
-          address: '私人健身房用于实践培训和评估',
+          type: '全程在线',
+          address: '理论及课程作业在线完成。实践培训与评估在约定的认可场地进行。',
         },
       ],
     },

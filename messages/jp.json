@@ -580,7 +580,7 @@
         "requirement": "Year 10 修了相当"
       },
       "fitnessCertIIIFast": {
-        "code": "SIS30321 Certificate III in Fitness (Fast Track)",
+        "code": "SIS30321 Certificate III in Fitness (Online)",
         "requirement": "フィットネス活動に参加できること"
       },
       "fitnessCertIV": {
@@ -588,7 +588,7 @@
         "requirement": "以下のユニット修了：\n• HLTAID011 Provide First Aid（後継可）\n• HLTWHS001 Participate in workplace health and safety\n• SISFFIT032 事前スクリーニング等\n• SISFFIT033 フィットネス評価\n• SISFFIT035 グループ運動計画\n• SISFFIT036 グループ運動指導\n• SISFFIT040 個別ジムプログラム\n• SISFFIT047 解剖生理の活用\n• SISFFIT052 健康的な食習慣の情報提供\n\n加えて Year 12 修了相当"
       },
       "fitnessCertIVFast": {
-        "code": "SIS40221 Certificate IV in Fitness (Fast Track)",
+        "code": "SIS40221 Certificate IV in Fitness (Online)",
         "requirement": "以下のユニット修了：\n• HLTAID011 Provide First Aid（後継可）\n• HLTWHS001 ほか、上記と同様"
       },
       "sportDiploma": {
@@ -750,25 +750,25 @@
     "exploreOtherShortCoursesDesc": "多彩な1日コースで、料理やホスピタリティのスキルを体験しよう。"
   },
   "fullCourses": "全コース",
-  "fastTrack": "短期集中",
+  "fastTrack": "オンライン",
   "fitnessAndSports": "フィットネス＆スポーツ",
   "projectAndProgram": "プロジェクト＆プログラム",
   "hrManagement": "人事マネジメント",
   "fitnessPage": {
     "metadata": {
       "title": "フィットネス＆スポーツ | ABM Further Education",
-      "description": "フィットネスの情熱をキャリアへ。留学生向け・国内向け（短期集中）コースを用意。"
+      "description": "フィットネスの情熱をキャリアへ。留学生向け・国内向け（オンライン）コースを用意。"
     },
     "bannerTitle": "フィットネス＆スポーツ",
     "heading": "情熱を\nキャリアへ",
     "description": "グループレッスンの指導、個別トレーニング設計、ジム／屋外／オンラインで活躍できるスキルを習得。初心者から上級者まで、柔軟なプログラムで成功を後押しします。",
     "forInternational": "留学生向け",
-    "forDomestic": "国内（短期集中）",
+    "forDomestic": "フィットネスオンラインコース",
     "cert3": "Certificate III in Fitness",
     "cert4": "Certificate IV in Fitness",
     "diploma": "Diploma in Sport (Coaching)",
-    "cert3Fast": "Certificate III in Fitness（短期）",
-    "cert4Fast": "Certificate IV in Fitness（短期）"
+    "cert3Fast": "Certificate III in Fitness（Online）",
+    "cert4Fast": "Certificate IV in Fitness（Online）"
   },
   "healthPage": {
     "metadata": {

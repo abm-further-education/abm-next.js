@@ -1132,13 +1132,13 @@ const staticCourseUnitsMap: {
   'sis30321-certificate-iii-in-fitness': [
     { groupTitle: '', groupIndex: 0, units: CERTIII_FITNESS_UNITS as CourseUnitItem[] },
   ],
-  'certificate-iv-in-fitness-fast-track': [
+  'certificate-iv-in-fitness-online': [
     { groupTitle: '', groupIndex: 0, units: CERTIV_FITNESS_UNITS as CourseUnitItem[] },
   ],
   'sis50321-diploma-of-sport': [
     { groupTitle: '', groupIndex: 0, units: DIPLOMA_SPORT_UNITS as CourseUnitItem[] },
   ],
-  'certificate-iii-in-fitness-fast-track': [
+  'certificate-iii-in-fitness-online': [
     { groupTitle: '', groupIndex: 0, units: CERTIV_FITNESS_FAST_UNITS as CourseUnitItem[] },
   ],
   'bsb40120-certificate-iv-in-business': [

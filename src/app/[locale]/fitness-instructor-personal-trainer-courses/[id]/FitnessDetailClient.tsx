@@ -3,22 +3,28 @@
 import Banner from '@/components/common/Banner';
 import Gallery from '@/components/common/Gallery';
 import CourseDetail from '@/domains/courses/components/CourseDetail';
+import FitnessOnlineCourseDetail, {
+  isFitnessOnlineCourseDetail,
+} from '@/domains/courses/components/FitnessOnlineCourseDetail';
 import CourseDetailMenu from '@/domains/courses/components/CourseDetailMenu';
 import CourseInformation from '@/domains/courses/components/CourseInformation';
 import Units from '@/domains/courses/components/Units';
+import Testimonial from '@/domains/main/components/Testimonial';
 import React from 'react';
-import type { CourseDetailInfo, CourseInformationInfo, CourseUnitGroup } from '@/types/course';
+import type {
+  CourseDetailInfo,
+  CourseInformationInfo,
+  CourseUnitGroup,
+} from '@/types/course';
 
-const menuItems = ['Course Information', 'Course Detail', 'Units'];
+const baseMenuItems = ['Course Information', 'Course Detail', 'Units'];
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sis30321-certificate-iii-in-fitness': 'Certificate III in Fitness',
   'sis40221-certificate-iv-in-fitness': 'Certificate IV in Fitness',
   'sis50321-diploma-of-sport': 'Diploma of Sport (Coaching)',
-  'certificate-iv-in-fitness-fast-track':
-    'Certificate IV in Fitness (Fast Track)',
-  'certificate-iii-in-fitness-fast-track':
-    'Certificate III in Fitness (Fast Track)',
+  'certificate-iv-in-fitness-online': 'Certificate IV in Fitness (Online)',
+  'certificate-iii-in-fitness-online': 'Certificate III in Fitness (Online)',
 };
 
 const mappingCourseImage: { [key: string]: string } = {
@@ -27,9 +33,9 @@ const mappingCourseImage: { [key: string]: string } = {
   'sis40221-certificate-iv-in-fitness':
     '/courses/fitness/ABM_Fitness_Photos_10.jpg',
   'sis50321-diploma-of-sport': '/courses/fitness/diploma-of-sport.png',
-  'certificate-iv-in-fitness-fast-track':
+  'certificate-iv-in-fitness-online':
     '/courses/fitness/ABM_Fitness_Photos_9.jpg',
-  'certificate-iii-in-fitness-fast-track':
+  'certificate-iii-in-fitness-online':
     '/courses/fitness/ABM_Fitness_Photos_11.jpg',
 };
 
@@ -39,6 +45,7 @@ interface FitnessDetailClientProps {
   courseDetails: CourseDetailInfo | null;
   courseInformation: CourseInformationInfo | null;
   courseUnits?: CourseUnitGroup[] | null;
+  testimonialImages?: string[];
 }
 
 export default function FitnessDetailClient({
@@ -46,12 +53,17 @@ export default function FitnessDetailClient({
   courseDetails,
   courseInformation,
   courseUnits,
+  testimonialImages = [],
 }: FitnessDetailClientProps) {
-
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
     return menuItem.toLowerCase().replace(/\s+/g, '-');
   };
+
+  const menuItems =
+    testimonialImages.length > 0
+      ? [...baseMenuItems, 'Testimonials']
+      : baseMenuItems;
 
   return (
     <div className="pb-40">
@@ -59,8 +71,10 @@ export default function FitnessDetailClient({
         slides={[
           {
             imgPath:
-              mappingCourseImage[id] || '/courses/fitness/ABM_Fitness_Photos_13.jpg',
-            title: `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
+              mappingCourseImage[id] ||
+              '/courses/fitness/ABM_Fitness_Photos_13.jpg',
+            title:
+              `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
             content: '',
           },
         ]}
@@ -74,7 +88,14 @@ export default function FitnessDetailClient({
         <CourseInformation id={id} initialData={courseInformation} />
       </section>
       <section id={getSectionId('Course Detail')}>
-        <CourseDetail courseInfo={courseDetails || {}} courseId={id} />
+        {isFitnessOnlineCourseDetail(id) ? (
+          <FitnessOnlineCourseDetail
+            courseInfo={courseDetails || {}}
+            courseId={id}
+          />
+        ) : (
+          <CourseDetail courseInfo={courseDetails || {}} courseId={id} />
+        )}
       </section>
       {/* Units Section */}
       <section
@@ -92,6 +113,16 @@ export default function FitnessDetailClient({
           images={images}
         />
       </section>
+      {testimonialImages.length > 0 && (
+        <section id={getSectionId('Testimonials')}>
+          <Testimonial
+            images={testimonialImages}
+            variant={
+              isFitnessOnlineCourseDetail(id) ? 'fitnessOnline' : 'default'
+            }
+          />
+        </section>
+      )}
     </div>
   );
 }

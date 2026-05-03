@@ -46,12 +46,12 @@ export const fitnessMenu = [
     href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
   },
   {
-    title: 'Certificate III in Fitness (Fast Track)',
-    href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
+    title: 'Certificate III in Fitness (Online)',
+    href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
   },
   {
-    title: 'Certificate IV in Fitness (Fast Track)',
-    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
+    title: 'Certificate IV in Fitness (Online)',
+    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
   },
 ];
 
@@ -177,12 +177,12 @@ export const shortCourseMenu = [
     href: 'https://online.abm.edu.au/',
     items: [
       {
-        title: 'Certificate III in Fitness (Fast Track)',
-        href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
+        title: 'Certificate III in Fitness (Online)',
+        href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
       },
       {
-        title: 'Certificate IV in Fitness (Fast Track)',
-        href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
+        title: 'Certificate IV in Fitness (Online)',
+        href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
       },
       {
         title: 'Barista Online Course',
@@ -276,12 +276,12 @@ export interface MenuSection {
 /** Courses → Online Courses (desktop nav, mobile courses menu). */
 export const onlineCoursesNavItems: MenuItem[] = [
   {
-    title: 'Certificate III in Fitness (Fast Track)',
-    href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
+    title: 'Certificate III in Fitness (Online)',
+    href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
   },
   {
-    title: 'Certificate IV in Fitness (Fast Track)',
-    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
+    title: 'Certificate IV in Fitness (Online)',
+    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
   },
   {
     title: 'Barista Online Course',
@@ -361,12 +361,12 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
           },
           {
-            title: 'Certificate III in Fitness (Fast Track)',
-            href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track',
+            title: 'Certificate III in Fitness (Online)',
+            href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
           },
           {
-            title: 'Certificate IV in Fitness (Fast Track)',
-            href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track',
+            title: 'Certificate IV in Fitness (Online)',
+            href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
           },
         ],
       },

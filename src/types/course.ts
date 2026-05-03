@@ -20,7 +20,7 @@ export type CourseCategory =
   | 'short-course-online';
 
 // Course types
-export type CourseType = 'full-course' | 'short-course' | 'fast-track';
+export type CourseType = 'full-course' | 'short-course' | 'fast-track' | 'online';
 
 // Course levels
 export type CourseLevel =
@@ -291,6 +291,7 @@ export interface CourseInformationInfo {
   courseCode?: string;
   cricosCode?: string;
   duration?: string;
+  durationNote?: string;
   entryRequirement?: string | string[];
   deliveryMode?: {
     title: string;

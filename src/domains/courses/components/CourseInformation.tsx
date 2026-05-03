@@ -24,6 +24,8 @@ export interface CourseInformationInfo {
   courseCode?: string;
   cricosCode?: string;
   duration?: string;
+  /** Shown under duration in italic text-sm (e.g. re-enrolment policy). */
+  durationNote?: string;
   entryRequirement?: string | string[];
   deliveryMode?: {
     title: string;
@@ -105,10 +107,19 @@ function CourseInformationContent({
             </div>
           )}
           {courseInfo.duration && (
-            <div className="mb-8 flex items-center gap-x-5">
-              <Calendar className="w-22 h-22 text-primary" />
-              <h3 className={titleStyle}>Duration:</h3>
-              <span>{courseInfo.duration}</span>
+            <div className="mb-8 flex items-start gap-x-5">
+              <Calendar className="w-22 h-22 shrink-0 text-primary mt-0.5" />
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-center gap-x-5">
+                  <h3 className={titleStyle}>Duration:</h3>
+                  <span>{courseInfo.duration}</span>
+                </div>
+                {courseInfo.durationNote ? (
+                  <p className="mt-1.5 text-sm italic text-neutral-600">
+                    {courseInfo.durationNote}
+                  </p>
+                ) : null}
+              </div>
             </div>
           )}
           {courseInfo.entryRequirement && (
@@ -262,8 +273,8 @@ function CourseInformation({ id, initialData }: CourseInformationWrapperProps) {
     'industry-placement-work-placement',
     'industry-placement-hospitality-management',
     'fss',
-    'certificate-iv-in-fitness-fast-track',
-    'certificate-iii-in-fitness-fast-track',
+    'certificate-iv-in-fitness-online',
+    'certificate-iii-in-fitness-online',
   ];
 
   const shouldHideButtons = hideButtonsForCourses.includes(id);

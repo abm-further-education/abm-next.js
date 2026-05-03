@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Fitness & Sports Courses | ABM Further Education',
   description:
-    'Turn your passion for fitness into a career with ABM Further Education. Explore our fitness and sports courses designed for both international students and domestic fast-track options.',
+    'Turn your passion for fitness into a career with ABM Further Education. Explore our fitness and sports courses designed for both international students and domestic online options.',
 };
 
 function FitnessPage() {
@@ -75,13 +75,13 @@ function FitnessPage() {
           <Card
             imgPath="/courses/fitness/fitness_2.png"
             title={t('cert3Fast')}
-            link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-fast-track"
+            link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online"
             className="w-300 md:w-530"
           />
           <Card
             imgPath="/courses/fitness/fitness_3.png"
             title={t('cert4Fast')}
-            link="/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-fast-track"
+            link="/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online"
             className="w-300 md:w-530"
           />
         </div>

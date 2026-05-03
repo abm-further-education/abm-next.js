@@ -780,7 +780,7 @@ export const courseInformationData_pt: {
     },
   },
 
-  'certificate-iii-in-fitness-fast-track': {
+  'certificate-iii-in-fitness-online': {
     courseCode: 'SIS30321',
     description:
       'Comece sua carreira como Instrutor de Fitness\n\nO Certificado III em Fitness é projetado para quem deseja atuar como Instrutor de Exercícios em Grupo ou Instrutor de Academia. Esta qualificação capacita você a planejar e ministrar sessões em grupo e criar programas em academia para indivíduos, com instrução personalizada e monitoramento contínuo limitados.\n\nVocê atuará em ambientes estruturados e supervisionados, como academias, centros de lazer e espaços comunitários. Como instrutor, utilizará discrição e julgamento ao conduzir sessões e interagir com clientes, seguindo políticas e procedimentos organizacionais.\n\nOnde esta qualificação pode te levar?\nEmprego direto em:\n– Academias e Centros de Fitness\n– Centros de Lazer e Comunitários\n– Clubes de Saúde & Bem-Estar',
@@ -788,18 +788,15 @@ export const courseInformationData_pt: {
     entryRequirement: 'Você é capaz de participar de atividades de fitness.',
     deliveryMode: {
       title: 'Modalidade de oferta',
-      mode: 'Presencial',
+      mode: 'Online',
     },
     deliverySite: {
-      title: 'Local de oferta:',
+      title: 'Oferta:',
       locations: [
         {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Prática',
-          address: 'Academia privada para treino e avaliação práticos',
+          type: 'Integralmente online',
+          address:
+            'Teoria e atividades online. Treino prático e avaliações em instalações aprovadas conforme combinado.',
         },
       ],
     },
@@ -828,7 +825,7 @@ export const courseInformationData_pt: {
     },
   },
 
-  'certificate-iv-in-fitness-fast-track': {
+  'certificate-iv-in-fitness-online': {
     courseCode: 'SIS40221',
     description:
       'Comece sua carreira como Instrutor de Fitness (Avançado)\n\nO Certificado IV em Fitness é projetado para quem deseja atuar como Personal Trainer e Instrutor Avançado. Você aprenderá a planejar e ministrar sessões em grupo e criar programas de academia para indivíduos, com instrução personalizada e monitoramento contínuo limitados.\n\nVocê atuará em ambientes estruturados e supervisionados (academias, centros de lazer e espaços comunitários). Como instrutor, utilizará discrição e julgamento, seguindo políticas e procedimentos da organização.\n\nOnde esta qualificação pode te levar?\nEmprego direto em:\n– Academias e Centros de Fitness\n– Centros de Lazer e Comunitários\n– Clubes de Saúde & Bem-Estar',
@@ -847,18 +844,15 @@ export const courseInformationData_pt: {
     ],
     deliveryMode: {
       title: 'Modalidade de oferta',
-      mode: 'Presencial',
+      mode: 'Online',
     },
     deliverySite: {
-      title: 'Local de oferta:',
+      title: 'Oferta:',
       locations: [
         {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Prática',
-          address: 'Academia privada para treino e avaliação práticos',
+          type: 'Integralmente online',
+          address:
+            'Teoria e atividades online. Treino prático e avaliações em instalações aprovadas conforme combinado.',
         },
       ],
     },
