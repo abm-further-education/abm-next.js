@@ -180,7 +180,7 @@ export default function FitnessOnlineCourseDetail({
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-b from-slate-50/90 via-white to-gray-50/80">
-      <div className="max-w-6xl mx-auto px-20 md:px-10">
+      <div className="max-w-[1600px] mx-auto px-20 md:px-80">
         <div className="mb-10 md:mb-12 text-center md:text-left">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary bg-orange-50 px-12 py-1.5 text-xs font-medium text-orange-800 mb-4">
             <MonitorPlay className="h-3.5 w-3.5 shrink-0" aria-hidden />
