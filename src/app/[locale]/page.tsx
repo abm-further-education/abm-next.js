@@ -74,15 +74,6 @@ export default async function Home({
         <Banner
           slides={[
             {
-              imgPath: '/open-day-banner_2.png',
-              title: t('openDay.bannerTitle'),
-              content: t('openDay.bannerContent'),
-              linkButton: {
-                href: '/open-day',
-                text: t('openDay.bannerCta'),
-              },
-            },
-            {
               imgPath: '/home/HSA_2.png',
               title: t('HomePage.banners.hsa.title'),
               content: t('HomePage.banners.hsa.content'),
