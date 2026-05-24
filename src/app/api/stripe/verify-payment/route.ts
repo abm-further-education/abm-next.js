@@ -27,13 +27,17 @@ export async function GET(request: NextRequest) {
     }
 
     // 결제 정보 반환
+    const firstName = session.metadata?.firstName || '';
+    const lastName = session.metadata?.lastName || '';
+    const customerName = [firstName, lastName].filter(Boolean).join(' ');
+
     const paymentDetails = {
       courseSlug: session.metadata?.courseSlug,
       courseName: session.metadata?.courseName,
       selectedDate: session.metadata?.selectedDate,
-      selectedType: session.metadata?.selectedType,
+      customerName: customerName || undefined,
       customerEmail: session.customer_details?.email,
-      amountPaid: session.amount_total ? session.amount_total / 100 : 0, // 센트를 달러로 변환
+      amountPaid: session.amount_total ? session.amount_total / 100 : 0,
     };
 
     return NextResponse.json(paymentDetails);

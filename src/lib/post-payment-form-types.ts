@@ -1,0 +1,113 @@
+import type {
+  PostPaymentFormData,
+  PostPaymentFormPaymentDetails,
+} from '@/lib/post-payment-form-pdf';
+
+export type YesNoAnswer = 'Yes' | 'No' | '';
+export type GenderAnswer = 'Male' | 'Female' | 'Other' | 'Prefer not to say' | '';
+export type EnglishProficiency = 'Very well' | 'Well' | 'Not well' | 'Not at all' | '';
+
+export interface PostPaymentComplianceFormState {
+  gender: GenderAnswer;
+  completedFoodSafetyUnits: YesNoAnswer;
+  usi: string;
+  australianCitizen: YesNoAnswer;
+  countryOfBirth: string;
+  aboriginalOrTorresStraitIslander: YesNoAnswer;
+  englishProficiency: EnglishProficiency;
+  hasDisability: YesNoAnswer;
+  disabilityTypes: string[];
+  disabilityOther: string;
+  highestCompletedSchoolLevel: string;
+  stillAttendingSchool: YesNoAnswer;
+  highestQualificationCompleted: string;
+  currentEmploymentStatus: string;
+  mainReasonForCourse: string;
+  currentOrFormerAbmStudent: YesNoAnswer;
+  abmStudentId: string;
+  acceptedPrivacyNoticeAndDeclaration: boolean;
+  signature: string;
+  signatureDate: string;
+}
+
+export const INITIAL_POST_PAYMENT_COMPLIANCE_FORM: PostPaymentComplianceFormState =
+  {
+    gender: '',
+    completedFoodSafetyUnits: '',
+    usi: '',
+    australianCitizen: '',
+    countryOfBirth: '',
+    aboriginalOrTorresStraitIslander: '',
+    englishProficiency: '',
+    hasDisability: '',
+    disabilityTypes: [],
+    disabilityOther: '',
+    highestCompletedSchoolLevel: '',
+    stillAttendingSchool: '',
+    highestQualificationCompleted: '',
+    currentEmploymentStatus: '',
+    mainReasonForCourse: '',
+    currentOrFormerAbmStudent: '',
+    abmStudentId: '',
+    acceptedPrivacyNoticeAndDeclaration: false,
+    signature: '',
+    signatureDate: '',
+  };
+
+export function parsePostPaymentFormPayload(payload: Record<string, unknown>): {
+  sessionId: string;
+  paymentDetails: PostPaymentFormPaymentDetails;
+  formData: PostPaymentFormData;
+} {
+  const paymentDetails = (payload.paymentDetails || {}) as PostPaymentFormPaymentDetails;
+
+  return {
+    sessionId: typeof payload.sessionId === 'string' ? payload.sessionId : '',
+    paymentDetails,
+    formData: {
+      gender: String(payload.gender || ''),
+      completedFoodSafetyUnits: String(payload.completedFoodSafetyUnits || ''),
+      usi: String(payload.usi || ''),
+      australianCitizen: String(payload.australianCitizen || ''),
+      countryOfBirth: String(payload.countryOfBirth || ''),
+      aboriginalOrTorresStraitIslander: String(
+        payload.aboriginalOrTorresStraitIslander || '',
+      ),
+      englishProficiency: String(payload.englishProficiency || ''),
+      hasDisability: String(payload.hasDisability || ''),
+      disabilityTypes: Array.isArray(payload.disabilityTypes)
+        ? payload.disabilityTypes.map(String)
+        : [],
+      disabilityOther: String(payload.disabilityOther || ''),
+      highestCompletedSchoolLevel: String(
+        payload.highestCompletedSchoolLevel || '',
+      ),
+      stillAttendingSchool: String(payload.stillAttendingSchool || ''),
+      highestQualificationCompleted: String(
+        payload.highestQualificationCompleted || '',
+      ),
+      currentEmploymentStatus: String(payload.currentEmploymentStatus || ''),
+      mainReasonForCourse: String(payload.mainReasonForCourse || ''),
+      currentOrFormerAbmStudent: String(
+        payload.currentOrFormerAbmStudent || '',
+      ),
+      abmStudentId: String(payload.abmStudentId || ''),
+      acceptedPrivacyNoticeAndDeclaration:
+        payload.acceptedPrivacyNoticeAndDeclaration === true,
+      signature: String(payload.signature || ''),
+      signatureDate: String(payload.signatureDate || ''),
+    },
+  };
+}
+
+export function validatePostPaymentComplianceForm(
+  form: PostPaymentComplianceFormState,
+): string | null {
+  if (!form.acceptedPrivacyNoticeAndDeclaration) {
+    return 'Please agree to the privacy notice and student declaration before submitting.';
+  }
+  if (!form.signature.trim() || !form.signatureDate) {
+    return 'Please complete signature and date.';
+  }
+  return null;
+}
