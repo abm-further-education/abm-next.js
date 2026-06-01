@@ -39,7 +39,6 @@ export default function PaymentSuccessPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [submittingForm, setSubmittingForm] = useState(false);
-  const [previewingPdf, setPreviewingPdf] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const [additionalForm, setAdditionalForm] =
@@ -129,60 +128,6 @@ export default function PaymentSuccessPage() {
       );
     } finally {
       setSubmittingForm(false);
-    }
-  };
-
-  const handlePreviewPdf = async () => {
-    if (!paymentDetails) {
-      setFormError('Payment details are not available for PDF preview.');
-      return;
-    }
-
-    setFormError(null);
-    setPreviewingPdf(true);
-
-    const resolvedAdditionalForm = resolveAdditionalForm();
-    const validationError = validatePostPaymentComplianceForm(
-      resolvedAdditionalForm,
-      {
-        requireFoodSafetyUnits: isFoodSafetyCourse(paymentDetails.courseName),
-      },
-    );
-    if (validationError) {
-      setAdditionalForm(resolvedAdditionalForm);
-      setFormError(validationError);
-      setPreviewingPdf(false);
-      return;
-    }
-    setAdditionalForm(resolvedAdditionalForm);
-
-    try {
-      const response = await fetch(
-        '/api/short-course-post-payment-form/preview-pdf',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(buildSubmissionPayload(resolvedAdditionalForm)),
-        },
-      );
-
-      if (!response.ok) {
-        const result = await response.json().catch(() => null);
-        throw new Error(result?.error || 'Failed to generate preview PDF.');
-      }
-
-      const blob = await response.blob();
-      const objectUrl = URL.createObjectURL(blob);
-      window.open(objectUrl, '_blank', 'noopener,noreferrer');
-      setTimeout(() => URL.revokeObjectURL(objectUrl), 60_000);
-    } catch (previewError) {
-      setFormError(
-        previewError instanceof Error
-          ? previewError.message
-          : 'Failed to generate preview PDF.',
-      );
-    } finally {
-      setPreviewingPdf(false);
     }
   };
 
@@ -311,25 +256,15 @@ export default function PaymentSuccessPage() {
                   <p className="text-red-500 text-sm">{formError}</p>
                 )}
 
-                <div className="flex flex-wrap gap-10">
-                  <button
-                    type="submit"
-                    disabled={submittingForm}
-                    className="bg-primary-bk text-white px-20 py-10 font-semibold text-sm disabled:opacity-70"
-                  >
-                    {submittingForm
-                      ? 'Submitting...'
-                      : 'Submit additional form'}
-                  </button>
-                  <button
-                    type="button"
-                    disabled={previewingPdf}
-                    onClick={handlePreviewPdf}
-                    className="bg-white border border-primary-bk text-primary-bk px-20 py-10 font-semibold text-sm disabled:opacity-70"
-                  >
-                    {previewingPdf ? 'Generating PDF...' : 'Preview PDF (temp)'}
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  disabled={submittingForm}
+                  className="bg-primary-bk text-white px-20 py-10 font-semibold text-sm disabled:opacity-70"
+                >
+                  {submittingForm
+                    ? 'Submitting...'
+                    : 'Submit additional form'}
+                </button>
               </form>
             )}
           </div>
