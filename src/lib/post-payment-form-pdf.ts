@@ -59,6 +59,13 @@ const LOGO_MAX_WIDTH = 240;
 const LOGO_MAX_HEIGHT = 54;
 const BODY_TEXT_COLOR = rgb(51 / 255, 50 / 255, 50 / 255);
 
+export function formatAudPaymentAmount(amount?: number | null): string | null {
+  if (amount == null || Number.isNaN(amount) || amount <= 0) {
+    return null;
+  }
+  return `$${amount.toFixed(2)} AUD`;
+}
+
 export function buildPostPaymentPdfTitle(courseName?: string) {
   const normalizedCourseName = (courseName || '')
     .replace(/[^\p{L}\p{N}\p{P}\p{Zs}]/gu, '')

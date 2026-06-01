@@ -4,10 +4,22 @@ import {
   buildPostPaymentPdfTitle,
   buildPostPaymentFormPdf,
   buildPostPaymentPdfSummaryRows,
+  formatAudPaymentAmount,
 } from './post-payment-form-pdf';
 
 const SAMPLE_SIGNATURE_DATA_URL =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9WnR9W4AAAAASUVORK5CYII=';
+
+describe('formatAudPaymentAmount', () => {
+  it('formats positive amounts in AUD', () => {
+    expect(formatAudPaymentAmount(192.65)).toBe('$192.65 AUD');
+  });
+
+  it('returns null for missing or zero amounts', () => {
+    expect(formatAudPaymentAmount(0)).toBeNull();
+    expect(formatAudPaymentAmount(undefined)).toBeNull();
+  });
+});
 
 describe('buildPostPaymentFormPdf', () => {
   it('builds a course-specific PDF title', () => {

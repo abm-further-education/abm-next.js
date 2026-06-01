@@ -2,6 +2,7 @@ import nodemailer from 'nodemailer';
 import path from 'path';
 import {
   buildPostPaymentFormPdf,
+  formatAudPaymentAmount,
   type PostPaymentFormData,
   type PostPaymentFormPaymentDetails,
 } from '@/lib/post-payment-form-pdf';
@@ -67,6 +68,8 @@ function buildSubmissionEmailHtml({
   const subjectCourse = paymentDetails.courseName || 'Short course';
   const subjectEmail = paymentDetails.customerEmail || 'No email provided';
   const subjectName = paymentDetails.customerName || 'Not provided';
+  const amountPaidLabel =
+    formatAudPaymentAmount(paymentDetails.amountPaid) ?? 'Not provided';
 
   return `
     <h2>Post-Payment Booking Form Submission</h2>
@@ -76,6 +79,7 @@ function buildSubmissionEmailHtml({
     <p><strong>Course:</strong> ${subjectCourse}</p>
     <p><strong>Date:</strong> ${paymentDetails.selectedDate || 'Not provided'}</p>
     <p><strong>Email:</strong> ${subjectEmail}</p>
+    <p><strong>Amount Paid:</strong> ${amountPaidLabel}</p>
     <hr/>
     <h3>Third Form Data</h3>
     <p><strong>Gender:</strong> ${formData.gender || 'Not provided'}</p>
@@ -94,6 +98,10 @@ function buildStudentConfirmationEmailHtml(
   const courseName = paymentDetails.courseName || 'your course';
   const firstName = buildStudentFirstName(paymentDetails.customerName);
   const selectedDate = paymentDetails.selectedDate || 'Not provided';
+  const amountPaidLabel = formatAudPaymentAmount(paymentDetails.amountPaid);
+  const amountPaidHtml = amountPaidLabel
+    ? `<p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Amount Paid:</strong> ${amountPaidLabel}</p>`
+    : '';
 
   return `
     <!DOCTYPE html>
@@ -124,6 +132,7 @@ function buildStudentConfirmationEmailHtml(
               <p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Course:</strong> ${courseName}</p>
               <p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Date:</strong> ${selectedDate}</p>
               <p style="margin:10px 0;color:#333333;font-size:16px;"><strong>Email:</strong> ${paymentDetails.customerEmail}</p>
+              ${amountPaidHtml}
             </div>
           </div>
 

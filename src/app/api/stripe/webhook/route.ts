@@ -4,6 +4,7 @@ import { getServerStripe } from '@/lib/stripe';
 import nodemailer from 'nodemailer';
 import { supabaseServer } from '@/lib/supabase-server';
 import { getShortCourseCapacityStatus } from '@/lib/short-course-capacity';
+import { formatAudPaymentAmount } from '@/lib/post-payment-form-pdf';
 import Stripe from 'stripe';
 
 export const runtime = 'nodejs';
@@ -62,7 +63,9 @@ export async function POST(req: NextRequest) {
           'SMTP_PASS',
           'FROM_EMAIL',
         ]); // 메일 보낼 때만
-        await sendBookingEmails(metadata);
+        await sendBookingEmails(metadata, {
+          amountPaid: session.amount_total ? session.amount_total / 100 : 0,
+        });
       } catch (e) {
         console.error('[MAIL] send failed', e);
       }
@@ -158,7 +161,10 @@ async function saveBookingToDatabase(
   }
 }
 
-async function sendBookingEmails(metadata: Record<string, string>) {
+async function sendBookingEmails(
+  metadata: Record<string, string>,
+  payment: { amountPaid: number },
+) {
   try {
     const {
       firstName,
@@ -175,6 +181,8 @@ async function sendBookingEmails(metadata: Record<string, string>) {
       selectedType,
       courseLocation,
     } = metadata;
+    const amountPaidLabel =
+      formatAudPaymentAmount(payment.amountPaid) ?? 'Not provided';
 
     // SMTP 환경변수 체크
     if (
@@ -230,6 +238,7 @@ async function sendBookingEmails(metadata: Record<string, string>) {
                     ? `<p style="margin: 8px 0; color: #333333;"><strong>Course Type:</strong> ${selectedType}</p>`
                     : ''
                 }
+                <p style="margin: 8px 0; color: #333333;"><strong>Amount Paid:</strong> ${amountPaidLabel}</p>
               </div>
 
               <!-- Customer Information -->
@@ -316,6 +325,7 @@ async function sendBookingEmails(metadata: Record<string, string>) {
                       courseLocation ||
                       '242 Castlereagh Street Sydney NSW 2000 Australia'
                     }</p>
+                    <p style="margin: 10px 0; color: #333333; font-size: 16px;"><strong>Amount Paid:</strong> ${amountPaidLabel}</p>
                   </div>
                 </div>
                 
