@@ -20,6 +20,9 @@ export default async function FSSPage({
   const normalizedLocale = locale || 'en';
   const data = await getShortCourseById('fss', normalizedLocale);
   const fallbackData = getShortCourseData(normalizedLocale).fss;
+  const mergedData = data
+    ? { ...data, dates: fallbackData.dates }
+    : fallbackData;
 
   return (
     <div>
@@ -35,7 +38,7 @@ export default async function FSSPage({
           <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <FSS data={data ?? fallbackData} courseId="fss" />
+      <FSS data={mergedData} courseId="fss" />
     </div>
   );
 }

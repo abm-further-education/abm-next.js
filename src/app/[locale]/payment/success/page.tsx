@@ -9,6 +9,7 @@ import CheckEmoji from '@/components/common/CheckEmoji';
 import PostPaymentComplianceFormFields from '@/components/forms/PostPaymentComplianceFormFields';
 import {
   INITIAL_POST_PAYMENT_COMPLIANCE_FORM,
+  isFoodSafetyCourse,
   validatePostPaymentComplianceForm,
   type PostPaymentComplianceFormState,
 } from '@/lib/post-payment-form-types';
@@ -80,7 +81,11 @@ export default function PaymentSuccessPage() {
     e.preventDefault();
     setFormError(null);
 
-    const validationError = validatePostPaymentComplianceForm(additionalForm);
+    const validationError = validatePostPaymentComplianceForm(additionalForm, {
+      requireFoodSafetyUnits: paymentDetails
+        ? isFoodSafetyCourse(paymentDetails.courseName)
+        : false,
+    });
     if (validationError) {
       setFormError(validationError);
       return;
@@ -261,6 +266,11 @@ export default function PaymentSuccessPage() {
                   form={additionalForm}
                   onChange={(updater) =>
                     setAdditionalForm((prev) => updater(prev))
+                  }
+                  showFoodSafetyUnitsQuestion={
+                    paymentDetails
+                      ? isFoodSafetyCourse(paymentDetails.courseName)
+                      : false
                   }
                 />
 

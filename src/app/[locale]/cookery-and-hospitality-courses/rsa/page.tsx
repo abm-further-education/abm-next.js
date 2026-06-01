@@ -20,6 +20,9 @@ export default async function RSAPage({
   const normalizedLocale = locale || 'en';
   const data = await getShortCourseById('rsa', normalizedLocale);
   const fallbackData = getShortCourseData(normalizedLocale).rsa;
+  const mergedData = data
+    ? { ...data, dates: fallbackData.dates }
+    : fallbackData;
 
   return (
     <div>
@@ -35,7 +38,7 @@ export default async function RSAPage({
           <div className="bg-neutral-900/50 w-full h-screen md:h-700 absolute z-10" />
         }
       />
-      <RSA data={data ?? fallbackData} courseId="rsa" />
+      <RSA data={mergedData} courseId="rsa" />
     </div>
   );
 }

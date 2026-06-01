@@ -489,33 +489,33 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
-        date: '2025-08-08',
-        displayDate: '8월 8일',
+        date: '2026-06-26',
+        displayDate: '2026년 6월 26일',
         time: '오전 9:00 - 오후 5:00',
       },
       {
-        date: '2025-08-29',
-        displayDate: '8월 29일',
+        date: '2026-07-17',
+        displayDate: '2026년 7월 17일',
         time: '오전 9:00 - 오후 5:00',
       },
       {
-        date: '2025-09-15',
-        displayDate: '9월 15일',
+        date: '2026-08-21',
+        displayDate: '2026년 8월 21일',
         time: '오전 9:00 - 오후 5:00',
       },
       {
-        date: '2025-10-17',
-        displayDate: '10월 17일',
+        date: '2026-09-25',
+        displayDate: '2026년 9월 25일',
         time: '오전 9:00 - 오후 5:00',
       },
       {
-        date: '2025-11-21',
-        displayDate: '11월 21일',
+        date: '2026-10-23',
+        displayDate: '2026년 10월 23일',
         time: '오전 9:00 - 오후 5:00',
       },
       {
-        date: '2025-12-12',
-        displayDate: '12월 12일',
+        date: '2026-11-20',
+        displayDate: '2026년 11월 20일',
         time: '오전 9:00 - 오후 5:00',
       },
     ],
@@ -608,16 +608,6 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
-        date: '2026-03-25',
-        displayDate: '2026년 3월 25일',
-        time: '9:00am - 4:30pm (점심시간 30분 포함)',
-      },
-      {
-        date: '2026-04-29',
-        displayDate: '2026년 4월 29일',
-        time: '9:00am - 4:30pm (점심시간 30분 포함)',
-      },
-      {
         date: '2026-05-27',
         displayDate: '2026년 5월 27일',
         time: '9:00am - 4:30pm (점심시간 30분 포함)',
@@ -625,6 +615,21 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
       {
         date: '2026-07-01',
         displayDate: '2026년 7월 1일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
+      },
+      {
+        date: '2026-08-26',
+        displayDate: '2026년 8월 26일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
+      },
+      {
+        date: '2026-10-07',
+        displayDate: '2026년 10월 7일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '2026년 11월 25일',
         time: '9:00am - 4:30pm (점심시간 30분 포함)',
       },
     ],

@@ -21,6 +21,8 @@ interface FSSProps {
   courseId: string;
 }
 
+const COURSE_CARD_BG_CLASSES = ['bg-orange-50', 'bg-orange-50', 'bg-orange-50'];
+
 function FSS({ data: dataProp, courseId }: FSSProps) {
   const params = useParams();
   const editMode = useEditMode();
@@ -33,7 +35,12 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
     }
   }
   const fallbackData = getShortCourseData(locale).fss;
-  const fssData = dataProp ?? fallbackData;
+  const fssData = dataProp
+    ? { ...dataProp, dates: fallbackData.dates ?? dataProp.dates }
+    : fallbackData;
+  const sortedDates = [...(fssData.dates ?? [])].sort((a, b) =>
+    a.date.localeCompare(b.date),
+  );
 
   if (editMode?.isEditMode && courseId) {
     return (
@@ -44,7 +51,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
   return (
     <div className="container max-w-[1400px] mx-auto px-20 py-40 md:px-80">
       <h2 className="text-2xl font-bold mb-20">{fssData.title}</h2>
-      <div className="grid md:grid-cols-2 gap-20">
+      <div className="grid md:grid-cols-[40%_60%] gap-20">
         <Image
           src="/short-course/fss_1.png"
           alt="FSS"
@@ -93,7 +100,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
               )}
             </p>
           </div>
-          <div className="w-full max-w-sm mt-20">
+          <div className="w-full mt-20">
             {/* <label
               htmlFor="course-date"
               className="block mb-2 text-sm text-gray-700 font-bold"
@@ -118,7 +125,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
             </select> */}
           </div>
 
-          <div className="w-full max-w-sm mt-20">
+          <div className="w-full mt-20">
             {/* <label
               htmlFor="course-date"
               className="block mb-2 text-sm text-gray-700 font-bold"
@@ -149,14 +156,60 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
               )}
               </select> */}
             <div className="flex flex-col gap-10">
-              <span className="font-semibold">Course Date:</span>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>17th April 2026</li>
-                <li>22nd May 2026</li>
-                <li>19th June 2026</li>
-              </ul>
+              <span className="font-semibold">Upcoming Course Dates:</span>
+              <div className="space-y-8">
+                {sortedDates.map((dateOption, index) => {
+                  const parsedDate = new Date(`${dateOption.date}T00:00:00`);
+                  const dayMonthLabel = parsedDate.toLocaleDateString('en-AU', {
+                    day: '2-digit',
+                    month: 'long',
+                    year: 'numeric',
+                  });
+                  const weekDayLabel = parsedDate.toLocaleDateString('en-AU', {
+                    weekday: 'long',
+                  });
+                  const cardBgClass =
+                    COURSE_CARD_BG_CLASSES[
+                      index % COURSE_CARD_BG_CLASSES.length
+                    ];
+                  const checkoutHref = `/${locale}/custom-programs/fss/checkout?date=${encodeURIComponent(
+                    dateOption.displayDate,
+                  )}`;
+
+                  return (
+                    <div
+                      key={`${dateOption.date}-${dateOption.time}`}
+                      className={`flex gap-10 items-center justify-between px-12 py-10 ${cardBgClass}`}
+                    >
+                      <div className="text-sm text-neutral-700">
+                        <p className="font-semibold leading-tight">
+                          {dayMonthLabel}
+                        </p>
+                        <p className="leading-tight">{weekDayLabel}</p>
+                        <p className="mt-2 font-medium">{dateOption.time}</p>
+                      </div>
+                      <div className="text-sm text-neutral-800">
+                        <p className="font-semibold">
+                          NSW Food Safety Supervisor (FSS)
+                        </p>
+                        <p>{fssData.address}</p>
+                        <p className="font-semibold">(Face to Face)</p>
+                      </div>
+                      <p className="text-xl font-bold text-neutral-800">
+                        ${fssData.price}
+                      </p>
+                      <Link
+                        className="inline-flex items-center justify-center bg-primary hover:bg-primary-bk text-white px-12 py-8 min-w-100 text-sm font-semibold transition"
+                        href={checkoutHref}
+                      >
+                        Book Now
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-            <div className="flex flex-col gap-10 mt-20 bg-orange-100 p-10 md: w-600">
+            <div className="flex flex-col gap-10 mt-20 bg-red-50 border border-primary p-10 md: w-600">
               <span className="font-semibold">Recertification:</span>
               <p className="text-gray-700 text-sm">
                 The NSW Food Safety Supervisor (FSS) Recertification Course is
@@ -166,20 +219,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
                 for five years.
               </p>
             </div>
-            <div className="font-bold text-2xl mt-20 text-primary">
-              $180{' '}
-              <span className="text-lg font-normal text-gray-700">
-                (Recertification: $110)
-              </span>
-            </div>
           </div>
-          <Link
-            className="bg-black text-white w-full block mt-20 px-20 py-10 text-center"
-            href="https://form.jotform.com/ABMonlineforms/Shortcourse-payment-purchase-form"
-            target="_blank"
-          >
-            {fssData.callToAction || 'Enrol Now'}
-          </Link>
         </div>
       </div>
       <p className="mt-20">{fssData.description}</p>

@@ -30,6 +30,10 @@ export interface PostPaymentComplianceFormState {
   signatureDate: string;
 }
 
+export function isFoodSafetyCourse(courseName: string): boolean {
+  return /food safety/i.test(courseName);
+}
+
 export const INITIAL_POST_PAYMENT_COMPLIANCE_FORM: PostPaymentComplianceFormState =
   {
     gender: '',
@@ -102,7 +106,14 @@ export function parsePostPaymentFormPayload(payload: Record<string, unknown>): {
 
 export function validatePostPaymentComplianceForm(
   form: PostPaymentComplianceFormState,
+  options?: { requireFoodSafetyUnits?: boolean },
 ): string | null {
+  if (
+    options?.requireFoodSafetyUnits &&
+    !form.completedFoodSafetyUnits
+  ) {
+    return 'Please indicate whether you have completed SITXFSA005 and SITXFSA006.';
+  }
   if (!form.acceptedPrivacyNoticeAndDeclaration) {
     return 'Please agree to the privacy notice and student declaration before submitting.';
   }

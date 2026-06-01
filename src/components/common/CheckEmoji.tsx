@@ -9,9 +9,9 @@ export default function CheckEmoji() {
   }, []);
 
   return (
-    <div className="w-80 h-80 flex items-center justify-center">
+    <div className="w-60 h-60 flex items-center justify-center">
       <svg
-        className="w-80 h-80 text-green-500"
+        className="w-60 h-60 text-green-500"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"

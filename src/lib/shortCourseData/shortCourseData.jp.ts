@@ -510,33 +510,33 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
-        date: '2025-08-08',
-        displayDate: '8 August',
+        date: '2026-06-26',
+        displayDate: '26 June',
         time: '午前9:00〜午後5:00',
       },
       {
-        date: '2025-08-29',
-        displayDate: '29 August',
+        date: '2026-07-17',
+        displayDate: '17 July',
         time: '午前9:00〜午後5:00',
       },
       {
-        date: '2025-09-15',
-        displayDate: '15 September',
+        date: '2026-08-21',
+        displayDate: '21 August',
         time: '午前9:00〜午後5:00',
       },
       {
-        date: '2025-10-17',
-        displayDate: '17 October',
+        date: '2026-09-25',
+        displayDate: '25 September',
         time: '午前9:00〜午後5:00',
       },
       {
-        date: '2025-11-21',
-        displayDate: '21 November',
+        date: '2026-10-23',
+        displayDate: '23 October',
         time: '午前9:00〜午後5:00',
       },
       {
-        date: '2025-12-12',
-        displayDate: '12 December',
+        date: '2026-11-20',
+        displayDate: '20 November',
         time: '午前9:00〜午後5:00',
       },
     ],
@@ -600,16 +600,6 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
     images: ['/rsa_banner.png'],
     dates: [
       {
-        date: '2026-03-25',
-        displayDate: '2026年3月25日',
-        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
-      },
-      {
-        date: '2026-04-29',
-        displayDate: '2026年4月29日',
-        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
-      },
-      {
         date: '2026-05-27',
         displayDate: '2026年5月27日',
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
@@ -617,6 +607,21 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
       {
         date: '2026-07-01',
         displayDate: '2026年7月1日',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+      },
+      {
+        date: '2026-08-26',
+        displayDate: '2026年8月26日',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+      },
+      {
+        date: '2026-10-07',
+        displayDate: '2026年10月7日',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '2026年11月25日',
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
       },
     ],

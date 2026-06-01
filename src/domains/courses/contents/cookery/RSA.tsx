@@ -19,6 +19,8 @@ interface RSAProps {
   courseId: string;
 }
 
+const COURSE_CARD_BG_CLASSES = ['bg-orange-50', 'bg-orange-50', 'bg-orange-50'];
+
 function RSA({ data: dataProp, courseId }: RSAProps) {
   const params = useParams();
   const editMode = useEditMode();
@@ -31,7 +33,12 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
     }
   }
   const fallbackData = getShortCourseData(locale).rsa;
-  const rsaData = dataProp ?? fallbackData;
+  const rsaData = dataProp
+    ? { ...dataProp, dates: fallbackData.dates ?? dataProp.dates }
+    : fallbackData;
+  const sortedDates = [...(rsaData.dates ?? [])].sort((a, b) =>
+    a.date.localeCompare(b.date),
+  );
 
   if (editMode?.isEditMode && courseId) {
     return (
@@ -42,7 +49,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
   return (
     <div className="container max-w-[1400px] mx-auto px-20 py-40 md:px-80">
       <h2 className="text-2xl font-bold mb-20">{rsaData.title}</h2>
-      <div className="grid md:grid-cols-2 gap-20 items-center">
+      <div className="grid md:grid-cols-[40%_60%] gap-20 items-center">
         <Image
           src="/nsw_rsa.png"
           alt="RSA"
@@ -90,21 +97,15 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
             </div>
           )}
 
-          {rsaData.dates && rsaData.dates.length > 0 && (
-            <div className="flex flex-col mb-10">
-              <p className="font-semibold">Course Date:</p>
-              <ul className="list-disc pl-5 space-y-1">
-                {[...rsaData.dates]
-                  .sort((a, b) => a.date.localeCompare(b.date))
-                  .map((dateOption) => (
-                    <li key={dateOption.date}>{dateOption.displayDate}</li>
-                  ))}
-              </ul>
-            </div>
-          )}
+          <div className="w-full max-w-sm my-20">
+            <div className="flex items-center gap-x-10 mt-20">
+              <span className="font-bold text-2xl text-primary">$189</span>
 
-          <div className="w-full max-w-sm mt-20">
-            <div className="flex flex-col gap-10 bg-orange-100 p-10 md: w-600">
+              <span className="text-gray-800 text-xl line-through">$210</span>
+              <span>(When you use the code)</span>
+            </div>
+
+            <div className="flex flex-col gap-10 border border-orange-500 bg-red-50 p-10 md:w-600">
               <span className="font-semibold">Special Offer:</span>
               <p className="text-gray-700">
                 Use code <strong>RSAabmnew02</strong> at checkout for a{' '}
@@ -113,21 +114,67 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                 </span>
               </p>
             </div>
-
-            <div className="flex items-center gap-x-10 mt-20">
-              <span className="font-bold text-2xl text-primary">$189</span>
-
-              <span className="text-gray-800 text-xl line-through">$210</span>
-              <span>(When you use the code)</span>
-            </div>
           </div>
-          <Link
-            className="bg-black text-white w-full block mt-20 px-20 py-10 text-center"
-            href="https://form.jotform.com/ABMonlineforms/Shortcourse-payment-purchase-form"
-            target="_blank"
-          >
-            {rsaData.callToAction || 'Enrol Now'}
-          </Link>
+
+          {sortedDates.length > 0 && (
+            <div className="flex flex-col mb-10">
+              <p className="font-semibold mb-8">Upcoming Course Dates:</p>
+              <div className="space-y-8">
+                {sortedDates.map((dateOption, index) => {
+                  const parsedDate = new Date(`${dateOption.date}T00:00:00`);
+                  const dayMonthLabel = parsedDate.toLocaleDateString('en-AU', {
+                    day: '2-digit',
+                    month: 'long',
+                    year: 'numeric',
+                  });
+                  const weekDayLabel = parsedDate.toLocaleDateString('en-AU', {
+                    weekday: 'long',
+                  });
+                  const cardBgClass =
+                    COURSE_CARD_BG_CLASSES[
+                      index % COURSE_CARD_BG_CLASSES.length
+                    ];
+                  const checkoutHref = `/${locale}/custom-programs/rsa/checkout?date=${encodeURIComponent(
+                    dateOption.displayDate,
+                  )}`;
+
+                  return (
+                    <div
+                      key={`${dateOption.date}-${dateOption.time}`}
+                      className={`flex gap-10 items-center rounded-md px-12 py-10 ${cardBgClass}`}
+                    >
+                      <div className="text-sm text-neutral-700">
+                        <p className="font-semibold leading-tight">
+                          {dayMonthLabel}
+                        </p>
+                        <p className="leading-tight">{weekDayLabel}</p>
+                        <p className="mt-2 font-medium">{dateOption.time}</p>
+                      </div>
+                      <div className="text-sm text-neutral-800">
+                        <p className="font-semibold">
+                          Responsible Service of Alcohol (RSA)
+                        </p>
+                        <p className="font-semibold">(Face to Face)</p>
+                      </div>
+                      <div className="flex flex-col gap-x-10">
+                        <span className="font-bold text-xl text-primary-bk">
+                          $189
+                        </span>
+                        <span className="text-gray-800 line-through">$210</span>
+                        <span className="text-xs">(When you use the code)</span>
+                      </div>
+                      <Link
+                        className="inline-flex items-center justify-center bg-primary hover:bg-primary-bk text-white px-12 py-8 min-w-100 text-sm font-semibold transition"
+                        href={checkoutHref}
+                      >
+                        Book Now
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <p className="mt-20">{rsaData.description}</p>

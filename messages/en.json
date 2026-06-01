@@ -717,7 +717,7 @@
   },
   "paymentSuccess": {
     "title": "Payment Completed!",
-    "subtitle": "Your course registration has been completed successfully.",
+    "subtitle": "Your course registration has been completed successfully.\nPlease fill out the additional form to complete your registration.",
     "registrationInfo": "Registration Information",
     "course": "Course",
     "date": "Date",

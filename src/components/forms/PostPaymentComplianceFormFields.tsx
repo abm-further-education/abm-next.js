@@ -11,11 +11,13 @@ interface PostPaymentComplianceFormFieldsProps {
       prev: PostPaymentComplianceFormState,
     ) => PostPaymentComplianceFormState,
   ) => void;
+  showFoodSafetyUnitsQuestion?: boolean;
 }
 
 export default function PostPaymentComplianceFormFields({
   form,
   onChange,
+  showFoodSafetyUnitsQuestion = false,
 }: PostPaymentComplianceFormFieldsProps) {
   const toggleDisabilityType = (type: string) => {
     onChange((prev) => ({
@@ -52,28 +54,30 @@ export default function PostPaymentComplianceFormFields({
         </div>
       </div>
 
-      <div>
-        <p className="font-semibold mb-6">
-          Have you completed SITXFSA005 and SITXFSA006?
-        </p>
-        <div className="flex gap-10">
-          {(['Yes', 'No'] as const).map((option) => (
-            <label key={option} className="flex items-center gap-6 text-sm">
-              <input
-                type="radio"
-                checked={form.completedFoodSafetyUnits === option}
-                onChange={() =>
-                  onChange((prev) => ({
-                    ...prev,
-                    completedFoodSafetyUnits: option,
-                  }))
-                }
-              />
-              {option}
-            </label>
-          ))}
+      {showFoodSafetyUnitsQuestion && (
+        <div>
+          <p className="font-semibold mb-6">
+            Have you completed SITXFSA005 and SITXFSA006?
+          </p>
+          <div className="flex gap-10">
+            {(['Yes', 'No'] as const).map((option) => (
+              <label key={option} className="flex items-center gap-6 text-sm">
+                <input
+                  type="radio"
+                  checked={form.completedFoodSafetyUnits === option}
+                  onChange={() =>
+                    onChange((prev) => ({
+                      ...prev,
+                      completedFoodSafetyUnits: option,
+                    }))
+                  }
+                />
+                {option}
+              </label>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div>
         <label className="block font-semibold mb-4">USI</label>

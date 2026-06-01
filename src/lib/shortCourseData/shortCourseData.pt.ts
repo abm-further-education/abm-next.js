@@ -503,30 +503,34 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
       '/short-course/fss_1.png',
     ],
     dates: [
-      { date: '2025-08-08', displayDate: '8 de agosto', time: '09:00 - 17:00' },
       {
-        date: '2025-08-29',
-        displayDate: '29 de agosto',
+        date: '2026-06-26',
+        displayDate: '26 de junho',
         time: '09:00 - 17:00',
       },
       {
-        date: '2025-09-15',
-        displayDate: '15 de setembro',
+        date: '2026-07-17',
+        displayDate: '17 de julho',
         time: '09:00 - 17:00',
       },
       {
-        date: '2025-10-17',
-        displayDate: '17 de outubro',
+        date: '2026-08-21',
+        displayDate: '21 de agosto',
         time: '09:00 - 17:00',
       },
       {
-        date: '2025-11-21',
-        displayDate: '21 de novembro',
+        date: '2026-09-25',
+        displayDate: '25 de setembro',
         time: '09:00 - 17:00',
       },
       {
-        date: '2025-12-12',
-        displayDate: '12 de dezembro',
+        date: '2026-10-23',
+        displayDate: '23 de outubro',
+        time: '09:00 - 17:00',
+      },
+      {
+        date: '2026-11-20',
+        displayDate: '20 de novembro',
         time: '09:00 - 17:00',
       },
     ],
@@ -599,16 +603,6 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
-        date: '2026-03-25',
-        displayDate: '25 de março de 2026',
-        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
-      },
-      {
-        date: '2026-04-29',
-        displayDate: '29 de abril de 2026',
-        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
-      },
-      {
         date: '2026-05-27',
         displayDate: '27 de maio de 2026',
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
@@ -616,6 +610,21 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
       {
         date: '2026-07-01',
         displayDate: '1 de julho de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+      },
+      {
+        date: '2026-08-26',
+        displayDate: '26 de agosto de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+      },
+      {
+        date: '2026-10-07',
+        displayDate: '7 de outubro de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '25 de novembro de 2026',
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
     ],

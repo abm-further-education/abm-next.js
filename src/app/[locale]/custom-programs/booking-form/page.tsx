@@ -6,6 +6,7 @@ import Link from 'next/link';
 import PostPaymentComplianceFormFields from '@/components/forms/PostPaymentComplianceFormFields';
 import {
   INITIAL_POST_PAYMENT_COMPLIANCE_FORM,
+  isFoodSafetyCourse,
   validatePostPaymentComplianceForm,
   type PostPaymentComplianceFormState,
 } from '@/lib/post-payment-form-types';
@@ -69,6 +70,10 @@ export default function BookingFormPage() {
   const [previewingPdf, setPreviewingPdf] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
+  const showFoodSafetyUnitsQuestion = isFoodSafetyCourse(
+    bookingDetails.courseName,
+  );
+
   const buildPaymentDetails = (): PostPaymentFormPaymentDetails => ({
     courseName: bookingDetails.courseName,
     selectedDate: formatCourseDate(bookingDetails.selectedDate),
@@ -92,7 +97,9 @@ export default function BookingFormPage() {
       return;
     }
 
-    const complianceError = validatePostPaymentComplianceForm(complianceForm);
+    const complianceError = validatePostPaymentComplianceForm(complianceForm, {
+      requireFoodSafetyUnits: showFoodSafetyUnitsQuestion,
+    });
     if (complianceError) {
       setFormError(complianceError);
       return;
@@ -214,12 +221,19 @@ export default function BookingFormPage() {
                   </label>
                   <select
                     value={bookingDetails.courseName}
-                    onChange={(e) =>
+                    onChange={(e) => {
+                      const courseName = e.target.value;
                       setBookingDetails((prev) => ({
                         ...prev,
-                        courseName: e.target.value,
-                      }))
-                    }
+                        courseName,
+                      }));
+                      if (!isFoodSafetyCourse(courseName)) {
+                        setComplianceForm((prev) => ({
+                          ...prev,
+                          completedFoodSafetyUnits: '',
+                        }));
+                      }
+                    }}
                     className="w-full border border-gray-300 px-10 py-8 rounded-md text-sm"
                   >
                     <option value="">Select a course</option>
@@ -263,6 +277,7 @@ export default function BookingFormPage() {
                 onChange={(updater) =>
                   setComplianceForm((prev) => updater(prev))
                 }
+                showFoodSafetyUnitsQuestion={showFoodSafetyUnitsQuestion}
               />
             </div>
 

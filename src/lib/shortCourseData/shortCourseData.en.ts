@@ -595,26 +595,39 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       '/short-course/fss_1.png',
     ],
     dates: [
-      { date: '2025-08-08', displayDate: '8 August', time: '9:00am - 5:00pm' },
-      { date: '2025-08-29', displayDate: '29 August', time: '9:00am - 5:00pm' },
       {
-        date: '2025-09-15',
-        displayDate: '15 September',
+        date: '2026-06-19',
+        displayDate: '19 June 2026',
         time: '9:00am - 5:00pm',
       },
       {
-        date: '2025-10-17',
-        displayDate: '17 October',
+        date: '2026-06-26',
+        displayDate: '26 June 2026',
         time: '9:00am - 5:00pm',
       },
       {
-        date: '2025-11-21',
-        displayDate: '21 November',
+        date: '2026-07-17',
+        displayDate: '17 July 2026',
         time: '9:00am - 5:00pm',
       },
       {
-        date: '2025-12-12',
-        displayDate: '12 December',
+        date: '2026-08-21',
+        displayDate: '21 August 2026',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2026-09-25',
+        displayDate: '25 September 2026',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2026-10-23',
+        displayDate: '23 October 2026',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2026-11-20',
+        displayDate: '20 November 2026',
         time: '9:00am - 5:00pm',
       },
     ],
@@ -682,11 +695,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     images: ['/rsa_banner.png'],
     dates: [
       {
-        date: '2026-04-29',
-        displayDate: '30th April 2026',
-        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
-      },
-      {
         date: '2026-05-27',
         displayDate: '27th May 2026',
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
@@ -694,6 +702,21 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       {
         date: '2026-07-01',
         displayDate: '1st July 2026',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+      },
+      {
+        date: '2026-08-26',
+        displayDate: '26 August 2026',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+      },
+      {
+        date: '2026-10-07',
+        displayDate: '7 October 2026',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '25 November 2026',
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
     ],

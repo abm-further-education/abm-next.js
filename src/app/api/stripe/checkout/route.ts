@@ -22,10 +22,22 @@ export async function POST(request: NextRequest) {
       referrerName,
       selectedDate,
       selectedType,
+      selectedCourses,
+      locale,
       courseLocation,
       finalPrice,
       totalPriceWithSurcharge,
     } = body;
+
+    const COURSE_PRICE_MAP: Record<string, number> = {
+      rsa: 189,
+      'fss-first-time': 180,
+      'fss-recertification': 110,
+    };
+    const normalizedLocale =
+      typeof locale === 'string' && locale.trim().length > 0
+        ? locale
+        : 'en';
 
     // 코스 데이터 가져오기
     const courseData = getShortCourseData('en')[courseSlug];
@@ -34,7 +46,29 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Course not found' }, { status: 404 });
     }
 
-    const basePrice = courseData.price;
+    const normalizedSelectedCourses = Array.isArray(selectedCourses)
+      ? selectedCourses.filter((item: unknown): item is string =>
+          typeof item === 'string'
+        )
+      : [];
+    const hasMultiCourseSelection = normalizedSelectedCourses.length > 0;
+    const hasInvalidCourseSelection = normalizedSelectedCourses.some(
+      (item) => !(item in COURSE_PRICE_MAP)
+    );
+
+    if (hasInvalidCourseSelection) {
+      return NextResponse.json(
+        { error: 'Invalid course selection.' },
+        { status: 400 }
+      );
+    }
+
+    const basePrice = hasMultiCourseSelection
+      ? normalizedSelectedCourses.reduce(
+          (sum, item) => sum + COURSE_PRICE_MAP[item],
+          0
+        )
+      : courseData.price;
     const promoEval = evaluateCheckoutPromotion(
       typeof promotionCode === 'string' ? promotionCode : '',
       courseSlug,
@@ -89,6 +123,12 @@ export async function POST(request: NextRequest) {
     // Stripe Checkout Session 생성
     const stripe = getServerStripe();
 
+    const cancelPath =
+      courseSlug === 'rsa' || courseSlug === 'fss'
+        ? `/${normalizedLocale}/cookery-and-hospitality-courses/${courseSlug}`
+        : `/${normalizedLocale}/custom-programs/${courseSlug}`;
+    const successPath = `/${normalizedLocale}/payment/success?session_id={CHECKOUT_SESSION_ID}`;
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -107,10 +147,10 @@ export async function POST(request: NextRequest) {
       mode: 'payment',
       success_url: `${
         process.env.NEXTAUTH_URL || 'https://abm.edu.au'
-      }/payment/success?session_id={CHECKOUT_SESSION_ID}`,
+      }${successPath}`,
       cancel_url: `${
         process.env.NEXTAUTH_URL || 'https://abm.edu.au'
-      }/custom-programs/${courseSlug}`,
+      }${cancelPath}`,
       metadata: {
         courseSlug,
         firstName: firstName || name || '',
@@ -125,6 +165,7 @@ export async function POST(request: NextRequest) {
         courseName: courseName || courseData.title,
         selectedDate: selectedDate || '',
         selectedType: selectedType || '',
+        selectedCourses: normalizedSelectedCourses.join(', '),
         courseLocation: courseLocation || courseData.location || '',
         surcharge: (expectedTotalNum - serverDiscountedPrice).toFixed(2),
         ...(promoEval.kind === 'applied' && { appliedPromo: promoEval.code }),
