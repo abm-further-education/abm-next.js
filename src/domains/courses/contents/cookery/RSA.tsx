@@ -140,34 +140,40 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                   return (
                     <div
                       key={`${dateOption.date}-${dateOption.time}`}
-                      className={`flex gap-10 items-center rounded-md px-12 py-10 ${cardBgClass}`}
+                      className={`flex flex-col gap-10 rounded-md px-12 py-10 sm:flex-row sm:flex-wrap sm:items-center ${cardBgClass}`}
                     >
-                      <div className="text-sm text-neutral-700">
+                      <div className="min-w-0 text-sm text-neutral-700 sm:flex-1 sm:basis-[140px]">
                         <p className="font-semibold leading-tight">
                           {dayMonthLabel}
                         </p>
                         <p className="leading-tight">{weekDayLabel}</p>
                         <p className="mt-2 font-medium">{dateOption.time}</p>
                       </div>
-                      <div className="text-sm text-neutral-800">
+                      <div className="min-w-0 text-sm text-neutral-800 sm:flex-1 sm:basis-[180px]">
                         <p className="font-semibold">
                           Responsible Service of Alcohol (RSA)
                         </p>
                         <p className="font-semibold">(Face to Face)</p>
                       </div>
-                      <div className="flex flex-col gap-x-10">
-                        <span className="font-bold text-xl text-primary-bk">
-                          $189
-                        </span>
-                        <span className="text-gray-800 line-through">$210</span>
-                        <span className="text-xs">(When you use the code)</span>
+                      <div className="flex w-full flex-col gap-8 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-10 md:ml-auto">
+                        <div className="flex flex-col gap-2">
+                          <span className="font-bold text-xl text-primary-bk">
+                            $189
+                          </span>
+                          <span className="text-gray-800 line-through">
+                            $210
+                          </span>
+                          <span className="text-xs">
+                            (When you use the code)
+                          </span>
+                        </div>
+                        <Link
+                          className="inline-flex w-full items-center justify-center bg-primary px-12 py-8 text-sm font-semibold text-white transition hover:bg-primary-bk sm:w-auto sm:min-w-100"
+                          href={checkoutHref}
+                        >
+                          Book Now
+                        </Link>
                       </div>
-                      <Link
-                        className="inline-flex items-center justify-center bg-primary hover:bg-primary-bk text-white px-12 py-8 min-w-100 text-sm font-semibold transition"
-                        href={checkoutHref}
-                      >
-                        Book Now
-                      </Link>
                     </div>
                   );
                 })}
