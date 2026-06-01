@@ -1,8 +1,11 @@
 'use client';
 
 import CountrySelectField from '@/components/forms/CountrySelectField';
-import SignaturePadField from '@/components/forms/SignaturePadField';
+import SignaturePadField, {
+  type SignaturePadHandle,
+} from '@/components/forms/SignaturePadField';
 import type { PostPaymentComplianceFormState } from '@/lib/post-payment-form-types';
+import type { Ref } from 'react';
 
 interface PostPaymentComplianceFormFieldsProps {
   form: PostPaymentComplianceFormState;
@@ -12,12 +15,14 @@ interface PostPaymentComplianceFormFieldsProps {
     ) => PostPaymentComplianceFormState,
   ) => void;
   showFoodSafetyUnitsQuestion?: boolean;
+  signaturePadRef?: Ref<SignaturePadHandle>;
 }
 
 export default function PostPaymentComplianceFormFields({
   form,
   onChange,
   showFoodSafetyUnitsQuestion = false,
+  signaturePadRef,
 }: PostPaymentComplianceFormFieldsProps) {
   const toggleDisabilityType = (type: string) => {
     onChange((prev) => ({
@@ -370,6 +375,7 @@ export default function PostPaymentComplianceFormFields({
         <p className="font-semibold mb-6">Student Confirmation</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <SignaturePadField
+            ref={signaturePadRef}
             label="Signature"
             value={form.signature}
             onChange={(value) =>

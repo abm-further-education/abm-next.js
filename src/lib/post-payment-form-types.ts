@@ -34,6 +34,17 @@ export function isFoodSafetyCourse(courseName: string): boolean {
   return /food safety/i.test(courseName);
 }
 
+export function getTodayIsoDate(): string {
+  return new Date().toISOString().split('T')[0];
+}
+
+export function createInitialPostPaymentComplianceForm(): PostPaymentComplianceFormState {
+  return {
+    ...INITIAL_POST_PAYMENT_COMPLIANCE_FORM,
+    signatureDate: getTodayIsoDate(),
+  };
+}
+
 export const INITIAL_POST_PAYMENT_COMPLIANCE_FORM: PostPaymentComplianceFormState =
   {
     gender: '',
@@ -117,8 +128,25 @@ export function validatePostPaymentComplianceForm(
   if (!form.acceptedPrivacyNoticeAndDeclaration) {
     return 'Please agree to the privacy notice and student declaration before submitting.';
   }
-  if (!form.signature.trim() || !form.signatureDate) {
+  if (!form.signature.trim() && !form.signatureDate.trim()) {
     return 'Please complete signature and date.';
   }
+  if (!form.signature.trim()) {
+    return 'Please sign in the signature box before submitting.';
+  }
+  if (!form.signatureDate.trim()) {
+    return 'Please select the signature date.';
+  }
   return null;
+}
+
+export function applyCapturedSignature(
+  form: PostPaymentComplianceFormState,
+  capturedSignature: string,
+): PostPaymentComplianceFormState {
+  const signature = capturedSignature.trim() || form.signature.trim();
+  if (signature === form.signature) {
+    return form;
+  }
+  return { ...form, signature };
 }

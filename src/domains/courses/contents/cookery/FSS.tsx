@@ -10,6 +10,7 @@ import {
 } from '@headlessui/react';
 import { ChevronUpIcon } from 'lucide-react';
 import getShortCourseData from '@/lib/shortCourseData';
+import { getUpcomingShortCourseDates } from '@/lib/short-course-dates';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { useEditMode } from '@/contexts/EditModeContext';
@@ -38,9 +39,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
   const fssData = dataProp
     ? { ...dataProp, dates: fallbackData.dates ?? dataProp.dates }
     : fallbackData;
-  const sortedDates = [...(fssData.dates ?? [])].sort((a, b) =>
-    a.date.localeCompare(b.date),
-  );
+  const sortedDates = getUpcomingShortCourseDates(fssData.dates);
 
   if (editMode?.isEditMode && courseId) {
     return (
@@ -155,6 +154,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
                 )
               )}
               </select> */}
+            {sortedDates.length > 0 && (
             <div className="flex flex-col gap-10">
               <span className="font-semibold">Upcoming Course Dates:</span>
               <div className="space-y-8">
@@ -209,6 +209,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
                 })}
               </div>
             </div>
+            )}
             <div className="flex flex-col gap-10 mt-20 bg-red-50 border border-primary p-10 md: w-600">
               <span className="font-semibold">Recertification:</span>
               <p className="text-gray-700 text-sm">

@@ -3,6 +3,11 @@
 import React, { useState } from 'react';
 import { useParams } from 'next/navigation';
 import getShortCourseData from '@/lib/shortCourseData';
+import {
+  buildCheckoutCourseDisplayName,
+  CHECKOUT_COURSE_PRICE_MAP,
+  CHECKOUT_COURSE_SELECTION_OPTIONS,
+} from '@/lib/checkout-course-selection';
 import { evaluateCheckoutPromotion } from '@/lib/checkout-promo-codes';
 import { useSearchParams } from 'next/navigation';
 import { getStripe } from '@/lib/stripe';
@@ -16,21 +21,6 @@ const HOW_DID_YOU_FIND_US_OPTIONS = [
   'Walk in',
   'Other',
 ] as const;
-
-const COURSE_SELECTION_OPTIONS = [
-  { id: 'rsa', label: 'NSW Responsible Service of Alcohol (RSA)' },
-  { id: 'fss-first-time', label: 'NSW Food Safety Supervisor (First Time)' },
-  {
-    id: 'fss-recertification',
-    label: 'NSW Food Safety Supervisor (Recertification)',
-  },
-] as const;
-
-const COURSE_PRICE_MAP: Record<string, number> = {
-  rsa: 189,
-  'fss-first-time': 180,
-  'fss-recertification': 110,
-};
 
 function formatDateOfBirth(isoDate: string): string {
   const [year, month, day] = isoDate.split('-');
@@ -74,7 +64,7 @@ export default function CheckoutPage() {
   const [submitAttempted, setSubmitAttempted] = useState(false);
   const [loading, setLoading] = useState(false);
   const selectedBasePrice = form.selectedCourses.reduce(
-    (sum, courseId) => sum + (COURSE_PRICE_MAP[courseId] ?? 0),
+    (sum, courseId) => sum + (CHECKOUT_COURSE_PRICE_MAP[courseId] ?? 0),
     0,
   );
   const promoEval = evaluateCheckoutPromotion(
@@ -128,7 +118,7 @@ export default function CheckoutPage() {
     }
     if (fieldName === 'promotionCode' && nextForm.promotionCode.trim()) {
       const selectionBase = nextForm.selectedCourses.reduce(
-        (sum, courseId) => sum + (COURSE_PRICE_MAP[courseId] ?? 0),
+        (sum, courseId) => sum + (CHECKOUT_COURSE_PRICE_MAP[courseId] ?? 0),
         0,
       );
       const pe = evaluateCheckoutPromotion(
@@ -278,10 +268,10 @@ export default function CheckoutPage() {
           referrerName:
             form.howDidYouHear === 'Other' ? form.otherHowDidYouHear : '',
           promotionCode: form.promotionCode,
-          courseName:
-            form.selectedCourses.length > 1
-              ? 'ABM Short Course Bundle'
-              : courseData?.title,
+          courseName: buildCheckoutCourseDisplayName(
+            form.selectedCourses,
+            courseData?.title,
+          ),
           courseSlug: slug,
           locale,
           selectedCourses: form.selectedCourses,
@@ -537,7 +527,7 @@ export default function CheckoutPage() {
                 Course Selection (Select all that apply)
               </p>
               <div className="space-y-6">
-                {COURSE_SELECTION_OPTIONS.map((courseOption) => (
+                {CHECKOUT_COURSE_SELECTION_OPTIONS.map((courseOption) => (
                   <label
                     key={courseOption.id}
                     className="flex items-center gap-8 text-sm"

@@ -16,7 +16,7 @@ vi.mock('react-signature-canvas', () => {
       React.useImperativeHandle(ref, () => ({
         isEmpty: () => false,
         clear: vi.fn(),
-        getTrimmedCanvas: () => ({
+        getCanvas: () => ({
           toDataURL: () => 'data:image/png;base64,fake-signature',
         }),
       }));
@@ -52,5 +52,25 @@ describe('SignaturePadField', () => {
     await user.click(screen.getByRole('button', { name: 'Mock signature canvas' }));
 
     expect(handleChange).toHaveBeenCalledWith('data:image/png;base64,fake-signature');
+  });
+
+  it('exposes capture() via ref for submit-time signature sync', async () => {
+    const user = userEvent.setup();
+    const captureRef = React.createRef<{ capture: () => string }>();
+
+    render(
+      <SignaturePadField
+        ref={captureRef}
+        label="Signature"
+        value=""
+        onChange={vi.fn()}
+      />,
+    );
+
+    await user.click(screen.getByRole('button', { name: 'Mock signature canvas' }));
+
+    expect(captureRef.current?.capture()).toBe(
+      'data:image/png;base64,fake-signature',
+    );
   });
 });

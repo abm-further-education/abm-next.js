@@ -2,7 +2,31 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getServerStripe } from '@/lib/stripe';
 import getShortCourseData from '@/lib/shortCourseData';
 import { getShortCourseCapacityStatus } from '@/lib/short-course-capacity';
+import {
+  buildCheckoutCourseDisplayName,
+  CHECKOUT_COURSE_PRICE_MAP,
+} from '@/lib/checkout-course-selection';
 import { evaluateCheckoutPromotion } from '@/lib/checkout-promo-codes';
+
+function buildStripeProductDescription(
+  courseData: {
+    title: string;
+    description?: string;
+    courseOverview?: string;
+  },
+  courseName?: string,
+): string {
+  const fromCourse =
+    courseData.description?.trim() || courseData.courseOverview?.trim();
+  if (fromCourse) {
+    return fromCourse;
+  }
+
+  const name = (courseName || courseData.title).trim();
+  return name
+    ? `Short course enrolment at ABM Further Education: ${name}`
+    : 'Short course enrolment at ABM Further Education';
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -29,11 +53,6 @@ export async function POST(request: NextRequest) {
       totalPriceWithSurcharge,
     } = body;
 
-    const COURSE_PRICE_MAP: Record<string, number> = {
-      rsa: 189,
-      'fss-first-time': 180,
-      'fss-recertification': 110,
-    };
     const normalizedLocale =
       typeof locale === 'string' && locale.trim().length > 0
         ? locale
@@ -53,7 +72,7 @@ export async function POST(request: NextRequest) {
       : [];
     const hasMultiCourseSelection = normalizedSelectedCourses.length > 0;
     const hasInvalidCourseSelection = normalizedSelectedCourses.some(
-      (item) => !(item in COURSE_PRICE_MAP)
+      (item) => !(item in CHECKOUT_COURSE_PRICE_MAP)
     );
 
     if (hasInvalidCourseSelection) {
@@ -65,7 +84,7 @@ export async function POST(request: NextRequest) {
 
     const basePrice = hasMultiCourseSelection
       ? normalizedSelectedCourses.reduce(
-          (sum, item) => sum + COURSE_PRICE_MAP[item],
+          (sum, item) => sum + CHECKOUT_COURSE_PRICE_MAP[item],
           0
         )
       : courseData.price;
@@ -129,6 +148,11 @@ export async function POST(request: NextRequest) {
         : `/${normalizedLocale}/custom-programs/${courseSlug}`;
     const successPath = `/${normalizedLocale}/payment/success?session_id={CHECKOUT_SESSION_ID}`;
 
+    const productName = buildCheckoutCourseDisplayName(
+      normalizedSelectedCourses,
+      courseName || courseData.title,
+    );
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -136,8 +160,11 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'aud',
             product_data: {
-              name: courseName || courseData.title,
-              description: courseData.description || '',
+              name: productName,
+              description: buildStripeProductDescription(
+                courseData,
+                productName,
+              ),
             },
             unit_amount: Math.round(expectedTotalNum * 100), // Stripe는 센트 단위
           },
@@ -162,7 +189,7 @@ export async function POST(request: NextRequest) {
         howDidYouHear: howDidYouHear || '',
         referrerName: referrerName || '',
         promotionCode: promotionCode || '',
-        courseName: courseName || courseData.title,
+        courseName: productName,
         selectedDate: selectedDate || '',
         selectedType: selectedType || '',
         selectedCourses: normalizedSelectedCourses.join(', '),

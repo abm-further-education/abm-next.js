@@ -1,11 +1,13 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
+import type { SignaturePadHandle } from '@/components/forms/SignaturePadField';
 import PostPaymentComplianceFormFields from '@/components/forms/PostPaymentComplianceFormFields';
 import {
-  INITIAL_POST_PAYMENT_COMPLIANCE_FORM,
+  applyCapturedSignature,
+  createInitialPostPaymentComplianceForm,
   isFoodSafetyCourse,
   validatePostPaymentComplianceForm,
   type PostPaymentComplianceFormState,
@@ -62,13 +64,12 @@ export default function BookingFormPage() {
     selectedDate: '',
   });
   const [complianceForm, setComplianceForm] =
-    useState<PostPaymentComplianceFormState>(
-      INITIAL_POST_PAYMENT_COMPLIANCE_FORM,
-    );
+    useState<PostPaymentComplianceFormState>(createInitialPostPaymentComplianceForm);
   const [formError, setFormError] = useState<string | null>(null);
   const [submittingForm, setSubmittingForm] = useState(false);
   const [previewingPdf, setPreviewingPdf] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const signaturePadRef = useRef<SignaturePadHandle>(null);
 
   const showFoodSafetyUnitsQuestion = isFoodSafetyCourse(
     bookingDetails.courseName,
@@ -81,10 +82,18 @@ export default function BookingFormPage() {
     customerEmail: bookingDetails.customerEmail,
   });
 
-  const buildSubmissionPayload = () => ({
+  const resolveComplianceForm = () =>
+    applyCapturedSignature(
+      complianceForm,
+      signaturePadRef.current?.capture() ?? '',
+    );
+
+  const buildSubmissionPayload = (
+    form: PostPaymentComplianceFormState = complianceForm,
+  ) => ({
     sessionId: '',
     paymentDetails: buildPaymentDetails(),
-    ...complianceForm,
+    ...form,
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -97,20 +106,26 @@ export default function BookingFormPage() {
       return;
     }
 
-    const complianceError = validatePostPaymentComplianceForm(complianceForm, {
-      requireFoodSafetyUnits: showFoodSafetyUnitsQuestion,
-    });
+    const resolvedComplianceForm = resolveComplianceForm();
+    const complianceError = validatePostPaymentComplianceForm(
+      resolvedComplianceForm,
+      {
+        requireFoodSafetyUnits: showFoodSafetyUnitsQuestion,
+      },
+    );
     if (complianceError) {
+      setComplianceForm(resolvedComplianceForm);
       setFormError(complianceError);
       return;
     }
 
+    setComplianceForm(resolvedComplianceForm);
     setSubmittingForm(true);
     try {
       const response = await fetch('/api/short-course-post-payment-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(buildSubmissionPayload()),
+        body: JSON.stringify(buildSubmissionPayload(resolvedComplianceForm)),
       });
       const result = await response.json();
       if (!response.ok || !result.ok) {
@@ -132,13 +147,28 @@ export default function BookingFormPage() {
     setFormError(null);
     setPreviewingPdf(true);
 
+    const resolvedComplianceForm = resolveComplianceForm();
+    const complianceError = validatePostPaymentComplianceForm(
+      resolvedComplianceForm,
+      {
+        requireFoodSafetyUnits: showFoodSafetyUnitsQuestion,
+      },
+    );
+    if (complianceError) {
+      setComplianceForm(resolvedComplianceForm);
+      setFormError(complianceError);
+      setPreviewingPdf(false);
+      return;
+    }
+    setComplianceForm(resolvedComplianceForm);
+
     try {
       const response = await fetch(
         '/api/short-course-post-payment-form/preview-pdf',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(buildSubmissionPayload()),
+          body: JSON.stringify(buildSubmissionPayload(resolvedComplianceForm)),
         },
       );
 
@@ -278,6 +308,7 @@ export default function BookingFormPage() {
                   setComplianceForm((prev) => updater(prev))
                 }
                 showFoodSafetyUnitsQuestion={showFoodSafetyUnitsQuestion}
+                signaturePadRef={signaturePadRef}
               />
             </div>
 

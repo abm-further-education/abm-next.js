@@ -8,6 +8,7 @@ import {
 } from '@headlessui/react';
 import { ChevronUpIcon } from 'lucide-react';
 import getShortCourseData from '@/lib/shortCourseData';
+import { getUpcomingShortCourseDates } from '@/lib/short-course-dates';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { useEditMode } from '@/contexts/EditModeContext';
@@ -36,9 +37,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
   const rsaData = dataProp
     ? { ...dataProp, dates: fallbackData.dates ?? dataProp.dates }
     : fallbackData;
-  const sortedDates = [...(rsaData.dates ?? [])].sort((a, b) =>
-    a.date.localeCompare(b.date),
-  );
+  const sortedDates = getUpcomingShortCourseDates(rsaData.dates);
 
   if (editMode?.isEditMode && courseId) {
     return (

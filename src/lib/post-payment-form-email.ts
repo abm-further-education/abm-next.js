@@ -58,11 +58,9 @@ function isValidCustomerEmail(email?: string): boolean {
 }
 
 function buildSubmissionEmailHtml({
-  sessionId,
   paymentDetails,
   formData,
 }: {
-  sessionId: string;
   paymentDetails: PostPaymentFormPaymentDetails;
   formData: PostPaymentFormData;
 }) {
@@ -72,7 +70,6 @@ function buildSubmissionEmailHtml({
 
   return `
     <h2>Post-Payment Booking Form Submission</h2>
-    ${sessionId ? `<p><strong>Session ID:</strong> ${sessionId}</p>` : ''}
     <hr/>
     <h3>Booking Details</h3>
     <p><strong>Student Name:</strong> ${subjectName}</p>
@@ -192,7 +189,7 @@ export async function sendPostPaymentFormEmail({
     from: fromEmail,
     to: [...POST_PAYMENT_FORM_RECIPIENTS],
     subject: `[Post-Payment Form] ${subjectCourse} - ${subjectEmail}`,
-    html: buildSubmissionEmailHtml({ sessionId, paymentDetails, formData }),
+    html: buildSubmissionEmailHtml({ paymentDetails, formData }),
     attachments: [
       {
         filename: buildPdfFilename(subjectCourse),

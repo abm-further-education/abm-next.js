@@ -1,14 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams, useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Button from '@/components/common/Button';
 import CheckEmoji from '@/components/common/CheckEmoji';
+import type { SignaturePadHandle } from '@/components/forms/SignaturePadField';
 import PostPaymentComplianceFormFields from '@/components/forms/PostPaymentComplianceFormFields';
 import {
-  INITIAL_POST_PAYMENT_COMPLIANCE_FORM,
+  applyCapturedSignature,
+  createInitialPostPaymentComplianceForm,
   isFoodSafetyCourse,
   validatePostPaymentComplianceForm,
   type PostPaymentComplianceFormState,
@@ -42,7 +44,14 @@ export default function PaymentSuccessPage() {
   const [formError, setFormError] = useState<string | null>(null);
   const [additionalForm, setAdditionalForm] =
     useState<PostPaymentComplianceFormState>(
-      INITIAL_POST_PAYMENT_COMPLIANCE_FORM,
+      createInitialPostPaymentComplianceForm,
+    );
+  const signaturePadRef = useRef<SignaturePadHandle>(null);
+
+  const resolveAdditionalForm = () =>
+    applyCapturedSignature(
+      additionalForm,
+      signaturePadRef.current?.capture() ?? '',
     );
 
   useEffect(() => {
@@ -71,32 +80,40 @@ export default function PaymentSuccessPage() {
     }
   }, [sessionId, t]);
 
-  const buildSubmissionPayload = () => ({
+  const buildSubmissionPayload = (
+    form: PostPaymentComplianceFormState = additionalForm,
+  ) => ({
     sessionId,
     paymentDetails,
-    ...additionalForm,
+    ...form,
   });
 
   const handleAdditionalFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError(null);
 
-    const validationError = validatePostPaymentComplianceForm(additionalForm, {
-      requireFoodSafetyUnits: paymentDetails
-        ? isFoodSafetyCourse(paymentDetails.courseName)
-        : false,
-    });
+    const resolvedAdditionalForm = resolveAdditionalForm();
+    const validationError = validatePostPaymentComplianceForm(
+      resolvedAdditionalForm,
+      {
+        requireFoodSafetyUnits: paymentDetails
+          ? isFoodSafetyCourse(paymentDetails.courseName)
+          : false,
+      },
+    );
     if (validationError) {
+      setAdditionalForm(resolvedAdditionalForm);
       setFormError(validationError);
       return;
     }
 
+    setAdditionalForm(resolvedAdditionalForm);
     setSubmittingForm(true);
     try {
       const response = await fetch('/api/short-course-post-payment-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(buildSubmissionPayload()),
+        body: JSON.stringify(buildSubmissionPayload(resolvedAdditionalForm)),
       });
 
       const result = await response.json();
@@ -124,13 +141,28 @@ export default function PaymentSuccessPage() {
     setFormError(null);
     setPreviewingPdf(true);
 
+    const resolvedAdditionalForm = resolveAdditionalForm();
+    const validationError = validatePostPaymentComplianceForm(
+      resolvedAdditionalForm,
+      {
+        requireFoodSafetyUnits: isFoodSafetyCourse(paymentDetails.courseName),
+      },
+    );
+    if (validationError) {
+      setAdditionalForm(resolvedAdditionalForm);
+      setFormError(validationError);
+      setPreviewingPdf(false);
+      return;
+    }
+    setAdditionalForm(resolvedAdditionalForm);
+
     try {
       const response = await fetch(
         '/api/short-course-post-payment-form/preview-pdf',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(buildSubmissionPayload()),
+          body: JSON.stringify(buildSubmissionPayload(resolvedAdditionalForm)),
         },
       );
 
@@ -272,6 +304,7 @@ export default function PaymentSuccessPage() {
                       ? isFoodSafetyCourse(paymentDetails.courseName)
                       : false
                   }
+                  signaturePadRef={signaturePadRef}
                 />
 
                 {formError && (
