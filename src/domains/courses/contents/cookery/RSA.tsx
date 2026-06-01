@@ -56,7 +56,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
           height={500}
           className="object-cover object-center"
         />
-        <div className="">
+        <div className="min-w-0 w-full">
           <div className="flex flex-col mb-10">
             <p className="font-semibold">
               {rsaData.courseDeliveryLabel || 'Course Delivery:'}
@@ -104,7 +104,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
               <span>(When you use the code)</span>
             </div>
 
-            <div className="flex flex-col gap-10 border border-orange-500 bg-red-50 p-10 md:w-600">
+            <div className="flex w-full max-w-600 flex-col gap-10 border border-orange-500 bg-red-50 p-10">
               <span className="font-semibold">Special Offer:</span>
               <p className="text-gray-700">
                 Use code <strong>RSAabmnew02</strong> at checkout for a{' '}
@@ -116,9 +116,9 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
           </div>
 
           {sortedDates.length > 0 && (
-            <div className="flex flex-col mb-10">
+            <div className="mb-10 flex w-full min-w-0 max-w-full flex-col">
               <p className="font-semibold mb-8">Upcoming Course Dates:</p>
-              <div className="space-y-8">
+              <div className="w-full min-w-0 space-y-8">
                 {sortedDates.map((dateOption, index) => {
                   const parsedDate = new Date(`${dateOption.date}T00:00:00`);
                   const dayMonthLabel = parsedDate.toLocaleDateString('en-AU', {

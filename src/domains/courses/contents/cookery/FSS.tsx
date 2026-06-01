@@ -58,7 +58,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
           height={500}
           className="object-cover object-center"
         />
-        <div className="">
+        <div className="min-w-0 w-full">
           <div className="flex flex-col mb-10">
             <p className="font-semibold">
               {fssData.courseDeliveryLabel || 'Course Delivery:'}
@@ -155,9 +155,9 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
               )}
               </select> */}
             {sortedDates.length > 0 && (
-            <div className="flex flex-col gap-10">
+            <div className="flex w-full min-w-0 max-w-full flex-col gap-10">
               <span className="font-semibold">Upcoming Course Dates:</span>
-              <div className="space-y-8">
+              <div className="w-full min-w-0 space-y-8">
                 {sortedDates.map((dateOption, index) => {
                   const parsedDate = new Date(`${dateOption.date}T00:00:00`);
                   const dayMonthLabel = parsedDate.toLocaleDateString('en-AU', {
@@ -212,7 +212,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
               </div>
             </div>
             )}
-            <div className="flex flex-col gap-10 mt-20 bg-red-50 border border-primary p-10 md: w-600">
+            <div className="mt-20 flex w-full max-w-600 flex-col gap-10 border border-primary bg-red-50 p-10">
               <span className="font-semibold">Recertification:</span>
               <p className="text-gray-700 text-sm">
                 The NSW Food Safety Supervisor (FSS) Recertification Course is
