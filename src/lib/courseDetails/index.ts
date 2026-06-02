@@ -12,12 +12,12 @@ import { courseDetailsData as courseDetailsData_id } from './courseDetails.id';
  * locale: 'en' | 'kr' | 'sp' | 'pt' | 'jp' | 'tl' | 'zh' | 'id' (default: 'en')
  */
 export default function getCourseDetailsData(locale: string) {
-  if (locale === 'kr') return courseDetailsData_kr;
-  if (locale === 'sp') return courseDetailsData_sp;
-  if (locale === 'pt') return courseDetailsData_pt;
-  if (locale === 'jp') return courseDetailsData_jp;
-  if (locale === 'tl') return courseDetailsData_tl;
-  if (locale === 'zh') return courseDetailsData_zh;
-  if (locale === 'id') return courseDetailsData_id;
-  return courseDetailsData;
+  if (locale === 'kr') return { ...courseDetailsData, ...courseDetailsData_kr };
+  if (locale === 'sp') return { ...courseDetailsData, ...courseDetailsData_sp };
+  if (locale === 'pt') return { ...courseDetailsData, ...courseDetailsData_pt };
+  if (locale === 'jp') return { ...courseDetailsData, ...courseDetailsData_jp };
+  if (locale === 'tl') return { ...courseDetailsData, ...courseDetailsData_tl };
+  if (locale === 'zh') return { ...courseDetailsData, ...courseDetailsData_zh };
+  if (locale === 'id') return { ...courseDetailsData, ...courseDetailsData_id };
+  return { ...courseDetailsData };
 }

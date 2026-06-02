@@ -578,6 +578,10 @@
         "code": "SIT40521 키친 매니지먼트 수료증 IV",
         "requirement": "학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
       },
+      "patisserie": {
+        "code": "SIT40721 파티세리 수료증 IV",
+        "requirement": "학생은 만 18세 이상이어야 하며, Year 10 또는 동등 학력을 완료하고 입학 인터뷰에 참여해야 합니다.\nIELTS 6.0(또는 동등 점수) 및 LLN/ACSF 레벨 3(Learning, Numeracy, Reading, Writing, Oral communication)이 필요합니다."
+      },
       "hospitalityDiploma": {
         "code": "SIT50422 호스피탈리티 매니지먼트 디플로마",
         "requirement": "학생은 12학년 또는 이에 상응하는 학력을 완료해야 합니다"

@@ -7,15 +7,22 @@ import Units from '@/domains/courses/components/Units';
 import CourseInformationComponent from '@/domains/courses/components/CourseInformation';
 import IndustryPlacement from '@/domains/courses/contents/cookery/IndustryPlacement';
 import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/IndustryPlacementHospitality';
+import IndustryPlacementPatisserie from '@/domains/courses/contents/cookery/IndustryPlacementPatisserie';
 import React from 'react';
 import Gallery from '@/components/common/Gallery';
 import { cn } from '@/lib';
-import type { CourseDetailInfo, CourseInformationInfo, CourseUnitGroup } from '@/types/course';
+import type {
+  CourseDetailInfo,
+  CourseInformationInfo,
+  CourseUnitGroup,
+} from '@/types/course';
 
 const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
     'Certificate IV in Kitchen Management',
+  'sit40721-certificate-iv-in-patisserie': 'Certificate IV in Patisserie',
   'industry-placement-work-placement': 'Industry Placement',
+  'industry-placement-patisserie': 'Industry Placement (Patisserie)',
   fss: 'NSW Food Safety Supervisor',
   'sit50422-diploma-of-hospitality-management':
     'Diploma of Hospitality Management',
@@ -27,7 +34,10 @@ const mappingCourseTitle: { [key: string]: string } = {
 
 const mappingCourseImage: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management': '/courses/cookery/KM.png',
+  'sit40721-certificate-iv-in-patisserie':
+    '/courses/cookery/patisserie_banner.png',
   'industry-placement-work-placement': '/courses/cookery/industry.png',
+  'industry-placement-patisserie': '/courses/cookery/patisserie_1.png',
   fss: '/short-course/fss_1.png',
   'sit50422-diploma-of-hospitality-management': '/courses/cookery/DHM.png',
   'advanced-diploma-of-hospitality-management': '/courses/cookery/ADHM.png',
@@ -37,6 +47,11 @@ const mappingCourseImage: { [key: string]: string } = {
 
 const menuItems = {
   'sit40521-certificate-iv-in-kitchen-management': [
+    'Course Information',
+    'Course Detail',
+    'Units',
+  ],
+  'sit40721-certificate-iv-in-patisserie': [
     'Course Information',
     'Course Detail',
     'Units',
@@ -66,11 +81,34 @@ export default function CookeryDetailClient({
   courseInformation,
   courseUnits,
 }: CookeryDetailClientProps) {
-
   // Industry Placement 페이지인지 확인
   const isIndustryPlacement = id === 'industry-placement-work-placement';
   const isIndustryPlacementHospitality =
     id === 'industry-placement-hospitality-management';
+  const isIndustryPlacementPatisserie = id === 'industry-placement-patisserie';
+
+  if (isIndustryPlacementPatisserie) {
+    return (
+      <div className="pb-40">
+        <Banner
+          slides={[
+            {
+              imgPath:
+                mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
+              title: mappingCourseTitle[id],
+              content: '',
+            },
+          ]}
+          dimmed={
+            <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
+          }
+        />
+        <div className="max-w-[1600px] mx-auto px-20 md:px-80 py-40">
+          <IndustryPlacementPatisserie />
+        </div>
+      </div>
+    );
+  }
 
   // Industry Placement Hospitality 페이지인 경우 IndustryPlacementHospitality 컴포넌트 렌더링
   if (isIndustryPlacementHospitality) {
@@ -131,7 +169,8 @@ export default function CookeryDetailClient({
         slides={[
           {
             imgPath: mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
-            title: `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
+            title:
+              `${courseInformation?.courseCode || ''} ${mappingCourseTitle[id] || ''}`.trim(),
             content: '',
           },
         ]}
@@ -159,7 +198,7 @@ export default function CookeryDetailClient({
         id={getSectionId('Units')}
         className={cn(
           'max-w-[1600px] mx-auto px-20 md:px-80 py-40 gap-40',
-          'grid grid-cols-1 lg:grid-cols-2'
+          'grid grid-cols-1 lg:grid-cols-2',
         )}
       >
         <Units id={id} data={courseUnits} />
@@ -173,7 +212,9 @@ export default function CookeryDetailClient({
           images={
             id === 'sit40521-certificate-iv-in-kitchen-management'
               ? images_KM
-              : images_HM
+              : id === 'sit40721-certificate-iv-in-patisserie'
+                ? images_PS
+                : images_HM
           }
         />
       </section>
@@ -199,4 +240,11 @@ const images_HM = [
   '/courses/cookery/hm_5.png',
   '/courses/cookery/hm_6.png',
   '/courses/cookery/hm_7.png',
+];
+
+const images_PS = [
+  '/courses/cookery/patisserie_1.png',
+  '/courses/cookery/patisserie_2.png',
+  '/courses/cookery/patisserie_3.png',
+  '/courses/cookery/patisserie_4.png',
 ];

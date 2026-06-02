@@ -46,6 +46,60 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Please read the Student Handbook before enrolling, as it contains important information about ABM. For more details, email info@abm.edu.au or call +61 (02) 9160 4507.',
     },
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseDuration: {
+      title: 'Course Duration',
+      description:
+        'This qualification will be delivered over 78 weeks, including 60 weeks of training and assessment spread over 6 terms of 10 weeks each and 18 weeks of holidays.',
+    },
+    workPlacement: {
+      title: 'Work Placement',
+      description: [
+        '600 hours',
+        {
+          type: 'link',
+          text: 'View Industry Placement details',
+          url: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+        },
+      ],
+    },
+    studentSupport: {
+      title: 'Student Support',
+      description: [
+        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+        '• Additional costs or limitations are communicated before enrolment.',
+        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
+      ],
+    },
+    jobRoles: {
+      title: 'Job roles',
+      description: [
+        'Pastry Chef',
+        'Chef de Partie (Pastry)',
+        'Patisserie Cook',
+        'Dessert Chef',
+      ],
+    },
+    pathways: {
+      title: 'Pathways to Further Study / Career Opportunities',
+      description: [
+        'Potential employment options are in the commercial cookery sector in the roles such as chefs and cooks who have a supervisory or team leading role in the kitchen.',
+        'Students who complete this course may wish to continue their education into a range of Diploma qualifications, such as the',
+        {
+          type: 'link',
+          text: 'SIT50422 Diploma of Hospitality Management.',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: 'Additional Information',
+      description:
+        'Please read the Student Handbook before enrolling, as it contains important information about ABM. For more details, email info@abm.edu.au or call +61 (02) 9160 4507.',
+    },
+  },
   'sit50422-diploma-of-hospitality-management': {
     courseDuration1: {
       title: 'Course Duration – Packaged with Kitchen Management Course',

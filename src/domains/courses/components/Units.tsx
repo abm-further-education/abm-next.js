@@ -23,6 +23,7 @@ import {
   HM_UNITS_1,
   HM_UNITS_2,
   KM_UNITS,
+  PATISSERIE_UNITS,
 } from '@/lib/units';
 
 interface UnitsProps {
@@ -36,6 +37,7 @@ const staticMappingCourseUnits: {
     | { [key: string]: string | number }[][];
 } = {
   'sit40521-certificate-iv-in-kitchen-management': KM_UNITS,
+  'sit40721-certificate-iv-in-patisserie': PATISSERIE_UNITS,
   'sit50422-diploma-of-hospitality-management': [HM_UNITS_1, HM_UNITS_2],
   'sis40221-certificate-iv-in-fitness': CERTIV_FITNESS_UNITS,
   'sis30321-certificate-iii-in-fitness': CERTIII_FITNESS_UNITS,

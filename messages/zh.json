@@ -569,6 +569,10 @@
         "code": "SIT40521 四级厨房管理证书",
         "requirement": "学生必须完成相当于10年级的学历"
       },
+      "patisserie": {
+        "code": "SIT40721 四级西点证书",
+        "requirement": "学生须年满18岁，完成相当于10年级学历，并参加入学面试。\n英语要求为IELTS 6.0（或同等成绩），并满足LLN/ACSF三级要求：Learning、Numeracy、Reading、Writing、Oral communication。"
+      },
       "hospitalityDiploma": {
         "code": "SIT50422 酒店管理文凭",
         "requirement": "学生必须完成相当于12年级的学历"

@@ -1114,6 +1114,7 @@ import {
   HM_UNITS_1,
   HM_UNITS_2,
   KM_UNITS,
+  PATISSERIE_UNITS,
 } from '@/lib/units';
 
 const staticCourseUnitsMap: {
@@ -1121,6 +1122,9 @@ const staticCourseUnitsMap: {
 } = {
   'sit40521-certificate-iv-in-kitchen-management': [
     { groupTitle: '', groupIndex: 0, units: KM_UNITS as CourseUnitItem[] },
+  ],
+  'sit40721-certificate-iv-in-patisserie': [
+    { groupTitle: '', groupIndex: 0, units: PATISSERIE_UNITS as CourseUnitItem[] },
   ],
   'sit50422-diploma-of-hospitality-management': [
     { groupTitle: 'Standalone Food & Beverage Stream', groupIndex: 0, units: HM_UNITS_1 as CourseUnitItem[] },

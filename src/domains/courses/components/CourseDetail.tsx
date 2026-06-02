@@ -278,6 +278,7 @@ const courseProgressMap: Record<string, ProgressRow[]> = {
   'sis40221-certificate-iv-in-fitness': fitnessProgress,
   'sis50321-diploma-of-sport': fitnessProgress,
   'sit40521-certificate-iv-in-kitchen-management': kmProgress,
+  'sit40721-certificate-iv-in-patisserie': kmProgress,
   'advanced-diploma-of-hospitality-management': kmProgress,
 };
 
@@ -301,6 +302,9 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
   }
 
   const progressRows = courseId ? courseProgressMap[courseId] : undefined;
+  const showProgressPanel =
+    courseId !== 'hlt33115-certificate-iii-in-health-services-assistance' &&
+    courseId !== 'sit40721-certificate-iv-in-patisserie';
 
   // courseStructure 키는 Units로 이관되었으므로 제외, faq는 HSA 전용
   const sections = Object.entries(courseInfo).filter(
@@ -335,9 +339,10 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
             })()}
           />
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-40">
-            {courseId !==
-              'hlt33115-certificate-iii-in-health-services-assistance' && (
+          <div
+            className={`grid grid-cols-1 gap-40 ${showProgressPanel ? 'lg:grid-cols-2' : ''}`}
+          >
+            {showProgressPanel && (
               <div className="mb-30">
                 {progressRows && (
                   <div className="mt-15">
