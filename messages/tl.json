@@ -569,6 +569,10 @@
         "code": "SIT40521 Certificate IV in Kitchen Management",
         "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10"
       },
+      "patisserie": {
+        "code": "SIT40721 Certificate IV in Patisserie",
+        "requirement": "Dapat 18 taong gulang pataas ang estudyante, may katumbas na Year 10, at lumahok sa course entry interview.\nKailangan ang IELTS 6.0 (o katumbas) at LLN/ACSF level 3 sa Learning, Numeracy, Reading, Writing, at Oral communication."
+      },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
         "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 12"

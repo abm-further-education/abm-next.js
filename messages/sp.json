@@ -571,6 +571,10 @@
         "code": "SIT40521 Certificado IV en Gestión de Cocina",
         "requirement": "El estudiante debe haber completado el equivalente al Año 10"
       },
+      "patisserie": {
+        "code": "SIT40721 Certificate IV in Patisserie",
+        "requirement": "El estudiante debe tener al menos 18 años, haber completado el equivalente al Año 10 y participar en una entrevista de ingreso.\nIELTS 6.0 (o equivalente) y requisitos LLN/ACSF de nivel 3 en Learning, Numeracy, Reading, Writing y Oral communication."
+      },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma en Gestión de Hospitalidad",
         "requirement": "El estudiante debe haber completado el equivalente al Año 12"

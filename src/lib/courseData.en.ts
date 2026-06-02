@@ -16,6 +16,19 @@ export const courseData: CourseData[] = [
     tags: ['kitchen', 'management', 'culinary', 'certificate-iv'],
   },
   {
+    id: 'patisserie',
+    title: 'Certificate IV in Patisserie',
+    description:
+      'Build advanced patisserie techniques and kitchen leadership skills for commercial pastry environments.',
+    category: 'cookery',
+    type: 'full-course',
+    level: 'certificate-iv',
+    duration: '78 weeks',
+    image: '/courses/cookery/patisserie_banner.png',
+    link: '/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie',
+    tags: ['patisserie', 'pastry', 'dessert', 'certificate-iv'],
+  },
+  {
     id: 'food-safety',
     title: 'NSW Food Safety Supervisor',
     description: 'Learn food safety and hygiene management.',

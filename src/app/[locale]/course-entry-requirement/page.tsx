@@ -53,7 +53,41 @@ export default async function CourseEntryRequirementsPage() {
     tr?.course_table_title || t('courseRequirementsTableTitle');
   const courseTableDescription =
     tr?.course_table_description || t('courseRequirementsTableDescription');
-  const courses = data?.courses || [];
+  const translationCoursesRaw = t.raw('courses') as Record<
+    string,
+    { code?: string; requirement?: string }
+  >;
+  const translationCourses = Object.values(translationCoursesRaw || {}).map(
+    (course, index) => ({
+      id: `translation-${index}`,
+      page_id: '',
+      display_order: index,
+      created_at: '',
+      updated_at: '',
+      course_code: course.code || '',
+      requirement: course.requirement || '',
+    }),
+  );
+  const dbCourses = data?.courses || [];
+  const courses =
+    dbCourses.length > 0
+      ? [
+          ...translationCourses.map(
+            (translationCourse) =>
+              dbCourses.find(
+                (dbCourse) =>
+                  dbCourse.course_code === translationCourse.course_code,
+              ) || translationCourse,
+          ),
+          ...dbCourses.filter(
+            (dbCourse) =>
+              !translationCourses.some(
+                (translationCourse) =>
+                  translationCourse.course_code === dbCourse.course_code,
+              ),
+          ),
+        ]
+      : translationCourses;
   const englishEntryTitle =
     tr?.english_entry_title || t('englishEntryRequirementsTitle');
   const englishEntryDescription =
@@ -310,7 +344,7 @@ export default async function CourseEntryRequirementsPage() {
               )}
 
               {/* Fallback: ELICOS from translations if no DB data */}
-              {elicosPartners.length === 0 && !data && (
+              {elicosPartners.length === 0 && (
                 <div id="elicos-pathway-partners">
                   <h4 className="text-xl font-semibold mb-30 text-primary">
                     {t('elicosPathwayPartnersTitle')}

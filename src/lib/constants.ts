@@ -3,10 +3,18 @@ export const cookeryMenu = [
     title: 'Certificate IV in Kitchen Management',
     href: '/cookery-and-hospitality-courses/sit40521-certificate-iv-in-kitchen-management',
   },
+  // {
+  //   title: 'Certificate IV in Patisserie',
+  //   href: '/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie',
+  // },
   {
     title: '⇢ Industry Placement (Kitchen Management)',
     href: '/cookery-and-hospitality-courses/industry-placement-work-placement',
   },
+  // {
+  //   title: '⇢ Industry Placement (Patisserie)',
+  //   href: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+  // },
   {
     title: 'NSW Food Safety Supervisor',
     href: '/cookery-and-hospitality-courses/fss',
@@ -308,10 +316,18 @@ export const MENU_STRUCTURE: MenuSection[] = [
             title: 'Certificate IV in Kitchen Management',
             href: '/cookery-and-hospitality-courses/sit40521-certificate-iv-in-kitchen-management',
           },
+          // {
+          //   title: 'Certificate IV in Patisserie',
+          //   href: '/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie',
+          // },
           {
             title: '⇢ Industry Placement (Kitchen Management)',
             href: '/cookery-and-hospitality-courses/industry-placement-work-placement',
           },
+          // {
+          //   title: '⇢ Industry Placement (Patisserie)',
+          //   href: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+          // },
           {
             title: 'NSW Food Safety Supervisor',
             href: '/cookery-and-hospitality-courses/fss',

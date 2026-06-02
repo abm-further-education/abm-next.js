@@ -18,6 +18,17 @@ import { courseData as courseDataTl } from './courseData.tl';
 import { courseData as courseDataZh } from './courseData.zh';
 import { courseData as courseDataId } from './courseData.id';
 
+function mergeCourseDataWithEnglish(localizedData: CourseData[]): CourseData[] {
+  const localizedByLink = new Map(localizedData.map((course) => [course.link, course]));
+  const merged = courseDataEn.map((course) => localizedByLink.get(course.link) || course);
+
+  const additionalLocalizedCourses = localizedData.filter(
+    (course) => !courseDataEn.some((enCourse) => enCourse.link === course.link),
+  );
+
+  return [...merged, ...additionalLocalizedCourses];
+}
+
 export const courseCategories = [
   { value: 'all', label: 'All Categories' },
   { value: 'cookery', label: 'Cookery' },
@@ -49,21 +60,21 @@ export const courseLevels = [
 export function getCourseDataByLocale(locale: string): CourseData[] {
   switch (locale) {
     case 'kr':
-      return courseDataKr;
+      return mergeCourseDataWithEnglish(courseDataKr);
     case 'sp':
-      return courseDataSp;
+      return mergeCourseDataWithEnglish(courseDataSp);
     case 'pt':
-      return courseDataPt;
+      return mergeCourseDataWithEnglish(courseDataPt);
     case 'jp':
-      return courseDataJp;
+      return mergeCourseDataWithEnglish(courseDataJp);
     case 'tl':
-      return courseDataTl;
+      return mergeCourseDataWithEnglish(courseDataTl);
     case 'zh':
-      return courseDataZh;
+      return mergeCourseDataWithEnglish(courseDataZh);
     case 'id':
-      return courseDataId;
+      return mergeCourseDataWithEnglish(courseDataId);
     case 'en':
     default:
-      return courseDataEn;
+      return [...courseDataEn];
   }
 }

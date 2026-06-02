@@ -24,6 +24,21 @@ const courseMetadata: {
       'Australia',
     ],
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    title: 'SIT40721 Certificate IV in Patisserie',
+    description:
+      'Develop advanced pastry and dessert production skills with practical commercial kitchen training and leadership preparation for patisserie roles.',
+    image: '/courses/cookery/KM.png',
+    keywords: [
+      'patisserie',
+      'certificate IV',
+      'pastry chef',
+      'dessert production',
+      'commercial cookery',
+      'Sydney',
+      'Australia',
+    ],
+  },
   'sit50422-diploma-of-hospitality-management': {
     title: 'SIT50422 Diploma of Hospitality Management',
     description:
@@ -65,6 +80,21 @@ const courseMetadata: {
       'internship',
       'practical training',
       'kitchen experience',
+      'Sydney',
+      'Australia',
+    ],
+  },
+  'industry-placement-patisserie': {
+    title: 'Industry Placement (Patisserie)',
+    description:
+      'Gain hands-on pastry and dessert production experience through industry placement aligned to the Certificate IV in Patisserie.',
+    image: '/courses/cookery/industry.png',
+    keywords: [
+      'industry placement',
+      'patisserie',
+      'pastry',
+      'dessert production',
+      'work placement',
       'Sydney',
       'Australia',
     ],

@@ -281,6 +281,201 @@ export const KM_UNITS = [
   },
 ];
 
+export const PATISSERIE_UNITS = [
+  {
+    no: 1,
+    code: 'BSBTWK501',
+    title: 'Lead diversity and inclusion',
+    type: 'Core',
+  },
+  {
+    no: 2,
+    code: 'SITHCCC023*',
+    title: 'Use food preparation equipment',
+    type: 'Core',
+  },
+  {
+    no: 3,
+    code: 'SITHCCC027*',
+    title: 'Prepare dishes using basic methods of cookery',
+    type: 'Core',
+  },
+  {
+    no: 4,
+    code: 'SITHCCC034*',
+    title: 'Work effectively in a commercial kitchen',
+    type: 'Core',
+  },
+  {
+    no: 5,
+    code: 'SITHCCC042*',
+    title: 'Prepare food to meet special dietary requirements',
+    type: 'Core',
+  },
+  {
+    no: 6,
+    code: 'SITHKOP013*',
+    title: 'Plan cooking operations-',
+    type: 'Core',
+  },
+  {
+    no: 7,
+    code: 'SITHPAT011*',
+    title: 'Produce cakes',
+    type: 'Core',
+  },
+  {
+    no: 8,
+    code: 'SITHPAT012*',
+    title: 'Produce specialised cakes',
+    type: 'Core',
+  },
+  {
+    no: 9,
+    code: 'SITHPAT013*',
+    title: 'Produce pastries',
+    type: 'Core',
+  },
+  {
+    no: 10,
+    code: 'SITHPAT014*',
+    title: 'Produce yeast-based bakery products',
+    type: 'Core',
+  },
+  {
+    no: 11,
+    code: 'SITHPAT015*',
+    title: 'Produce petits fours',
+    type: 'Core',
+  },
+  {
+    no: 12,
+    code: 'SITHPAT016*',
+    title: 'Produce desserts',
+    type: 'Core',
+  },
+  {
+    no: 13,
+    code: 'SITHPAT017*',
+    title: 'Prepare and model marzipan',
+    type: 'Core',
+  },
+  {
+    no: 14,
+    code: 'SITHPAT018*',
+    title: 'Produce chocolate confectionery',
+    type: 'Core',
+  },
+  {
+    no: 15,
+    code: 'SITHPAT019*',
+    title: 'Model sugar-based decorations',
+    type: 'Core',
+  },
+  {
+    no: 16,
+    code: 'SITHPAT020*',
+    title: 'Design and produce sweet showpieces',
+    type: 'Core',
+  },
+  {
+    no: 17,
+    code: 'SITXCOM010',
+    title: 'Manage conflict',
+    type: 'Core',
+  },
+  {
+    no: 18,
+    code: 'SITXFIN009',
+    title: 'Manage finances within a budget',
+    type: 'Core',
+  },
+  {
+    no: 19,
+    code: 'SITXFSA005',
+    title: 'Use hygienic practices for food safety',
+    type: 'Core',
+  },
+  {
+    no: 20,
+    code: 'SITXFSA006',
+    title: 'Participate in safe food handling practices',
+    type: 'Core',
+  },
+  {
+    no: 21,
+    code: 'SITXHRM007',
+    title: 'Coach others in job skills',
+    type: 'Core',
+  },
+  {
+    no: 22,
+    code: 'SITXHRM008',
+    title: 'Roster staff',
+    type: 'Core',
+  },
+  {
+    no: 23,
+    code: 'SITXHRM009',
+    title: 'Lead and manage people',
+    type: 'Core',
+  },
+  {
+    no: 24,
+    code: 'SITXINV006*',
+    title: 'Receive, store and maintain stock',
+    type: 'Core',
+  },
+  {
+    no: 25,
+    code: 'SITXMGT004',
+    title: 'Monitor work operations',
+    type: 'Core',
+  },
+  {
+    no: 26,
+    code: 'SITXWHS007',
+    title: 'Implement and monitor work health and safety practices',
+    type: 'Core',
+  },
+  {
+    no: 27,
+    code: 'SITHIND006',
+    title: 'Source and use information on the hospitality industry',
+    type: 'Elective',
+  },
+  {
+    no: 28,
+    code: 'SITXFSA008*',
+    title: 'Develop and implement a food safety program',
+    type: 'Elective- Group A',
+  },
+  {
+    no: 29,
+    code: 'FBPRBK3014*',
+    title: 'Produce sweet yeast products',
+    type: 'Elective- Group A',
+  },
+  {
+    no: 30,
+    code: 'SITHKOP010',
+    title: 'Plan and cost recipes',
+    type: 'Elective- Group A',
+  },
+  {
+    no: 31,
+    code: 'SITHKOP012*',
+    title: 'Develop recipes for special dietary requirements',
+    type: 'Elective- Group A',
+  },
+  {
+    no: 32,
+    code: 'SITXHRM010',
+    title: 'Recruit, select and induct Staff',
+    type: 'Elective',
+  },
+];
+
 export const HM_UNITS_1 = [
   {
     no: 1,

@@ -569,6 +569,10 @@
         "code": "SIT40521 Certificate IV in Kitchen Management",
         "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10"
       },
+      "patisserie": {
+        "code": "SIT40721 Certificate IV in Patisserie",
+        "requirement": "Siswa harus berusia minimal 18 tahun, telah menyelesaikan setara Year 10, dan mengikuti wawancara masuk.\nPersyaratan bahasa: IELTS 6.0 (atau setara) serta LLN/ACSF level 3 pada Learning, Numeracy, Reading, Writing, dan Oral communication."
+      },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
         "requirement": "Siswa harus telah menyelesaikan setara dengan Year 12"

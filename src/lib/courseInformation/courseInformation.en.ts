@@ -34,6 +34,37 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40521?distanceFilter=25',
     },
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      'This qualification reflects the role of pastry chefs who have a supervisory or team leading role in the kitchen. They operate independently or with limited guidance from others and use discretion to solve non-routine problems.\n\nThis qualification provides a pathway to work in various organisations where patisserie products are prepared and served, including patisseries, restaurants, hotels, catering operations, clubs, pubs, cafes, and coffee shops.\n\nThe skills in this qualification must be applied in accordance with Commonwealth and State or Territory legislation, Australian standards and industry codes of practice.\n\nNo occupational licensing, certification or specific legislative requirements apply to this qualification at the time of publication.',
+    duration: '78 weeks',
+    entryRequirement: 'Student must have completed an equivalent of Year 10',
+    deliveryMode: {
+      title: 'Delivery mode:',
+      mode: 'Face to Face',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* More information is available via the',
+      linkText: 'My Skills Website.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40721?distanceFilter=25',
+    },
+  },
   'bsb40120-certificate-iv-in-business': {
     courseCode: 'BSB40120',
     cricosCode: '107906B',
@@ -420,6 +451,37 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         desc: 'Kuon Omakase is a Japanese restaurant that offers a unique and exquisite dining experience, where the chef prepares and serves a series of dishes based on the freshest and finest ingredients available on the day.',
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      'Industry Placement for Certificate IV in Patisserie\n\nStudents complete workplace training in real hospitality and pastry production environments to build practical capability and confidence.',
+    deliveryMode: {
+      title: 'Delivery mode',
+      mode: 'Face to Face + Industry Placement',
+    },
+    deliverySite: {
+      title: 'Delivery site:',
+      locations: [
+        {
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Industry Placement',
+          address:
+            'Various pastry kitchens, bakeries, hotels, restaurants, and catering environments',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: 'Total work placement requirement: 600 hours.',
+    },
   },
   'sit50422-diploma-of-hospitality-management': {
     courseCode: 'SIT50422',

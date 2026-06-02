@@ -567,6 +567,10 @@
         "code": "SIT40521 Certificate IV in Kitchen Management",
         "requirement": "Year 10 修了相当"
       },
+      "patisserie": {
+        "code": "SIT40721 Certificate IV in Patisserie",
+        "requirement": "18歳以上、Year 10修了相当、入学面談への参加が必要です。\nIELTS 6.0（または同等）およびLLN/ACSFレベル3（Learning、Numeracy、Reading、Writing、Oral communication）が必要です。"
+      },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
         "requirement": "Year 12 修了相当"

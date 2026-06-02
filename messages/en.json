@@ -569,6 +569,10 @@
         "code": "SIT40521 Certificate IV in Kitchen Management",
         "requirement": "Student must have completed an equivalent of Year 10"
       },
+      "patisserie": {
+        "code": "SIT40721 Certificate IV in Patisserie",
+        "requirement": "ABM Further Education has the following entry requirements:\nInternational students must:\n·       Be at least 18 years of age and have completed Year 10 or equivalent.\n·       Participate in a course entry interview to determine suitability for the course and student needs.\n·       Have an IELTS* score of 6.0 (test results must be no more than 2 years old). English language competence can also be demonstrated through documented evidence of any of the following:\no   Educated for 5 years in an English-speaking country; or\no   Successful completion of an English Placement Test\n*Note that other English language tests such as PTE and TOEFL can be accepted. Students are required to provide their results so that it can be confirmed they are equivalent to IELTS 6.0.\n\nLanguage, Literacy and Numeracy (LLN) entry requirements:\nEquivalent ACSF level requirements are indicated in table below:\n• Learning: 3\n• Numeracy: 3\n• Reading: 3\n• Writing: 3\n• Oral communication: 3"
+      },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
         "requirement": "Student must have completed an equivalent of Year 12"
