@@ -262,6 +262,57 @@ const kmProgress: ProgressRow[] = [
   ],
 ];
 
+const cookeryPatisserieProgress: ProgressRow[] = [
+  [
+    {
+      code: 'SIT40521',
+      title: 'Certificate IV in Kitchen Management',
+      duration: '78 weeks',
+      color: 'bg-primary',
+    },
+    {
+      code: 'SIT40721',
+      title: 'Certificate IV in Patisserie',
+      duration: '26 weeks',
+      color: 'bg-[#89694D]',
+    },
+  ],
+  [
+    {
+      code: 'SIT40721',
+      title: 'Certificate IV in Patisserie',
+      duration: '78 weeks',
+      color: 'bg-primary',
+    },
+    {
+      code: 'SIT50422',
+      title: 'Diploma of Hospitality Management',
+      duration: '26 weeks',
+      color: 'bg-[#89694D]',
+    },
+  ],
+  [
+    {
+      code: 'SIT40721',
+      title: 'Certificate IV in Patisserie',
+      duration: '78 weeks',
+      color: 'bg-primary',
+    },
+    {
+      code: 'SIT50422',
+      title: 'Diploma of Hospitality Management',
+      duration: '26 weeks',
+      color: 'bg-[#89694D]',
+    },
+    {
+      code: 'SIT60322',
+      title: 'Advanced Diploma of Hospitality Management',
+      duration: '26 weeks',
+      color: 'bg-neutral-400',
+    },
+  ],
+];
+
 const courseProgressMap: Record<string, ProgressRow[]> = {
   'bsb40120-certificate-iv-in-business': businessProgress,
   'bsb50120-diploma-of-business': businessProgress,
@@ -277,8 +328,8 @@ const courseProgressMap: Record<string, ProgressRow[]> = {
   'sis30321-certificate-iii-in-fitness': fitnessProgress,
   'sis40221-certificate-iv-in-fitness': fitnessProgress,
   'sis50321-diploma-of-sport': fitnessProgress,
-  'sit40521-certificate-iv-in-kitchen-management': kmProgress,
-  'sit40721-certificate-iv-in-patisserie': kmProgress,
+  'sit40521-certificate-iv-in-kitchen-management': cookeryPatisserieProgress,
+  'sit40721-certificate-iv-in-patisserie': cookeryPatisserieProgress,
   'advanced-diploma-of-hospitality-management': kmProgress,
 };
 
@@ -303,8 +354,7 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
 
   const progressRows = courseId ? courseProgressMap[courseId] : undefined;
   const showProgressPanel =
-    courseId !== 'hlt33115-certificate-iii-in-health-services-assistance' &&
-    courseId !== 'sit40721-certificate-iv-in-patisserie';
+    courseId !== 'hlt33115-certificate-iii-in-health-services-assistance';
 
   // courseStructure 키는 Units로 이관되었으므로 제외, faq는 HSA 전용
   const sections = Object.entries(courseInfo).filter(

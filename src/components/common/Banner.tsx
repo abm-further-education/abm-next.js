@@ -28,6 +28,7 @@ type Props = {
   }[];
   dimmed?: React.ReactNode;
   isNeedContactBtn?: boolean;
+  hideBrochureButton?: boolean;
   autoplayDelay?: number;
 };
 
@@ -35,6 +36,7 @@ function Banner({
   slides,
   dimmed,
   isNeedContactBtn,
+  hideBrochureButton = false,
   autoplayDelay = 4000,
 }: Props) {
   const [brochureUrl, setBrochureUrl] = React.useState(DEFAULT_BROCHURE_URL);
@@ -203,25 +205,26 @@ function Banner({
                 )}
               </FadeInBottomToTop>
 
-              {slide.linkButton ? (
-                <Link
-                  target={slide.linkButton.target || '_blank'}
-                  href={slide.linkButton.href}
-                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
-                >
-                  {slide.linkButton.text}
-                </Link>
-              ) : (
-                <Link
-                  target="_blank"
-                  href={brochureUrl}
-                  rel="noopener noreferrer"
-                  onClick={handleBrochureClick}
-                  className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
-                >
-                  ABM Course Guide 2026
-                </Link>
-              )}
+              {!hideBrochureButton &&
+                (slide.linkButton ? (
+                  <Link
+                    target={slide.linkButton.target || '_blank'}
+                    href={slide.linkButton.href}
+                    className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
+                  >
+                    {slide.linkButton.text}
+                  </Link>
+                ) : (
+                  <Link
+                    target="_blank"
+                    href={brochureUrl}
+                    rel="noopener noreferrer"
+                    onClick={handleBrochureClick}
+                    className={`font-[family-name:var(--font-montserrat)] text-white! py-10 px-20 bg-primary text-center md:w-max h-max mt-20 hover:bg-primary-bk transition-all`}
+                  >
+                    ABM Course Guide 2026
+                  </Link>
+                ))}
             </div>
           </SwiperSlide>
         ))}

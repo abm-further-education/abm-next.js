@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import getCourseInformationData from '@/lib/courseInformation';
 import { useParams } from 'next/navigation';
 
@@ -28,32 +29,23 @@ function IndustryPlacementPatisserie() {
 
   const placementSchedule = [
     {
-      term: 'Term 1',
-      content: 'Nil',
-    },
-    {
-      term: 'Term 2',
-      content: 'Nil',
+      term: 'Term 1 - Term 2',
+      content: 'Theory + Practical Classes',
     },
     {
       term: 'Term 3',
-      content:
-        'Week 6 – 10 | 5*16=80 hours work placement (SITHCCC043* Work effectively as a cook)',
+      termSub: '(week 6-10)',
+      content: 'Theory + Practical Classes',
+      bullet: 'Week 6 – 10: additional 16 hours per week work placement',
     },
     {
-      term: 'Term 4',
-      content:
-        'Week 1 – 10 | 10*16=160 hours work placement (SITHCCC043* Work effectively as a cook)',
-    },
-    {
-      term: 'Term 5',
-      content:
-        'Week 1 – 10 | 10*16=160 hours work placement (SITHCCC043* Work effectively as a cook)',
+      term: 'Term 4 - Term 5',
+      content: 'Theory + Practical Classes',
+      sub: 'additional 16 hours per week work placement',
     },
     {
       term: 'Term 6',
-      content:
-        'Week 1 – 10 | 10*20=200 hours work placement (SITHCCC043* Work effectively as a cook)',
+      content: '20 hours per week work placement',
     },
   ];
 
@@ -77,47 +69,45 @@ function IndustryPlacementPatisserie() {
           >
             <div className="flex flex-col items-center justify-center bg-[#C07A3A] text-white px-6 py-4 min-w-[180px] text-center">
               <span className="font-bold italic text-base">{item.term}</span>
+              {item.termSub && (
+                <span className="text-xs italic mt-0.5">{item.termSub}</span>
+              )}
             </div>
             <div className="flex-1 bg-[#F0DCC4] px-6 py-4 flex flex-col justify-center">
-              <p className="text-sm text-gray-900">{item.content}</p>
+              <p className="font-bold text-gray-900 text-sm">{item.content}</p>
+              {item.bullet && (
+                <ul className="list-disc list-inside mt-1">
+                  <li className="text-sm text-gray-800">{item.bullet}</li>
+                </ul>
+              )}
+              {item.sub && (
+                <p className="text-sm text-gray-800 mt-0.5">{item.sub}</p>
+              )}
             </div>
           </div>
         ))}
       </div>
 
-      <p className="my-20 text-sm font-semibold text-gray-900">
-        Total - 600 hours
-      </p>
-      <p className="my-10 text-sm text-gray-800">
-        60 weeks teaching period + 18 weeks Term break
-      </p>
-
-      <div className="my-20 space-y-8 text-sm text-gray-800 leading-relaxed">
-        <p>
-          In Term 3 (Week 6-10), including Term 4 and Term 5, students complete
-          320 hours of work placement for <strong>SITHCCC043</strong>. During
-          this period, students are also required to attend 15 hours of classes
-          to cover theory and work-based learning.
-        </p>
-        <p>
-          In Term 6, students complete{' '}
-          <strong>SITHCCC043* Work effectively as a cook</strong> with a minimum
-          requirement of 48 service periods (total 200 hours). Students also
-          complete <strong>SITHKOP013* Plan cooking operations</strong> as
-          additional evidence.
-        </p>
-        <p>
-          Where workplace exposure to special functions is limited, special
-          function training and assessment are completed in ABM&apos;s commercial
-          training kitchen. ABM&apos;s Academic Manager and Workplace Coordinator
-          organise work placement and delivery timing according to student
-          numbers and training requirements.
-        </p>
-      </div>
-
       <p className="my-20">
         {renderTextWithLineBreaks(courseInfo?.additionalInfo?.description)}
       </p>
+      {courseInfo?.partners && (
+        <ul className="space-y-4 text-gray-800 text-sm leading-relaxed">
+          {courseInfo.partners.map((partner, idx) => (
+            <li key={idx}>
+              <strong className="text-gray-900">{partner.name}</strong>:{' '}
+              {partner.desc}
+            </li>
+          ))}
+        </ul>
+      )}
+      <Image
+        src="/courses/cookery/partners.png"
+        alt="partners"
+        width={900}
+        height={400}
+        className="mx-auto"
+      />
     </div>
   );
 }

@@ -19,7 +19,7 @@ export const courseData: CourseData[] = [
     id: 'patisserie',
     title: 'Certificate IV in Patisserie',
     description:
-      'Build advanced patisserie techniques and kitchen leadership skills for commercial pastry environments.',
+      'Become a qualified pastry chef in Australia with hands-on kitchen training and 600 hours industry placement in Sydney CBD.',
     category: 'cookery',
     type: 'full-course',
     level: 'certificate-iv',

@@ -37,7 +37,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'sit40721-certificate-iv-in-patisserie': {
     courseCode: 'SIT40721',
     description:
-      'This qualification reflects the role of pastry chefs who have a supervisory or team leading role in the kitchen. They operate independently or with limited guidance from others and use discretion to solve non-routine problems.\n\nThis qualification provides a pathway to work in various organisations where patisserie products are prepared and served, including patisseries, restaurants, hotels, catering operations, clubs, pubs, cafes, and coffee shops.\n\nThe skills in this qualification must be applied in accordance with Commonwealth and State or Territory legislation, Australian standards and industry codes of practice.\n\nNo occupational licensing, certification or specific legislative requirements apply to this qualification at the time of publication.',
+      'Become a Qualified Pastry Chef in Australia\n\nCreate cakes, desserts, pastries, chocolate creations and artisan baked goods while gaining real industry experience in commercial kitchens.\n\n✔ 600 Hours Industry Placement\n✔ Practical Kitchen Training Every Week\n✔ Learn from Experienced Pastry Chefs\n✔ Study in Sydney CBD\n✔ Graduate with Skills Employers Need\n\nStart your pastry career in Australia with hands-on training and real workplace experience.',
     duration: '78 weeks',
     entryRequirement: 'Student must have completed an equivalent of Year 10',
     deliveryMode: {
@@ -480,8 +480,55 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       ],
     },
     additionalInfo: {
-      description: 'Total work placement requirement: 600 hours.',
+      description:
+        'We encourage you to find your own work placement that suits your interests and goals, but we are also here to support you if you need any assistance. We have strong connections with various industry partners who are always looking for talented and motivated students like you.\n\nWe believe that this work placement is a key component of your course that will prepare you for the challenges and opportunities of the cookery industry. You will not only improve your culinary skills, but also develop your confidence, communication, and teamwork abilities. This is your chance to shine and show the world what you can do!',
     },
+    partners: [
+      {
+        name: 'Accor',
+        desc: 'Accor is a leading multinational hospitality group based in France, specializing in hotel and service management. With a diverse portfolio of brands spanning luxury to economy, Accor operates globally, providing accommodations and related services.',
+      },
+      {
+        name: 'AMA Hospitality',
+        desc: 'AMA Hospitality is a catering and event management company that specialises in delivering memorable and personalised experiences to their clients.',
+      },
+      {
+        name: 'Bills',
+        desc: 'Bills is a popular restaurant chain that serves fresh and delicious food with a relaxed and friendly vibe.',
+      },
+      {
+        name: 'Catering HQ',
+        desc: 'Catering HQ is a food and beverage company that operates in various venues, such as clubs, pubs, and function centres.',
+      },
+      {
+        name: 'Grand Royale',
+        desc: 'Grand Royale is a luxury hotel that offers elegant and comfortable accommodation, fine dining, and spa facilities.',
+      },
+      {
+        name: 'Hurricane’s Grill',
+        desc: 'Hurricane’s Grill is a steakhouse and bar that serves mouth-watering and succulent steaks, ribs, burgers, and salads.',
+      },
+      {
+        name: 'ICC Sydney',
+        desc: 'The International Convention Centre Sydney (ICC Sydney) is Australia’s top venue for conventions, exhibitions, and events. Located in Darling Harbour, it offers state-of-the-art facilities and versatile event spaces with stunning waterfront views. Renowned for sustainability and exceptional service, ICC Sydney is perfect for events of all sizes. Its prime location provides easy access to Sydney’s main attractions.',
+      },
+      {
+        name: 'Industry Placement Solutions',
+        desc: 'Industry Placement Solutions is a recruitment and placement agency that helps students find suitable and rewarding work placements in the hospitality industry.',
+      },
+      {
+        name: 'Liverpool Catholic Club',
+        desc: 'Liverpool Catholic Club is a community club that offers a range of entertainment, dining, and leisure options, such as gaming, sports, and function rooms.',
+      },
+      {
+        name: 'Primi Italian',
+        desc: 'Primi Italian is a family-owned restaurant that serves authentic and delicious Italian cuisine, such as pizza, pasta, and gelato.',
+      },
+      {
+        name: 'Kuon Omakase',
+        desc: 'Kuon Omakase is a Japanese restaurant that offers a unique and exquisite dining experience, where the chef prepares and serves a series of dishes based on the freshest and finest ingredients available on the day.',
+      },
+    ],
   },
   'sit50422-diploma-of-hospitality-management': {
     courseCode: 'SIT50422',

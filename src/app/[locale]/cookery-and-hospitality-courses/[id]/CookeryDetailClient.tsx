@@ -86,6 +86,9 @@ export default function CookeryDetailClient({
   const isIndustryPlacementHospitality =
     id === 'industry-placement-hospitality-management';
   const isIndustryPlacementPatisserie = id === 'industry-placement-patisserie';
+  const isPatisseriePage =
+    id === 'sit40721-certificate-iv-in-patisserie' ||
+    id === 'industry-placement-patisserie';
 
   if (isIndustryPlacementPatisserie) {
     return (
@@ -99,6 +102,7 @@ export default function CookeryDetailClient({
               content: '',
             },
           ]}
+          hideBrochureButton={isPatisseriePage}
           dimmed={
             <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
           }
@@ -174,6 +178,7 @@ export default function CookeryDetailClient({
             content: '',
           },
         ]}
+        hideBrochureButton={isPatisseriePage}
         dimmed={
           <div className="bg-neutral-900/30 w-full h-screen md:h-700 absolute z-10" />
         }
@@ -243,8 +248,10 @@ const images_HM = [
 ];
 
 const images_PS = [
-  '/courses/cookery/patisserie_1.png',
-  '/courses/cookery/patisserie_2.png',
-  '/courses/cookery/patisserie_3.png',
-  '/courses/cookery/patisserie_4.png',
+  '/courses/cookery/patisserie_5.png',
+  '/courses/cookery/patisserie_6.png',
+  '/courses/cookery/patisserie_7.png',
+  '/courses/cookery/patisserie_8.png',
+  '/courses/cookery/patisserie_9.png',
+  '/courses/cookery/patisserie_10.png',
 ];

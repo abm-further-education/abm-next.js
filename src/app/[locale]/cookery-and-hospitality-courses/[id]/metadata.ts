@@ -25,17 +25,20 @@ const courseMetadata: {
     ],
   },
   'sit40721-certificate-iv-in-patisserie': {
-    title: 'SIT40721 Certificate IV in Patisserie',
+    title:
+      'Become a Qualified Pastry Chef in Australia | SIT40721 Certificate IV in Patisserie',
     description:
-      'Develop advanced pastry and dessert production skills with practical commercial kitchen training and leadership preparation for patisserie roles.',
-    image: '/courses/cookery/KM.png',
+      'Create cakes, desserts, pastries, chocolate creations and artisan baked goods with 600 hours industry placement, practical kitchen training every week, and study in Sydney CBD. Start your pastry career in Australia.',
+    image: '/courses/cookery/patisserie_banner.png',
     keywords: [
       'patisserie',
-      'certificate IV',
       'pastry chef',
+      'certificate IV',
+      'SIT40721',
+      'industry placement',
+      'Sydney CBD',
+      'commercial kitchen',
       'dessert production',
-      'commercial cookery',
-      'Sydney',
       'Australia',
     ],
   },
