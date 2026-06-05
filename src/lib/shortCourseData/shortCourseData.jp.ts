@@ -510,11 +510,6 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
-        date: '2026-06-26',
-        displayDate: '26 June',
-        time: '午前9:00〜午後5:00',
-      },
-      {
         date: '2026-07-17',
         displayDate: '17 July',
         time: '午前9:00〜午後5:00',

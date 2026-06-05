@@ -601,11 +601,6 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '9:00am - 5:00pm',
       },
       {
-        date: '2026-06-26',
-        displayDate: '26 June 2026',
-        time: '9:00am - 5:00pm',
-      },
-      {
         date: '2026-07-17',
         displayDate: '17 July 2026',
         time: '9:00am - 5:00pm',

@@ -687,11 +687,6 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
     },
     dates: [
       {
-        date: '2026-06-26',
-        displayDate: '26 de junio',
-        time: '9:00am - 5:00pm',
-      },
-      {
         date: '2026-07-17',
         displayDate: '17 de julio',
         time: '9:00am - 5:00pm',
