@@ -29,8 +29,12 @@ function IndustryPlacementPatisserie() {
 
   const placementSchedule = [
     {
-      term: 'Term 1 - Term 2',
-      content: 'Theory + Practical Classes',
+      term: 'Term 1',
+      content: 'Theory',
+    },
+    {
+      term: 'Term 2',
+      content: 'Theory + Prac',
     },
     {
       term: 'Term 3',

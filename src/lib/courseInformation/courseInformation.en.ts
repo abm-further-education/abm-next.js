@@ -36,8 +36,9 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   },
   'sit40721-certificate-iv-in-patisserie': {
     courseCode: 'SIT40721',
+    cricosCode: '120678M',
     description:
-      'Become a Qualified Pastry Chef in Australia\n\nCreate cakes, desserts, pastries, chocolate creations and artisan baked goods while gaining real industry experience in commercial kitchens.\n\n✔ 600 Hours Industry Placement\n✔ Practical Kitchen Training Every Week\n✔ Learn from Experienced Pastry Chefs\n✔ Study in Sydney CBD\n✔ Graduate with Skills Employers Need\n\nStart your pastry career in Australia with hands-on training and real workplace experience.',
+      'Become a Qualified Pastry Chef in Australia\n\nCreate cakes, desserts, pastries, chocolate creations and artisan baked goods while gaining real industry experience in commercial kitchens.\n\n✔ 600 Hours Industry Placement\n✔ Practical Kitchen Training Every Week*\n✔ Learn from Experienced Pastry Chefs\n✔ Study in Sydney CBD\n✔ Graduate with Skills Employers Need\n\nStart your pastry career in Australia with hands-on training and real workplace experience.\n\n*From week 6 of Term 2 to Term 5.',
     duration: '78 weeks',
     entryRequirement: 'Student must have completed an equivalent of Year 10',
     deliveryMode: {

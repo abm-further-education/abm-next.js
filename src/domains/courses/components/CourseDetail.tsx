@@ -265,20 +265,6 @@ const kmProgress: ProgressRow[] = [
 const cookeryPatisserieProgress: ProgressRow[] = [
   [
     {
-      code: 'SIT40521',
-      title: 'Certificate IV in Kitchen Management',
-      duration: '78 weeks',
-      color: 'bg-primary',
-    },
-    {
-      code: 'SIT40721',
-      title: 'Certificate IV in Patisserie',
-      duration: '26 weeks',
-      color: 'bg-[#89694D]',
-    },
-  ],
-  [
-    {
       code: 'SIT40721',
       title: 'Certificate IV in Patisserie',
       duration: '78 weeks',
@@ -309,6 +295,20 @@ const cookeryPatisserieProgress: ProgressRow[] = [
       title: 'Advanced Diploma of Hospitality Management',
       duration: '26 weeks',
       color: 'bg-neutral-400',
+    },
+  ],
+  [
+    {
+      code: 'SIT40521',
+      title: 'Certificate IV in Kitchen Management',
+      duration: '78 weeks',
+      color: 'bg-primary',
+    },
+    {
+      code: 'SIT40721',
+      title: 'Certificate IV in Patisserie',
+      duration: '26 weeks',
+      color: 'bg-[#89694D]',
     },
   ],
 ];
