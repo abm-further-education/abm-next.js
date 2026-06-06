@@ -7,6 +7,11 @@
     "testimonialTitle": "体験談",
     "testimonialDescription": "近い将来、どんな場所で幸せに働いている自分を思い描きますか？",
     "banners": {
+      "patisserie": {
+        "title": "パティシエへの情熱をキャリアに。",
+        "content": "600時間のIndustry Placement含む",
+        "button": "今すぐ登録"
+      },
       "hsa": {
         "title": "ヘルスサービスアシスタンスでキャリアをスタート",
         "content": "16週間で急成長 - 2026年2月入学の登録を今すぐ！",

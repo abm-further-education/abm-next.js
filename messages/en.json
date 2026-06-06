@@ -7,6 +7,11 @@
     "testimonialTitle": "Testimonial",
     "testimonialDescription": "Where do you see yourself happily working in nearest future?",
     "banners": {
+      "patisserie": {
+        "title": "Turn your passion for pastry into a career.",
+        "content": "600 Hours Industry Placement Included",
+        "button": "enrol now"
+      },
       "hsa": {
         "title": "Start Your Career in Health Service Assistance",
         "content": "Fast-track your growth in 16 weeks - Enrol now for February 2026!",

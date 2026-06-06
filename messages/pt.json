@@ -7,6 +7,11 @@
     "testimonialTitle": "Depoimentos",
     "testimonialDescription": "Onde você se vê trabalhando feliz em um futuro próximo?",
     "banners": {
+      "patisserie": {
+        "title": "Transforme sua paixão por confeitaria em carreira.",
+        "content": "600 Horas de Estágio Profissional Incluídas",
+        "button": "Inscreva-se agora"
+      },
       "hsa": {
         "title": "Comece Sua Carreira em Assistência de Serviços de Saúde",
         "content": "Acelere seu crescimento em 16 semanas - Inscreva-se agora para fevereiro de 2026!",

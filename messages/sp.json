@@ -7,6 +7,11 @@
     "testimonialTitle": "Testimonios",
     "testimonialDescription": "¿Dónde te ves trabajando felizmente en el futuro cercano?",
     "banners": {
+      "patisserie": {
+        "title": "Convierte tu pasión por la repostería en una carrera.",
+        "content": "600 Horas de Prácticas Profesionales Incluidas",
+        "button": "Inscríbete ahora"
+      },
       "hsa": {
         "title": "Comienza Tu Carrera en Asistencia de Servicios de Salud",
         "content": "Acelera tu crecimiento en 16 semanas - ¡Inscríbete ahora para febrero de 2026!",

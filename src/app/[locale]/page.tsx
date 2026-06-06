@@ -74,6 +74,15 @@ export default async function Home({
         <Banner
           slides={[
             {
+              imgPath: '/courses/cookery/patisserie_banner_main.png',
+              title: t('HomePage.banners.patisserie.title'),
+              content: t('HomePage.banners.patisserie.content'),
+              linkButton: {
+                href: 'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
+                text: t('HomePage.banners.patisserie.button'),
+              },
+            },
+            {
               imgPath: '/home/HSA_2.png',
               title: t('HomePage.banners.hsa.title'),
               content: t('HomePage.banners.hsa.content'),

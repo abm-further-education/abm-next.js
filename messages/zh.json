@@ -7,6 +7,11 @@
     "testimonialTitle": "学员感言",
     "testimonialDescription": "你希望在不久的将来在哪里快乐地工作？",
     "banners": {
+      "patisserie": {
+        "title": "将对糕点的热情转化为职业。",
+        "content": "包含600小时行业实习",
+        "button": "立即报名"
+      },
       "hsa": {
         "title": "开启您的健康服务助理职业生涯",
         "content": "16周快速成长 - 立即报名2026年2月入学！",
