@@ -716,7 +716,7 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
       },
     ],
     location: 'ABM Campus',
-    price: 189,
+    price: 210,
     duration: '7 hours (excludes breaks)',
     courseDeliveryLabel: 'Course Delivery:',
     courseDelivery: 'In-person classroom',

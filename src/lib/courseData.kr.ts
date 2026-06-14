@@ -33,7 +33,7 @@ export const courseData: CourseData[] = [
     category: 'hospitality',
     type: 'short-course',
     duration: '1일',
-    price: 189,
+    price: 210,
     image: '/rsa_banner.png',
     link: '/cookery-and-hospitality-courses/rsa',
     tags: ['RSA', 'Alcohol', 'liquor laws', 'nsw'],

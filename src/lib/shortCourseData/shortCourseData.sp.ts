@@ -826,7 +826,7 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
       },
     ],
     location: 'Campus ABM',
-    price: 189,
+    price: 210,
     duration: '7 horas (excluindo intervalos)',
     courseDeliveryLabel: 'Modalidad del curso:',
     courseDelivery:

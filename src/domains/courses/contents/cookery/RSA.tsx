@@ -38,6 +38,8 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
     ? { ...dataProp, dates: fallbackData.dates ?? dataProp.dates }
     : fallbackData;
   const sortedDates = getUpcomingShortCourseDates(rsaData.dates);
+  const basePrice = rsaData.price;
+  const promoDiscountedPrice = Math.round(basePrice * 0.9);
 
   if (editMode?.isEditMode && courseId) {
     return (
@@ -109,8 +111,9 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
               <p className="text-gray-700">
                 Use code <strong>RSAabmnew02</strong> at checkout for a{' '}
                 <span className="bg-orange-100 text-primary font-semibold">
-                  discount
-                </span>
+                  10% discount
+                </span>{' '}
+                — pay only ${promoDiscountedPrice}
               </p>
             </div>
           </div>

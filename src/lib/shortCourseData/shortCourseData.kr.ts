@@ -629,7 +629,7 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
       },
     ],
     location: 'ABM 캠퍼스',
-    price: 189,
+    price: 210,
     duration: '7시간 (휴식 제외)',
     courseDeliveryLabel: '과정 제공:',
     courseDelivery: '대면. 참가자는 실습 활동에 참여합니다',

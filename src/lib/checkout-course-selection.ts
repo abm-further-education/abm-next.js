@@ -8,7 +8,7 @@ export const CHECKOUT_COURSE_SELECTION_OPTIONS = [
 ] as const;
 
 export const CHECKOUT_COURSE_PRICE_MAP: Record<string, number> = {
-  rsa: 189,
+  rsa: 210,
   'fss-first-time': 180,
   'fss-recertification': 110,
 };

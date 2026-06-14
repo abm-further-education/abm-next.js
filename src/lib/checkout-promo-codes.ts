@@ -13,10 +13,16 @@ export const CHECKOUT_PROMO_CODES: Record<string, CheckoutPromoDefinition> = {
   ASC20: { discount: 0.2, label: '20% OFF', type: 'percentage' },
   ELSISABM2025AUG: { discount: 1, label: '100% OFF', type: 'percentage' },
   ELICOS15: { discount: 15, label: '$15 OFF', type: 'fixed' },
+  ABMFSS15: { discount: 0.15, label: '15% OFF', type: 'percentage' },
   ABM3A25: { discount: 10, label: '$10 OFF', type: 'fixed' },
   ABM4A25: { discount: 20, label: '$20 OFF', type: 'fixed' },
   NMABMSS: { discount: 0.2, label: '20% OFF', type: 'percentage' },
-  ABMTEST100: { discount: 1, label: '100% OFF', type: 'percentage' },
+  RSAABMNEW02: {
+    discount: 0.1,
+    label: '10% OFF',
+    type: 'percentage',
+    allowedSlugs: ['rsa'],
+  },
   OPENDAY20ABM: {
     discount: 20,
     label: '$20 OFF',
@@ -28,7 +34,7 @@ export const CHECKOUT_PROMO_CODES: Record<string, CheckoutPromoDefinition> = {
 function discountedPrice(
   basePrice: number,
   discount: number,
-  type: CheckoutPromoType
+  type: CheckoutPromoType,
 ): number {
   if (type === 'percentage') {
     return Math.round(basePrice * (1 - discount));
@@ -52,7 +58,7 @@ export type CheckoutPromoEvaluation =
 export function evaluateCheckoutPromotion(
   rawCode: string,
   courseSlug: string,
-  basePrice: number
+  basePrice: number,
 ): CheckoutPromoEvaluation {
   const code = rawCode.trim().toUpperCase();
   if (!code) return { kind: 'empty' };
@@ -63,8 +69,7 @@ export function evaluateCheckoutPromotion(
   if (def.allowedSlugs && !def.allowedSlugs.includes(courseSlug)) {
     return {
       kind: 'wrong_course',
-      message:
-        'This promotion code is only valid for RSA or FSS courses.',
+      message: 'This promotion code is only valid for RSA or FSS courses.',
     };
   }
 

@@ -621,7 +621,7 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
       },
     ],
     location: 'ABMキャンパス',
-    price: 189,
+    price: 210,
     duration: '7時間（休憩時間を除く）',
     courseDeliveryLabel: 'コース提供:',
     courseDelivery: '対面。参加者は実践的な活動に参加します',
