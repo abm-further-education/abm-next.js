@@ -14,6 +14,7 @@ export interface PostPaymentFormPaymentDetails {
   selectedDate?: string;
   customerName?: string;
   customerEmail?: string;
+  customerPhone?: string;
   amountPaid?: number;
 }
 
@@ -295,6 +296,7 @@ export async function buildPostPaymentFormPdf({
   drawField('Course Slug', toDisplayValue(paymentDetails.courseSlug));
   drawField('Selected Date', toDisplayValue(paymentDetails.selectedDate));
   drawField('Customer Email', toDisplayValue(paymentDetails.customerEmail));
+  drawField('Mobile Number', toDisplayValue(paymentDetails.customerPhone));
   drawField(
     'Amount Paid',
     paymentDetails.amountPaid

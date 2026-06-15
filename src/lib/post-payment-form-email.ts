@@ -79,6 +79,7 @@ function buildSubmissionEmailHtml({
     <p><strong>Course:</strong> ${subjectCourse}</p>
     <p><strong>Date:</strong> ${paymentDetails.selectedDate || 'Not provided'}</p>
     <p><strong>Email:</strong> ${subjectEmail}</p>
+    <p><strong>Mobile Number:</strong> ${paymentDetails.customerPhone || 'Not provided'}</p>
     <p><strong>Amount Paid:</strong> ${amountPaidLabel}</p>
     <hr/>
     <h3>Third Form Data</h3>

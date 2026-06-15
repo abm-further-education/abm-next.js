@@ -22,6 +22,7 @@ interface PaymentDetails {
   selectedDate: string;
   customerName?: string;
   customerEmail: string;
+  customerPhone?: string;
   amountPaid: number;
 }
 

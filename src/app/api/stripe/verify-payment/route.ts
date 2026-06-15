@@ -37,6 +37,7 @@ export async function GET(request: NextRequest) {
       selectedDate: session.metadata?.selectedDate,
       customerName: customerName || undefined,
       customerEmail: session.customer_details?.email,
+      customerPhone: session.metadata?.phone || undefined,
       amountPaid: session.amount_total ? session.amount_total / 100 : 0,
     };
 

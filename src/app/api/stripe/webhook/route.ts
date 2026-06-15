@@ -5,6 +5,7 @@ import nodemailer from 'nodemailer';
 import { supabaseServer } from '@/lib/supabase-server';
 import { getShortCourseCapacityStatus } from '@/lib/short-course-capacity';
 import { formatAudPaymentAmount } from '@/lib/post-payment-form-pdf';
+import { POST_PAYMENT_FORM_RECIPIENTS } from '@/lib/post-payment-form-email';
 import Stripe from 'stripe';
 
 export const runtime = 'nodejs';
@@ -207,7 +208,7 @@ async function sendBookingEmails(
 
     await transporter.sendMail({
       from: process.env.FROM_EMAIL,
-      to: 'info@abm.edu.au',
+      to: [...POST_PAYMENT_FORM_RECIPIENTS],
       subject: `[Short Course Booking] ${courseName} - ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>

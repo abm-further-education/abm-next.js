@@ -21,6 +21,7 @@ describe('POST /api/short-course-post-payment-form/preview-pdf', () => {
             courseName: 'Responsible Service of Alcohol (RSA)',
             selectedDate: '27th May 2026',
             customerEmail: 'student@example.com',
+            customerPhone: '0412 345 678',
             amountPaid: 189,
           },
           gender: 'Female',
