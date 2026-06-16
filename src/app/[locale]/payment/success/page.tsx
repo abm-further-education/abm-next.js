@@ -166,7 +166,7 @@ export default function PaymentSuccessPage() {
     <>
       <div className="flex flex-col items-center justify-center mt-140 mb-60">
         <CheckEmoji />
-        <div className="bg-white p-8 max-w-[960px] w-full mx-auto mt-10">
+        <div className="bg-white py-8 px-16 md:px-8 max-w-[960px] w-full mx-auto mt-10">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-800 mb-14 font-[family-name:var(--font-montserrat)]">
               {t('title')}
@@ -262,9 +262,7 @@ export default function PaymentSuccessPage() {
                   disabled={submittingForm}
                   className="bg-primary-bk text-white px-20 py-10 font-semibold text-sm disabled:opacity-70"
                 >
-                  {submittingForm
-                    ? 'Submitting...'
-                    : 'Submit additional form'}
+                  {submittingForm ? 'Submitting...' : 'Submit additional form'}
                 </button>
               </form>
             )}

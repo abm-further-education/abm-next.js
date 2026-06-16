@@ -11,6 +11,10 @@ export interface PostPaymentComplianceFormState {
   gender: GenderAnswer;
   completedFoodSafetyUnits: YesNoAnswer;
   usi: string;
+  streetAddress: string;
+  suburb: string;
+  state: string;
+  postcode: string;
   australianCitizen: YesNoAnswer;
   countryOfBirth: string;
   aboriginalOrTorresStraitIslander: YesNoAnswer;
@@ -50,6 +54,10 @@ export const INITIAL_POST_PAYMENT_COMPLIANCE_FORM: PostPaymentComplianceFormStat
     gender: '',
     completedFoodSafetyUnits: '',
     usi: '',
+    streetAddress: '',
+    suburb: '',
+    state: '',
+    postcode: '',
     australianCitizen: '',
     countryOfBirth: '',
     aboriginalOrTorresStraitIslander: '',
@@ -83,6 +91,10 @@ export function parsePostPaymentFormPayload(payload: Record<string, unknown>): {
       gender: String(payload.gender || ''),
       completedFoodSafetyUnits: String(payload.completedFoodSafetyUnits || ''),
       usi: String(payload.usi || ''),
+      streetAddress: String(payload.streetAddress || ''),
+      suburb: String(payload.suburb || ''),
+      state: String(payload.state || ''),
+      postcode: String(payload.postcode || ''),
       australianCitizen: String(payload.australianCitizen || ''),
       countryOfBirth: String(payload.countryOfBirth || ''),
       aboriginalOrTorresStraitIslander: String(
@@ -124,6 +136,18 @@ export function validatePostPaymentComplianceForm(
     !form.completedFoodSafetyUnits
   ) {
     return 'Please indicate whether you have completed SITXFSA005 and SITXFSA006.';
+  }
+  if (!form.streetAddress.trim()) {
+    return 'Street address is required.';
+  }
+  if (!form.suburb.trim()) {
+    return 'Suburb is required.';
+  }
+  if (!form.state.trim()) {
+    return 'State is required.';
+  }
+  if (!form.postcode.trim()) {
+    return 'Postcode is required.';
   }
   if (!form.acceptedPrivacyNoticeAndDeclaration) {
     return 'Please agree to the privacy notice and student declaration before submitting.';

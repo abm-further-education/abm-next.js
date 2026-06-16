@@ -24,6 +24,17 @@ export default function PostPaymentComplianceFormFields({
   showFoodSafetyUnitsQuestion = false,
   signaturePadRef,
 }: PostPaymentComplianceFormFieldsProps) {
+  const australianStates = [
+    'NSW',
+    'VIC',
+    'QLD',
+    'WA',
+    'SA',
+    'TAS',
+    'ACT',
+    'NT',
+  ] as const;
+
   const toggleDisabilityType = (type: string) => {
     onChange((prev) => ({
       ...prev,
@@ -94,6 +105,53 @@ export default function PostPaymentComplianceFormFields({
           }
           className="w-full border border-gray-300 px-10 py-8 text-sm"
         />
+      </div>
+
+      <div>
+        <p className="font-semibold mb-6">Address</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <input
+            type="text"
+            value={form.streetAddress}
+            onChange={(e) =>
+              onChange((prev) => ({ ...prev, streetAddress: e.target.value }))
+            }
+            className="w-full border border-gray-300 px-10 py-8 text-sm md:col-span-2"
+            placeholder="Street"
+          />
+          <input
+            type="text"
+            value={form.suburb}
+            onChange={(e) =>
+              onChange((prev) => ({ ...prev, suburb: e.target.value }))
+            }
+            className="w-full border border-gray-300 px-10 py-8 text-sm"
+            placeholder="Suburb"
+          />
+          <select
+            value={form.state}
+            onChange={(e) =>
+              onChange((prev) => ({ ...prev, state: e.target.value }))
+            }
+            className="w-full border border-gray-300 px-10 py-8 text-sm bg-white"
+          >
+            <option value="">Select state</option>
+            {australianStates.map((stateOption) => (
+              <option key={stateOption} value={stateOption}>
+                {stateOption}
+              </option>
+            ))}
+          </select>
+          <input
+            type="text"
+            value={form.postcode}
+            onChange={(e) =>
+              onChange((prev) => ({ ...prev, postcode: e.target.value }))
+            }
+            className="w-full border border-gray-300 px-10 py-8 text-sm"
+            placeholder="Postcode"
+          />
+        </div>
       </div>
 
       <div>

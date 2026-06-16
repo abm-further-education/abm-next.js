@@ -22,6 +22,10 @@ export interface PostPaymentFormData {
   gender: string;
   completedFoodSafetyUnits: string;
   usi: string;
+  streetAddress: string;
+  suburb: string;
+  state: string;
+  postcode: string;
   australianCitizen: string;
   countryOfBirth: string;
   aboriginalOrTorresStraitIslander: string;
@@ -311,6 +315,10 @@ export async function buildPostPaymentFormPdf({
     toDisplayValue(formData.completedFoodSafetyUnits),
   );
   drawField('USI', toDisplayValue(formData.usi));
+  drawField('Street', toDisplayValue(formData.streetAddress));
+  drawField('Suburb', toDisplayValue(formData.suburb));
+  drawField('State', toDisplayValue(formData.state));
+  drawField('Postcode', toDisplayValue(formData.postcode));
   drawField('Australian Citizen', toDisplayValue(formData.australianCitizen));
   drawField('Country of Birth', toDisplayValue(formData.countryOfBirth));
   drawField(

@@ -85,6 +85,10 @@ function buildSubmissionEmailHtml({
     <h3>Third Form Data</h3>
     <p><strong>Gender:</strong> ${formData.gender || 'Not provided'}</p>
     <p><strong>USI:</strong> ${formData.usi || 'Not provided'}</p>
+    <p><strong>Street:</strong> ${formData.streetAddress || 'Not provided'}</p>
+    <p><strong>Suburb:</strong> ${formData.suburb || 'Not provided'}</p>
+    <p><strong>State:</strong> ${formData.state || 'Not provided'}</p>
+    <p><strong>Postcode:</strong> ${formData.postcode || 'Not provided'}</p>
     <p><strong>Country of Birth:</strong> ${formData.countryOfBirth || 'Not provided'}</p>
     <p><strong>Current Employment Status:</strong> ${formData.currentEmploymentStatus || 'Not provided'}</p>
     <p><strong>Main Reason for Course:</strong> ${formData.mainReasonForCourse || 'Not provided'}</p>
