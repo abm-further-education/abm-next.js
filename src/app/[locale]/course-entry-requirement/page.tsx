@@ -284,7 +284,9 @@ export default async function CourseEntryRequirementsPage() {
                     </tbody>
                   </table>
                 </div>
-                <p className="text-sm text-gray-500 mt-15">{pteTableNote}</p>
+                {pteTableNote && (
+                  <p className="text-sm text-gray-500 mt-15">{pteTableNote}</p>
+                )}
               </div>
 
               {/* Competency in English */}
