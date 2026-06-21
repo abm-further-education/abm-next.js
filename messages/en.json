@@ -497,27 +497,27 @@
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
-        "courses": "• English for Academic Purposes: Min. 10 weeks of Academic English with a successful exit results of EAP 1\n• Cambridge English: Min. complete course (10-12weeks) of Cambridge B2 First (Min grade C)\n• IELTS Preparation: Min. 10 weeks of IELTS Preparation with a successful predicted results of 5.5"
+        "courses": "To be updated"
       },
       "elsis": {
-        "name": "ELSIS",
+        "name": "ECA - ELSIS",
         "url": "https://www.eca.edu.au/courses-colleges-partners/elsis-english-language-school/",
-        "courses": "• Completion of General English Upper Intermediate level\n• Completion of EAP 1"
+        "courses": "• English for Academic Purposes 1 - Grade A\n• General English - Upper-Intermediate"
       },
       "englishUnlimited": {
         "name": "English Unlimited",
         "url": "https://eu.edu.au/",
-        "courses": "• General English (Everyday English teaching method – Upper intermediate level)\n• EAP (B+ from level B)"
+        "courses": "• General English (Upper-Intermediate)\n• Cambridge English (B2 First Certificate)\n• English for Academic Purposes (Grade B)"
       },
       "greenwich": {
         "name": "Greenwich College",
         "url": "https://www.greenwichcollege.edu.au/your-campus/sydney",
-        "courses": "• General English (Upper intermediate level) with minimum 8 weeks\n• IELTS Preparation with exit score 5.5-7.0+\n• Cambridge Preparation PET, FCE, CAE with exit score 5.5 +\n• English for Business (Cambridge Linguaskill Business) with exit score 5.5\n• English for Vocational Studies (EVS) (Pass)\n• EAP with exit level Pass"
+        "courses": "• English for Vocational Studies (EVS) – Pass or Credit\n• English for Academic Purposes (EAP) - Pass\n• IELTS Preparation – Achieves Equivalencies of 6.0\n• Cambridge B2 First Certificate in English Preparation – Pass (60%+)"
       },
       "ilsc": {
-        "name": "ILSC Language Schools",
+        "name": "ILSC",
         "url": "http://ilsc.com",
-        "courses": "• General English with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher.\n• English for Academic Purposes with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher.\n• IELTS Preparation with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher.\n• Cambridge FCE Preparation and Cambridge CAE Preparation with exit level that are equivalent to IELTS Band 5.5 (with no individual score below Band 5) or higher."
+        "courses": "• General English Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing General English Intermediate 3 course)\n• English for Academic Purposes Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing EAP Intermediate 3 course)\n• IELTS Mastery Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing IELTS Intermediate 3 course)\n• Cambridge Mastery Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing Cambridge Intermediate 3 course)"
       },
       "inus": {
         "name": "INUS",
@@ -525,14 +525,14 @@
         "courses": "• Completion of General English or EAP [Upper Intermediate level] with exit level equivalency of IELTS 5.5 or higher.\n• Completion of EAP Advanced [Advanced level]."
       },
       "lalingua": {
-        "name": "LA LINGUA",
+        "name": "La Lingua",
         "url": "https://www.lalingua.com/",
-        "courses": "• IELTS Preparation with exit level equivalent to IELTS 5.5"
+        "courses": "• General English Conversation Centred (Upper Intermediate Level 1)\n• General English Four Skills (Upper Intermediate Level 1)\n• English for Academic Purposes (Upper Intermediate Level 1)"
       },
       "navitas": {
-        "name": "NAVITAS English",
+        "name": "Navitas English",
         "url": "https://www.navitasenglish.edu.au/",
-        "courses": "• Academic English 2: 60% pass with no sub skill below 55%\n• IELTS Preparation: Successful completion of 10 weeks\n• Cambridge Preparation – B2 First : Successful completion of 10 or 12 weeks\n• General English: Successful completion of 10 weeks of Upper Intermediate"
+        "courses": "• 60% pass in Academic English 3 with no skill below 55%\n• Successful completion of 10 weeks of IELTS Preparation with exit scores equivalent to IELTS 6.0\n• Successful completion of 10 or 12 weeks of B2 First with exit scores equivalent to IELTS 6.0\n• Successful completion of 10 weeks of Advanced General English"
       },
       "scic": {
         "name": "Sunshine Coast International College",
@@ -540,9 +540,9 @@
         "courses": "• English for Academic Purposes (EAP3): EAP 3 certificate (Upper Intermediate: CEFR = B2)\n• General English: Successful completion of Upper Intermediate or higher (CEFR=B2)"
       },
       "uec": {
-        "name": "Universal English College (UEC)",
+        "name": "UEC",
         "url": "https://uec.edu.au/",
-        "courses": "• General English with Upper Intermediate exit level\n• IELTS Preparation with exit level equivalent to IELTS 5.5\n• Academic English Program with exit level equivalent to IELTS 5.5"
+        "courses": "• General English, IELTS Preparation and Cambridge Exam Preparation – Certificate with Advanced level proficiency\n• Academic English Program (AEP) 2 – Grade A (Credit)\n• Academic English Program (AEP) 3 – Grade B (Pass)"
       }
     },
     "additionalRequirementsTitle": "Additional Requirements",
