@@ -19,6 +19,7 @@ import {
   fitnessMenu,
   healthMenu,
   hospitalityMenu,
+  patisserieMenu,
   hrMenu,
   onlineCoursesNavItems,
   projectMenu,
@@ -83,7 +84,7 @@ function MobileNav({
       <Disclosure>
         {({ open }) => (
           <div>
-            <DisclosureButton className="flex w-full text-lg items-center justify-between p-3 hover:underline">
+            <DisclosureButton className="flex w-full text-lg items-center justify-between p-3 hover:underline text-primary">
               <span>{title}</span>
               {open ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </DisclosureButton>
@@ -191,6 +192,10 @@ function MobileNav({
                             <DisclosureContainer
                               title={t('subMenu.cookery')}
                               list={cookeryMenu}
+                            />
+                            <DisclosureContainer
+                              title={t('subMenu.patisserie')}
+                              list={patisserieMenu}
                             />
                             <DisclosureContainer
                               title={t('subMenu.hospitality')}

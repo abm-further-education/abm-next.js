@@ -4,12 +4,19 @@ export const cookeryMenu = [
     href: '/cookery-and-hospitality-courses/sit40521-certificate-iv-in-kitchen-management',
   },
   {
-    title: 'Certificate IV in Patisserie',
-    href: '/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie',
-  },
-  {
     title: '⇢ Industry Placement (Kitchen Management)',
     href: '/cookery-and-hospitality-courses/industry-placement-work-placement',
+  },
+  {
+    title: 'NSW Food Safety Supervisor',
+    href: '/cookery-and-hospitality-courses/fss',
+  },
+];
+
+export const patisserieMenu = [
+  {
+    title: 'Certificate IV in Patisserie',
+    href: '/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie',
   },
   {
     title: '⇢ Industry Placement (Patisserie)',
@@ -317,12 +324,22 @@ export const MENU_STRUCTURE: MenuSection[] = [
             href: '/cookery-and-hospitality-courses/sit40521-certificate-iv-in-kitchen-management',
           },
           {
-            title: 'Certificate IV in Patisserie',
-            href: '/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie',
-          },
-          {
             title: '⇢ Industry Placement (Kitchen Management)',
             href: '/cookery-and-hospitality-courses/industry-placement-work-placement',
+          },
+          {
+            title: 'NSW Food Safety Supervisor',
+            href: '/cookery-and-hospitality-courses/fss',
+          },
+        ],
+      },
+      {
+        titleKey: 'subMenu.patisserie',
+        href: '/cookery-and-hospitality-courses',
+        items: [
+          {
+            title: 'Certificate IV in Patisserie',
+            href: '/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie',
           },
           {
             title: '⇢ Industry Placement (Patisserie)',

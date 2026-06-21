@@ -10,6 +10,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { ChevronRight } from 'lucide-react';
 import {
   cookeryMenu,
+  patisserieMenu,
   hospitalityMenu,
   fitnessMenu,
   businessMenu,
@@ -22,6 +23,7 @@ import {
 
 const allMenus = [
   ...cookeryMenu,
+  ...patisserieMenu,
   ...hospitalityMenu,
   ...fitnessMenu,
   ...businessMenu,
@@ -439,7 +441,7 @@ function Nav() {
                           }
                           onClick={() => setSubMenu('')}
                         >
-                          <h3 className="flex items-center font-bold font-[family-name:var(--font-montserrat)] uppercase">
+                          <h3 className="flex items-center font-bold font-[family-name:var(--font-montserrat)] uppercase text-primary">
                             {menu.title}
                             <ChevronRight />
                           </h3>
