@@ -472,7 +472,7 @@
     "englishEvidence3": "Finalización exitosa de una Prueba de Colocación de Inglés",
     "englishEvidence4": "Finalización exitosa de un curso de inglés con nivel de salida equivalente a IELTS general 6.0 de uno de nuestros Socios de Vía ELICOS",
     "pteRequirementsTitle": "Para PTE",
-    "pteRequirementsDescription": "Tener una puntuación PTE de 47 (IELTS 6.0) o superior, con ninguna banda inferior a (Escucha – 40, Lectura – 42, Habla – 39, Escritura – 41).",
+    "pteRequirementsDescription": "Tener una puntuación PTE de 47 (IELTS 6.0) o superior, con ninguna banda inferior a las siguientes:",
     "pteTableTitle": "",
     "pteListening": "PTE -A Escucha",
     "pteReading": "PTE – A Lectura",
@@ -491,11 +491,6 @@
     "englishNote": "*Nota que otras pruebas de idioma inglés como PTE y TOEFL pueden ser aceptadas. Los estudiantes deben proporcionar sus resultados para que se pueda confirmar que son equivalentes a IELTS 6.0.",
     "elicosPathwayPartnersTitle": "Socios de Vía ELICOS",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• EAP con nivel de salida Crédito\n• Preparación IELTS con nivel de salida Grado C\n• Inglés Real, Inglés General, Cambridge con nivel de salida B2"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -521,11 +516,6 @@
         "url": "http://ilsc.com",
         "courses": "• Inglés General con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior.\n• Inglés para Propósitos Académicos con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior.\n• Preparación IELTS con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior.\n• Preparación Cambridge FCE y Preparación Cambridge CAE con nivel de salida que son equivalentes a IELTS Band 5.5 (sin puntuación individual por debajo de Band 5) o superior."
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• Finalización de Inglés General o EAP [nivel Intermedio Superior] con equivalencia de nivel de salida de IELTS 5.5 o superior.\n• Finalización de EAP Avanzado [nivel Avanzado]."
-      },
       "lalingua": {
         "name": "LA LINGUA",
         "url": "https://www.lalingua.com/",
@@ -535,11 +525,6 @@
         "name": "NAVITAS English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• Inglés Académico 2: 60% aprobado sin habilidad secundaria por debajo de 55%\n• Preparación IELTS: Finalización exitosa de 10 semanas\n• Preparación Cambridge – B2 First: Finalización exitosa de 10 o 12 semanas\n• Inglés General: Finalización exitosa de 10 semanas de Intermedio Superior"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• Inglés para Propósitos Académicos (EAP3): Certificado EAP 3 (Intermedio Superior: CEFR = B2)\n• Inglés General: Finalización exitosa de Intermedio Superior o superior (CEFR=B2)"
       },
       "uec": {
         "name": "Universal English College (UEC)",
@@ -579,7 +564,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "El estudiante debe tener al menos 18 años, haber completado el equivalente al Año 10 y participar en una entrevista de ingreso.\nIELTS 6.0 (o equivalente) y requisitos LLN/ACSF de nivel 3 en Learning, Numeracy, Reading, Writing y Oral communication."
+        "requirement": "El estudiante debe tener al menos 18 años, haber completado el equivalente al Año 10 y participar en una entrevista de ingreso."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma en Gestión de Hospitalidad",

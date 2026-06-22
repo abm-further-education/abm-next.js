@@ -470,7 +470,7 @@
     "englishEvidence3": "Matagumpay na nakumpleto ang ABM English Placement Test",
     "englishEvidence4": "Matagumpay na nakumpleto ang English course na may exit level na katumbas ng IELTS overall 6.0 mula sa isa sa aming ELICOS Pathway partners",
     "pteRequirementsTitle": "Para sa PTE",
-    "pteRequirementsDescription": "Magkaroon ng PTE score na 47 (IELTS 6.0) o mas mataas, na walang band score na mas mababa sa (Listening – 40, Reading – 42, Speaking – 39, Writing – 41).",
+    "pteRequirementsDescription": "Magkaroon ng PTE score na 47 (IELTS 6.0) o mas mataas, na walang band score na mas mababa sa mga sumusunod:",
     "pteTableTitle": "",
     "pteListening": "PTE -A Listening",
     "pteReading": "PTE – A Reading",
@@ -489,11 +489,6 @@
     "englishNote": "*Tandaan na ang ibang English language tests gaya ng PTE at TOEFL ay maaaring tanggapin. Ang mga estudyante ay kinakailangang magbigay ng kanilang mga resulta upang makumpirma na ang mga ito ay katumbas ng IELTS 6.0.",
     "elicosPathwayPartnersTitle": "Mga ELICOS Pathway Partner",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• EAP na may exit level Credit\n• IELTS Preparation na may exit level Grade C\n• Real English, General English, Cambridge na may exit level B2"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -519,11 +514,6 @@
         "url": "http://ilsc.com",
         "courses": "• General English na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas.\n• English for Academic Purposes na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas.\n• IELTS Preparation na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas.\n• Cambridge FCE Preparation at Cambridge CAE Preparation na may exit level na katumbas ng IELTS Band 5.5 (na walang individual score na mas mababa sa Band 5) o mas mataas."
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• Nakumpleto ang General English o EAP [Upper Intermediate level] na may exit level equivalency ng IELTS 5.5 o mas mataas.\n• Nakumpleto ang EAP Advanced [Advanced level]."
-      },
       "lalingua": {
         "name": "LA LINGUA",
         "url": "https://www.lalingua.com/",
@@ -533,11 +523,6 @@
         "name": "NAVITAS English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• Academic English 2: 60% pass na walang sub skill na mas mababa sa 55%\n• IELTS Preparation: Matagumpay na nakumpleto ang 10 linggo\n• Cambridge Preparation – B2 First : Matagumpay na nakumpleto ang 10 o 12 linggo\n• General English: Matagumpay na nakumpleto ang 10 linggo ng Upper Intermediate"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• English for Academic Purposes (EAP3): EAP 3 certificate (Upper Intermediate: CEFR = B2)\n• General English: Matagumpay na nakumpleto ang Upper Intermediate o mas mataas (CEFR=B2)"
       },
       "uec": {
         "name": "Universal English College (UEC)",
@@ -577,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "Dapat 18 taong gulang pataas ang estudyante, may katumbas na Year 10, at lumahok sa course entry interview.\nKailangan ang IELTS 6.0 (o katumbas) at LLN/ACSF level 3 sa Learning, Numeracy, Reading, Writing, at Oral communication."
+        "requirement": "Dapat 18 taong gulang pataas ang estudyante, may katumbas na Year 10, at lumahok sa course entry interview."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",

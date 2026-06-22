@@ -468,7 +468,7 @@
     "englishEvidence3": "Conclusão bem-sucedida do Teste de Nivelamento de Inglês da ABM",
     "englishEvidence4": "Conclusão bem-sucedida de um curso de inglês com nível de saída equivalente ao IELTS 6.0 de um de nossos parceiros ELICOS",
     "pteRequirementsTitle": "Para PTE",
-    "pteRequirementsDescription": "Ter pontuação PTE de 47 (equivalente ao IELTS 6.0) ou superior, sem banda inferior a (Listening – 40, Reading – 42, Speaking – 39, Writing – 41).",
+    "pteRequirementsDescription": "Ter pontuação PTE de 47 (equivalente ao IELTS 6.0) ou superior, sem banda inferior às seguintes:",
     "pteTableTitle": "",
     "pteListening": "PTE-A Listening",
     "pteReading": "PTE-A Reading",
@@ -487,11 +487,6 @@
     "englishNote": "*Observe que outros testes de inglês, como PTE e TOEFL, podem ser aceitos. Os alunos devem fornecer os resultados para confirmar equivalência ao IELTS 6.0.",
     "elicosPathwayPartnersTitle": "Parceiros ELICOS",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• EAP com nível de saída Credit\n• Preparatório IELTS com nível de saída Grau C\n• Real English, General English, Cambridge com nível de saída B2"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -517,11 +512,6 @@
         "url": "http://ilsc.com",
         "courses": "• General English com nível de saída equivalente ao IELTS 5.5 (sem banda abaixo de 5)\n• English for Academic Purposes com nível de saída equivalente ao IELTS 5.5 (sem banda abaixo de 5)\n• Preparatório IELTS com nível de saída equivalente ao IELTS 5.5 (sem banda abaixo de 5)\n• Preparatórios Cambridge FCE e CAE com nível de saída equivalente ao IELTS 5.5 (sem banda abaixo de 5)."
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• Conclusão de General English ou EAP [Upper Intermediate] com equivalência de saída IELTS 5.5 ou superior.\n• Conclusão de EAP Advanced [nível Avançado]."
-      },
       "lalingua": {
         "name": "LA LINGUA",
         "url": "https://www.lalingua.com/",
@@ -531,11 +521,6 @@
         "name": "NAVITAS English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• Academic English 2: 60% de aproveitamento, sem sub-habilidade abaixo de 55%\n• Preparatório IELTS: Conclusão bem-sucedida de 10 semanas\n• Preparatório Cambridge – B2 First: Conclusão bem-sucedida de 10 ou 12 semanas\n• General English: Conclusão bem-sucedida de 10 semanas de Upper Intermediate"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• EAP3: Certificado EAP 3 (Upper Intermediate: CEFR = B2)\n• General English: Conclusão bem-sucedida de Upper Intermediate ou superior (CEFR = B2)"
       },
       "uec": {
         "name": "Universal English College (UEC)",
@@ -575,7 +560,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "O aluno deve ter pelo menos 18 anos, ter concluído o equivalente ao Year 10 e participar de uma entrevista de entrada.\nIELTS 6.0 (ou equivalente) e requisitos LLN/ACSF nível 3 em Learning, Numeracy, Reading, Writing e Oral communication."
+        "requirement": "O aluno deve ter pelo menos 18 anos, ter concluído o equivalente ao Year 10 e participar de uma entrevista de entrada."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",

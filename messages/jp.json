@@ -468,7 +468,7 @@
     "englishEvidence3": "ABM英語プレースメントテストの合格",
     "englishEvidence4": "ELICOSパートナーの英語コースでIELTS6.0相当の修了",
     "pteRequirementsTitle": "PTE基準",
-    "pteRequirementsDescription": "総合47以上（IELTS6.0相当）。各バンド：Listening 40／Reading 42／Speaking 39／Writing 41 以上。",
+    "pteRequirementsDescription": "総合47以上（IELTS6.0相当）。各バンドの最低基準は以下のとおり：",
     "pteTableTitle": "",
     "pteListening": "PTE‑A Listening",
     "pteReading": "PTE‑A Reading",
@@ -487,11 +487,6 @@
     "englishNote": "* PTE・TOEFL等、他試験もIELTS6.0相当であれば可。成績票の提出が必要です。",
     "elicosPathwayPartnersTitle": "ELICOS パスウェイ提携校",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• EAP（成績：Credit）\n• IELTS対策（成績：C）\n• Real English／General English／Cambridge（B2相当）"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -517,11 +512,6 @@
         "url": "http://ilsc.com",
         "courses": "• General English（IELTS5.5相当、各5以上）\n• EAP（IELTS5.5相当、各5以上）\n• IELTS対策（IELTS5.5相当、各5以上）\n• Cambridge FCE／CAE（IELTS5.5相当、各5以上）"
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• General English／EAP［Upper‑Intermediate］修了（IELTS5.5相当以上）\n• EAP Advanced［Advanced］修了"
-      },
       "lalingua": {
         "name": "LA LINGUA",
         "url": "https://www.lalingua.com/",
@@ -531,11 +521,6 @@
         "name": "NAVITAS English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• Academic English 2：60%合格（各55%以上）\n• IELTS対策：10週間修了\n• Cambridge B2 First：10–12週間修了\n• General English Upper‑Intermediate：10週間修了"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• EAP3（Upper‑Intermediate：CEFR B2）\n• General English Upper‑Intermediate以上（CEFR B2）"
       },
       "uec": {
         "name": "Universal English College (UEC)",
@@ -575,7 +560,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "18歳以上、Year 10修了相当、入学面談への参加が必要です。\nIELTS 6.0（または同等）およびLLN/ACSFレベル3（Learning、Numeracy、Reading、Writing、Oral communication）が必要です。"
+        "requirement": "18歳以上、Year 10修了相当、入学面談への参加が必要です。"
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",

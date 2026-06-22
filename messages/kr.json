@@ -479,7 +479,7 @@
     "englishEvidence3": "영어 배치 시험 성공적 완료",
     "englishEvidence4": "우리 ELICOS 진학 파트너 중 하나에서 IELTS 전체 6.0에 상응하는 종료 수준의 영어 과정 성공적 완료",
     "pteRequirementsTitle": "PTE의 경우",
-    "pteRequirementsDescription": "PTE 점수 47 (IELTS 6.0) 이상, 각 영역 최소 점수: 듣기 – 40, 읽기 – 42, 말하기 – 39, 쓰기 – 41",
+    "pteRequirementsDescription": "PTE 점수 47 (IELTS 6.0) 이상, 각 영역 최소 점수는 다음과 같습니다:",
     "pteTableTitle": "",
     "pteListening": "PTE -A 듣기",
     "pteReading": "PTE – A 읽기",
@@ -498,11 +498,6 @@
     "englishNote": "*PTE 및 TOEFL과 같은 다른 영어 시험도 인정될 수 있습니다. 학생들은 IELTS 6.0에 상응함을 확인할 수 있도록 결과를 제공해야 합니다.",
     "elicosPathwayPartnersTitle": "ELICOS 진학 파트너",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• 종료 수준 Credit의 EAP\n• 종료 수준 Grade C의 IELTS 준비\n• 종료 수준 B2의 Real English, General English, Cambridge"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -528,11 +523,6 @@
         "url": "http://ilsc.com",
         "courses": "• IELTS Band 5.5에 상응하는 종료 수준의 General English (개별 점수 Band 5 미만 없음) 또는 그 이상.\n• IELTS Band 5.5에 상응하는 종료 수준의 English for Academic Purposes (개별 점수 Band 5 미만 없음) 또는 그 이상.\n• IELTS Band 5.5에 상응하는 종료 수준의 IELTS 준비 (개별 점수 Band 5 미만 없음) 또는 그 이상.\n• IELTS Band 5.5에 상응하는 종료 수준의 Cambridge FCE 준비 및 Cambridge CAE 준비 (개별 점수 Band 5 미만 없음) 또는 그 이상."
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• IELTS 5.5 이상에 상응하는 종료 수준의 General English 또는 EAP [Upper Intermediate 수준] 완료.\n• EAP Advanced [Advanced 수준] 완료."
-      },
       "lalingua": {
         "name": "LA LINGUA",
         "url": "https://www.lalingua.com/",
@@ -542,11 +532,6 @@
         "name": "NAVITAS English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• Academic English 2: 55% 미만의 하위 기술 없이 60% 합격\n• IELTS 준비: 10주 성공적 완료\n• Cambridge 준비 – B2 First: 10주 또는 12주 성공적 완료\n• General English: Upper Intermediate 10주 성공적 완료"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• 학술 목적 영어 (EAP3): EAP 3 인증서 (Upper Intermediate: CEFR = B2)\n• General English: Upper Intermediate 이상 성공적 완료 (CEFR=B2)"
       },
       "uec": {
         "name": "Universal English College (UEC)",
@@ -586,7 +571,7 @@
       },
       "patisserie": {
         "code": "SIT40721 파티세리 수료증 IV",
-        "requirement": "학생은 만 18세 이상이어야 하며, Year 10 또는 동등 학력을 완료하고 입학 인터뷰에 참여해야 합니다.\nIELTS 6.0(또는 동등 점수) 및 LLN/ACSF 레벨 3(Learning, Numeracy, Reading, Writing, Oral communication)이 필요합니다."
+        "requirement": "학생은 만 18세 이상이어야 하며, Year 10 또는 동등 학력을 완료하고 입학 인터뷰에 참여해야 합니다."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 호스피탈리티 매니지먼트 디플로마",

@@ -470,7 +470,7 @@
     "englishEvidence3": "成功完成ABM英语分班测试",
     "englishEvidence4": "成功完成我们ELICOS合作伙伴的英语课程，出口水平相当于雅思总分6.0",
     "pteRequirementsTitle": "PTE要求",
-    "pteRequirementsDescription": "PTE成绩47（雅思6.0）或更高，各项不低于（听力 – 40，阅读 – 42，口语 – 39，写作 – 41）。",
+    "pteRequirementsDescription": "PTE成绩47（雅思6.0）或更高，各项不低于以下分数：",
     "pteTableTitle": "",
     "pteListening": "PTE-A 听力",
     "pteReading": "PTE-A 阅读",
@@ -489,11 +489,6 @@
     "englishNote": "*请注意，PTE和托福等其他英语语言测试也可以接受。学生需要提供其成绩以确认其相当于雅思6.0。",
     "elicosPathwayPartnersTitle": "ELICOS合作伙伴",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• EAP出口水平Credit\n• 雅思备考出口水平C级\n• Real English、General English、Cambridge出口水平B2"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -519,11 +514,6 @@
         "url": "http://ilsc.com",
         "courses": "• General English出口水平相当于雅思5.5（各项不低于5）或更高。\n• 学术英语出口水平相当于雅思5.5（各项不低于5）或更高。\n• 雅思备考出口水平相当于雅思5.5（各项不低于5）或更高。\n• 剑桥FCE备考和剑桥CAE备考出口水平相当于雅思5.5（各项不低于5）或更高。"
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• 完成General English或EAP [中高级水平]，出口水平相当于雅思5.5或更高。\n• 完成EAP Advanced [高级水平]。"
-      },
       "lalingua": {
         "name": "LA LINGUA",
         "url": "https://www.lalingua.com/",
@@ -533,11 +523,6 @@
         "name": "NAVITAS English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• Academic English 2：60%通过，各项技能不低于55%\n• 雅思备考：成功完成10周\n• 剑桥备考 – B2 First：成功完成10或12周\n• General English：成功完成10周中高级"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• 学术英语(EAP3)：EAP 3证书（中高级：CEFR = B2）\n• General English：成功完成中高级或更高（CEFR=B2）"
       },
       "uec": {
         "name": "Universal English College (UEC)",
@@ -577,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 四级西点证书",
-        "requirement": "学生须年满18岁，完成相当于10年级学历，并参加入学面试。\n英语要求为IELTS 6.0（或同等成绩），并满足LLN/ACSF三级要求：Learning、Numeracy、Reading、Writing、Oral communication。"
+        "requirement": "学生须年满18岁，完成相当于10年级学历，并参加入学面试。"
       },
       "hospitalityDiploma": {
         "code": "SIT50422 酒店管理文凭",

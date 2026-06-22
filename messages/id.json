@@ -470,7 +470,7 @@
     "englishEvidence3": "Berhasil menyelesaikan Tes Penempatan Bahasa Inggris ABM",
     "englishEvidence4": "Berhasil menyelesaikan kursus bahasa Inggris dengan level keluar setara dengan IELTS overall 6.0 dari salah satu mitra ELICOS Pathway kami",
     "pteRequirementsTitle": "Untuk PTE",
-    "pteRequirementsDescription": "Memiliki skor PTE 47 (IELTS 6.0) atau lebih tinggi, dengan tidak ada band score di bawah (Listening – 40, Reading – 42, Speaking – 39, Writing – 41).",
+    "pteRequirementsDescription": "Memiliki skor PTE 47 (IELTS 6.0) atau lebih tinggi, dengan tidak ada band score di bawah berikut:",
     "pteTableTitle": "",
     "pteListening": "PTE -A Listening",
     "pteReading": "PTE – A Reading",
@@ -489,11 +489,6 @@
     "englishNote": "*Perhatikan bahwa tes bahasa Inggris lainnya seperti PTE dan TOEFL dapat diterima. Siswa diminta untuk memberikan hasil mereka agar dapat dikonfirmasi bahwa mereka setara dengan IELTS 6.0.",
     "elicosPathwayPartnersTitle": "Mitra ELICOS Pathway",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• EAP dengan level keluar Credit\n• IELTS Preparation dengan level keluar Grade C\n• Real English, General English, Cambridge dengan level keluar B2"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -519,11 +514,6 @@
         "url": "http://ilsc.com",
         "courses": "• General English dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi.\n• English for Academic Purposes dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi.\n• IELTS Preparation dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi.\n• Cambridge FCE Preparation dan Cambridge CAE Preparation dengan level keluar yang setara dengan IELTS Band 5.5 (tanpa skor individual di bawah Band 5) atau lebih tinggi."
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• Menyelesaikan General English atau EAP [Upper Intermediate level] dengan kesetaraan level keluar IELTS 5.5 atau lebih tinggi.\n• Menyelesaikan EAP Advanced [Advanced level]."
-      },
       "lalingua": {
         "name": "LA LINGUA",
         "url": "https://www.lalingua.com/",
@@ -533,11 +523,6 @@
         "name": "NAVITAS English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• Academic English 2: 60% pass tanpa sub skill di bawah 55%\n• IELTS Preparation: Berhasil menyelesaikan 10 minggu\n• Cambridge Preparation – B2 First : Berhasil menyelesaikan 10 atau 12 minggu\n• General English: Berhasil menyelesaikan 10 minggu Upper Intermediate"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• English for Academic Purposes (EAP3): Sertifikat EAP 3 (Upper Intermediate: CEFR = B2)\n• General English: Berhasil menyelesaikan Upper Intermediate atau lebih tinggi (CEFR=B2)"
       },
       "uec": {
         "name": "Universal English College (UEC)",
@@ -577,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "Siswa harus berusia minimal 18 tahun, telah menyelesaikan setara Year 10, dan mengikuti wawancara masuk.\nPersyaratan bahasa: IELTS 6.0 (atau setara) serta LLN/ACSF level 3 pada Learning, Numeracy, Reading, Writing, dan Oral communication."
+        "requirement": "Siswa harus berusia minimal 18 tahun, telah menyelesaikan setara Year 10, dan mengikuti wawancara masuk."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",

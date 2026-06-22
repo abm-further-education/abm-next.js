@@ -470,7 +470,7 @@
     "englishEvidence3": "Successful completion of an ABM English Placement Test",
     "englishEvidence4": "Successful completion of an English course with exit level equivalent to IELTS overall 6.0 from one of our ELICOS Pathway partners",
     "pteRequirementsTitle": "For PTE",
-    "pteRequirementsDescription": "Have a PTE score of 47 (IELTS 6.0) or higher, with no band score below (Listening – 40, Reading – 42, Speaking – 39, Writing – 41).",
+    "pteRequirementsDescription": "Have a PTE score of 47 (IELTS 6.0) or higher, with no band score below the following:",
     "pteTableTitle": "",
     "pteListening": "PTE -A Listening",
     "pteReading": "PTE – A Reading",
@@ -489,11 +489,6 @@
     "englishNote": "*Note that other English language tests such as PTE and TOEFL can be accepted. Students are required to provide their results so that it can be confirmed they are equivalent to IELTS 6.0.",
     "elicosPathwayPartnersTitle": "ELICOS Pathway Partners",
     "elicosPartners": {
-      "ctic": {
-        "name": "CTIC English",
-        "url": "http://ctic.com.au/",
-        "courses": "• EAP with exit level Credit\n• IELTS Preparation with exit level Grade C\n• Real English, General English, Cambridge with exit level B2"
-      },
       "elc": {
         "name": "ELC",
         "url": "http://www.elc.edu.au/english",
@@ -519,11 +514,6 @@
         "url": "http://ilsc.com",
         "courses": "• General English Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing General English Intermediate 3 course)\n• English for Academic Purposes Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing EAP Intermediate 3 course)\n• IELTS Mastery Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing IELTS Intermediate 3 course)\n• Cambridge Mastery Program - ILSC Intermediate 4 exit level (Achieve ILSC Intermediate 4 proficiency level by successfully completing Cambridge Intermediate 3 course)"
       },
-      "inus": {
-        "name": "INUS",
-        "url": "https://www.inus.edu.au/",
-        "courses": "• Completion of General English or EAP [Upper Intermediate level] with exit level equivalency of IELTS 5.5 or higher.\n• Completion of EAP Advanced [Advanced level]."
-      },
       "lalingua": {
         "name": "La Lingua",
         "url": "https://www.lalingua.com/",
@@ -533,11 +523,6 @@
         "name": "Navitas English",
         "url": "https://www.navitasenglish.edu.au/",
         "courses": "• 60% pass in Academic English 3 with no skill below 55%\n• Successful completion of 10 weeks of IELTS Preparation with exit scores equivalent to IELTS 6.0\n• Successful completion of 10 or 12 weeks of B2 First with exit scores equivalent to IELTS 6.0\n• Successful completion of 10 weeks of Advanced General English"
-      },
-      "scic": {
-        "name": "Sunshine Coast International College",
-        "url": "https://scic.nsw.edu.au/",
-        "courses": "• English for Academic Purposes (EAP3): EAP 3 certificate (Upper Intermediate: CEFR = B2)\n• General English: Successful completion of Upper Intermediate or higher (CEFR=B2)"
       },
       "uec": {
         "name": "UEC",
@@ -577,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "ABM Further Education has the following entry requirements:\nInternational students must:\n·       Be at least 18 years of age and have completed Year 10 or equivalent.\n·       Participate in a course entry interview to determine suitability for the course and student needs.\n·       Have an IELTS* score of 6.0 (test results must be no more than 2 years old). English language competence can also be demonstrated through documented evidence of any of the following:\no   Educated for 5 years in an English-speaking country; or\no   Successful completion of an English Placement Test\n*Note that other English language tests such as PTE and TOEFL can be accepted. Students are required to provide their results so that it can be confirmed they are equivalent to IELTS 6.0.\n\nLanguage, Literacy and Numeracy (LLN) entry requirements:\nEquivalent ACSF level requirements are indicated in table below:\n• Learning: 3\n• Numeracy: 3\n• Reading: 3\n• Writing: 3\n• Oral communication: 3"
+        "requirement": "ABM Further Education has the following entry requirements:\nInternational students must:\n·       Be at least 18 years of age and have completed Year 10 or equivalent.\n·       Participate in a course entry interview to determine suitability for the course and student needs."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
