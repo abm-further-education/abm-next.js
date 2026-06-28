@@ -5,7 +5,6 @@ import NewsLetter from '@/domains/main/components/NewsLetter';
 import TestimonialWrapper from '@/domains/main/components/TestimonialWrapper';
 import SubscriptionContainer from '@/domains/subscription/components/SubscriptionContainer';
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
 import { getNewsList } from '@/lib/news-db';
 import { newsData } from '@/lib/news';
 import { getR2ImageUrl } from '@/lib/r2';
@@ -161,6 +160,12 @@ export default async function Home({
                 className="w-300 xl:w-300"
               />
               <Card
+                imgPath="/courses/cookery/patisserie_banner.png"
+                title={t('nav.subMenu.patisserie')}
+                link="/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie"
+                className="w-300 xl:w-300"
+              />
+              <Card
                 imgPath="/home/Hospitality.png"
                 title={t('nav.subMenu.hospitality')}
                 link="/cookery-and-hospitality-courses"
@@ -197,17 +202,6 @@ export default async function Home({
                 link="/health-and-wellness-courses"
                 className="w-300 xl:w-300"
               />
-              <Link href="/courses">
-                <div className="w-300 h-full xl:w-300 bg-primary-bk text-white flex-col text-lg flex items-center justify-center hover:bg-primary transition-all">
-                  <h2 className="font-bold">
-                    {t('HomePage.lookingForAllCourses')}
-                    <br />
-                    <span className="text-white">
-                      {t('HomePage.clickHere')}
-                    </span>
-                  </h2>
-                </div>
-              </Link>
             </div>
           </FadeIn>
         </section>

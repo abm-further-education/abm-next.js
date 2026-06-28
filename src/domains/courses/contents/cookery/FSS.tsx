@@ -40,6 +40,8 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
     ? { ...dataProp, dates: fallbackData.dates ?? dataProp.dates }
     : fallbackData;
   const sortedDates = getUpcomingShortCourseDates(fssData.dates);
+  const basePrice = fssData.price;
+  const promoDiscountedPrice = Math.round(basePrice * 0.85);
 
   if (editMode?.isEditMode && courseId) {
     return (
@@ -99,6 +101,32 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
               )}
             </p>
           </div>
+
+          <div className="w-full max-w-sm my-20">
+            <div className="flex items-center gap-x-10 mt-20">
+              <span className="font-bold text-2xl text-primary">
+                ${promoDiscountedPrice}
+              </span>
+              <span className="text-gray-800 text-xl line-through">
+                ${basePrice}
+              </span>
+              <span>(When you use the code)</span>
+            </div>
+
+            <div className="flex w-full max-w-600 flex-col gap-10 border border-orange-500 bg-red-50 p-10">
+              <span className="font-semibold">Special Offer:</span>
+              <p className="text-gray-700">
+                Use code{' '}
+                <strong>{fssData.specialOffer?.code ?? 'ABMFSS15'}</strong> at
+                checkout for a{' '}
+                <span className="bg-orange-100 text-primary font-semibold">
+                  {fssData.specialOffer?.discount ?? '15% discount'}
+                </span>{' '}
+                — pay only ${promoDiscountedPrice}
+              </p>
+            </div>
+          </div>
+
           <div className="w-full mt-20">
             {/* <label
               htmlFor="course-date"
@@ -196,9 +224,17 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
                         <p className="font-semibold">(Face to Face)</p>
                       </div>
                       <div className="flex w-full flex-col gap-8 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-10 md:ml-auto">
-                        <p className="text-xl font-bold text-neutral-800">
-                          ${fssData.price}
-                        </p>
+                        <div className="flex flex-col gap-2">
+                          <span className="font-bold text-xl text-primary-bk">
+                            ${promoDiscountedPrice}
+                          </span>
+                          <span className="text-gray-800 line-through">
+                            ${basePrice}
+                          </span>
+                          <span className="text-xs">
+                            (When you use the code)
+                          </span>
+                        </div>
                         <Link
                           className="inline-flex w-full items-center justify-center bg-primary px-12 py-8 text-sm font-semibold text-white transition hover:bg-primary-bk sm:w-auto sm:min-w-100"
                           href={checkoutHref}
