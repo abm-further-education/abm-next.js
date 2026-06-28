@@ -545,7 +545,6 @@ export async function seedEntryRequirementFromMessages(existingPageId?: string):
       intro_description: msg.introDescription || '',
       general_requirements_title: msg.generalRequirementsTitle || '',
       general_cards: [
-        { icon: '', title: msg.ageRequirementTitle || '', description: msg.ageRequirementDescription || '' },
         { icon: '', title: msg.englishRequirementTitle || '', description: msg.englishRequirementDescription || '' },
       ],
       course_table_title: msg.courseRequirementsTableTitle || '',
