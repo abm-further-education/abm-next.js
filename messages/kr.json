@@ -571,7 +571,7 @@
       },
       "patisserie": {
         "code": "SIT40721 파티세리 수료증 IV",
-        "requirement": "학생은 만 18세 이상이어야 하며, Year 10 또는 동등 학력을 완료하고 입학 인터뷰에 참여해야 합니다."
+        "requirement": "학생은 Year 10 또는 동등 학력을 완료하고 입학 인터뷰에 참여해야 합니다."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 호스피탈리티 매니지먼트 디플로마",
@@ -643,7 +643,7 @@
       },
       "healthServicesAssistance": {
         "code": "HLT33115 헬스 서비스 어시스턴트 수료증 III",
-        "requirement": "학생은 과정 시작 시 최소 18세 이상이어야 합니다.\nIELTS 5.5 또는 이에 상응하는 점수, 학생이 ABM EPT를 통해 IELTS 4.5 또는 이에 상응하는 점수를 받은 경우, Plus Nursing English와 함께 등록해야 합니다.\n학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
+        "requirement": "IELTS 5.5 또는 이에 상응하는 점수, 학생이 ABM EPT를 통해 IELTS 4.5 또는 이에 상응하는 점수를 받은 경우, Plus Nursing English와 함께 등록해야 합니다.\n학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
       }
     }
   },

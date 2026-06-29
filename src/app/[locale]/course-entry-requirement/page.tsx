@@ -35,18 +35,20 @@ export default async function CourseEntryRequirementsPage() {
   const introDescription = tr?.intro_description || t('introDescription');
   const generalRequirementsTitle =
     tr?.general_requirements_title || t('generalRequirementsTitle');
-  const generalCards = (
-    (tr?.general_cards as Array<{
-      icon?: string;
-      title: string;
-      description: string;
-    }>) || [
-      {
-        title: t('englishRequirementTitle'),
-        description: t('englishRequirementDescription'),
-      },
-    ]
-  ).filter((card) => card.title !== t('ageRequirementTitle'));
+  const generalCards = (tr?.general_cards as Array<{
+    icon?: string;
+    title: string;
+    description: string;
+  }>) || [
+    {
+      title: t('ageRequirementTitle'),
+      description: t('ageRequirementDescription'),
+    },
+    {
+      title: t('englishRequirementTitle'),
+      description: t('englishRequirementDescription'),
+    },
+  ];
   const courseTableTitle =
     tr?.course_table_title || t('courseRequirementsTableTitle');
   const courseTableDescription =
@@ -171,7 +173,7 @@ export default async function CourseEntryRequirementsPage() {
             <h3 className="text-2xl md:text-3xl font-bold mb-40 font-[family-name:var(--font-montserrat)]">
               {generalRequirementsTitle}
             </h3>
-            <div className="">
+            <div className="grid md:grid-cols-2 gap-20">
               {generalCards.map((card, index) => (
                 <div
                   key={index}

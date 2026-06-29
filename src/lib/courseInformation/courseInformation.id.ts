@@ -804,7 +804,6 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     duration:
       '16 minggu (2 hari per minggu + 1 hari tutorial) + 80 jam penempatan kerja',
     entryRequirement: [
-      'Siswa harus berusia minimal 18 tahun pada saat kursus dimulai.',
       'IELTS 5.5 atau setara, jika siswa memiliki IELTS 4.5 atau setara melalui ABM EPT, daftar dengan Plus Nursing English.',
       'Siswa harus telah menyelesaikan setara dengan Year 10',
     ],

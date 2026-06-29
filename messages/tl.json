@@ -562,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "Dapat 18 taong gulang pataas ang estudyante, may katumbas na Year 10, at lumahok sa course entry interview."
+        "requirement": "Dapat nakumpleto ng estudyante ang katumbas ng Year 10, at lumahok sa course entry interview."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
@@ -634,7 +634,7 @@
       },
       "healthServicesAssistance": {
         "code": "HLT33115 Certificate III in Health Services Assistance",
-        "requirement": "Ang mga estudyante ay dapat ay hindi bababa sa 18 taong gulang sa panahon ng pagsisimula ng kurso.\nIELTS 5.5 o katumbas, kung ang estudyante ay may IELTS 4.5 o katumbas sa pamamagitan ng ABM EPT, mag-enroll na may Plus Nursing English.\nDapat nakumpleto ng estudyante ang katumbas ng Year 10"
+        "requirement": "IELTS 5.5 o katumbas, kung ang estudyante ay may IELTS 4.5 o katumbas sa pamamagitan ng ABM EPT, mag-enroll na may Plus Nursing English.\nDapat nakumpleto ng estudyante ang katumbas ng Year 10"
       }
     }
   },

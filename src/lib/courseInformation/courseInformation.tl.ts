@@ -819,7 +819,6 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     duration:
       '16 linggo (2 araw bawat linggo + 1 araw tutorial) + 80 work placement hours',
     entryRequirement: [
-      'Ang mga estudyante ay dapat ay hindi bababa sa 18 taong gulang sa panahon ng pagsisimula ng kurso.',
       'IELTS 5.5 o katumbas, kung ang estudyante ay may IELTS 4.5 o katumbas sa pamamagitan ng ABM EPT, mag-enroll na may Plus Nursing English.',
       'Dapat nakumpleto ng estudyante ang katumbas ng Year 10',
     ],

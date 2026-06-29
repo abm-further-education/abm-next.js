@@ -560,7 +560,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "18歳以上、Year 10修了相当、入学面談への参加が必要です。"
+        "requirement": "Year 10 修了相当、入学面談への参加が必要です。"
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
@@ -632,7 +632,7 @@
       },
       "healthServicesAssistance": {
         "code": "HLT33115 Certificate III in Health Services Assistance",
-        "requirement": "入学時点で18歳以上であること。\nIELTS 5.5相当、ABM EPTでIELTS 4.5相当の場合はPlus Nursing Englishと併せて登録。\nYear 10修了相当"
+        "requirement": "IELTS 5.5相当、ABM EPTでIELTS 4.5相当の場合はPlus Nursing Englishと併せて登録。\nYear 10修了相当"
       }
     }
   },

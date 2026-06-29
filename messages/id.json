@@ -562,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "Siswa harus berusia minimal 18 tahun, telah menyelesaikan setara Year 10, dan mengikuti wawancara masuk."
+        "requirement": "Siswa harus telah menyelesaikan setara dengan Year 10, dan mengikuti wawancara masuk."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
@@ -634,7 +634,7 @@
       },
       "healthServicesAssistance": {
         "code": "HLT33115 Certificate III in Health Services Assistance",
-        "requirement": "Siswa harus berusia minimal 18 tahun pada saat kursus dimulai.\nIELTS 5.5 atau setara, jika siswa memiliki IELTS 4.5 atau setara melalui ABM EPT, daftar dengan Plus Nursing English.\nSiswa harus telah menyelesaikan setara dengan Year 10"
+        "requirement": "IELTS 5.5 atau setara, jika siswa memiliki IELTS 4.5 atau setara melalui ABM EPT, daftar dengan Plus Nursing English.\nSiswa harus telah menyelesaikan setara dengan Year 10"
       }
     }
   },

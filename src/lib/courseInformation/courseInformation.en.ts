@@ -978,7 +978,6 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     duration:
       '16 weeks (2 days per week + 1 day tutorial) + 80 work placement hours',
     entryRequirement: [
-      'Students must be at least 18 years of age at the time of course commencement.',
       'IELTS 5.5 or equivalent, if student has IELTS 4.5 or equivalent through ABM EPT, enrol with Plus Nursing English.',
       'Student must have completed an equivalent of Year 10',
     ],

@@ -888,7 +888,6 @@ export const courseInformationData_pt: {
     duration:
       '16 semanas (2 dias por semana + 1 dia de tutoria) + 80 horas de estágio',
     entryRequirement: [
-      'Os alunos devem ter pelo menos 18 anos de idade no início do curso.',
       'IELTS 5.5 ou equivalente. Se o aluno tiver IELTS 4.5 ou equivalente através do ABM EPT, inscreva-se no Plus Nursing English.',
       'O aluno deve ter concluído o equivalente ao Year 10',
     ],

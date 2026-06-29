@@ -560,7 +560,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "O aluno deve ter pelo menos 18 anos, ter concluído o equivalente ao Year 10 e participar de uma entrevista de entrada."
+        "requirement": "O aluno deve ter concluído o equivalente ao Year 10 e participar de uma entrevista de entrada."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
@@ -632,7 +632,7 @@
       },
       "healthServicesAssistance": {
         "code": "HLT33115 Certificate III in Health Services Assistance",
-        "requirement": "Os alunos devem ter pelo menos 18 anos na data de início do curso.\nIELTS 5.5 ou equivalente, se o aluno tiver IELTS 4.5 ou equivalente através do ABM EPT, matricular-se com Plus Nursing English.\nO aluno deve ter concluído o equivalente ao Year 10"
+        "requirement": "IELTS 5.5 ou equivalente, se o aluno tiver IELTS 4.5 ou equivalente através do ABM EPT, matricular-se com Plus Nursing English.\nO aluno deve ter concluído o equivalente ao Year 10"
       }
     }
   },

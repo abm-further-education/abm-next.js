@@ -868,7 +868,6 @@ export const courseInformationData_jp: {
       '看護支援キャリアパス：英語 + Certificate III in Health Services Assistance + 実習\n\nHLT33115 Certificate III in Health Services Assistance（急性期看護支援）を含みます。\n\nABM の本プログラムは、国際学生および医療分野未経験者を対象とし、病院や高齢者施設で支援業務を担う有能な支援者を育成するために設計されています。',
     duration: '16週間（週2日授業 + 週1日補講）＋ 実習 80時間',
     entryRequirement: [
-      'コース開始時に18歳以上である必要があります。',
       'IELTS 5.5以上または同等。学生がABM EPTを通じてIELTS 4.5または同等を取得している場合、Plus Nursing Englishに登録してください。',
       '学生はYear 10相当を修了している必要があります',
     ],

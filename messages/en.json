@@ -562,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "ABM Further Education has the following entry requirements:\nInternational students must:\n·       Be at least 18 years of age and have completed Year 10 or equivalent.\n·       Participate in a course entry interview to determine suitability for the course and student needs."
+        "requirement": "ABM Further Education has the following entry requirements:\nInternational students must:\n·       Student must have completed an equivalent of Year 10.\n·       Participate in a course entry interview to determine suitability for the course and student needs."
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",
@@ -634,7 +634,7 @@
       },
       "healthServicesAssistance": {
         "code": "HLT33115 Certificate III in Health Services Assistance",
-        "requirement": "Students must be at least 18 years of age at the time of course commencement.\nIELTS 5.5 or equivalent, if student has IELTS 4.5 or equivalent through ABM EPT, enrol with Plus Nursing English.\nStudent must have completed an equivalent of Year 10"
+        "requirement": "IELTS 5.5 or equivalent, if student has IELTS 4.5 or equivalent through ABM EPT, enrol with Plus Nursing English.\nStudent must have completed an equivalent of Year 10"
       }
     }
   },

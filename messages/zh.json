@@ -562,7 +562,7 @@
       },
       "patisserie": {
         "code": "SIT40721 四级西点证书",
-        "requirement": "学生须年满18岁，完成相当于10年级学历，并参加入学面试。"
+        "requirement": "学生必须完成相当于10年级的学历，并参加入学面试。"
       },
       "hospitalityDiploma": {
         "code": "SIT50422 酒店管理文凭",
@@ -634,7 +634,7 @@
       },
       "healthServicesAssistance": {
         "code": "HLT33115 三级健康服务助理证书",
-        "requirement": "学生在课程开始时必须年满18岁。\n雅思5.5或同等水平，如果学生通过ABM EPT测试达到雅思4.5或同等水平，可报名Plus护理英语课程。\n学生必须完成相当于10年级的学历"
+        "requirement": "雅思5.5或同等水平，如果学生通过ABM EPT测试达到雅思4.5或同等水平，可报名Plus护理英语课程。\n学生必须完成相当于10年级的学历"
       }
     }
   },
