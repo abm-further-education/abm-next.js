@@ -571,7 +571,7 @@
       },
       "patisserie": {
         "code": "SIT40721 파티세리 수료증 IV",
-        "requirement": "학생은 Year 10 또는 동등 학력을 완료하고 입학 인터뷰에 참여해야 합니다."
+        "requirement": "학생은 10학년 또는 이에 상응하는 학력을 완료해야 합니다"
       },
       "hospitalityDiploma": {
         "code": "SIT50422 호스피탈리티 매니지먼트 디플로마",

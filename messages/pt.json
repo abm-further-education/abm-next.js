@@ -560,7 +560,7 @@
       },
       "patisserie": {
         "code": "SIT40721 Certificate IV in Patisserie",
-        "requirement": "O aluno deve ter concluído o equivalente ao Year 10 e participar de uma entrevista de entrada."
+        "requirement": "O aluno deve ter concluído o equivalente ao Year 10"
       },
       "hospitalityDiploma": {
         "code": "SIT50422 Diploma of Hospitality Management",

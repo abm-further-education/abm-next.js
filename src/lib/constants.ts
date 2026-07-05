@@ -60,14 +60,14 @@ export const fitnessMenu = [
     title: 'Certificate IV in Fitness',
     href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
   },
-  {
-    title: 'Certificate III in Fitness (Online)',
-    href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
-  },
-  {
-    title: 'Certificate IV in Fitness (Online)',
-    href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
-  },
+  // {
+  //   title: 'Certificate III in Fitness (Online)',
+  //   href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
+  // },
+  // {
+  //   title: 'Certificate IV in Fitness (Online)',
+  //   href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
+  // },
 ];
 
 export const businessMenu = [
@@ -393,14 +393,14 @@ export const MENU_STRUCTURE: MenuSection[] = [
             title: 'Diploma of Sport',
             href: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
           },
-          {
-            title: 'Certificate III in Fitness (Online)',
-            href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
-          },
-          {
-            title: 'Certificate IV in Fitness (Online)',
-            href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
-          },
+          // {
+          //   title: 'Certificate III in Fitness (Online)',
+          //   href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
+          // },
+          // {
+          //   title: 'Certificate IV in Fitness (Online)',
+          //   href: '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
+          // },
         ],
       },
       {

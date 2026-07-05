@@ -209,20 +209,20 @@ const fitnessProgress: ProgressRow[] = [
       color: 'bg-[#965F67]',
     },
   ],
-  [
-    {
-      code: '',
-      title: 'Certificate III in Fitness (Online)',
-      duration: '12 weeks',
-      color: 'bg-[#BD0622]',
-    },
-    {
-      code: '',
-      title: 'Certificate IV in Fitness (Online)',
-      duration: '12 weeks',
-      color: 'bg-[#982D3A]',
-    },
-  ],
+  // [
+  //   {
+  //     code: '',
+  //     title: 'Certificate III in Fitness (Online)',
+  //     duration: '12 weeks',
+  //     color: 'bg-[#BD0622]',
+  //   },
+  //   {
+  //     code: '',
+  //     title: 'Certificate IV in Fitness (Online)',
+  //     duration: '12 weeks',
+  //     color: 'bg-[#982D3A]',
+  //   },
+  // ],
 ];
 
 const kmProgress: ProgressRow[] = [
