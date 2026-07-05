@@ -96,6 +96,7 @@
     "policiesAndProcedures": "Políticas y Procedimientos",
     "trainers": "Formadores",
     "studentAccommodation": "Alojamiento Estudiantil",
+    "oshc": "OSHC",
     "internationalStudentNationalityMix": "Mezcla de nacionalidades de estudiantes internacionales",
     "title": "Estudia con Nosotros",
     "timetable": "Horario",
@@ -292,7 +293,8 @@
       "higherEducationPathway": "Vía de Educación Superior",
       "studyTourPrograms": "Programas de Tour de Estudio",
       "trainers": "Formadores",
-      "studentAccommodation": "Alojamiento Estudiantil"
+      "studentAccommodation": "Alojamiento Estudiantil",
+      "oshc": "OSHC"
     }
   },
   "cookeryAndHospitality": {

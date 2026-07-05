@@ -98,6 +98,7 @@
     "policiesAndProcedures": "Kebijakan & Prosedur",
     "trainers": "Pelatih",
     "studentAccommodation": "Akomodasi Siswa",
+    "oshc": "OSHC",
     "internationalStudentNationalityMix": "Komposisi Kebangsaan Pelajar Internasional",
     "title": "Belajar Bersama Kami",
     "welcome": "Selamat Datang di ABM Further Education!",
@@ -293,7 +294,8 @@
       "getUSI": "Dapatkan USI",
       "enrolNow": "Daftar Sekarang",
       "higherEducationPathway": "Jalur Pendidikan Tinggi",
-      "studentAccommodation": "Akomodasi Siswa"
+      "studentAccommodation": "Akomodasi Siswa",
+      "oshc": "OSHC"
     }
   },
   "cookeryAndHospitality": {

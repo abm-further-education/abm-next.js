@@ -98,6 +98,7 @@
     "policiesAndProcedures": "정책 및 절차",
     "trainers": "강사진",
     "studentAccommodation": "학생 숙소",
+    "oshc": "OSHC",
     "internationalStudentNationalityMix": "국제학생 국적 구성",
     "title": "ABM과 함께 공부하기",
     "welcome": "ABM Further Education에 오신 것을 환영합니다!",
@@ -293,7 +294,8 @@
       "higherEducationPathway": "고등교육 진학 과정",
       "studyTourPrograms": "스터디 투어 프로그램",
       "trainers": "강사진",
-      "studentAccommodation": "학생 숙소"
+      "studentAccommodation": "학생 숙소",
+      "oshc": "OSHC"
     }
   },
   "cookeryAndHospitality": {

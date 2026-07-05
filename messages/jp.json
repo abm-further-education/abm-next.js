@@ -98,6 +98,7 @@
     "policiesAndProcedures": "各種規程",
     "trainers": "講師紹介",
     "studentAccommodation": "学生宿泊施設",
+    "oshc": "OSHC",
     "internationalStudentNationalityMix": "留学生の国籍構成",
     "title": "ABMで学ぶ",
     "welcome": "ABM Further Educationへようこそ！",
@@ -291,7 +292,8 @@
       "getUSI": "USI取得",
       "enrolNow": "今すぐ出願",
       "higherEducationPathway": "高等教育パスウェイ",
-      "studentAccommodation": "学生宿泊施設"
+      "studentAccommodation": "学生宿泊施設",
+      "oshc": "OSHC"
     }
   },
   "cookeryAndHospitality": {

@@ -98,6 +98,7 @@
     "policiesAndProcedures": "Mga Patakaran at Pamamaraan",
     "trainers": "Mga Trainer",
     "studentAccommodation": "Tirahan ng Estudyante",
+    "oshc": "OSHC",
     "internationalStudentNationalityMix": "International Student Nationality Mix",
     "title": "Mag-aral sa Amin",
     "welcome": "Maligayang Pagdating sa ABM Further Education!",
@@ -293,7 +294,8 @@
       "getUSI": "Kumuha ng USI",
       "enrolNow": "Mag-enroll Ngayon",
       "higherEducationPathway": "Higher Education Pathway",
-      "studentAccommodation": "Tirahan ng Estudyante"
+      "studentAccommodation": "Tirahan ng Estudyante",
+      "oshc": "OSHC"
     }
   },
   "cookeryAndHospitality": {

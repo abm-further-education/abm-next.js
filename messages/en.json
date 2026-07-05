@@ -98,6 +98,7 @@
     "policiesAndProcedures": "Policies & Procedures",
     "trainers": "Trainers",
     "studentAccommodation": "Student Accommodation",
+    "oshc": "OSHC",
     "internationalStudentNationalityMix": "International Student Nationality Mix",
     "title": "Study With Us",
     "welcome": "Welcome To ABM Further Education!",
@@ -293,7 +294,8 @@
       "getUSI": "Get a USI",
       "enrolNow": "Enrol Now",
       "higherEducationPathway": "Higher Education Pathway",
-      "studentAccommodation": "Student Accommodation"
+      "studentAccommodation": "Student Accommodation",
+      "oshc": "OSHC"
     }
   },
   "cookeryAndHospitality": {

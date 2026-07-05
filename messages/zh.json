@@ -98,6 +98,7 @@
     "policiesAndProcedures": "政策与程序",
     "trainers": "培训师",
     "studentAccommodation": "学生住宿",
+    "oshc": "OSHC",
     "internationalStudentNationalityMix": "国际学生国籍构成",
     "title": "与我们一起学习",
     "welcome": "欢迎来到ABM Further Education！",
@@ -293,7 +294,8 @@
       "getUSI": "获取USI",
       "enrolNow": "立即报名",
       "higherEducationPathway": "高等教育通道",
-      "studentAccommodation": "学生住宿"
+      "studentAccommodation": "学生住宿",
+      "oshc": "OSHC"
     }
   },
   "cookeryAndHospitality": {
