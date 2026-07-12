@@ -38,9 +38,8 @@ export default async function OSHCPage() {
               >
                 Allianz Care Australia
               </Link>{' '}
-              is the preferred provider of OSHC for ABM
-              Further Education. Information about other providers is available
-              from{' '}
+              is the preferred provider of OSHC for ABM Further Education.
+              Information about other providers is available from{' '}
               <Link
                 href="https://www.privatehealth.gov.au/health_insurance/overseas/overseas_student_health_cover.htm"
                 target="_blank"
@@ -65,9 +64,9 @@ export default async function OSHCPage() {
               >
                 Allianz Care Australia
               </Link>{' '}
-              is here to assist and provide services and
-              information that make it easy to understand and use the health
-              cover which is available to you, whilst studying in Australia.
+              is here to assist and provide services and information that make
+              it easy to understand and use the health cover which is available
+              to you, whilst studying in Australia.
             </p>
 
             <p>
@@ -137,8 +136,8 @@ export default async function OSHCPage() {
               </div>
               <div className="py-30 px-20">
                 <p className="text-gray-700 mb-20">
-                  Use the Allianz Care Australia online calculator to get a quote
-                  for your OSHC cover.
+                  Use the Allianz Care Australia online calculator to get a
+                  quote for your OSHC cover.
                 </p>
                 <Link
                   href="https://my.allianzcare.com/myquote/1?ot=2314&adobe_mc=MCMID%3D71068614976626489112508459503634879656%7CMCORGID%3DCEE1F70B5936D5B30A495EA3%2540AdobeOrg%7CTS%3D1782714610"
@@ -177,10 +176,10 @@ export default async function OSHCPage() {
                   Dual-Family Quote
                 </h3>
                 <p className="text-gray-700">
-                  Covers only one valid student visa holder plus either one adult
-                  spouse or recognised de-facto partner OR one OR more dependent
-                  child/ren. i.e. you and a spouse/partner OR you and your
-                  children.
+                  Covers only one valid student visa holder plus either one
+                  adult spouse or recognised de-facto partner OR one OR more
+                  dependent child/ren. i.e. you and a spouse/partner OR you and
+                  your children.
                 </p>
               </div>
 
@@ -198,13 +197,13 @@ export default async function OSHCPage() {
             </div>
 
             {/* Nominate Own Provider Notice */}
-            <div className="mt-20 bg-red-50 border border-red-200 rounded-lg p-20">
+            {/* <div className="mt-20 bg-red-50 border border-red-200 rounded-lg p-20">
               <p className="text-red-700 font-semibold">
                 I will nominate my own OSHC provider: If you choose your own OSHC
                 provider you will be required to provide proof of the OSHC policy
                 for the length of your visa.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
