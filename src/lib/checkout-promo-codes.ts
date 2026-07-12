@@ -30,6 +30,12 @@ export const CHECKOUT_PROMO_CODES: Record<string, CheckoutPromoDefinition> = {
     allowedSlugs: ['rsa', 'fss'],
   },
   ABMTESTHANNAH100ABM: { discount: 1, label: '100% OFF', type: 'percentage' },
+  ABMNEXTSTEPS26: {
+    discount: 20,
+    label: '$20 OFF',
+    type: 'fixed',
+    allowedSlugs: ['rsa', 'fss'],
+  },
 };
 
 function discountedPrice(
