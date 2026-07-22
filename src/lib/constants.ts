@@ -258,7 +258,7 @@ export const studyWithUsMenu = [
   },
   {
     title: 'International Student Nationality Mix',
-    href: 'https://view.monday.com/4553861953-ab1f874b24e939eebd870084d034ba79?r=use1&is_sharable_link=true',
+    href: 'https://view.monday.com/4553861953-c886fd40357a47c8ce2feb1328ee9089?r=use1&is_sharable_link=true',
   },
 ];
 
