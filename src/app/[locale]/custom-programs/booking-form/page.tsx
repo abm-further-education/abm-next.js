@@ -9,7 +9,6 @@ import {
   applyCapturedSignature,
   createInitialPostPaymentComplianceForm,
   isFoodSafetyCourse,
-  requiresUsi,
   validatePostPaymentComplianceForm,
   type PostPaymentComplianceFormState,
 } from '@/lib/post-payment-form-types';
@@ -75,7 +74,8 @@ export default function BookingFormPage() {
   const showFoodSafetyUnitsQuestion = isFoodSafetyCourse(
     bookingDetails.courseName,
   );
-  const courseRequiresUsi = requiresUsi(bookingDetails.courseName);
+  // Every course option on this page is RSA or FSS, both of which require a USI.
+  const courseRequiresUsi = true;
 
   const buildPaymentDetails = (): PostPaymentFormPaymentDetails => ({
     courseName: bookingDetails.courseName,
