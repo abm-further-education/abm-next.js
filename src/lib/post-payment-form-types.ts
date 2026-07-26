@@ -38,6 +38,13 @@ export function isFoodSafetyCourse(courseName: string): boolean {
   return /food safety/i.test(courseName);
 }
 
+export function requiresUsi(courseName: string): boolean {
+  return (
+    isFoodSafetyCourse(courseName) ||
+    /responsible service of alcohol|\brsa\b/i.test(courseName)
+  );
+}
+
 export function getTodayIsoDate(): string {
   return new Date().toISOString().split('T')[0];
 }
@@ -129,13 +136,16 @@ export function parsePostPaymentFormPayload(payload: Record<string, unknown>): {
 
 export function validatePostPaymentComplianceForm(
   form: PostPaymentComplianceFormState,
-  options?: { requireFoodSafetyUnits?: boolean },
+  options?: { requireFoodSafetyUnits?: boolean; requireUsi?: boolean },
 ): string | null {
   if (
     options?.requireFoodSafetyUnits &&
     !form.completedFoodSafetyUnits
   ) {
     return 'Please indicate whether you have completed SITXFSA005 and SITXFSA006.';
+  }
+  if (options?.requireUsi && !form.usi.trim()) {
+    return 'USI is required.';
   }
   if (!form.streetAddress.trim()) {
     return 'Street address is required.';

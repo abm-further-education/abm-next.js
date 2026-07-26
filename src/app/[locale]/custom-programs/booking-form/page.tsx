@@ -9,6 +9,7 @@ import {
   applyCapturedSignature,
   createInitialPostPaymentComplianceForm,
   isFoodSafetyCourse,
+  requiresUsi,
   validatePostPaymentComplianceForm,
   type PostPaymentComplianceFormState,
 } from '@/lib/post-payment-form-types';
@@ -74,6 +75,7 @@ export default function BookingFormPage() {
   const showFoodSafetyUnitsQuestion = isFoodSafetyCourse(
     bookingDetails.courseName,
   );
+  const courseRequiresUsi = requiresUsi(bookingDetails.courseName);
 
   const buildPaymentDetails = (): PostPaymentFormPaymentDetails => ({
     courseName: bookingDetails.courseName,
@@ -111,6 +113,7 @@ export default function BookingFormPage() {
       resolvedComplianceForm,
       {
         requireFoodSafetyUnits: showFoodSafetyUnitsQuestion,
+        requireUsi: courseRequiresUsi,
       },
     );
     if (complianceError) {
@@ -152,6 +155,7 @@ export default function BookingFormPage() {
       resolvedComplianceForm,
       {
         requireFoodSafetyUnits: showFoodSafetyUnitsQuestion,
+        requireUsi: courseRequiresUsi,
       },
     );
     if (complianceError) {
@@ -308,6 +312,7 @@ export default function BookingFormPage() {
                   setComplianceForm((prev) => updater(prev))
                 }
                 showFoodSafetyUnitsQuestion={showFoodSafetyUnitsQuestion}
+                showUsiField={courseRequiresUsi}
                 signaturePadRef={signaturePadRef}
               />
             </div>

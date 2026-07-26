@@ -8,10 +8,12 @@ import Button from '@/components/common/Button';
 import CheckEmoji from '@/components/common/CheckEmoji';
 import type { SignaturePadHandle } from '@/components/forms/SignaturePadField';
 import PostPaymentComplianceFormFields from '@/components/forms/PostPaymentComplianceFormFields';
+import EnrolmentReminderModal from '@/components/forms/EnrolmentReminderModal';
 import {
   applyCapturedSignature,
   createInitialPostPaymentComplianceForm,
   isFoodSafetyCourse,
+  requiresUsi,
   validatePostPaymentComplianceForm,
   type PostPaymentComplianceFormState,
 } from '@/lib/post-payment-form-types';
@@ -46,6 +48,7 @@ export default function PaymentSuccessPage() {
     useState<PostPaymentComplianceFormState>(
       createInitialPostPaymentComplianceForm,
     );
+  const [showEnrolmentModal, setShowEnrolmentModal] = useState(true);
   const signaturePadRef = useRef<SignaturePadHandle>(null);
 
   const resolveAdditionalForm = () =>
@@ -88,6 +91,10 @@ export default function PaymentSuccessPage() {
     ...form,
   });
 
+  const courseRequiresUsi = paymentDetails
+    ? requiresUsi(paymentDetails.courseName)
+    : false;
+
   const handleAdditionalFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError(null);
@@ -99,6 +106,7 @@ export default function PaymentSuccessPage() {
         requireFoodSafetyUnits: paymentDetails
           ? isFoodSafetyCourse(paymentDetails.courseName)
           : false,
+        requireUsi: courseRequiresUsi,
       },
     );
     if (validationError) {
@@ -134,12 +142,18 @@ export default function PaymentSuccessPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto"></div>
-          <p className="mt-4 text-lg">{t('verifyingPayment')}</p>
+      <>
+        <EnrolmentReminderModal
+          isOpen={showEnrolmentModal}
+          onClose={() => setShowEnrolmentModal(false)}
+        />
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto"></div>
+            <p className="mt-4 text-lg">{t('verifyingPayment')}</p>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
@@ -164,6 +178,10 @@ export default function PaymentSuccessPage() {
 
   return (
     <>
+      <EnrolmentReminderModal
+        isOpen={showEnrolmentModal}
+        onClose={() => setShowEnrolmentModal(false)}
+      />
       <div className="flex flex-col items-center justify-center mt-140 mb-60">
         <CheckEmoji />
         <div className="bg-white py-8 px-16 md:px-8 max-w-[960px] w-full mx-auto mt-10">
@@ -250,6 +268,7 @@ export default function PaymentSuccessPage() {
                       ? isFoodSafetyCourse(paymentDetails.courseName)
                       : false
                   }
+                  showUsiField={courseRequiresUsi}
                   signaturePadRef={signaturePadRef}
                 />
 

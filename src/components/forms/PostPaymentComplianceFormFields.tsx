@@ -15,6 +15,7 @@ interface PostPaymentComplianceFormFieldsProps {
     ) => PostPaymentComplianceFormState,
   ) => void;
   showFoodSafetyUnitsQuestion?: boolean;
+  showUsiField?: boolean;
   signaturePadRef?: Ref<SignaturePadHandle>;
 }
 
@@ -22,6 +23,7 @@ export default function PostPaymentComplianceFormFields({
   form,
   onChange,
   showFoodSafetyUnitsQuestion = false,
+  showUsiField = false,
   signaturePadRef,
 }: PostPaymentComplianceFormFieldsProps) {
   const australianStates = [
@@ -95,17 +97,21 @@ export default function PostPaymentComplianceFormFields({
         </div>
       )}
 
-      <div>
-        <label className="block font-semibold mb-4">USI</label>
-        <input
-          type="text"
-          value={form.usi}
-          onChange={(e) =>
-            onChange((prev) => ({ ...prev, usi: e.target.value }))
-          }
-          className="w-full border border-gray-300 px-10 py-8 text-sm"
-        />
-      </div>
+      {showUsiField && (
+        <div>
+          <label className="block font-semibold mb-4">
+            USI <span className="text-primary">*</span>
+          </label>
+          <input
+            type="text"
+            value={form.usi}
+            onChange={(e) =>
+              onChange((prev) => ({ ...prev, usi: e.target.value }))
+            }
+            className="w-full border border-gray-300 px-10 py-8 text-sm"
+          />
+        </div>
+      )}
 
       <div>
         <p className="font-semibold mb-6">Address</p>
