@@ -888,13 +888,6 @@ export const courseInformationData_jp: {
       {
         title: '2026年',
         dates: [
-          '1月12日',
-          '2月9日',
-          '3月9日',
-          '4月13日',
-          '5月11日',
-          '6月8日',
-          '7月13日',
           '8月10日',
           '9月7日',
           '10月12日',
@@ -906,7 +899,7 @@ export const courseInformationData_jp: {
         dates: [
           '1月11日',
           '2月15日',
-          '3月15日',
+          '3月14日',
           '4月12日',
           '5月17日',
           '6月14日',
@@ -914,7 +907,7 @@ export const courseInformationData_jp: {
           '8月16日',
           '9月13日',
           '10月11日',
-          '11月15日',
+          '11月8日',
         ],
       },
     ],

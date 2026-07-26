@@ -908,13 +908,6 @@ export const courseInformationData_pt: {
       {
         title: '2026',
         dates: [
-          '12 Jan',
-          '9 Feb',
-          '9 Mar',
-          '13 Apr',
-          '11 May',
-          '8 Jun',
-          '13 Jul',
           '10 Aug',
           '7 Sep',
           '12 Oct',
@@ -926,7 +919,7 @@ export const courseInformationData_pt: {
         dates: [
           '11 Jan',
           '15 Feb',
-          '15 Mar',
+          '14 Mar',
           '12 Apr',
           '17 May',
           '14 Jun',
@@ -934,7 +927,7 @@ export const courseInformationData_pt: {
           '16 Aug',
           '13 Sep',
           '11 Oct',
-          '15 Nov',
+          '8 Nov',
         ],
       },
     ],
