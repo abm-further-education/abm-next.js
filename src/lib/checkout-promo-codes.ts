@@ -9,7 +9,12 @@ export interface CheckoutPromoDefinition {
 }
 
 export const CHECKOUT_PROMO_CODES: Record<string, CheckoutPromoDefinition> = {
-  ABMSTUDENT45: { discount: 0.45, label: '45% OFF', type: 'percentage' },
+  ABMSTUDENT45: {
+    discount: 0.45,
+    label: '45% OFF',
+    type: 'percentage',
+    allowedSlugs: ['fss'],
+  },
   ASC10: { discount: 0.1, label: '10% OFF', type: 'percentage' },
   ASC20: { discount: 0.2, label: '20% OFF', type: 'percentage' },
   ELSISABM2025AUG: { discount: 1, label: '100% OFF', type: 'percentage' },
