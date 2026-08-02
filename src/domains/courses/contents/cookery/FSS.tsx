@@ -41,7 +41,7 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
     : fallbackData;
   const sortedDates = getUpcomingShortCourseDates(fssData.dates);
   const basePrice = fssData.price;
-  const promoDiscountedPrice = Math.round(basePrice * 0.85);
+  const promoDiscountedPrice = Math.round(basePrice * 0.9);
 
   if (editMode?.isEditMode && courseId) {
     return (
@@ -91,10 +91,10 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
               {fssData.specialOffer && (
                 <>
                   {fssData.specialOffer.textBeforeCode || 'Use code'}{' '}
-                  <strong>{fssData.specialOffer.code}</strong>{' '}
+                  <strong>ASC10</strong>{' '}
                   {fssData.specialOffer.textAfterCode || 'at checkout for a'}{' '}
                   <span className="bg-orange-100 text-primary font-semibold">
-                    {fssData.specialOffer.discount}
+                    10% discount
                   </span>{' '}
                   {fssData.specialOffer.note}
                 </>
@@ -116,11 +116,9 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
             <div className="flex w-full max-w-600 flex-col gap-10 border border-orange-500 bg-red-50 p-10">
               <span className="font-semibold">Special Offer:</span>
               <p className="text-gray-700">
-                Use code{' '}
-                <strong>{fssData.specialOffer?.code ?? 'ABMFSS15'}</strong> at
-                checkout for a{' '}
+                Use code <strong>ASC10</strong> at checkout for a{' '}
                 <span className="bg-orange-100 text-primary font-semibold">
-                  {fssData.specialOffer?.discount ?? '15% discount'}
+                  10% discount
                 </span>{' '}
                 — pay only ${promoDiscountedPrice}
               </p>
@@ -183,70 +181,76 @@ function FSS({ data: dataProp, courseId }: FSSProps) {
               )}
               </select> */}
             {sortedDates.length > 0 && (
-            <div className="flex w-full min-w-0 max-w-full flex-col gap-10">
-              <span className="font-semibold">Upcoming Course Dates:</span>
-              <div className="w-full min-w-0 space-y-8">
-                {sortedDates.map((dateOption, index) => {
-                  const parsedDate = new Date(`${dateOption.date}T00:00:00`);
-                  const dayMonthLabel = parsedDate.toLocaleDateString('en-AU', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric',
-                  });
-                  const weekDayLabel = parsedDate.toLocaleDateString('en-AU', {
-                    weekday: 'long',
-                  });
-                  const cardBgClass =
-                    COURSE_CARD_BG_CLASSES[
-                      index % COURSE_CARD_BG_CLASSES.length
-                    ];
-                  const checkoutHref = `/${locale}/custom-programs/fss/checkout?date=${encodeURIComponent(
-                    dateOption.displayDate,
-                  )}`;
+              <div className="flex w-full min-w-0 max-w-full flex-col gap-10">
+                <span className="font-semibold">Upcoming Course Dates:</span>
+                <div className="w-full min-w-0 space-y-8">
+                  {sortedDates.map((dateOption, index) => {
+                    const parsedDate = new Date(`${dateOption.date}T00:00:00`);
+                    const dayMonthLabel = parsedDate.toLocaleDateString(
+                      'en-AU',
+                      {
+                        day: '2-digit',
+                        month: 'long',
+                        year: 'numeric',
+                      },
+                    );
+                    const weekDayLabel = parsedDate.toLocaleDateString(
+                      'en-AU',
+                      {
+                        weekday: 'long',
+                      },
+                    );
+                    const cardBgClass =
+                      COURSE_CARD_BG_CLASSES[
+                        index % COURSE_CARD_BG_CLASSES.length
+                      ];
+                    const checkoutHref = `/${locale}/custom-programs/fss/checkout?date=${encodeURIComponent(
+                      dateOption.displayDate,
+                    )}`;
 
-                  return (
-                    <div
-                      key={`${dateOption.date}-${dateOption.time}`}
-                      className={`flex flex-col gap-10 rounded-md px-12 py-10 sm:flex-row sm:flex-wrap sm:items-center ${cardBgClass}`}
-                    >
-                      <div className="min-w-0 text-sm text-neutral-700 sm:flex-1 sm:basis-[140px]">
-                        <p className="font-semibold leading-tight">
-                          {dayMonthLabel}
-                        </p>
-                        <p className="leading-tight">{weekDayLabel}</p>
-                        <p className="mt-2 font-medium">{dateOption.time}</p>
-                      </div>
-                      <div className="min-w-0 text-sm text-neutral-800 sm:flex-1 sm:basis-[200px]">
-                        <p className="font-semibold">
-                          NSW Food Safety Supervisor (FSS)
-                        </p>
-                        <p>{fssData.address}</p>
-                        <p className="font-semibold">(Face to Face)</p>
-                      </div>
-                      <div className="flex w-full flex-col gap-8 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-10 md:ml-auto">
-                        <div className="flex flex-col gap-2">
-                          <span className="font-bold text-xl text-primary-bk">
-                            ${promoDiscountedPrice}
-                          </span>
-                          <span className="text-gray-800 line-through">
-                            ${basePrice}
-                          </span>
-                          <span className="text-xs">
-                            (When you use the code)
-                          </span>
+                    return (
+                      <div
+                        key={`${dateOption.date}-${dateOption.time}`}
+                        className={`flex flex-col gap-10 rounded-md px-12 py-10 sm:flex-row sm:flex-wrap sm:items-center ${cardBgClass}`}
+                      >
+                        <div className="min-w-0 text-sm text-neutral-700 sm:flex-1 sm:basis-[140px]">
+                          <p className="font-semibold leading-tight">
+                            {dayMonthLabel}
+                          </p>
+                          <p className="leading-tight">{weekDayLabel}</p>
+                          <p className="mt-2 font-medium">{dateOption.time}</p>
                         </div>
-                        <Link
-                          className="inline-flex w-full items-center justify-center bg-primary px-12 py-8 text-sm font-semibold text-white transition hover:bg-primary-bk sm:w-auto sm:min-w-100"
-                          href={checkoutHref}
-                        >
-                          Book Now
-                        </Link>
+                        <div className="min-w-0 text-sm text-neutral-800 sm:flex-1 sm:basis-[200px]">
+                          <p className="font-semibold">
+                            NSW Food Safety Supervisor (FSS)
+                          </p>
+                          <p>{fssData.address}</p>
+                          <p className="font-semibold">(Face to Face)</p>
+                        </div>
+                        <div className="flex w-full flex-col gap-8 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-10 md:ml-auto">
+                          <div className="flex flex-col gap-2">
+                            <span className="font-bold text-xl text-primary-bk">
+                              ${promoDiscountedPrice}
+                            </span>
+                            <span className="text-gray-800 line-through">
+                              ${basePrice}
+                            </span>
+                            <span className="text-xs">
+                              (When you use the code)
+                            </span>
+                          </div>
+                          <Link
+                            className="inline-flex w-full items-center justify-center bg-primary px-12 py-8 text-sm font-semibold text-white transition hover:bg-primary-bk sm:w-auto sm:min-w-100"
+                            href={checkoutHref}
+                          >
+                            Book Now
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
-            </div>
             )}
             <div className="mt-20 flex w-full max-w-600 flex-col gap-10 border border-primary bg-red-50 p-10">
               <span className="font-semibold">Recertification:</span>

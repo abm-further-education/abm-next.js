@@ -533,8 +533,8 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
     price: 180,
     duration: '8 horas (Apenas um dia!)',
     specialOffer: {
-      code: 'ABMFSS15',
-      discount: '15% de desconto',
+      code: 'ASC10',
+      discount: '10% de desconto',
       validUntil: '',
       note: '(Apenas novos clientes)',
     },

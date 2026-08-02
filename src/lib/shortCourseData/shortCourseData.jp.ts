@@ -539,8 +539,8 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
     price: 180,
     duration: '8時間（1日のみ）',
     specialOffer: {
-      code: 'ABMFSS15',
-      discount: '15%割引',
+      code: 'ASC10',
+      discount: '10%割引',
       validUntil: '',
       note: '（新規受講者のみ）',
     },

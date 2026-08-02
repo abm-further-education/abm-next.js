@@ -89,10 +89,10 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                 {rsaData.specialOfferLabel || 'Special Offer:'}
               </p>
               {rsaData.specialOffer.textBeforeCode || 'Use code'}{' '}
-              <strong>{rsaData.specialOffer.code}</strong>{' '}
+              <strong>ASC10</strong>{' '}
               {rsaData.specialOffer.textAfterCode || 'at checkout for a'}{' '}
               <span className="bg-orange-100 text-primary font-semibold">
-                {rsaData.specialOffer.discount}
+                10% discount
               </span>{' '}
               {rsaData.specialOffer.note}
             </div>
@@ -109,7 +109,7 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
             <div className="flex w-full max-w-600 flex-col gap-10 border border-orange-500 bg-red-50 p-10">
               <span className="font-semibold">Special Offer:</span>
               <p className="text-gray-700">
-                Use code <strong>RSAabmnew02</strong> at checkout for a{' '}
+                Use code <strong>ASC10</strong> at checkout for a{' '}
                 <span className="bg-orange-100 text-primary font-semibold">
                   10% discount
                 </span>{' '}

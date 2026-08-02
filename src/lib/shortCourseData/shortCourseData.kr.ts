@@ -528,9 +528,9 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     selectDateOptionLabel: '날짜를 선택하세요',
     specialOffer: {
       textBeforeCode: '아래 코드를 사용하세요',
-      code: 'ABMFSS15',
+      code: 'ASC10',
       textAfterCode: '결제 시',
-      discount: '15% 할인',
+      discount: '10% 할인',
       note: '(신규 고객 한정)',
       validUntil: '',
     },
