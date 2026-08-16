@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import {
   Disclosure,
@@ -165,6 +166,37 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Payment Options Section */}
+      <div className="w-full mt-40 mx-auto">
+        <h3 className="text-xl font-bold mb-20 font-montserrat">
+          Payment Options
+        </h3>
+        <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+          <li>
+            Full fee upfront or instalment plans (
+            <Link
+              href="/contact"
+              className="text-primary underline hover:text-black transition"
+            >
+              Contact us
+            </Link>
+            )
+          </li>
+          <li>
+            Eligible students may apply for{' '}
+            <a
+              href="https://www.servicesaustralia.gov.au/austudy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline hover:text-black transition"
+            >
+              Austudy
+            </a>{' '}
+            and quote our institution code 2R377.
+          </li>
+        </ul>
       </div>
 
       {/* FAQ Section */}
