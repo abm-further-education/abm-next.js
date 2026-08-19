@@ -139,7 +139,7 @@ export async function getCoursesByLocale(locale: string): Promise<CourseData[]> 
     }
 
     // Transform to CourseData format
-    return courses.map((course) => ({
+    const dbCourseData: CourseData[] = courses.map((course) => ({
       id: course.id,
       title: course.course_translations[0]?.title || '',
       description: course.course_translations[0]?.description || '',
@@ -152,6 +152,14 @@ export async function getCoursesByLocale(locale: string): Promise<CourseData[]> 
       link: course.link,
       tags: course.tags || [],
     }));
+
+    // Merge in static courses that haven't been migrated to the database yet
+    const dbCourseIds = new Set(dbCourseData.map((course) => course.id));
+    const missingStaticCourses = getStaticCourseData(normalizedLocale).filter(
+      (course) => !dbCourseIds.has(course.id)
+    );
+
+    return [...dbCourseData, ...missingStaticCourses];
   } catch (error) {
     console.error('Error in getCoursesByLocale:', error);
     return getStaticCourseData(normalizedLocale);

@@ -22,6 +22,7 @@ export default function CourseCard({ course }: CourseCardProps) {
   const getCategoryColor = (category: string) => {
     const colors = {
       cookery: 'bg-orange-100 text-orange-800',
+      patisserie: 'bg-rose-100 text-rose-800',
       hospitality: 'bg-blue-100 text-blue-800',
       fitness: 'bg-green-100 text-green-800',
       business: 'bg-purple-100 text-purple-800',

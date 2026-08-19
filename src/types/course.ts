@@ -9,6 +9,7 @@ export type Locale = 'en' | 'kr' | 'sp' | 'pt' | 'jp' | 'tl' | 'zh' | 'id';
 // Course categories
 export type CourseCategory =
   | 'cookery'
+  | 'patisserie'
   | 'hospitality'
   | 'fitness'
   | 'business'

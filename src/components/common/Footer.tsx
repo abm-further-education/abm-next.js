@@ -73,6 +73,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie">
+                  {t('patisserie')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/fitness-instructor-personal-trainer-courses">
                   {t('fitnessAndSports')}
                 </Link>
@@ -105,11 +110,6 @@ function Footer() {
               <li>
                 <Link href="/custom-programs/barista">
                   {t('baristaCourse')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/custom-programs/pastries">
-                  {t('classicFrenchPastriesCourse')}
                 </Link>
               </li>
               <li>

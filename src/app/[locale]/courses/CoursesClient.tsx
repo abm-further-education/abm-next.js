@@ -13,14 +13,24 @@ import {
 
 interface CoursesClientProps {
   initialCourseData: CourseData[];
+  initialCategory?: string;
 }
 
-export default function CoursesClient({ initialCourseData }: CoursesClientProps) {
+export default function CoursesClient({
+  initialCourseData,
+  initialCategory,
+}: CoursesClientProps) {
   const courseData = initialCourseData;
+
+  const isValidCategory = courseCategories.some(
+    (category) => category.value === initialCategory
+  );
 
   // Filter states
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState(
+    isValidCategory ? initialCategory! : 'all'
+  );
   const [selectedType, setSelectedType] = useState('all');
   const [selectedLevel, setSelectedLevel] = useState('all');
 

@@ -7,12 +7,14 @@ export { generateMetadata } from './metadata';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ category?: string }>;
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params, searchParams }: PageProps) {
   const { locale } = await params;
+  const { category } = await searchParams;
   const t = await getTranslations({ locale, namespace: 'courses' });
-  
+
   // Fetch course data from database (with fallback to static files)
   const courseData = await getCoursesByLocale(locale);
 
@@ -27,7 +29,7 @@ export default async function Page({ params }: PageProps) {
         </div>
       </FadeIn>
 
-      <CoursesClient initialCourseData={courseData} />
+      <CoursesClient initialCourseData={courseData} initialCategory={category} />
     </div>
   );
 }

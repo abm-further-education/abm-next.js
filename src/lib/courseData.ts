@@ -32,6 +32,7 @@ function mergeCourseDataWithEnglish(localizedData: CourseData[]): CourseData[] {
 export const courseCategories = [
   { value: 'all', label: 'All Categories' },
   { value: 'cookery', label: 'Cookery' },
+  { value: 'patisserie', label: 'Patisserie' },
   { value: 'hospitality', label: 'Hospitality' },
   { value: 'fitness', label: 'Fitness & Sports' },
   { value: 'business', label: 'Business' },
