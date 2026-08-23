@@ -83,7 +83,7 @@ function CourseInformationContent({
       <div
         className={cn(
           paragraphStyle,
-          'grid grid-cols-1 md:grid-cols-2 gap-60 text-base'
+          'grid grid-cols-1 md:grid-cols-2 gap-60 text-base',
         )}
       >
         <div>
@@ -236,7 +236,7 @@ function CourseInformationContent({
                 onClick={() => {
                   window.open(
                     'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
-                    '_blank'
+                    '_blank',
                   );
                 }}
               >
@@ -273,8 +273,6 @@ function CourseInformation({ id, initialData }: CourseInformationWrapperProps) {
     'industry-placement-work-placement',
     'industry-placement-hospitality-management',
     'fss',
-    'certificate-iv-in-fitness-online',
-    'certificate-iii-in-fitness-online',
   ];
 
   const shouldHideButtons = hideButtonsForCourses.includes(id);
