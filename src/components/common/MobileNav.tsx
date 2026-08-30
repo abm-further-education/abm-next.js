@@ -27,6 +27,7 @@ import {
   studyWithUsMenu,
 } from '@/lib';
 import { useTranslations, useLocale } from 'next-intl';
+import { trackEnrolNowClick } from '@/lib/analytics';
 
 function MobileNav({
   brochureUrl,
@@ -393,7 +394,10 @@ function MobileNav({
             </li>
             <li>
               <Link
-                onClick={toggleMenu}
+                onClick={() => {
+                  trackEnrolNowClick();
+                  toggleMenu();
+                }}
                 href="https://form.jotform.com/ABMonlineforms/abm-further-education-application-f"
                 className="block p-3 hover:underline"
               >

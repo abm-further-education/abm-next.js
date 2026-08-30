@@ -11,6 +11,7 @@ import {
 } from '@headlessui/react';
 import { ChevronUpIcon } from 'lucide-react';
 import type { FaqItem } from '@/types/course';
+import VaccinationInfo from './VaccinationInfo';
 
 export type { FaqItem };
 
@@ -198,6 +199,9 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
           </li>
         </ul>
       </div>
+
+      {/* Vaccination Information Section */}
+      <VaccinationInfo />
 
       {/* FAQ Section */}
       <div className="w-full mt-40 mx-auto">

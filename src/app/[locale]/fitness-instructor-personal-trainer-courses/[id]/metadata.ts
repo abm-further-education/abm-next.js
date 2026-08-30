@@ -55,9 +55,9 @@ const courseMetadata: {
     ],
   },
   'certificate-iii-in-fitness-online': {
-    title: 'Certificate III in Fitness (Online)',
+    title: 'Online Certificate III in Fitness',
     description:
-      'Start your career in fitness online with SIS30321: flexible study on Moodle, 32 hours placement in a real gym, and job-ready skills as a Gym Instructor and group fitness coach.',
+      'Discover top online fitness courses in Sydney, all in one place. Compare pricing, difficulty, and reviews to find the class thats right for you.',
     image: '/courses/fitness/ABM_Fitness_Photos_11.jpg',
     keywords: [
       'certificate III',

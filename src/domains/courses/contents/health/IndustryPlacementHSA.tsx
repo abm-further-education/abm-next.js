@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle, FileText, AlertCircle } from 'lucide-react';
+import VaccinationInfo from './VaccinationInfo';
 
 function IndustryPlacementHSA() {
   return (
@@ -123,6 +124,9 @@ function IndustryPlacementHSA() {
           </p>
         </div>
       </div>
+
+      {/* Vaccination Information Section */}
+      <VaccinationInfo />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import MobileNav from './MobileNav';
 import LanguageSwitcher from './LanguageSwitcher';
 import { ChevronRight } from 'lucide-react';
+import { trackEnrolNowClick } from '@/lib/analytics';
 import {
   cookeryMenu,
   patisserieMenu,
@@ -523,6 +524,7 @@ function Nav() {
             <Link
               target="_blank"
               href="https://form.jotform.com/ABMonlineforms/abm-further-education-application-f"
+              onClick={() => trackEnrolNowClick()}
               className="border cursor-pointer hover:bg-white font-semibold hover:text-black font-[family-name:var(--font-montserrat)] px-20 py-10 transition-all"
             >
               {t('enrolNow')}

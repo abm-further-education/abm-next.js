@@ -9,6 +9,7 @@ import Button from '@/components/common/Button';
 import { useParams } from 'next/navigation';
 import { useEditMode } from '@/contexts/EditModeContext';
 import CourseInformationEditable from './CourseInformationEditable';
+import { trackEnrolNowClick } from '@/lib/analytics';
 import {
   Bolt,
   ChevronRightIcon,
@@ -60,11 +61,13 @@ export interface CourseInformationInfo {
 interface CourseInformationProps {
   courseInfo: CourseInformationInfo;
   hideButtons?: boolean;
+  courseId?: string;
 }
 
 function CourseInformationContent({
   courseInfo,
   hideButtons = false,
+  courseId,
 }: CourseInformationProps) {
   // 다국어 지원
   const t = useTranslations('courseInformation');
@@ -234,6 +237,7 @@ function CourseInformationContent({
               <Button
                 className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-20"
                 onClick={() => {
+                  trackEnrolNowClick(courseId);
                   window.open(
                     'https://form.jotform.com/ABMonlineforms/abm-further-education-application-f',
                     '_blank',
@@ -292,6 +296,7 @@ function CourseInformation({ id, initialData }: CourseInformationWrapperProps) {
     <CourseInformationContent
       courseInfo={courseInfo}
       hideButtons={shouldHideButtons}
+      courseId={id}
     />
   );
 }

@@ -73,13 +73,13 @@ function FitnessPage() {
         </h2>
         <div className="flex flex-wrap md:gap-20 py-50 justify-center items-center max-w-1200 mx-auto">
           <Card
-            imgPath="/courses/fitness/fitness_2.png"
+            imgPath="/courses/fitness/ABM_Fitness_Photos_11.jpg"
             title={t('cert3Fast')}
             link="/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online"
             className="w-300 md:w-530"
           />
           <Card
-            imgPath="/courses/fitness/fitness_3.png"
+            imgPath="/courses/fitness/ABM_Fitness_Photos_9.jpg"
             title={t('cert4Fast')}
             link="/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online"
             className="w-300 md:w-530"

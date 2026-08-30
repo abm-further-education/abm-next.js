@@ -5,6 +5,7 @@ import Button from '@/components/common/Button';
 import ImageSlider from '@/components/shortCourses/ImageSlider';
 import NotifyMeModal from '@/components/common/NotifyMeModal';
 import getShortCourseData from '@/lib/shortCourseData';
+import { trackEnrolNowClick } from '@/lib/analytics';
 
 import React, { use, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -253,7 +254,10 @@ function Page({
                   </div>
                   <Button
                     className="bg-black text-white w-full mt-20 hover:bg-primary"
-                    onClick={handleEnquiry}
+                    onClick={() => {
+                      trackEnrolNowClick(titleMatch[slug] || courseData.title);
+                      handleEnquiry();
+                    }}
                     disabled={!selectedDate}
                   >
                     Enrol Now
