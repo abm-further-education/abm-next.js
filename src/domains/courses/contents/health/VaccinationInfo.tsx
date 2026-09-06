@@ -43,13 +43,12 @@ function VaccinationInfo() {
             documents to be certified before accepting them as evidence.
           </p>
           <p>
-            We will introduce you to a clinic where there is a Japanese
-            doctor, so there is no need to have the above documents
-            translated.
+            If you need help finding a GP who speaks your language, please
+            contact us.
           </p>
           <p>
-            There will also be no additional cost for translation during the
-            medical consultation.
+            This can also help you avoid additional costs for translating
+            documents during your medical consultation.
           </p>
         </div>
       </div>
@@ -165,20 +164,108 @@ function VaccinationInfo() {
         <h3 className="text-xl font-bold mb-20 font-montserrat">
           Other Requirements & Costs
         </h3>
-        <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-          <li>
-            Working With Children Check (WWCC) — Cost: TBC (to be confirmed)
-          </li>
-          <li>Police Check — Cost: TBC (to be confirmed)</li>
-          <li>First Aid Certificate — Cost: TBC (to be confirmed)</li>
-        </ul>
+        <div className="overflow-x-auto">
+          <table className="min-w-full table-auto shadow-sm text-sm">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="px-4 py-8 border-b border-gray-300 text-left font-semibold">
+                  Requirement
+                </th>
+                <th className="px-4 py-8 border-b border-gray-300 text-left font-semibold">
+                  Volunteer Cost
+                </th>
+                <th className="px-4 py-8 border-b border-gray-300 text-left font-semibold">
+                  Paid Worker / Employment Cost
+                </th>
+                <th className="px-4 py-8 border-b border-gray-300 text-left font-semibold">
+                  Additional Details
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr>
+                <td className="px-4 py-8 border-b border-gray-200 align-top font-semibold text-gray-900">
+                  Working with Children Check (WWCC)
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  Free
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  $112 <span className="italic">(NSW pricing)</span>
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  Valid for 5 years. Fees vary by state (e.g., Victoria is
+                  ~$136.60).
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-8 border-b border-gray-200 align-top font-semibold text-gray-900">
+                  National Police Check
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  $25 – $35
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  $52 – $77
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  Applying directly via the{' '}
+                  <a
+                    href="https://www.police.nsw.gov.au/online_services/national_police_checks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:text-black transition"
+                  >
+                    NSW Police Force Portal
+                  </a>{' '}
+                  costs $55.80, while private accredited online providers
+                  charge between $52.90 and $76.90.
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-8 border-b border-gray-200 align-top font-semibold text-gray-900">
+                  First Aid Course{' '}
+                  <span className="italic font-normal">(HLTAID011)</span>
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  $80 – $220
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  $80 – $220
+                </td>
+                <td className="px-4 py-8 border-b border-gray-200 align-top">
+                  Commercial RTOs (like{' '}
+                  <a
+                    href="https://www.australiawidefirstaid.com.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:text-black transition"
+                  >
+                    Australia Wide First Aid
+                  </a>
+                  ) charge $80 – $120, while premium providers like St John
+                  Ambulance or the{' '}
+                  <a
+                    href="https://www.redcross.org.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:text-black transition"
+                  >
+                    Red Cross
+                  </a>{' '}
+                  charge $195 – $220.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-20 mt-12">
           <div className="flex items-start gap-12">
             <AlertCircle className="w-20 h-20 text-primary mt-1 shrink-0" />
             <p className="text-sm text-gray-700">
-              Costs for WWCC, Police Check, and First Aid have not yet been
-              confirmed. Please obtain current pricing before publishing this
-              information to students or agents.
+              Prices above are indicative only and may change. Please check
+              with the relevant provider for current pricing before
+              proceeding.
             </p>
           </div>
         </div>
