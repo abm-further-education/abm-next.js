@@ -13,15 +13,15 @@ const mappingCourseTitle: { [key: string]: string } = {
   'bsb40120-certificate-iv-in-business': 'Certificate IV in Business',
   'bsb50120-diploma-of-business': 'Diploma of Business',
   'bsb60120-advanced-diploma-of-business': 'Advanced Diploma of Business',
-  'bsb80120-graduate-diploma-of-management':
-    'Graduate Diploma of Management (Learning)',
+  // 'bsb80120-graduate-diploma-of-management':
+  //   'Graduate Diploma of Management (Learning)',
 };
 
 const mappingCourseImage: { [key: string]: string } = {
   'bsb40120-certificate-iv-in-business': '/courses/business/business_1.jpg',
   'bsb50120-diploma-of-business': '/courses/business/business_2.png',
   'bsb60120-advanced-diploma-of-business': '/courses/business/business_3.png',
-  'bsb80120-graduate-diploma-of-management': '/courses/business/business_4.png',
+  // 'bsb80120-graduate-diploma-of-management': '/courses/business/business_4.png',
 };
 
 const menuItems = ['Course Information', 'Course Detail', 'Units'];

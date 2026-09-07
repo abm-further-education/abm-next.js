@@ -42,7 +42,7 @@ export default function CourseCardMobile({ course }: CourseCardMobileProps) {
       'certificate-iv': 'bg-blue-100 text-blue-800',
       diploma: 'bg-purple-100 text-purple-800',
       'advanced-diploma': 'bg-indigo-100 text-indigo-800',
-      'graduate-diploma': 'bg-red-100 text-red-800',
+      // 'graduate-diploma': 'bg-red-100 text-red-800',
     };
     return level
       ? colors[level as keyof typeof colors] || 'bg-gray-100 text-gray-800'

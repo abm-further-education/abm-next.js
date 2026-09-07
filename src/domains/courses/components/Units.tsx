@@ -18,7 +18,7 @@ import {
   DIPLOMA_HR_UNITS,
   DIPLOMA_PROJECT_UNITS,
   DIPLOMA_SPORT_UNITS,
-  GRADUATE_MANAGEMENT_UNITS,
+  // GRADUATE_MANAGEMENT_UNITS,
   HEALTH_SERVICES_ASSISTANCE_UNITS,
   HM_UNITS_1,
   HM_UNITS_2,
@@ -47,7 +47,7 @@ const staticMappingCourseUnits: {
   'bsb40120-certificate-iv-in-business': CERTIV_BUSINESS_UNITS,
   'bsb50120-diploma-of-business': DIPLOMA_BUSINESS_UNITS,
   'bsb60120-advanced-diploma-of-business': ADVANCED_BUSINESS_UNITS,
-  'bsb80120-graduate-diploma-of-management': GRADUATE_MANAGEMENT_UNITS,
+  // 'bsb80120-graduate-diploma-of-management': GRADUATE_MANAGEMENT_UNITS,
   'bsb40920-certificate-iv-in-project-management-practice':
     CERTIV_PROJECT_UNITS,
   'bsb50820-diploma-of-project-management-practice': DIPLOMA_PROJECT_UNITS,

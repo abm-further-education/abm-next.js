@@ -113,32 +113,32 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      '该资格证书反映了应用高度专业化管理知识和技能来领导和影响复杂动态管理环境变革的个人角色。\n\n该级别的个人使用认知和沟通技巧来识别、分析、综合和处理来自各种来源的信息，并将知识和技能传授给他人。\n\n他们运用创造性、概念性和分析技能来制定和评估复杂想法或启动变革。他们展示了知识和技能的自主应用，在复杂情况下具有很大的个人责任和自主权。',
-    duration: '52周',
-    entryRequirement: '学生必须完成高级文凭级别课程（AQF 6级）或更高。',
-    deliveryMode: {
-      title: '授课方式',
-      mode: '面授',
-    },
-    deliverySite: {
-      title: '授课地点：',
-      locations: [
-        {
-          type: 'ABM校区',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* 更多信息请访问',
-      linkText: 'My Skills网站。',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       '该资格证书反映了应用高度专业化管理知识和技能来领导和影响复杂动态管理环境变革的个人角色。\n\n该级别的个人使用认知和沟通技巧来识别、分析、综合和处理来自各种来源的信息，并将知识和技能传授给他人。\n\n他们运用创造性、概念性和分析技能来制定和评估复杂想法或启动变革。他们展示了知识和技能的自主应用，在复杂情况下具有很大的个人责任和自主权。',
+  //     duration: '52周',
+  //     entryRequirement: '学生必须完成高级文凭级别课程（AQF 6级）或更高。',
+  //     deliveryMode: {
+  //       title: '授课方式',
+  //       mode: '面授',
+  //     },
+  //     deliverySite: {
+  //       title: '授课地点：',
+  //       locations: [
+  //         {
+  //           type: 'ABM校区',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* 更多信息请访问',
+  //       linkText: 'My Skills网站。',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:

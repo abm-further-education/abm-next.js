@@ -122,15 +122,15 @@ export const timetableDataByCategory = {
       tue: '4:00 pm',
       wed: '11:00 am',
     },
-    {
-      qualification: 'Graduate Diploma of Management',
-      code: 'BSB80120',
-      intake: '[BSB80120] Graduate Diploma of Management',
-      mon: '5:00 pm',
-      tue: '2:00 pm',
-      wed: '',
-      thu: '11:00 am',
-    },
+    // {
+    //   qualification: 'Graduate Diploma of Management',
+    //   code: 'BSB80120',
+    //   intake: '[BSB80120] Graduate Diploma of Management',
+    //   mon: '5:00 pm',
+    //   tue: '2:00 pm',
+    //   wed: '',
+    //   thu: '11:00 am',
+    // },
   ],
 
   // Project Management 코스
@@ -232,7 +232,7 @@ export const courseCodeToCategory: Record<
   BSB40120: 'business',
   BSB50120: 'business',
   BSB60120: 'business',
-  BSB80120: 'business',
+  // BSB80120: 'business',
 
   // Project Management
   BSB40920: 'project',

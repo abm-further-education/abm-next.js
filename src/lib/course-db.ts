@@ -1117,7 +1117,7 @@ import {
   DIPLOMA_HR_UNITS,
   DIPLOMA_PROJECT_UNITS,
   DIPLOMA_SPORT_UNITS,
-  GRADUATE_MANAGEMENT_UNITS,
+  // GRADUATE_MANAGEMENT_UNITS,
   HEALTH_SERVICES_ASSISTANCE_UNITS,
   HM_UNITS_1,
   HM_UNITS_2,
@@ -1162,9 +1162,9 @@ const staticCourseUnitsMap: {
   'bsb60120-advanced-diploma-of-business': [
     { groupTitle: '', groupIndex: 0, units: ADVANCED_BUSINESS_UNITS as CourseUnitItem[] },
   ],
-  'bsb80120-graduate-diploma-of-management': [
-    { groupTitle: '', groupIndex: 0, units: GRADUATE_MANAGEMENT_UNITS as CourseUnitItem[] },
-  ],
+  // 'bsb80120-graduate-diploma-of-management': [
+  //   { groupTitle: '', groupIndex: 0, units: GRADUATE_MANAGEMENT_UNITS as CourseUnitItem[] },
+  // ],
   'bsb40920-certificate-iv-in-project-management-practice': [
     { groupTitle: '', groupIndex: 0, units: CERTIV_PROJECT_UNITS as CourseUnitItem[] },
   ],

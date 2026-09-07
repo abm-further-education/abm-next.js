@@ -942,7 +942,8 @@
       "title": "입학 요건",
       "items": {
         "basic": "연령: 18세 이상, 영어: IELTS 5.5 또는 동등 수준",
-        "lowerEnglishOption": "학생이 ABM EPT 기준 IELTS 4.5 또는 동등 수준의 영어 점수를 가진 경우, Plus Nursing English 과정과 함께 등록해야 합니다."
+        "lowerEnglishOption": "학생이 ABM EPT 기준 IELTS 4.5 또는 동등 수준의 영어 점수를 가진 경우, Plus Nursing English 과정과 함께 등록해야 합니다.",
+        "visaRequirement": "과정 시작일 기준으로 최대 16주간 학습 권리가 있는 유효한 호주 비자를 소지하고 있거나, 호주 시민권자 또는 영주권자여야 합니다."
       }
     },
     "workPlacement": {

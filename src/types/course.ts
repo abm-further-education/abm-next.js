@@ -28,8 +28,8 @@ export type CourseLevel =
   | 'certificate-iii'
   | 'certificate-iv'
   | 'diploma'
-  | 'advanced-diploma'
-  | 'graduate-diploma';
+  | 'advanced-diploma';
+// | 'graduate-diploma';
 
 // =====================================================
 // Database Table Types (matches Supabase schema)

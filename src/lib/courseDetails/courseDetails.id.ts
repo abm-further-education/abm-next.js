@@ -663,7 +663,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Jalur studi lanjutan / peluang karier',
       description: [
         'Pilihan pekerjaan potensial adalah sebagai manajer di berbagai bidang industri.',
-        'Mahasiswa yang menyelesaikan kursus ini mungkin ingin melanjutkan pendidikan mereka ke BSB80120 Graduate Diploma of Management (Learning), serta kualifikasi pendidikan tinggi di bidang bisnis atau manajemen.',
+        // 'Mahasiswa yang menyelesaikan kursus ini mungkin ingin melanjutkan pendidikan mereka ke BSB80120 Graduate Diploma of Management (Learning), serta kualifikasi pendidikan tinggi di bidang bisnis atau manajemen.',
       ],
     },
     additionalInfo: {
@@ -672,39 +672,39 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Silakan baca Buku Panduan Mahasiswa sebelum pendaftaran karena berisi informasi berharga tentang RTO. Untuk informasi lebih lanjut, silakan hubungi ABM dengan mengirim email ke info@abm.edu.au atau hubungi kami di +61 (02) 9160 4507.',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseDuration: {
-      title: 'Durasi Kursus',
-      description:
-        'Graduate Diploma of Management (Learning) ditawarkan selama 12 bulan, setara dengan 52 minggu, termasuk 12 minggu libur. Ini akan dibagi menjadi empat term 10 minggu.',
-    },
-    studentSupport: {
-      title: 'Dukungan Mahasiswa',
-      description: [
-        '• ABM menilai kebutuhan dukungan mahasiswa sebelum pendaftaran melalui Formulir Pendaftaran dan Pra-Pendaftaran.',
-        '• Dukungan yang mungkin termasuk bantuan LLN, teknologi bantu, tutorial tambahan, dan bantuan dengan alat pembelajaran online.',
-        '• Biaya tambahan atau batasan dikomunikasikan sebelum pendaftaran.',
-        '• Jika ABM tidak dapat menyediakan dukungan tertentu, mahasiswa dirujuk ke penyedia pihak ketiga dengan biaya sendiri.',
-        '• Jika ABM tidak dapat menawarkan lingkungan belajar yang sesuai, ABM akan menginformasikan mahasiswa dan mungkin merujuk mereka ke penyedia lain alih-alih mendaftarkan mereka.',
-      ],
-    },
-    jobRoles: {
-      title: 'Peran Pekerjaan',
-      description: ['Business Manager', 'Business Director'],
-    },
-    pathways: {
-      title: 'Jalur studi lanjutan / peluang karier',
-      description: [
-        'Pilihan pekerjaan potensial adalah sebagai Pemimpin atau Manajer di organisasi di mana pembelajaran digunakan untuk membangun kapabilitas organisasi di berbagai bidang industri.',
-        'Mahasiswa yang menyelesaikan kursus ini mungkin ingin melanjutkan pendidikan mereka ke berbagai kualifikasi pendidikan tinggi dalam pembelajaran dan pengembangan organisasi.',
-      ],
-    },
-    additionalInfo: {
-      title: 'Informasi Tambahan',
-      description:
-        'Silakan baca Buku Panduan Mahasiswa sebelum pendaftaran karena berisi informasi berharga tentang ABM. Untuk informasi lebih lanjut, silakan hubungi ABM dengan mengirim email ke info@abm.edu.au atau hubungi kami di +61 (02) 9160 4507.',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseDuration: {
+  //       title: 'Durasi Kursus',
+  //       description:
+  //         'Graduate Diploma of Management (Learning) ditawarkan selama 12 bulan, setara dengan 52 minggu, termasuk 12 minggu libur. Ini akan dibagi menjadi empat term 10 minggu.',
+  //     },
+  //     studentSupport: {
+  //       title: 'Dukungan Mahasiswa',
+  //       description: [
+  //         '• ABM menilai kebutuhan dukungan mahasiswa sebelum pendaftaran melalui Formulir Pendaftaran dan Pra-Pendaftaran.',
+  //         '• Dukungan yang mungkin termasuk bantuan LLN, teknologi bantu, tutorial tambahan, dan bantuan dengan alat pembelajaran online.',
+  //         '• Biaya tambahan atau batasan dikomunikasikan sebelum pendaftaran.',
+  //         '• Jika ABM tidak dapat menyediakan dukungan tertentu, mahasiswa dirujuk ke penyedia pihak ketiga dengan biaya sendiri.',
+  //         '• Jika ABM tidak dapat menawarkan lingkungan belajar yang sesuai, ABM akan menginformasikan mahasiswa dan mungkin merujuk mereka ke penyedia lain alih-alih mendaftarkan mereka.',
+  //       ],
+  //     },
+  //     jobRoles: {
+  //       title: 'Peran Pekerjaan',
+  //       description: ['Business Manager', 'Business Director'],
+  //     },
+  //     pathways: {
+  //       title: 'Jalur studi lanjutan / peluang karier',
+  //       description: [
+  //         'Pilihan pekerjaan potensial adalah sebagai Pemimpin atau Manajer di organisasi di mana pembelajaran digunakan untuk membangun kapabilitas organisasi di berbagai bidang industri.',
+  //         'Mahasiswa yang menyelesaikan kursus ini mungkin ingin melanjutkan pendidikan mereka ke berbagai kualifikasi pendidikan tinggi dalam pembelajaran dan pengembangan organisasi.',
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       title: 'Informasi Tambahan',
+  //       description:
+  //         'Silakan baca Buku Panduan Mahasiswa sebelum pendaftaran karena berisi informasi berharga tentang ABM. Untuk informasi lebih lanjut, silakan hubungi ABM dengan mengirim email ke info@abm.edu.au atau hubungi kami di +61 (02) 9160 4507.',
+  //     },
+  //   },
   'bsb40920-certificate-iv-in-project-management-practice': {
     courseDuration: {
       title: 'Durasi Kursus',
@@ -937,11 +937,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Jalur studi lanjutan / peluang karier',
       description: [
         'Setelah mencapai kualifikasi ini, lulusan dapat mengambil kualifikasi berikutnya:',
-        {
-          type: 'link',
-          text: 'BSB80120 – Graduate Diploma of Management (Learning)',
-          url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-        },
+        // {
+        //   type: 'link',
+        //   text: 'BSB80120 – Graduate Diploma of Management (Learning)',
+        //   url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+        // },
       ],
     },
     additionalInfo: {

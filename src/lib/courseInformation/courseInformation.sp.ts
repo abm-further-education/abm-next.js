@@ -128,37 +128,37 @@ export const courseInformationData_sp: {
       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      'Esta calificación refleja el rol de individuos que aplican conocimientos y habilidades de gestión altamente especializados para liderar e influir en el cambio en entornos de gestión complejos y dinámicos.\n\nLos individuos en este nivel utilizan habilidades cognitivas y de comunicación para identificar, analizar, sintetizar y actuar sobre información de una variedad de fuentes, y transferir conocimientos y habilidades a otros.\n\nAplican habilidades creativas, conceptuales y analíticas para formular y evaluar ideas complejas o iniciar cambios. Demuestran aplicación autodirigida de conocimientos y habilidades, con responsabilidad personal sustancial y autonomía en situaciones complejas.',
-    entryRequirement:
-      'Los estudiantes deben haber completado un curso de nivel Advanced Diploma (AQF Level 6) o superior.',
-    deliveryMode: {
-      title: 'Modo de entrega',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Lugar de entrega:',
-      locations: [
-        {
-          type: 'Campus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'Cocina ABM',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Más información disponible en',
-      linkText: 'el sitio web My Skills.',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       'Esta calificación refleja el rol de individuos que aplican conocimientos y habilidades de gestión altamente especializados para liderar e influir en el cambio en entornos de gestión complejos y dinámicos.\n\nLos individuos en este nivel utilizan habilidades cognitivas y de comunicación para identificar, analizar, sintetizar y actuar sobre información de una variedad de fuentes, y transferir conocimientos y habilidades a otros.\n\nAplican habilidades creativas, conceptuales y analíticas para formular y evaluar ideas complejas o iniciar cambios. Demuestran aplicación autodirigida de conocimientos y habilidades, con responsabilidad personal sustancial y autonomía en situaciones complejas.',
+  //     entryRequirement:
+  //       'Los estudiantes deben haber completado un curso de nivel Advanced Diploma (AQF Level 6) o superior.',
+  //     deliveryMode: {
+  //       title: 'Modo de entrega',
+  //       mode: 'Presencial',
+  //     },
+  //     deliverySite: {
+  //       title: 'Lugar de entrega:',
+  //       locations: [
+  //         {
+  //           type: 'Campus ABM',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //         {
+  //           type: 'Cocina ABM',
+  //           address:
+  //             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* Más información disponible en',
+  //       linkText: 'el sitio web My Skills.',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:

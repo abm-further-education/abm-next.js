@@ -938,7 +938,8 @@
       "title": "入学条件",
       "items": {
         "basic": "年齢：18歳以上、英語：IELTS 5.5相当",
-        "lowerEnglishOption": "ABM EPTでIELTS 4.5相当の英語力がある場合は、Plus Nursing Englishコースにお申し込みください。"
+        "lowerEnglishOption": "ABM EPTでIELTS 4.5相当の英語力がある場合は、Plus Nursing Englishコースにお申し込みください。",
+        "visaRequirement": "コース開始日において、16週間までの就学権を持つ有効なオーストラリアビザを保持しているか、オーストラリア国籍または永住権を有している必要があります。"
       }
     },
     "workPlacement": {

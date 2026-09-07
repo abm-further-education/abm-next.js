@@ -1330,57 +1330,57 @@ export const ADVANCED_BUSINESS_UNITS = [
   },
 ];
 
-export const GRADUATE_MANAGEMENT_UNITS = [
-  {
-    no: 1,
-    code: 'TAELED803',
-    title: 'Implement improved learning practice',
-    type: 'Core',
-  },
-  {
-    no: 2,
-    code: 'BSBHRM613',
-    title:
-      'Contribute to the development of learning and development strategies',
-    type: 'Core',
-  },
-  {
-    no: 3,
-    code: 'BSBLDR811',
-    title: 'Lead strategic transformation',
-    type: 'Core',
-  },
-  {
-    no: 4,
-    code: 'BSBFIN801',
-    title: 'Lead financial strategy development',
-    type: 'Elective',
-  },
-  {
-    no: 5,
-    code: 'BSBHRM611',
-    title: 'Contribute to organizational performance development',
-    type: 'Elective',
-  },
-  {
-    no: 6,
-    code: 'BSBSTR801',
-    title: 'Lead innovating thinking and practice',
-    type: 'Elective',
-  },
-  {
-    no: 7,
-    code: 'BSBLDR812',
-    title: 'Develop and cultivate collaborative partnerships and relationships',
-    type: 'Elective',
-  },
-  {
-    no: 8,
-    code: 'BSBINS603',
-    title: 'Initiate and lead applied research',
-    type: 'Elective',
-  },
-];
+// export const GRADUATE_MANAGEMENT_UNITS = [
+//   {
+//     no: 1,
+//     code: 'TAELED803',
+//     title: 'Implement improved learning practice',
+//     type: 'Core',
+//   },
+//   {
+//     no: 2,
+//     code: 'BSBHRM613',
+//     title:
+//       'Contribute to the development of learning and development strategies',
+//     type: 'Core',
+//   },
+//   {
+//     no: 3,
+//     code: 'BSBLDR811',
+//     title: 'Lead strategic transformation',
+//     type: 'Core',
+//   },
+//   {
+//     no: 4,
+//     code: 'BSBFIN801',
+//     title: 'Lead financial strategy development',
+//     type: 'Elective',
+//   },
+//   {
+//     no: 5,
+//     code: 'BSBHRM611',
+//     title: 'Contribute to organizational performance development',
+//     type: 'Elective',
+//   },
+//   {
+//     no: 6,
+//     code: 'BSBSTR801',
+//     title: 'Lead innovating thinking and practice',
+//     type: 'Elective',
+//   },
+//   {
+//     no: 7,
+//     code: 'BSBLDR812',
+//     title: 'Develop and cultivate collaborative partnerships and relationships',
+//     type: 'Elective',
+//   },
+//   {
+//     no: 8,
+//     code: 'BSBINS603',
+//     title: 'Initiate and lead applied research',
+//     type: 'Elective',
+//   },
+// ];
 
 export const CERTIV_PROJECT_UNITS = [
   {

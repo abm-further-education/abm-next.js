@@ -716,7 +716,7 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
       title: 'Caminho para estudos adicionais / oportunidades de carreira',
       description: [
         'Opções de emprego potenciais são como gestor em diversas áreas industriais.',
-        'Estudantes que concluírem este curso podem prosseguir para o BSB80120 Graduate Diploma of Management (Learning), bem como qualificações de nível superior em negócios ou gestão.',
+        // 'Estudantes que concluírem este curso podem prosseguir para o BSB80120 Graduate Diploma of Management (Learning), bem como qualificações de nível superior em negócios ou gestão.',
       ],
     },
     additionalInfo: {
@@ -726,39 +726,39 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
     },
   },
 
-  'bsb80120-graduate-diploma-of-management': {
-    courseDuration: {
-      title: 'Duração do Curso',
-      description:
-        'O Graduate Diploma of Management (Learning) é oferecido ao longo de 12 meses, totalizando 52 semanas, incluindo 12 semanas de recesso. Isso será dividido em quatro termos de 10 semanas cada.',
-    },
-    studentSupport: {
-      title: 'Apoio ao Estudante',
-      description: [
-        '• A ABM avalia as necessidades de apoio ao aluno antes da matrícula por meio de Formulários de Inscrição e Pré-inscrição.',
-        '• Possíveis apoios incluem assistência em LLN, tecnologia assistiva, tutorias adicionais e ajuda com ferramentas de aprendizado online.',
-        '• Custos adicionais ou limitações são comunicados antes da matrícula.',
-        '• Se a ABM não puder fornecer certo apoio, os alunos serão encaminhados a provedores terceiros por sua conta.',
-        '• Se a ABM não puder oferecer um ambiente de aprendizagem adequado, informará ao aluno e poderá encaminhá-lo a outro provedor em vez de matriculá-lo.',
-      ],
-    },
-    jobRoles: {
-      title: 'Cargos de trabalho',
-      description: ['Gerente de Negócios', 'Diretor de Negócios'],
-    },
-    pathways: {
-      title: 'Caminho para estudos adicionais / oportunidades de carreira',
-      description: [
-        'Opções de emprego potenciais são como líder ou gestor em organizações que usam aprendizado para desenvolver capacidade organizacional em vários setores.',
-        'Estudantes que concluírem este curso podem continuar sua educação em diversas qualificações de ensino superior em aprendizado e desenvolvimento organizacional.',
-      ],
-    },
-    additionalInfo: {
-      title: 'Informações Adicionais',
-      description:
-        'Por favor, leia o Manual do Estudante antes da matrícula, pois ele contém informações valiosas sobre a ABM. Para mais detalhes, envie um e-mail para info@abm.edu.au ou ligue para +61 (02) 9160 4507.',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseDuration: {
+  //       title: 'Duração do Curso',
+  //       description:
+  //         'O Graduate Diploma of Management (Learning) é oferecido ao longo de 12 meses, totalizando 52 semanas, incluindo 12 semanas de recesso. Isso será dividido em quatro termos de 10 semanas cada.',
+  //     },
+  //     studentSupport: {
+  //       title: 'Apoio ao Estudante',
+  //       description: [
+  //         '• A ABM avalia as necessidades de apoio ao aluno antes da matrícula por meio de Formulários de Inscrição e Pré-inscrição.',
+  //         '• Possíveis apoios incluem assistência em LLN, tecnologia assistiva, tutorias adicionais e ajuda com ferramentas de aprendizado online.',
+  //         '• Custos adicionais ou limitações são comunicados antes da matrícula.',
+  //         '• Se a ABM não puder fornecer certo apoio, os alunos serão encaminhados a provedores terceiros por sua conta.',
+  //         '• Se a ABM não puder oferecer um ambiente de aprendizagem adequado, informará ao aluno e poderá encaminhá-lo a outro provedor em vez de matriculá-lo.',
+  //       ],
+  //     },
+  //     jobRoles: {
+  //       title: 'Cargos de trabalho',
+  //       description: ['Gerente de Negócios', 'Diretor de Negócios'],
+  //     },
+  //     pathways: {
+  //       title: 'Caminho para estudos adicionais / oportunidades de carreira',
+  //       description: [
+  //         'Opções de emprego potenciais são como líder ou gestor em organizações que usam aprendizado para desenvolver capacidade organizacional em vários setores.',
+  //         'Estudantes que concluírem este curso podem continuar sua educação em diversas qualificações de ensino superior em aprendizado e desenvolvimento organizacional.',
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       title: 'Informações Adicionais',
+  //       description:
+  //         'Por favor, leia o Manual do Estudante antes da matrícula, pois ele contém informações valiosas sobre a ABM. Para mais detalhes, envie um e-mail para info@abm.edu.au ou ligue para +61 (02) 9160 4507.',
+  //     },
+  //   },
 
   'bsb40920-certificate-iv-in-project-management-practice': {
     courseDuration: {
@@ -997,11 +997,11 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
       title: 'Caminho para estudos adicionais / oportunidades de carreira',
       description: [
         'Após obter esta qualificação, os graduados podem cursar a próxima qualificação:',
-        {
-          type: 'link',
-          text: 'BSB80120 Graduate Diploma of Management (Learning)',
-          url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-        },
+        // {
+        //   type: 'link',
+        //   text: 'BSB80120 Graduate Diploma of Management (Learning)',
+        //   url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+        // },
       ],
     },
     additionalInfo: {

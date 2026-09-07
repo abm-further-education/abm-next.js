@@ -102,6 +102,7 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
               </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
                 <li>{t('entryRequirements.items.basic')}</li>
+                <li>{t('entryRequirements.items.visaRequirement')}</li>
               </ul>
             </div>
           </div>

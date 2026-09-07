@@ -113,33 +113,33 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      "Ang kwalipikasyong ito ay sumasalamin sa papel ng mga indibidwal na nag-aaplay ng napaka-espesyalisadong kaalaman at kasanayan sa pamamahala upang mamuno at makaimpluwensya ng pagbabago sa mga kumplikado at dinamikong kapaligiran ng pamamahala.\n\nAng mga indibidwal sa antas na ito ay gumagamit ng mga kasanayan sa cognitive at komunikasyon upang tukuyin, suriin, i-synthesize at kumilos sa impormasyon mula sa iba't ibang pinagkukunan, at ilipat ang kaalaman at kasanayan sa iba.\n\nNag-aaplay sila ng mga malikhaing, konseptwal at analytical na kasanayan upang bumalangkas at magsuri ng mga kumplikadong ideya o magpasimula ng pagbabago. Nagpapakita sila ng self-directed na aplikasyon ng kaalaman at kasanayan, na may malaking personal na responsibilidad at awtonomiya sa mga kumplikadong sitwasyon.",
-    duration: '52 linggo',
-    entryRequirement:
-      'Dapat nakumpleto ng mga estudyante ang Advanced Diploma level course (AQF Level 6) o mas mataas.',
-    deliveryMode: {
-      title: 'Paraan ng Paghahatid',
-      mode: 'Harapan',
-    },
-    deliverySite: {
-      title: 'Lugar ng Paghahatid:',
-      locations: [
-        {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Mas maraming impormasyon ay makukuha sa pamamagitan ng',
-      linkText: 'My Skills Website.',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       "Ang kwalipikasyong ito ay sumasalamin sa papel ng mga indibidwal na nag-aaplay ng napaka-espesyalisadong kaalaman at kasanayan sa pamamahala upang mamuno at makaimpluwensya ng pagbabago sa mga kumplikado at dinamikong kapaligiran ng pamamahala.\n\nAng mga indibidwal sa antas na ito ay gumagamit ng mga kasanayan sa cognitive at komunikasyon upang tukuyin, suriin, i-synthesize at kumilos sa impormasyon mula sa iba't ibang pinagkukunan, at ilipat ang kaalaman at kasanayan sa iba.\n\nNag-aaplay sila ng mga malikhaing, konseptwal at analytical na kasanayan upang bumalangkas at magsuri ng mga kumplikadong ideya o magpasimula ng pagbabago. Nagpapakita sila ng self-directed na aplikasyon ng kaalaman at kasanayan, na may malaking personal na responsibilidad at awtonomiya sa mga kumplikadong sitwasyon.",
+  //     duration: '52 linggo',
+  //     entryRequirement:
+  //       'Dapat nakumpleto ng mga estudyante ang Advanced Diploma level course (AQF Level 6) o mas mataas.',
+  //     deliveryMode: {
+  //       title: 'Paraan ng Paghahatid',
+  //       mode: 'Harapan',
+  //     },
+  //     deliverySite: {
+  //       title: 'Lugar ng Paghahatid:',
+  //       locations: [
+  //         {
+  //           type: 'ABM Campus',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* Mas maraming impormasyon ay makukuha sa pamamagitan ng',
+  //       linkText: 'My Skills Website.',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:

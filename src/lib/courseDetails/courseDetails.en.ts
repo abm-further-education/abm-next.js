@@ -916,7 +916,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Pathway to further study / career opportunities',
       description: [
         'Potential employment options are as a manager in a range of industry areas.',
-        'Students who complete this course may wish to continue their education into BSB80120 Graduate Diploma of Management (Learning), as well as higher education qualifications in business or management.',
+        // 'Students who complete this course may wish to continue their education into BSB80120 Graduate Diploma of Management (Learning), as well as higher education qualifications in business or management.',
       ],
     },
     additionalInfo: {
@@ -925,39 +925,39 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Please read the Student Handbook prior to enrolment as this contains valuable information about the RTO. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseDuration: {
-      title: 'Course Duration',
-      description:
-        'The Graduate Diploma of Management (Learning) is offered over 12 months, equating to 52 weeks, including 12 weeks of holidays. This will be split into four 10-week terms.',
-    },
-    studentSupport: {
-      title: 'Student Support',
-      description: [
-        '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
-        '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
-        '• Additional costs or limitations are communicated before enrolment.',
-        '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
-        '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
-      ],
-    },
-    jobRoles: {
-      title: 'Job roles',
-      description: ['Business Manager', 'Business Director'],
-    },
-    pathways: {
-      title: 'Pathway to further study / career opportunities',
-      description: [
-        'Potential employment options are as a Leader or Manager in organisations where learning is used to build organisational capability in a range of industry areas.',
-        'Students who complete this course may wish to continue their education into a range of higher education qualifications in organisational learning and development.',
-      ],
-    },
-    additionalInfo: {
-      title: 'Additional Information',
-      description:
-        'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseDuration: {
+  //       title: 'Course Duration',
+  //       description:
+  //         'The Graduate Diploma of Management (Learning) is offered over 12 months, equating to 52 weeks, including 12 weeks of holidays. This will be split into four 10-week terms.',
+  //     },
+  //     studentSupport: {
+  //       title: 'Student Support',
+  //       description: [
+  //         '• ABM assesses student support needs before enrolment via Enrolment and Pre-Enrolment Forms.',
+  //         '• Possible supports include LLN assistance, assistive technology, extra tutorials, and help with online learning tools.',
+  //         '• Additional costs or limitations are communicated before enrolment.',
+  //         '• If ABM cannot provide certain support, students are referred to third-party providers at their own expense.',
+  //         '• If ABM cannot offer a suitable learning environment, it will inform the student and may refer them to another provider instead of enrolling them.',
+  //       ],
+  //     },
+  //     jobRoles: {
+  //       title: 'Job roles',
+  //       description: ['Business Manager', 'Business Director'],
+  //     },
+  //     pathways: {
+  //       title: 'Pathway to further study / career opportunities',
+  //       description: [
+  //         'Potential employment options are as a Leader or Manager in organisations where learning is used to build organisational capability in a range of industry areas.',
+  //         'Students who complete this course may wish to continue their education into a range of higher education qualifications in organisational learning and development.',
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       title: 'Additional Information',
+  //       description:
+  //         'Please read the Student Handbook prior to enrolment as this contains valuable information about ABM. For further information, please contact ABM by sending an email to info@abm.edu.au or call us on +61 (02) 9160 4507.',
+  //     },
+  //   },
   'bsb40920-certificate-iv-in-project-management-practice': {
     courseDuration: {
       title: 'Course Duration',
@@ -1190,11 +1190,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Pathway to further study / career opportunities',
       description: [
         'After achieving this qualification, graduates may undertake the next qualification up the:',
-        {
-          type: 'link',
-          text: 'BSB80120 – Graduate Diploma of Management (Learning)',
-          url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-        },
+        // {
+        //   type: 'link',
+        //   text: 'BSB80120 – Graduate Diploma of Management (Learning)',
+        //   url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+        // },
       ],
     },
     additionalInfo: {

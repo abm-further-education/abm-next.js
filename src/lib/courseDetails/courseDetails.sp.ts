@@ -831,7 +831,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
       description: [
         'Las opciones de empleo potenciales son como gerente en una gama de áreas de la industria.',
-        'Los estudiantes que completen este curso pueden desear continuar su educación en BSB80120 Diploma de Graduado de Gestión (Aprendizaje), así como calificaciones de educación superior en negocios o gestión.',
+        // 'Los estudiantes que completen este curso pueden desear continuar su educación en BSB80120 Diploma de Graduado de Gestión (Aprendizaje), así como calificaciones de educación superior en negocios o gestión.',
       ],
     },
     additionalInfo: {
@@ -840,43 +840,43 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
         'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre el RTO. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseDuration: {
-      title: 'Duración del Curso',
-      description:
-        'El Diploma de Graduado de Gestión (Aprendizaje) se ofrece durante 12 meses, equivalente a 52 semanas, incluyendo 12 semanas de vacaciones. Esto se dividirá en cuatro términos de 10 semanas. Recibirás una orientación de tu capacitador dentro de una semana de tu inscripción.',
-    },
-    studentSupport: {
-      title: 'Apoyo Estudiantil',
-      description: [
-        'Para maximizar las posibilidades de que los estudiantes completen exitosamente su capacitación, ABM identificará cualquier apoyo que los estudiantes individuales necesiten antes de su inscripción y proporcionará acceso a ese apoyo durante toda su capacitación. Esto se hará utilizando tanto el Formulario de Inscripción como un Formulario de Pre-Inscripción, que los estudiantes deben completar.',
-        'El objetivo de ambos documentos es proporcionar cualquier apoyo que pueda ser requerido. Esto podría incluir:',
-        '- Apoyos de Lenguaje, Alfabetización y Aritmética (LLN).',
-        '- Tecnologías Asistivas.',
-        '- Tutorías Adicionales, y/o.',
-        '- Otros mecanismos, como asistencia en el uso de tecnología para componentes de entrega en línea.',
-        '\nCuando este apoyo implique un costo adicional para el estudiante, ABM lo aclarará antes de aceptar la inscripción del estudiante. Si hay limitaciones en el apoyo que ABM puede proporcionar, estas limitaciones se aclararán en la información proporcionada a un estudiante potencial.',
-        '\nCuando ABM identifique apoyo requerido, como alfabetización o aritmética, barreras del idioma inglés u otros idiomas o capacidades físicas, y no pueda proporcionar dicho apoyo directamente, remitirá al estudiante a un tercero. Los costos de dicho apoyo de terceros serán responsabilidad del individuo.',
-        '\nCuando ABM no sea capaz de ofrecer un ambiente adecuado para las necesidades de un estudiante con necesidades específicas identificadas, lo informará en consecuencia y puede dirigir al estudiante a un proveedor que pueda hacerlo, y por lo tanto no procesará su inscripción.',
-      ],
-    },
-    jobRoles: {
-      title: 'Roles Laborales',
-      description: ['Gerente de Negocios', 'Director de Negocios'],
-    },
-    pathways: {
-      title: 'Ruta de estudio adicional / oportunidades profesionales',
-      description: [
-        'Las opciones de empleo potenciales son como Líder o Gerente en organizaciones donde el aprendizaje se usa para construir capacidad organizacional en una gama de áreas de la industria.',
-        'Los estudiantes que completen este curso pueden desear continuar su educación en una gama de calificaciones de educación superior en aprendizaje y desarrollo organizacional.',
-      ],
-    },
-    additionalInfo: {
-      title: 'Información Adicional',
-      description:
-        'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre ABM. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseDuration: {
+  //       title: 'Duración del Curso',
+  //       description:
+  //         'El Diploma de Graduado de Gestión (Aprendizaje) se ofrece durante 12 meses, equivalente a 52 semanas, incluyendo 12 semanas de vacaciones. Esto se dividirá en cuatro términos de 10 semanas. Recibirás una orientación de tu capacitador dentro de una semana de tu inscripción.',
+  //     },
+  //     studentSupport: {
+  //       title: 'Apoyo Estudiantil',
+  //       description: [
+  //         'Para maximizar las posibilidades de que los estudiantes completen exitosamente su capacitación, ABM identificará cualquier apoyo que los estudiantes individuales necesiten antes de su inscripción y proporcionará acceso a ese apoyo durante toda su capacitación. Esto se hará utilizando tanto el Formulario de Inscripción como un Formulario de Pre-Inscripción, que los estudiantes deben completar.',
+  //         'El objetivo de ambos documentos es proporcionar cualquier apoyo que pueda ser requerido. Esto podría incluir:',
+  //         '- Apoyos de Lenguaje, Alfabetización y Aritmética (LLN).',
+  //         '- Tecnologías Asistivas.',
+  //         '- Tutorías Adicionales, y/o.',
+  //         '- Otros mecanismos, como asistencia en el uso de tecnología para componentes de entrega en línea.',
+  //         '\nCuando este apoyo implique un costo adicional para el estudiante, ABM lo aclarará antes de aceptar la inscripción del estudiante. Si hay limitaciones en el apoyo que ABM puede proporcionar, estas limitaciones se aclararán en la información proporcionada a un estudiante potencial.',
+  //         '\nCuando ABM identifique apoyo requerido, como alfabetización o aritmética, barreras del idioma inglés u otros idiomas o capacidades físicas, y no pueda proporcionar dicho apoyo directamente, remitirá al estudiante a un tercero. Los costos de dicho apoyo de terceros serán responsabilidad del individuo.',
+  //         '\nCuando ABM no sea capaz de ofrecer un ambiente adecuado para las necesidades de un estudiante con necesidades específicas identificadas, lo informará en consecuencia y puede dirigir al estudiante a un proveedor que pueda hacerlo, y por lo tanto no procesará su inscripción.',
+  //       ],
+  //     },
+  //     jobRoles: {
+  //       title: 'Roles Laborales',
+  //       description: ['Gerente de Negocios', 'Director de Negocios'],
+  //     },
+  //     pathways: {
+  //       title: 'Ruta de estudio adicional / oportunidades profesionales',
+  //       description: [
+  //         'Las opciones de empleo potenciales son como Líder o Gerente en organizaciones donde el aprendizaje se usa para construir capacidad organizacional en una gama de áreas de la industria.',
+  //         'Los estudiantes que completen este curso pueden desear continuar su educación en una gama de calificaciones de educación superior en aprendizaje y desarrollo organizacional.',
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       title: 'Información Adicional',
+  //       description:
+  //         'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre ABM. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
+  //     },
+  //   },
   'bsb40920-certificate-iv-in-project-management-practice': {
     courseDuration: {
       title: 'Duración del Curso',
@@ -1154,11 +1154,11 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
       title: 'Ruta de estudio adicional / oportunidades profesionales',
       description: [
         'Después de lograr esta calificación, los graduados pueden emprender la siguiente calificación superior:',
-        {
-          type: 'link',
-          text: 'BSB80120 – Diploma de Graduado de Gestión (Aprendizaje)',
-          url: '/business-and-management-courses/graduate-diploma-of-management',
-        },
+        // {
+        //   type: 'link',
+        //   text: 'BSB80120 – Diploma de Graduado de Gestión (Aprendizaje)',
+        //   url: '/business-and-management-courses/graduate-diploma-of-management',
+        // },
       ],
     },
     additionalInfo: {

@@ -55,7 +55,7 @@ export const courseLevels = [
   { value: 'certificate-iv', label: 'Certificate IV' },
   { value: 'diploma', label: 'Diploma' },
   { value: 'advanced-diploma', label: 'Advanced Diploma' },
-  { value: 'graduate-diploma', label: 'Graduate Diploma' },
+  // { value: 'graduate-diploma', label: 'Graduate Diploma' },
 ];
 
 export function getCourseDataByLocale(locale: string): CourseData[] {

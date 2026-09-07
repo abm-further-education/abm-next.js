@@ -78,26 +78,26 @@ const businessProgress: ProgressRow[] = [
       color: 'bg-[#364662]',
     },
   ],
-  [
-    {
-      code: 'BSB50120',
-      title: 'Diploma of Business',
-      duration: '52 weeks',
-      color: 'bg-[#1D234B]',
-    },
-    {
-      code: 'BSB60120',
-      title: 'Advanced Diploma of Business',
-      duration: '78 weeks',
-      color: 'bg-[#364662]',
-    },
-    {
-      code: 'BSB80120',
-      title: 'Graduate Diploma of Management (Learning)',
-      duration: '104 weeks',
-      color: 'bg-[#282A2B]',
-    },
-  ],
+  // [
+  //   {
+  //     code: 'BSB50120',
+  //     title: 'Diploma of Business',
+  //     duration: '52 weeks',
+  //     color: 'bg-[#1D234B]',
+  //   },
+  //   {
+  //     code: 'BSB60120',
+  //     title: 'Advanced Diploma of Business',
+  //     duration: '78 weeks',
+  //     color: 'bg-[#364662]',
+  //   },
+  //   {
+  //     code: 'BSB80120',
+  //     title: 'Graduate Diploma of Management (Learning)',
+  //     duration: '104 weeks',
+  //     color: 'bg-[#282A2B]',
+  //   },
+  // ],
 ];
 
 const pmProgress: ProgressRow[] = [
@@ -317,7 +317,7 @@ const courseProgressMap: Record<string, ProgressRow[]> = {
   'bsb40120-certificate-iv-in-business': businessProgress,
   'bsb50120-diploma-of-business': businessProgress,
   'bsb60120-advanced-diploma-of-business': businessProgress,
-  'bsb80120-graduate-diploma-of-management': businessProgress,
+  // 'bsb80120-graduate-diploma-of-management': businessProgress,
   'bsb40920-certificate-iv-in-project-management-practice': pmProgress,
   'bsb50820-diploma-of-project-management-practice': pmProgress,
   'bsb60720-advanced-diploma-of-program-management': pmProgress,

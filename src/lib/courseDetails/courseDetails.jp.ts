@@ -707,7 +707,7 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
       title: '進学／キャリアの道',
       description: [
         '各業界分野の管理職としての就業が想定されます。',
-        '修了後は BSB80120 Graduate Diploma of Management (Learning) や、ビジネス・マネジメント分野の高等教育課程への進学が可能です。',
+        // '修了後は BSB80120 Graduate Diploma of Management (Learning) や、ビジネス・マネジメント分野の高等教育課程への進学が可能です。',
       ],
     },
     additionalInfo: {
@@ -717,39 +717,39 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
     },
   },
 
-  'bsb80120-graduate-diploma-of-management': {
-    courseDuration: {
-      title: '受講期間',
-      description:
-        '「Graduate Diploma of Management (Learning)」は総期間12か月（52週間、うち休暇12週間）。10週間×4学期に分割して実施します。',
-    },
-    studentSupport: {
-      title: '学生サポート',
-      description: [
-        '• 出願前の支援ニーズ評価（申込書・事前評価フォーム）。',
-        '• LLN支援、支援技術、追加チュートリアル、オンライン学習支援など。',
-        '• 追加費用／制約は事前通知。',
-        '• 提供困難な支援は外部機関を案内（自己負担）。',
-        '• 適切な学習環境の提供が難しい場合は入学見送りの可能性があります。',
-      ],
-    },
-    jobRoles: {
-      title: '想定職種',
-      description: ['ビジネス・マネージャー', 'ビジネス・ディレクター'],
-    },
-    pathways: {
-      title: '進学／キャリアの道',
-      description: [
-        '学習を通じて組織能力を高める分野におけるリーダー／マネージャーとしての就業が想定されます。',
-        '修了後は組織学習・人材開発分野の高等教育課程へ進学が可能です。',
-      ],
-    },
-    additionalInfo: {
-      title: '追加情報',
-      description:
-        '出願前に「学生ハンドブック」をご確認ください。詳細は info@abm.edu.au までメール、または +61 (02) 9160 4507 へお電話ください。',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseDuration: {
+  //       title: '受講期間',
+  //       description:
+  //         '「Graduate Diploma of Management (Learning)」は総期間12か月（52週間、うち休暇12週間）。10週間×4学期に分割して実施します。',
+  //     },
+  //     studentSupport: {
+  //       title: '学生サポート',
+  //       description: [
+  //         '• 出願前の支援ニーズ評価（申込書・事前評価フォーム）。',
+  //         '• LLN支援、支援技術、追加チュートリアル、オンライン学習支援など。',
+  //         '• 追加費用／制約は事前通知。',
+  //         '• 提供困難な支援は外部機関を案内（自己負担）。',
+  //         '• 適切な学習環境の提供が難しい場合は入学見送りの可能性があります。',
+  //       ],
+  //     },
+  //     jobRoles: {
+  //       title: '想定職種',
+  //       description: ['ビジネス・マネージャー', 'ビジネス・ディレクター'],
+  //     },
+  //     pathways: {
+  //       title: '進学／キャリアの道',
+  //       description: [
+  //         '学習を通じて組織能力を高める分野におけるリーダー／マネージャーとしての就業が想定されます。',
+  //         '修了後は組織学習・人材開発分野の高等教育課程へ進学が可能です。',
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       title: '追加情報',
+  //       description:
+  //         '出願前に「学生ハンドブック」をご確認ください。詳細は info@abm.edu.au までメール、または +61 (02) 9160 4507 へお電話ください。',
+  //     },
+  //   },
 
   'bsb40920-certificate-iv-in-project-management-practice': {
     courseDuration: {
@@ -986,11 +986,11 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
       title: '進学／キャリアの道',
       description: [
         '本資格取得後は、次の上位資格への進学が可能です：',
-        {
-          type: 'link',
-          text: 'BSB80120 – Graduate Diploma of Management (Learning)',
-          url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-        },
+        // {
+        //   type: 'link',
+        //   text: 'BSB80120 – Graduate Diploma of Management (Learning)',
+        //   url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+        // },
       ],
     },
     additionalInfo: {

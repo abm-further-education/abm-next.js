@@ -169,18 +169,18 @@ export const courseData: CourseData[] = [
     link: '/business-and-management-courses/bsb60120-advanced-diploma-of-business',
     tags: ['business', 'management', 'advanced-diploma', 'strategy'],
   },
-  {
-    id: 'business-graduate-diploma',
-    title: '経営学大学院ディプロマ（学習専攻）',
-    description: '大学院レベルの経営・リーダーシップスキルを習得します。',
-    category: 'business',
-    type: 'full-course',
-    level: 'graduate-diploma',
-    duration: '52週間',
-    image: '/courses/business/business_4.png',
-    link: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-    tags: ['business', 'management', 'graduate-diploma', 'leadership'],
-  },
+  // {
+  //   id: 'business-graduate-diploma',
+  //   title: '経営学大学院ディプロマ（学習専攻）',
+  //   description: '大学院レベルの経営・リーダーシップスキルを習得します。',
+  //   category: 'business',
+  //   type: 'full-course',
+  //   level: 'graduate-diploma',
+  //   duration: '52週間',
+  //   image: '/courses/business/business_4.png',
+  //   link: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+  //   tags: ['business', 'management', 'graduate-diploma', 'leadership'],
+  // },
 
   // Project Management Courses
   {

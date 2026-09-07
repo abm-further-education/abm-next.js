@@ -119,33 +119,33 @@ export const courseInformationData_pt: {
     },
   },
 
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      'Esta qualificação reflete o papel de indivíduos que aplicam conhecimento e habilidades gerenciais altamente especializadas para liderar e influenciar mudanças em ambientes complexos e dinâmicos.\n\nIndivíduos nesse nível utilizam habilidades cognitivas e de comunicação para identificar, analisar, sintetizar e agir sobre informações de várias fontes, além de transferir conhecimento e habilidades para outras pessoas.\n\nAplicam habilidades criativas, conceituais e analíticas para formular e avaliar ideias complexas ou iniciar mudanças. Demonstram aplicação autodirigida de conhecimento e habilidades, com substancial responsabilidade pessoal e autonomia em situações complexas.',
-    duration: '52 semanas',
-    entryRequirement:
-      'Os alunos devem ter concluído um curso de nível Advanced Diploma (AQF Level 6) ou superior.',
-    deliveryMode: {
-      title: 'Modalidade de oferta',
-      mode: 'Presencial',
-    },
-    deliverySite: {
-      title: 'Local de oferta:',
-      locations: [
-        {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Mais informações disponíveis no',
-      linkText: 'site My Skills.',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       'Esta qualificação reflete o papel de indivíduos que aplicam conhecimento e habilidades gerenciais altamente especializadas para liderar e influenciar mudanças em ambientes complexos e dinâmicos.\n\nIndivíduos nesse nível utilizam habilidades cognitivas e de comunicação para identificar, analisar, sintetizar e agir sobre informações de várias fontes, além de transferir conhecimento e habilidades para outras pessoas.\n\nAplicam habilidades criativas, conceituais e analíticas para formular e avaliar ideias complexas ou iniciar mudanças. Demonstram aplicação autodirigida de conhecimento e habilidades, com substancial responsabilidade pessoal e autonomia em situações complexas.',
+  //     duration: '52 semanas',
+  //     entryRequirement:
+  //       'Os alunos devem ter concluído um curso de nível Advanced Diploma (AQF Level 6) ou superior.',
+  //     deliveryMode: {
+  //       title: 'Modalidade de oferta',
+  //       mode: 'Presencial',
+  //     },
+  //     deliverySite: {
+  //       title: 'Local de oferta:',
+  //       locations: [
+  //         {
+  //           type: 'ABM Campus',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* Mais informações disponíveis no',
+  //       linkText: 'site My Skills.',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
 
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',

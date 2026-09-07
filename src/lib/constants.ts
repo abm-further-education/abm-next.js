@@ -83,10 +83,10 @@ export const businessMenu = [
     title: 'Advanced Diploma of Business',
     href: '/business-and-management-courses/bsb60120-advanced-diploma-of-business',
   },
-  {
-    title: 'Graduate Diploma of Management (Learning)',
-    href: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-  },
+  // {
+  //   title: 'Graduate Diploma of Management (Learning)',
+  //   href: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+  // },
 ];
 
 export const projectMenu = [
@@ -423,10 +423,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
             title: 'Advanced Diploma of Business',
             href: '/business-and-management-courses/bsb60120-advanced-diploma-of-business',
           },
-          {
-            title: 'Graduate Diploma of Management (Learning)',
-            href: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-          },
+          // {
+          //   title: 'Graduate Diploma of Management (Learning)',
+          //   href: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+          // },
         ],
       },
       {

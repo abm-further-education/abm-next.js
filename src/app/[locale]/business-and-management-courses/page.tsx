@@ -41,7 +41,7 @@ async function Page() {
     images.map(async (image) => {
       const r2Key = convertToR2Key(image);
       return await getR2ImageUrl(r2Key);
-    })
+    }),
   );
   return (
     <div className="font-[family-name:var(--font-montserrat)] pt-60">
@@ -89,12 +89,12 @@ async function Page() {
             link="/business-and-management-courses/bsb60120-advanced-diploma-of-business"
             className="w-300 md:w-480"
           />
-          <Card
+          {/* <Card
             imgPath="/courses/business/business_4.png"
             title="Graduate Diploma of Management (Learning)"
             link="/business-and-management-courses/bsb80120-graduate-diploma-of-management"
             className="w-300 md:w-480"
-          />
+          /> */}
         </div>
       </FadeIn>
       <FadeIn>

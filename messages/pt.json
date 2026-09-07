@@ -938,7 +938,8 @@
       "title": "Requisitos de Entrada",
       "items": {
         "basic": "Idade: 18 anos+, Inglês: IELTS 5.5 ou equivalente",
-        "lowerEnglishOption": "Se o estudante tiver IELTS 4.5 ou equivalente por meio do ABM EPT, deve matricular-se no curso Plus Nursing English."
+        "lowerEnglishOption": "Se o estudante tiver IELTS 4.5 ou equivalente por meio do ABM EPT, deve matricular-se no curso Plus Nursing English.",
+        "visaRequirement": "Para iniciar o curso, você deve possuir um visto australiano válido com direito de estudo por até 16 semanas, ou ser cidadão australiano ou residente permanente na data de início do curso."
       }
     },
     "workPlacement": {

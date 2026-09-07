@@ -664,7 +664,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
       description: [
         "Ang mga potensyal na opsyon sa pagtatrabaho ay bilang manager sa iba't ibang larangan ng industriya.",
-        'Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa BSB80120 Graduate Diploma of Management (Learning), pati na rin ang mga higher education qualifications sa business o management.',
+        // 'Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa BSB80120 Graduate Diploma of Management (Learning), pati na rin ang mga higher education qualifications sa business o management.',
       ],
     },
     additionalInfo: {
@@ -673,39 +673,39 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         'Mangyaring basahin ang Student Handbook bago mag-enroll dahil naglalaman ito ng mahalagang impormasyon tungkol sa RTO. Para sa higit pang impormasyon, mangyaring makipag-ugnayan sa ABM sa pamamagitan ng pag-email sa info@abm.edu.au o tumawag sa +61 (02) 9160 4507.',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseDuration: {
-      title: 'Tagal ng Kurso',
-      description:
-        'Ang Graduate Diploma of Management (Learning) ay inaalok sa loob ng 12 buwan, katumbas ng 52 linggo, kasama ang 12 linggo ng bakasyon. Ito ay hahatiin sa apat na 10-linggong term.',
-    },
-    studentSupport: {
-      title: 'Suporta sa Estudyante',
-      description: [
-        '• Sinusuri ng ABM ang mga pangangailangan ng suporta ng estudyante bago mag-enroll sa pamamagitan ng Enrolment at Pre-Enrolment Forms.',
-        '• Maaaring kasama sa mga suporta ang LLN assistance, assistive technology, karagdagang tutorial, at tulong sa mga online learning tools.',
-        '• Ipinapaalam ang mga karagdagang gastos o limitasyon bago mag-enroll.',
-        '• Kung hindi maibigay ng ABM ang ilang suporta, ire-refer ang mga estudyante sa mga third-party provider sa sarili nilang gastos.',
-        '• Kung hindi makapagbigay ang ABM ng angkop na kapaligiran sa pag-aaral, ipapaalam nito sa estudyante at maaaring i-refer sila sa ibang provider sa halip na i-enroll sila.',
-      ],
-    },
-    jobRoles: {
-      title: 'Mga Trabaho',
-      description: ['Business Manager', 'Business Director'],
-    },
-    pathways: {
-      title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
-      description: [
-        "Ang mga potensyal na opsyon sa pagtatrabaho ay bilang Leader o Manager sa mga organisasyon kung saan ginagamit ang pag-aaral upang bumuo ng organisational capability sa iba't ibang larangan ng industriya.",
-        "Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba't ibang higher education qualifications sa organisational learning at development.",
-      ],
-    },
-    additionalInfo: {
-      title: 'Karagdagang Impormasyon',
-      description:
-        'Mangyaring basahin ang Student Handbook bago mag-enroll dahil naglalaman ito ng mahalagang impormasyon tungkol sa ABM. Para sa higit pang impormasyon, mangyaring makipag-ugnayan sa ABM sa pamamagitan ng pag-email sa info@abm.edu.au o tumawag sa +61 (02) 9160 4507.',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseDuration: {
+  //       title: 'Tagal ng Kurso',
+  //       description:
+  //         'Ang Graduate Diploma of Management (Learning) ay inaalok sa loob ng 12 buwan, katumbas ng 52 linggo, kasama ang 12 linggo ng bakasyon. Ito ay hahatiin sa apat na 10-linggong term.',
+  //     },
+  //     studentSupport: {
+  //       title: 'Suporta sa Estudyante',
+  //       description: [
+  //         '• Sinusuri ng ABM ang mga pangangailangan ng suporta ng estudyante bago mag-enroll sa pamamagitan ng Enrolment at Pre-Enrolment Forms.',
+  //         '• Maaaring kasama sa mga suporta ang LLN assistance, assistive technology, karagdagang tutorial, at tulong sa mga online learning tools.',
+  //         '• Ipinapaalam ang mga karagdagang gastos o limitasyon bago mag-enroll.',
+  //         '• Kung hindi maibigay ng ABM ang ilang suporta, ire-refer ang mga estudyante sa mga third-party provider sa sarili nilang gastos.',
+  //         '• Kung hindi makapagbigay ang ABM ng angkop na kapaligiran sa pag-aaral, ipapaalam nito sa estudyante at maaaring i-refer sila sa ibang provider sa halip na i-enroll sila.',
+  //       ],
+  //     },
+  //     jobRoles: {
+  //       title: 'Mga Trabaho',
+  //       description: ['Business Manager', 'Business Director'],
+  //     },
+  //     pathways: {
+  //       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
+  //       description: [
+  //         "Ang mga potensyal na opsyon sa pagtatrabaho ay bilang Leader o Manager sa mga organisasyon kung saan ginagamit ang pag-aaral upang bumuo ng organisational capability sa iba't ibang larangan ng industriya.",
+  //         "Ang mga estudyanteng nakumpleto ang kursong ito ay maaaring magpatuloy ng kanilang edukasyon sa iba't ibang higher education qualifications sa organisational learning at development.",
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       title: 'Karagdagang Impormasyon',
+  //       description:
+  //         'Mangyaring basahin ang Student Handbook bago mag-enroll dahil naglalaman ito ng mahalagang impormasyon tungkol sa ABM. Para sa higit pang impormasyon, mangyaring makipag-ugnayan sa ABM sa pamamagitan ng pag-email sa info@abm.edu.au o tumawag sa +61 (02) 9160 4507.',
+  //     },
+  //   },
   'bsb40920-certificate-iv-in-project-management-practice': {
     courseDuration: {
       title: 'Tagal ng Kurso',
@@ -938,11 +938,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: 'Landas sa karagdagang pag-aaral / mga oportunidad sa karera',
       description: [
         'Pagkatapos makuha ang kwalipikasyong ito, maaaring kunin ng mga graduate ang susunod na kwalipikasyon:',
-        {
-          type: 'link',
-          text: 'BSB80120 – Graduate Diploma of Management (Learning)',
-          url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-        },
+        // {
+        //   type: 'link',
+        //   text: 'BSB80120 – Graduate Diploma of Management (Learning)',
+        //   url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+        // },
       ],
     },
     additionalInfo: {

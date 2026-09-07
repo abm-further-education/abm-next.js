@@ -941,7 +941,8 @@
       "title": "入学要求",
       "items": {
         "basic": "年龄：18岁以上，英语：雅思5.5或同等水平",
-        "lowerEnglishOption": "如果学生通过ABM EPT测试达到雅思4.5或同等水平，可报名Plus护理英语课程。"
+        "lowerEnglishOption": "如果学生通过ABM EPT测试达到雅思4.5或同等水平，可报名Plus护理英语课程。",
+        "visaRequirement": "在课程开始之日，您必须持有有效的澳大利亚签证，且该签证具有长达16周的学习权利，或者您必须是澳大利亚公民或永久居民。"
       }
     },
     "workPlacement": {

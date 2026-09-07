@@ -145,33 +145,33 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      'This qualification reflects the role of individuals who apply highly specialised management knowledge and skills to lead and influence change in complex and dynamic management environments.\n\nIndividuals at this level use cognitive and communication skills to identify, analyse, synthesise and act on information from a variety of sources, and transfer knowledge and skills to others.\n\nThey apply creative, conceptual and analytical skills to formulate and evaluate complex ideas or initiate change. They demonstrate self-directed application of knowledge and skills, with substantial personal responsibility and autonomy in complex situations.',
-    duration: '104 weeks',
-    entryRequirement:
-      'Students must have completed Advanced Diploma level course (AQF Level 6) or higher.',
-    deliveryMode: {
-      title: 'Delivery mode',
-      mode: 'Face to Face',
-    },
-    deliverySite: {
-      title: 'Delivery site:',
-      locations: [
-        {
-          type: 'ABM Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* More information is available via the',
-      linkText: 'My Skills Website.',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       'This qualification reflects the role of individuals who apply highly specialised management knowledge and skills to lead and influence change in complex and dynamic management environments.\n\nIndividuals at this level use cognitive and communication skills to identify, analyse, synthesise and act on information from a variety of sources, and transfer knowledge and skills to others.\n\nThey apply creative, conceptual and analytical skills to formulate and evaluate complex ideas or initiate change. They demonstrate self-directed application of knowledge and skills, with substantial personal responsibility and autonomy in complex situations.',
+  //     duration: '104 weeks',
+  //     entryRequirement:
+  //       'Students must have completed Advanced Diploma level course (AQF Level 6) or higher.',
+  //     deliveryMode: {
+  //       title: 'Delivery mode',
+  //       mode: 'Face to Face',
+  //     },
+  //     deliverySite: {
+  //       title: 'Delivery site:',
+  //       locations: [
+  //         {
+  //           type: 'ABM Campus',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* More information is available via the',
+  //       linkText: 'My Skills Website.',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:

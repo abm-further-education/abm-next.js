@@ -539,7 +539,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: '进修途径/职业机会',
       description: [
         '潜在的就业选择是在各种行业领域担任经理。',
-        '完成本课程的学生可能希望继续接受BSB80120 Graduate Diploma of Management (Learning)以及商业或管理方面的高等教育资格教育。',
+        // '完成本课程的学生可能希望继续接受BSB80120 Graduate Diploma of Management (Learning)以及商业或管理方面的高等教育资格教育。',
       ],
     },
     additionalInfo: {
@@ -548,39 +548,39 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
         '请在入学前阅读学生手册，因为其中包含有关RTO的重要信息。如需更多信息，请发送电子邮件至info@abm.edu.au或致电+61 (02) 9160 4507联系ABM。',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseDuration: {
-      title: '课程时长',
-      description:
-        'Graduate Diploma of Management (Learning)课程为期12个月，共52周，包括12周假期。将分为四个10周学期。',
-    },
-    studentSupport: {
-      title: '学生支持',
-      description: [
-        '• ABM在入学前通过入学和预入学表格评估学生的支持需求。',
-        '• 可能的支持包括LLN援助、辅助技术、额外辅导以及在线学习工具帮助。',
-        '• 入学前会告知额外费用或限制。',
-        '• 如果ABM无法提供某些支持，学生将被转介至第三方提供商，费用自理。',
-        '• 如果ABM无法提供合适的学习环境，将告知学生并可能将其转介至其他提供商，而非让其入学。',
-      ],
-    },
-    jobRoles: {
-      title: '就业岗位',
-      description: ['业务经理', '业务总监'],
-    },
-    pathways: {
-      title: '进修途径/职业机会',
-      description: [
-        '潜在的就业选择是在利用学习建立组织能力的各行业领域担任领导者或经理。',
-        '完成本课程的学生可能希望继续接受组织学习和发展方面的各种高等教育资格教育。',
-      ],
-    },
-    additionalInfo: {
-      title: '附加信息',
-      description:
-        '请在入学前阅读学生手册，因为其中包含有关ABM的重要信息。如需更多信息，请发送电子邮件至info@abm.edu.au或致电+61 (02) 9160 4507联系ABM。',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseDuration: {
+  //       title: '课程时长',
+  //       description:
+  //         'Graduate Diploma of Management (Learning)课程为期12个月，共52周，包括12周假期。将分为四个10周学期。',
+  //     },
+  //     studentSupport: {
+  //       title: '学生支持',
+  //       description: [
+  //         '• ABM在入学前通过入学和预入学表格评估学生的支持需求。',
+  //         '• 可能的支持包括LLN援助、辅助技术、额外辅导以及在线学习工具帮助。',
+  //         '• 入学前会告知额外费用或限制。',
+  //         '• 如果ABM无法提供某些支持，学生将被转介至第三方提供商，费用自理。',
+  //         '• 如果ABM无法提供合适的学习环境，将告知学生并可能将其转介至其他提供商，而非让其入学。',
+  //       ],
+  //     },
+  //     jobRoles: {
+  //       title: '就业岗位',
+  //       description: ['业务经理', '业务总监'],
+  //     },
+  //     pathways: {
+  //       title: '进修途径/职业机会',
+  //       description: [
+  //         '潜在的就业选择是在利用学习建立组织能力的各行业领域担任领导者或经理。',
+  //         '完成本课程的学生可能希望继续接受组织学习和发展方面的各种高等教育资格教育。',
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       title: '附加信息',
+  //       description:
+  //         '请在入学前阅读学生手册，因为其中包含有关ABM的重要信息。如需更多信息，请发送电子邮件至info@abm.edu.au或致电+61 (02) 9160 4507联系ABM。',
+  //     },
+  //   },
   'bsb40920-certificate-iv-in-project-management-practice': {
     courseDuration: {
       title: '课程时长',
@@ -789,11 +789,11 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       title: '进修途径/职业机会',
       description: [
         '获得此资格后，毕业生可以继续攻读以下资格：',
-        {
-          type: 'link',
-          text: 'BSB80120 – Graduate Diploma of Management (Learning)',
-          url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-        },
+        // {
+        //   type: 'link',
+        //   text: 'BSB80120 – Graduate Diploma of Management (Learning)',
+        //   url: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+        // },
       ],
     },
     additionalInfo: {

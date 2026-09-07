@@ -125,37 +125,37 @@ export const courseInformationData_kr: {
       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      '이 코스는 복잡하고 역동적인 관리 환경에서 변화를 이끌고 영향을 미치기 위해 고도로 전문화된 관리 지식과 기술을 적용하는 개인의 역할을 반영합니다.\n\n이 수준의 개인들은 다양한 출처의 정보를 식별, 분석, 종합하고 행동하며, 지식과 기술을 다른 사람들에게 전달하기 위해 인지적 및 커뮤니케이션 기술을 사용합니다.\n\n그들은 복잡한 아이디어를 공식화하고 평가하거나 변화를 시작하기 위해 창의적, 개념적 및 분석적 기술을 적용합니다. 그들은 복잡한 상황에서 상당한 개인적 책임과 자율성을 가지고 지식과 기술의 자기 주도적 적용을 보여줍니다.',
-    entryRequirement:
-      '학생은 Advanced Diploma 레벨 코스(AQF Level 6) 이상을 이수해야 합니다',
-    deliveryMode: {
-      title: '교육 방식',
-      mode: '대면 수업',
-    },
-    deliverySite: {
-      title: '교육 장소:',
-      locations: [
-        {
-          type: 'ABM Main Campus',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-        {
-          type: 'ABM Kitchen',
-          address:
-            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* 자세한 정보는',
-      linkText: 'My Skills 웹사이트에서 확인하세요.',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       '이 코스는 복잡하고 역동적인 관리 환경에서 변화를 이끌고 영향을 미치기 위해 고도로 전문화된 관리 지식과 기술을 적용하는 개인의 역할을 반영합니다.\n\n이 수준의 개인들은 다양한 출처의 정보를 식별, 분석, 종합하고 행동하며, 지식과 기술을 다른 사람들에게 전달하기 위해 인지적 및 커뮤니케이션 기술을 사용합니다.\n\n그들은 복잡한 아이디어를 공식화하고 평가하거나 변화를 시작하기 위해 창의적, 개념적 및 분석적 기술을 적용합니다. 그들은 복잡한 상황에서 상당한 개인적 책임과 자율성을 가지고 지식과 기술의 자기 주도적 적용을 보여줍니다.',
+  //     entryRequirement:
+  //       '학생은 Advanced Diploma 레벨 코스(AQF Level 6) 이상을 이수해야 합니다',
+  //     deliveryMode: {
+  //       title: '교육 방식',
+  //       mode: '대면 수업',
+  //     },
+  //     deliverySite: {
+  //       title: '교육 장소:',
+  //       locations: [
+  //         {
+  //           type: 'ABM Main Campus',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //         {
+  //           type: 'ABM Kitchen',
+  //           address:
+  //             'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* 자세한 정보는',
+  //       linkText: 'My Skills 웹사이트에서 확인하세요.',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:

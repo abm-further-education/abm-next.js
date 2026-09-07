@@ -57,22 +57,22 @@ const courseMetadata: {
       'Australia',
     ],
   },
-  'bsb80120-graduate-diploma-of-management': {
-    title: 'BSB80120 Graduate Diploma of Management (Learning)',
-    description:
-      'Postgraduate level management and leadership skills. This graduate diploma develops advanced capabilities for senior leadership and organizational development roles.',
-    image: '/courses/business/business_4.png',
-    keywords: [
-      'graduate diploma',
-      'management',
-      'leadership',
-      'postgraduate',
-      'organizational development',
-      'senior leadership',
-      'Sydney',
-      'Australia',
-    ],
-  },
+  // 'bsb80120-graduate-diploma-of-management': {
+  //   title: 'BSB80120 Graduate Diploma of Management (Learning)',
+  //   description:
+  //     'Postgraduate level management and leadership skills. This graduate diploma develops advanced capabilities for senior leadership and organizational development roles.',
+  //   image: '/courses/business/business_4.png',
+  //   keywords: [
+  //     'graduate diploma',
+  //     'management',
+  //     'leadership',
+  //     'postgraduate',
+  //     'organizational development',
+  //     'senior leadership',
+  //     'Sydney',
+  //     'Australia',
+  //   ],
+  // },
 };
 
 // Default metadata for unknown courses

@@ -113,33 +113,33 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB60120',
     },
   },
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      'Kualifikasi ini mencerminkan peran individu yang menerapkan pengetahuan dan keterampilan manajemen yang sangat khusus untuk memimpin dan mempengaruhi perubahan dalam lingkungan manajemen yang kompleks dan dinamis.\n\nIndividu pada tingkat ini menggunakan keterampilan kognitif dan komunikasi untuk mengidentifikasi, menganalisis, mensintesis dan bertindak berdasarkan informasi dari berbagai sumber, dan mentransfer pengetahuan dan keterampilan kepada orang lain.',
-    duration: '52 minggu',
-    entryRequirement:
-      'Siswa harus telah menyelesaikan kursus level Advanced Diploma (AQF Level 6) atau lebih tinggi.',
-    deliveryMode: {
-      title: 'Mode Pengiriman',
-      mode: 'Tatap Muka',
-    },
-    deliverySite: {
-      title: 'Lokasi Pengiriman:',
-      locations: [
-        {
-          type: 'Kampus ABM',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* Informasi lebih lanjut tersedia melalui',
-      linkText: 'Website My Skills.',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       'Kualifikasi ini mencerminkan peran individu yang menerapkan pengetahuan dan keterampilan manajemen yang sangat khusus untuk memimpin dan mempengaruhi perubahan dalam lingkungan manajemen yang kompleks dan dinamis.\n\nIndividu pada tingkat ini menggunakan keterampilan kognitif dan komunikasi untuk mengidentifikasi, menganalisis, mensintesis dan bertindak berdasarkan informasi dari berbagai sumber, dan mentransfer pengetahuan dan keterampilan kepada orang lain.',
+  //     duration: '52 minggu',
+  //     entryRequirement:
+  //       'Siswa harus telah menyelesaikan kursus level Advanced Diploma (AQF Level 6) atau lebih tinggi.',
+  //     deliveryMode: {
+  //       title: 'Mode Pengiriman',
+  //       mode: 'Tatap Muka',
+  //     },
+  //     deliverySite: {
+  //       title: 'Lokasi Pengiriman:',
+  //       locations: [
+  //         {
+  //           type: 'Kampus ABM',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* Informasi lebih lanjut tersedia melalui',
+  //       linkText: 'Website My Skills.',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:

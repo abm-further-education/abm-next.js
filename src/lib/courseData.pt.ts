@@ -170,19 +170,19 @@ export const courseData: CourseData[] = [
     link: '/business-and-management-courses/bsb60120-advanced-diploma-of-business',
     tags: ['negócios', 'gestão', 'estratégia', 'diploma-avançado'],
   },
-  {
-    id: 'business-graduate-diploma',
-    title: 'Diploma de Pós-Graduação em Gestão (Aprendizagem)',
-    description:
-      'Habilidades avançadas de gestão e liderança em nível de pós-graduação.',
-    category: 'business',
-    type: 'full-course',
-    level: 'graduate-diploma',
-    duration: '52 semanas',
-    image: '/courses/business/business_4.png',
-    link: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
-    tags: ['negócios', 'gestão', 'liderança', 'pós-graduação'],
-  },
+  // {
+  //   id: 'business-graduate-diploma',
+  //   title: 'Diploma de Pós-Graduação em Gestão (Aprendizagem)',
+  //   description:
+  //     'Habilidades avançadas de gestão e liderança em nível de pós-graduação.',
+  //   category: 'business',
+  //   type: 'full-course',
+  //   level: 'graduate-diploma',
+  //   duration: '52 semanas',
+  //   image: '/courses/business/business_4.png',
+  //   link: '/business-and-management-courses/bsb80120-graduate-diploma-of-management',
+  //   tags: ['negócios', 'gestão', 'liderança', 'pós-graduação'],
+  // },
 
   // Cursos de Gestão de Projetos
   {

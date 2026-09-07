@@ -119,33 +119,33 @@ export const courseInformationData_jp: {
     },
   },
 
-  'bsb80120-graduate-diploma-of-management': {
-    courseCode: 'BSB80120',
-    cricosCode: '107907A',
-    description:
-      'この資格は、複雑かつ動的なマネジメント環境の中で変化を主導・影響を与えるために、高度に専門的な知識とスキルを適用できる個人の役割を反映しています。\n\nこのレベルの個人は、様々な情報源から情報を識別・分析・統合・行動に移すための認知スキルとコミュニケーション能力を使用し、知識とスキルを他者に伝達します。\n\n創造的・概念的・分析的スキルを用いて複雑なアイデアを形成・評価したり、変化を主導する能力を発揮します。複雑な状況において知識とスキルを自己主導的に応用し、相応の責任と裁量を持って行動します。',
-    duration: '52週間',
-    entryRequirement:
-      '学生はAdvanced Diplomaレベルコース（AQF Level 6）以上を修了している必要があります',
-    deliveryMode: {
-      title: '提供方式：',
-      mode: '対面授業（Face to Face）',
-    },
-    deliverySite: {
-      title: '提供場所：',
-      locations: [
-        {
-          type: 'ABM キャンパス',
-          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
-        },
-      ],
-    },
-    additionalInfo: {
-      description: '* 詳細情報は以下を通じてご覧いただけます：',
-      linkText: 'My Skills ウェブサイト',
-      linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
-    },
-  },
+  //   'bsb80120-graduate-diploma-of-management': {
+  //     courseCode: 'BSB80120',
+  //     cricosCode: '107907A',
+  //     description:
+  //       'この資格は、複雑かつ動的なマネジメント環境の中で変化を主導・影響を与えるために、高度に専門的な知識とスキルを適用できる個人の役割を反映しています。\n\nこのレベルの個人は、様々な情報源から情報を識別・分析・統合・行動に移すための認知スキルとコミュニケーション能力を使用し、知識とスキルを他者に伝達します。\n\n創造的・概念的・分析的スキルを用いて複雑なアイデアを形成・評価したり、変化を主導する能力を発揮します。複雑な状況において知識とスキルを自己主導的に応用し、相応の責任と裁量を持って行動します。',
+  //     duration: '52週間',
+  //     entryRequirement:
+  //       '学生はAdvanced Diplomaレベルコース（AQF Level 6）以上を修了している必要があります',
+  //     deliveryMode: {
+  //       title: '提供方式：',
+  //       mode: '対面授業（Face to Face）',
+  //     },
+  //     deliverySite: {
+  //       title: '提供場所：',
+  //       locations: [
+  //         {
+  //           type: 'ABM キャンパス',
+  //           address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+  //         },
+  //       ],
+  //     },
+  //     additionalInfo: {
+  //       description: '* 詳細情報は以下を通じてご覧いただけます：',
+  //       linkText: 'My Skills ウェブサイト',
+  //       linkUrl: 'https://www.yourcareer.gov.au/learn-and-train/courses/BSB80120',
+  //     },
+  //   },
 
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',

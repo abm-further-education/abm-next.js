@@ -193,7 +193,7 @@ export default async function HigherEducationPathwayPage({
                     </div>
 
                     {/* Master Programs */}
-                    <div>
+                    {/* <div>
                       <h4 className="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">
                         {t('ubssMasterTitle')}
                       </h4>
@@ -202,7 +202,7 @@ export default async function HigherEducationPathwayPage({
                           {t('graduateDiplomaManagement')}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

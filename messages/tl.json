@@ -941,7 +941,8 @@
       "title": "Mga Kinakailangan sa Pagpasok",
       "items": {
         "basic": "Edad: 18 taon pataas, Ingles: IELTS 5.5 o katumbas",
-        "lowerEnglishOption": "Kung ang estudyante ay may IELTS 4.5 o katumbas sa pamamagitan ng ABM EPT, mag-enroll na may Plus Nursing English."
+        "lowerEnglishOption": "Kung ang estudyante ay may IELTS 4.5 o katumbas sa pamamagitan ng ABM EPT, mag-enroll na may Plus Nursing English.",
+        "visaRequirement": "Upang simulan ang kurso, dapat kang may hawak na balidong visa ng Australia na may karapatang mag-aral nang hanggang 16 na linggo, o ikaw ay isang mamamayan ng Australia o permanenteng residente sa petsa ng pagsisimula ng kurso."
       }
     },
     "workPlacement": {
