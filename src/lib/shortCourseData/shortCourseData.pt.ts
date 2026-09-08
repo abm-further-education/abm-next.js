@@ -613,6 +613,11 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
       {
+        date: '2026-09-25',
+        displayDate: '25 de setembro de 2026',
+        time: '9:00am - 5:00pm',
+      },
+      {
         date: '2026-10-07',
         displayDate: '7 de outubro de 2026',
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',

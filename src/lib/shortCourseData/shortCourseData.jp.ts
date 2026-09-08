@@ -610,6 +610,11 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
       },
       {
+        date: '2026-09-25',
+        displayDate: '2026年9月25日',
+        time: '9:00am - 5:00pm',
+      },
+      {
         date: '2026-10-07',
         displayDate: '2026年10月7日',
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
