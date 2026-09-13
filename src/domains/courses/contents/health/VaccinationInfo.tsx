@@ -64,9 +64,10 @@ function VaccinationInfo() {
               dTpa (Diphtheria, Tetanus, Pertussis / Whooping Cough)
             </span>
             <br />
-            One adult dose within the past 10 years is required. In Japan,
-            this vaccination is not routinely given to adults, so many people
-            receive an additional dose after arriving in Australia.
+            One adult dose within the past 10 years is required. For example,
+            in Japan, this vaccination is not routinely given to adults, so
+            many people receive an additional dose after arriving in
+            Australia.
           </p>
           <p>
             <span className="font-semibold text-gray-900">Hepatitis B</span>
