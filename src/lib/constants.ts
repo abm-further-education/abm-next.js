@@ -244,10 +244,10 @@ export const studyWithUsMenu = [
     title: 'Study Tour Programs',
     href: '/abm-study-tour-programs',
   },
-  {
-    title: 'Trainers',
-    href: '/study-with-us/trainers',
-  },
+  // {
+  //   title: 'Trainers',
+  //   href: '/study-with-us/trainers',
+  // },
   {
     title: 'Student Accommodation',
     href: '/student-accommodation',
@@ -615,10 +615,10 @@ export const MENU_STRUCTURE: MenuSection[] = [
             title: 'higherEducationPathway',
             href: '/higher-education-pathway',
           },
-          {
-            title: 'trainers',
-            href: '/study-with-us/trainers',
-          },
+          // {
+          //   title: 'trainers',
+          //   href: '/study-with-us/trainers',
+          // },
           {
             title: 'studentAccommodation',
             href: '/student-accommodation',
