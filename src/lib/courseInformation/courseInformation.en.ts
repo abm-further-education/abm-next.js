@@ -978,7 +978,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     duration:
       '16 weeks (2 days per week + 1 day tutorial) + 80 work placement hours',
     entryRequirement: [
-      'IELTS 5.5 or equivalent, if student has IELTS 4.5 or equivalent through ABM EPT, enrol with Plus Nursing English.',
+      'IELTS 6.0 or equivalent, if student has IELTS 5.0 or equivalent through ABM EPT, enrol with Plus Nursing English.',
       'Student must have completed an equivalent of Year 10',
     ],
     deliveryMode: {
@@ -997,12 +997,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     startingDates: [
       {
         title: '2026',
-        dates: [
-          '10 Aug',
-          '7 Sep',
-          '12 Oct',
-          '9 Nov',
-        ],
+        dates: ['10 Aug', '7 Sep', '12 Oct', '9 Nov'],
       },
       {
         title: '2027',
