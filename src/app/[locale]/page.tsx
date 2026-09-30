@@ -162,7 +162,7 @@ export default async function Home({
               <Card
                 imgPath="/courses/cookery/patisserie_banner.png"
                 title={t('nav.subMenu.patisserie')}
-                link="/cookery-and-hospitality-courses/sit40721-certificate-iv-in-patisserie"
+                link="/cookery-and-hospitality-courses"
                 className="w-300 xl:w-300"
               />
               <Card
@@ -192,7 +192,7 @@ export default async function Home({
               <Card
                 imgPath="/home/HR.png"
                 title={t('nav.subMenu.humanResource')}
-                link="/human-resource-management-courses"
+                link="/human-resources-courses"
                 className="w-300 xl:w-300"
               />
               {/* HSA */}

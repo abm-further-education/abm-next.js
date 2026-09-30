@@ -12,7 +12,7 @@ import { useTranslations } from 'next-intl';
 
 export default function CookeryClient() {
   const [selectedStream, setSelectedStream] = useState<
-    'kitchenManagement' | 'foodAndBeverage'
+    'kitchenManagement' | 'foodAndBeverage' | 'patisserie'
   >('kitchenManagement');
   const t = useTranslations('cookeryAndHospitality');
 
@@ -61,6 +61,14 @@ export default function CookeryClient() {
             >
               {t('foodAndBeverageStream')}
             </Button>
+            <Button
+              className={`text-sm md:text-base bg-neutral-200 hover:bg-white hover:text-primary ${
+                selectedStream === 'patisserie' ? 'bg-white text-primary' : ''
+              }`}
+              onClick={() => setSelectedStream('patisserie')}
+            >
+              {t('patisserieStream')}
+            </Button>
           </div>
           <p className="max-w-500 text-neutral-700 text-center mb-20 px-20 md:px-0">
             {t('streamDescription')}
@@ -82,6 +90,61 @@ export default function CookeryClient() {
                   </div>
                   <Image
                     src={`/courses/cookery/SIT40521.png`}
+                    alt="banner_image"
+                    width={300}
+                    height={500}
+                    className="md:object-center object-cover"
+                  />
+                </div>
+                <div className="relative">
+                  <div className="absolute top-10 md:top-20 left-30 md:left-60 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
+                    <span className="text-white">SIT50422</span>
+                    <p className="text-xs text-white font-semibold md:text-[15px]">
+                      Diploma of Hospitality Management
+                    </p>
+                  </div>
+                  <Image
+                    src={`/courses/cookery/SIT50422.png`}
+                    alt="banner_image"
+                    width={300}
+                    height={500}
+                    className="md:object-center object-cover"
+                  />
+                </div>
+                <div className="relative">
+                  <div className="absolute top-10 md:top-20 left-30 md:left-60 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
+                    <span className="text-white">SIT60322</span>
+                    <p className="text-xs text-white font-semibold md:text-[15px]">
+                      Advanced Diploma of Hospitality Management
+                    </p>
+                  </div>
+                  <Image
+                    src={`/courses/cookery/SIT60322.png`}
+                    alt="banner_image"
+                    width={300}
+                    height={500}
+                    className="md:object-center object-cover"
+                  />
+                </div>
+              </div>
+            </>
+          ) : selectedStream === 'patisserie' ? (
+            <>
+              <div className="flex gap-50 sm:gap-180 lg:gap-250 ml-20 md:ml-90 mt-40 font-[family-name:var(--font-montserrat)]">
+                <span>78weeks</span>
+                <span>26weeks</span>
+                <span>26weeks</span>
+              </div>
+              <div className="flex">
+                <div className="relative">
+                  <div className="absolute top-10 md:top-20 left-20 md:left-40 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
+                    <span className="text-white">SIT40721</span>
+                    <p className="text-xs text-white font-semibold md:text-[15px]">
+                      Certificate IV in Patisserie
+                    </p>
+                  </div>
+                  <Image
+                    src={`/courses/cookery/SIT40721.png`}
                     alt="banner_image"
                     width={300}
                     height={500}
