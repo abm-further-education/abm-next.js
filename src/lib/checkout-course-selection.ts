@@ -13,6 +13,24 @@ export const CHECKOUT_COURSE_PRICE_MAP: Record<string, number> = {
   'fss-recertification': 110,
 };
 
+export const CHECKOUT_SURCHARGE_RATE = 1.0193;
+
+const NO_SURCHARGE_COURSE_SLUGS = new Set(['rsa', 'fss']);
+
+export function courseCheckoutAppliesSurcharge(courseSlug: string): boolean {
+  return !NO_SURCHARGE_COURSE_SLUGS.has(courseSlug);
+}
+
+export function getCheckoutPayableAmount(
+  courseSlug: string,
+  discountedPrice: number,
+): number {
+  const payable = courseCheckoutAppliesSurcharge(courseSlug)
+    ? discountedPrice * CHECKOUT_SURCHARGE_RATE
+    : discountedPrice;
+  return parseFloat(payable.toFixed(2));
+}
+
 export function buildCheckoutCourseDisplayName(
   selectedCourseIds: string[],
   fallbackTitle?: string,

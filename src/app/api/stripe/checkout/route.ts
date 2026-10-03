@@ -5,6 +5,7 @@ import { getShortCourseCapacityStatus } from '@/lib/short-course-capacity';
 import {
   buildCheckoutCourseDisplayName,
   CHECKOUT_COURSE_PRICE_MAP,
+  getCheckoutPayableAmount,
 } from '@/lib/checkout-course-selection';
 import { evaluateCheckoutPromotion } from '@/lib/checkout-promo-codes';
 
@@ -106,15 +107,18 @@ export async function POST(request: NextRequest) {
 
     const serverDiscountedPrice =
       promoEval.kind === 'applied' ? promoEval.discountedPrice : basePrice;
-    const expectedTotalWithSurcharge = (serverDiscountedPrice * 1.0193).toFixed(
-      2
+    const expectedTotalNum = getCheckoutPayableAmount(
+      courseSlug,
+      serverDiscountedPrice
     );
-    const expectedTotalNum = parseFloat(expectedTotalWithSurcharge);
 
     const clientTotalNum =
       totalPriceWithSurcharge !== undefined
         ? parseFloat(String(totalPriceWithSurcharge))
-        : (finalPrice !== undefined ? Number(finalPrice) : basePrice) * 1.0193;
+        : getCheckoutPayableAmount(
+            courseSlug,
+            finalPrice !== undefined ? Number(finalPrice) : basePrice
+          );
 
     if (
       Number.isNaN(clientTotalNum) ||

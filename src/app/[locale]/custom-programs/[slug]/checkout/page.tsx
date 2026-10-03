@@ -7,6 +7,7 @@ import {
   buildCheckoutCourseDisplayName,
   CHECKOUT_COURSE_PRICE_MAP,
   CHECKOUT_COURSE_SELECTION_OPTIONS,
+  getCheckoutPayableAmount,
 } from '@/lib/checkout-course-selection';
 import { evaluateCheckoutPromotion } from '@/lib/checkout-promo-codes';
 import { useSearchParams } from 'next/navigation';
@@ -76,7 +77,10 @@ export default function CheckoutPage() {
     promoEval.kind === 'applied'
       ? promoEval.discountedPrice
       : selectedBasePrice;
-  const totalPriceWithSurcharge = effectivePrice * 1.0193;
+  const totalPriceWithSurcharge = getCheckoutPayableAmount(
+    slug,
+    effectivePrice,
+  );
 
   const getFieldError = (fieldName: string, nextForm = form): string => {
     if (fieldName === 'firstName' && !nextForm.firstName.trim()) {
