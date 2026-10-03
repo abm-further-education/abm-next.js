@@ -36,34 +36,27 @@ Direct Debit Instalment Plan for Tuition Fees
 
 • What’s Included: Tuition fees only (excludes enrolment and material fees)
 • Availability: From the second term payment of your course
-• How to Apply: Contact the Accounts Team before the invoice due date
+• How to Apply: Contact the Accounts at least by 3 weeks prior to the invoice due date
 • Contact for Enquiries: accounts@abm.edu.au
 
 Instalment Plan Details
 
+
+• Quarterly payments:
+  - Payment Plan Fee: No Fees
+  - Payment Method: Direct Debit (GoCardless)
 • Monthly payments:
-  - Surcharge: 3% per payment
-  - Payment Method: Credit Card or Bank Account (Direct)
-  - Bank Surcharge: 1.99% (charged by bank) for credit card, no additional charge for bank account
-  - Set-Up Fee: $20
+  - Payment Plan Fee: $15 per payment
+  - Payment Method: 
 • Fortnightly payments:
-  - Surcharge: 5% per payment
-  - Payment Method: Credit Card or Bank Account (Direct)
-  - Bank Surcharge: 1.99% (charged by bank) for credit card, no additional charge for bank account
-  - Set-Up Fee: $20
+  - Payment Plan Fee: $20 per payment
+  - Payment Method:
 
-Important Conditions
-
-• Late payment (missed scheduled debit): $200
-• Bank dishonour fee (failed transaction): $9.90 (charged by the bank)
 
 Direct Debit Payment Terms:
-• A $20 set-up fee applies to establish a direct debit arrangement.
 • The original Offer Letter instalment schedule will not be revised to reflect direct debit breakdowns.
+• A $200 late payment fee will still apply if you miss a scheduled debit.
 
-Important Conditions:
-• Direct debit is only available to students who have completed at least one term with ABM.
-• Students must contact our Accounts Team to arrange direct debit prior to their invoice due date.
 
 📩 For enquiries, please contact our Accounts Team at: accounts@abm.edu.au`,
     link: '/',
