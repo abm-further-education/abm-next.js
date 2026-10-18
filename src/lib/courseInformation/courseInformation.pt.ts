@@ -967,4 +967,36 @@ export const courseInformationData_pt: {
     },
     partners: cookeryPlacementPartners,
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseCode: 'SIT40721',
+    cricosCode: '120678M',
+    description:
+      'Torne-se um Confeiteiro Qualificado na Austrália\n\nCrie bolos, sobremesas, doces, criações em chocolate e produtos de panificação artesanal enquanto adquire experiência real em cozinhas comerciais.\n\n✔ 600 horas de estágio na indústria\n✔ Treinamento prático em cozinha toda semana*\n✔ Aprenda com confeiteiros experientes\n✔ Estude no CBD de Sydney\n✔ Forme-se com as habilidades que os empregadores procuram\n\nComece sua carreira em confeitaria na Austrália com treinamento prático e experiência real no local de trabalho.\n\n*Da semana 6 do Termo 2 até o Termo 5.',
+    duration: '78 semanas',
+    entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 10',
+    deliveryMode: {
+      title: 'Modalidade de oferta:',
+      mode: 'Presencial',
+    },
+    deliverySite: {
+      title: 'Local de oferta:',
+      locations: [
+        {
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* Mais informações disponíveis no',
+      linkText: 'site My Skills.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40721?distanceFilter=25',
+    },
+  },
 };

@@ -1068,4 +1068,58 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
       ],
     },
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseDuration: {
+      title: '受講期間',
+      description:
+        '本資格は78週間にわたって提供され、10週間×6学期にわたる60週間のトレーニングと評価、および18週間の休暇で構成されます。',
+    },
+    workPlacement: {
+      title: '実習（ワークプレースメント）',
+      description: [
+        '600時間',
+        {
+          type: 'link',
+          text: 'インダストリープレースメントの詳細を見る',
+          url: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+        },
+      ],
+    },
+    studentSupport: {
+      title: '学生サポート',
+      description: [
+        '• ABMは入学前に、入学申込書および事前申込書を通じて学生に必要なサポートを確認します。',
+        '• 提供可能なサポートには、LLN（言語・読み書き・計算）支援、支援技術、追加のチュートリアル、オンライン学習ツールの利用サポートなどがあります。',
+        '• 追加費用や制限がある場合は、入学前にお知らせします。',
+        '• ABMが特定のサポートを提供できない場合は、学生の自己負担で外部機関をご紹介します。',
+        '• ABMが適切な学習環境を提供できない場合は、その旨を学生にお伝えし、入学ではなく他の教育機関をご紹介することがあります。',
+      ],
+    },
+    jobRoles: {
+      title: '想定職種',
+      description: [
+        'ペストリーシェフ',
+        'シェフ・ド・パルティ（ペストリー）',
+        'パティスリーコック',
+        'デザートシェフ',
+      ],
+    },
+    pathways: {
+      title: '進学／キャリアの道',
+      description: [
+        '就職先としては、商業調理分野において、キッチンで監督やチームリーダーの役割を担うシェフや調理師などが考えられます。',
+        '本コース修了後は、以下のようなディプロマ資格へ進学することもできます：',
+        {
+          type: 'link',
+          text: 'SIT50422 Diploma of Hospitality Management',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: '追加情報',
+      description:
+        '出願前に「学生ハンドブック」を必ずご確認ください。詳細は info@abm.edu.au までメール、または +61 (02) 9160 4507 へお電話ください。',
+    },
+  },
 };

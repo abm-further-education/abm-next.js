@@ -864,7 +864,12 @@
   },
   "courseInformation": {
     "title": "Course Information",
-    "overview": "Overview"
+    "overview": "Overview",
+    "cricosCode": "CRICOS Code:",
+    "duration": "Duration:",
+    "entryRequirement": "Entry Requirement",
+    "moreDetails": "More details",
+    "startingDates": "Starting Dates"
   },
   "courseDetail": {
     "title": "Course Detail"
@@ -1231,5 +1236,9 @@
         }
       ]
     }
+  },
+  "patisseriePage": {
+    "metadataTitle": "Become a Qualified Pastry Chef in Australia | SIT40721 Certificate IV in Patisserie",
+    "metadataDescription": "Create cakes, desserts, pastries, chocolate creations and artisan baked goods with 600 hours industry placement, practical kitchen training every week, and study in Sydney CBD. Start your pastry career in Australia."
   }
 }

@@ -910,4 +910,36 @@ export const courseInformationData_kr: {
     },
     partners: cookeryPlacementPartners,
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseCode: 'SIT40721',
+    cricosCode: '120678M',
+    description:
+      '호주에서 공인 파티시에가 되세요\n\n상업 주방에서 실제 업계 경험을 쌓으며 케이크, 디저트, 페이스트리, 초콜릿 작품, 아티잔 베이커리 제품을 직접 만들어 보세요.\n\n✔ 600시간 산업체 실습\n✔ 매주 주방 실습 수업*\n✔ 경험 많은 페이스트리 셰프에게 배우는 수업\n✔ 시드니 CBD에서 공부\n✔ 고용주가 원하는 역량을 갖추고 졸업\n\n실무 중심의 교육과 실제 현장 경험으로 호주에서 페이스트리 커리어를 시작하세요.\n\n*2학기 6주차부터 5학기까지.',
+    duration: '78주',
+    entryRequirement: '학생은 Year 10에 해당하는 학력을 이수해야 합니다',
+    deliveryMode: {
+      title: '교육 방식',
+      mode: '대면 수업',
+    },
+    deliverySite: {
+      title: '교육 장소:',
+      locations: [
+        {
+          type: 'ABM Main Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* 자세한 정보는',
+      linkText: 'My Skills 웹사이트에서 확인하세요.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40721?distanceFilter=25',
+    },
+  },
 };

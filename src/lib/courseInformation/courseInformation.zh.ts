@@ -832,4 +832,36 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     },
     partners: cookeryPlacementPartners,
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseCode: 'SIT40721',
+    cricosCode: '120678M',
+    description:
+      '在澳大利亚成为合格的西点师\n\n在商业厨房中积累真实行业经验的同时，制作蛋糕、甜品、酥点、巧克力作品和手工烘焙产品。\n\n✔ 600小时行业实习\n✔ 每周厨房实践培训*\n✔ 向经验丰富的西点主厨学习\n✔ 在悉尼CBD学习\n✔ 毕业时具备雇主所需的技能\n\n通过实践培训和真实职场经验，在澳大利亚开启您的西点职业生涯。\n\n*从第2学期第6周至第5学期。',
+    duration: '78周',
+    entryRequirement: '学生必须完成相当于10年级的学历',
+    deliveryMode: {
+      title: '授课方式：',
+      mode: '面授',
+    },
+    deliverySite: {
+      title: '授课地点：',
+      locations: [
+        {
+          type: 'ABM校区',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM厨房',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* 更多信息请访问',
+      linkText: 'My Skills网站。',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40721?distanceFilter=25',
+    },
+  },
 };

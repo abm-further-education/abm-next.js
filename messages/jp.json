@@ -861,7 +861,12 @@
   },
   "courseInformation": {
     "title": "コース情報",
-    "overview": "概要"
+    "overview": "概要",
+    "cricosCode": "CRICOSコード：",
+    "duration": "期間：",
+    "entryRequirement": "入学要件",
+    "moreDetails": "詳細を見る",
+    "startingDates": "開講日"
   },
   "courseDetail": {
     "title": "コース詳細"
@@ -1228,5 +1233,9 @@
         }
       ]
     }
+  },
+  "patisseriePage": {
+    "metadataTitle": "オーストラリアで資格を持つパティシエに | SIT40721 Certificate IV in Patisserie",
+    "metadataDescription": "600時間のインダストリープレースメント、毎週のキッチン実技トレーニング、シドニーCBDでの学習を通じて、ケーキ、デザート、ペストリー、チョコレート作品、アルチザンベーカリー製品を作りましょう。オーストラリアでペストリーのキャリアをスタート。"
   }
 }

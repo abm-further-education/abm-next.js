@@ -947,4 +947,36 @@ export const courseInformationData_jp: {
     },
     partners: cookeryPlacementPartners,
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseCode: 'SIT40721',
+    cricosCode: '120678M',
+    description:
+      'オーストラリアで資格を持つパティシエを目指しましょう\n\n商業キッチンで実際の業界経験を積みながら、ケーキ、デザート、ペストリー、チョコレート作品、アルチザンベーカリー製品を作ります。\n\n✔ 600時間のインダストリープレースメント\n✔ 毎週のキッチン実技トレーニング*\n✔ 経験豊富なペストリーシェフから学ぶ\n✔ シドニーCBDで学ぶ\n✔ 雇用主が求めるスキルを身につけて卒業\n\n実践的なトレーニングと実際の職場経験で、オーストラリアでペストリーのキャリアをスタートしましょう。\n\n*学期2の第6週から学期5まで。',
+    duration: '78週間',
+    entryRequirement: '学生はYear 10相当を修了している必要があります',
+    deliveryMode: {
+      title: '提供方式：',
+      mode: '対面授業（Face to Face）',
+    },
+    deliverySite: {
+      title: '提供場所：',
+      locations: [
+        {
+          type: 'ABM キャンパス',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM キッチン',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* 詳細情報は以下を通じてご覧いただけます：',
+      linkText: 'My Skills ウェブサイト',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40721?distanceFilter=25',
+    },
+  },
 };

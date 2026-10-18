@@ -865,7 +865,12 @@
   },
   "courseInformation": {
     "title": "과정 정보",
-    "overview": "개요"
+    "overview": "개요",
+    "cricosCode": "CRICOS 코드:",
+    "duration": "기간:",
+    "entryRequirement": "입학 요건",
+    "moreDetails": "자세히 보기",
+    "startingDates": "개강일"
   },
   "courseDetail": {
     "title": "과정 상세"
@@ -1232,5 +1237,9 @@
         }
       ]
     }
+  },
+  "patisseriePage": {
+    "metadataTitle": "호주에서 공인 파티시에 되기 | SIT40721 Certificate IV in Patisserie",
+    "metadataDescription": "600시간 산업체 실습과 매주 진행되는 주방 실습, 시드니 CBD에서의 학업을 통해 케이크, 디저트, 페이스트리, 초콜릿 작품, 아티잔 베이커리 제품을 만들어 보세요. 호주에서 페이스트리 커리어를 시작하세요."
   }
 }

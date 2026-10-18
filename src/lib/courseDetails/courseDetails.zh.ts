@@ -870,4 +870,58 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       ],
     },
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseDuration: {
+      title: '课程时长',
+      description:
+        '本资格课程为期78周，包括分布在6个学期（每学期10周）的60周培训与评估，以及18周假期。',
+    },
+    workPlacement: {
+      title: '实习安排',
+      description: [
+        '600小时',
+        {
+          type: 'link',
+          text: '查看行业实习详情',
+          url: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+        },
+      ],
+    },
+    studentSupport: {
+      title: '学生支持',
+      description: [
+        '• ABM 在入学前通过入学申请表和预入学申请表评估学生的支持需求。',
+        '• 可提供的支持包括 LLN（语言、读写和计算）辅导、辅助技术、额外辅导课程以及在线学习工具使用帮助。',
+        '• 任何额外费用或限制将在入学前告知。',
+        '• 如果 ABM 无法提供某些支持，将把学生转介给第三方机构，费用由学生自行承担。',
+        '• 如果 ABM 无法提供合适的学习环境，将告知学生，并可能将其转介至其他机构，而不予录取。',
+      ],
+    },
+    jobRoles: {
+      title: '就业岗位',
+      description: [
+        '西点主厨',
+        '西点部主管厨师（Chef de Partie）',
+        '西点厨师',
+        '甜品主厨',
+      ],
+    },
+    pathways: {
+      title: '进修途径/职业机会',
+      description: [
+        '潜在的就业方向包括商业烹饪领域中在厨房担任监督或团队领导职务的厨师等岗位。',
+        '完成本课程的学生可继续攻读多种文凭课程，例如',
+        {
+          type: 'link',
+          text: 'SIT50422 Diploma of Hospitality Management',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: '附加信息',
+      description:
+        '请在入学前阅读学生手册，因为其中包含有关ABM的重要信息。如需更多详情，请发送电子邮件至info@abm.edu.au或致电+61 (02) 9160 4507。',
+    },
+  },
 };

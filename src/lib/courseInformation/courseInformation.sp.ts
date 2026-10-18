@@ -965,4 +965,37 @@ export const courseInformationData_sp: {
     },
     partners: cookeryPlacementPartners,
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseCode: 'SIT40721',
+    cricosCode: '120678M',
+    description:
+      'Conviértete en Pastelero/a Cualificado/a en Australia\n\nCrea tartas, postres, bollería, creaciones de chocolate y productos de panadería artesanal mientras adquieres experiencia real en cocinas comerciales.\n\n✔ 600 horas de prácticas en la industria\n✔ Formación práctica en cocina cada semana*\n✔ Aprende de pasteleros con experiencia\n✔ Estudia en el CBD de Sídney\n✔ Gradúate con las habilidades que buscan los empleadores\n\nComienza tu carrera en pastelería en Australia con formación práctica y experiencia real en el lugar de trabajo.\n\n*Desde la semana 6 del Trimestre 2 hasta el Trimestre 5.',
+    duration: '78 semanas',
+    entryRequirement:
+      'El estudiante debe haber completado el equivalente al Year 10',
+    deliveryMode: {
+      title: 'Modo de entrega',
+      mode: 'Presencial',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Cocina ABM',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* Más información disponible en',
+      linkText: 'el sitio web My Skills.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40721?distanceFilter=25',
+    },
+  },
 };

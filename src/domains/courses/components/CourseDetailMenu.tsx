@@ -1,12 +1,21 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface CourseDetailMenuProps {
   menuItems: string[];
 }
 
 function CourseDetailMenu({ menuItems }: CourseDetailMenuProps) {
+  const t = useTranslations();
+  // menuItems double as section ids, so translate only the visible label
+  const labels: Record<string, string> = {
+    'Course Information': t('courseInformation.title'),
+    'Course Detail': t('courseDetail.title'),
+    Units: t('units.title'),
+  };
+
   // 섹션 ID를 생성하는 함수
   const getSectionId = (menuItem: string) => {
     return menuItem.toLowerCase().replace(/\s+/g, '-');
@@ -48,7 +57,7 @@ function CourseDetailMenu({ menuItems }: CourseDetailMenuProps) {
             onClick={() => scrollToSection(item)}
             className={`font-medium transition-all duration-200 cursor-pointer border border-primary text-primary px-5 md:px-10 py-6 hover:bg-primary hover:text-white`}
           >
-            {item}
+            {labels[item] ?? item}
           </button>
         ))}
       </div>

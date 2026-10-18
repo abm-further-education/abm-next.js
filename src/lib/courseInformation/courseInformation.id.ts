@@ -883,4 +883,36 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     },
     partners: cookeryPlacementPartners,
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseCode: 'SIT40721',
+    cricosCode: '120678M',
+    description:
+      'Jadilah Pastry Chef Berkualifikasi di Australia\n\nBuat kue, dessert, pastry, kreasi cokelat, dan produk roti artisan sambil memperoleh pengalaman industri nyata di dapur komersial.\n\n✔ 600 Jam Penempatan Industri\n✔ Pelatihan Dapur Praktis Setiap Minggu*\n✔ Belajar dari Pastry Chef Berpengalaman\n✔ Belajar di Sydney CBD\n✔ Lulus dengan Keterampilan yang Dibutuhkan Pemberi Kerja\n\nMulai karier pastry Anda di Australia dengan pelatihan langsung dan pengalaman kerja nyata.\n\n*Mulai minggu ke-6 Term 2 hingga Term 5.',
+    duration: '78 minggu',
+    entryRequirement: 'Siswa harus telah menyelesaikan setara dengan Year 10',
+    deliveryMode: {
+      title: 'Mode Pengiriman:',
+      mode: 'Tatap Muka',
+    },
+    deliverySite: {
+      title: 'Lokasi Pengiriman:',
+      locations: [
+        {
+          type: 'Kampus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Dapur ABM',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+      ],
+    },
+    additionalInfo: {
+      description: '* Informasi lebih lanjut tersedia melalui',
+      linkText: 'Website My Skills.',
+      linkUrl:
+        'https://www.yourcareer.gov.au/learn-and-train/courses/SIT40721?distanceFilter=25',
+    },
+  },
 };

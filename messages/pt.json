@@ -861,7 +861,12 @@
   },
   "courseInformation": {
     "title": "Informações do Curso",
-    "overview": "Visão Geral"
+    "overview": "Visão Geral",
+    "cricosCode": "Código CRICOS:",
+    "duration": "Duração:",
+    "entryRequirement": "Requisitos de admissão",
+    "moreDetails": "Mais detalhes",
+    "startingDates": "Datas de início"
   },
   "courseDetail": {
     "title": "Detalhes do Curso"
@@ -1228,5 +1233,9 @@
         }
       ]
     }
+  },
+  "patisseriePage": {
+    "metadataTitle": "Torne-se um Confeiteiro Qualificado na Austrália | SIT40721 Certificate IV in Patisserie",
+    "metadataDescription": "Crie bolos, sobremesas, doces, criações em chocolate e produtos de panificação artesanal com 600 horas de estágio na indústria, treinamento prático em cozinha toda semana e estudos no CBD de Sydney. Comece sua carreira em confeitaria na Austrália."
   }
 }

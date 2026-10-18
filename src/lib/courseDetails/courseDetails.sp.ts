@@ -1167,4 +1167,58 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
         'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre ABM. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
     },
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseDuration: {
+      title: 'Duración del Curso',
+      description:
+        'Esta cualificación se imparte a lo largo de 78 semanas, que incluyen 60 semanas de formación y evaluación distribuidas en 6 trimestres de 10 semanas cada uno y 18 semanas de vacaciones.',
+    },
+    workPlacement: {
+      title: 'Prácticas Laborales',
+      description: [
+        '600 horas',
+        {
+          type: 'link',
+          text: 'Ver detalles de las prácticas en la industria',
+          url: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+        },
+      ],
+    },
+    studentSupport: {
+      title: 'Apoyo Estudiantil',
+      description: [
+        '• ABM evalúa las necesidades de apoyo del estudiante antes de la inscripción mediante los formularios de inscripción y preinscripción.',
+        '• Los apoyos posibles incluyen asistencia LLN (lenguaje, lectoescritura y aritmética), tecnología de apoyo, tutorías adicionales y ayuda con las herramientas de aprendizaje en línea.',
+        '• Los costos adicionales o las limitaciones se comunican antes de la inscripción.',
+        '• Si ABM no puede ofrecer cierto apoyo, se deriva a los estudiantes a proveedores externos, a cargo del propio estudiante.',
+        '• Si ABM no puede ofrecer un entorno de aprendizaje adecuado, informará al estudiante y podrá derivarlo a otro proveedor en lugar de inscribirlo.',
+      ],
+    },
+    jobRoles: {
+      title: 'Roles Laborales',
+      description: [
+        'Pastelero/a (Pastry Chef)',
+        'Chef de Partie (Pastelería)',
+        'Cocinero/a de Pastelería',
+        'Chef de Postres',
+      ],
+    },
+    pathways: {
+      title: 'Rutas de Estudio Adicional / Oportunidades Profesionales',
+      description: [
+        'Las posibles opciones de empleo se encuentran en el sector de la cocina comercial, en puestos como chefs y cocineros con funciones de supervisión o liderazgo de equipo en la cocina.',
+        'Los estudiantes que completen este curso pueden continuar su formación en diversas cualificaciones de Diploma, como el',
+        {
+          type: 'link',
+          text: 'SIT50422 DIPLOMA DE GESTIÓN HOTELERA',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: 'Información Adicional',
+      description:
+        'Por favor, lea el Manual del Estudiante antes de la inscripción ya que contiene información valiosa sobre ABM. Para más información, por favor contacte a ABM enviando un email a info@abm.edu.au o llámenos al +61 (02) 9160 4507.',
+    },
+  },
 };

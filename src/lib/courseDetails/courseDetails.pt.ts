@@ -1079,4 +1079,58 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
       ],
     },
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseDuration: {
+      title: 'Duração do Curso',
+      description:
+        'Esta qualificação é oferecida ao longo de 78 semanas, incluindo 60 semanas de treinamento e avaliação distribuídas em 6 termos de 10 semanas cada e 18 semanas de férias.',
+    },
+    workPlacement: {
+      title: 'Estágio',
+      description: [
+        '600 horas',
+        {
+          type: 'link',
+          text: 'Ver detalhes do estágio na indústria',
+          url: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+        },
+      ],
+    },
+    studentSupport: {
+      title: 'Apoio ao Estudante',
+      description: [
+        '• A ABM avalia as necessidades de apoio do aluno antes da matrícula por meio dos formulários de matrícula e pré-matrícula.',
+        '• Os apoios possíveis incluem assistência LLN (linguagem, letramento e numeramento), tecnologia assistiva, tutorias extras e ajuda com ferramentas de aprendizagem online.',
+        '• Custos adicionais ou limitações são comunicados antes da matrícula.',
+        '• Se a ABM não puder oferecer determinado apoio, os alunos são encaminhados a prestadores externos, às suas próprias custas.',
+        '• Se a ABM não puder oferecer um ambiente de aprendizagem adequado, informará o aluno e poderá encaminhá-lo a outra instituição em vez de matriculá-lo.',
+      ],
+    },
+    jobRoles: {
+      title: 'Cargos de trabalho',
+      description: [
+        'Chef Confeiteiro (Pastry Chef)',
+        'Chef de Partie (Confeitaria)',
+        'Cozinheiro de Confeitaria',
+        'Chef de Sobremesas',
+      ],
+    },
+    pathways: {
+      title: 'Caminhos para Estudos Adicionais / Oportunidades de Carreira',
+      description: [
+        'As possíveis opções de emprego estão no setor de culinária comercial, em funções como chefs e cozinheiros com papel de supervisão ou liderança de equipe na cozinha.',
+        'Os alunos que concluírem este curso podem dar continuidade aos estudos em diversas qualificações de Diploma, como o',
+        {
+          type: 'link',
+          text: 'SIT50422 Diploma de Gestão em Hospitalidade',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: 'Informações Adicionais',
+      description:
+        'Por favor, leia o Manual do Estudante antes de se inscrever, pois ele contém informações importantes sobre a ABM. Para mais detalhes, envie um e-mail para info@abm.edu.au ou ligue para +61 (02) 9160 4507.',
+    },
+  },
 };

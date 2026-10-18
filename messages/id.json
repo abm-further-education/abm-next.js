@@ -864,7 +864,12 @@
   },
   "courseInformation": {
     "title": "Informasi Kursus",
-    "overview": "Gambaran Umum"
+    "overview": "Gambaran Umum",
+    "cricosCode": "Kode CRICOS:",
+    "duration": "Durasi:",
+    "entryRequirement": "Persyaratan Masuk",
+    "moreDetails": "Detail lebih lanjut",
+    "startingDates": "Tanggal Mulai"
   },
   "courseDetail": {
     "title": "Detail Kursus"
@@ -1231,5 +1236,9 @@
         }
       ]
     }
+  },
+  "patisseriePage": {
+    "metadataTitle": "Jadilah Pastry Chef Berkualifikasi di Australia | SIT40721 Certificate IV in Patisserie",
+    "metadataDescription": "Buat kue, dessert, pastry, kreasi cokelat, dan produk roti artisan dengan 600 jam penempatan industri, pelatihan dapur praktis setiap minggu, dan belajar di Sydney CBD. Mulai karier pastry Anda di Australia."
   }
 }

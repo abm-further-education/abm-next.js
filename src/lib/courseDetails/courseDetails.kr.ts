@@ -1636,4 +1636,58 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
   //         '등록 전 학생 안내서를 반드시 읽어보시기 바랍니다. 추가 문의는 info@abm.edu.au로 이메일 또는 +61 (02) 9160 4507로 전화해 주세요.',
   //     },
   //   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseDuration: {
+      title: '과정 기간',
+      description:
+        '본 과정은 총 78주 동안 진행되며, 10주씩 6개 학기에 걸친 60주의 교육 및 평가와 18주의 방학으로 구성됩니다.',
+    },
+    workPlacement: {
+      title: '현장 실습',
+      description: [
+        '600시간',
+        {
+          type: 'link',
+          text: '산업체 실습 자세히 보기',
+          url: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+        },
+      ],
+    },
+    studentSupport: {
+      title: '학생 지원',
+      description: [
+        '• ABM은 등록 전 등록 신청서와 사전 등록 신청서를 통해 학생에게 필요한 지원을 파악합니다.',
+        '• 제공 가능한 지원에는 LLN(언어·문해력·수리력) 지원, 보조 기술, 추가 튜토리얼, 온라인 학습 도구 사용 지원 등이 있습니다.',
+        '• 추가 비용이나 지원의 한계가 있는 경우 등록 전에 안내합니다.',
+        '• ABM이 특정 지원을 제공할 수 없는 경우, 학생 본인 부담으로 제3자 기관에 연계합니다.',
+        '• ABM이 적합한 학습 환경을 제공할 수 없는 경우, 이를 학생에게 안내하고 등록 대신 다른 기관을 안내할 수 있습니다.',
+      ],
+    },
+    jobRoles: {
+      title: '직업군',
+      description: [
+        '페이스트리 셰프',
+        '셰프 드 파르티 (페이스트리)',
+        '파티세리 쿡',
+        '디저트 셰프',
+      ],
+    },
+    pathways: {
+      title: '추가 학업/진로 경로',
+      description: [
+        '상업 주방 분야에서 주방 내 감독 또는 팀 리더 역할을 맡는 셰프 및 조리사 등으로 취업할 수 있습니다.',
+        '이 과정을 수료한 학생은 다음과 같은 다양한 디플로마 과정으로 진학할 수 있습니다:',
+        {
+          type: 'link',
+          text: 'SIT50422 호텔경영 디플로마',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: '추가 정보',
+      description:
+        '등록 전 학생 안내서를 반드시 읽어보시기 바랍니다. 추가 문의는 info@abm.edu.au로 이메일 또는 +61 (02) 9160 4507로 전화해 주세요.',
+    },
+  },
 };

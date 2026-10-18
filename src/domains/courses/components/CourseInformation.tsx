@@ -106,7 +106,7 @@ function CourseInformationContent({
             <div className="mb-8 flex items-center gap-x-5">
               <Info className="w-22 h-22 text-primary" />
               <div className="flex gap-x-5">
-                <h3 className={titleStyle}>CRICOS Code:</h3>
+                <h3 className={titleStyle}>{t('cricosCode')}</h3>
                 <span>{courseInfo.cricosCode}</span>
               </div>
             </div>
@@ -116,7 +116,7 @@ function CourseInformationContent({
               <Calendar className="w-22 h-22 shrink-0 text-primary mt-0.5" />
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-x-5">
-                  <h3 className={titleStyle}>Duration:</h3>
+                  <h3 className={titleStyle}>{t('duration')}</h3>
                   <span>{courseInfo.duration}</span>
                 </div>
                 {courseInfo.durationNote ? (
@@ -131,14 +131,14 @@ function CourseInformationContent({
             <div className="mb-8">
               <div className="flex items-center gap-5 mb-8">
                 <CheckCircleIcon className="w-22 h-22 text-primary" />
-                <h3 className={titleStyle}>Entry Requirement </h3>
+                <h3 className={titleStyle}>{t('entryRequirement')}</h3>
                 <Link
                   href="/course-entry-requirement"
                   target="_blank"
                   className="flex items-center gap-2"
                 >
                   <span className="text-primary underline text-sm">
-                    More details
+                    {t('moreDetails')}
                   </span>
                   <ChevronRightIcon className="w-14 h-14 text-primary" />
                 </Link>
@@ -208,7 +208,7 @@ function CourseInformationContent({
 
           {courseInfo.startingDates && (
             <div className="mt-20">
-              <h3 className={titleStyle}>Starting Dates</h3>
+              <h3 className={titleStyle}>{t('startingDates')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10">
                 {courseInfo.startingDates.map((yearData, yearIndex) => (
                   <div
@@ -246,7 +246,7 @@ function CourseInformationContent({
                   );
                 }}
               >
-                Enrol Now
+                {tNav('enrolNow')}
               </Button>
               <Link
                 href={`/${locale}/contact`}

@@ -136,11 +136,13 @@ const courseMetadata: {
   },
 };
 
-// Industry placement pages have translated title/description in messages
-const placementMessageKey: { [key: string]: string } = {
-  'industry-placement-work-placement': 'kitchen',
-  'industry-placement-patisserie': 'patisserie',
-  'industry-placement-hospitality-management': 'hospitality',
+// Pages with translated title/description (metadataTitle/metadataDescription) in messages
+const metadataNamespace: { [key: string]: string } = {
+  'sit40721-certificate-iv-in-patisserie': 'patisseriePage',
+  'industry-placement-work-placement': 'industryPlacementPage.kitchen',
+  'industry-placement-patisserie': 'industryPlacementPage.patisserie',
+  'industry-placement-hospitality-management':
+    'industryPlacementPage.hospitality',
 };
 
 // Default metadata for unknown courses
@@ -170,12 +172,9 @@ export async function generateMetadata({
   let title = course.title;
   let description = course.description;
 
-  const placementKey = placementMessageKey[id];
-  if (placementKey) {
-    const t = await getTranslations({
-      locale,
-      namespace: `industryPlacementPage.${placementKey}`,
-    });
+  const namespace = metadataNamespace[id];
+  if (namespace) {
+    const t = await getTranslations({ locale, namespace });
     title = t('metadataTitle');
     description = t('metadataDescription');
   }

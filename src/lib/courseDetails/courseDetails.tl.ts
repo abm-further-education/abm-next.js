@@ -1039,4 +1039,58 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       ],
     },
   },
+  'sit40721-certificate-iv-in-patisserie': {
+    courseDuration: {
+      title: 'Tagal ng Kurso',
+      description:
+        'Ang kwalipikasyong ito ay ihahatid sa loob ng 78 linggo, kabilang ang 60 linggo ng training at assessment na nakahati sa 6 na term na tig-10 linggo at 18 linggo ng bakasyon.',
+    },
+    workPlacement: {
+      title: 'Work Placement',
+      description: [
+        '600 oras',
+        {
+          type: 'link',
+          text: 'Tingnan ang detalye ng Industry Placement',
+          url: '/cookery-and-hospitality-courses/industry-placement-patisserie',
+        },
+      ],
+    },
+    studentSupport: {
+      title: 'Suporta sa Estudyante',
+      description: [
+        '• Sinusuri ng ABM ang mga pangangailangan sa suporta ng estudyante bago ang enrolment sa pamamagitan ng Enrolment at Pre-Enrolment Forms.',
+        '• Kabilang sa mga posibleng suporta ang LLN assistance, assistive technology, karagdagang tutorial, at tulong sa paggamit ng online learning tools.',
+        '• Ipinapaalam bago ang enrolment ang anumang karagdagang gastos o limitasyon.',
+        '• Kung hindi makapagbigay ang ABM ng partikular na suporta, ire-refer ang mga estudyante sa third-party provider sa sarili nilang gastos.',
+        '• Kung hindi makapagbigay ang ABM ng angkop na learning environment, ipapaalam ito sa estudyante at maaari silang i-refer sa ibang provider sa halip na i-enrol.',
+      ],
+    },
+    jobRoles: {
+      title: 'Mga Trabaho',
+      description: [
+        'Pastry Chef',
+        'Chef de Partie (Pastry)',
+        'Patisserie Cook',
+        'Dessert Chef',
+      ],
+    },
+    pathways: {
+      title: 'Mga Landas sa Karagdagang Pag-aaral / Mga Oportunidad sa Karera',
+      description: [
+        'Ang mga posibleng trabaho ay nasa commercial cookery sector sa mga posisyon tulad ng chef at cook na may supervisory o team leading na tungkulin sa kusina.',
+        "Ang mga estudyanteng makakatapos ng kursong ito ay maaaring magpatuloy ng pag-aaral sa iba't ibang Diploma qualification, tulad ng",
+        {
+          type: 'link',
+          text: 'SIT50422 Diploma of Hospitality Management',
+          url: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
+        },
+      ],
+    },
+    additionalInfo: {
+      title: 'Karagdagang Impormasyon',
+      description:
+        'Mangyaring basahin ang Student Handbook bago mag-enroll, dahil naglalaman ito ng mahalagang impormasyon tungkol sa ABM. Para sa higit pang detalye, mag-email sa info@abm.edu.au o tumawag sa +61 (02) 9160 4507.',
+    },
+  },
 };

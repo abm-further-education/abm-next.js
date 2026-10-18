@@ -864,7 +864,12 @@
   },
   "courseInformation": {
     "title": "Impormasyon ng Kurso",
-    "overview": "Pangkalahatang-ideya"
+    "overview": "Pangkalahatang-ideya",
+    "cricosCode": "CRICOS Code:",
+    "duration": "Tagal:",
+    "entryRequirement": "Kinakailangan sa Pagpasok",
+    "moreDetails": "Higit pang detalye",
+    "startingDates": "Mga Petsa ng Simula"
   },
   "courseDetail": {
     "title": "Detalye ng Kurso"
@@ -1231,5 +1236,9 @@
         }
       ]
     }
+  },
+  "patisseriePage": {
+    "metadataTitle": "Maging Kwalipikadong Pastry Chef sa Australia | SIT40721 Certificate IV in Patisserie",
+    "metadataDescription": "Gumawa ng mga cake, dessert, pastry, chocolate creation at artisan baked goods na may 600 oras na industry placement, praktikal na kitchen training bawat linggo, at pag-aaral sa Sydney CBD. Simulan ang iyong pastry career sa Australia."
   }
 }

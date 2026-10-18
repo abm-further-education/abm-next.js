@@ -864,7 +864,12 @@
   },
   "courseInformation": {
     "title": "课程信息",
-    "overview": "概述"
+    "overview": "概述",
+    "cricosCode": "CRICOS代码：",
+    "duration": "时长：",
+    "entryRequirement": "入学要求",
+    "moreDetails": "查看详情",
+    "startingDates": "开课日期"
   },
   "courseDetail": {
     "title": "课程详情"
@@ -1231,5 +1236,9 @@
         }
       ]
     }
+  },
+  "patisseriePage": {
+    "metadataTitle": "在澳大利亚成为合格的西点师 | SIT40721 Certificate IV in Patisserie",
+    "metadataDescription": "通过600小时行业实习、每周厨房实践培训以及在悉尼CBD学习，制作蛋糕、甜品、酥点、巧克力作品和手工烘焙产品。在澳大利亚开启您的西点职业生涯。"
   }
 }
