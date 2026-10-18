@@ -10,6 +10,8 @@ interface UnitsProps {
   data?: CourseUnitGroup[] | null;
 }
 
+// Props are kept so existing callers still type-check; the booklet CTA needs none.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Units(_props: UnitsProps) {
   const t = useTranslations('units');
 
