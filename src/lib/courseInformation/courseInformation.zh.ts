@@ -1,6 +1,53 @@
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
 
 // CourseInformation 데이터 매핑
+const cookeryPlacementPartners: CourseInformationInfo['partners'] = [
+  {
+    name: 'Accor',
+    desc: 'Accor是一家总部位于法国的领先跨国酒店集团，专门从事酒店和服务管理。',
+  },
+  {
+    name: 'AMA Hospitality',
+    desc: 'AMA Hospitality是一家餐饮和活动管理公司，专门为客户提供难忘和个性化的体验。',
+  },
+  {
+    name: 'Bills',
+    desc: 'Bills是一家受欢迎的连锁餐厅，以轻松友好的氛围供应新鲜美味的食物。',
+  },
+  {
+    name: 'Catering HQ',
+    desc: 'Catering HQ是一家在各种场所运营的餐饮公司，如俱乐部、酒吧和宴会中心。',
+  },
+  {
+    name: 'Grand Royale',
+    desc: 'Grand Royale是一家豪华酒店，提供优雅舒适的住宿、精致餐饮和水疗设施。',
+  },
+  {
+    name: "Hurricane's Grill",
+    desc: "Hurricane's Grill是一家牛排馆和酒吧，供应美味多汁的牛排、排骨、汉堡和沙拉。",
+  },
+  {
+    name: 'ICC Sydney',
+    desc: '悉尼国际会议中心（ICC Sydney）是澳大利亚顶级的会议、展览和活动场所。',
+  },
+  {
+    name: 'Industry Placement Solutions',
+    desc: 'Industry Placement Solutions是一家招聘和安置机构，帮助学生在酒店行业找到合适且有价值的工作实习。',
+  },
+  {
+    name: 'Liverpool Catholic Club',
+    desc: 'Liverpool Catholic Club是一家社区俱乐部，提供各种娱乐、餐饮和休闲选择。',
+  },
+  {
+    name: 'Primi Italian',
+    desc: 'Primi Italian是一家家族经营的餐厅，供应正宗美味的意大利菜肴。',
+  },
+  {
+    name: 'Kuon Omakase',
+    desc: 'Kuon Omakase是一家日本餐厅，提供独特精致的用餐体验。',
+  },
+];
+
 export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'sit40521-certificate-iv-in-kitchen-management': {
     courseCode: 'SIT40521',
@@ -183,52 +230,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Accor',
-        desc: 'Accor是一家总部位于法国的领先跨国酒店集团，专门从事酒店和服务管理。',
-      },
-      {
-        name: 'AMA Hospitality',
-        desc: 'AMA Hospitality是一家餐饮和活动管理公司，专门为客户提供难忘和个性化的体验。',
-      },
-      {
-        name: 'Bills',
-        desc: 'Bills是一家受欢迎的连锁餐厅，以轻松友好的氛围供应新鲜美味的食物。',
-      },
-      {
-        name: 'Catering HQ',
-        desc: 'Catering HQ是一家在各种场所运营的餐饮公司，如俱乐部、酒吧和宴会中心。',
-      },
-      {
-        name: 'Grand Royale',
-        desc: 'Grand Royale是一家豪华酒店，提供优雅舒适的住宿、精致餐饮和水疗设施。',
-      },
-      {
-        name: "Hurricane's Grill",
-        desc: "Hurricane's Grill是一家牛排馆和酒吧，供应美味多汁的牛排、排骨、汉堡和沙拉。",
-      },
-      {
-        name: 'ICC Sydney',
-        desc: '悉尼国际会议中心（ICC Sydney）是澳大利亚顶级的会议、展览和活动场所。',
-      },
-      {
-        name: 'Industry Placement Solutions',
-        desc: 'Industry Placement Solutions是一家招聘和安置机构，帮助学生在酒店行业找到合适且有价值的工作实习。',
-      },
-      {
-        name: 'Liverpool Catholic Club',
-        desc: 'Liverpool Catholic Club是一家社区俱乐部，提供各种娱乐、餐饮和休闲选择。',
-      },
-      {
-        name: 'Primi Italian',
-        desc: 'Primi Italian是一家家族经营的餐厅，供应正宗美味的意大利菜肴。',
-      },
-      {
-        name: 'Kuon Omakase',
-        desc: 'Kuon Omakase是一家日本餐厅，提供独特精致的用餐体验。',
-      },
-    ],
+    partners: cookeryPlacementPartners,
   },
   'industry-placement-hospitality-management': {
     courseCode: 'SIT50422',
@@ -796,5 +798,38 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         ],
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      '西点四级证书（Certificate IV in Patisserie）行业实习\n\n学生在真实的酒店及西点制作环境中完成职场培训，以培养实践能力和自信心。',
+    deliveryMode: {
+      title: '授课方式',
+      mode: '面授 + 行业实习',
+    },
+    deliverySite: {
+      title: '授课地点：',
+      locations: [
+        {
+          type: 'ABM校区',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM厨房',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: '行业实习',
+          address:
+            '各种西点厨房、面包店、酒店、餐厅及餐饮服务场所',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        '我们鼓励您找到适合您兴趣和目标的工作实习，但如果您需要任何帮助，我们也会在这里支持您。我们与各种行业合作伙伴有着密切的联系，他们一直在寻找像您这样有才华和积极性的学生。\n\n我们相信这次工作实习是您课程的关键组成部分，将为您准备应对烹饪行业的挑战和机遇。',
+    },
+    partners: cookeryPlacementPartners,
   },
 };

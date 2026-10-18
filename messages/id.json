@@ -998,6 +998,238 @@
           "answer": "Persyaratan masuk minimum adalah IELTS 5.5 atau setara. Jika Anda saat ini memiliki IELTS 4.5 atau setara, Anda dapat mendaftar di kursus dengan Plus Nursing English, yang menyediakan dukungan bahasa tambahan yang disesuaikan untuk pengaturan kesehatan. Jika Anda tidak memiliki hasil tes bahasa Inggris, kemampuan bahasa Inggris Anda dapat dinilai melalui ABM English Placement Test."
         }
       }
+    },
+    "pathwayFlowTitle": "Alur Jalur Karier Nursing Support",
+    "keyBenefitsTitle": "Manfaat Utama & Informasi Penempatan Kerja",
+    "requiredDocuments": {
+      "title": "Dokumen yang diperlukan:",
+      "items": {
+        "policeCheck": "Surat Keterangan Catatan Kepolisian Nasional (National Police Check)",
+        "wwcc": "Pemeriksaan Kelayakan Bekerja dengan Anak (Working With Children Check)",
+        "vaccinationRecord": "Catatan Vaksinasi"
+      }
+    },
+    "paymentOptions": {
+      "title": "Opsi Pembayaran",
+      "items": {
+        "instalment": "Pembayaran penuh di muka atau rencana cicilan (<link>Hubungi kami</link>)",
+        "austudy": "Siswa yang memenuhi syarat dapat mengajukan <link>Austudy</link> dengan mencantumkan kode institusi kami, 2R377."
+      }
+    }
+  },
+  "industryPlacementPage": {
+    "hsa": {
+      "metadataTitle": "Penempatan Industri - Health Services Assistance",
+      "metadataDescription": "Selesaikan 80 jam penempatan industri wajib untuk Certificate III in Health Services Assistance. Pelajari dokumen yang diperlukan, termasuk catatan imunisasi, pemeriksaan kepolisian, dan NDIS Worker Check.",
+      "bannerTitle": "Penempatan Industri",
+      "heading": "Persyaratan Penempatan Industri (80 Jam)",
+      "intro": "Untuk menyelesaikan 80 jam penempatan industri wajib, siswa harus menyiapkan dokumen-dokumen berikut:",
+      "immunisationTitle": "Catatan imunisasi lengkap",
+      "immunisationNote": "(dengan terjemahan bahasa Inggris tersertifikasi)",
+      "immunisations": [
+        {
+          "name": "dTpa (Difteri, Tetanus, Pertusis / Batuk Rejan)",
+          "desc": "- 1 dosis dewasa dalam 10 tahun terakhir"
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "- Vaksinasi lengkap (ditambah tes darah yang menunjukkan Anti-HBs ≥ 10mIU/mL, atau bukti lain yang diterima)"
+        },
+        {
+          "name": "MMR (Campak, Gondongan, Rubella)",
+          "desc": "- 2 dosis dengan jarak minimal 1 bulan, atau serologi positif/lahir sebelum 1966"
+        },
+        {
+          "name": "Varisela (Cacar Air)",
+          "desc": "- 2 dosis vaksin, atau bukti kekebalan/pernyataan AIR"
+        },
+        {
+          "name": "Skrining Tuberkulosis (TB) (jika diperlukan)",
+          "desc": "Tes IGRA atau TST tergantung latar belakang/riwayat perjalanan"
+        },
+        {
+          "name": "Vaksin Influenza",
+          "desc": "Vaksin flu musiman terbaru setiap tahun"
+        },
+        {
+          "name": "Vaksin COVID-19",
+          "desc": "Sangat disarankan untuk selalu diperbarui"
+        }
+      ],
+      "immunisationDisclaimer": "*Harap diperhatikan bahwa persyaratan imunisasi dan skrining dapat berbeda tergantung pada persyaratan masing-masing rumah sakit atau penyedia penempatan pada saat penempatan. Rumah sakit dapat meminta vaksinasi, tes, atau bukti terbaru tambahan sebelum penempatan klinis dimulai.",
+      "checks": [
+        "Surat Keterangan Catatan Kepolisian Nasional (National Police Check)",
+        "Pemeriksaan Kelayakan Bekerja dengan Anak (Working With Children Check)",
+        "Pemeriksaan Pekerja NDIS (NDIS Worker Check)"
+      ],
+      "applyAfterArrival": "(ajukan setelah tiba di Australia)",
+      "guidance": "ABM akan memberikan panduan cara mengajukan pemeriksaan-pemeriksaan ini setelah Anda berada di Australia."
+    },
+    "vaccination": {
+      "regardingTitle": "Mengenai Vaksinasi",
+      "mandatory": "Anda wajib telah menerima vaksinasi yang tercantum di bawah ini dan memiliki antibodi yang diperlukan sebelum memulai penempatan.",
+      "recommendDocs": "Kami menyarankan Anda membawa dokumen-dokumen berikut yang dapat membuktikan riwayat vaksinasi Anda:",
+      "docs": [
+        "Buku Kesehatan Ibu dan Anak (Buku KIA)",
+        "Sertifikat vaksinasi COVID-19 (format kertas maupun elektronik dapat diterima)",
+        "Sertifikat vaksinasi Hepatitis B (sertifikat yang diterbitkan saat vaksinasi massal di sekolah, dll. juga berlaku)",
+        "Hasil pemeriksaan kesehatan rumah sakit (jika Anda adalah perawat yang saat ini bekerja di rumah sakit dan memiliki hasil pemeriksaan kesehatan yang mencakup hasil antibodi yang tercantum di bawah ini, dan hasilnya berasal dari enam bulan hingga satu tahun terakhir, harap bawa.)"
+      ],
+      "overseasRecords": "Catatan vaksinasi dari luar negeri yang diterbitkan dalam bahasa Inggris dapat digunakan sebagai bukti. Namun, beberapa rumah sakit mungkin mewajibkan dokumen terjemahan untuk disertifikasi sebelum diterima sebagai bukti.",
+      "gpHelp": "Jika Anda memerlukan bantuan untuk menemukan GP (dokter umum) yang berbicara dalam bahasa Anda, silakan hubungi kami.",
+      "avoidCosts": "Hal ini juga dapat membantu Anda menghindari biaya tambahan untuk menerjemahkan dokumen selama konsultasi medis.",
+      "requiredTitle": "Daftar Vaksinasi Wajib",
+      "required": [
+        {
+          "name": "dTpa (Difteri, Tetanus, Pertusis / Batuk Rejan)",
+          "desc": "Diperlukan satu dosis dewasa dalam 10 tahun terakhir. Misalnya, di Jepang vaksin ini tidak rutin diberikan kepada orang dewasa, sehingga banyak orang menerima dosis tambahan setelah tiba di Australia."
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "Diperlukan tiga dosis vaksin ditambah tes darah yang menunjukkan Anti-HBs ≥ 10 mIU/mL."
+        },
+        {
+          "name": "MMR (Campak, Gondongan, Rubella)",
+          "desc": "Diperlukan dua dosis dengan jarak minimal satu bulan, atau hasil tes antibodi positif."
+        },
+        {
+          "name": "Varisela / Cacar Air",
+          "desc": "Diperlukan dua dosis vaksin, atau hasil antibodi yang menunjukkan kekebalan."
+        },
+        {
+          "name": "Tuberkulosis (TB)",
+          "desc": "Persyaratan berbeda-beda tergantung negara kelahiran, riwayat tempat tinggal, riwayat perjalanan, dll."
+        },
+        {
+          "name": "Influenza",
+          "desc": "Karena strain yang beredar berbeda di setiap negara, vaksinasi dapat diperoleh dengan biaya murah di apotek atau tempat serupa setelah tiba di Australia."
+        }
+      ],
+      "costsTitle": "Mengenai Biaya Vaksinasi",
+      "costs": [
+        "Biaya vaksinasi sangat bervariasi tergantung pada kondisi masing-masing individu.",
+        "Biaya rata-rata untuk siswa minimal AUD 300.",
+        "Jika Anda tidak memiliki catatan vaksinasi atau hasil antibodi yang memadai, biayanya dapat mendekati AUD 1.000, jadi siswa perlu mempertimbangkan hal ini saat menyiapkan anggaran."
+      ],
+      "processTitle": "Proses Vaksinasi",
+      "processNote": "(Ini hanya contoh dan proses sebenarnya dapat berbeda.)",
+      "process": [
+        "Setelah tiba di Australia, kunjungi klinik tempat Anda membuat janji temu dan bawa dokumen yang diperlukan. Kami akan memberikan informasi cara membuat janji temu di klinik setelah Anda tiba di Australia.",
+        "Pada konsultasi pertama, Anda akan menerima vaksinasi dTpa dan menjalani tes darah untuk memeriksa kadar antibodi Anda.",
+        "Anda akan menjalani konsultasi berikutnya setelah hasil tes darah tersedia.",
+        "Setelah itu, jika diperlukan vaksinasi tambahan, Anda akan menerimanya sesuai kebutuhan."
+      ],
+      "otherTitle": "Persyaratan & Biaya Lainnya",
+      "table": {
+        "requirement": "Persyaratan",
+        "volunteer": "Biaya Relawan",
+        "paid": "Biaya Pekerja Berbayar / Kerja",
+        "details": "Detail Tambahan"
+      },
+      "wwcc": {
+        "name": "Pemeriksaan Kelayakan Bekerja dengan Anak (WWCC)",
+        "free": "Gratis",
+        "nswPricing": "(harga NSW)",
+        "details": "Berlaku selama 5 tahun. Biaya berbeda di setiap negara bagian (mis., Victoria sekitar $136.60)."
+      },
+      "police": {
+        "name": "Surat Keterangan Catatan Kepolisian Nasional (National Police Check)",
+        "details": "Pengajuan langsung melalui <link>Portal NSW Police Force</link> dikenakan biaya $55.80, sedangkan penyedia online swasta terakreditasi mengenakan biaya antara $52.90 dan $76.90."
+      },
+      "firstAid": {
+        "name": "Kursus Pertolongan Pertama <i>(HLTAID011)</i>",
+        "details": "RTO komersial (seperti <awfa>Australia Wide First Aid</awfa>) mengenakan biaya $80 – $120, sedangkan penyedia premium seperti St John Ambulance atau <redcross>Palang Merah (Red Cross)</redcross> mengenakan biaya $195 – $220."
+      },
+      "pricesDisclaimer": "Harga di atas hanya perkiraan dan dapat berubah. Harap periksa harga terkini dengan penyedia terkait sebelum melanjutkan."
+    },
+    "kitchen": {
+      "metadataTitle": "Penempatan Industri - Penempatan Kerja",
+      "metadataDescription": "Dapatkan pengalaman langsung di dapur komersial melalui program penempatan industri kami. Terapkan keterampilan kuliner Anda di lingkungan nyata.",
+      "bannerTitle": "Penempatan Industri",
+      "intro": "Kursus ini kini mencakup 600 jam penempatan kerja wajib, memberikan siswa pengalaman praktik industri yang luas.\nSiswa dapat bekerja jam tambahan selama term penempatan sesuai dengan ketentuan visa pelajar mereka.",
+      "schedule": [
+        {
+          "term": "Term 1 - Term 2",
+          "content": "Teori + Kelas Praktis"
+        },
+        {
+          "term": "Term 3",
+          "termSub": "(minggu 6-10)",
+          "content": "Teori + Kelas Praktis",
+          "bullets": [
+            "Minggu 6 - 10: tambahan 16 jam penempatan kerja per minggu"
+          ]
+        },
+        {
+          "term": "Term 4 - Term 5",
+          "content": "Teori + Kelas Praktis",
+          "sub": "tambahan 16 jam penempatan kerja per minggu"
+        },
+        {
+          "term": "Term 6",
+          "content": "20 jam penempatan kerja per minggu"
+        }
+      ]
+    },
+    "patisserie": {
+      "metadataTitle": "Penempatan Industri (Patisserie)",
+      "metadataDescription": "Dapatkan pengalaman langsung dalam produksi pastry dan dessert melalui penempatan industri yang selaras dengan Certificate IV in Patisserie.",
+      "bannerTitle": "Penempatan Industri (Patisserie)",
+      "intro": "Penempatan kerja disusun per term dan dilaksanakan di lingkungan industri nyata sebagai berikut.",
+      "schedule": [
+        {
+          "term": "Term 1",
+          "content": "Teori"
+        },
+        {
+          "term": "Term 2",
+          "content": "Teori + Praktik"
+        },
+        {
+          "term": "Term 3",
+          "termSub": "(minggu 6-10)",
+          "content": "Teori + Kelas Praktis",
+          "bullets": [
+            "Minggu 6 – 10: tambahan 16 jam penempatan kerja per minggu"
+          ]
+        },
+        {
+          "term": "Term 4 - Term 5",
+          "content": "Teori + Kelas Praktis",
+          "sub": "tambahan 16 jam penempatan kerja per minggu"
+        },
+        {
+          "term": "Term 6",
+          "content": "20 jam penempatan kerja per minggu"
+        }
+      ]
+    },
+    "hospitality": {
+      "metadataTitle": "Penempatan Industri untuk Manajemen Perhotelan (F&B)",
+      "metadataDescription": "Pengalaman langsung dalam layanan makanan dan minuman melalui program penempatan industri perhotelan kami.",
+      "bannerTitle": "Penempatan Industri untuk Manajemen Perhotelan (F&B)",
+      "intro": "Kursus ini kini mencakup 285 jam penempatan kerja wajib, memberikan siswa pengalaman praktik industri yang luas.\nSiswa dapat bekerja jam tambahan selama term penempatan sesuai dengan ketentuan visa pelajar mereka.",
+      "schedule": [
+        {
+          "term": "Term 1 - Term 4",
+          "content": "Teori + Kelas Praktis"
+        },
+        {
+          "term": "Term 5",
+          "content": "SITHIND008 Bekerja secara efektif dalam layanan perhotelan",
+          "bullets": [
+            "Minggu 1 – 10: 150 jam - 1 hari/minggu kelas tatap muka + 3 hari/minggu penempatan kerja (5 jam x 3 shift)"
+          ]
+        },
+        {
+          "term": "Term 6",
+          "content": "SITHIND008 Bekerja secara efektif dalam layanan perhotelan",
+          "bullets": [
+            "Minggu 1 – 9: 1 hari/minggu kelas tatap muka + 3 hari/minggu penempatan kerja (5 jam x 3 shift)",
+            "Minggu 10: Teori + Kelas Praktis"
+          ]
+        }
+      ]
     }
   }
 }

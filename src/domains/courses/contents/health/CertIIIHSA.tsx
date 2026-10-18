@@ -41,7 +41,7 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
             <div className="absolute inset-0 bg-black/50"></div>
 
             <h2 className="text-lg md:text-xl font-bold text-primary absolute bottom-20">
-              Nursing Support Pathway Flow
+              {t('pathwayFlowTitle')}
             </h2>
           </div>
           <div className="p-20">
@@ -119,7 +119,7 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
             <div className="absolute inset-0 bg-black/60"></div>
 
             <h2 className="text-lg md:text-xl absolute bottom-20 font-bold text-primary">
-              Key Benefits & Work Placement information
+              {t('keyBenefitsTitle')}
             </h2>
           </div>
           <div className="p-20">
@@ -158,12 +158,12 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
             </div>
             <div className="text-gray-600 mb-8">
               <h3 className="text-base font-bold mb-8 font-montserrat">
-                Required documents:
+                {t('requiredDocuments.title')}
               </h3>
               <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                <li>National Police Check</li>
-                <li>Working With Children Check</li>
-                <li>Vaccination Record</li>
+                <li>{t('requiredDocuments.items.policeCheck')}</li>
+                <li>{t('requiredDocuments.items.wwcc')}</li>
+                <li>{t('requiredDocuments.items.vaccinationRecord')}</li>
               </ul>
             </div>
           </div>
@@ -173,30 +173,34 @@ function CertIIIHSA({ faqItems: faqItemsFromDb }: CertIIIHSAProps) {
       {/* Payment Options Section */}
       <div className="w-full mt-40 mx-auto">
         <h3 className="text-xl font-bold mb-20 font-montserrat">
-          Payment Options
+          {t('paymentOptions.title')}
         </h3>
         <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
           <li>
-            Full fee upfront or instalment plans (
-            <Link
-              href="/contact"
-              className="text-primary underline hover:text-black transition"
-            >
-              Contact us
-            </Link>
-            )
+            {t.rich('paymentOptions.items.instalment', {
+              link: (chunks) => (
+                <Link
+                  href="/contact"
+                  className="text-primary underline hover:text-black transition"
+                >
+                  {chunks}
+                </Link>
+              ),
+            })}
           </li>
           <li>
-            Eligible students may apply for{' '}
-            <a
-              href="https://www.servicesaustralia.gov.au/austudy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline hover:text-black transition"
-            >
-              Austudy
-            </a>{' '}
-            and quote our institution code 2R377.
+            {t.rich('paymentOptions.items.austudy', {
+              link: (chunks) => (
+                <a
+                  href="https://www.servicesaustralia.gov.au/austudy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline hover:text-black transition"
+                >
+                  {chunks}
+                </a>
+              ),
+            })}
           </li>
         </ul>
       </div>

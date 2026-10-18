@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
 // Course metadata mapping
 const courseMetadata: {
@@ -135,6 +136,13 @@ const courseMetadata: {
   },
 };
 
+// Industry placement pages have translated title/description in messages
+const placementMessageKey: { [key: string]: string } = {
+  'industry-placement-work-placement': 'kitchen',
+  'industry-placement-patisserie': 'patisserie',
+  'industry-placement-hospitality-management': 'hospitality',
+};
+
 // Default metadata for unknown courses
 const defaultMetadata = {
   title: 'Cookery & Hospitality Course',
@@ -159,8 +167,18 @@ export async function generateMetadata({
   const { id, locale } = await params;
 
   const course = courseMetadata[id] || defaultMetadata;
-  const title = course.title;
-  const description = course.description;
+  let title = course.title;
+  let description = course.description;
+
+  const placementKey = placementMessageKey[id];
+  if (placementKey) {
+    const t = await getTranslations({
+      locale,
+      namespace: `industryPlacementPage.${placementKey}`,
+    });
+    title = t('metadataTitle');
+    description = t('metadataDescription');
+  }
 
   return {
     title: `${title} | ABM Further Education`,

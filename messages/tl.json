@@ -998,6 +998,238 @@
           "answer": "Ang minimum na kinakailangan sa pagpasok ay IELTS 5.5 o katumbas. Kung kasalukuyan kang may IELTS 4.5 o katumbas, maaari kang mag-enroll sa kurso na may Plus Nursing English, na nagbibigay ng karagdagang language support na iniaakma sa healthcare settings. Kung wala kang resulta ng English test, maaaring ma-assess ang iyong kasanayan sa Ingles sa pamamagitan ng ABM English Placement Test."
         }
       }
+    },
+    "pathwayFlowTitle": "Daloy ng Nursing Support Pathway",
+    "keyBenefitsTitle": "Mga Pangunahing Benepisyo at Impormasyon sa Work Placement",
+    "requiredDocuments": {
+      "title": "Mga kinakailangang dokumento:",
+      "items": {
+        "policeCheck": "National Police Check",
+        "wwcc": "Working With Children Check",
+        "vaccinationRecord": "Talaan ng Bakuna (Vaccination Record)"
+      }
+    },
+    "paymentOptions": {
+      "title": "Mga Opsyon sa Pagbabayad",
+      "items": {
+        "instalment": "Buong bayad nang paunang o installment plan (<link>Makipag-ugnayan sa amin</link>)",
+        "austudy": "Ang mga kwalipikadong estudyante ay maaaring mag-apply para sa <link>Austudy</link> gamit ang aming institution code na 2R377."
+      }
+    }
+  },
+  "industryPlacementPage": {
+    "hsa": {
+      "metadataTitle": "Industry Placement - Health Services Assistance",
+      "metadataDescription": "Kumpletuhin ang 80 oras ng mandatory industry placement para sa Certificate III in Health Services Assistance. Alamin ang mga kinakailangang dokumento kabilang ang talaan ng bakuna, police check, at NDIS Worker Check.",
+      "bannerTitle": "Industry Placement",
+      "heading": "Mga Kinakailangan sa Industry Placement (80 Oras)",
+      "intro": "Upang makumpleto ang mandatory na 80 oras ng industry placement, kailangang ihanda ng mga estudyante ang mga sumusunod na dokumento:",
+      "immunisationTitle": "Kumpletong talaan ng bakuna (immunisation record)",
+      "immunisationNote": "(may sertipikadong pagsasalin sa Ingles)",
+      "immunisations": [
+        {
+          "name": "dTpa (Diphtheria, Tetanus, Pertussis / Whooping Cough)",
+          "desc": "- 1 adult dose sa loob ng nakaraang 10 taon"
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "- Kumpletong serye ng bakuna (Kasama ang blood test na nagpapakita ng Anti-HBs ≥ 10mIU/mL, o iba pang tinatanggap na patunay)"
+        },
+        {
+          "name": "MMR (Tigdas, Beke, Rubella)",
+          "desc": "- 2 dose na may pagitan na hindi bababa sa 1 buwan, O positibong serology/ipinanganak bago ang 1966"
+        },
+        {
+          "name": "Varicella (Bulutong-tubig)",
+          "desc": "- 2 dose ng bakuna, O patunay ng immunity/AIR statement"
+        },
+        {
+          "name": "Tuberculosis (TB) Screening (kung kinakailangan)",
+          "desc": "IGRA o TST test depende sa background/travel history"
+        },
+        {
+          "name": "Bakuna sa Influenza",
+          "desc": "Kasalukuyang seasonal flu vaccine bawat taon"
+        },
+        {
+          "name": "Bakuna sa COVID-19",
+          "desc": "Mariing inirerekomenda na manatiling updated"
+        }
+      ],
+      "immunisationDisclaimer": "*Pakitandaan na ang mga kinakailangan sa bakuna at screening ay maaaring mag-iba depende sa kinakailangan ng bawat ospital o placement provider sa panahon ng placement. Maaaring humiling ang ospital ng karagdagang bakuna, test, o updated na patunay bago magsimula ang clinical placement.",
+      "checks": [
+        "National Police Check",
+        "Working With Children Check",
+        "NDIS Worker Check"
+      ],
+      "applyAfterArrival": "(mag-apply pagdating sa Australia)",
+      "guidance": "Magbibigay ang ABM ng gabay kung paano mag-apply para sa mga check na ito kapag nasa Australia ka na."
+    },
+    "vaccination": {
+      "regardingTitle": "Tungkol sa mga Bakuna",
+      "mandatory": "Mandatory na natanggap mo ang mga bakunang nakalista sa ibaba at mayroon kang mga kinakailangang antibodies bago simulan ang iyong placement.",
+      "recommendDocs": "Inirerekomenda naming dalhin ang mga sumusunod na dokumento na magpapatunay sa iyong kasaysayan ng pagbabakuna:",
+      "docs": [
+        "Maternal and Child Health Handbook",
+        "Sertipiko ng bakuna sa COVID-19 (tinatanggap ang papel o electronic na format)",
+        "Sertipiko ng bakuna sa Hepatitis B (valid din ang mga sertipikong ibinigay noong nakatanggap ka ng group vaccination sa paaralan, atbp.)",
+        "Resulta ng health check-up sa ospital (kung ikaw ay isang nurse na kasalukuyang nagtatrabaho sa ospital at may resulta ng health check-up na kasama ang mga antibody result na nakalista sa ibaba, at ang resulta ay mula sa nakaraang anim na buwan hanggang isang taon, mangyaring dalhin ito.)"
+      ],
+      "overseasRecords": "Ang mga talaan ng bakuna mula sa ibang bansa na inisyu sa Ingles ay maaaring gamitin bilang patunay. Gayunpaman, maaaring hilingin ng ilang ospital na sertipikado ang mga isinaling dokumento bago tanggapin bilang patunay.",
+      "gpHelp": "Kung kailangan mo ng tulong sa paghahanap ng GP na nagsasalita ng iyong wika, makipag-ugnayan sa amin.",
+      "avoidCosts": "Makatutulong din ito upang maiwasan ang karagdagang gastos sa pagsasalin ng mga dokumento sa iyong medical consultation.",
+      "requiredTitle": "Listahan ng mga Kinakailangang Bakuna",
+      "required": [
+        {
+          "name": "dTpa (Diphtheria, Tetanus, Pertussis / Whooping Cough)",
+          "desc": "Kinakailangan ang isang adult dose sa loob ng nakaraang 10 taon. Halimbawa, sa Japan, hindi karaniwang ibinibigay ang bakunang ito sa mga adult, kaya maraming tao ang tumatanggap ng karagdagang dose pagdating sa Australia."
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "Kinakailangan ang tatlong dose ng bakuna at blood test na nagpapakita ng Anti-HBs ≥ 10 mIU/mL."
+        },
+        {
+          "name": "MMR (Tigdas, Beke, Rubella)",
+          "desc": "Kinakailangan ang dalawang dose na may pagitan na hindi bababa sa isang buwan, o positibong resulta ng antibody test."
+        },
+        {
+          "name": "Varicella / Bulutong-tubig",
+          "desc": "Kinakailangan ang dalawang dose ng bakuna, o antibody result na nagpapakita ng immunity."
+        },
+        {
+          "name": "Tuberculosis (TB)",
+          "desc": "Nag-iiba ang mga kinakailangan depende sa iyong bansang sinilangan, kasaysayan ng paninirahan, travel history, atbp."
+        },
+        {
+          "name": "Influenza",
+          "desc": "Dahil nag-iiba ang mga kumakalat na strain sa bawat bansa, maaaring magpabakuna nang mura sa pharmacy o katulad nito pagdating sa Australia."
+        }
+      ],
+      "costsTitle": "Tungkol sa Gastos ng Bakuna",
+      "costs": [
+        "Malaki ang pagkakaiba ng gastos ng bakuna depende sa sitwasyon ng bawat indibidwal.",
+        "Ang average na gastos para sa mga estudyante ay hindi bababa sa AUD 300.",
+        "Kung wala kang sapat na talaan ng bakuna o antibody result, maaaring umabot sa halos AUD 1,000 ang gastos, kaya dapat itong isaalang-alang ng mga estudyante sa paghahanda ng kanilang budget."
+      ],
+      "processTitle": "Proseso ng Pagbabakuna",
+      "processNote": "(Halimbawa lamang ito at maaaring iba ang aktwal na proseso.)",
+      "process": [
+        "Pagdating sa Australia, bisitahin ang clinic kung saan ka nagpa-appointment at dalhin ang mga kinakailangang dokumento. Bibigyan ka namin ng impormasyon kung paano magpa-appointment sa clinic pagdating mo sa Australia.",
+        "Sa unang konsultasyon, tatanggap ka ng dTpa vaccination at magkakaroon ng blood test upang suriin ang iyong antibody levels.",
+        "Magkakaroon ka ng isa pang konsultasyon kapag available na ang resulta ng blood test.",
+        "Pagkatapos nito, kung kailangan ng karagdagang bakuna, tatanggapin mo ang mga ito kung kinakailangan."
+      ],
+      "otherTitle": "Iba Pang Kinakailangan at Gastos",
+      "table": {
+        "requirement": "Kinakailangan",
+        "volunteer": "Gastos para sa Volunteer",
+        "paid": "Gastos para sa Bayad na Manggagawa / Empleyo",
+        "details": "Karagdagang Detalye"
+      },
+      "wwcc": {
+        "name": "Working with Children Check (WWCC)",
+        "free": "Libre",
+        "nswPricing": "(presyo sa NSW)",
+        "details": "Valid sa loob ng 5 taon. Nag-iiba ang bayad sa bawat estado (hal., sa Victoria ay ~$136.60)."
+      },
+      "police": {
+        "name": "National Police Check",
+        "details": "Ang direktang pag-apply sa pamamagitan ng <link>NSW Police Force Portal</link> ay nagkakahalaga ng $55.80, habang ang mga pribadong accredited online provider ay naniningil ng $52.90 hanggang $76.90."
+      },
+      "firstAid": {
+        "name": "First Aid Course <i>(HLTAID011)</i>",
+        "details": "Ang mga commercial RTO (tulad ng <awfa>Australia Wide First Aid</awfa>) ay naniningil ng $80 – $120, habang ang mga premium provider tulad ng St John Ambulance o ang <redcross>Red Cross</redcross> ay naniningil ng $195 – $220."
+      },
+      "pricesDisclaimer": "Ang mga presyo sa itaas ay pagtatantya lamang at maaaring magbago. Mangyaring kumpirmahin sa kaukulang provider ang kasalukuyang presyo bago magpatuloy."
+    },
+    "kitchen": {
+      "metadataTitle": "Industry Placement - Work Placement",
+      "metadataDescription": "Magkaroon ng hands-on na karanasan sa mga commercial kitchen sa pamamagitan ng aming industry placement program. Gamitin ang iyong culinary skills sa totoong kapaligiran.",
+      "bannerTitle": "Industry Placement",
+      "intro": "Kasama na ngayon sa kurso ang 600 oras ng mandatory work placement, na nagbibigay sa mga estudyante ng malawak na hands-on na karanasan sa industriya.\nMaaaring magtrabaho ng karagdagang oras ang mga estudyante sa mga placement term alinsunod sa kondisyon ng kanilang student visa.",
+      "schedule": [
+        {
+          "term": "Term 1 - Term 2",
+          "content": "Teorya + Praktikal na Klase"
+        },
+        {
+          "term": "Term 3",
+          "termSub": "(linggo 6-10)",
+          "content": "Teorya + Praktikal na Klase",
+          "bullets": [
+            "Linggo 6 - 10: karagdagang 16 oras na work placement bawat linggo"
+          ]
+        },
+        {
+          "term": "Term 4 - Term 5",
+          "content": "Teorya + Praktikal na Klase",
+          "sub": "karagdagang 16 oras na work placement bawat linggo"
+        },
+        {
+          "term": "Term 6",
+          "content": "20 oras na work placement bawat linggo"
+        }
+      ]
+    },
+    "patisserie": {
+      "metadataTitle": "Industry Placement (Patisserie)",
+      "metadataDescription": "Magkaroon ng hands-on na karanasan sa paggawa ng pastry at dessert sa pamamagitan ng industry placement na nakaayon sa Certificate IV in Patisserie.",
+      "bannerTitle": "Industry Placement (Patisserie)",
+      "intro": "Ang work placement ay nakaayos sa bawat term at isinasagawa sa totoong industriya tulad ng sumusunod.",
+      "schedule": [
+        {
+          "term": "Term 1",
+          "content": "Teorya"
+        },
+        {
+          "term": "Term 2",
+          "content": "Teorya + Praktikal"
+        },
+        {
+          "term": "Term 3",
+          "termSub": "(linggo 6-10)",
+          "content": "Teorya + Praktikal na Klase",
+          "bullets": [
+            "Linggo 6 – 10: karagdagang 16 oras na work placement bawat linggo"
+          ]
+        },
+        {
+          "term": "Term 4 - Term 5",
+          "content": "Teorya + Praktikal na Klase",
+          "sub": "karagdagang 16 oras na work placement bawat linggo"
+        },
+        {
+          "term": "Term 6",
+          "content": "20 oras na work placement bawat linggo"
+        }
+      ]
+    },
+    "hospitality": {
+      "metadataTitle": "Industry Placement para sa Hospitality Management (F&B)",
+      "metadataDescription": "Hands-on na karanasan sa food and beverage service sa pamamagitan ng aming hospitality industry placement program.",
+      "bannerTitle": "Industry Placement para sa Hospitality Management (F&B)",
+      "intro": "Kasama na ngayon sa kurso ang 285 oras ng mandatory work placement, na nagbibigay sa mga estudyante ng malawak na hands-on na karanasan sa industriya.\nMaaaring magtrabaho ng karagdagang oras ang mga estudyante sa mga placement term alinsunod sa kondisyon ng kanilang student visa.",
+      "schedule": [
+        {
+          "term": "Term 1 - Term 4",
+          "content": "Teorya + Praktikal na Klase"
+        },
+        {
+          "term": "Term 5",
+          "content": "SITHIND008 Work effectively in hospitality service",
+          "bullets": [
+            "Linggo 1 – 10: 150 oras - 1 araw/linggo na Face to Face na klase + 3 araw/linggo na Work Placement (5 oras x 3 shift)"
+          ]
+        },
+        {
+          "term": "Term 6",
+          "content": "SITHIND008 Work effectively in hospitality service",
+          "bullets": [
+            "Linggo 1 – 9: 1 araw/linggo na Face to Face na klase + 3 araw/linggo na Work Placement (5 oras x 3 shift)",
+            "Linggo 10: Teorya + Praktikal na Klase"
+          ]
+        }
+      ]
     }
   }
 }

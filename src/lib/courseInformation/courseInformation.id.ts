@@ -1,6 +1,53 @@
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
 
 // CourseInformation 데이터 매핑
+const cookeryPlacementPartners: CourseInformationInfo['partners'] = [
+  {
+    name: 'Accor',
+    desc: 'Accor adalah grup perhotelan multinasional terkemuka yang berbasis di Prancis, yang mengkhususkan diri dalam manajemen hotel dan layanan.',
+  },
+  {
+    name: 'AMA Hospitality',
+    desc: 'AMA Hospitality adalah perusahaan katering dan manajemen acara yang mengkhususkan diri dalam memberikan pengalaman yang berkesan dan personal kepada klien mereka.',
+  },
+  {
+    name: 'Bills',
+    desc: 'Bills adalah jaringan restoran populer yang menyajikan makanan segar dan lezat dengan suasana yang santai dan ramah.',
+  },
+  {
+    name: 'Catering HQ',
+    desc: 'Catering HQ adalah perusahaan makanan dan minuman yang beroperasi di berbagai tempat.',
+  },
+  {
+    name: 'Grand Royale',
+    desc: 'Grand Royale adalah hotel mewah yang menawarkan akomodasi elegan dan nyaman, fine dining, dan fasilitas spa.',
+  },
+  {
+    name: "Hurricane's Grill",
+    desc: "Hurricane's Grill adalah steakhouse dan bar yang menyajikan steak, iga, burger, dan salad yang lezat.",
+  },
+  {
+    name: 'ICC Sydney',
+    desc: 'International Convention Centre Sydney (ICC Sydney) adalah tempat terbaik Australia untuk konvensi, pameran, dan acara.',
+  },
+  {
+    name: 'Industry Placement Solutions',
+    desc: 'Industry Placement Solutions adalah agen rekrutmen dan penempatan yang membantu siswa menemukan penempatan kerja yang sesuai dan bermanfaat di industri perhotelan.',
+  },
+  {
+    name: 'Liverpool Catholic Club',
+    desc: 'Liverpool Catholic Club adalah klub komunitas yang menawarkan berbagai pilihan hiburan, makan, dan rekreasi.',
+  },
+  {
+    name: 'Primi Italian',
+    desc: 'Primi Italian adalah restoran milik keluarga yang menyajikan masakan Italia otentik dan lezat.',
+  },
+  {
+    name: 'Kuon Omakase',
+    desc: 'Kuon Omakase adalah restoran Jepang yang menawarkan pengalaman makan yang unik dan luar biasa.',
+  },
+];
+
 export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'sit40521-certificate-iv-in-kitchen-management': {
     courseCode: 'SIT40521',
@@ -185,52 +232,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Accor',
-        desc: 'Accor adalah grup perhotelan multinasional terkemuka yang berbasis di Prancis, yang mengkhususkan diri dalam manajemen hotel dan layanan.',
-      },
-      {
-        name: 'AMA Hospitality',
-        desc: 'AMA Hospitality adalah perusahaan katering dan manajemen acara yang mengkhususkan diri dalam memberikan pengalaman yang berkesan dan personal kepada klien mereka.',
-      },
-      {
-        name: 'Bills',
-        desc: 'Bills adalah jaringan restoran populer yang menyajikan makanan segar dan lezat dengan suasana yang santai dan ramah.',
-      },
-      {
-        name: 'Catering HQ',
-        desc: 'Catering HQ adalah perusahaan makanan dan minuman yang beroperasi di berbagai tempat.',
-      },
-      {
-        name: 'Grand Royale',
-        desc: 'Grand Royale adalah hotel mewah yang menawarkan akomodasi elegan dan nyaman, fine dining, dan fasilitas spa.',
-      },
-      {
-        name: "Hurricane's Grill",
-        desc: "Hurricane's Grill adalah steakhouse dan bar yang menyajikan steak, iga, burger, dan salad yang lezat.",
-      },
-      {
-        name: 'ICC Sydney',
-        desc: 'International Convention Centre Sydney (ICC Sydney) adalah tempat terbaik Australia untuk konvensi, pameran, dan acara.',
-      },
-      {
-        name: 'Industry Placement Solutions',
-        desc: 'Industry Placement Solutions adalah agen rekrutmen dan penempatan yang membantu siswa menemukan penempatan kerja yang sesuai dan bermanfaat di industri perhotelan.',
-      },
-      {
-        name: 'Liverpool Catholic Club',
-        desc: 'Liverpool Catholic Club adalah klub komunitas yang menawarkan berbagai pilihan hiburan, makan, dan rekreasi.',
-      },
-      {
-        name: 'Primi Italian',
-        desc: 'Primi Italian adalah restoran milik keluarga yang menyajikan masakan Italia otentik dan lezat.',
-      },
-      {
-        name: 'Kuon Omakase',
-        desc: 'Kuon Omakase adalah restoran Jepang yang menawarkan pengalaman makan yang unik dan luar biasa.',
-      },
-    ],
+    partners: cookeryPlacementPartners,
   },
   'industry-placement-hospitality-management': {
     courseCode: 'SIT50422',
@@ -847,5 +849,38 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         ],
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      'Penempatan Industri untuk Certificate IV in Patisserie\n\nSiswa menyelesaikan pelatihan di tempat kerja di lingkungan perhotelan dan produksi pastry yang nyata untuk membangun kemampuan praktis dan kepercayaan diri.',
+    deliveryMode: {
+      title: 'Mode Pengiriman',
+      mode: 'Tatap Muka + Penempatan Industri',
+    },
+    deliverySite: {
+      title: 'Lokasi Pengiriman:',
+      locations: [
+        {
+          type: 'Kampus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Dapur ABM',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Penempatan Industri',
+          address:
+            'Berbagai dapur pastry, toko roti, hotel, restoran, dan lingkungan katering',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'Kami mendorong Anda untuk menemukan penempatan kerja Anda sendiri yang sesuai dengan minat dan tujuan Anda, tetapi kami juga di sini untuk mendukung Anda jika Anda memerlukan bantuan. Kami memiliki koneksi yang kuat dengan berbagai mitra industri yang selalu mencari siswa berbakat dan termotivasi seperti Anda.',
+    },
+    partners: cookeryPlacementPartners,
   },
 };

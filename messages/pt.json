@@ -995,6 +995,238 @@
           "answer": "O requisito mínimo de entrada é IELTS 5.5 ou equivalente. Se você atualmente possui IELTS 4.5 ou equivalente, pode se matricular no curso com Plus Nursing English, que fornece suporte linguístico adicional adaptado para ambientes de saúde. Se você não tiver um resultado de teste de inglês, pode ter sua proficiência em inglês avaliada através do Teste de Nivelamento de Inglês da ABM."
         }
       }
+    },
+    "pathwayFlowTitle": "Fluxo da Trilha de Suporte em Enfermagem",
+    "keyBenefitsTitle": "Principais benefícios e informações sobre o estágio",
+    "requiredDocuments": {
+      "title": "Documentos necessários:",
+      "items": {
+        "policeCheck": "Certidão Nacional de Antecedentes Criminais (National Police Check)",
+        "wwcc": "Verificação para Trabalho com Crianças (Working With Children Check)",
+        "vaccinationRecord": "Registro de vacinação"
+      }
+    },
+    "paymentOptions": {
+      "title": "Opções de pagamento",
+      "items": {
+        "instalment": "Pagamento integral antecipado ou planos de parcelamento (<link>Fale conosco</link>)",
+        "austudy": "Alunos elegíveis podem solicitar o <link>Austudy</link> informando o código da nossa instituição: 2R377."
+      }
+    }
+  },
+  "industryPlacementPage": {
+    "hsa": {
+      "metadataTitle": "Estágio Profissional - Assistência em Serviços de Saúde",
+      "metadataDescription": "Conclua 80 horas de estágio profissional obrigatório do Certificate III in Health Services Assistance. Saiba quais são os documentos necessários, incluindo registro de vacinação, certidão de antecedentes criminais e NDIS Worker Check.",
+      "bannerTitle": "Estágio Profissional",
+      "heading": "Requisitos do estágio profissional (80 horas)",
+      "intro": "Para concluir as 80 horas obrigatórias de estágio profissional, os alunos devem preparar os seguintes documentos:",
+      "immunisationTitle": "Registro completo de vacinação",
+      "immunisationNote": "(com tradução certificada para o inglês)",
+      "immunisations": [
+        {
+          "name": "dTpa (Difteria, Tétano, Coqueluche)",
+          "desc": "- 1 dose para adultos nos últimos 10 anos"
+        },
+        {
+          "name": "Hepatite B",
+          "desc": "- Esquema vacinal completo (mais exame de sangue com Anti-HBs ≥ 10mIU/mL, ou outra comprovação aceita)"
+        },
+        {
+          "name": "Tríplice viral (Sarampo, Caxumba, Rubéola)",
+          "desc": "- 2 doses com intervalo mínimo de 1 mês, ou sorologia positiva/nascido antes de 1966"
+        },
+        {
+          "name": "Varicela (Catapora)",
+          "desc": "- 2 doses da vacina, ou comprovação de imunidade/declaração AIR"
+        },
+        {
+          "name": "Rastreamento de Tuberculose (TB) (se necessário)",
+          "desc": "Teste IGRA ou TST, dependendo do histórico pessoal/de viagens"
+        },
+        {
+          "name": "Vacina contra a gripe",
+          "desc": "Vacina da gripe da temporada atual, todos os anos"
+        },
+        {
+          "name": "Vacina contra a COVID-19",
+          "desc": "Altamente recomendável manter-se em dia"
+        }
+      ],
+      "immunisationDisclaimer": "*Observe que os requisitos de vacinação e de exames podem variar conforme as exigências de cada hospital ou local de estágio no momento do estágio. O hospital pode solicitar vacinas, exames ou comprovações atualizadas adicionais antes do início do estágio clínico.",
+      "checks": [
+        "Certidão Nacional de Antecedentes Criminais (National Police Check)",
+        "Verificação para Trabalho com Crianças (Working With Children Check)",
+        "Verificação de Trabalhador NDIS (NDIS Worker Check)"
+      ],
+      "applyAfterArrival": "(solicitar após chegar à Austrália)",
+      "guidance": "A ABM fornecerá orientações sobre como solicitar essas verificações assim que você estiver na Austrália."
+    },
+    "vaccination": {
+      "regardingTitle": "Sobre as vacinas",
+      "mandatory": "É obrigatório ter recebido as vacinas listadas abaixo e possuir os anticorpos necessários antes de iniciar o estágio.",
+      "recommendDocs": "Recomendamos trazer os seguintes documentos que comprovem seu histórico de vacinação:",
+      "docs": [
+        "Caderneta de Saúde Materno-Infantil",
+        "Certificado de vacinação contra a COVID-19 (formato impresso ou eletrônico é aceito)",
+        "Certificado de vacinação contra a hepatite B (certificados emitidos em vacinações coletivas, por exemplo na escola, também são válidos)",
+        "Resultados de check-up hospitalar (se você é enfermeiro(a) e trabalha atualmente em um hospital, e possui resultados de check-up dos últimos seis meses a um ano que incluam os resultados de anticorpos listados abaixo, traga-os com você.)"
+      ],
+      "overseasRecords": "Registros de vacinação emitidos no exterior em inglês podem ser usados como comprovação. No entanto, alguns hospitais podem exigir que documentos traduzidos sejam certificados antes de aceitá-los.",
+      "gpHelp": "Se precisar de ajuda para encontrar um clínico geral (GP) que fale o seu idioma, entre em contato conosco.",
+      "avoidCosts": "Isso também pode ajudar você a evitar custos adicionais com tradução de documentos durante a consulta médica.",
+      "requiredTitle": "Lista de vacinas obrigatórias",
+      "required": [
+        {
+          "name": "dTpa (Difteria, Tétano, Coqueluche)",
+          "desc": "É necessária uma dose para adultos nos últimos 10 anos. Por exemplo, no Japão essa vacina não é aplicada rotineiramente em adultos, por isso muitas pessoas recebem uma dose adicional após chegar à Austrália."
+        },
+        {
+          "name": "Hepatite B",
+          "desc": "São necessárias três doses da vacina, além de um exame de sangue que mostre Anti-HBs ≥ 10 mIU/mL."
+        },
+        {
+          "name": "Tríplice viral (Sarampo, Caxumba, Rubéola)",
+          "desc": "São necessárias duas doses com intervalo mínimo de um mês, ou um resultado positivo no teste de anticorpos."
+        },
+        {
+          "name": "Varicela / Catapora",
+          "desc": "São necessárias duas doses da vacina, ou resultados de anticorpos que comprovem imunidade."
+        },
+        {
+          "name": "Tuberculose (TB)",
+          "desc": "Os requisitos variam de acordo com o país de nascimento, histórico de residência, histórico de viagens etc."
+        },
+        {
+          "name": "Gripe (Influenza)",
+          "desc": "Como as cepas em circulação variam de país para país, a vacina pode ser tomada a baixo custo em uma farmácia ou local semelhante após a chegada à Austrália."
+        }
+      ],
+      "costsTitle": "Sobre os custos de vacinação",
+      "costs": [
+        "O custo das vacinas varia muito conforme as circunstâncias de cada pessoa.",
+        "O custo médio para os alunos é de pelo menos AUD 300.",
+        "Se você não tiver registros de vacinação ou resultados de anticorpos suficientes, o custo pode chegar perto de AUD 1.000; por isso, leve isso em consideração ao planejar seu orçamento."
+      ],
+      "processTitle": "Processo de vacinação",
+      "processNote": "(Este é apenas um exemplo e o processo real pode ser diferente.)",
+      "process": [
+        "Após chegar à Austrália, vá à clínica em que você agendou a consulta e leve os documentos necessários. Informaremos como agendar a consulta na clínica depois que você chegar à Austrália.",
+        "Na primeira consulta, você receberá a vacina dTpa e fará um exame de sangue para verificar seus níveis de anticorpos.",
+        "Você terá outra consulta quando os resultados do exame de sangue estiverem disponíveis.",
+        "Depois disso, se forem necessárias vacinas adicionais, você as receberá conforme necessário."
+      ],
+      "otherTitle": "Outros requisitos e custos",
+      "table": {
+        "requirement": "Requisito",
+        "volunteer": "Custo para voluntários",
+        "paid": "Custo para trabalhadores remunerados / emprego",
+        "details": "Detalhes adicionais"
+      },
+      "wwcc": {
+        "name": "Verificação para Trabalho com Crianças (WWCC)",
+        "free": "Gratuito",
+        "nswPricing": "(preço em NSW)",
+        "details": "Válido por 5 anos. As taxas variam por estado (ex.: em Victoria custa ~$136.60)."
+      },
+      "police": {
+        "name": "Certidão Nacional de Antecedentes Criminais (National Police Check)",
+        "details": "A solicitação direta pelo <link>portal da NSW Police Force</link> custa $55.80, enquanto provedores online privados credenciados cobram entre $52.90 e $76.90."
+      },
+      "firstAid": {
+        "name": "Curso de Primeiros Socorros <i>(HLTAID011)</i>",
+        "details": "RTOs comerciais (como a <awfa>Australia Wide First Aid</awfa>) cobram $80 – $120, enquanto provedores premium como St John Ambulance ou a <redcross>Cruz Vermelha</redcross> cobram $195 – $220."
+      },
+      "pricesDisclaimer": "Os preços acima são apenas indicativos e podem mudar. Verifique os preços atuais com o provedor correspondente antes de prosseguir."
+    },
+    "kitchen": {
+      "metadataTitle": "Estágio na Indústria - Estágio Prático",
+      "metadataDescription": "Ganhe experiência prática em cozinhas comerciais por meio do nosso programa de estágio na indústria. Aplique suas habilidades culinárias em ambientes reais.",
+      "bannerTitle": "Estágio na Indústria",
+      "intro": "O curso agora inclui 600 horas de estágio obrigatório, proporcionando aos alunos ampla experiência prática na indústria.\nOs alunos podem trabalhar horas adicionais durante os termos de estágio, respeitando as condições do visto de estudante.",
+      "schedule": [
+        {
+          "term": "Termo 1 - Termo 2",
+          "content": "Teoria + Aulas Práticas"
+        },
+        {
+          "term": "Termo 3",
+          "termSub": "(semanas 6-10)",
+          "content": "Teoria + Aulas Práticas",
+          "bullets": [
+            "Semanas 6 - 10: 16 horas adicionais de estágio por semana"
+          ]
+        },
+        {
+          "term": "Termo 4 - Termo 5",
+          "content": "Teoria + Aulas Práticas",
+          "sub": "16 horas adicionais de estágio por semana"
+        },
+        {
+          "term": "Termo 6",
+          "content": "20 horas de estágio por semana"
+        }
+      ]
+    },
+    "patisserie": {
+      "metadataTitle": "Estágio na Indústria (Confeitaria)",
+      "metadataDescription": "Ganhe experiência prática em produção de confeitaria e sobremesas por meio do estágio na indústria vinculado ao Certificate IV in Patisserie.",
+      "bannerTitle": "Estágio na Indústria (Confeitaria)",
+      "intro": "O estágio é estruturado ao longo dos termos e realizado em ambientes reais da indústria, conforme abaixo.",
+      "schedule": [
+        {
+          "term": "Termo 1",
+          "content": "Teoria"
+        },
+        {
+          "term": "Termo 2",
+          "content": "Teoria + Prática"
+        },
+        {
+          "term": "Termo 3",
+          "termSub": "(semanas 6-10)",
+          "content": "Teoria + Aulas Práticas",
+          "bullets": [
+            "Semanas 6 – 10: 16 horas adicionais de estágio por semana"
+          ]
+        },
+        {
+          "term": "Termo 4 - Termo 5",
+          "content": "Teoria + Aulas Práticas",
+          "sub": "16 horas adicionais de estágio por semana"
+        },
+        {
+          "term": "Termo 6",
+          "content": "20 horas de estágio por semana"
+        }
+      ]
+    },
+    "hospitality": {
+      "metadataTitle": "Estágio na Indústria para Gestão de Hospitalidade (A&B)",
+      "metadataDescription": "Experiência prática em serviços de alimentos e bebidas por meio do nosso programa de estágio na indústria da hospitalidade.",
+      "bannerTitle": "Estágio na Indústria para Gestão de Hospitalidade (A&B)",
+      "intro": "O curso agora inclui 285 horas de estágio obrigatório, proporcionando aos alunos ampla experiência prática na indústria.\nOs alunos podem trabalhar horas adicionais durante os termos de estágio, respeitando as condições do visto de estudante.",
+      "schedule": [
+        {
+          "term": "Termo 1 - Termo 4",
+          "content": "Teoria + Aulas Práticas"
+        },
+        {
+          "term": "Termo 5",
+          "content": "SITHIND008 Trabalhar de forma eficaz no serviço de hospitalidade",
+          "bullets": [
+            "Semanas 1 – 10: 150 horas - 1 dia/semana de aula presencial + 3 dias/semana de estágio (5 horas x 3 turnos)"
+          ]
+        },
+        {
+          "term": "Termo 6",
+          "content": "SITHIND008 Trabalhar de forma eficaz no serviço de hospitalidade",
+          "bullets": [
+            "Semanas 1 – 9: 1 dia/semana de aula presencial + 3 dias/semana de estágio (5 horas x 3 turnos)",
+            "Semana 10: Teoria + Aula Prática"
+          ]
+        }
+      ]
     }
   }
 }

@@ -2,8 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import getCourseInformationData from '@/lib/courseInformation';
 import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+
+type ScheduleItem = {
+  term: string;
+  termSub?: string;
+  content: string;
+  bullets?: string[];
+  sub?: string;
+};
 
 function IndustryPlacementHospitality() {
+  const t = useTranslations('industryPlacementPage.hospitality');
   const params = useParams();
   let locale = 'en';
   if (params?.locale) {
@@ -29,27 +39,7 @@ function IndustryPlacementHospitality() {
     ));
   };
 
-  const placementSchedule = [
-    {
-      term: 'Term 1 - Term 4',
-      content: 'Theory + Practical Classes',
-    },
-    {
-      term: 'Term 5',
-      content: '(SITHIND008)Work effectively in hospitality service',
-      bullets: [
-        'Week 1 – 10: 150 hours - 1 day/week Face to Face class + 3 days/week Work Placement (5 hours x 3 shifts)',
-      ],
-    },
-    {
-      term: 'Term6',
-      content: 'SITHIND008Work effectively in hospitality service',
-      bullets: [
-        'Week 1 – 9: 1 day/week Face to Face class + 3 days per week Work Placement (5 hours x 3 shifts)',
-        'Week 10: Theory + Practical Class',
-      ],
-    },
-  ];
+  const placementSchedule = t.raw('schedule') as ScheduleItem[];
 
   return (
     <div>
@@ -59,11 +49,7 @@ function IndustryPlacementHospitality() {
       <p>{renderTextWithLineBreaks(courseInfo?.description)}</p>
 
       <p className="my-20 text-sm text-gray-800 leading-relaxed">
-        The course now includes 285 hours of mandatory work placement,
-        providing students with extensive hands-on industry experience.
-        <br />
-        Students can work additional hours during placement terms in compliance
-        with their student visa conditions.
+        {renderTextWithLineBreaks(t('intro'))}
       </p>
 
       <div className="flex flex-col gap-4 my-20">

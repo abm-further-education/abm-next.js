@@ -1,6 +1,53 @@
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
 
 // Mapeamento de dados do CourseInformation (PT-BR)
+const cookeryPlacementPartners: CourseInformationInfo['partners'] = [
+  {
+    name: 'Accor',
+    desc: 'A Accor é um dos principais grupos multinacionais de hospitalidade, com portfólio diverso de marcas do luxo ao econômico, oferecendo hospedagem e serviços relacionados em escala global.',
+  },
+  {
+    name: 'AMA Hospitality',
+    desc: 'Empresa de catering e gestão de eventos especializada em experiências memoráveis e personalizadas.',
+  },
+  {
+    name: 'Bills',
+    desc: 'Rede de restaurantes conhecida por comida fresca e deliciosa em ambiente descontraído e acolhedor.',
+  },
+  {
+    name: 'Catering HQ',
+    desc: 'Empresa de alimentos e bebidas que opera em diversos locais como clubes, pubs e centros de eventos.',
+  },
+  {
+    name: 'Grand Royale',
+    desc: 'Hotel de luxo com acomodação elegante e confortável, alta gastronomia e spa.',
+  },
+  {
+    name: 'Hurricane’s Grill',
+    desc: 'Churrascaria e bar com carnes, costelas, hambúrgueres e saladas suculentas.',
+  },
+  {
+    name: 'ICC Sydney',
+    desc: 'O International Convention Centre Sydney (ICC Sydney) é o principal local da Austrália para convenções, exposições e eventos. Localizado em Darling Harbour, oferece instalações de última geração e espaços versáteis para eventos com vistas deslumbrantes para o porto. Renomado por sustentabilidade e serviço excepcional, o ICC Sydney é perfeito para eventos de todos os tamanhos. Sua localização privilegiada oferece fácil acesso às principais atrações de Sydney.',
+  },
+  {
+    name: 'Industry Placement Solutions',
+    desc: 'Agência de recrutamento e colocação que auxilia estudantes a encontrar estágios na hospitalidade.',
+  },
+  {
+    name: 'Liverpool Catholic Club',
+    desc: 'Clube comunitário com opções de entretenimento, gastronomia e lazer (jogos, esportes e salas de eventos).',
+  },
+  {
+    name: 'Primi Italian',
+    desc: 'Restaurante familiar que serve culinária italiana autêntica: pizza, massa e gelato.',
+  },
+  {
+    name: 'Kuon Omakase',
+    desc: 'Restaurante japonês de experiência omakase, com menu baseado nos ingredientes mais frescos do dia.',
+  },
+];
+
 export const courseInformationData_pt: {
   [key: string]: CourseInformationInfo;
 } = {
@@ -216,52 +263,7 @@ export const courseInformationData_pt: {
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Accor',
-        desc: 'A Accor é um dos principais grupos multinacionais de hospitalidade, com portfólio diverso de marcas do luxo ao econômico, oferecendo hospedagem e serviços relacionados em escala global.',
-      },
-      {
-        name: 'AMA Hospitality',
-        desc: 'Empresa de catering e gestão de eventos especializada em experiências memoráveis e personalizadas.',
-      },
-      {
-        name: 'Bills',
-        desc: 'Rede de restaurantes conhecida por comida fresca e deliciosa em ambiente descontraído e acolhedor.',
-      },
-      {
-        name: 'Catering HQ',
-        desc: 'Empresa de alimentos e bebidas que opera em diversos locais como clubes, pubs e centros de eventos.',
-      },
-      {
-        name: 'Grand Royale',
-        desc: 'Hotel de luxo com acomodação elegante e confortável, alta gastronomia e spa.',
-      },
-      {
-        name: 'Hurricane’s Grill',
-        desc: 'Churrascaria e bar com carnes, costelas, hambúrgueres e saladas suculentas.',
-      },
-      {
-        name: 'ICC Sydney',
-        desc: 'O International Convention Centre Sydney (ICC Sydney) é o principal local da Austrália para convenções, exposições e eventos. Localizado em Darling Harbour, oferece instalações de última geração e espaços versáteis para eventos com vistas deslumbrantes para o porto. Renomado por sustentabilidade e serviço excepcional, o ICC Sydney é perfeito para eventos de todos os tamanhos. Sua localização privilegiada oferece fácil acesso às principais atrações de Sydney.',
-      },
-      {
-        name: 'Industry Placement Solutions',
-        desc: 'Agência de recrutamento e colocação que auxilia estudantes a encontrar estágios na hospitalidade.',
-      },
-      {
-        name: 'Liverpool Catholic Club',
-        desc: 'Clube comunitário com opções de entretenimento, gastronomia e lazer (jogos, esportes e salas de eventos).',
-      },
-      {
-        name: 'Primi Italian',
-        desc: 'Restaurante familiar que serve culinária italiana autêntica: pizza, massa e gelato.',
-      },
-      {
-        name: 'Kuon Omakase',
-        desc: 'Restaurante japonês de experiência omakase, com menu baseado nos ingredientes mais frescos do dia.',
-      },
-    ],
+    partners: cookeryPlacementPartners,
   },
 
   'industry-placement-hospitality-management': {
@@ -931,5 +933,38 @@ export const courseInformationData_pt: {
         ],
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      'Estágio na Indústria do Certificate IV in Patisserie\n\nOs alunos realizam treinamento no local de trabalho em ambientes reais de hospitalidade e produção de confeitaria para desenvolver capacidade prática e confiança.',
+    deliveryMode: {
+      title: 'Modalidade de oferta',
+      mode: 'Presencial + Estágio na Indústria',
+    },
+    deliverySite: {
+      title: 'Local de oferta:',
+      locations: [
+        {
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Estágio na Indústria',
+          address:
+            'Diversas cozinhas de confeitaria, padarias, hotéis, restaurantes e serviços de catering',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'Incentivamos você a encontrar um estágio alinhado aos seus interesses e objetivos, mas também oferecemos suporte quando necessário. Temos fortes conexões com diversos parceiros do setor que buscam estudantes talentosos e motivados como você.\n\nAcreditamos que este estágio é um componente essencial do seu curso e o preparará para os desafios e oportunidades da indústria culinária. Além de aprimorar suas habilidades técnicas, você desenvolverá confiança, comunicação e trabalho em equipe. É a sua chance de brilhar e mostrar do que é capaz!',
+    },
+    partners: cookeryPlacementPartners,
   },
 };

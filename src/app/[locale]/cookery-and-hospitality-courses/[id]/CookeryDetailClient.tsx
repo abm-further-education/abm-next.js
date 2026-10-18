@@ -9,6 +9,7 @@ import IndustryPlacement from '@/domains/courses/contents/cookery/IndustryPlacem
 import IndustryPlacementHospitality from '@/domains/courses/contents/cookery/IndustryPlacementHospitality';
 import IndustryPlacementPatisserie from '@/domains/courses/contents/cookery/IndustryPlacementPatisserie';
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import Gallery from '@/components/common/Gallery';
 import { cn } from '@/lib';
 import type {
@@ -21,15 +22,11 @@ const mappingCourseTitle: { [key: string]: string } = {
   'sit40521-certificate-iv-in-kitchen-management':
     'Certificate IV in Kitchen Management',
   'sit40721-certificate-iv-in-patisserie': 'Certificate IV in Patisserie',
-  'industry-placement-work-placement': 'Industry Placement',
-  'industry-placement-patisserie': 'Industry Placement (Patisserie)',
   fss: 'NSW Food Safety Supervisor',
   'sit50422-diploma-of-hospitality-management':
     'Diploma of Hospitality Management',
   'advanced-diploma-of-hospitality-management':
     'Advanced Diploma of Hospitality Management',
-  'industry-placement-hospitality-management':
-    'Industry Placement for Hospitality Management (F&B)',
 };
 
 const mappingCourseImage: { [key: string]: string } = {
@@ -81,6 +78,7 @@ export default function CookeryDetailClient({
   courseInformation,
   courseUnits,
 }: CookeryDetailClientProps) {
+  const t = useTranslations('industryPlacementPage');
   // Industry Placement 페이지인지 확인
   const isIndustryPlacement = id === 'industry-placement-work-placement';
   const isIndustryPlacementHospitality =
@@ -95,7 +93,7 @@ export default function CookeryDetailClient({
             {
               imgPath:
                 mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
-              title: mappingCourseTitle[id],
+              title: t('patisserie.bannerTitle'),
               content: '',
             },
           ]}
@@ -119,7 +117,7 @@ export default function CookeryDetailClient({
             {
               imgPath:
                 mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
-              title: mappingCourseTitle[id],
+              title: t('hospitality.bannerTitle'),
               content: '',
             },
           ]}
@@ -143,7 +141,7 @@ export default function CookeryDetailClient({
             {
               imgPath:
                 mappingCourseImage[id] || '/courses/cookery/cookery_1.png',
-              title: mappingCourseTitle[id],
+              title: t('kitchen.bannerTitle'),
               content: '',
             },
           ]}

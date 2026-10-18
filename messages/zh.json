@@ -998,6 +998,238 @@
           "answer": "最低入学要求是雅思5.5或同等水平。如果您目前持有雅思4.5或同等水平，您可以报名带有Plus护理英语的课程，该课程提供针对医疗保健环境定制的额外语言支持。如果您没有英语测试成绩，可以通过ABM英语分班测试评估您的英语水平。"
         }
       }
+    },
+    "pathwayFlowTitle": "护理支持职业通道流程",
+    "keyBenefitsTitle": "主要优势与实习信息",
+    "requiredDocuments": {
+      "title": "所需文件：",
+      "items": {
+        "policeCheck": "全国无犯罪记录证明（National Police Check）",
+        "wwcc": "儿童工作资格审查（Working With Children Check）",
+        "vaccinationRecord": "疫苗接种记录"
+      }
+    },
+    "paymentOptions": {
+      "title": "付款方式",
+      "items": {
+        "instalment": "一次性全额预付或分期付款计划（<link>联系我们</link>）",
+        "austudy": "符合条件的学生可申请 <link>Austudy</link>，申请时请填写我校机构代码 2R377。"
+      }
+    }
+  },
+  "industryPlacementPage": {
+    "hsa": {
+      "metadataTitle": "行业实习 - 健康服务助理",
+      "metadataDescription": "完成 Certificate III in Health Services Assistance 课程的80小时必修行业实习。了解所需文件，包括疫苗接种记录、无犯罪记录证明和 NDIS 工作者审查。",
+      "bannerTitle": "行业实习",
+      "heading": "行业实习要求（80小时）",
+      "intro": "为完成80小时的必修行业实习，学生必须准备以下文件：",
+      "immunisationTitle": "完整的疫苗接种记录",
+      "immunisationNote": "（附经认证的英文翻译）",
+      "immunisations": [
+        {
+          "name": "dTpa（白喉、破伤风、百日咳）",
+          "desc": "- 过去10年内接种1剂成人剂量"
+        },
+        {
+          "name": "乙型肝炎（Hepatitis B）",
+          "desc": "- 完成全程接种（另需血液检测显示 Anti-HBs ≥ 10mIU/mL，或其他认可的证明）"
+        },
+        {
+          "name": "MMR（麻疹、腮腺炎、风疹）",
+          "desc": "- 间隔至少1个月接种2剂，或血清学检测阳性/1966年以前出生"
+        },
+        {
+          "name": "水痘（Varicella）",
+          "desc": "- 接种2剂疫苗，或具备免疫力证明/AIR记录"
+        },
+        {
+          "name": "结核病（TB）筛查（如需要）",
+          "desc": "根据个人背景/旅行史进行 IGRA 或 TST 检测"
+        },
+        {
+          "name": "流感疫苗",
+          "desc": "每年接种当季流感疫苗"
+        },
+        {
+          "name": "新冠（COVID-19）疫苗",
+          "desc": "强烈建议保持最新接种状态"
+        }
+      ],
+      "immunisationDisclaimer": "*请注意，疫苗接种和筛查要求可能因实习时各医院或实习单位的要求而有所不同。在临床实习开始前，医院可能会要求额外的疫苗接种、检测或最新证明。",
+      "checks": [
+        "全国无犯罪记录证明（National Police Check）",
+        "儿童工作资格审查（Working With Children Check）",
+        "NDIS 工作者审查（NDIS Worker Check）"
+      ],
+      "applyAfterArrival": "（抵达澳大利亚后申请）",
+      "guidance": "您抵达澳大利亚后，ABM 将为您提供申请上述审查的指导。"
+    },
+    "vaccination": {
+      "regardingTitle": "关于疫苗接种",
+      "mandatory": "开始实习前，必须已接种下列疫苗并具备所需的抗体。",
+      "recommendDocs": "建议携带以下能够证明您疫苗接种史的文件：",
+      "docs": [
+        "母子健康手册",
+        "新冠（COVID-19）疫苗接种证明（纸质或电子版均可）",
+        "乙型肝炎疫苗接种证明（在学校等集体接种时签发的证明同样有效）",
+        "医院体检结果（如果您是目前在医院工作的护士，并持有过去六个月至一年内包含下列抗体结果的体检报告，请随身携带。）"
+      ],
+      "overseasRecords": "以英文签发的海外疫苗接种记录可作为证明使用。但部分医院可能要求翻译文件经过认证后才予以接受。",
+      "gpHelp": "如果您需要帮助寻找会说您母语的全科医生（GP），请联系我们。",
+      "avoidCosts": "这也可以帮助您在就诊时避免额外的文件翻译费用。",
+      "requiredTitle": "必需疫苗清单",
+      "required": [
+        {
+          "name": "dTpa（白喉、破伤风、百日咳）",
+          "desc": "需要在过去10年内接种1剂成人剂量。例如，在日本成人通常不常规接种此疫苗，因此许多人在抵达澳大利亚后补种一剂。"
+        },
+        {
+          "name": "乙型肝炎（Hepatitis B）",
+          "desc": "需要接种3剂疫苗，并进行血液检测显示 Anti-HBs ≥ 10 mIU/mL。"
+        },
+        {
+          "name": "MMR（麻疹、腮腺炎、风疹）",
+          "desc": "需要间隔至少一个月接种2剂，或抗体检测结果为阳性。"
+        },
+        {
+          "name": "水痘（Varicella）",
+          "desc": "需要接种2剂疫苗，或提供显示具有免疫力的抗体检测结果。"
+        },
+        {
+          "name": "结核病（TB）",
+          "desc": "要求因出生国家、居住史、旅行史等而异。"
+        },
+        {
+          "name": "流感",
+          "desc": "由于各国流行的毒株不同，抵达澳大利亚后可在药房等地以较低费用接种。"
+        }
+      ],
+      "costsTitle": "关于疫苗接种费用",
+      "costs": [
+        "疫苗接种费用因个人情况差异很大。",
+        "学生的平均费用至少为 AUD 300。",
+        "如果您没有足够的疫苗接种记录或抗体检测结果，费用可能接近 AUD 1,000，因此在准备预算时请将此考虑在内。"
+      ],
+      "processTitle": "疫苗接种流程",
+      "processNote": "（以下仅为示例，实际流程可能有所不同。）",
+      "process": [
+        "抵达澳大利亚后，请携带所需文件前往您已预约的诊所。我们将在您抵达澳大利亚后提供诊所预约方法的相关信息。",
+        "初次就诊时，您将接种 dTpa 疫苗，并进行血液检测以检查抗体水平。",
+        "血液检测结果出来后，您将再次就诊。",
+        "之后，如需额外接种疫苗，将根据需要进行接种。"
+      ],
+      "otherTitle": "其他要求与费用",
+      "table": {
+        "requirement": "要求",
+        "volunteer": "志愿者费用",
+        "paid": "带薪员工 / 就业费用",
+        "details": "补充说明"
+      },
+      "wwcc": {
+        "name": "儿童工作资格审查（WWCC）",
+        "free": "免费",
+        "nswPricing": "（新州价格）",
+        "details": "有效期5年。费用因州而异（例如维多利亚州约为 $136.60）。"
+      },
+      "police": {
+        "name": "全国无犯罪记录证明（National Police Check）",
+        "details": "通过<link>新州警察局（NSW Police Force）门户网站</link>直接申请的费用为 $55.80，而私营认可在线机构收费为 $52.90 至 $76.90。"
+      },
+      "firstAid": {
+        "name": "急救课程 <i>(HLTAID011)</i>",
+        "details": "商业 RTO（如 <awfa>Australia Wide First Aid</awfa>）收费 $80 – $120，而 St John Ambulance 或<redcross>红十字会（Red Cross）</redcross>等高端机构收费 $195 – $220。"
+      },
+      "pricesDisclaimer": "以上价格仅供参考，可能会有变动。办理前请向相关机构确认最新价格。"
+    },
+    "kitchen": {
+      "metadataTitle": "行业实习 - 工作实习",
+      "metadataDescription": "通过我们的行业实习项目，在商业厨房中获得实践经验，在真实环境中运用您的烹饪技能。",
+      "bannerTitle": "行业实习",
+      "intro": "本课程现包含600小时的必修工作实习，为学生提供丰富的行业实践经验。\n在实习学期内，学生可在遵守学生签证条件的前提下增加工作时长。",
+      "schedule": [
+        {
+          "term": "第1学期 - 第2学期",
+          "content": "理论 + 实践课"
+        },
+        {
+          "term": "第3学期",
+          "termSub": "（第6-10周）",
+          "content": "理论 + 实践课",
+          "bullets": [
+            "第6 - 10周：每周额外16小时工作实习"
+          ]
+        },
+        {
+          "term": "第4学期 - 第5学期",
+          "content": "理论 + 实践课",
+          "sub": "每周额外16小时工作实习"
+        },
+        {
+          "term": "第6学期",
+          "content": "每周20小时工作实习"
+        }
+      ]
+    },
+    "patisserie": {
+      "metadataTitle": "行业实习（西点）",
+      "metadataDescription": "通过与 Certificate IV in Patisserie 课程相衔接的行业实习，获得西点与甜品制作的实践经验。",
+      "bannerTitle": "行业实习（西点）",
+      "intro": "工作实习按学期安排，并在真实的行业环境中进行，具体如下。",
+      "schedule": [
+        {
+          "term": "第1学期",
+          "content": "理论"
+        },
+        {
+          "term": "第2学期",
+          "content": "理论 + 实践"
+        },
+        {
+          "term": "第3学期",
+          "termSub": "（第6-10周）",
+          "content": "理论 + 实践课",
+          "bullets": [
+            "第6 – 10周：每周额外16小时工作实习"
+          ]
+        },
+        {
+          "term": "第4学期 - 第5学期",
+          "content": "理论 + 实践课",
+          "sub": "每周额外16小时工作实习"
+        },
+        {
+          "term": "第6学期",
+          "content": "每周20小时工作实习"
+        }
+      ]
+    },
+    "hospitality": {
+      "metadataTitle": "酒店管理行业实习（餐饮）",
+      "metadataDescription": "通过我们的酒店行业实习项目，获得餐饮服务方面的实践经验。",
+      "bannerTitle": "酒店管理行业实习（餐饮）",
+      "intro": "本课程现包含285小时的必修工作实习，为学生提供丰富的行业实践经验。\n在实习学期内，学生可在遵守学生签证条件的前提下增加工作时长。",
+      "schedule": [
+        {
+          "term": "第1学期 - 第4学期",
+          "content": "理论 + 实践课"
+        },
+        {
+          "term": "第5学期",
+          "content": "SITHIND008 在酒店服务中高效工作",
+          "bullets": [
+            "第1 – 10周：150小时 - 每周1天面授课 + 每周3天工作实习（5小时 x 3班）"
+          ]
+        },
+        {
+          "term": "第6学期",
+          "content": "SITHIND008 在酒店服务中高效工作",
+          "bullets": [
+            "第1 – 9周：每周1天面授课 + 每周3天工作实习（5小时 x 3班）",
+            "第10周：理论 + 实践课"
+          ]
+        }
+      ]
     }
   }
 }

@@ -1,5 +1,52 @@
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
 
+const cookeryPlacementPartners: CourseInformationInfo['partners'] = [
+  {
+    name: 'Accor',
+    desc: 'Accor es un grupo hotelero multinacional líder con sede en Francia, especializado en gestión hotelera y de servicios. Con una amplia cartera de marcas, Accor opera globalmente, ofreciendo alojamiento y servicios relacionados.',
+  },
+  {
+    name: 'AMA Hospitality',
+    desc: 'AMA Hospitality es una empresa de catering y gestión de eventos que se especializa en ofrecer experiencias memorables y personalizadas a sus clientes.',
+  },
+  {
+    name: 'Bills',
+    desc: 'Bills es una popular cadena de restaurantes que sirve comida fresca y deliciosa en un ambiente relajado y amigable.',
+  },
+  {
+    name: 'Catering HQ',
+    desc: 'Catering HQ es una empresa de alimentos y bebidas que opera en varios lugares, como clubes, pubs y centros de eventos.',
+  },
+  {
+    name: 'Grand Royale',
+    desc: 'Grand Royale es un hotel de lujo que ofrece alojamiento elegante y cómodo, alta cocina y servicios de spa.',
+  },
+  {
+    name: 'Hurricane’s Grill',
+    desc: 'Hurricane’s Grill es una parrilla y bar que sirve jugosos y deliciosos filetes, costillas, hamburguesas y ensaladas.',
+  },
+  {
+    name: 'ICC Sydney',
+    desc: 'El International Convention Centre Sydney (ICC Sydney) es el principal recinto de Australia para convenciones, exposiciones y eventos. Ubicado en Darling Harbour, ofrece instalaciones de última generación y vistas al mar. Es reconocido por su sostenibilidad y excelente servicio.',
+  },
+  {
+    name: 'Industry Placement Solutions',
+    desc: 'Industry Placement Solutions es una agencia de reclutamiento y colocación que ayuda a los estudiantes a encontrar prácticas adecuadas y gratificantes en la industria hotelera.',
+  },
+  {
+    name: 'Liverpool Catholic Club',
+    desc: 'Liverpool Catholic Club es un club comunitario que ofrece entretenimiento, comidas y opciones de ocio, como juegos, deportes y salones para eventos.',
+  },
+  {
+    name: 'Primi Italian',
+    desc: 'Primi Italian es un restaurante familiar que sirve auténtica y deliciosa cocina italiana, como pizza, pasta y helado.',
+  },
+  {
+    name: 'Kuon Omakase',
+    desc: 'Kuon Omakase es un restaurante japonés que ofrece una experiencia gastronómica única y exquisita, donde el chef prepara y sirve platos según los ingredientes más frescos y de mejor calidad del día.',
+  },
+];
+
 export const courseInformationData_sp: {
   [key: string]: CourseInformationInfo;
 } = {
@@ -162,7 +209,7 @@ export const courseInformationData_sp: {
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:
-      '¿Listo para llevar tus habilidades culinarias al siguiente nivel?\n\nEn ABM Further Education, ofrecemos el Certificado IV en Gestión de Cocina que combina aprendizaje académico con experiencia práctica. Tendrás la oportunidad de trabajar en cocinas comerciales reales, como restaurantes, hoteles y residencias de ancianos, y aprender de los mejores del sector.\n\nComo parte del curso, deberás completar una práctica profesional obligatoria al final del quinto trimestre y durante todo el sexto. No es solo un requisito, sino una oportunidad para aplicar lo aprendido en clase y obtener valiosos conocimientos del mundo culinario. Las horas de práctica se suman a los requisitos de tu visa de estudiante.\n\nDurante la práctica, deberás completar 60 turnos y un total de 30 horas por semana, además de dos unidades de competencia que te ayudarán a trabajar eficazmente como cocinero y coordinar operaciones de cocina.',
+      '¿Listo para llevar tus habilidades culinarias al siguiente nivel?\n\nEn ABM Further Education, reconocemos que la experiencia real en la industria es tan importante como el aprendizaje teórico y práctico en la cocina.\n\nEl Certificado IV en Gestión de Cocina prepara a los estudiantes para puestos de supervisión y liderazgo en cocinas comerciales, combinando el aprendizaje en el aula con una amplia experiencia práctica. Los estudiantes tendrán la oportunidad de formarse en entornos reales de hostelería, como restaurantes, hoteles y residencias de ancianos, guiados por profesionales experimentados de la industria.\n\nPara reforzar la empleabilidad y garantizar la preparación profesional, el curso ahora incluye 600 horas de prácticas estructuradas en la industria, a partir del Trimestre 3.\n\nA partir del Trimestre 3, los estudiantes pueden completar hasta 16 horas adicionales por semana y, a partir del Trimestre 6, hasta 20 horas adicionales por semana como parte de sus prácticas en la industria. Esta estructura mejorada permite a los estudiantes aplicar lo aprendido en el aula en lugares de trabajo reales, desarrollando habilidades esenciales, confianza y una comprensión más profunda de las operaciones de cocina.\n\nEstas horas de prácticas en la industria son un componente obligatorio de la cualificación y forman parte integral del compromiso de ABM de ofrecer una educación práctica y orientada a la carrera profesional.',
     deliveryMode: {
       title: 'Modalidad de entrega',
       mode: 'Presencial + Prácticas en la industria',
@@ -233,52 +280,7 @@ export const courseInformationData_sp: {
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Accor',
-        desc: 'Accor es un grupo hotelero multinacional líder con sede en Francia, especializado en gestión hotelera y de servicios. Con una amplia cartera de marcas, Accor opera globalmente, ofreciendo alojamiento y servicios relacionados.',
-      },
-      {
-        name: 'AMA Hospitality',
-        desc: 'AMA Hospitality es una empresa de catering y gestión de eventos que se especializa en ofrecer experiencias memorables y personalizadas a sus clientes.',
-      },
-      {
-        name: 'Bills',
-        desc: 'Bills es una popular cadena de restaurantes que sirve comida fresca y deliciosa en un ambiente relajado y amigable.',
-      },
-      {
-        name: 'Catering HQ',
-        desc: 'Catering HQ es una empresa de alimentos y bebidas que opera en varios lugares, como clubes, pubs y centros de eventos.',
-      },
-      {
-        name: 'Grand Royale',
-        desc: 'Grand Royale es un hotel de lujo que ofrece alojamiento elegante y cómodo, alta cocina y servicios de spa.',
-      },
-      {
-        name: 'Hurricane’s Grill',
-        desc: 'Hurricane’s Grill es una parrilla y bar que sirve jugosos y deliciosos filetes, costillas, hamburguesas y ensaladas.',
-      },
-      {
-        name: 'ICC Sydney',
-        desc: 'El International Convention Centre Sydney (ICC Sydney) es el principal recinto de Australia para convenciones, exposiciones y eventos. Ubicado en Darling Harbour, ofrece instalaciones de última generación y vistas al mar. Es reconocido por su sostenibilidad y excelente servicio.',
-      },
-      {
-        name: 'Industry Placement Solutions',
-        desc: 'Industry Placement Solutions es una agencia de reclutamiento y colocación que ayuda a los estudiantes a encontrar prácticas adecuadas y gratificantes en la industria hotelera.',
-      },
-      {
-        name: 'Liverpool Catholic Club',
-        desc: 'Liverpool Catholic Club es un club comunitario que ofrece entretenimiento, comidas y opciones de ocio, como juegos, deportes y salones para eventos.',
-      },
-      {
-        name: 'Primi Italian',
-        desc: 'Primi Italian es un restaurante familiar que sirve auténtica y deliciosa cocina italiana, como pizza, pasta y helado.',
-      },
-      {
-        name: 'Kuon Omakase',
-        desc: 'Kuon Omakase es un restaurante japonés que ofrece una experiencia gastronómica única y exquisita, donde el chef prepara y sirve platos según los ingredientes más frescos y de mejor calidad del día.',
-      },
-    ],
+    partners: cookeryPlacementPartners,
   },
   'industry-placement-hospitality-management': {
     courseCode: 'SIT50422',
@@ -929,5 +931,38 @@ export const courseInformationData_sp: {
         ],
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      'Prácticas en la industria del Certificate IV in Patisserie\n\nLos estudiantes completan formación en el lugar de trabajo en entornos reales de hostelería y producción de pastelería para desarrollar capacidad práctica y confianza.',
+    deliveryMode: {
+      title: 'Modalidad de entrega',
+      mode: 'Presencial + Prácticas en la industria',
+    },
+    deliverySite: {
+      title: 'Lugar de entrega:',
+      locations: [
+        {
+          type: 'Campus ABM',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'Cocina ABM',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Prácticas en la industria',
+          address:
+            'Diversas cocinas de pastelería, panaderías, hoteles, restaurantes y servicios de catering',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'Se recomienda que busques tu propio lugar de prácticas según tus intereses y objetivos, pero también te apoyamos si necesitas ayuda. Tenemos fuertes conexiones con socios de la industria que buscan estudiantes talentosos y motivados. Creemos que esta práctica es clave para prepararte para los retos y oportunidades del sector culinario. Mejorarás tus habilidades culinarias, confianza, comunicación y trabajo en equipo. ¡Es tu oportunidad de brillar!',
+    },
+    partners: cookeryPlacementPartners,
   },
 };

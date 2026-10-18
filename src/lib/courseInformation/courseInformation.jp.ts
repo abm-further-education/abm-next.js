@@ -1,6 +1,53 @@
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
 
 // CourseInformation データマッピング（日本語版）
+const cookeryPlacementPartners: CourseInformationInfo['partners'] = [
+  {
+    name: 'Accor',
+    desc: 'Accor はフランスに本拠を置く多国籍ホスピタリティグループで、ホテル運営とサービス管理を専門としています。高級からエコノミーレベルまで幅広いブランドを有し、世界的に事業を展開しています。',
+  },
+  {
+    name: 'AMA Hospitality',
+    desc: 'AMA Hospitality はケータリングおよびイベント運営会社で、クライアントに合わせた印象的かつパーソナライズされた経験を提供します。',
+  },
+  {
+    name: 'Bills',
+    desc: 'Bills はリラックスした雰囲気で新鮮かつ美味しい料理を提供する人気レストランチェーンです。',
+  },
+  {
+    name: 'Catering HQ',
+    desc: 'Catering HQ はクラブ、パブ、イベント会場などさまざまな場所で飲食サービスを展開する企業です。',
+  },
+  {
+    name: 'Grand Royale',
+    desc: 'Grand Royale は高級ホテルで、優雅で快適な宿泊、洗練されたダイニング、スパ施設などを提供します。',
+  },
+  {
+    name: 'Hurricane’s Grill',
+    desc: 'Hurricane’s Grill はステーキハウス兼バーで、ジューシーなステーキ、リブ、バーガー、サラダを提供します。',
+  },
+  {
+    name: 'ICC Sydney',
+    desc: 'International Convention Centre Sydney（ICC Sydney）は、ダーリングハーバーに位置し、最先端施設と多用途イベント空間を備えたオーストラリアの主要なコンベンションセンターです。',
+  },
+  {
+    name: 'Industry Placement Solutions',
+    desc: 'Industry Placement Solutions は、学生がホスピタリティ業界で適切かつ有益なワークプレースメントを見つける支援をする紹介・斡旋機関です。',
+  },
+  {
+    name: 'Liverpool Catholic Club',
+    desc: 'Liverpool Catholic Club はコミュニティクラブで、ゲーム、スポーツ、宴会場などの娯楽・飲食・レジャー施設を提供しています。',
+  },
+  {
+    name: 'Primi Italian',
+    desc: 'Primi Italian は家族経営のレストランで、ピザ、パスタ、ジェラートなどの本格的なイタリア料理を提供します。',
+  },
+  {
+    name: 'Kuon Omakase',
+    desc: 'Kuon Omakase は日本食レストランで、シェフがその日の最良の食材を用いて一連の料理を提供する独特で洗練された体験を提供します。',
+  },
+];
+
 export const courseInformationData_jp: {
   [key: string]: CourseInformationInfo;
 } = {
@@ -150,7 +197,7 @@ export const courseInformationData_jp: {
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:
-      '料理技能を次のレベルへ引き上げる準備はできていますか？\n\nABM Further Education では、学問学習と実践経験を組み合わせた Certificate IV in Kitchen Management を提供しています。受講者は実際の商業キッチン（レストラン、ホテル、高齢者施設など）で働きながら学び、業界の専門家から直接指導を受けます。\n\n本コースの一部として、第5学期終了時および第6学期中に必須のワークプレースメントを完了する必要があります。これは単なる要件ではなく、教室で学んだ内容を実際に適用し、調理業界での貴重な洞察を得る機会です。必要時間は学生ビザの要件に加えて達成できるよう設計されています。\n\nワークプレースメント期間中には、60シフトをこなし、週あたり30時間の勤務を求められます。また、調理業務を効率的に行う能力と調理作業を調整する能力を養う2つのユニットを修了する必要があります。',
+      '料理技能を次のレベルへ引き上げる準備はできていますか？\n\nABM Further Education では、実際の業界経験はキッチンでの理論・実技の学習と同じくらい重要だと考えています。\n\nCertificate IV in Kitchen Management は、教室での学習と豊富な実践経験を組み合わせ、商業キッチンでの監督職やリーダー職に向けて学生を育成します。学生は経験豊富な業界のプロフェッショナルの指導のもと、レストラン、ホテル、高齢者施設などの実際のホスピタリティ現場でトレーニングを受ける機会があります。\n\n就職力を高め、キャリアへの準備を確実にするため、本コースには学期3から始まる600時間の体系的なインダストリープレースメントが含まれています。\n\n学期3からは週最大16時間、学期6からは週最大20時間の追加時間をインダストリープレースメントの一環として修了できます。この強化された構成により、学生は教室で学んだことを実際の職場で活かし、必要なスキルや自信、キッチン運営へのより深い理解を身につけることができます。\n\nこれらのインダストリープレースメントの時間は資格取得に必須の要素であり、実践的でキャリア志向の教育を提供するという ABM の取り組みの重要な一部です。',
     deliveryMode: {
       title: '提供方式：',
       mode: '対面授業 + インダストリープレースメント (Industry Placement)',
@@ -203,52 +250,7 @@ export const courseInformationData_jp: {
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Accor',
-        desc: 'Accor はフランスに本拠を置く多国籍ホスピタリティグループで、ホテル運営とサービス管理を専門としています。高級からエコノミーレベルまで幅広いブランドを有し、世界的に事業を展開しています。',
-      },
-      {
-        name: 'AMA Hospitality',
-        desc: 'AMA Hospitality はケータリングおよびイベント運営会社で、クライアントに合わせた印象的かつパーソナライズされた経験を提供します。',
-      },
-      {
-        name: 'Bills',
-        desc: 'Bills はリラックスした雰囲気で新鮮かつ美味しい料理を提供する人気レストランチェーンです。',
-      },
-      {
-        name: 'Catering HQ',
-        desc: 'Catering HQ はクラブ、パブ、イベント会場などさまざまな場所で飲食サービスを展開する企業です。',
-      },
-      {
-        name: 'Grand Royale',
-        desc: 'Grand Royale は高級ホテルで、優雅で快適な宿泊、洗練されたダイニング、スパ施設などを提供します。',
-      },
-      {
-        name: 'Hurricane’s Grill',
-        desc: 'Hurricane’s Grill はステーキハウス兼バーで、ジューシーなステーキ、リブ、バーガー、サラダを提供します。',
-      },
-      {
-        name: 'ICC Sydney',
-        desc: 'International Convention Centre Sydney（ICC Sydney）は、ダーリングハーバーに位置し、最先端施設と多用途イベント空間を備えたオーストラリアの主要なコンベンションセンターです。',
-      },
-      {
-        name: 'Industry Placement Solutions',
-        desc: 'Industry Placement Solutions は、学生がホスピタリティ業界で適切かつ有益なワークプレースメントを見つける支援をする紹介・斡旋機関です。',
-      },
-      {
-        name: 'Liverpool Catholic Club',
-        desc: 'Liverpool Catholic Club はコミュニティクラブで、ゲーム、スポーツ、宴会場などの娯楽・飲食・レジャー施設を提供しています。',
-      },
-      {
-        name: 'Primi Italian',
-        desc: 'Primi Italian は家族経営のレストランで、ピザ、パスタ、ジェラートなどの本格的なイタリア料理を提供します。',
-      },
-      {
-        name: 'Kuon Omakase',
-        desc: 'Kuon Omakase は日本食レストランで、シェフがその日の最良の食材を用いて一連の料理を提供する独特で洗練された体験を提供します。',
-      },
-    ],
+    partners: cookeryPlacementPartners,
   },
 
   'industry-placement-hospitality-management': {
@@ -911,5 +913,38 @@ export const courseInformationData_jp: {
         ],
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      'Certificate IV in Patisserie のインダストリープレースメント\n\n学生は実際のホスピタリティおよびペストリー製造の現場で職場研修を行い、実践的な能力と自信を身につけます。',
+    deliveryMode: {
+      title: '提供方式：',
+      mode: '対面授業 + インダストリープレースメント (Industry Placement)',
+    },
+    deliverySite: {
+      title: '提供場所：',
+      locations: [
+        {
+          type: 'ABM キャンパス',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM キッチン',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'インダストリープレースメント (Industry Placement)',
+          address:
+            '各種ペストリーキッチン、ベーカリー、ホテル、レストラン、ケータリング施設など',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        'ご自身の興味や目標に合うワークプレースメントを見つけることを推奨しますが、必要なサポートも提供します。ABM は業界パートナーとの強いつながりを持ち、意欲ある学生を支援しています。\n\nこのワークプレースメントは、調理業界の課題と機会に備えるための重要な要素です。単なる調理技術の向上だけでなく、信頼、自信、コミュニケーション、チームワーク能力を発展させる機会でもあります。自身の能力を示すチャンスです！',
+    },
+    partners: cookeryPlacementPartners,
   },
 };

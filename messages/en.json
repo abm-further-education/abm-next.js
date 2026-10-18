@@ -998,6 +998,238 @@
           "answer": "The minimum entry requirement is IELTS 5.5 or equivalent. If you currently hold IELTS 4.5 or equivalent, you can enrol in the course with Plus Nursing English, which provides additional language support tailored to healthcare settings. If you do not have an English test result, you may have your English proficiency assessed through the ABM English Placement Test."
         }
       }
+    },
+    "pathwayFlowTitle": "Nursing Support Pathway Flow",
+    "keyBenefitsTitle": "Key Benefits & Work Placement information",
+    "requiredDocuments": {
+      "title": "Required documents:",
+      "items": {
+        "policeCheck": "National Police Check",
+        "wwcc": "Working With Children Check",
+        "vaccinationRecord": "Vaccination Record"
+      }
+    },
+    "paymentOptions": {
+      "title": "Payment Options",
+      "items": {
+        "instalment": "Full fee upfront or instalment plans (<link>Contact us</link>)",
+        "austudy": "Eligible students may apply for <link>Austudy</link> and quote our institution code 2R377."
+      }
+    }
+  },
+  "industryPlacementPage": {
+    "hsa": {
+      "metadataTitle": "Industry Placement - Health Services Assistance",
+      "metadataDescription": "Complete 80 hours of mandatory industry placement for Certificate III in Health Services Assistance. Learn about required documents including immunisation records, police checks, and NDIS Worker Check.",
+      "bannerTitle": "Industry Placement",
+      "heading": "Industry Placement Requirements (80 Hours)",
+      "intro": "To complete the mandatory 80 hours of industry placement, students must prepare the following documents:",
+      "immunisationTitle": "Full immunisation record",
+      "immunisationNote": "(with a certified English translation)",
+      "immunisations": [
+        {
+          "name": "dTpa (Diphtheria, Tetanus, Pertussis / Whooping Cough)",
+          "desc": "- 1 adult dose within the last 10 years"
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "- Full vaccination course (Plus blood test showing Anti-HBs ≥ 10mIU/mL, or other accepted evidence)"
+        },
+        {
+          "name": "MMR (Measles, Mumps, Rubella)",
+          "desc": "- 2 doses at least 1 month apart Or positive serology/born before 1966"
+        },
+        {
+          "name": "Varicella (Chickenpox)",
+          "desc": "- 2 doses of vaccine Or positive immunity evidence/AIR statement"
+        },
+        {
+          "name": "Tuberculosis (TB) Screening (if required)",
+          "desc": "IGRA or TST test depending on background/travel history"
+        },
+        {
+          "name": "Influenza Vaccine",
+          "desc": "Current seasonal flu vaccine each year"
+        },
+        {
+          "name": "COVID-19 Vaccine",
+          "desc": "Strongly recommended to stay up to date"
+        }
+      ],
+      "immunisationDisclaimer": "*Please note that immunisation and screening requirements may vary depending on individual hospital or placement provider requirements at the time of placement. Additional vaccinations, tests, or updated evidence may be requested by the hospital before clinical placement commencement.",
+      "checks": [
+        "National Police Check",
+        "Working With Children Check",
+        "NDIS Worker Check"
+      ],
+      "applyAfterArrival": "(apply after arriving in Australia)",
+      "guidance": "ABM will provide guidance on how to apply for these checks once you are in Australia."
+    },
+    "vaccination": {
+      "regardingTitle": "Regarding Vaccinations",
+      "mandatory": "It is mandatory to have received the vaccinations listed below and to have the required antibodies before commencing your placement.",
+      "recommendDocs": "We recommend bringing the following documents that can prove your vaccination history:",
+      "docs": [
+        "Maternal and Child Health Handbook",
+        "COVID-19 vaccination certificate (either paper or electronic format is acceptable)",
+        "Hepatitis B vaccination certificate (certificates issued when you received group vaccinations at school, etc. are also valid)",
+        "Hospital health check-up results (if you are a nurse currently working at a hospital and have health check-up results that include the antibody results listed below, and the results are from within the past six months to one year, please bring them with you.)"
+      ],
+      "overseasRecords": "Overseas vaccination records issued in English can be used as evidence. However, some hospitals may require translated documents to be certified before accepting them as evidence.",
+      "gpHelp": "If you need help finding a GP who speaks your language, please contact us.",
+      "avoidCosts": "This can also help you avoid additional costs for translating documents during your medical consultation.",
+      "requiredTitle": "List of Required Vaccinations",
+      "required": [
+        {
+          "name": "dTpa (Diphtheria, Tetanus, Pertussis / Whooping Cough)",
+          "desc": "One adult dose within the past 10 years is required. For example, in Japan, this vaccination is not routinely given to adults, so many people receive an additional dose after arriving in Australia."
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "Three doses of the vaccine plus a blood test showing Anti-HBs ≥ 10 mIU/mL are required."
+        },
+        {
+          "name": "MMR (Measles, Mumps, Rubella)",
+          "desc": "Two doses at least one month apart, or a positive antibody test result, are required."
+        },
+        {
+          "name": "Varicella / Chickenpox",
+          "desc": "Two doses of the vaccine, or antibody results showing immunity, are required."
+        },
+        {
+          "name": "Tuberculosis (TB)",
+          "desc": "The requirements vary depending on your country of birth, residential history, travel history, etc."
+        },
+        {
+          "name": "Influenza",
+          "desc": "As the circulating strains vary from country to country, vaccination can be obtained inexpensively at a pharmacy or similar after arriving in Australia."
+        }
+      ],
+      "costsTitle": "Regarding Vaccination Costs",
+      "costs": [
+        "The cost of vaccinations varies greatly depending on each individual's circumstances.",
+        "The average cost for students is at least AUD 300.",
+        "If you do not have sufficient vaccination records or antibody results, the cost may be close to AUD 1,000, so students should take this into consideration when preparing their budget."
+      ],
+      "processTitle": "Vaccination Process",
+      "processNote": "(This is only an example and the actual process may differ.)",
+      "process": [
+        "After arriving in Australia, please visit the clinic you have made an appointment with and bring the necessary documents. We will provide you with information on how to make the clinic appointment after you arrive in Australia.",
+        "At the initial consultation, you will receive the dTpa vaccination and have a blood test to check your antibody levels.",
+        "You will have another consultation once the blood test results are available.",
+        "After that, if additional vaccinations are required, you will receive them as necessary."
+      ],
+      "otherTitle": "Other Requirements & Costs",
+      "table": {
+        "requirement": "Requirement",
+        "volunteer": "Volunteer Cost",
+        "paid": "Paid Worker / Employment Cost",
+        "details": "Additional Details"
+      },
+      "wwcc": {
+        "name": "Working with Children Check (WWCC)",
+        "free": "Free",
+        "nswPricing": "(NSW pricing)",
+        "details": "Valid for 5 years. Fees vary by state (e.g., Victoria is ~$136.60)."
+      },
+      "police": {
+        "name": "National Police Check",
+        "details": "Applying directly via the <link>NSW Police Force Portal</link> costs $55.80, while private accredited online providers charge between $52.90 and $76.90."
+      },
+      "firstAid": {
+        "name": "First Aid Course <i>(HLTAID011)</i>",
+        "details": "Commercial RTOs (like <awfa>Australia Wide First Aid</awfa>) charge $80 – $120, while premium providers like St John Ambulance or the <redcross>Red Cross</redcross> charge $195 – $220."
+      },
+      "pricesDisclaimer": "Prices above are indicative only and may change. Please check with the relevant provider for current pricing before proceeding."
+    },
+    "kitchen": {
+      "metadataTitle": "Industry Placement - Work Placement",
+      "metadataDescription": "Gain hands-on experience in commercial kitchens through our industry placement program. Apply your culinary skills in real-world environments.",
+      "bannerTitle": "Industry Placement",
+      "intro": "The course now includes 600 hours of mandatory work placement, providing students with extensive hands-on industry experience.\nStudents can work additional hours during placement terms in compliance with their student visa conditions.",
+      "schedule": [
+        {
+          "term": "Term 1 - Term 2",
+          "content": "Theory + Practical Classes"
+        },
+        {
+          "term": "Term 3",
+          "termSub": "(week 6-10)",
+          "content": "Theory + Practical Classes",
+          "bullets": [
+            "Week 6 - 10: additional 16 hours per week work placement"
+          ]
+        },
+        {
+          "term": "Term 4 - Term 5",
+          "content": "Theory + Practical Classes",
+          "sub": "additional 16 hours per week work placement"
+        },
+        {
+          "term": "Term 6",
+          "content": "20 hours per week work placement"
+        }
+      ]
+    },
+    "patisserie": {
+      "metadataTitle": "Industry Placement (Patisserie)",
+      "metadataDescription": "Gain hands-on pastry and dessert production experience through industry placement aligned to the Certificate IV in Patisserie.",
+      "bannerTitle": "Industry Placement (Patisserie)",
+      "intro": "Work placement is structured across terms and delivered in real industry settings as follows.",
+      "schedule": [
+        {
+          "term": "Term 1",
+          "content": "Theory"
+        },
+        {
+          "term": "Term 2",
+          "content": "Theory + Prac"
+        },
+        {
+          "term": "Term 3",
+          "termSub": "(week 6-10)",
+          "content": "Theory + Practical Classes",
+          "bullets": [
+            "Week 6 – 10: additional 16 hours per week work placement"
+          ]
+        },
+        {
+          "term": "Term 4 - Term 5",
+          "content": "Theory + Practical Classes",
+          "sub": "additional 16 hours per week work placement"
+        },
+        {
+          "term": "Term 6",
+          "content": "20 hours per week work placement"
+        }
+      ]
+    },
+    "hospitality": {
+      "metadataTitle": "Industry Placement for Hospitality Management (F&B)",
+      "metadataDescription": "Hands-on experience in food and beverage service through our hospitality industry placement program.",
+      "bannerTitle": "Industry Placement for Hospitality Management (F&B)",
+      "intro": "The course now includes 285 hours of mandatory work placement, providing students with extensive hands-on industry experience.\nStudents can work additional hours during placement terms in compliance with their student visa conditions.",
+      "schedule": [
+        {
+          "term": "Term 1 - Term 4",
+          "content": "Theory + Practical Classes"
+        },
+        {
+          "term": "Term 5",
+          "content": "SITHIND008 Work effectively in hospitality service",
+          "bullets": [
+            "Week 1 – 10: 150 hours - 1 day/week Face to Face class + 3 days/week Work Placement (5 hours x 3 shifts)"
+          ]
+        },
+        {
+          "term": "Term 6",
+          "content": "SITHIND008 Work effectively in hospitality service",
+          "bullets": [
+            "Week 1 – 9: 1 day/week Face to Face class + 3 days per week Work Placement (5 hours x 3 shifts)",
+            "Week 10: Theory + Practical Class"
+          ]
+        }
+      ]
     }
   }
 }

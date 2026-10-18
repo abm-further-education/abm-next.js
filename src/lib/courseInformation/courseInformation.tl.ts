@@ -1,6 +1,53 @@
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
 
 // CourseInformation 데이터 매핑
+const cookeryPlacementPartners: CourseInformationInfo['partners'] = [
+  {
+    name: 'Accor',
+    desc: 'Ang Accor ay isang nangungunang multinational hospitality group na nakabase sa France, na nag-specialize sa hotel at service management.',
+  },
+  {
+    name: 'AMA Hospitality',
+    desc: 'Ang AMA Hospitality ay isang catering at event management company na nag-specialize sa paghahatid ng mga memorable at personalized na karanasan sa kanilang mga kliyente.',
+  },
+  {
+    name: 'Bills',
+    desc: 'Ang Bills ay isang sikat na restaurant chain na naghahain ng sariwang at masarap na pagkain na may relaxed at friendly na kapaligiran.',
+  },
+  {
+    name: 'Catering HQ',
+    desc: "Ang Catering HQ ay isang food and beverage company na nag-ooperate sa iba't ibang venue, tulad ng mga club, pub, at function centre.",
+  },
+  {
+    name: 'Grand Royale',
+    desc: 'Ang Grand Royale ay isang luxury hotel na nag-aalok ng elegante at komportableng akomodasyon, fine dining, at spa facilities.',
+  },
+  {
+    name: "Hurricane's Grill",
+    desc: "Ang Hurricane's Grill ay isang steakhouse at bar na naghahain ng masasarap at makatas na steak, ribs, burger, at salad.",
+  },
+  {
+    name: 'ICC Sydney',
+    desc: 'Ang International Convention Centre Sydney (ICC Sydney) ay ang nangungunang venue ng Australia para sa mga convention, exhibition, at event.',
+  },
+  {
+    name: 'Industry Placement Solutions',
+    desc: 'Ang Industry Placement Solutions ay isang recruitment at placement agency na tumutulong sa mga estudyante na makahanap ng angkop at rewarding na work placement sa hospitality industry.',
+  },
+  {
+    name: 'Liverpool Catholic Club',
+    desc: "Ang Liverpool Catholic Club ay isang community club na nag-aalok ng iba't ibang entertainment, dining, at leisure options.",
+  },
+  {
+    name: 'Primi Italian',
+    desc: 'Ang Primi Italian ay isang family-owned restaurant na naghahain ng authentic at masarap na Italian cuisine.',
+  },
+  {
+    name: 'Kuon Omakase',
+    desc: 'Ang Kuon Omakase ay isang Japanese restaurant na nag-aalok ng kakaiba at napakagandang dining experience.',
+  },
+];
+
 export const courseInformationData: { [key: string]: CourseInformationInfo } = {
   'sit40521-certificate-iv-in-kitchen-management': {
     courseCode: 'SIT40521',
@@ -197,52 +244,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Accor',
-        desc: 'Ang Accor ay isang nangungunang multinational hospitality group na nakabase sa France, na nag-specialize sa hotel at service management.',
-      },
-      {
-        name: 'AMA Hospitality',
-        desc: 'Ang AMA Hospitality ay isang catering at event management company na nag-specialize sa paghahatid ng mga memorable at personalized na karanasan sa kanilang mga kliyente.',
-      },
-      {
-        name: 'Bills',
-        desc: 'Ang Bills ay isang sikat na restaurant chain na naghahain ng sariwang at masarap na pagkain na may relaxed at friendly na kapaligiran.',
-      },
-      {
-        name: 'Catering HQ',
-        desc: "Ang Catering HQ ay isang food and beverage company na nag-ooperate sa iba't ibang venue, tulad ng mga club, pub, at function centre.",
-      },
-      {
-        name: 'Grand Royale',
-        desc: 'Ang Grand Royale ay isang luxury hotel na nag-aalok ng elegante at komportableng akomodasyon, fine dining, at spa facilities.',
-      },
-      {
-        name: "Hurricane's Grill",
-        desc: "Ang Hurricane's Grill ay isang steakhouse at bar na naghahain ng masasarap at makatas na steak, ribs, burger, at salad.",
-      },
-      {
-        name: 'ICC Sydney',
-        desc: 'Ang International Convention Centre Sydney (ICC Sydney) ay ang nangungunang venue ng Australia para sa mga convention, exhibition, at event.',
-      },
-      {
-        name: 'Industry Placement Solutions',
-        desc: 'Ang Industry Placement Solutions ay isang recruitment at placement agency na tumutulong sa mga estudyante na makahanap ng angkop at rewarding na work placement sa hospitality industry.',
-      },
-      {
-        name: 'Liverpool Catholic Club',
-        desc: "Ang Liverpool Catholic Club ay isang community club na nag-aalok ng iba't ibang entertainment, dining, at leisure options.",
-      },
-      {
-        name: 'Primi Italian',
-        desc: 'Ang Primi Italian ay isang family-owned restaurant na naghahain ng authentic at masarap na Italian cuisine.',
-      },
-      {
-        name: 'Kuon Omakase',
-        desc: 'Ang Kuon Omakase ay isang Japanese restaurant na nag-aalok ng kakaiba at napakagandang dining experience.',
-      },
-    ],
+    partners: cookeryPlacementPartners,
   },
   'industry-placement-hospitality-management': {
     courseCode: 'SIT50422',
@@ -862,5 +864,38 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
         ],
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      'Industry Placement para sa Certificate IV in Patisserie\n\nKinukumpleto ng mga estudyante ang workplace training sa totoong hospitality at pastry production na kapaligiran upang mapaunlad ang praktikal na kakayahan at kumpiyansa.',
+    deliveryMode: {
+      title: 'Paraan ng Paghahatid',
+      mode: 'Harapan + Industry Placement',
+    },
+    deliverySite: {
+      title: 'Lugar ng Paghahatid:',
+      locations: [
+        {
+          type: 'ABM Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: 'Industry Placement',
+          address:
+            "Iba't ibang pastry kitchen, bakery, hotel, restaurant, at catering environment",
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        "Hinihikayat ka naming makahanap ng sarili mong work placement na akma sa iyong mga interes at layunin, ngunit narito rin kami upang suportahan ka kung kailangan mo ng anumang tulong. Mayroon kaming matibay na koneksyon sa iba't ibang industry partner na laging naghahanap ng mga talentado at motivated na estudyante tulad mo.\n\nNaniniwala kami na ang work placement na ito ay isang mahalagang bahagi ng iyong kurso na maghahanda sa iyo para sa mga hamon at oportunidad ng industriya ng pagluluto.",
+    },
+    partners: cookeryPlacementPartners,
   },
 };

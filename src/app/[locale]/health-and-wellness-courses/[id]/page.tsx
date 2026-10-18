@@ -16,7 +16,6 @@ const menuItems = ['Course Information', 'Course Detail', 'Units'];
 const mappingCourseTitle: { [key: string]: string } = {
   'hlt33115-certificate-iii-in-health-services-assistance':
     'HLT33115 Certificate III in Health Services Assistance',
-  'industry-placement-health-services-assistance': 'Industry Placement',
 };
 
 const mappingCourseImage: { [key: string]: string } = {
@@ -33,11 +32,13 @@ export async function generateMetadata({
   const { id, locale } = await params;
 
   if (id === 'industry-placement-health-services-assistance') {
+    const t = await getTranslations({
+      locale,
+      namespace: 'industryPlacementPage.hsa',
+    });
     return {
-      title:
-        'Industry Placement - Health Services Assistance | ABM Further Education',
-      description:
-        'Complete 80 hours of mandatory industry placement for Certificate III in Health Services Assistance. Learn about required documents including immunisation records, police checks, and NDIS Worker Check.',
+      title: `${t('metadataTitle')} | ABM Further Education`,
+      description: t('metadataDescription'),
     };
   }
 
@@ -64,13 +65,17 @@ export default async function Page({
     id === 'industry-placement-health-services-assistance';
 
   if (isIndustryPlacement) {
+    const t = await getTranslations({
+      locale,
+      namespace: 'industryPlacementPage.hsa',
+    });
     return (
       <div className="pb-40">
         <Banner
           slides={[
             {
               imgPath: mappingCourseImage[id] || '/courses/health/health_1.png',
-              title: mappingCourseTitle[id],
+              title: t('bannerTitle'),
               content: '',
             },
           ]}

@@ -2,8 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import getCourseInformationData from '@/lib/courseInformation';
 import { useParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+
+type ScheduleItem = {
+  term: string;
+  termSub?: string;
+  content: string;
+  bullets?: string[];
+  sub?: string;
+};
 
 function IndustryPlacement() {
+  const t = useTranslations('industryPlacementPage.kitchen');
   const params = useParams();
   let locale = 'en';
   if (params?.locale) {
@@ -27,27 +37,7 @@ function IndustryPlacement() {
     ));
   };
 
-  const placementSchedule = [
-    {
-      term: 'Term 1 - Term 2',
-      content: 'Theory + Practical Classes',
-    },
-    {
-      term: 'Term 3',
-      termSub: '(week 6-10)',
-      content: 'Theory + Practical Classes',
-      bullet: 'Week 6 - 10: additional 16 hours per week work placement',
-    },
-    {
-      term: 'Term 4 - Term 5',
-      content: 'Theory + Practical Classes',
-      sub: 'additional 16 hours per week work placement',
-    },
-    {
-      term: 'Term 6',
-      content: '20 hours per week work placement',
-    },
-  ];
+  const placementSchedule = t.raw('schedule') as ScheduleItem[];
 
   return (
     <div>
@@ -57,11 +47,7 @@ function IndustryPlacement() {
       <p>{renderTextWithLineBreaks(courseInfo?.description)}</p>
 
       <p className="my-20 text-sm text-gray-800 leading-relaxed">
-        The course now includes 600 hours of mandatory work placement, providing
-        students with extensive hands-on industry experience.
-        <br />
-        Students can work additional hours during placement terms in compliance
-        with their student visa conditions.
+        {renderTextWithLineBreaks(t('intro'))}
       </p>
 
       <div className="flex flex-col gap-4 my-20">
@@ -75,9 +61,13 @@ function IndustryPlacement() {
             </div>
             <div className="flex-1 bg-[#F0DCC4] px-6 py-4 flex flex-col justify-center">
               <p className="font-bold text-gray-900 text-sm">{item.content}</p>
-              {item.bullet && (
+              {item.bullets && (
                 <ul className="list-disc list-inside mt-1">
-                  <li className="text-sm text-gray-800">{item.bullet}</li>
+                  {item.bullets.map((b, bIdx) => (
+                    <li key={bIdx} className="text-sm text-gray-800">
+                      {b}
+                    </li>
+                  ))}
                 </ul>
               )}
               {item.sub && (

@@ -1,5 +1,52 @@
 import { CourseInformationInfo } from '@/domains/courses/components/CourseInformation';
 
+const cookeryPlacementPartners: CourseInformationInfo['partners'] = [
+  {
+    name: 'Accor',
+    desc: 'Accor는 프랑스에 본사를 둔 세계적인 호텔 및 서비스 관리 그룹으로, 다양한 브랜드 포트폴리오를 통해 전 세계적으로 숙박 및 관련 서비스를 제공합니다.',
+  },
+  {
+    name: 'AMA Hospitality',
+    desc: 'AMA Hospitality는 맞춤형 케이터링 및 이벤트 기획 전문 기업으로, 고객에게 특별한 경험을 제공합니다.',
+  },
+  {
+    name: 'Bills',
+    desc: 'Bills는 신선하고 맛있는 음식을 편안하고 친근한 분위기에서 제공하는 인기 레스토랑 체인입니다.',
+  },
+  {
+    name: 'Catering HQ',
+    desc: 'Catering HQ는 클럽, 펍, 연회장 등 다양한 장소에서 운영되는 식음료 전문 기업입니다.',
+  },
+  {
+    name: 'Grand Royale',
+    desc: 'Grand Royale은 고급스러운 숙박, 파인 다이닝, 스파 시설을 제공하는 럭셔리 호텔입니다.',
+  },
+  {
+    name: 'Hurricane’s Grill',
+    desc: 'Hurricane’s Grill은 스테이크, 립, 버거, 샐러드 등 다양한 메뉴를 제공하는 스테이크하우스 & 바입니다.',
+  },
+  {
+    name: 'ICC Sydney',
+    desc: 'ICC Sydney(국제컨벤션센터 시드니)는 호주 최고의 컨벤션, 전시, 이벤트 장소로, 다링 하버에 위치해 있습니다. 최첨단 시설과 아름다운 워터프론트 전망, 뛰어난 서비스로 다양한 규모의 행사를 개최할 수 있습니다.',
+  },
+  {
+    name: 'Industry Placement Solutions',
+    desc: 'Industry Placement Solutions는 학생들이 호스피탈리티 업계에서 적합한 실습처를 찾을 수 있도록 지원하는 리크루팅 및 실습 매칭 전문 기관입니다.',
+  },
+  {
+    name: 'Liverpool Catholic Club',
+    desc: 'Liverpool Catholic Club은 게임, 스포츠, 연회장 등 다양한 엔터테인먼트와 다이닝, 레저를 제공하는 커뮤니티 클럽입니다.',
+  },
+  {
+    name: 'Primi Italian',
+    desc: 'Primi Italian은 정통 이탈리안 요리(피자, 파스타, 젤라토 등)를 제공하는 가족 경영 레스토랑입니다.',
+  },
+  {
+    name: 'Kuon Omakase',
+    desc: 'Kuon Omakase는 셰프가 그날의 신선한 재료로 직접 요리를 선보이는 특별한 오마카세 다이닝 경험을 제공하는 일본 레스토랑입니다.',
+  },
+];
+
 export const courseInformationData_kr: {
   [key: string]: CourseInformationInfo;
 } = {
@@ -159,7 +206,7 @@ export const courseInformationData_kr: {
   'industry-placement-work-placement': {
     courseCode: 'SIT40521 + SIT50422',
     description:
-      '요리 실력을 한 단계 끌어올릴 준비가 되셨나요?\n\nABM Further Education에서는 학문적 학습과 실무 경험을 결합한 키친 매니지먼트 수료증 IV 과정을 제공합니다. 학생들은 레스토랑, 호텔, 요양 시설 등 실제 상업 주방에서 근무하며 업계 최고의 전문가로부터 배울 수 있습니다.\n\n과정의 일환으로, 5학기 말과 6학기 전체에 걸쳐 필수 실습(워크플레이스먼트)을 이수해야 합니다. 이는 단순한 요건이 아니라, 교실에서 배운 내용을 실제로 적용하고 요리 업계에 대한 소중한 인사이트를 얻을 수 있는 기회입니다. 학생비자 요건과 별개로 실습 시간도 인정받을 수 있습니다.\n\n실습 기간 동안 주 30시간, 총 60회 근무를 완료해야 하며, 조리사로서 효과적으로 일하고 조리 작업을 조정하는 데 도움이 되는 2개의 역량 단위도 이수해야 합니다.',
+      '요리 실력을 한 단계 끌어올릴 준비가 되셨나요?\n\nABM Further Education은 실제 산업 현장 경험이 주방에서의 이론 및 실습 학습만큼 중요하다고 생각합니다.\n\n키친 매니지먼트 자격증 IV(Certificate IV in Kitchen Management) 과정은 교실 수업과 폭넓은 실무 경험을 결합하여, 학생들이 상업 주방에서 감독 및 리더 역할을 수행할 수 있도록 준비시킵니다. 학생들은 경험 많은 업계 전문가의 지도 아래 레스토랑, 호텔, 요양 시설 등 실제 호스피탈리티 현장에서 훈련할 기회를 갖게 됩니다.\n\n취업 경쟁력을 강화하고 커리어 준비를 돕기 위해, 본 과정에는 3학기부터 시작되는 600시간의 체계적인 산업체 실습이 포함됩니다.\n\n3학기부터는 주당 최대 16시간, 6학기부터는 주당 최대 20시간의 추가 실습을 산업체 실습의 일환으로 이수할 수 있습니다. 이렇게 강화된 구조를 통해 학생들은 교실에서 배운 내용을 실제 현장에 적용하며 필수 역량과 자신감, 그리고 주방 운영에 대한 깊은 이해를 키울 수 있습니다.\n\n이 산업체 실습 시간은 자격 취득을 위한 필수 구성 요소이며, 실용적이고 커리어 중심의 교육을 제공하고자 하는 ABM의 약속에서 핵심적인 부분입니다.',
     deliveryMode: {
       title: '교육 방식',
       mode: '대면 수업 + 산업체 실습',
@@ -207,52 +254,7 @@ export const courseInformationData_kr: {
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Accor',
-        desc: 'Accor는 프랑스에 본사를 둔 세계적인 호텔 및 서비스 관리 그룹으로, 다양한 브랜드 포트폴리오를 통해 전 세계적으로 숙박 및 관련 서비스를 제공합니다.',
-      },
-      {
-        name: 'AMA Hospitality',
-        desc: 'AMA Hospitality는 맞춤형 케이터링 및 이벤트 기획 전문 기업으로, 고객에게 특별한 경험을 제공합니다.',
-      },
-      {
-        name: 'Bills',
-        desc: 'Bills는 신선하고 맛있는 음식을 편안하고 친근한 분위기에서 제공하는 인기 레스토랑 체인입니다.',
-      },
-      {
-        name: 'Catering HQ',
-        desc: 'Catering HQ는 클럽, 펍, 연회장 등 다양한 장소에서 운영되는 식음료 전문 기업입니다.',
-      },
-      {
-        name: 'Grand Royale',
-        desc: 'Grand Royale은 고급스러운 숙박, 파인 다이닝, 스파 시설을 제공하는 럭셔리 호텔입니다.',
-      },
-      {
-        name: 'Hurricane’s Grill',
-        desc: 'Hurricane’s Grill은 스테이크, 립, 버거, 샐러드 등 다양한 메뉴를 제공하는 스테이크하우스 & 바입니다.',
-      },
-      {
-        name: 'ICC Sydney',
-        desc: 'ICC Sydney(국제컨벤션센터 시드니)는 호주 최고의 컨벤션, 전시, 이벤트 장소로, 다링 하버에 위치해 있습니다. 최첨단 시설과 아름다운 워터프론트 전망, 뛰어난 서비스로 다양한 규모의 행사를 개최할 수 있습니다.',
-      },
-      {
-        name: 'Industry Placement Solutions',
-        desc: 'Industry Placement Solutions는 학생들이 호스피탈리티 업계에서 적합한 실습처를 찾을 수 있도록 지원하는 리크루팅 및 실습 매칭 전문 기관입니다.',
-      },
-      {
-        name: 'Liverpool Catholic Club',
-        desc: 'Liverpool Catholic Club은 게임, 스포츠, 연회장 등 다양한 엔터테인먼트와 다이닝, 레저를 제공하는 커뮤니티 클럽입니다.',
-      },
-      {
-        name: 'Primi Italian',
-        desc: 'Primi Italian은 정통 이탈리안 요리(피자, 파스타, 젤라토 등)를 제공하는 가족 경영 레스토랑입니다.',
-      },
-      {
-        name: 'Kuon Omakase',
-        desc: 'Kuon Omakase는 셰프가 그날의 신선한 재료로 직접 요리를 선보이는 특별한 오마카세 다이닝 경험을 제공하는 일본 레스토랑입니다.',
-      },
-    ],
+    partners: cookeryPlacementPartners,
   },
   'industry-placement-hospitality-management': {
     courseCode: 'SIT50422',
@@ -874,5 +876,38 @@ export const courseInformationData_kr: {
         ],
       },
     ],
+  },
+  'industry-placement-patisserie': {
+    courseCode: 'SIT40721',
+    description:
+      '파티세리 자격증 IV 과정 산업체 실습\n\n학생들은 실제 호스피탈리티 및 페이스트리 제조 현장에서 직무 교육을 이수하며 실무 역량과 자신감을 키웁니다.',
+    deliveryMode: {
+      title: '교육 방식',
+      mode: '대면 수업 + 산업체 실습',
+    },
+    deliverySite: {
+      title: '교육 장소:',
+      locations: [
+        {
+          type: 'ABM Main Campus',
+          address: '242 Castlereagh Street Sydney NSW 2000 Australia',
+        },
+        {
+          type: 'ABM Kitchen',
+          address:
+            'Shop 22, The Quay Haymarket, 61-79 Quay Street, Haymarket, 2000',
+        },
+        {
+          type: '산업체 실습',
+          address:
+            '다양한 페이스트리 주방, 베이커리, 호텔, 레스토랑 및 케이터링 현장',
+        },
+      ],
+    },
+    additionalInfo: {
+      description:
+        '학생이 원하는 실습처를 직접 찾는 것을 권장하지만, 필요시 학교에서 다양한 업계 파트너와의 연계를 통해 지원해드립니다. 실습은 요리 업계에서의 도전과 기회를 준비하는 핵심 요소로, 요리 실력뿐 아니라 자신감, 커뮤니케이션, 팀워크 능력도 함께 키울 수 있습니다. 이 기회를 통해 여러분의 역량을 마음껏 발휘해보세요!',
+    },
+    partners: cookeryPlacementPartners,
   },
 };

@@ -993,6 +993,238 @@
           "answer": "El requisito mínimo de entrada es IELTS 5.5 o equivalente. Si actualmente tiene IELTS 4.5 o equivalente, puede inscribirse en el curso con Plus Nursing English, que proporciona apoyo lingüístico adicional adaptado a entornos de atención médica. Si no tiene un resultado de prueba de inglés, puede evaluar su competencia en inglés a través de la Prueba de Ubicación de Inglés de ABM."
         }
       }
+    },
+    "pathwayFlowTitle": "Flujo de la Ruta de Apoyo de Enfermería",
+    "keyBenefitsTitle": "Beneficios clave e información sobre las prácticas",
+    "requiredDocuments": {
+      "title": "Documentos requeridos:",
+      "items": {
+        "policeCheck": "Certificado Nacional de Antecedentes Penales (National Police Check)",
+        "wwcc": "Verificación para trabajar con menores (Working With Children Check)",
+        "vaccinationRecord": "Registro de vacunación"
+      }
+    },
+    "paymentOptions": {
+      "title": "Opciones de pago",
+      "items": {
+        "instalment": "Pago completo por adelantado o planes de pago a plazos (<link>Contáctanos</link>)",
+        "austudy": "Los estudiantes que cumplan los requisitos pueden solicitar <link>Austudy</link> indicando nuestro código de institución 2R377."
+      }
+    }
+  },
+  "industryPlacementPage": {
+    "hsa": {
+      "metadataTitle": "Prácticas Profesionales - Asistencia en Servicios de Salud",
+      "metadataDescription": "Completa 80 horas de prácticas profesionales obligatorias del Certificate III in Health Services Assistance. Conoce los documentos requeridos, como el registro de vacunación, el certificado de antecedentes penales y el NDIS Worker Check.",
+      "bannerTitle": "Prácticas Profesionales",
+      "heading": "Requisitos de las prácticas profesionales (80 horas)",
+      "intro": "Para completar las 80 horas obligatorias de prácticas profesionales, los estudiantes deben preparar los siguientes documentos:",
+      "immunisationTitle": "Registro completo de vacunación",
+      "immunisationNote": "(con traducción certificada al inglés)",
+      "immunisations": [
+        {
+          "name": "dTpa (Difteria, Tétanos, Tos ferina)",
+          "desc": "- 1 dosis para adultos en los últimos 10 años"
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "- Pauta de vacunación completa (más análisis de sangre con Anti-HBs ≥ 10mIU/mL u otra evidencia aceptada)"
+        },
+        {
+          "name": "Triple vírica (Sarampión, Paperas, Rubéola)",
+          "desc": "- 2 dosis con al menos 1 mes de diferencia, o serología positiva/haber nacido antes de 1966"
+        },
+        {
+          "name": "Varicela",
+          "desc": "- 2 dosis de la vacuna, o evidencia de inmunidad/declaración AIR"
+        },
+        {
+          "name": "Detección de tuberculosis (TB) (si se requiere)",
+          "desc": "Prueba IGRA o TST según los antecedentes/historial de viajes"
+        },
+        {
+          "name": "Vacuna contra la gripe",
+          "desc": "Vacuna antigripal de la temporada vigente cada año"
+        },
+        {
+          "name": "Vacuna contra la COVID-19",
+          "desc": "Se recomienda encarecidamente mantenerla al día"
+        }
+      ],
+      "immunisationDisclaimer": "*Ten en cuenta que los requisitos de vacunación y de detección pueden variar según el hospital o el centro de prácticas en el momento de las prácticas. El hospital puede solicitar vacunas, pruebas o evidencias actualizadas adicionales antes del inicio de las prácticas clínicas.",
+      "checks": [
+        "Certificado Nacional de Antecedentes Penales (National Police Check)",
+        "Verificación para trabajar con menores (Working With Children Check)",
+        "Verificación de trabajador NDIS (NDIS Worker Check)"
+      ],
+      "applyAfterArrival": "(solicitar después de llegar a Australia)",
+      "guidance": "ABM te orientará sobre cómo solicitar estas verificaciones una vez que estés en Australia."
+    },
+    "vaccination": {
+      "regardingTitle": "Sobre las vacunas",
+      "mandatory": "Es obligatorio haber recibido las vacunas que se indican a continuación y tener los anticuerpos necesarios antes de comenzar las prácticas.",
+      "recommendDocs": "Te recomendamos traer los siguientes documentos que acrediten tu historial de vacunación:",
+      "docs": [
+        "Cartilla de salud materno-infantil",
+        "Certificado de vacunación contra la COVID-19 (se acepta en formato papel o electrónico)",
+        "Certificado de vacunación contra la hepatitis B (también son válidos los certificados emitidos en vacunaciones grupales, por ejemplo en la escuela)",
+        "Resultados de chequeos médicos hospitalarios (si eres enfermero/a y trabajas actualmente en un hospital, y tienes resultados de chequeos de los últimos seis meses a un año que incluyan los resultados de anticuerpos indicados abajo, tráelos contigo.)"
+      ],
+      "overseasRecords": "Los registros de vacunación del extranjero emitidos en inglés pueden usarse como evidencia. Sin embargo, algunos hospitales pueden exigir que los documentos traducidos estén certificados para aceptarlos como evidencia.",
+      "gpHelp": "Si necesitas ayuda para encontrar un médico de cabecera (GP) que hable tu idioma, contáctanos.",
+      "avoidCosts": "Esto también puede ayudarte a evitar costos adicionales de traducción de documentos durante la consulta médica.",
+      "requiredTitle": "Lista de vacunas obligatorias",
+      "required": [
+        {
+          "name": "dTpa (Difteria, Tétanos, Tos ferina)",
+          "desc": "Se requiere una dosis para adultos en los últimos 10 años. Por ejemplo, en Japón esta vacuna no se administra de forma rutinaria a los adultos, por lo que muchas personas reciben una dosis adicional después de llegar a Australia."
+        },
+        {
+          "name": "Hepatitis B",
+          "desc": "Se requieren tres dosis de la vacuna y un análisis de sangre que muestre Anti-HBs ≥ 10 mIU/mL."
+        },
+        {
+          "name": "Triple vírica (Sarampión, Paperas, Rubéola)",
+          "desc": "Se requieren dos dosis con al menos un mes de diferencia, o un resultado positivo en la prueba de anticuerpos."
+        },
+        {
+          "name": "Varicela",
+          "desc": "Se requieren dos dosis de la vacuna, o resultados de anticuerpos que demuestren inmunidad."
+        },
+        {
+          "name": "Tuberculosis (TB)",
+          "desc": "Los requisitos varían según tu país de nacimiento, historial de residencia, historial de viajes, etc."
+        },
+        {
+          "name": "Gripe (Influenza)",
+          "desc": "Como las cepas en circulación varían de un país a otro, puedes vacunarte a bajo costo en una farmacia o lugar similar después de llegar a Australia."
+        }
+      ],
+      "costsTitle": "Sobre el costo de las vacunas",
+      "costs": [
+        "El costo de las vacunas varía mucho según las circunstancias de cada persona.",
+        "El costo promedio para los estudiantes es de al menos AUD 300.",
+        "Si no tienes suficientes registros de vacunación o resultados de anticuerpos, el costo puede acercarse a AUD 1.000, por lo que debes tenerlo en cuenta al preparar tu presupuesto."
+      ],
+      "processTitle": "Proceso de vacunación",
+      "processNote": "(Esto es solo un ejemplo y el proceso real puede variar.)",
+      "process": [
+        "Después de llegar a Australia, acude a la clínica en la que hayas reservado cita y lleva los documentos necesarios. Te informaremos cómo reservar la cita en la clínica después de tu llegada a Australia.",
+        "En la primera consulta recibirás la vacuna dTpa y te harán un análisis de sangre para comprobar tus niveles de anticuerpos.",
+        "Tendrás otra consulta cuando estén disponibles los resultados del análisis de sangre.",
+        "Después, si se requieren vacunas adicionales, las recibirás según sea necesario."
+      ],
+      "otherTitle": "Otros requisitos y costos",
+      "table": {
+        "requirement": "Requisito",
+        "volunteer": "Costo para voluntarios",
+        "paid": "Costo para trabajadores remunerados / empleo",
+        "details": "Detalles adicionales"
+      },
+      "wwcc": {
+        "name": "Verificación para trabajar con menores (WWCC)",
+        "free": "Gratis",
+        "nswPricing": "(precio en NSW)",
+        "details": "Válido por 5 años. Las tarifas varían según el estado (p. ej., en Victoria cuesta ~$136.60)."
+      },
+      "police": {
+        "name": "Certificado Nacional de Antecedentes Penales (National Police Check)",
+        "details": "Solicitarlo directamente a través del <link>portal de la NSW Police Force</link> cuesta $55.80, mientras que los proveedores privados acreditados en línea cobran entre $52.90 y $76.90."
+      },
+      "firstAid": {
+        "name": "Curso de primeros auxilios <i>(HLTAID011)</i>",
+        "details": "Los RTO comerciales (como <awfa>Australia Wide First Aid</awfa>) cobran $80 – $120, mientras que proveedores premium como St John Ambulance o la <redcross>Cruz Roja</redcross> cobran $195 – $220."
+      },
+      "pricesDisclaimer": "Los precios anteriores son solo orientativos y pueden cambiar. Consulta con el proveedor correspondiente los precios actuales antes de continuar."
+    },
+    "kitchen": {
+      "metadataTitle": "Prácticas en la Industria - Prácticas Laborales",
+      "metadataDescription": "Adquiere experiencia práctica en cocinas comerciales a través de nuestro programa de prácticas en la industria. Aplica tus habilidades culinarias en entornos reales.",
+      "bannerTitle": "Prácticas en la Industria",
+      "intro": "El curso ahora incluye 600 horas de prácticas laborales obligatorias, que brindan a los estudiantes una amplia experiencia práctica en la industria.\nLos estudiantes pueden trabajar horas adicionales durante los trimestres de prácticas, cumpliendo con las condiciones de su visa de estudiante.",
+      "schedule": [
+        {
+          "term": "Trimestre 1 - Trimestre 2",
+          "content": "Teoría + Clases prácticas"
+        },
+        {
+          "term": "Trimestre 3",
+          "termSub": "(semanas 6-10)",
+          "content": "Teoría + Clases prácticas",
+          "bullets": [
+            "Semanas 6 - 10: 16 horas adicionales de prácticas laborales por semana"
+          ]
+        },
+        {
+          "term": "Trimestre 4 - Trimestre 5",
+          "content": "Teoría + Clases prácticas",
+          "sub": "16 horas adicionales de prácticas laborales por semana"
+        },
+        {
+          "term": "Trimestre 6",
+          "content": "20 horas de prácticas laborales por semana"
+        }
+      ]
+    },
+    "patisserie": {
+      "metadataTitle": "Prácticas en la Industria (Pastelería)",
+      "metadataDescription": "Adquiere experiencia práctica en la elaboración de pastelería y postres mediante prácticas en la industria vinculadas al Certificate IV in Patisserie.",
+      "bannerTitle": "Prácticas en la Industria (Pastelería)",
+      "intro": "Las prácticas laborales se organizan por trimestres y se realizan en entornos reales de la industria, de la siguiente manera.",
+      "schedule": [
+        {
+          "term": "Trimestre 1",
+          "content": "Teoría"
+        },
+        {
+          "term": "Trimestre 2",
+          "content": "Teoría + Práctica"
+        },
+        {
+          "term": "Trimestre 3",
+          "termSub": "(semanas 6-10)",
+          "content": "Teoría + Clases prácticas",
+          "bullets": [
+            "Semanas 6 – 10: 16 horas adicionales de prácticas laborales por semana"
+          ]
+        },
+        {
+          "term": "Trimestre 4 - Trimestre 5",
+          "content": "Teoría + Clases prácticas",
+          "sub": "16 horas adicionales de prácticas laborales por semana"
+        },
+        {
+          "term": "Trimestre 6",
+          "content": "20 horas de prácticas laborales por semana"
+        }
+      ]
+    },
+    "hospitality": {
+      "metadataTitle": "Prácticas en la Industria para Gestión de Hospitalidad (A&B)",
+      "metadataDescription": "Experiencia práctica en el servicio de alimentos y bebidas a través de nuestro programa de prácticas en la industria de la hospitalidad.",
+      "bannerTitle": "Prácticas en la Industria para Gestión de Hospitalidad (A&B)",
+      "intro": "El curso ahora incluye 285 horas de prácticas laborales obligatorias, que brindan a los estudiantes una amplia experiencia práctica en la industria.\nLos estudiantes pueden trabajar horas adicionales durante los trimestres de prácticas, cumpliendo con las condiciones de su visa de estudiante.",
+      "schedule": [
+        {
+          "term": "Trimestre 1 - Trimestre 4",
+          "content": "Teoría + Clases prácticas"
+        },
+        {
+          "term": "Trimestre 5",
+          "content": "SITHIND008 Trabajar eficazmente en el servicio de hospitalidad",
+          "bullets": [
+            "Semanas 1 – 10: 150 horas - 1 día/semana de clase presencial + 3 días/semana de prácticas laborales (5 horas x 3 turnos)"
+          ]
+        },
+        {
+          "term": "Trimestre 6",
+          "content": "SITHIND008 Trabajar eficazmente en el servicio de hospitalidad",
+          "bullets": [
+            "Semanas 1 – 9: 1 día/semana de clase presencial + 3 días/semana de prácticas laborales (5 horas x 3 turnos)",
+            "Semana 10: Teoría + Clase práctica"
+          ]
+        }
+      ]
     }
   }
 }
