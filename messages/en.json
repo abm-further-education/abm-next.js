@@ -52,6 +52,7 @@
     "bookCampusTour": "Book a Campus Tour",
     "becomeStudent": "Become a Student",
     "becomeAgent": "Become an Agent",
+    "requestCourseGuide": "Request ABM Course Guide",
     "firstName": "First Name",
     "lastName": "Last Name",
     "phonePlaceholder": "Phone",
@@ -257,7 +258,7 @@
   },
   "nav": {
     "internationalStudent": "Are you an International Student?",
-    "downloadGuide": "Download ABM Course Guide 2026",
+    "downloadGuide": "Request ABM Course Guide",
     "currentStudents": "Current Students",
     "agentPortal": "Agent Portal",
     "findCourse": "Find a course",
@@ -869,7 +870,9 @@
     "title": "Course Detail"
   },
   "units": {
-    "title": "Units"
+    "title": "Units",
+    "bookletTitle": "Request the course information booklet",
+    "bookletButton": "Contact us"
   },
   "hrPage": {
     "metadata": {

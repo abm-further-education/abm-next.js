@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/navigation';
@@ -34,8 +34,6 @@ const allMenus = [
   ...shortCourseMenu,
 ];
 
-const DEFAULT_BROCHURE_URL = 'common/ABM_Brochure_2026_final_web_f.pdf';
-
 function Nav() {
   const locale = useLocale();
   // const pathname = usePathname();
@@ -48,89 +46,6 @@ function Nav() {
   const [results, setResults] = useState<{ title: string; href: string }[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const router = useRouter();
-  const [brochureUrl, setBrochureUrl] = useState(DEFAULT_BROCHURE_URL);
-
-  const resolveBrochureSource = (url: string) => {
-    if (!url || url.startsWith('/') || url.startsWith('./')) {
-      return { type: 'direct' as const, value: url };
-    }
-
-    if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      return { type: 'key' as const, value: url };
-    }
-
-    try {
-      const parsed = new URL(url);
-      const isSignedUrl = parsed.searchParams.has('X-Amz-Algorithm');
-      if (isSignedUrl) {
-        return { type: 'signed-url' as const, value: url };
-      }
-      return { type: 'direct' as const, value: url };
-    } catch {
-      return { type: 'direct' as const, value: url };
-    }
-  };
-
-  const openBrochure = async () => {
-    const openedWindow = window.open('', '_blank');
-    if (openedWindow) {
-      openedWindow.document.title = 'Loading...';
-    }
-
-    try {
-      const source = resolveBrochureSource(brochureUrl);
-      if (source.type === 'direct') {
-        if (openedWindow) {
-          openedWindow.location.href = brochureUrl;
-        } else {
-          window.open(brochureUrl, '_blank');
-        }
-        return;
-      }
-
-      const query =
-        source.type === 'key'
-          ? `key=${encodeURIComponent(source.value)}`
-          : `url=${encodeURIComponent(source.value)}`;
-      const response = await fetch(`/api/r2/get-url?${query}`);
-      const data = await response.json();
-      const refreshedUrl = data?.url;
-
-      if (!response.ok || !refreshedUrl) {
-        throw new Error('Failed to refresh brochure URL');
-      }
-
-      if (openedWindow) {
-        openedWindow.location.href = refreshedUrl;
-      } else {
-        window.open(refreshedUrl, '_blank');
-      }
-    } catch {
-      if (openedWindow) {
-        openedWindow.location.href = brochureUrl;
-      } else {
-        window.open(brochureUrl, '_blank');
-      }
-    }
-  };
-
-  const handleDownloadGuideClick = async (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
-  ) => {
-    e.preventDefault();
-    await openBrochure();
-  };
-
-  useEffect(() => {
-    fetch('/api/site-settings?key=brochure_url')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.brochure_url) {
-          setBrochureUrl(data.brochure_url);
-        }
-      })
-      .catch(() => {});
-  }, []);
 
   // 특정 페이지에서 배경색을 항상 black으로 설정할 페이지들
   // const isSpecialPage =
@@ -266,10 +181,7 @@ function Nav() {
             {t('internationalStudent')}
           </div>
           <Link
-            href={brochureUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleDownloadGuideClick}
+            href={`/${locale}/contact`}
             className="text-primary font-semibold underline ml-10"
           >
             {t('downloadGuide')}
@@ -531,10 +443,7 @@ function Nav() {
             </Link>
           </div>
         </header>
-        <MobileNav
-          brochureUrl={brochureUrl}
-          onDownloadGuideClick={handleDownloadGuideClick}
-        />
+        <MobileNav />
       </div>
     </>
   );

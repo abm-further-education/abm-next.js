@@ -52,6 +52,7 @@
     "bookCampusTour": "Agendar Visita ao Campus",
     "becomeStudent": "Torne-se Estudante",
     "becomeAgent": "Torne-se Agente",
+    "requestCourseGuide": "Solicitar o Guia de Cursos ABM",
     "firstName": "Nome",
     "lastName": "Sobrenome",
     "phonePlaceholder": "Telefone",
@@ -257,7 +258,7 @@
   },
   "nav": {
     "internationalStudent": "Você é Estudante Internacional?",
-    "downloadGuide": "ABM Guia do Curso 2026",
+    "downloadGuide": "Solicitar o Guia de Cursos ABM",
     "currentStudents": "Alunos Atuais",
     "agentPortal": "Portal do Agente",
     "findCourse": "Encontre um curso",
@@ -866,7 +867,9 @@
     "title": "Detalhes do Curso"
   },
   "units": {
-    "title": "Unidades"
+    "title": "Unidades",
+    "bookletTitle": "Solicite o livreto de informações do curso",
+    "bookletButton": "Fale conosco"
   },
   "hrPage": {
     "metadata": {

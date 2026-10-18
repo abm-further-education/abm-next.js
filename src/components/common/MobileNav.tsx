@@ -29,15 +29,7 @@ import {
 import { useTranslations, useLocale } from 'next-intl';
 import { trackEnrolNowClick } from '@/lib/analytics';
 
-function MobileNav({
-  brochureUrl,
-  onDownloadGuideClick,
-}: {
-  brochureUrl?: string;
-  onDownloadGuideClick?: (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
-  ) => void | Promise<void>;
-}) {
+function MobileNav() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -406,13 +398,8 @@ function MobileNav({
             </li>
             <li>
               <Link
-                target="_blank"
-                href={brochureUrl || '/files/ABM_Brochure_2026_final_web.pdf'}
-                rel="noopener noreferrer"
-                onClick={(e) => {
-                  toggleMenu();
-                  onDownloadGuideClick?.(e);
-                }}
+                href={`/${locale}/contact`}
+                onClick={toggleMenu}
                 className="block p-3 hover:underline"
               >
                 {t('downloadGuide')}

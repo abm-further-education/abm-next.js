@@ -237,6 +237,7 @@ function Contact() {
     t('oneDayTrial'),
     t('becomeStudent'),
     t('becomeAgent'),
+    t('requestCourseGuide'),
     'Private Group Booking for Custom Program',
   ];
 

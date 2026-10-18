@@ -52,6 +52,7 @@
     "bookCampusTour": "Pesan Tur Kampus",
     "becomeStudent": "Menjadi Siswa",
     "becomeAgent": "Menjadi Agen",
+    "requestCourseGuide": "Minta Panduan Kursus ABM",
     "firstName": "Nama Depan",
     "lastName": "Nama Belakang",
     "phonePlaceholder": "Telepon",
@@ -257,7 +258,7 @@
   },
   "nav": {
     "internationalStudent": "Apakah Anda Siswa Internasional?",
-    "downloadGuide": "Unduh Panduan Kursus ABM 2026",
+    "downloadGuide": "Minta Panduan Kursus ABM",
     "currentStudents": "Siswa Saat Ini",
     "agentPortal": "Portal Agen",
     "findCourse": "Temukan kursus",
@@ -869,7 +870,9 @@
     "title": "Detail Kursus"
   },
   "units": {
-    "title": "Unit"
+    "title": "Unit",
+    "bookletTitle": "Minta booklet informasi kursus",
+    "bookletButton": "Hubungi kami"
   },
   "hrPage": {
     "metadata": {

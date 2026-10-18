@@ -52,6 +52,7 @@
     "bookCampusTour": "预约校园参观",
     "becomeStudent": "成为学生",
     "becomeAgent": "成为代理",
+    "requestCourseGuide": "申请ABM课程指南",
     "firstName": "名字",
     "lastName": "姓氏",
     "phonePlaceholder": "电话",
@@ -257,7 +258,7 @@
   },
   "nav": {
     "internationalStudent": "您是国际学生吗？",
-    "downloadGuide": "下载ABM课程指南2026",
+    "downloadGuide": "申请ABM课程指南",
     "currentStudents": "在校学生",
     "agentPortal": "代理门户",
     "findCourse": "查找课程",
@@ -869,7 +870,9 @@
     "title": "课程详情"
   },
   "units": {
-    "title": "单元"
+    "title": "单元",
+    "bookletTitle": "索取课程信息手册",
+    "bookletButton": "联系我们"
   },
   "hrPage": {
     "metadata": {

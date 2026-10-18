@@ -52,6 +52,7 @@
     "bookCampusTour": "Mag-book ng Campus Tour",
     "becomeStudent": "Maging Estudyante",
     "becomeAgent": "Maging Ahente",
+    "requestCourseGuide": "Humingi ng ABM Course Guide",
     "firstName": "Unang Pangalan",
     "lastName": "Apelyido",
     "phonePlaceholder": "Telepono",
@@ -257,7 +258,7 @@
   },
   "nav": {
     "internationalStudent": "Ikaw ba ay International Student?",
-    "downloadGuide": "I-download ang ABM Course Guide 2026",
+    "downloadGuide": "Humingi ng ABM Course Guide",
     "currentStudents": "Kasalukuyang Estudyante",
     "agentPortal": "Agent Portal",
     "findCourse": "Maghanap ng kurso",
@@ -869,7 +870,9 @@
     "title": "Detalye ng Kurso"
   },
   "units": {
-    "title": "Mga Unit"
+    "title": "Mga Unit",
+    "bookletTitle": "Humiling ng course information booklet",
+    "bookletButton": "Makipag-ugnayan sa amin"
   },
   "hrPage": {
     "metadata": {

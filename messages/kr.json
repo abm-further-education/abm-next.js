@@ -52,6 +52,7 @@
     "bookCampusTour": "캠퍼스 투어 예약",
     "becomeStudent": "학생 등록",
     "becomeAgent": "에이전트 등록",
+    "requestCourseGuide": "ABM 과정 가이드 요청",
     "firstName": "이름",
     "lastName": "성",
     "phonePlaceholder": "전화번호",
@@ -257,7 +258,7 @@
   },
   "nav": {
     "internationalStudent": "국제 학생이신가요?",
-    "downloadGuide": "ABM 과정 가이드 2026 다운로드",
+    "downloadGuide": "ABM 과정 가이드 요청",
     "currentStudents": "재학생",
     "agentPortal": "에이전트 포털",
     "findCourse": "과정 찾기",
@@ -870,7 +871,9 @@
     "title": "과정 상세"
   },
   "units": {
-    "title": "이수 단위"
+    "title": "이수 단위",
+    "bookletTitle": "코스 안내 책자를 요청하세요",
+    "bookletButton": "문의하기"
   },
   "hrPage": {
     "metadata": {

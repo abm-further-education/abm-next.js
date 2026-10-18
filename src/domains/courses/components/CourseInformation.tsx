@@ -18,7 +18,7 @@ import {
   Info,
   MapPin,
 } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export interface CourseInformationInfo {
   description?: string;
@@ -71,6 +71,8 @@ function CourseInformationContent({
 }: CourseInformationProps) {
   // 다국어 지원
   const t = useTranslations('courseInformation');
+  const tNav = useTranslations('nav');
+  const locale = useLocale();
   // 텍스트의 줄바꿈을 처리하는 함수
   const renderTextWithLineBreaks = (text: string) => {
     return text.split('\n').map((line, index) => (
@@ -233,9 +235,9 @@ function CourseInformationContent({
           )}
 
           {!hideButtons && (
-            <>
+            <div className="flex flex-col sm:flex-row gap-10 mt-20">
               <Button
-                className="w-1/2 bg-primary hover:bg-primary-bk text-white mt-20"
+                className="flex-1 bg-primary hover:bg-primary-bk text-white"
                 onClick={() => {
                   trackEnrolNowClick(courseId);
                   window.open(
@@ -246,7 +248,13 @@ function CourseInformationContent({
               >
                 Enrol Now
               </Button>
-            </>
+              <Link
+                href={`/${locale}/contact`}
+                className="flex-1 px-16 py-10 text-center border border-primary text-primary! hover:bg-primary-bk hover:text-white! transition-all font-[family-name:var(--font-montserrat)]"
+              >
+                {tNav('downloadGuide')}
+              </Link>
+            </div>
           )}
         </div>
       </div>
