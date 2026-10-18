@@ -1,0 +1,1526 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Fitness Course Payment Plan Calculator — ABM Further Education</title>
+<meta name="description" content="Work out your upfront payment, instalment amount and full payment schedule for the Certificate III and Certificate IV in Fitness at ABM Further Education." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ef7511'/%3E%3Cpath d='M8 20.5 13 11l5 6 2-3.2 4 6.7' stroke='%23fff' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+
+  --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem;
+  --space-5:1.25rem; --space-6:1.5rem; --space-8:2rem; --space-10:2.5rem;
+  --space-12:3rem; --space-16:4rem;
+
+  --font-display:Calibri,Carlito,'Segoe UI',system-ui,sans-serif;
+  --font-body:Calibri,Carlito,'Segoe UI',system-ui,-apple-system,sans-serif;
+
+  --radius-sm:8px; --radius:14px; --radius-lg:20px;
+  --maxw:1140px;
+}
+:root,[data-theme="light"]{
+  --bg:oklch(98.4% 0.005 70);
+  --surface:oklch(100% 0 0);
+  --surface-2:oklch(96.6% 0.008 72);
+  --surface-3:oklch(93.4% 0.014 70);
+  --border:oklch(89% 0.012 72);
+  --border-strong:oklch(80% 0.018 70);
+  --ink:oklch(21% 0.01 60);
+  --ink-2:oklch(44% 0.012 62);
+  --ink-3:oklch(58% 0.012 62);
+  --accent:oklch(67.5% 0.178 48.5);      /* #ef7511 */
+  --accent-ink:oklch(48% 0.14 46);
+  --accent-soft:oklch(95.5% 0.035 62);
+  --accent-contrast:oklch(100% 0 0);
+  --good:oklch(52% 0.12 155);
+  --good-soft:oklch(95% 0.04 155);
+  --warn-soft:oklch(96% 0.05 85);
+  --warn-ink:oklch(45% 0.11 62);
+  --shadow:0 1px 2px oklch(20% 0.02 60 / .05), 0 8px 24px -12px oklch(20% 0.02 60 / .16);
+}
+[data-theme="dark"]{
+  --bg:oklch(17% 0.008 60);
+  --surface:oklch(21.5% 0.009 62);
+  --surface-2:oklch(25% 0.01 62);
+  --surface-3:oklch(29% 0.012 62);
+  --border:oklch(31% 0.012 62);
+  --border-strong:oklch(41% 0.015 62);
+  --ink:oklch(96% 0.006 70);
+  --ink-2:oklch(78% 0.01 70);
+  --ink-3:oklch(64% 0.012 70);
+  --accent:oklch(72% 0.165 50);
+  --accent-ink:oklch(80% 0.14 55);
+  --accent-soft:oklch(28% 0.045 52);
+  --accent-contrast:oklch(15% 0.02 60);
+  --good:oklch(72% 0.13 155);
+  --good-soft:oklch(27% 0.05 155);
+  --warn-soft:oklch(29% 0.05 80);
+  --warn-ink:oklch(85% 0.09 80);
+  --shadow:0 1px 2px oklch(0% 0 0 / .3), 0 10px 28px -14px oklch(0% 0 0 / .6);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--font-body); font-size:var(--text-base); line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0; line-height:1.15; letter-spacing:-0.015em}
+p{margin:0}
+button{font:inherit; color:inherit}
+:focus-visible{outline:2.5px solid var(--accent); outline-offset:2px; border-radius:4px}
+
+.wrap{max-width:var(--maxw); margin:0 auto; padding:var(--space-6) var(--space-5) var(--space-12)}
+
+/* ============ HEADER ============ */
+.topbar{display:flex; align-items:center; gap:var(--space-4); flex-wrap:wrap; margin-bottom:var(--space-6)}
+.brand{display:flex; align-items:center; gap:var(--space-3); color:var(--ink)}
+.brand svg{width:34px; height:34px; flex:none}
+.brand-name{font-family:var(--font-display); font-weight:800; font-size:var(--text-sm); letter-spacing:.02em; text-transform:uppercase; line-height:1.2}
+.brand-sub{font-size:var(--text-xs); color:var(--ink-3); letter-spacing:.06em; text-transform:uppercase}
+.spacer{flex:1 1 auto}
+.icon-btn{
+  display:inline-grid; place-items:center; width:38px; height:38px; flex:none;
+  background:var(--surface); border:1px solid var(--border); border-radius:10px;
+  cursor:pointer; transition:background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.icon-btn:hover{background:var(--surface-2); border-color:var(--border-strong)}
+.icon-btn:active{transform:scale(.95)}
+.icon-btn svg{width:18px; height:18px}
+[data-theme="light"] .i-moon{display:block} [data-theme="light"] .i-sun{display:none}
+[data-theme="dark"] .i-moon{display:none} [data-theme="dark"] .i-sun{display:block}
+
+.lede h1{font-family:var(--font-display); font-weight:800; font-size:var(--text-xl); max-width:22ch}
+.lede p{margin-top:var(--space-3); color:var(--ink-2); font-size:var(--text-sm); max-width:62ch}
+.lede{margin-bottom:var(--space-8)}
+
+/* ============ LAYOUT ============ */
+.grid{display:grid; gap:var(--space-6); align-items:start}
+.grid > *{min-width:0}
+fieldset{min-width:0; border:0; padding:0; margin:0}
+.opt .box, .opt .t, .opt .d{min-width:0; overflow-wrap:anywhere}
+@media (min-width:920px){ .grid{grid-template-columns:minmax(330px,.85fr) 1.15fr} .panel-form{position:sticky; top:var(--space-5)} }
+
+.card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow)}
+.card-pad{padding:var(--space-6)}
+@media (max-width:520px){ .card-pad{padding:var(--space-5) var(--space-4)} }
+
+.eyebrow{
+  font-size:var(--text-xs); font-weight:700; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--ink-3); margin-bottom:var(--space-4);
+  display:flex; align-items:center; gap:var(--space-2);
+}
+.eyebrow .num{
+  display:grid; place-items:center; width:20px; height:20px; border-radius:6px;
+  background:var(--accent-soft); color:var(--accent-ink); font-size:11px; letter-spacing:0;
+}
+
+/* ============ FIELDS ============ */
+.field + .field{margin-top:var(--space-6)}
+.field > label, .legend{
+  display:block; font-size:var(--text-sm); font-weight:700; margin-bottom:var(--space-1);
+}
+.hint{font-size:var(--text-xs); color:var(--ink-3); margin-bottom:var(--space-3)}
+fieldset{margin:0; padding:0; border:0}
+
+.opts{display:grid; gap:var(--space-2)}
+.opts.cols2{grid-template-columns:1fr 1fr}
+@media (max-width:400px){ .opts.cols2{grid-template-columns:1fr} }
+.opt{position:relative; display:block; cursor:pointer}
+.opt[hidden], .field[hidden]{display:none}
+.opt input{position:absolute; inset:0; opacity:0; width:100%; height:100%; margin:0; cursor:pointer}
+.opt .box{
+  display:flex; align-items:baseline; gap:var(--space-2); flex-wrap:wrap;
+  border:1.5px solid var(--border); border-radius:var(--radius); background:var(--surface-2);
+  padding:var(--space-3) var(--space-4); transition:border-color .16s ease, background .16s ease;
+}
+.opt .t{font-size:var(--text-sm); font-weight:700}
+.opt .d{font-size:var(--text-xs); color:var(--ink-3)}
+.opt:hover .box{border-color:var(--border-strong)}
+.opt input:checked + .box{border-color:var(--accent); background:var(--accent-soft)}
+.opt input:focus-visible + .box{outline:2.5px solid var(--accent); outline-offset:2px}
+
+input[type="date"]{
+  width:100%; font:inherit; font-size:var(--text-sm); color:var(--ink);
+  background:var(--surface-2); border:1.5px solid var(--border);
+  border-radius:var(--radius); padding:var(--space-3) var(--space-4);
+}
+input[type="date"]:hover{border-color:var(--border-strong)}
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(1) opacity(.7)}
+
+.inline-note{
+  margin-top:var(--space-3); display:flex; gap:var(--space-2); align-items:flex-start;
+  font-size:var(--text-xs); line-height:1.5; border-radius:var(--radius-sm);
+  padding:var(--space-3); background:var(--warn-soft); color:var(--warn-ink);
+}
+.echo{margin-top:var(--space-2); font-size:var(--text-xs); color:var(--ink-2); font-weight:500}
+.inline-note svg{width:15px; height:15px; flex:none; margin-top:1px}
+.inline-note[hidden]{display:none}
+
+/* ============ RESULTS ============ */
+.headline{
+  display:grid; gap:var(--space-4); grid-template-columns:1fr;
+  padding:var(--space-6); border-radius:var(--radius-lg);
+  background:var(--surface-3); border:1px solid var(--border);
+}
+@media (min-width:640px){ .headline{grid-template-columns:repeat(3,1fr)} }
+.stat .k{font-size:var(--text-xs); text-transform:uppercase; letter-spacing:.09em; font-weight:700; color:var(--ink-3)}
+.stat .v{font-family:var(--font-display); font-weight:800; font-size:var(--text-lg); margin-top:var(--space-1); letter-spacing:-0.02em}
+.stat .s{font-size:var(--text-xs); color:var(--ink-3); margin-top:2px}
+.stat.hero .v{color:var(--accent-ink)}
+
+.rows{margin-top:var(--space-6); border-top:1px solid var(--border)}
+.row{display:flex; gap:var(--space-4); justify-content:space-between; align-items:baseline;
+  padding:var(--space-3) 0; border-bottom:1px solid var(--border); font-size:var(--text-sm)}
+.row .lbl{color:var(--ink-2)}
+.row .lbl small{display:block; color:var(--ink-3); font-size:var(--text-xs)}
+.row .val{font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap}
+.row.total{border-bottom:0; padding-top:var(--space-4); font-size:var(--text-base)}
+.row.total .lbl{color:var(--ink); font-weight:700}
+.row.sub{padding-left:var(--space-4)}
+.row.sub .lbl{font-size:var(--text-xs)}
+
+.badge{display:inline-block; font-size:var(--text-xs); font-weight:700; padding:2px var(--space-2);
+  border-radius:99px; background:var(--good-soft); color:var(--good); margin-left:var(--space-2)}
+
+.sched-wrap{margin-top:var(--space-6)}
+.sched-head{display:flex; justify-content:space-between; align-items:baseline; gap:var(--space-3); flex-wrap:wrap; margin-bottom:var(--space-3)}
+.sched-head h3{font-size:var(--text-sm); text-transform:uppercase; letter-spacing:.09em; color:var(--ink-3)}
+.tbl-scroll{overflow-x:auto; border:1px solid var(--border); border-radius:var(--radius)}
+table{width:100%; border-collapse:collapse; font-size:var(--text-sm)}
+thead th{
+  text-align:left; font-size:var(--text-xs); text-transform:uppercase; letter-spacing:.07em;
+  color:var(--ink-3); background:var(--surface-2); padding:var(--space-3) var(--space-4);
+  border-bottom:1px solid var(--border); white-space:nowrap; font-weight:700;
+}
+tbody td{padding:var(--space-3) var(--space-4); border-bottom:1px solid var(--border); font-variant-numeric:tabular-nums; white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+tbody tr.paid{color:var(--ink-3)}
+tbody tr.paid td:first-child{position:relative}
+td.num, th.num{text-align:right}
+.tag{font-size:11px; font-weight:700; padding:1px 6px; border-radius:99px; background:var(--surface-3); color:var(--ink-3); margin-left:6px; letter-spacing:.03em}
+.tag.up{background:var(--accent-soft); color:var(--accent-ink)}
+
+.notes{margin-top:var(--space-6); font-size:var(--text-xs); color:var(--ink-3); line-height:1.6}
+.notes ul{margin:var(--space-2) 0 0; padding-left:var(--space-5); display:grid; gap:var(--space-2)}
+.notes strong{color:var(--ink-2)}
+
+.actions{margin-top:var(--space-6); display:flex; gap:var(--space-3); flex-wrap:wrap}
+.btn{
+  display:inline-flex; align-items:center; gap:var(--space-2); cursor:pointer;
+  font-size:var(--text-sm); font-weight:700; padding:var(--space-3) var(--space-5);
+  border-radius:99px; border:1.5px solid transparent; transition:transform .16s ease, background .16s ease, border-color .16s ease;
+}
+.btn svg{width:16px; height:16px}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--accent); color:var(--accent-contrast); border-color:var(--accent)}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-ghost{background:transparent; border-color:var(--border-strong); color:var(--ink-2)}
+.btn-ghost:hover{background:var(--surface-2); color:var(--ink)}
+
+.docgen{margin-top:var(--space-6)}
+.docgen[hidden]{display:none}
+.docgen .row{border-bottom:0; padding:0}
+.doc-btns{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:var(--space-3); margin-top:var(--space-5)}
+.doc-btns .btn{justify-content:center; text-align:center; white-space:nowrap}
+.doc-status{margin-top:var(--space-4); font-size:var(--text-xs); color:var(--ink-3); min-height:1.2em}
+.doc-status.err{color:var(--warn-ink)}
+.doc-list{margin-top:var(--space-4); font-size:var(--text-xs); color:var(--ink-3); padding-left:var(--space-5); display:grid; gap:var(--space-1)}
+
+.foot{margin-top:var(--space-8); font-size:var(--text-xs); color:var(--ink-3); text-align:center}
+
+@media print{
+  body{background:#fff}
+  .panel-form, .actions, .icon-btn, .topbar .spacer, .lede p, .docgen{display:none !important}
+  .card{box-shadow:none; border-color:#ddd; border-radius:0; border:0; padding:0}
+  .grid{display:block}
+  .wrap{padding:0}
+  .lede{margin-bottom:var(--space-6)}
+  .print-only{display:block !important}
+  tr, .row, li{break-inside:avoid}
+  thead{display:table-header-group}
+  .headline, .notes, .sched-head{break-inside:avoid}
+  .row.total{break-before:avoid}
+  .tbl-scroll{overflow:visible}
+}
+.print-only{display:none}
+.print-only .row .lbl{color:var(--ink-2)}
+@media (prefers-reduced-motion:reduce){ *{transition:none !important} }
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" role="img" aria-label="ABM Further Education">
+        <rect x="1" y="1" width="30" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M7.5 21.5 12.5 11l4.6 5.6 2.1-3.3 5.3 8.2" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="23.2" cy="9.6" r="2.1" fill="var(--accent)"/>
+      </svg>
+      <div>
+        <div class="brand-name">ABM Further Education</div>
+        <div class="brand-sub">Payment plans</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+    </button>
+  </div>
+
+  <div class="lede">
+    <h1>Course payment plan calculator</h1>
+    <p>Choose your course, student type, payment frequency and dates to see exactly what is due at registration and every instalment date after that. All amounts are in Australian dollars and include the enrolment and material fees.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ============ FORM ============ -->
+    <section class="card card-pad panel-form" aria-label="Your details">
+
+      <div class="field">
+        <fieldset>
+          <div class="eyebrow"><span class="num">1</span> Course</div>
+          <div class="opts" id="grpCourse">
+            <label class="opt"><input type="radio" name="course" value="cert3" checked>
+              <span class="box"><span class="t">Certificate III in Fitness</span><span class="d" data-fee="cert3"></span></span></label>
+            <label class="opt"><input type="radio" name="course" value="cert4">
+              <span class="box"><span class="t">Certificate IV in Fitness</span><span class="d" data-fee="cert4"></span></span></label>
+            <label class="opt"><input type="radio" name="course" value="package">
+              <span class="box"><span class="t">Package: Certificate III + IV in Fitness</span><span class="d" data-fee="package"></span></span></label>
+            <label class="opt"><input type="radio" name="course" value="hsa">
+              <span class="box"><span class="t">Health Services Assistance</span><span class="d" data-fee="hsa"></span></span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field" id="fieldCohort">
+        <fieldset>
+          <div class="eyebrow"><span class="num">2</span> Student type</div>
+          <div class="hint" id="cohortHint">SCS members receive an exclusive discounted fee on the fitness qualifications.</div>
+          <div class="opts" id="grpCohort">
+            <label class="opt"><input type="radio" name="cohort" value="local" checked>
+              <span class="box"><span class="t">Domestic student</span><span class="d">Local student offer</span></span></label>
+            <label class="opt" id="optScs"><input type="radio" name="cohort" value="scs">
+              <span class="box"><span class="t">SCS member</span><span class="d">Members exclusive offer</span></span></label>
+            <label class="opt" id="optOverseas"><input type="radio" name="cohort" value="overseas">
+              <span class="box"><span class="t">Overseas student</span><span class="d">Overseas student offer</span></span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field">
+        <fieldset>
+          <div class="eyebrow"><span class="num" id="numFreq">3</span> How you'd like to pay</div>
+          <div class="opts cols2" id="grpFreq">
+            <label class="opt" id="optLump"><input type="radio" name="freq" value="lump">
+              <span class="box"><span class="t">Lump sum</span><span class="d">2 payments</span></span></label>
+            <label class="opt"><input type="radio" name="freq" value="weekly" checked>
+              <span class="box"><span class="t">Weekly</span><span class="d" data-count="weekly"></span></span></label>
+            <label class="opt"><input type="radio" name="freq" value="fortnightly">
+              <span class="box"><span class="t">Fortnightly</span><span class="d" data-count="fortnightly"></span></span></label>
+            <label class="opt"><input type="radio" name="freq" value="monthly">
+              <span class="box"><span class="t">Monthly</span><span class="d" data-count="monthly"></span></span></label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field">
+        <label for="startDate">Course commencement date</label>
+        <div class="hint" id="startHint">Courses start on a Monday. Instalments are scheduled from two weeks before this date.</div>
+        <input type="date" id="startDate">
+        <div class="echo" id="echoStart"></div>
+        <div class="inline-note" id="notePast" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
+          <span></span>
+        </div>
+        <div class="inline-note" id="noteMonday" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="enrolDate">Enrolment date <span style="font-weight:500;color:var(--ink-3)">(the day you pay to enrol)</span></label>
+        <div class="hint">If you enrol close to the course start, any instalments already scheduled before this date are collected with your registration payment.</div>
+        <input type="date" id="enrolDate">
+        <div class="echo" id="echoEnrol"></div>
+        <div class="inline-note" id="notePastEnrol" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
+          <span></span>
+        </div>
+        <div class="inline-note" id="noteEnrol" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
+          <span></span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section class="card card-pad" aria-label="Your payment plan" aria-live="polite">
+      <div class="eyebrow" style="margin-bottom:var(--space-5)">Your estimate</div>
+      <div class="print-only" id="printHeader"></div>
+
+      <div class="headline">
+        <div class="stat hero">
+          <div class="k">Due at registration</div>
+          <div class="v" id="sUpfront">—</div>
+          <div class="s" id="sUpfrontSub">—</div>
+        </div>
+        <div class="stat">
+          <div class="k" id="kInst">Then each payment</div>
+          <div class="v" id="sInst">—</div>
+          <div class="s" id="sInstSub">—</div>
+        </div>
+        <div class="stat">
+          <div class="k">Total payable</div>
+          <div class="v" id="sTotal">—</div>
+          <div class="s" id="sTotalSub">—</div>
+        </div>
+      </div>
+
+      <div class="rows" id="breakdown"></div>
+
+      <div class="sched-wrap" id="schedWrap">
+        <div class="sched-head">
+          <h3 id="schedTitle">Payment schedule</h3>
+          <span class="s" id="schedMeta" style="font-size:var(--text-xs); color:var(--ink-3)"></span>
+        </div>
+        <div class="tbl-scroll">
+          <table>
+            <thead><tr>
+              <th style="width:1%">#</th><th id="thWhen">Date</th><th class="num">Amount</th><th class="num">Running total</th>
+            </tr></thead>
+            <tbody id="schedBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="notes" id="notes"></div>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="button" id="printBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"/></svg>
+          Print or save as PDF
+        </button>
+        <button class="btn btn-ghost" type="button" id="copyBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+          <span id="copyLabel">Copy summary</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ OFFER DOCUMENT GENERATOR (staff) ============ -->
+  <section class="card card-pad docgen" id="docgen" aria-label="Generate offer documents" hidden>
+    <div class="eyebrow">Staff tools &middot; Offer documents</div>
+    <h2 style="font-size:var(--text-lg); font-family:var(--font-display); font-weight:800">Generate the offer documents</h2>
+    <p style="margin-top:var(--space-3); font-size:var(--text-sm); color:var(--ink-2); max-width:70ch">
+      Builds the offer documents from exactly the same figures this calculator uses, so the
+      published fees and the offer paperwork can never drift apart. Each document contains its
+      fee summary tables plus the full sample payment schedules.
+    </p>
+    <ul class="doc-list">
+      <li>Sample schedules are built from the commencement date selected above &mdash; <strong id="docStart">&mdash;</strong>.</li>
+      <li>Versions: fitness <strong id="docVer">&mdash;</strong>, HSA <strong id="docVerHsa">&mdash;</strong>. Change <code>OFFER_VERSION</code> and <code>HSA.version</code> in the source file when you revise an offer.</li>
+    </ul>
+    <div class="doc-btns">
+      <button class="btn btn-primary" type="button" data-doc="local">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        Fitness &mdash; Local (.docx)
+      </button>
+      <button class="btn btn-primary" type="button" data-doc="scs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        Fitness &mdash; SCS (.docx)
+      </button>
+      <button class="btn btn-primary" type="button" data-doc="hsa">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        HSA &mdash; Local (.docx)
+      </button>
+      <button class="btn btn-primary" type="button" data-doc="hsaOverseas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        HSA &mdash; Overseas (.docx)
+      </button>
+      <button class="btn btn-ghost" type="button" data-doc="all">All four</button>
+    </div>
+    <div class="doc-status" id="docStatus"></div>
+  </section>
+
+  <div class="foot">Estimates only and subject to ABM Further Education's current fee schedule and refund policy. Fitness offers version <span id="verTag">—</span>; Health Services Assistance offer version <span id="verTagHsa">—</span>.</div>
+</div>
+
+<script>
+/* ==========================================================================
+   ===============  EDIT HERE WHEN FEES OR THE OFFER CHANGE  ================
+   Everything the calculator needs is in this one block. Nothing below it
+   needs to change when prices move.
+   ========================================================================== */
+
+/* 1. Offer version for the fitness offers, shown in the footer */
+const OFFER_VERSION = '21.09.2026';
+
+/* ---------- FITNESS QUALIFICATIONS (Cert III, Cert IV, Cert III + IV) ---------- */
+
+/* 2. Total course fee, including enrolment and material fees.
+      single  = Certificate III on its own, or Certificate IV on its own
+      package = Certificate III + IV together                              */
+const TUITION = {
+  local: { single: 2300, package: 3900 },
+  scs:   { single: 1850, package: 2800 }
+};
+/* 3. The registration payment and how it is itemised.
+      ef = enrolment fee, mf = material fee, tf = partial tuition fee.
+      These three add up to the amount collected at registration
+      (currently $500). The SCS package splits it differently.          */
+const UPFRONT = {
+  local:  { single: {ef:250, mf:100, tf:150}, package: {ef:250, mf:100, tf:150} },
+  scs:    { single: {ef:250, mf:100, tf:150}, package: {ef:250, mf:200, tf:50}  }
+};
+/* 4. Payment instalment fee (charged once, spread across the instalments) */
+const SETUP  = { single:{weekly:120, fortnightly:60, monthly:30}, package:{weekly:240, fortnightly:120, monthly:60} };
+
+/* 5. Number of instalments */
+const COUNTS = { single:{weekly:12,  fortnightly:6,  monthly:3 }, package:{weekly:24,  fortnightly:12,  monthly:6 } };
+
+/* 6. Lump sum: first payment due on enrolment (balance is due Monday of week 1) */
+const LUMP_FIRST = 1500;
+
+/* 7. How many weeks before commencement the first instalment falls */
+const ANCHOR_WEEKS_BEFORE_START = 2;
+
+/* ---------- HEALTH SERVICES ASSISTANCE (different fee model) ---------- */
+/* 8. HSA prepays part of the tuition at enrolment, spreads the rest evenly
+      across the tuition instalments, and collects the work placement fee as a
+      separate instalment in placementWeek. Instalment weeks are listed explicitly: week 1 is the
+      first week of the course, week 0 is the Monday one week before it starts.
+      Tuition differs by student type; everything else is shared.             */
+const HSA = {
+  version: '22.09.2026 rev. 3',
+  ef: 250,                /* enrolment fee (non-refundable) */
+  mf: 300,                /* material fee */
+  tuition: {              /* tuition by student type */
+    local:    6000,
+    overseas: 7000
+  },
+  placement: 900,         /* work placement fee */
+  prepaidTuition: 700,    /* tuition prepaid at enrolment */
+  instalmentFee: {        /* added to every instalment, including the placement instalment */
+    weekly:      10,
+    fortnightly: 10,
+    monthly:     0        /* no instalment fee on the monthly plan */
+  },
+  prepaidLimit: 1500,     /* prepaid-fee limit referenced in the offer wording */
+  weeks: {
+    weekly:      [0,1,2,3,4,5,6,7,8,9,10,11,12,13],
+    fortnightly: [0,3,5,7,9,11,13],
+    monthly:     [2,6,10]
+  },
+  placementWeek: 12,      /* work placement fee is charged here */
+  courseWeeks: 16,        /* course runs Week 1 to Week 16 */
+  placementWeeksLabel: 'Weeks 15\u201316'
+};
+
+/* 9. The courses offered in the dropdown, and who can select what */
+const COURSES = {
+  cert3:   {label:'Certificate III in Fitness', short:'Cert III in Fitness',
+            model:'fitness', tier:'single',  cohorts:['local','scs'],
+            freqs:['lump','weekly','fortnightly','monthly']},
+  cert4:   {label:'Certificate IV in Fitness', short:'Cert IV in Fitness',
+            model:'fitness', tier:'single',  cohorts:['local','scs'],
+            freqs:['lump','weekly','fortnightly','monthly']},
+  package: {label:'Certificate III + IV in Fitness (package)', short:'Cert III + IV in Fitness',
+            model:'fitness', tier:'package', cohorts:['local','scs'],
+            freqs:['lump','weekly','fortnightly','monthly']},
+  hsa:     {label:'Health Services Assistance', short:'Health Services Assistance',
+            model:'hsa', tier:'hsa', cohorts:['local','overseas'],
+            freqs:['weekly','fortnightly','monthly']}
+};
+
+/* 10. Show the staff "generate offer documents" panel.
+       Set to false for the public embed, or add ?docs=0 to the iframe src for a
+       student-facing copy and ?docs=1 for the staff copy.                     */
+const SHOW_DOC_GENERATOR = true;
+
+/* 11. Wording used in the generated offer documents */
+const DOC_COPY = {
+  local: { file:'ABM-Local-Student-Offer',          title:'Local Student Offer',          who:'Local students' },
+  scs:   { file:'ABM-SCS-Members-Exclusive-Offer',  title:'SCS Members Exclusive Offer',  who:'SCS members' },
+  hsa:   { file:'ABM-Local-Student-Offer-HSA',      title:'Local Student Offer \u2014 Health Services Assistance',
+           who:'Local students' },
+  hsaOverseas: { file:'ABM-Overseas-Student-Offer-HSA', title:'Overseas Student Offer \u2014 Health Services Assistance',
+           who:'Overseas students' }
+};
+
+/* =====================  END OF EDITABLE SETTINGS  ======================== */
+
+const FREQ_LABEL = {weekly:'Weekly', fortnightly:'Fortnightly', monthly:'Monthly', lump:'Lump sum'};
+const COHORT_LABEL = {local:'Domestic student', scs:'SCS member', overseas:'Overseas student'};
+
+/* one HSA plan for any student type and frequency, used by the calculator and the documents */
+function hsaPlan(cohort, freq, start){
+  const weeks = HSA.weeks[freq];
+  const n = weeks.length;
+  const fee = HSA.instalmentFee[freq];
+  const tuition = HSA.tuition[cohort];
+  const base = HSA.ef + HSA.mf + HSA.prepaidTuition;
+  const remaining = r2(tuition - HSA.prepaidTuition);
+  const each = round2(remaining / n);
+  const last = r2(remaining - each * (n - 1));
+  const totalFee = HSA.ef + HSA.mf + tuition + HSA.placement;
+  const feeTotal = r2(fee * (n + 1));
+  const insts = weeks.map(function(w, i){
+    const tuitionPart = i === n - 1 ? last : each;
+    return {no:i+1, kind:'inst', week:w, date:weekDate(start, w), tuitionPart:tuitionPart,
+            amount:r2(tuitionPart + fee), finalTuition: i === n - 1};
+  });
+  insts.push({no:n+1, kind:'placement', week:HSA.placementWeek, date:weekDate(start, HSA.placementWeek),
+              amount:r2(HSA.placement + fee)});
+  /* date order; on a shared week the tuition instalment comes first */
+  insts.sort(function(a, b){ return a.week - b.week || (a.kind === 'placement') - (b.kind === 'placement'); });
+  insts.forEach(function(p, i){ p.no = i + 1; });
+  let running = base;
+  insts.forEach(function(p){ running = r2(running + p.amount); p.running = running; });
+  return {cohort:cohort, freq:freq, n:n, fee:fee, tuition:tuition, base:base, remaining:remaining,
+          each:each, last:last, totalFee:totalFee, feeTotal:feeTotal, insts:insts,
+          grandTotal:running, placementAmount:r2(HSA.placement + fee)};
+}
+
+/* ===================== HELPERS ===================== */
+const $ = s => document.querySelector(s);
+const money = n => '$' + Number(n).toLocaleString('en-AU', {minimumFractionDigits:2, maximumFractionDigits:2});
+const money0 = n => '$' + Number(n).toLocaleString('en-AU', {minimumFractionDigits:0, maximumFractionDigits:0});
+const ceil2 = n => Math.ceil((n * 100) - 1e-6) / 100;
+const round2 = n => Math.round((n * 100) - 1e-9) / 100;
+const r2 = n => Math.round(n * 100) / 100;
+
+const fmtDate = d => d.toLocaleDateString('en-AU', {day:'2-digit', month:'short', year:'numeric'});
+const fmtLong = d => d.toLocaleDateString('en-AU', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+const toISO = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const parseISO = s => { const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d); };
+const addDays = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const addMonths = (d,n) => {
+  const x = new Date(d.getFullYear(), d.getMonth()+n, 1);
+  x.setDate(Math.min(d.getDate(), new Date(x.getFullYear(), x.getMonth()+1, 0).getDate()));
+  return x;
+};
+const dayDiff = (a,b) => Math.round((a - b) / 86400000);
+/* week 1 = the first week of the course; week 0 = the Monday a week earlier */
+const weekDate = (start, w) => addDays(start, (w - 1) * 7);
+
+function defaultStart(){ /* next Monday at least 3 weeks away */
+  const t = new Date(); t.setHours(0,0,0,0);
+  const d = addDays(t, 21);
+  return addDays(d, (8 - d.getDay()) % 7 || 0);
+}
+
+const selected = name => {
+  const el = document.querySelector('input[name="' + name + '"]:checked');
+  return el ? el.value : null;
+};
+
+/* ===================== CALCULATION ===================== */
+function calc(){
+  const course = selected('course');
+  const spec   = COURSES[course];
+  const cohort = spec.cohorts.indexOf(selected('cohort')) >= 0 ? selected('cohort') : 'local';
+  const freq   = spec.freqs.indexOf(selected('freq')) >= 0 ? selected('freq') : spec.freqs[1] || spec.freqs[0];
+  const start  = parseISO($('#startDate').value);
+  const enrol  = parseISO($('#enrolDate').value);
+  return spec.model === 'hsa'
+    ? calcHsa({course, spec, cohort, freq, start, enrol})
+    : calcFitness({course, spec, cohort, freq, start, enrol});
+}
+
+function calcFitness(o){
+  const tier = o.spec.tier;
+  const tuition = TUITION[o.cohort][tier];
+  const d = Object.assign({}, o, {model:'fitness', tier:tier, tuition:tuition, totalFee:tuition,
+    courseLabel:o.spec.label, sched:[], caught:[], catchUp:0});
+
+  if (o.freq === 'lump'){
+    d.lump1 = LUMP_FIRST;
+    d.lump2 = r2(tuition - LUMP_FIRST);
+    d.upfront = LUMP_FIRST;
+    d.setup = 0;
+    d.grandTotal = tuition;
+    d.savedVs = SETUP[tier].weekly;
+    d.sched = [
+      {no:1, when:'On enrolment', date:o.enrol, amount:d.lump1, running:d.lump1, tag:'On enrolment'},
+      {no:2, when:'Course week 1', date:o.start, amount:d.lump2, running:tuition, tag:'Course week 1'}
+    ];
+    return d;
+  }
+
+  const split = UPFRONT[o.cohort][tier];
+  const base  = split.ef + split.mf + split.tf;
+  const setup = SETUP[tier][o.freq];
+  const n     = COUNTS[tier][o.freq];
+  const planTotal = r2(tuition - base + setup);
+  const each = ceil2(planTotal / n);
+  const last = r2(planTotal - each * (n - 1));
+  const anchor = addDays(o.start, -7 * ANCHOR_WEEKS_BEFORE_START);
+
+  let running = 0;
+  const all = [];
+  for (let i = 0; i < n; i++){
+    const amt = i === n - 1 ? last : each;
+    running = r2(running + amt);
+    const date = o.freq === 'monthly' ? addMonths(anchor, i)
+               : addDays(anchor, i * (o.freq === 'weekly' ? 7 : 14));
+    all.push({no:i+1, date:date, amount:amt, running:running, early:date < o.enrol});
+  }
+
+  d.split = split; d.base = base; d.setup = setup; d.n = n;
+  d.planTotal = planTotal; d.each = each; d.last = last; d.anchor = anchor;
+  d.sched = all;
+  d.caught = all.filter(p => p.early);
+  d.catchUp = r2(d.caught.reduce((s,p) => s + p.amount, 0));
+  d.upfront = r2(base + d.catchUp);
+  d.grandTotal = r2(base + planTotal);
+  d.savedVs = setup;
+  d.instalmentsLeft = all.length - d.caught.length;
+  return d;
+}
+
+function calcHsa(o){
+  const P = hsaPlan(o.cohort, o.freq, o.start);
+  const d = Object.assign({}, o, {model:'hsa', tier:'hsa', courseLabel:o.spec.label,
+    base:P.base, totalFee:P.totalFee, n:P.n, tuitionEach:P.each, tuitionLast:P.last,
+    feeTotal:P.feeTotal, remaining:P.remaining, fee:P.fee, tuition:P.tuition,
+    sched:[], caught:[], catchUp:0});
+  const all = [{no:0, kind:'upfront', when:'On enrolment', date:o.enrol, amount:P.base, running:P.base}];
+  P.insts.forEach(function(p){ all.push(Object.assign({}, p, {early: p.date < o.enrol})); });
+  d.sched = all;
+  d.instalments = all.filter(p => p.kind !== 'upfront');
+  d.caught = d.instalments.filter(p => p.early);
+  d.catchUp = r2(d.caught.reduce((s,p) => s + p.amount, 0));
+  d.upfront = r2(P.base + d.catchUp);
+  d.grandTotal = P.grandTotal;
+  d.instalmentAmount = r2(P.each + P.fee);
+  d.placementAmount = P.placementAmount;
+  d.instalmentsLeft = d.instalments.length - d.caught.length;
+  d.courseEnd = addDays(weekDate(o.start, HSA.courseWeeks), 4);
+  return d;
+}
+
+/* ===================== FORM STATE ===================== */
+function applyAvailability(){
+  const spec = COURSES[selected('course')];
+
+  /* student type: only the offers that exist for this course */
+  $('#optScs').hidden = spec.cohorts.indexOf('scs') < 0;
+  $('#optOverseas').hidden = spec.cohorts.indexOf('overseas') < 0;
+  if (spec.cohorts.indexOf(selected('cohort')) < 0)
+    document.querySelector('input[name="cohort"][value="local"]').checked = true;
+  $('#cohortHint').textContent = spec.model === 'hsa'
+    ? 'Overseas students pay a higher tuition fee for Health Services Assistance.'
+    : 'SCS members receive an exclusive discounted fee on the fitness qualifications.';
+  $('#fieldCohort').hidden = spec.cohorts.length < 2;
+  $('#numFreq').textContent = spec.cohorts.length < 2 ? '2' : '3';
+
+  /* payment options available for this course */
+  $('#optLump').hidden = spec.freqs.indexOf('lump') < 0;
+  if (spec.freqs.indexOf(selected('freq')) < 0){
+    document.querySelector('input[name="freq"][value="weekly"]').checked = true;
+  }
+
+  /* commencement hint */
+  $('#startHint').textContent = spec.model === 'hsa'
+    ? 'Courses start on a Monday. Week 1 of the course begins on this date.'
+    : 'Courses start on a Monday. Instalments are scheduled from two weeks before this date.';
+}
+
+/* ===================== RENDER ===================== */
+function render(){
+  applyAvailability();
+  const d = calc();
+  if (d.model === 'hsa') renderHsa(d); else renderFitness(d);
+
+  /* option labels */
+  document.querySelectorAll('[data-fee]').forEach(function(el){
+    const key = el.dataset.fee;
+    const spec = COURSES[key];
+    const hc = HSA.tuition[d.cohort] != null ? d.cohort : 'local';
+    const fc = TUITION[d.cohort] ? d.cohort : 'local';
+    el.textContent = spec.model === 'hsa'
+      ? money0(HSA.ef + HSA.mf + HSA.tuition[hc] + HSA.placement) + ' total'
+      : money0(TUITION[fc][spec.tier]) + ' total';
+  });
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    const f = el.dataset.count;
+    el.textContent = d.model === 'hsa'
+      ? (HSA.weeks[f].length + 1) + ' payments'
+      : COUNTS[d.tier][f] + ' payments';
+  });
+
+  $('#printHeader').innerHTML =
+    row('Course', '', d.courseLabel) +
+    (COURSES[d.course].cohorts.length > 1 ? row('Student type', '', COHORT_LABEL[d.cohort]) : '') +
+    row('Payment option', '', FREQ_LABEL[d.freq]) +
+    row('Course commences', '', fmtLong(d.start)) +
+    row('Enrolment date', '', fmtLong(d.enrol));
+
+  $('#echoStart').textContent = fmtLong(d.start);
+  $('#echoEnrol').textContent = fmtLong(d.enrol);
+  validationNotes(d);
+
+  window.__summary = plainText(d);
+  reportHeight();
+}
+
+function renderFitness(d){
+  const isLump = d.freq === 'lump';
+  $('#thWhen').textContent = 'Date';
+  $('#sUpfront').textContent = money(d.upfront);
+  $('#sTotal').textContent = money(d.grandTotal);
+  $('#sTotalSub').textContent = isLump
+    ? 'No payment instalment fee'
+    : `Tuition ${money0(d.tuition)} + instalment fee ${money0(d.setup)}`;
+
+  if (isLump){
+    $('#sUpfrontSub').textContent = `On ${fmtDate(d.enrol)}`;
+    $('#kInst').textContent = 'Final payment';
+    $('#sInst').textContent = money(d.lump2);
+    $('#sInstSub').textContent = `Due Monday ${fmtDate(d.start)}`;
+  } else {
+    $('#sUpfrontSub').textContent = d.caught.length
+      ? `${money0(d.base)} registration + ${d.caught.length} instalment${d.caught.length>1?'s':''}`
+      : `${money0(d.base)} registration payment`;
+    $('#kInst').textContent = `Then ${FREQ_LABEL[d.freq].toLowerCase()}`;
+    $('#sInst').textContent = money(d.each);
+    $('#sInstSub').textContent = `${d.instalmentsLeft} of ${d.n} payments remaining`;
+  }
+
+  const rows = [];
+  rows.push(row(d.courseLabel, `<small>${COHORT_LABEL[d.cohort]} fee, incl. enrolment &amp; material fees</small>`, money(d.tuition)));
+  if (isLump){
+    rows.push(row('1st payment — on enrolment', `<small>${fmtLong(d.enrol)}</small>`, money(d.lump1)));
+    rows.push(row('2nd payment — Monday of the course’s first week', `<small>${fmtLong(d.start)}</small>`, money(d.lump2)));
+  } else {
+    rows.push(row('Enrolment fee (non-refundable)', '', money(d.split.ef), true));
+    rows.push(row('Material fee', '', money(d.split.mf), true));
+    rows.push(row('Partial tuition fee', '', money(d.split.tf), true));
+    if (d.caught.length){
+      rows.push(row(`Instalments scheduled before your enrolment date (${d.caught.length})`,
+        `<small>${d.caught.map(p => fmtDate(p.date)).join(' · ')}</small>`, money(d.catchUp), true));
+    }
+    rows.push(rowTotal('Due at registration', money(d.upfront), fmtDate(d.enrol)));
+  }
+  $('#breakdown').innerHTML = rows.join('');
+
+  if (isLump){
+    $('#schedTitle').textContent = 'Payment schedule';
+    $('#schedMeta').textContent = '2 payments';
+    $('#schedBody').innerHTML = d.sched.map(p =>
+      `<tr><td>${p.no}</td><td>${fmtDate(p.date)}<span class="tag${p.no===1?' up':''}">${p.tag}</span></td>`
+      + `<td class="num">${money(p.amount)}</td><td class="num">${money(p.running)}</td></tr>`).join('');
+  } else {
+    $('#schedTitle').textContent = `${FREQ_LABEL[d.freq]} direct debit schedule`;
+    $('#schedMeta').textContent = `${d.n} payments · ${money(d.planTotal)} total`;
+    $('#schedBody').innerHTML = d.sched.map(p =>
+      `<tr class="${p.early ? 'paid' : ''}"><td>${p.no}</td>`
+      + `<td>${fmtDate(p.date)}${p.early ? '<span class="tag up">With registration</span>' : ''}</td>`
+      + `<td class="num">${money(p.amount)}</td><td class="num">${money(p.running)}</td></tr>`).join('');
+  }
+
+  const notes = [];
+  if (isLump){
+    notes.push('Upfront tuition payment must be made by <strong>two weeks before the course commences</strong> to secure the upfront rate.');
+    notes.push(`Paying in a lump sum avoids the payment instalment fee, saving <strong>${money0(d.savedVs)}</strong> compared with a weekly plan.`);
+  } else {
+    notes.push(`Instalments are scheduled by direct debit from <strong>two weeks before the course start date</strong> — the first scheduled date is ${fmtDate(d.anchor)}.`);
+    if (d.caught.length){
+      notes.push(d.caught.length > 1
+        ? `Because you are enrolling on ${fmtDate(d.enrol)}, the ${d.caught.length} instalments already scheduled before that date (${money(d.catchUp)} in total) are collected together with your ${money0(d.base)} registration payment.`
+        : `Because you are enrolling on ${fmtDate(d.enrol)}, the instalment already scheduled before that date (${money(d.catchUp)}) is collected together with your ${money0(d.base)} registration payment.`);
+    }
+    if (d.last !== d.each) notes.push(`The final instalment is adjusted to <strong>${money(d.last)}</strong> to reconcile the total to the cent.`);
+    notes.push('A completed <strong>GoCardless direct debit form</strong> is required at the time of registration.');
+  }
+  notes.push(`The enrolment fee of ${money0(UPFRONT[d.cohort][d.tier].ef)} is non-refundable.`);
+  notes.push('Fees include enrolment and material fees. Figures are an estimate — your written agreement confirms the final schedule.');
+  $('#notes').innerHTML = '<ul>' + notes.map(n => `<li>${n}</li>`).join('') + '</ul>';
+}
+
+function renderHsa(d){
+  $('#thWhen').textContent = 'Date';
+  $('#sUpfront').textContent = money(d.upfront);
+  $('#sUpfrontSub').textContent = d.caught.length
+    ? `${money(d.base)} registration + ${d.caught.length} instalment${d.caught.length>1?'s':''}`
+    : `${money(d.base)} registration payment`;
+  $('#kInst').textContent = `Then ${FREQ_LABEL[d.freq].toLowerCase()}`;
+  $('#sInst').textContent = money(d.instalmentAmount);
+  $('#sInstSub').textContent = d.caught.length
+    ? `${d.instalmentsLeft} of ${d.instalments.length} payments remaining`
+    : `${d.n} tuition instalments plus ${money(d.placementAmount)} work placement`;
+  $('#sTotal').textContent = money(d.grandTotal);
+  $('#sTotalSub').textContent = d.feeTotal
+    ? `Course fee ${money0(d.totalFee)} + instalment fees ${money0(d.feeTotal)}`
+    : `Course fee ${money0(d.totalFee)}, no instalment fees`;
+
+  const rows = [];
+  rows.push(row(d.courseLabel,
+    `<small>${COHORT_LABEL[d.cohort]} fee: enrolment ${money0(HSA.ef)} + material ${money0(HSA.mf)} + tuition ${money0(d.tuition)} + work placement ${money0(HSA.placement)}</small>`,
+    money(d.totalFee)));
+  rows.push(row('Enrolment fee (non-refundable)', '', money(HSA.ef), true));
+  rows.push(row('Material fee', '', money(HSA.mf), true));
+  rows.push(row('Tuition prepaid at enrolment', '', money(HSA.prepaidTuition), true));
+  if (d.caught.length){
+    rows.push(row(`Instalments scheduled before your enrolment date (${d.caught.length})`,
+      `<small>${d.caught.map(p => fmtDate(p.date)).join(' · ')}</small>`, money(d.catchUp), true));
+  }
+  rows.push(rowTotal('Due at registration', money(d.upfront), fmtDate(d.enrol)));
+  $('#breakdown').innerHTML = rows.join('');
+
+  $('#schedTitle').textContent = `${FREQ_LABEL[d.freq]} payment schedule`;
+  $('#schedMeta').textContent = `Registration payment + ${d.instalments.length} instalments · ${money(d.grandTotal)} total`;
+  $('#schedBody').innerHTML = d.sched.map(function(p){
+    const num = p.kind === 'upfront' ? '—' : p.no;
+    const tag = p.kind === 'upfront' ? '<span class="tag up">On enrolment</span>'
+              : p.early ? '<span class="tag up">With registration</span>'
+              : p.kind === 'placement' ? '<span class="tag">Work placement</span>' : '';
+    return `<tr class="${p.early ? 'paid' : ''}"><td>${num}</td><td>${fmtDate(p.date)}${tag}</td>`
+      + `<td class="num">${money(p.amount)}</td><td class="num">${money(p.running)}</td></tr>`;
+  }).join('');
+
+  const notes = [];
+  notes.push(d.fee
+    ? `An instalment fee of <strong>${money0(d.fee)}</strong> is added to every instalment, including the work placement instalment — ${money(d.feeTotal)} across this plan. The registration payment is not an instalment and carries no fee.`
+    : `The monthly plan has <strong>no instalment fee</strong>.`);
+  if (d.caught.length){
+    notes.push(d.caught.length > 1
+      ? `Because you are enrolling on ${fmtDate(d.enrol)}, the ${d.caught.length} instalments already scheduled before that date (${money(d.catchUp)} in total) are collected together with your registration payment.`
+      : `Because you are enrolling on ${fmtDate(d.enrol)}, the instalment already scheduled before that date (${money(d.catchUp)}) is collected together with your registration payment.`);
+  }
+  if (d.tuitionLast !== d.tuitionEach) notes.push(`The final tuition instalment is adjusted to <strong>${money(r2(d.tuitionLast + d.fee))}</strong> to reconcile the total to the cent.`);
+  if (!d.caught.length && dayDiff(d.start, d.enrol) < 14 && d.enrol <= d.start){
+    notes.push(`Enrolling within two weeks of the course start is fine — if any instalment falls before your enrolment date, it is added to the payment you make at registration instead.`);
+  }
+  notes.push('A completed <strong>GoCardless direct debit form</strong> is required at the time of registration.');
+  notes.push(`The enrolment fee of ${money0(HSA.ef)} is non-refundable. Figures are an estimate — your written agreement confirms the final schedule.`);
+  $('#notes').innerHTML = '<ul>' + notes.map(n => `<li>${n}</li>`).join('') + '</ul>';
+}
+
+function validationNotes(d){
+  const mn = $('#noteMonday');
+  if (d.start.getDay() !== 1){
+    mn.hidden = false;
+    mn.querySelector('span').innerHTML = `${fmtDate(d.start)} is a ${d.start.toLocaleDateString('en-AU',{weekday:'long'})}. Course intakes commence on a Monday — check the intake calendar.`;
+  } else mn.hidden = true;
+
+  const ne = $('#noteEnrol'); ne.hidden = true;
+  if (d.enrol > d.start){
+    ne.hidden = false;
+    ne.querySelector('span').textContent = 'Your enrolment date is after the course has started. Please contact the ABM admissions team to confirm a late-start schedule.';
+  } else if (d.freq !== 'lump' && dayDiff(d.start, d.enrol) < 14 && d.caught.length === 0){
+    ne.hidden = false;
+    ne.querySelector('span').textContent = 'You are enrolling within two weeks of the course start. Your registration payment may need to cover instalments due on or before this date.';
+  }
+}
+
+function row(lbl, sub, val, isSub){
+  return `<div class="row${isSub ? ' sub' : ''}"><div class="lbl">${lbl}${sub}</div><div class="val">${val}</div></div>`;
+}
+function rowTotal(lbl, val, badge){
+  return `<div class="row total"><div class="lbl">${lbl}${badge ? `<span class="badge">${badge}</span>` : ''}</div><div class="val">${val}</div></div>`;
+}
+
+function plainText(d){
+  const L = [];
+  L.push('ABM Further Education — payment plan estimate');
+  L.push(`Course: ${d.courseLabel}  (total ${money(d.totalFee)})`);
+  if (COURSES[d.course].cohorts.length > 1) L.push(`Student type: ${COHORT_LABEL[d.cohort]}`);
+  L.push(`Payment option: ${FREQ_LABEL[d.freq]}`);
+  L.push(`Course commences: ${fmtDate(d.start)}   Enrolment date: ${fmtDate(d.enrol)}`);
+  L.push('');
+  if (d.model === 'fitness' && d.freq === 'lump'){
+    L.push(`1st payment (on enrolment): ${money(d.lump1)}`);
+    L.push(`2nd payment (Monday of week 1, ${fmtDate(d.start)}): ${money(d.lump2)}`);
+  } else if (d.model === 'fitness'){
+    L.push(`Due at registration: ${money(d.upfront)}  (enrolment ${money0(d.split.ef)} + material ${money0(d.split.mf)} + tuition ${money0(d.split.tf)}${d.catchUp ? ` + ${money(d.catchUp)} instalments due before enrolment` : ''})`);
+    L.push(`Payment instalment fee: ${money(d.setup)}   Payment plan total: ${money(d.planTotal)}`);
+    L.push(`${d.n} ${FREQ_LABEL[d.freq].toLowerCase()} payments of ${money(d.each)}${d.last !== d.each ? ` (final ${money(d.last)})` : ''}`);
+  } else {
+    L.push(`Due at registration: ${money(d.upfront)}  (enrolment ${money0(HSA.ef)} + material ${money0(HSA.mf)} + tuition prepaid ${money0(HSA.prepaidTuition)}${d.catchUp ? ` + ${money(d.catchUp)} instalments due before enrolment` : ''})`);
+    L.push(`${d.n} tuition instalments of ${money(d.instalmentAmount)}${d.fee ? ` (incl. ${money0(d.fee)} instalment fee)` : ' (no instalment fee)'}, plus a ${money(d.placementAmount)} work placement fee instalment on ${fmtDate(d.sched.find(p => p.kind === 'placement').date)}`);
+  }
+  L.push('');
+  L.push('#  When                       Date          Amount       Running total');
+  d.sched.forEach(function(p){
+    const num = (p.kind === 'upfront' ? '—' : String(p.no)).padEnd(3);
+    const when = (d.model === 'hsa'
+      ? (p.kind === 'upfront' ? 'On enrolment' : p.kind === 'placement' ? 'Work placement' : '')
+      : (p.when || p.tag || '')).padEnd(27);
+    L.push(num + when + fmtDate(p.date).padEnd(14) + money(p.amount).padEnd(13) + money(p.running)
+      + (p.early ? '  (with registration)' : ''));
+  });
+  L.push('');
+  L.push(`Total payable: ${money(d.grandTotal)}`);
+  return L.join('\n');
+}
+
+/* ===================== WIRING ===================== */
+const today = new Date(); today.setHours(0,0,0,0);
+const TODAY_ISO = toISO(today);
+$('#startDate').value = toISO(defaultStart());
+$('#enrolDate').value = TODAY_ISO;
+/* neither date may be in the past */
+$('#startDate').min = TODAY_ISO;
+$('#enrolDate').min = TODAY_ISO;
+
+/* if a past date is typed in, pull it forward to today and say so */
+function clampDates(el){
+  const warn = el.id === 'startDate' ? $('#notePast') : $('#notePastEnrol');
+  if (el.value && el.value < TODAY_ISO){
+    el.value = TODAY_ISO;
+    warn.hidden = false;
+    warn.querySelector('span').textContent = (el.id === 'startDate' ? 'The course commencement date' : 'The enrolment date')
+      + ' cannot be in the past, so it has been set to today (' + fmtLong(today) + ').';
+    clearTimeout(warn.__t);
+    warn.__t = setTimeout(function(){ warn.hidden = true; reportHeight(); }, 6000);
+    return true;
+  }
+  warn.hidden = true;
+  return false;
+}
+
+document.querySelectorAll('input').forEach(el => el.addEventListener('change', function(){
+  if (el.type === 'date') clampDates(el);
+  render();
+}));
+document.querySelectorAll('input[type="date"]').forEach(el => el.addEventListener('input', () => { if (el.value) render(); }));
+document.querySelectorAll('input[type="date"]').forEach(el => el.addEventListener('blur', () => { clampDates(el); render(); }));
+
+$('#themeBtn').addEventListener('click', () => {
+  document.documentElement.dataset.theme =
+    document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+});
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+  document.documentElement.dataset.theme = 'dark';
+}
+$('#printBtn').addEventListener('click', () => window.print());
+$('#copyBtn').addEventListener('click', async () => {
+  const lbl = $('#copyLabel');
+  try { await navigator.clipboard.writeText(window.__summary || ''); lbl.textContent = 'Copied'; }
+  catch { lbl.textContent = 'Press Ctrl+C'; }
+  setTimeout(() => { lbl.textContent = 'Copy summary'; }, 1800);
+});
+
+/* auto-height for iframe embeds */
+let lastH = 0;
+function reportHeight(){
+  const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+  if (h !== lastH && window.parent !== window){
+    lastH = h;
+    window.parent.postMessage({type:'abm-calculator-height', height:h}, '*');
+  }
+}
+window.addEventListener('resize', reportHeight);
+new ResizeObserver(reportHeight).observe(document.body);
+
+$('#verTag').textContent = OFFER_VERSION;
+$('#verTagHsa').textContent = HSA.version;
+render();
+
+</script>
+<script>
+/* =======================================================================
+   OFFER DOCUMENT GENERATOR
+   Builds the fitness and Health Services Assistance offer documents as real
+   .docx files from the same constants the calculator uses. Nothing in this
+   block needs editing when fees change.
+   ======================================================================= */
+
+const JSZIP_URL = 'vendor/jszip.min.js';  /* bundled copy of JSZip 3.10.1 */
+const TIERS = [
+  {key:'single',  heading:'Certificate III or IV'},
+  {key:'package', heading:'Certificate III + IV'}
+];
+
+/* ---------- plan maths for any combination, independent of the form ---------- */
+function planFor(cohort, tier, freq, start){
+  const tuition = TUITION[cohort][tier];
+  const split   = UPFRONT[cohort][tier];
+  const base    = split.ef + split.mf + split.tf;
+  const setup   = SETUP[tier][freq];
+  const n       = COUNTS[tier][freq];
+  const planTotal = r2(tuition - base + setup);
+  const each = ceil2(planTotal / n);
+  const last = r2(planTotal - each * (n - 1));
+  const anchor = addDays(start, -7 * ANCHOR_WEEKS_BEFORE_START);
+  const rows = [];
+  let running = 0;
+  for (let i = 0; i < n; i++){
+    const amt = i === n - 1 ? last : each;
+    running = r2(running + amt);
+    const date = freq === 'monthly' ? addMonths(anchor, i)
+               : addDays(anchor, i * (freq === 'weekly' ? 7 : 14));
+    rows.push({no:i+1, date:date, amount:amt, running:running});
+  }
+  return {tuition:tuition, split:split, base:base, setup:setup, n:n,
+          planTotal:planTotal, each:each, last:last, anchor:anchor, rows:rows};
+}
+
+/* ---------- minimal WordprocessingML builders ---------- */
+const xe = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const PAGE_W = 16838, PAGE_H = 11906, MARGIN = 1134;   /* A4 landscape, 2cm margins */
+
+function wp(text, o){
+  o = o || {};
+  const sz = o.size || 20;
+  const rpr = '<w:rPr>'
+    + (o.bold ? '<w:b/>' : '')
+    + (o.italic ? '<w:i/>' : '')
+    + (o.color ? '<w:color w:val="' + o.color + '"/>' : '')
+    + '<w:sz w:val="' + sz + '"/><w:szCs w:val="' + sz + '"/>'
+    + '</w:rPr>';
+  const ppr = '<w:pPr>'
+    + '<w:spacing w:before="' + (o.before || 0) + '" w:after="' + (o.after == null ? 120 : o.after) + '"/>'
+    + (o.align ? '<w:jc w:val="' + o.align + '"/>' : '')
+    + '</w:pPr>';
+  const runs = String(text).length
+    ? '<w:r>' + rpr + '<w:t xml:space="preserve">' + xe(text) + '</w:t></w:r>' : '';
+  return '<w:p>' + ppr + runs + '</w:p>';
+}
+const pageBreak = () =>
+  '<w:p><w:pPr><w:spacing w:after="0"/></w:pPr><w:r><w:br w:type="page"/></w:r></w:p>';
+
+function wcell(lines, width, o){
+  o = o || {};
+  const arr = Array.isArray(lines) ? lines : [lines];
+  const body = arr.map(function(t){
+    return wp(t, {bold:o.bold, size:o.size || 18, after:0, align:o.align});
+  }).join('');
+  return '<w:tc><w:tcPr><w:tcW w:w="' + width + '" w:type="dxa"/>'
+    + (o.fill ? '<w:shd w:val="clear" w:color="auto" w:fill="' + o.fill + '"/>' : '')
+    + '<w:vAlign w:val="center"/>'
+    + '<w:tcMar><w:top w:w="60" w:type="dxa"/><w:bottom w:w="60" w:type="dxa"/>'
+    + '<w:left w:w="90" w:type="dxa"/><w:right w:w="90" w:type="dxa"/></w:tcMar>'
+    + '</w:tcPr>' + body + '</w:tc>';
+}
+
+function wtable(widths, header, rows, aligns){
+  const border = t => '<w:' + t + ' w:val="single" w:sz="4" w:space="0" w:color="BFBFBF"/>';
+  const total = widths.reduce(function(a,b){ return a + b; }, 0);
+  let x = '<w:tbl><w:tblPr><w:tblW w:w="' + total + '" w:type="dxa"/>'
+    + '<w:tblBorders>' + ['top','left','bottom','right','insideH','insideV'].map(border).join('')
+    + '</w:tblBorders><w:tblLayout w:type="fixed"/></w:tblPr><w:tblGrid>'
+    + widths.map(function(w){ return '<w:gridCol w:w="' + w + '"/>'; }).join('') + '</w:tblGrid>';
+  x += '<w:tr><w:trPr><w:tblHeader/></w:trPr>'
+    + header.map(function(h,i){ return wcell(h, widths[i], {bold:true, fill:'F2EDE7', align:aligns && aligns[i]}); }).join('')
+    + '</w:tr>';
+  rows.forEach(function(r){
+    x += '<w:tr>' + r.map(function(c,i){ return wcell(c, widths[i], {align:aligns && aligns[i]}); }).join('') + '</w:tr>';
+  });
+  return x + '</w:tbl>' + wp('', {after:120});
+}
+
+function tierFeeLine(cohort, t){
+  return t.heading + ' \u2014 Total Fee: ' + money0(TUITION[cohort][t.key])
+    + ' (including enrolment & material fees)';
+}
+function introText(cohort){
+  return 'At ABM Further Education, we offer flexible payment options to suit our students\u2019 needs. '
+    + DOC_COPY[cohort].who + ' who pay their course fees upfront receive a special discount and can get '
+    + 'on with their studies without any further payments. If you\u2019d rather pay it off progressively, '
+    + 'our weekly, fortnightly or monthly payment plans let you spread the cost over the duration of the '
+    + 'course. Our aim is to make quality fitness education accessible to everyone, with affordable '
+    + 'tuition and a payment option to suit different circumstances.';
+}
+function footnoteText(cohort){
+  const ef = UPFRONT[cohort].single.ef;
+  return '* Upfront tuition payment must be made by ' + ANCHOR_WEEKS_BEFORE_START + ' weeks before the '
+    + 'commencement of the enrolled course. An enrolment fee of ' + money0(ef) + ' (non-refundable), '
+    + 'material fee, partial tuition fee (only for students who request a payment plan) and completion of '
+    + 'the GoCardless direct debit form are required at the time of registration. The final instalment '
+    + 'amount is adjusted by a few cents to reconcile the total.';
+}
+function feeRows(cohort, tierKey, start){
+  const tuition = TUITION[cohort][tierKey];
+  const split = UPFRONT[cohort][tierKey];
+  const base = split.ef + split.mf + split.tf;
+  const rows = [[
+    'Lump Sum', money(tuition),
+    ['1st payment: ' + money0(LUMP_FIRST) + ' on enrolment',
+     '2nd payment: ' + money0(tuition - LUMP_FIRST) + ' is due on the Monday of the course\u2019s first week.'],
+    'N/A', 'N/A', 'N/A', 'N/A'
+  ]];
+  ['weekly','fortnightly','monthly'].forEach(function(f){
+    const p = planFor(cohort, tierKey, f, start);
+    rows.push([
+      FREQ_LABEL[f], money(p.tuition),
+      money0(base) + ' (EF ' + money0(split.ef) + ', MF ' + money0(split.mf) + ', TF ' + money0(split.tf) + ')',
+      money(p.setup), money(p.planTotal), String(p.n),
+      p.last !== p.each ? money(p.each) + ' (final ' + money(p.last) + ')' : money(p.each)
+    ]);
+  });
+  return rows;
+}
+
+const FEE_HDR = ['Payment Frequency','Total Tuition','Upfront Tuition Payment*','Payment Instalment Fee',
+                 'Total for Payment Plan','No. of Payments','Amount per Payment'];
+const FEE_W   = [1900, 1500, 4100, 1700, 1900, 1500, 1971];
+const FEE_AL  = [null,'right',null,'right','right','center','right'];
+const SCH_HDR = ['Payment #','Date','Amount','Running Total'];
+const SCH_W   = [1400, 4600, 2400, 2400];
+const SCH_AL  = ['center', null, 'right', 'right'];
+
+/* ---------- document content ---------- */
+function buildDocBody(cohort, start){
+  const c = DOC_COPY[cohort];
+  const base = UPFRONT[cohort].single.ef + UPFRONT[cohort].single.mf + UPFRONT[cohort].single.tf;
+  let b = '';
+
+  b += wp(c.title, {bold:true, size:36, after:60});
+  b += wp('ABM Further Education \u2014 version ' + OFFER_VERSION, {size:18, color:'767676', after:240});
+  b += wp(introText(cohort), {after:240});
+  TIERS.forEach(function(t){ b += wp(tierFeeLine(cohort, t), {bold:true, after:60}); });
+  b += wp(footnoteText(cohort), {size:18, italic:true, before:120, after:240});
+
+  TIERS.forEach(function(t){
+    b += wp(t.heading, {bold:true, size:26, before:120, after:120});
+    b += wtable(FEE_W, FEE_HDR, feeRows(cohort, t.key, start), FEE_AL);
+  });
+
+  b += pageBreak();
+  b += wp('Sample Payment Schedule', {bold:true, size:28, after:60});
+  b += wp('Based on a course commencement date of ' + fmtLong(start) + '. Direct debits begin '
+    + ANCHOR_WEEKS_BEFORE_START + ' weeks earlier, on '
+    + fmtLong(addDays(start, -7 * ANCHOR_WEEKS_BEFORE_START)) + '. The schedules below exclude the '
+    + money0(base) + ' payable at registration.', {size:18, color:'767676', after:240});
+
+  TIERS.forEach(function(t, ti){
+    if (ti) b += pageBreak();
+    b += wp(t.heading, {bold:true, size:26, after:120});
+    ['weekly','fortnightly','monthly'].forEach(function(f){
+      const p = planFor(cohort, t.key, f, start);
+      b += wp(FREQ_LABEL[f] + ' \u2014 ' + p.n + ' payments, total ' + money(p.planTotal)
+        + ' (first debit ' + fmtDate(p.anchor) + ')', {bold:true, size:20, before:160, after:80});
+      b += wtable(SCH_W, SCH_HDR, p.rows.map(function(r){
+        return [String(r.no), fmtDate(r.date), money(r.amount), money(r.running)];
+      }), SCH_AL);
+    });
+  });
+
+  b += wp('Generated from the ABM fitness payment plan calculator on ' + fmtLong(new Date()) + '.',
+    {size:16, color:'767676', before:240});
+  return b;
+}
+
+function documentXml(body){
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+    + '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
+    + '<w:body>' + body
+    + '<w:sectPr><w:pgSz w:w="' + PAGE_W + '" w:h="' + PAGE_H + '" w:orient="landscape"/>'
+    + '<w:pgMar w:top="' + MARGIN + '" w:right="' + MARGIN + '" w:bottom="' + MARGIN
+    + '" w:left="' + MARGIN + '" w:header="0" w:footer="0" w:gutter="0"/></w:sectPr>'
+    + '</w:body></w:document>';
+}
+const STYLES_XML = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+  + '<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
+  + '<w:docDefaults><w:rPrDefault><w:rPr>'
+  + '<w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/><w:sz w:val="20"/>'
+  + '</w:rPr></w:rPrDefault><w:pPrDefault><w:pPr>'
+  + '<w:spacing w:after="120" w:line="252" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>'
+  + '<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/></w:style>'
+  + '</w:styles>';
+const CONTENT_TYPES = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+  + '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+  + '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+  + '<Default Extension="xml" ContentType="application/xml"/>'
+  + '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>'
+  + '<Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/>'
+  + '</Types>';
+const ROOT_RELS = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+  + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+  + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>'
+  + '</Relationships>';
+const DOC_RELS = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+  + '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+  + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>'
+  + '</Relationships>';
+
+
+/* =========== HEALTH SERVICES ASSISTANCE OFFER DOCUMENTS =========== */
+/* cohort: 'local' or 'overseas' */
+function hsaPlanFor(cohort, freq, start){
+  const P = hsaPlan(cohort, freq, start);
+  const feeTxt = P.fee ? ' + ' + money0(P.fee) + ' fee' : '';
+  const rows = [['Upfront (EF ' + money0(HSA.ef) + ' + MF ' + money0(HSA.mf) + ' + ' + money0(HSA.prepaidTuition)
+    + ' tuition prepaid, no instalment fee)', 'On Enrolment', money(P.base), money(P.base)]];
+  P.insts.forEach(function(q, i){
+    if (q.kind === 'placement'){
+      rows.push(['Instalment ' + q.no + ' \u2014 Work Placement fee (' + money0(HSA.placement) + feeTxt + ')',
+        fmtDate(q.date), money(q.amount), money(q.running)]);
+    } else {
+      rows.push(['Instalment ' + q.no + ' (tuition ' + money(q.tuitionPart) + feeTxt + ')'
+          + (q.finalTuition ? ' (final tuition instalment)' : ''),
+        fmtDate(q.date), money(q.amount), money(q.running)]);
+    }
+  });
+  rows.push(['Work Placement \u2014 no payment due. Course ends '
+      + fmtDate(addDays(weekDate(start, HSA.courseWeeks), 4)) + '.', '\u2014', '-', money(P.grandTotal)]);
+  return Object.assign({}, P, {rows:rows});
+}
+
+const HSA_FEE_HDR = ['Payment Frequency','Total Fee','Upfront Payment*','Instalment Fee',
+                     'Total for Payment Plan','No. of Payments','Tuition Instalment Amount'];
+const HSA_FEE_W   = [1900, 1500, 4100, 1700, 1900, 1500, 1971];
+const HSA_FEE_AL  = [null, 'right', null, 'right', 'right', 'center', 'right'];
+const HSA_SCH_HDR = ['Item','Due Date','Amount','Running Total'];
+const HSA_SCH_W   = [6600, 2400, 2785, 2785];
+const HSA_SCH_AL  = [null, null, 'right', 'right'];
+
+function hsaFeeRows(cohort, start){
+  return ['weekly','fortnightly','monthly'].map(function(f){
+    const p = hsaPlanFor(cohort, f, start);
+    return [
+      FREQ_LABEL[f], money(p.totalFee),
+      money0(HSA.ef + HSA.mf) + ' (EF ' + money0(HSA.ef) + ', MF ' + money0(HSA.mf) + ') + '
+        + money0(HSA.prepaidTuition) + ' tuition prepaid = ' + money(p.base),
+      p.fee ? money(p.feeTotal) + ' (' + (p.n + 1) + ' \u00d7 ' + money0(p.fee) + ')' : 'Nil',
+      money(p.grandTotal), 'Upfront + ' + (p.n + 1),
+      p.last !== p.each ? money(p.each) + ' (last ' + money(p.last) + ')' : money(p.each)
+    ];
+  });
+}
+function hsaTotalLine(cohort){
+  const t = HSA.tuition[cohort];
+  return 'Health Services Assistance (HSA) \u2014 Total Fee: '
+    + money(HSA.ef + HSA.mf + t + HSA.placement)
+    + ' (enrolment fee ' + money0(HSA.ef) + ' + material fee ' + money0(HSA.mf)
+    + ' + tuition ' + money0(t) + ' + Work Placement fee ' + money0(HSA.placement) + ')';
+}
+function hsaPrincipleLine(){
+  const wf = HSA.instalmentFee.weekly;
+  return 'Principle: an Instalment Fee of ' + money(wf) + ' is added to every instalment under the weekly '
+    + 'and fortnightly payment plans, starting from Instalment 1 (each tuition instalment and the Work '
+    + 'Placement fee). The monthly payment plan carries no instalment fee. The upfront payment collected '
+    + 'on enrolment is not an instalment and carries no instalment fee.';
+}
+function hsaFootnote(start){
+  const m = HSA.weeks.monthly;
+  return '* Upfront payment (enrolment fee ' + money0(HSA.ef) + ' + material fee ' + money0(HSA.mf) + ' + '
+    + money0(HSA.prepaidTuition) + ' tuition prepaid = ' + money(HSA.ef + HSA.mf + HSA.prepaidTuition)
+    + ') is collected at the time of enrolment; no instalment fee applies to it. The remaining tuition is '
+    + 'split evenly across the tuition instalments. Under the weekly and fortnightly plans, Instalment 1 '
+    + 'falls one week before the course start date (' + fmtDate(weekDate(start, HSA.weeks.weekly[0])) + '). '
+    + 'Under the monthly plan, Instalment 1 falls in Week ' + m[0] + ' of the course ('
+    + fmtDate(weekDate(start, m[0])) + ') and each following tuition instalment ' + (m[1] - m[0])
+    + ' weeks later. The Work Placement fee is charged in Week ' + HSA.placementWeek + ' of every schedule ('
+    + fmtDate(weekDate(start, HSA.placementWeek)) + '). Dates with no payment due are omitted from the '
+    + 'schedules below.';
+}
+function hsaScheduleIntro(start){
+  return 'Course runs Monday\u2013Friday every week, from ' + fmtDate(start) + ' to '
+    + fmtDate(addDays(weekDate(start, HSA.courseWeeks), 4)) + ', with Work Placement delivered in the final '
+    + 'two weeks. The Work Placement fee is charged on ' + fmtDate(weekDate(start, HSA.placementWeek))
+    + ', ahead of Work Placement.';
+}
+function introTextHsa(cohort){
+  return 'At ABM Further Education, we offer flexible payment options to suit our students\u2019 needs. '
+    + 'Our weekly, fortnightly or monthly payment plans let ' + (cohort === 'overseas' ? 'overseas' : 'local')
+    + ' students spread the cost of the course over its duration. Our aim is to make quality education '
+    + 'accessible to everyone, with affordable tuition and a payment option to suit different circumstances.';
+}
+const hsaDocKey = cohort => cohort === 'overseas' ? 'hsaOverseas' : 'hsa';
+
+function buildHsaDocBody(cohort, start){
+  let b = '';
+  b += wp(DOC_COPY[hsaDocKey(cohort)].title, {bold:true, size:36, after:60});
+  b += wp('ABM Further Education \u2014 version ' + HSA.version, {size:18, color:'767676', after:240});
+  b += wp(introTextHsa(cohort), {after:240});
+  b += wp(hsaTotalLine(cohort), {bold:true, after:60});
+  b += wp(hsaPrincipleLine(), {size:18, after:120});
+  b += wp(hsaFootnote(start), {size:18, italic:true, before:120, after:240});
+  b += wtable(HSA_FEE_W, HSA_FEE_HDR, hsaFeeRows(cohort, start), HSA_FEE_AL);
+
+  b += pageBreak();
+  b += wp('Health Services Assistance (HSA) \u2014 Payment Schedules', {bold:true, size:28, after:60});
+  b += wp(hsaScheduleIntro(start), {size:18, color:'767676', after:240});
+  ['weekly','fortnightly','monthly'].forEach(function(f, i){
+    if (i) b += pageBreak();
+    const p = hsaPlanFor(cohort, f, start);
+    b += wp(FREQ_LABEL[f] + ' (Upfront + ' + (p.n + 1) + ' instalments incl. Work Placement, Total '
+      + money(p.grandTotal) + ')', {bold:true, size:22, before:120, after:80});
+    b += wtable(HSA_SCH_W, HSA_SCH_HDR, p.rows, HSA_SCH_AL);
+  });
+  b += wp('Generated from the ABM course payment plan calculator on ' + fmtLong(new Date()) + '.',
+    {size:16, color:'767676', before:240});
+  return b;
+}
+
+/* ---------- fallback renderer: HTML that Word opens natively ---------- */
+function htmlTable(hdr, rows){
+  return '<table><tr>' + hdr.map(function(x){ return '<th>' + xe(x) + '</th>'; }).join('') + '</tr>'
+    + rows.map(function(r){
+        return '<tr>' + r.map(function(c){
+          return '<td>' + (Array.isArray(c) ? c.map(xe).join('<br>') : xe(c)) + '</td>';
+        }).join('') + '</tr>';
+      }).join('') + '</table>';
+}
+function docBodyToHtml(cohort, start){
+  if (cohort === 'hsa' || cohort === 'hsaOverseas'){
+    const hc = cohort === 'hsaOverseas' ? 'overseas' : 'local';
+    let h = '<h1 style="font-size:18pt">' + xe(DOC_COPY[cohort].title) + '</h1>'
+      + '<p style="color:#767676">ABM Further Education &mdash; version ' + xe(HSA.version) + '</p>'
+      + '<p>' + xe(introTextHsa(hc)) + '</p>'
+      + '<p><strong>' + xe(hsaTotalLine(hc)) + '</strong></p>'
+      + '<p>' + xe(hsaPrincipleLine()) + '</p>'
+      + '<p><em>' + xe(hsaFootnote(start)) + '</em></p>'
+      + htmlTable(HSA_FEE_HDR, hsaFeeRows(hc, start))
+      + '<h1 style="font-size:15pt;page-break-before:always">Payment Schedules</h1>'
+      + '<p style="color:#767676">' + xe(hsaScheduleIntro(start)) + '</p>';
+    ['weekly','fortnightly','monthly'].forEach(function(f){
+      const p = hsaPlanFor(hc, f, start);
+      h += '<p><strong>' + FREQ_LABEL[f] + ' (Upfront + ' + (p.n + 1) + ' instalments, total '
+        + money(p.grandTotal) + ')</strong></p>' + htmlTable(HSA_SCH_HDR, p.rows);
+    });
+    return h;
+  }
+  const c = DOC_COPY[cohort];
+  let h = '<h1 style="font-size:18pt">' + xe(c.title) + '</h1>'
+    + '<p style="color:#767676">ABM Further Education &mdash; version ' + xe(OFFER_VERSION) + '</p>'
+    + '<p>' + xe(introText(cohort)) + '</p>';
+  TIERS.forEach(function(t){ h += '<p><strong>' + xe(tierFeeLine(cohort, t)) + '</strong></p>'; });
+  h += '<p><em>' + xe(footnoteText(cohort)) + '</em></p>';
+  TIERS.forEach(function(t){
+    h += '<h2 style="font-size:13pt">' + xe(t.heading) + '</h2>' + htmlTable(FEE_HDR, feeRows(cohort, t.key, start));
+  });
+  h += '<h1 style="font-size:15pt;page-break-before:always">Sample Payment Schedule</h1>'
+    + '<p style="color:#767676">Based on a course commencement date of ' + xe(fmtLong(start)) + '.</p>';
+  TIERS.forEach(function(t){
+    h += '<h2 style="font-size:13pt">' + xe(t.heading) + '</h2>';
+    ['weekly','fortnightly','monthly'].forEach(function(f){
+      const p = planFor(cohort, t.key, f, start);
+      h += '<p><strong>' + FREQ_LABEL[f] + ' &mdash; ' + p.n + ' payments, total ' + money(p.planTotal)
+        + ' (first debit ' + xe(fmtDate(p.anchor)) + ')</strong></p>'
+        + htmlTable(SCH_HDR, p.rows.map(function(r){
+            return [String(r.no), fmtDate(r.date), money(r.amount), money(r.running)];
+          }));
+    });
+  });
+  return h;
+}
+
+/* ---------- packaging and download ---------- */
+let zipLoader = null;
+function loadJSZip(){
+  if (window.JSZip) return Promise.resolve(window.JSZip);
+  if (!zipLoader){
+    zipLoader = new Promise(function(res, rej){
+      const s = document.createElement('script');
+      s.src = JSZIP_URL;
+      s.onload = function(){ window.JSZip ? res(window.JSZip) : rej(new Error('JSZip unavailable')); };
+      s.onerror = function(){ rej(new Error('JSZip failed to load')); };
+      document.head.appendChild(s);
+    });
+  }
+  return zipLoader;
+}
+
+function saveBlob(blob, filename){
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.rel = 'noopener';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 10000);
+}
+
+async function makeOfferDoc(kind){
+  const start = parseISO(document.getElementById('startDate').value);
+  const isHsa = kind === 'hsa' || kind === 'hsaOverseas';
+  const ver = isHsa ? HSA.version.replace(/\s+/g, '') : OFFER_VERSION;
+  const name = DOC_COPY[kind].file + '-' + ver;
+  const body = isHsa ? buildHsaDocBody(kind === 'hsaOverseas' ? 'overseas' : 'local', start)
+                     : buildDocBody(kind, start);
+  try {
+    const JSZipLib = await loadJSZip();
+    const zip = new JSZipLib();
+    zip.file('[Content_Types].xml', CONTENT_TYPES);
+    zip.folder('_rels').file('.rels', ROOT_RELS);
+    const word = zip.folder('word');
+    word.file('document.xml', documentXml(body));
+    word.file('styles.xml', STYLES_XML);
+    word.folder('_rels').file('document.xml.rels', DOC_RELS);
+    const blob = await zip.generateAsync({
+      type: 'blob',
+      mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      compression: 'DEFLATE'
+    });
+    saveBlob(blob, name + '.docx');
+    return name + '.docx';
+  } catch (err) {
+    const html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" '
+      + 'xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8">'
+      + '<style>body{font-family:Calibri,sans-serif;font-size:10pt}'
+      + 'table{border-collapse:collapse;width:100%}td,th{border:1px solid #bfbfbf;padding:4px 6px;'
+      + 'font-size:9pt;vertical-align:middle}th{background:#f2ede7;text-align:left}'
+      + '@page{size:A4 landscape;margin:2cm}</style></head><body>'
+      + docBodyToHtml(kind, start) + '</body></html>';
+    saveBlob(new Blob(['\ufeff' + html], {type:'application/msword'}), name + '.doc');
+    return name + '.doc';
+  }
+}
+
+/* ---------- wiring ---------- */
+(function initDocGen(){
+  const params = new URLSearchParams(location.search);
+  const show = params.has('docs') ? params.get('docs') !== '0' : SHOW_DOC_GENERATOR;
+  const panel = document.getElementById('docgen');
+  if (!panel || !show) return;
+  panel.hidden = false;
+
+  const status = document.getElementById('docStatus');
+  const startEl = document.getElementById('startDate');
+  const sync = function(){
+    if (!startEl.value) return;
+    document.getElementById('docStart').textContent = fmtLong(parseISO(startEl.value));
+    document.getElementById('docVer').textContent = OFFER_VERSION;
+    document.getElementById('docVerHsa').textContent = HSA.version;
+  };
+  startEl.addEventListener('input', sync);
+  startEl.addEventListener('change', sync);
+  sync();
+
+  const btns = panel.querySelectorAll('[data-doc]');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', async function(){
+      const jobs = btn.dataset.doc === 'all' ? ['local','scs','hsa','hsaOverseas'] : [btn.dataset.doc];
+      status.className = 'doc-status';
+      status.textContent = 'Building\u2026';
+      btns.forEach(function(b){ b.disabled = true; });
+      try {
+        const made = [];
+        for (const j of jobs){
+          made.push(await makeOfferDoc(j));
+          await new Promise(function(r){ setTimeout(r, 400); });
+        }
+        status.textContent = 'Downloaded ' + made.join(', ')
+          + '. If nothing appeared, the host page may be blocking downloads inside an embedded frame \u2014 '
+          + 'open the calculator in its own tab and try again.';
+      } catch (e) {
+        status.className = 'doc-status err';
+        status.textContent = 'Could not build the document: ' + e.message;
+      } finally {
+        btns.forEach(function(b){ b.disabled = false; });
+        reportHeight();
+      }
+    });
+  });
+  reportHeight();
+})();
+
+</script>
+</body>
+</html>
