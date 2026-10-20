@@ -504,13 +504,23 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
+        date: '2026-10-30',
+        displayDate: '30 de outubro de 2026',
+        time: '09:00 - 17:00',
+      },
+      {
+        date: '2026-11-20',
+        displayDate: '20 de novembro de 2026',
+        time: '09:00 - 17:00',
+      },
+      {
         date: '2026-12-04',
         displayDate: '4 de dezembro de 2026',
         time: '09:00 - 17:00',
       },
       {
-        date: '2027-01-15',
-        displayDate: '15 de janeiro de 2027',
+        date: '2027-01-29',
+        displayDate: '29 de janeiro de 2027',
         time: '09:00 - 17:00',
       },
       {
@@ -603,8 +613,13 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
       {
-        date: '2026-10-25',
-        displayDate: '25 de outubro de 2026',
+        date: '2026-11-18',
+        displayDate: '18 de novembro de 2026',
+        time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '25 de novembro de 2026',
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
       {

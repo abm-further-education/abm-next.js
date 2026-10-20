@@ -510,13 +510,23 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
+        date: '2026-10-30',
+        displayDate: '2026年10月30日',
+        time: '午前9:00〜午後5:00',
+      },
+      {
+        date: '2026-11-20',
+        displayDate: '2026年11月20日',
+        time: '午前9:00〜午後5:00',
+      },
+      {
         date: '2026-12-04',
         displayDate: '2026年12月4日',
         time: '午前9:00〜午後5:00',
       },
       {
-        date: '2027-01-15',
-        displayDate: '2027年1月15日',
+        date: '2027-01-29',
+        displayDate: '2027年1月29日',
         time: '午前9:00〜午後5:00',
       },
       {
@@ -600,8 +610,13 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
       },
       {
-        date: '2026-10-25',
-        displayDate: '2026年10月25日',
+        date: '2026-11-18',
+        displayDate: '2026年11月18日',
+        time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '2026年11月25日',
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
       },
       {

@@ -489,13 +489,23 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
+        date: '2026-10-30',
+        displayDate: '2026년 10월 30일',
+        time: '오전 9:00 - 오후 5:00',
+      },
+      {
+        date: '2026-11-20',
+        displayDate: '2026년 11월 20일',
+        time: '오전 9:00 - 오후 5:00',
+      },
+      {
         date: '2026-12-04',
         displayDate: '2026년 12월 4일',
         time: '오전 9:00 - 오후 5:00',
       },
       {
-        date: '2027-01-15',
-        displayDate: '2027년 1월 15일',
+        date: '2027-01-29',
+        displayDate: '2027년 1월 29일',
         time: '오전 9:00 - 오후 5:00',
       },
       {
@@ -608,8 +618,13 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (점심시간 30분 포함)',
       },
       {
-        date: '2026-10-25',
-        displayDate: '2026년 10월 25일',
+        date: '2026-11-18',
+        displayDate: '2026년 11월 18일',
+        time: '9:00am - 4:30pm (점심시간 30분 포함)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '2026년 11월 25일',
         time: '9:00am - 4:30pm (점심시간 30분 포함)',
       },
       {

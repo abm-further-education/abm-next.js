@@ -596,13 +596,23 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
     ],
     dates: [
       {
+        date: '2026-10-30',
+        displayDate: '30 October 2026',
+        time: '9:00am - 5:00pm',
+      },
+      {
+        date: '2026-11-20',
+        displayDate: '20 November 2026',
+        time: '9:00am - 5:00pm',
+      },
+      {
         date: '2026-12-04',
         displayDate: '4 December 2026',
         time: '9:00am - 5:00pm',
       },
       {
-        date: '2027-01-15',
-        displayDate: '15 January 2027',
+        date: '2027-01-29',
+        displayDate: '29 January 2027',
         time: '9:00am - 5:00pm',
       },
       {
@@ -690,8 +700,13 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
       {
-        date: '2026-10-25',
-        displayDate: '25 October 2026',
+        date: '2026-11-18',
+        displayDate: '18 November 2026',
+        time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
+      },
+      {
+        date: '2026-11-25',
+        displayDate: '25 November 2026',
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
       {
