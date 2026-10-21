@@ -745,8 +745,8 @@ export const shortCourseData: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
       {
-        date: '2027-04-25',
-        displayDate: '25 April 2027',
+        date: '2027-04-28',
+        displayDate: '28 April 2027',
         time: '9:00am - 4:30pm (includes a 30-minute lunch break)',
       },
     ],

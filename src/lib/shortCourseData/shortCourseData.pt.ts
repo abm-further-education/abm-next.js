@@ -658,8 +658,8 @@ export const shortCourseData_pt: { [key: string]: ShortCourseData } = {
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
       {
-        date: '2027-04-25',
-        displayDate: '25 de abril de 2027',
+        date: '2027-04-28',
+        displayDate: '28 de abril de 2027',
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
       },
     ],
