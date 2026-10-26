@@ -453,40 +453,6 @@ td.num, th.num{text-align:right}
     </section>
   </div>
 
-  <!-- ============ OFFER DOCUMENT GENERATOR (staff) ============ -->
-  <section class="card card-pad docgen" id="docgen" aria-label="Generate offer documents" hidden>
-    <h2 style="font-size:var(--text-lg); font-family:var(--font-display); font-weight:800">Generate the offer documents</h2>
-    <p style="margin-top:var(--space-3); font-size:var(--text-sm); color:var(--ink-2); max-width:70ch">
-      Builds the offer documents from exactly the same figures this calculator uses, so the
-      published fees and the offer paperwork can never drift apart. Each document contains its
-      fee summary tables plus the full sample payment schedules.
-    </p>
-    <ul class="doc-list">
-      <li>Sample schedules are built from the commencement date selected above &mdash; <strong id="docStart">&mdash;</strong>.</li>
-      <li>Versions: fitness <strong id="docVer">&mdash;</strong>, HSA <strong id="docVerHsa">&mdash;</strong>. Change <code>OFFER_VERSION</code> and <code>HSA.version</code> in the source file when you revise an offer.</li>
-    </ul>
-    <div class="doc-btns">
-      <button class="btn btn-primary" type="button" data-doc="local">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-        Fitness &mdash; Local (.docx)
-      </button>
-      <button class="btn btn-primary" type="button" data-doc="scs">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-        Fitness &mdash; SCS (.docx)
-      </button>
-      <button class="btn btn-primary" type="button" data-doc="hsa">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-        HSA &mdash; Local (.docx)
-      </button>
-      <button class="btn btn-primary" type="button" data-doc="hsaOverseas">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-        HSA &mdash; Overseas (.docx)
-      </button>
-      <button class="btn btn-ghost" type="button" data-doc="all">All four</button>
-    </div>
-    <div class="doc-status" id="docStatus"></div>
-  </section>
-
   <div class="foot">Estimates only and subject to ABM Further Education's current fee schedule and refund policy. Fitness offers version <span id="verTag">—</span>; Health Services Assistance offer version <span id="verTagHsa">—</span>.</div>
 </div>
 
