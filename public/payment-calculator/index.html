@@ -154,6 +154,23 @@ input[type="date"]{
   border-radius:var(--radius); padding:var(--space-3) var(--space-4);
 }
 input[type="date"]:hover{border-color:var(--border-strong)}
+.money-input{position:relative; display:flex; gap:var(--space-2)}
+.money-input .cur{position:absolute; left:var(--space-4); top:50%; transform:translateY(-50%); color:var(--ink-3); font-size:var(--text-sm); pointer-events:none}
+.money-input input{
+  flex:1; min-width:0; font:inherit; font-size:var(--text-sm); color:var(--ink); font-variant-numeric:tabular-nums;
+  background:var(--surface-2); border:1.5px solid var(--border);
+  border-radius:var(--radius); padding:var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 1ch);
+}
+.money-input input:hover{border-color:var(--border-strong)}
+.money-input input:focus-visible{outline:2.5px solid var(--accent); outline-offset:2px}
+.money-input.on input{border-color:var(--accent); background:var(--accent-soft)}
+.mini-btn{font:inherit; font-size:var(--text-xs); font-weight:600; color:var(--ink-2); background:transparent;
+  border:1.5px solid var(--border); border-radius:var(--radius); padding:0 var(--space-4); cursor:pointer}
+.mini-btn:hover{border-color:var(--border-strong); color:var(--ink)}
+.mini-btn[hidden]{display:none}
+.staff-field{border-top:1px dashed var(--border); padding-top:var(--space-6)}
+.staff-chip{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--accent-ink, var(--accent)); background:var(--accent-soft); border-radius:999px; padding:2px 8px; margin-left:var(--space-2); vertical-align:2px}
 [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(1) opacity(.7)}
 
 .inline-note{
@@ -364,6 +381,21 @@ td.num, th.num{text-align:right}
         </div>
       </div>
 
+      <div class="field staff-field" id="fieldOverride" hidden>
+        <label for="overrideFee">Total course fee override <span class="staff-chip">Staff</span></label>
+        <div class="hint" id="overrideHint">Leave blank to use the standard fee. Enter a different total to quote a changed price; the instalments are recalculated from it.</div>
+        <div class="money-input" id="overrideWrap">
+          <span class="cur" aria-hidden="true">$</span>
+          <input type="number" id="overrideFee" inputmode="numeric" min="0" step="1" placeholder="">
+          <button type="button" class="mini-btn" id="overrideReset" hidden>Reset</button>
+        </div>
+        <div class="echo" id="echoOverride"></div>
+        <div class="inline-note" id="noteOverride" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.2v.1"/></svg>
+          <span></span>
+        </div>
+      </div>
+
     </section>
 
     <!-- ============ RESULTS ============ -->
@@ -423,7 +455,6 @@ td.num, th.num{text-align:right}
 
   <!-- ============ OFFER DOCUMENT GENERATOR (staff) ============ -->
   <section class="card card-pad docgen" id="docgen" aria-label="Generate offer documents" hidden>
-    <div class="eyebrow">Staff tools &middot; Offer documents</div>
     <h2 style="font-size:var(--text-lg); font-family:var(--font-display); font-weight:800">Generate the offer documents</h2>
     <p style="margin-top:var(--space-3); font-size:var(--text-sm); color:var(--ink-2); max-width:70ch">
       Builds the offer documents from exactly the same figures this calculator uses, so the
@@ -567,11 +598,11 @@ const FREQ_LABEL = {weekly:'Weekly', fortnightly:'Fortnightly', monthly:'Monthly
 const COHORT_LABEL = {local:'Domestic student', scs:'SCS member', overseas:'Overseas student'};
 
 /* one HSA plan for any student type and frequency, used by the calculator and the documents */
-function hsaPlan(cohort, freq, start){
+function hsaPlan(cohort, freq, start, tuitionOverride){
   const weeks = HSA.weeks[freq];
   const n = weeks.length;
   const fee = HSA.instalmentFee[freq];
-  const tuition = HSA.tuition[cohort];
+  const tuition = tuitionOverride != null ? tuitionOverride : HSA.tuition[cohort];
   const base = HSA.ef + HSA.mf + HSA.prepaidTuition;
   const remaining = r2(tuition - HSA.prepaidTuition);
   const each = round2(remaining / n);
@@ -636,14 +667,67 @@ function calc(){
   const freq   = spec.freqs.indexOf(selected('freq')) >= 0 ? selected('freq') : spec.freqs[1] || spec.freqs[0];
   const start  = parseISO($('#startDate').value);
   const enrol  = parseISO($('#enrolDate').value);
+  const ov     = readOverride(spec, cohort, freq);
+  const o = {course, spec, cohort, freq, start, enrol, override: ov.value};
+  const d = spec.model === 'hsa' ? calcHsa(o) : calcFitness(o);
+  d.overrideState = ov;
+  return d;
+}
+
+/* ===================== STAFF PRICE OVERRIDE =====================
+   Staff copy only (hidden with ?docs=0). Replaces the total course fee for
+   the quote on screen, the printout and the copied text. The enrolment-day
+   amounts stay as set in the settings; the instalments absorb the change.  */
+const STAFF_MODE = (function(){
+  const q = new URLSearchParams(location.search);
+  return q.has('docs') ? q.get('docs') !== '0' : SHOW_DOC_GENERATOR;
+})();
+function standardFee(spec, cohort){
   return spec.model === 'hsa'
-    ? calcHsa({course, spec, cohort, freq, start, enrol})
-    : calcFitness({course, spec, cohort, freq, start, enrol});
+    ? HSA.ef + HSA.mf + HSA.tuition[cohort] + HSA.placement
+    : TUITION[cohort][spec.tier];
+}
+/* smallest total that still leaves something to spread across the instalments */
+function minimumFee(spec, cohort, freq){
+  if (spec.model === 'hsa') return HSA.ef + HSA.mf + HSA.placement + HSA.prepaidTuition + 1;
+  if (freq === 'lump') return LUMP_FIRST + 1;
+  const u = UPFRONT[cohort][spec.tier];
+  return u.ef + u.mf + u.tf + 1;
+}
+function readOverride(spec, cohort, freq){
+  const std = standardFee(spec, cohort);
+  const min = minimumFee(spec, cohort, freq);
+  const raw = STAFF_MODE ? $('#overrideFee').value.trim() : '';
+  if (raw === '') return {value:null, std:std, min:min, status:'none'};
+  const v = Math.round(Number(raw));
+  if (!isFinite(v) || v <= 0) return {value:null, std:std, min:min, status:'invalid'};
+  if (v < min) return {value:null, std:std, min:min, status:'low', entered:v};
+  if (v === std) return {value:null, std:std, min:min, status:'same'};
+  return {value:v, std:std, min:min, status:'on'};
+}
+function renderOverride(d){
+  const f = $('#fieldOverride');
+  f.hidden = !STAFF_MODE;
+  if (!STAFF_MODE) return;
+  const s = d.overrideState;
+  $('#overrideFee').placeholder = Number(s.std).toLocaleString('en-AU') + ' (standard)';
+  $('#overrideWrap').classList.toggle('on', s.status === 'on');
+  $('#overrideReset').hidden = $('#overrideFee').value.trim() === '';
+  $('#echoOverride').textContent = s.status === 'on'
+    ? 'This quote uses ' + money0(s.value) + ' instead of the standard ' + money0(s.std) + ' for '
+      + d.courseLabel + ' (' + COHORT_LABEL[d.cohort].toLowerCase() + ').'
+    : s.status === 'same' ? 'That is the standard fee, so no override is applied.'
+    : 'Standard fee for this selection: ' + money0(s.std) + '.';
+  const note = $('#noteOverride');
+  note.hidden = !(s.status === 'low' || s.status === 'invalid');
+  if (!note.hidden) note.querySelector('span').textContent = s.status === 'low'
+    ? 'The total must be at least ' + money0(s.min) + ' for this course and payment option, so the standard fee is being used.'
+    : 'Enter a whole-dollar amount, or leave the field blank to use the standard fee.';
 }
 
 function calcFitness(o){
   const tier = o.spec.tier;
-  const tuition = TUITION[o.cohort][tier];
+  const tuition = o.override != null ? o.override : TUITION[o.cohort][tier];
   const d = Object.assign({}, o, {model:'fitness', tier:tier, tuition:tuition, totalFee:tuition,
     courseLabel:o.spec.label, sched:[], caught:[], catchUp:0});
 
@@ -693,7 +777,8 @@ function calcFitness(o){
 }
 
 function calcHsa(o){
-  const P = hsaPlan(o.cohort, o.freq, o.start);
+  const P = hsaPlan(o.cohort, o.freq, o.start,
+    o.override != null ? r2(o.override - HSA.ef - HSA.mf - HSA.placement) : null);
   const d = Object.assign({}, o, {model:'hsa', tier:'hsa', courseLabel:o.spec.label,
     base:P.base, totalFee:P.totalFee, n:P.n, tuitionEach:P.each, tuitionLast:P.last,
     feeTotal:P.feeTotal, remaining:P.remaining, fee:P.fee, tuition:P.tuition,
@@ -745,6 +830,7 @@ function render(){
   applyAvailability();
   const d = calc();
   if (d.model === 'hsa') renderHsa(d); else renderFitness(d);
+  renderOverride(d);
 
   /* option labels */
   document.querySelectorAll('[data-fee]').forEach(function(el){
@@ -996,8 +1082,12 @@ function clampDates(el){
 
 document.querySelectorAll('input').forEach(el => el.addEventListener('change', function(){
   if (el.type === 'date') clampDates(el);
+  /* an override belongs to one course and student type */
+  if (el.name === 'course' || el.name === 'cohort') $('#overrideFee').value = '';
   render();
 }));
+$('#overrideFee').addEventListener('input', render);
+$('#overrideReset').addEventListener('click', function(){ $('#overrideFee').value = ''; render(); $('#overrideFee').focus(); });
 document.querySelectorAll('input[type="date"]').forEach(el => el.addEventListener('input', () => { if (el.value) render(); }));
 document.querySelectorAll('input[type="date"]').forEach(el => el.addEventListener('blur', () => { clampDates(el); render(); }));
 
