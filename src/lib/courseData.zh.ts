@@ -46,7 +46,7 @@ export const courseData: CourseData[] = [
     category: 'hospitality',
     type: 'full-course',
     level: 'diploma',
-    duration: '78周 / 104周',
+    duration: '78周',
     image: '/courses/cookery/DHM.png',
     link: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
     tags: ['hospitality', 'management', 'diploma'],

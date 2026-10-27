@@ -437,7 +437,7 @@ export const courseInformationData_pt: {
     cricosCode: '111165M',
     description:
       'Esta qualificação reflete o papel de operadores seniores altamente qualificados que usam ampla gama de habilidades em hospitalidade combinadas a competências gerenciais e sólido conhecimento do setor para coordenar operações.\n\nAtuam de forma independente, têm responsabilidade sobre outras pessoas e tomam diversas decisões operacionais.\n\nFornece caminho para atuar em qualquer setor da hospitalidade como gestor departamental ou de pequenos negócios. A diversidade de empregadores inclui restaurantes, hotéis, motéis, operações de catering, clubes, pubs, cafés e cafeterias. Permite multicompetências e especialização em serviços de acomodação, cozinha, alimentos e bebidas e jogos.\n\nAs habilidades devem ser aplicadas conforme legislação da Commonwealth e Estadual/Territorial, normas australianas e códigos de prática da indústria.\nNo momento da publicação, não há exigências específicas de licenciamento ou certificação.',
-    duration: '76 semanas / 102 semanas',
+    duration: '78 semanas',
     entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 12',
     deliveryMode: {
       title: 'Modalidade de oferta',

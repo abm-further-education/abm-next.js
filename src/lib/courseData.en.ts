@@ -60,7 +60,7 @@ export const courseData: CourseData[] = [
     category: 'hospitality',
     type: 'full-course',
     level: 'diploma',
-    duration: '78 weeks / 104 weeks',
+    duration: '78 weeks',
     image: '/courses/cookery/DHM.png',
     link: '/cookery-and-hospitality-courses/sit50422-diploma-of-hospitality-management',
     tags: ['hospitality', 'management', 'diploma'],

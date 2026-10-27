@@ -357,7 +357,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111165M',
     description:
       '该资格证书反映了高技能高级操作员的角色，他们结合使用广泛的酒店技能、管理技能和扎实的行业知识来协调酒店运营。\n\n他们独立运营，对他人负责并做出一系列运营业务决策。\n\n该资格证书提供了在任何酒店行业部门担任部门或小企业经理的途径。雇主的多样性包括餐厅、酒店、汽车旅馆、餐饮运营、俱乐部、酒吧、咖啡馆和咖啡店。',
-    duration: '76周 / 102周',
+    duration: '78周',
     entryRequirement: '学生必须完成相当于12年级的学历',
     deliveryMode: {
       title: '授课方式',

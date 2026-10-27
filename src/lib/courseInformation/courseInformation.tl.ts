@@ -416,7 +416,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111165M',
     description:
       "Ang kwalipikasyong ito ay sumasalamin sa papel ng mga highly skilled senior operator na gumagamit ng malawak na hanay ng mga kasanayan sa hospitality kasama ang mga kasanayan sa pamamahala at matibay na kaalaman sa industriya upang i-coordinate ang mga operasyon sa hospitality.\n\nSila ay nagpapatakbo nang nagsasarili, may responsibilidad para sa iba at gumagawa ng iba't ibang desisyon sa operasyonal na negosyo.\n\nAng kwalipikasyong ito ay nagbibigay ng landas upang magtrabaho sa anumang sektor ng hospitality industry bilang departmental o small business manager. Kasama sa iba't ibang employer ang mga restaurant, hotel, motel, catering operation, club, pub, cafe at coffee shop.",
-    duration: '76 linggo / 102 linggo',
+    duration: '78 linggo',
     entryRequirement: 'Dapat nakumpleto ng estudyante ang katumbas ng Year 12',
     deliveryMode: {
       title: 'Paraan ng Paghahatid',

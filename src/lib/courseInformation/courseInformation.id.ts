@@ -404,7 +404,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111165M',
     description:
       'Kualifikasi ini mencerminkan peran operator senior yang sangat terampil yang menggunakan berbagai keterampilan perhotelan yang dikombinasikan dengan keterampilan manajerial dan pengetahuan industri yang baik untuk mengkoordinasikan operasi perhotelan.\n\nMereka beroperasi secara mandiri, bertanggung jawab atas orang lain dan membuat berbagai keputusan bisnis operasional.\n\nKualifikasi ini menyediakan jalur untuk bekerja di sektor industri perhotelan mana pun sebagai manajer departemen atau bisnis kecil.',
-    duration: '76 minggu / 102 minggu',
+    duration: '78 minggu',
     entryRequirement: 'Siswa harus telah menyelesaikan setara dengan Year 12',
     deliveryMode: {
       title: 'Mode Pengiriman',

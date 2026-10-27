@@ -493,7 +493,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111165M',
     description:
       'This qualification reflects the role of highly skilled senior operators who use a broad range of hospitality skills combined with managerial skills and sound knowledge of industry to coordinate hospitality operations.\n\nThey operate independently, have responsibility for others and make a range of operational business decisions.\n\nThis qualification provides a pathway to work in any hospitality industry sector as a departmental or small business manager. The diversity of employers includes restaurants, hotels, motels, catering operations, clubs, pubs, cafés and coffee shops.\nThis qualification allows for multiskilling and for specialisation in accommodation services, cookery, food and beverage and gaming.\n\nThe skills in this qualification must be applied in accordance with Commonwealth and State/Territory legislation, Australian standards and industry codes of practice.\nNo occupational licensing, certification or specific legislative requirements apply to this qualification at the time of publication.',
-    duration: '76 weeks / 102 weeks',
+    duration: '78 weeks',
     entryRequirement: 'Student must have completed an equivalent of Year 12',
     deliveryMode: {
       title: 'Delivery mode',
