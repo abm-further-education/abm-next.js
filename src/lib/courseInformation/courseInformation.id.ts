@@ -435,7 +435,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111166K',
     description:
       'Individu yang cocok untuk Advanced Diploma of Hospitality Management kami adalah mereka yang ingin mengejar karir yang akan memanfaatkan berbagai keterampilan perhotelan, dikombinasikan dengan keterampilan manajerial khusus dan pengetahuan industri yang substansial untuk mengkoordinasikan dan memantau operasi perhotelan.',
-    duration: '104 minggu',
+    duration: '130 minggu',
     entryRequirement: 'Siswa harus telah menyelesaikan setara dengan Year 12',
     deliveryMode: {
       title: 'Mode Pengiriman',
@@ -711,7 +711,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '117762H',
     description:
       'Bangun Masa Depan Anda di Industri Olahraga dan Kebugaran Australia\n\nDiploma of Sport (Coaching) membekali siswa dengan keterampilan praktis dan pengetahuan yang diperlukan untuk mengambil berbagai peran di sektor olahraga Australia.\n\nUntuk Siapa Kursus Ini?\n\nKursus ini ideal untuk siswa internasional yang:\n- Ingin memulai atau memajukan karir di industri olahraga atau kebugaran\n- Mengubah jalur karir atau memasuki sektor baru\n- Sudah memiliki Certificate III atau IV in Fitness dan ingin mengembangkan keterampilan mereka',
-    duration: '52 minggu',
+    duration: '104 minggu',
     entryRequirement:
       'Berpartisipasi dalam wawancara masuk kursus untuk menentukan kesesuaian untuk kursus dan kebutuhan siswa.',
     deliveryMode: {

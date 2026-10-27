@@ -388,7 +388,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111166K',
     description:
       '适合我们酒店管理高级文凭的个人是那些希望追求利用广泛酒店技能的职业，结合专业管理技能和大量行业知识来协调和监控酒店运营的人。该领域的学生将以高度自主性运营，并负责创建和实施战略业务管理决策。',
-    duration: '104周',
+    duration: '130周',
     entryRequirement: '学生必须完成相当于12年级的学历',
     deliveryMode: {
       title: '授课方式',
@@ -664,7 +664,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '117762H',
     description:
       '在澳大利亚体育和健身行业建立您的未来\n\n体育文凭（教练）为学生提供在澳大利亚体育部门担任各种角色所需的实践技能和知识。无论您的目标是教练、领导团队还是支持社区体育组织，该资格证书都为成功奠定了坚实的基础。\n\n本课程适合谁？\n\n本课程非常适合以下国际学生：\n- 希望在体育或健身行业开始或推进职业生涯\n- 改变职业道路或进入新领域\n- 已经持有健身三级或四级证书并希望提升技能\n- 对更高级别的体育资格证书感兴趣',
-    duration: '52周',
+    duration: '104周',
     entryRequirement: '参加课程入学面试以确定课程适合性和学生需求。',
     deliveryMode: {
       title: '授课方式',

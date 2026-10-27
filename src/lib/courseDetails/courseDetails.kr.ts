@@ -221,7 +221,7 @@ export const courseDetailsData_kr: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: '과정 기간',
       description:
-        '호텔경영 고급 디플로마 과정은 총 104주 동안 제공되며, 8학기(각 10주)로 구성된 80주의 교육 및 평가 기간과 24주의 방학이 포함됩니다.',
+        '호텔경영 고급 디플로마 과정은 총 130주 동안 제공되며, 8학기(각 10주)로 구성된 80주의 교육 및 평가 기간과 24주의 방학이 포함됩니다.',
     },
     courseStructure1: {
       title: '과정 구성 – 키친 매니지먼트 4급 및 호텔경영 디플로마와 패키지',

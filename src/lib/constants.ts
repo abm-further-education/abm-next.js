@@ -61,6 +61,10 @@ export const fitnessMenu = [
     href: '/fitness-instructor-personal-trainer-courses/sis40221-certificate-iv-in-fitness',
   },
   {
+    title: 'Diploma of Sport',
+    href: '/fitness-instructor-personal-trainer-courses/sis50321-diploma-of-sport',
+  },
+  {
     title: 'Certificate III in Fitness (Online)',
     href: '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
   },

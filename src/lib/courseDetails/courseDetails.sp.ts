@@ -332,7 +332,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Duración del Curso',
       description:
-        'El Diploma Avanzado de Gestión Hotelera se ofrece durante 104 semanas, incluyendo 80 semanas de capacitación y evaluación distribuidas en 8 términos de 10 semanas cada uno y 24 semanas de vacaciones.',
+        'El Diploma Avanzado de Gestión Hotelera se ofrece durante 130 semanas, incluyendo 80 semanas de capacitación y evaluación distribuidas en 8 términos de 10 semanas cada uno y 24 semanas de vacaciones.',
     },
     courseStructure1: {
       title:
@@ -775,7 +775,7 @@ export const courseDetailsData_sp: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Duración del Curso',
       description:
-        'Este curso tiene una duración de 52 semanas que consiste en 4 x términos de 10 semanas de capacitación y evaluación, cada uno seguido de un receso vacacional de 3 semanas.\n\nCada semana del término incluye:\n\n2 x días de 7.5 horas de instrucción cara a cara\n5 horas de tutoría',
+        'Este curso tiene una duración de 104 semanas que consiste en 4 x términos de 10 semanas de capacitación y evaluación, cada uno seguido de un receso vacacional de 3 semanas.\n\nCada semana del término incluye:\n\n2 x días de 7.5 horas de instrucción cara a cara\n5 horas de tutoría',
     },
 
     jobRoles: {

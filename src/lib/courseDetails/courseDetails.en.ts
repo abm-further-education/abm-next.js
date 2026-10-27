@@ -336,7 +336,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Course Duration',
       description:
-        'The Advanced Diploma of Hospitality Management is offered over 24 months, equating to 104 weeks, including 24 weeks of holidays. This will be split into eight 10-week terms.',
+        'The Advanced Diploma of Hospitality Management is offered over 24 months, equating to 130 weeks, including 24 weeks of holidays. This will be split into eight 10-week terms.',
     },
     courseStructure1: {
       title:
@@ -864,7 +864,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Course Duration',
       description:
-        'The Diploma of Sport is offered over 12 months, equating to 52 weeks, including 12 weeks of holidays. This will be split into four 10-week terms.',
+        'The Diploma of Sport is offered over 12 months, equating to 104 weeks, including 12 weeks of holidays. This will be split into four 10-week terms.',
     },
 
     jobRoles: {

@@ -469,7 +469,7 @@ export const courseInformationData_pt: {
     cricosCode: '111166K',
     description:
       'O Advanced Diploma of Hospitality Management é indicado para quem deseja uma carreira que utilize ampla gama de habilidades em hospitalidade, combinadas a competências gerenciais especializadas e conhecimento substancial do setor para coordenar e monitorar operações. Os alunos atuarão com alto nível de autonomia e serão responsáveis por criar e implementar decisões estratégicas de gestão.\n\nA qualificação oferece um caminho claro para trabalhar em qualquer setor da hospitalidade e para diversos empregadores: restaurantes, hotéis, motéis, operações de catering, clubes, pubs, cafés e cafeterias. Os concluintes alcançarão a base necessária para multicompetências e especialização em acomodação, cozinha, alimentos e bebidas e jogos.\n\nGraças à natureza do curso e à flexibilidade das eletivas, garantimos atividades de aprendizagem alinhadas às suas preferências e metas de carreira.',
-    duration: '104 semanas',
+    duration: '130 semanas',
     entryRequirement: 'O aluno deve ter concluído o equivalente ao Year 12',
     deliveryMode: {
       title: 'Modalidade de oferta',
@@ -754,7 +754,7 @@ export const courseInformationData_pt: {
     cricosCode: '117762H',
     description:
       'Construa seu futuro no setor australiano de Esportes e Fitness\n\nO Diploma of Sport (Coaching) fornece habilidades práticas e conhecimentos para assumir diversas funções no setor esportivo. Seja para treinar, liderar equipes ou apoiar organizações comunitárias, esta qualificação oferece base sólida para o sucesso.\n\nOs alunos aprenderão a trabalhar de forma independente, gerenciar e supervisionar outros e aplicar suas habilidades conforme legislação, normas e boas práticas australianas. O curso inclui elementos essenciais de liderança e comunicação para ambientes esportivos dinâmicos.\n\nPara quem é este curso?\n\nIdeal para estudantes internacionais que desejam:\n- Iniciar ou progredir na carreira de esporte/fitness;\n- Mudar de área profissional;\n- Já possuem Certificado III/IV em Fitness e querem avançar;\n- Procuram caminhos para qualificações de nível superior em esportes.\n\nOs alunos vêm de diversos países. Alguns podem ser novos na Austrália; outros já viveram aqui. Esta qualificação é seu passo inicial no setor, sem licenças específicas exigidas. Você seguirá padrões e práticas da indústria para iniciar sua carreira com segurança.',
-    duration: '52 semanas',
+    duration: '104 semanas',
     entryRequirement:
       'Participar de uma entrevista de entrada no curso para determinar a adequação ao curso e as necessidades do aluno.',
     deliveryMode: {

@@ -447,7 +447,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111166K',
     description:
       'Ang mga indibidwal na angkop para sa aming Advanced Diploma of Hospitality Management ay yaong mga naghahanap na magpatuloy sa isang karera na gagamit ng malawak na hanay ng mga kasanayan sa hospitality, kasama ang mga espesyalisadong kasanayan sa pamamahala at malaking kaalaman sa industriya upang i-coordinate at subaybayan ang mga operasyon sa hospitality. Ang mga estudyante sa larangang ito ay magpapatakbo na may mataas na antas ng awtonomiya at magiging responsable para sa paglikha at pagpapatupad ng mga strategic business management decision.',
-    duration: '104 linggo',
+    duration: '130 linggo',
     entryRequirement: 'Dapat nakumpleto ng estudyante ang katumbas ng Year 12',
     deliveryMode: {
       title: 'Paraan ng Paghahatid',
@@ -725,7 +725,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '117762H',
     description:
       "Itayo ang Iyong Kinabukasan sa Australian Sport at Fitness Industry\n\nAng Diploma of Sport (Coaching) ay nagbibigay sa mga estudyante ng mga praktikal na kasanayan at kaalaman na kinakailangan upang kumuha ng iba't ibang tungkulin sa Australian sport sector. Kung naglalayong mag-coach, mamuno ng koponan, o sumuporta sa isang community sports organisation, ang kwalipikasyong ito ay nagbibigay ng matibay na pundasyon para sa tagumpay.\n\nPara Kanino Ang Kursong Ito?\n\nAng kursong ito ay ideal para sa mga international student na:\n- Naghahanap na magsimula o magprogreso ng karera sa sport o fitness industry\n- Nagpapalit ng career path o pumapasok sa bagong sektor\n- Mayroon nang Certificate III o IV in Fitness at nais na palawakin ang kanilang mga kasanayan\n- Interesado sa mga pathway sa mas mataas na antas ng sport qualification",
-    duration: '52 linggo',
+    duration: '104 linggo',
     entryRequirement:
       'Lumahok sa isang course entry interview upang matukoy ang pagiging angkop para sa kurso at mga pangangailangan ng estudyante.',
     deliveryMode: {

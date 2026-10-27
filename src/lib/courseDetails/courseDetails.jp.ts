@@ -300,7 +300,7 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: '受講期間',
       description:
-        '「Advanced Diploma of Hospitality Management」は総期間24か月（104週間、うち休暇24週間）。10週間×8学期に分割して実施します。',
+        '「Advanced Diploma of Hospitality Management」は総期間24か月（130週間、うち休暇24週間）。10週間×8学期に分割して実施します。',
     },
     courseStructure1: {
       title:
@@ -657,7 +657,7 @@ export const courseDetailsData_jp: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: '受講期間',
       description:
-        '「Diploma of Sport」は総期間12か月（52週間、うち休暇12週間）。10週間×4学期に分割して実施します。',
+        '「Diploma of Sport」は総期間12か月（104週間、うち休暇12週間）。10週間×4学期に分割して実施します。',
     },
     jobRoles: {
       title: '想定職種',

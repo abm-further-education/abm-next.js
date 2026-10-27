@@ -177,7 +177,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: '课程时长',
       description:
-        'Advanced Diploma of Hospitality Management课程为期24个月，共104周，包括24周假期。将分为八个10周学期。',
+        'Advanced Diploma of Hospitality Management课程为期24个月，共130周，包括24周假期。将分为八个10周学期。',
     },
     courseStructure1: {
       title: '课程结构 – 与Certificate IV in Kitchen Management和Diploma of Hospitality Management打包',
@@ -494,7 +494,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: '课程时长',
       description:
-        'Diploma of Sport课程为期12个月，共52周，包括12周假期。将分为四个10周学期。',
+        'Diploma of Sport课程为期12个月，共104周，包括12周假期。将分为四个10周学期。',
     },
     jobRoles: {
       title: '就业岗位',

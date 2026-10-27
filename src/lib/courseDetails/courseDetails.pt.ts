@@ -306,7 +306,7 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Duração do Curso',
       description:
-        'O Diploma Avançado de Gestão em Hospitalidade é oferecido ao longo de 24 meses, totalizando 104 semanas, incluindo 24 semanas de recesso. Isso será dividido em oito termos de 10 semanas cada.',
+        'O Diploma Avançado de Gestão em Hospitalidade é oferecido ao longo de 24 meses, totalizando 130 semanas, incluindo 24 semanas de recesso. Isso será dividido em oito termos de 10 semanas cada.',
     },
     courseStructure1: {
       title:
@@ -663,7 +663,7 @@ export const courseDetailsData_pt: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Duração do Curso',
       description:
-        'O Diploma de Esporte é oferecido ao longo de 12 meses, totalizando 52 semanas, incluindo 12 semanas de recesso. Isso será dividido em quatro termos de 10 semanas cada.',
+        'O Diploma de Esporte é oferecido ao longo de 12 meses, totalizando 104 semanas, incluindo 12 semanas de recesso. Isso será dividido em quatro termos de 10 semanas cada.',
     },
 
     jobRoles: {

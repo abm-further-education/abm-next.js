@@ -271,7 +271,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Durasi Kursus',
       description:
-        'Advanced Diploma of Hospitality Management ditawarkan selama 24 bulan, setara dengan 104 minggu, termasuk 24 minggu libur. Ini akan dibagi menjadi delapan term 10 minggu.',
+        'Advanced Diploma of Hospitality Management ditawarkan selama 24 bulan, setara dengan 130 minggu, termasuk 24 minggu libur. Ini akan dibagi menjadi delapan term 10 minggu.',
     },
     courseStructure1: {
       title:
@@ -612,7 +612,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Durasi Kursus',
       description:
-        'Diploma of Sport ditawarkan selama 12 bulan, setara dengan 52 minggu, termasuk 12 minggu libur. Ini akan dibagi menjadi empat term 10 minggu.',
+        'Diploma of Sport ditawarkan selama 12 bulan, setara dengan 104 minggu, termasuk 12 minggu libur. Ini akan dibagi menjadi empat term 10 minggu.',
     },
     jobRoles: {
       title: 'Peran Pekerjaan',

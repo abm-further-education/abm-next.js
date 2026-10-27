@@ -271,7 +271,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Tagal ng Kurso',
       description:
-        'Ang Advanced Diploma of Hospitality Management ay inaalok sa loob ng 24 buwan, katumbas ng 104 linggo, kasama ang 24 linggo ng bakasyon. Ito ay hahatiin sa walong 10-linggong term.',
+        'Ang Advanced Diploma of Hospitality Management ay inaalok sa loob ng 24 buwan, katumbas ng 130 linggo, kasama ang 24 linggo ng bakasyon. Ito ay hahatiin sa walong 10-linggong term.',
     },
     courseStructure1: {
       title:
@@ -613,7 +613,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
     courseDuration: {
       title: 'Tagal ng Kurso',
       description:
-        'Ang Diploma of Sport ay inaalok sa loob ng 12 buwan, katumbas ng 52 linggo, kasama ang 12 linggo ng bakasyon. Ito ay hahatiin sa apat na 10-linggong term.',
+        'Ang Diploma of Sport ay inaalok sa loob ng 12 buwan, katumbas ng 104 linggo, kasama ang 12 linggo ng bakasyon. Ito ay hahatiin sa apat na 10-linggong term.',
     },
     jobRoles: {
       title: 'Mga Trabaho',

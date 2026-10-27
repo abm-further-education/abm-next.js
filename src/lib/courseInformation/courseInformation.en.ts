@@ -524,7 +524,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '111166K',
     description:
       'Individuals well suited for our Advanced Diploma of Hospitality Management are those looking to pursue a career that will utilize a broad range of hospitality skills, combined with specialized managerial skills and substantial knowledge of industry to coordinate and monitor hospitality operations. Students in this field will operate with a high level of autonomy and will be responsible for the creation and implementation of strategic business management decisions.\n\nOur Advanced Diploma of Hospitality Management qualification provides students with a clear pathway to work in any hospitality industry sector and for a diverse range of employers including restaurants, hotels, motels, catering operations, clubs, pubs, cafes and coffee shops. Students completing this course will achieve the skills and framework required for multiskilling and for specialization in accommodation services, cookery, food and beverage gaming.\n\nDue to the nature of this course and the flexible electives available for students, we can ensure that you are working towards your goals in their chosen industry by allowing for specialized learning activities, catered towards your own preferences and career goals.',
-    duration: '104 weeks',
+    duration: '130 weeks',
     entryRequirement: 'Student must have completed an equivalent of Year 12',
     deliveryMode: {
       title: 'Delivery mode',
@@ -800,7 +800,7 @@ export const courseInformationData: { [key: string]: CourseInformationInfo } = {
     cricosCode: '117762H',
     description:
       "Build Your Future in the Australian Sport and Fitness Industry\n\nThe Diploma of Sport (Coaching) equips students with the practical skills and knowledge needed to take on a range of roles in the Australian sport sector. Whether you're aiming to coach, lead a team, or support a community sports organisation, this qualification provides a strong foundation for success.\n\nStudents will learn to work independently, manage and supervise others, and apply their skills in accordance with Australian legislation, standards and industry best practice. The course also includes key leadership and communication elements essential for working within dynamic sporting environments.\n\nWho Is This Course For?\n\nThis course is ideal for international students who are:\n- Looking to begin or progress a career in the sport or fitness industry\n- Changing career paths or entering a new sector\n- Already holding a Certificate III or IV in Fitness and wishing to advance their skills\n- Interested in pathways to higher-level sport qualifications\n\nOur students come from a range of countries. Some may be new to Australia, while others may have lived here before, either recently or in the past. This qualification is your stepping stone into the fitness industry, with no special licensing or certification required. You'll follow Australian standards and industry practices to ensure you're well-prepared for your career.",
-    duration: '52 weeks',
+    duration: '104 weeks',
     entryRequirement:
       'Participate in a course entry interview to determine suitability for the course and student needs.',
     deliveryMode: {
