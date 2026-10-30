@@ -389,10 +389,8 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
             })()}
           />
         ) : (
-          <div
-            className={`grid grid-cols-1 gap-40 ${showProgressPanel ? 'lg:grid-cols-2' : ''}`}
-          >
-            {showProgressPanel && (
+          <div>
+            {/* {showProgressPanel && (
               <div className="mb-30">
                 {progressRows && (
                   <div className="mt-15">
@@ -402,7 +400,7 @@ function CourseDetail({ courseInfo, courseId }: CourseDetailProps) {
                   </div>
                 )}
               </div>
-            )}
+            )} */}
             <div>
               {sections.map(([sectionKey, sectionData]) => (
                 <div key={sectionKey} className="mb-14">
