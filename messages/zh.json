@@ -56,6 +56,7 @@
     "firstName": "名字",
     "lastName": "姓氏",
     "phonePlaceholder": "电话",
+    "phoneNote": "除非您提出要求，否则我们不会致电，但我们会发送一条消息，确认您已收到我们的电子邮件回复。",
     "nationality": "国籍",
     "message": "留言",
     "sendMessage": "发送消息",

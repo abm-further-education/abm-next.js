@@ -355,6 +355,7 @@ function Contact() {
             {...register('phone')}
             className="border border-neutral-600 placeholder:text-black placeholder:text-sm p-6"
           />
+          <p className="text-xs text-neutral-600 -mt-8">{t('phoneNote')}</p>
           <div className="w-full">
             <input
               type="email"

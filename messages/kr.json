@@ -56,6 +56,7 @@
     "firstName": "이름",
     "lastName": "성",
     "phonePlaceholder": "전화번호",
+    "phoneNote": "요청하지 않는 한 전화를 드리지 않으며, 이메일 답변을 잘 받으셨는지 확인하기 위해 메시지를 보내드립니다.",
     "nationality": "국적",
     "message": "메시지",
     "sendMessage": "메시지 보내기",

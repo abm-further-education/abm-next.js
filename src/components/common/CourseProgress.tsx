@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils';
 interface CourseProgressItem {
   code?: string;
   title: string;
-  duration?: string;
   color?: string;
 }
 
@@ -28,8 +27,7 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
               'p-8 md:p-12 md:w-[50%] h-150 relative text-white max-w-240',
               course.color || 'bg-neutral-500',
               index > 0 && 'ml-[-20px] md:ml-[-30px]',
-              (!course.code || !course.duration) &&
-                'flex flex-col justify-center',
+              !course.code && 'flex flex-col justify-center',
             )}
             style={{
               clipPath:
@@ -53,14 +51,6 @@ const CourseProgress: React.FC<CourseProgressProps> = ({
               )}
             >
               {course.title}
-            </div>
-            <div
-              className={cn(
-                'text-xs md:text-sm absolute bottom-10',
-                index + startIndex > 0 && 'pl-25 md:pl-50',
-              )}
-            >
-              {course.duration || ''}
             </div>
           </div>
         ))}

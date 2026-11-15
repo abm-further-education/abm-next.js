@@ -56,6 +56,7 @@
     "firstName": "Nama Depan",
     "lastName": "Nama Belakang",
     "phonePlaceholder": "Telepon",
+    "phoneNote": "Kami tidak akan menelepon kecuali Anda memintanya, tetapi kami akan mengirimkan pesan untuk memastikan Anda telah menerima balasan email kami.",
     "nationality": "Kewarganegaraan",
     "message": "Pesan",
     "sendMessage": "Kirim Pesan",

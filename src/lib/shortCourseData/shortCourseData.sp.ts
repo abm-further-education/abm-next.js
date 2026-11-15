@@ -818,6 +818,7 @@ export const shortCourseData_sp: { [key: string]: ShortCourseData } = {
         date: '2026-11-18',
         displayDate: '18 de noviembre de 2026',
         time: '9:00am - 4:30pm (30 minutos de intervalo de almoço incluídos)',
+        available: false,
       },
       {
         date: '2026-11-25',

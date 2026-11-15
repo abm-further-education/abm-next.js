@@ -66,51 +66,21 @@ function DiplomaHM({
                 {
                   code: 'SIT40521',
                   title: 'Certificate IV in Kitchen Management',
-                  duration: '78 weeks',
                   color: 'bg-neutral-500',
                 },
                 {
                   code: 'SIT50422',
                   title: 'Diploma of Hospitality Management',
-                  duration: '26 weeks',
                   color: 'bg-primary',
                 },
                 {
                   code: 'SIT60322',
                   title: 'Advanced Diploma of Hospitality Management',
-                  duration: '26 weeks',
                   color: 'bg-neutral-500',
                 },
               ]}
             />
 
-            {courseId !== 'advanced-diploma-of-hospitality-management' && (
-              <div className="text-gray-600 mb-8">
-                <h3 className="text-base font-bold mb-8">Course Duration</h3>
-                <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                  <li>
-                    <span className="font-semibold">
-                      Completed SIT40521 Certificate IV in Kitchen Management
-                    </span>{' '}
-                    → 20 credit transfers
-                  </li>
-                  <li>
-                    <span className="font-semibold">
-                      SIT50422 Diploma of Hospitality Management
-                    </span>{' '}
-                    duration: 26 weeks
-                  </li>
-                  <li>
-                    <span className="font-semibold">Teaching period:</span> 2
-                    terms × 10 weeks = 20 weeks
-                  </li>
-                  <li>
-                    <span className="font-semibold">Holiday breaks:</span> 6
-                    weeks (as per timetable)
-                  </li>
-                </ul>
-              </div>
-            )}
             {/* Course Description */}
 
             {/* <div className="text-gray-600 mb-8">
@@ -143,40 +113,17 @@ function DiplomaHM({
                 {
                   code: 'SIT50422',
                   title: 'Diploma of Hospitality Management',
-                  duration: '78 weeks',
                   color: 'bg-primary',
                 },
                 {
                   code: 'SIT60322',
                   title: 'Advanced Diploma of Hospitality Management',
-                  duration: '26 weeks',
                   color: 'bg-neutral-500',
                 },
               ]}
               startIndex={1}
             />
 
-            {courseId !== 'advanced-diploma-of-hospitality-management' && (
-              <div className="text-gray-600 mb-8">
-                <h3 className="text-base font-bold mb-8">Course Duration</h3>
-                <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                  <li>
-                    <span className="font-semibold">
-                      Qualification duration:
-                    </span>{' '}
-                    78 weeks
-                  </li>
-                  <li>
-                    <span className="font-semibold">Teaching:</span> 6 terms ×
-                    10 weeks = 60 weeks
-                  </li>
-                  <li>
-                    <span className="font-semibold">Holiday breaks:</span> 18
-                    weeks
-                  </li>
-                </ul>
-              </div>
-            )}
             {/* Course Description */}
           </div>
         </div>

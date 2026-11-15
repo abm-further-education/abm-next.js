@@ -613,6 +613,7 @@ export const shortCourseData_jp: { [key: string]: ShortCourseData } = {
         date: '2026-11-18',
         displayDate: '2026年11月18日',
         time: '9:00am - 4:30pm (30分の休憩時間を含む)',
+        available: false,
       },
       {
         date: '2026-11-25',

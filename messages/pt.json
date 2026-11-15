@@ -56,6 +56,7 @@
     "firstName": "Nome",
     "lastName": "Sobrenome",
     "phonePlaceholder": "Telefone",
+    "phoneNote": "Não ligaremos a menos que você peça, mas enviaremos uma mensagem para confirmar que você recebeu nossa resposta por e-mail.",
     "nationality": "Nacionalidade",
     "message": "Mensagem",
     "sendMessage": "Enviar Mensagem",

@@ -56,6 +56,7 @@
     "firstName": "名",
     "lastName": "姓",
     "phonePlaceholder": "電話番号",
+    "phoneNote": "ご希望がない限りお電話はいたしませんが、メールの返信が届いているかご確認するためにメッセージをお送りします。",
     "nationality": "国籍",
     "message": "メッセージ",
     "sendMessage": "送信",

@@ -621,6 +621,7 @@ export const shortCourseData_kr: { [key: string]: ShortCourseData } = {
         date: '2026-11-18',
         displayDate: '2026년 11월 18일',
         time: '9:00am - 4:30pm (점심시간 30분 포함)',
+        available: false,
       },
       {
         date: '2026-11-25',

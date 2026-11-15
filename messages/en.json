@@ -56,6 +56,7 @@
     "firstName": "First Name",
     "lastName": "Last Name",
     "phonePlaceholder": "Phone",
+    "phoneNote": "We won't call unless you ask us to, but we'll send you a message to check that you've received our email response.",
     "nationality": "Nationality",
     "message": "Message",
     "sendMessage": "Send a Message",

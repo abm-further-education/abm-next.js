@@ -75,11 +75,6 @@ export default function CookeryClient() {
           </p>
           {selectedStream === 'kitchenManagement' ? (
             <>
-              <div className="flex gap-50 sm:gap-180 lg:gap-250 ml-20 md:ml-90 mt-40 font-[family-name:var(--font-montserrat)]">
-                <span>78weeks</span>
-                <span>26weeks</span>
-                <span>26weeks</span>
-              </div>
               <div className="flex">
                 <div className="relative">
                   <div className="absolute top-10 md:top-20 left-20 md:left-40 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
@@ -130,11 +125,6 @@ export default function CookeryClient() {
             </>
           ) : selectedStream === 'patisserie' ? (
             <>
-              <div className="flex gap-50 sm:gap-180 lg:gap-250 ml-20 md:ml-90 mt-40 font-[family-name:var(--font-montserrat)]">
-                <span>78weeks</span>
-                <span>26weeks</span>
-                <span>26weeks</span>
-              </div>
               <div className="flex">
                 <div className="relative">
                   <div className="absolute top-10 md:top-20 left-20 md:left-40 font-[family-name:var(--font-montserrat)] text-sm md:text-base">
@@ -185,10 +175,6 @@ export default function CookeryClient() {
             </>
           ) : (
             <>
-              <div className="flex gap-90 sm:gap-180 lg:gap-250 ml-90 mt-40 font-[family-name:var(--font-montserrat)]">
-                <span>78weeks</span>
-                <span>26weeks</span>
-              </div>
               <div className="flex">
                 <div className="relative">
                   <div className="absolute top-20 left-60 font-[family-name:var(--font-montserrat)] text-sm md:text-base">

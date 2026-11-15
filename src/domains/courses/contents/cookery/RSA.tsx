@@ -170,12 +170,22 @@ function RSA({ data: dataProp, courseId }: RSAProps) {
                             (When you use the code)
                           </span>
                         </div>
-                        <Link
-                          className="inline-flex w-full items-center justify-center bg-primary px-12 py-8 text-sm font-semibold text-white transition hover:bg-primary-bk sm:w-auto sm:min-w-100"
-                          href={checkoutHref}
-                        >
-                          Book Now
-                        </Link>
+                        {dateOption.available === false ? (
+                          <button
+                            type="button"
+                            disabled
+                            className="inline-flex w-full cursor-not-allowed items-center justify-center bg-gray-300 px-12 py-8 text-sm font-semibold text-gray-500 sm:w-auto sm:min-w-100"
+                          >
+                            Fully Booked
+                          </button>
+                        ) : (
+                          <Link
+                            className="inline-flex w-full items-center justify-center bg-primary px-12 py-8 text-sm font-semibold text-white transition hover:bg-primary-bk sm:w-auto sm:min-w-100"
+                            href={checkoutHref}
+                          >
+                            Book Now
+                          </Link>
+                        )}
                       </div>
                     </div>
                   );
