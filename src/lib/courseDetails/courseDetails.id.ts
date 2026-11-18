@@ -48,13 +48,13 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
   },
   'sit50422-diploma-of-hospitality-management': {
     courseDuration1: {
-      title: 'Durasi Kursus – Paket dengan Kitchen Management Course',
+      title: 'Durasi Kursus',
       description: [
         'Mahasiswa yang telah menyelesaikan SIT40521 Certificate IV in Kitchen Management di ABM Further Education akan menerima 20 unit transfer kredit. Ini akan mengurangi kursus SIT50422 Diploma of Hospitality Management menjadi 26 minggu yang terdiri dari: Dua (2) term masing-masing 10 minggu (total 20 minggu) periode pengajaran. Jeda libur sebanyak 6 minggu (sesuai jadwal).',
       ] as DescriptionItem[],
     },
     courseDuration2: {
-      title: 'Durasi Kursus – Food & Beverage Stream',
+      title: 'Durasi Kursus',
       description:
         'Kualifikasi ini diberikan selama 78 minggu yang terdiri dari:\nEnam (6) term masing-masing 10 minggu (total 60 minggu) periode pengajaran.\nJeda libur sebanyak 18 minggu (sesuai jadwal)',
     },
@@ -99,7 +99,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       ],
     },
     courseStructure2: {
-      title: 'Struktur Kursus – Standalone Food & Beverage Stream',
+      title: 'Struktur Kursus',
       description: [
         {
           type: 'table' as const,

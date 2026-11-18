@@ -102,13 +102,13 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
   },
   'sit50422-diploma-of-hospitality-management': {
     courseDuration1: {
-      title: 'Course Duration – Packaged with Kitchen Management Course',
+      title: 'Course Duration',
       description: [
         'Students completed a SIT40521 Certificate IV in Kitchen Management with ABM Further Education will receive 20 credit transfer units. This will reduce the course SIT50422 Diploma of Hospitality Management to 26 weeks comprising of: Two (2) terms of 10 weeks each (20 weeks total) of teaching period. Holiday breaks amounting to 6 weeks (as specified in the timetable).',
       ] as DescriptionItem[],
     },
     courseDuration2: {
-      title: 'Course Duration – Food & Beverage Stream',
+      title: 'Course Duration',
       description:
         'The qualification is delivered over 78 weeks comprising of:\nSix(6) terms of 10 weeks each (60 weeks total) of teaching period.\nHoliday breaks amounting to 18 weeks (as specified in the timetable)',
     },
@@ -153,7 +153,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       ],
     },
     courseStructure2: {
-      title: 'Course Structure – Standalone Food & Beverage Stream',
+      title: 'Course Structure',
       description: [
         {
           type: 'table' as const,

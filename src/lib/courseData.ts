@@ -18,6 +18,45 @@ import { courseData as courseDataTl } from './courseData.tl';
 import { courseData as courseDataZh } from './courseData.zh';
 import { courseData as courseDataId } from './courseData.id';
 
+// 코스 링크 기준 qualification code (모든 로케일 공통)
+const qualificationCodes: Record<string, string> = {
+  '/cookery-and-hospitality-courses/fss': 'SITSS00069',
+  '/cookery-and-hospitality-courses/rsa': 'SITSS00071',
+  '/cookery-and-hospitality-courses/advanced-diploma-of-hospitality-management':
+    'SIT60322',
+};
+
+// Non-accredited 코스: 모든 short-course 타입 + 아래 링크 (그 외는 accredited)
+const nonAccreditedLinks = new Set([
+  '/fitness-instructor-personal-trainer-courses/certificate-iii-in-fitness-online',
+  '/fitness-instructor-personal-trainer-courses/certificate-iv-in-fitness-online',
+  '/health-and-wellness-courses/hlt33115-certificate-iii-in-health-services-assistance',
+]);
+
+function getQualificationCode(link: string): string | undefined {
+  if (qualificationCodes[link]) return qualificationCodes[link];
+  const slug = link.split('/').pop() ?? '';
+  const match = slug.match(/^([a-z]{3}\d{5})-/);
+  return match ? match[1].toUpperCase() : undefined;
+}
+
+export function withQualificationCodes(courses: CourseData[]): CourseData[] {
+  return courses.map((course) => {
+    const qualificationCode = getQualificationCode(course.link);
+    // 제목 앞에 코드가 붙어 있으면 떼어 내고 카드 상단 코드 줄로 보여준다
+    const title = qualificationCode
+      ? course.title.replace(new RegExp(`^${qualificationCode}\\s+`, 'i'), '')
+      : course.title;
+    return {
+      ...course,
+      title,
+      qualificationCode,
+      accredited:
+        course.type !== 'short-course' && !nonAccreditedLinks.has(course.link),
+    };
+  });
+}
+
 function mergeCourseDataWithEnglish(localizedData: CourseData[]): CourseData[] {
   const localizedByLink = new Map(localizedData.map((course) => [course.link, course]));
   const merged = courseDataEn.map((course) => localizedByLink.get(course.link) || course);
@@ -26,7 +65,7 @@ function mergeCourseDataWithEnglish(localizedData: CourseData[]): CourseData[] {
     (course) => !courseDataEn.some((enCourse) => enCourse.link === course.link),
   );
 
-  return [...merged, ...additionalLocalizedCourses];
+  return withQualificationCodes([...merged, ...additionalLocalizedCourses]);
 }
 
 export const courseCategories = [
@@ -76,6 +115,6 @@ export function getCourseDataByLocale(locale: string): CourseData[] {
       return mergeCourseDataWithEnglish(courseDataId);
     case 'en':
     default:
-      return [...courseDataEn];
+      return withQualificationCodes(courseDataEn);
   }
 }

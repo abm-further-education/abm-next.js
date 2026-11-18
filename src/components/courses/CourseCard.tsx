@@ -98,6 +98,26 @@ export default function CourseCard({ course }: CourseCardProps) {
 
       {/* Content */}
       <div className="p-10">
+        {/* Qualification code */}
+        <div className="flex items-center gap-6 mb-4 h-20">
+          {course.qualificationCode && (
+            <span className="text-xs font-medium text-primary">
+              {course.qualificationCode}
+            </span>
+          )}
+          {course.accredited !== undefined && (
+            <span
+              className={`inline-block text-[11px] font-medium px-6 py-1 rounded ${
+                course.accredited
+                  ? 'bg-emerald-50 text-emerald-700'
+                  : 'bg-amber-50 text-amber-700'
+              }`}
+            >
+              {course.accredited ? 'Accredited' : 'Non-accredited'}
+            </span>
+          )}
+        </div>
+
         {/* Title */}
         <h3 className="font-semibold text-gray-900 mb-4 line-clamp-2 h-48">
           {course.title}

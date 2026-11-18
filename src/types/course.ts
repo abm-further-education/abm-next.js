@@ -388,6 +388,8 @@ export interface CourseData {
   image: string;
   link: string;
   tags: string[];
+  qualificationCode?: string;
+  accredited?: boolean;
 }
 
 // This matches the existing ShortCourseData interface

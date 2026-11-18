@@ -1135,8 +1135,8 @@ const staticCourseUnitsMap: {
     { groupTitle: '', groupIndex: 0, units: PATISSERIE_UNITS as CourseUnitItem[] },
   ],
   'sit50422-diploma-of-hospitality-management': [
-    { groupTitle: 'Standalone Food & Beverage Stream', groupIndex: 0, units: HM_UNITS_1 as CourseUnitItem[] },
-    { groupTitle: 'Packaged with Kitchen Management Course', groupIndex: 1, units: HM_UNITS_2 as CourseUnitItem[] },
+    { groupTitle: '', groupIndex: 0, units: HM_UNITS_1 as CourseUnitItem[] },
+    { groupTitle: '', groupIndex: 1, units: HM_UNITS_2 as CourseUnitItem[] },
   ],
   'sis40221-certificate-iv-in-fitness': [
     { groupTitle: '', groupIndex: 0, units: CERTIV_FITNESS_UNITS as CourseUnitItem[] },

@@ -48,13 +48,13 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
   },
   'sit50422-diploma-of-hospitality-management': {
     courseDuration1: {
-      title: 'Tagal ng Kurso – Kasama ang Kitchen Management Course',
+      title: 'Tagal ng Kurso',
       description: [
         'Ang mga estudyanteng nakumpleto ang SIT40521 Certificate IV in Kitchen Management sa ABM Further Education ay makakatanggap ng 20 credit transfer units. Ito ay magbabawas sa kurso na SIT50422 Diploma of Hospitality Management sa 26 linggo na binubuo ng: Dalawang (2) term na 10 linggo bawat isa (20 linggo kabuuan) ng panahon ng pagtuturo. Mga holiday break na umaabot sa 6 na linggo (ayon sa timetable).',
       ] as DescriptionItem[],
     },
     courseDuration2: {
-      title: 'Tagal ng Kurso – Food & Beverage Stream',
+      title: 'Tagal ng Kurso',
       description:
         'Ang kwalipikasyon ay ibinibigay sa loob ng 78 linggo na binubuo ng:\nAnim (6) na term na 10 linggo bawat isa (60 linggo kabuuan) ng panahon ng pagtuturo.\nMga holiday break na umaabot sa 18 linggo (ayon sa timetable)',
     },
@@ -99,7 +99,7 @@ export const courseDetailsData: { [key: string]: CourseDetailInfo } = {
       ],
     },
     courseStructure2: {
-      title: 'Istruktura ng Kurso – Standalone Food & Beverage Stream',
+      title: 'Istruktura ng Kurso',
       description: [
         {
           type: 'table' as const,

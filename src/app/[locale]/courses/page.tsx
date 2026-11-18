@@ -2,6 +2,7 @@ import FadeIn from '@/components/common/FadeIn';
 import { getTranslations } from 'next-intl/server';
 import CoursesClient from './CoursesClient';
 import { getCoursesByLocale } from '@/lib/course-db';
+import { withQualificationCodes } from '@/lib/courseData';
 
 export { generateMetadata } from './metadata';
 
@@ -16,7 +17,7 @@ export default async function Page({ params, searchParams }: PageProps) {
   const t = await getTranslations({ locale, namespace: 'courses' });
 
   // Fetch course data from database (with fallback to static files)
-  const courseData = await getCoursesByLocale(locale);
+  const courseData = withQualificationCodes(await getCoursesByLocale(locale));
 
   return (
     <div className="px-20 xl:px-80 max-w-[1600px] mx-auto">
